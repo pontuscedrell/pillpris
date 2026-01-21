@@ -281,6 +281,33 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     text-align: right;
 }
 
+.price-value {
+    font-size: 32px;
+    margin: 0;
+    color: #1e293b;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.price-trends {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.price-trends p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+.past-price-text {
+    font-size: 13px;
+    color: #64748b;
+}
+
+
 
 @media screen and (max-width: 768px) {
     /* 1. Prevent the page from wiggling horizontally */
@@ -313,23 +340,22 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     }
 
     /* 3. THE CHART BREAKOUT: Touches screen edges */
+@media screen and (max-width: 768px) {
+    /* This forces the chart to ignore the parent container's padding */
     #chart-container {
-        /* Force width to be exactly the screen width */
         width: 100vw !important; 
-        
-        /* Pull left by the exact amount of the container's padding */
-        margin-left: -1rem !important; 
-        
-        /* Ensure no border-radius on mobile for a flush look */
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
         border-radius: 0 !important;
         border-left: none !important;
         border-right: none !important;
-        
-        position: relative;
-        height: 300px;
-        padding: 10px !important;
-        box-sizing: border-box;
+        padding: 15px !important; /* Internal padding so the line doesn't touch the glass */
+        box-sizing: border-box !important;
     }
+}
 
     /* 4. THE TABLE BREAKOUT: Touches screen edges */
     .reserves-container {
@@ -368,5 +394,22 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     .reserves-table td:nth-child(3),
     .reserves-table td:nth-child(5) { 
         display: none !important; 
+    }
+
+    .search-controls {
+        flex-direction: column;
+        align-items: stretch; /* Forces children to fill 100% width */
+        gap: 16px;            /* Adds a bit more space between them */
+    }
+
+    /* Make the month group container full width */
+    .month-group {
+        width: 100% !important;
+        flex-shrink: 1;
+    }
+
+    /* Ensure the input group is also full width */
+    .input-group {
+        width: 100%;
     }
 }
