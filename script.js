@@ -13,24 +13,39 @@ async function init() {
         const res = await fetch('substances.json');
         const data = await res.json();
         
-        availableMonths = data.months;
-        availableMonths.sort((a, b) => b - a); // Nyast först
-        
+        // Ensure months are numbers for consistent comparison
+        availableMonths = data.months.map(m => parseInt(m));
+        availableMonths.sort((a, b) => b - a); 
         tree = data.tree;
-        latestMonth = availableMonths[0];
-        selectedMonth = latestMonth;
 
-        // Fyll i månadsväljaren bredvid sökfältet
+        const now = new Date();
+        const yy = now.getFullYear().toString().slice(-2);
+        const mm = (now.getMonth() + 1).toString().padStart(2, '0');
+        const systemMonthCode = parseInt(yy + mm); 
+
+        // Set default view to current system month
+        if (availableMonths.includes(systemMonthCode)) {
+            selectedMonth = systemMonthCode;
+        } else {
+            selectedMonth = availableMonths[0]; 
+        }
+
+        latestMonth = availableMonths[0];
+
+        // Update Dropdown UI
         const monthDropdown = document.getElementById('month-select-main');
         if (monthDropdown) {
             monthDropdown.innerHTML = availableMonths.map(m => 
-                `<option value="${m}">${formatMedicineDate(m)}</option>`
+                `<option value="${m}" ${m === selectedMonth ? 'selected' : ''}>${formatMedicineDate(m)}</option>`
             ).join('');
+            
+            // Force the dropdown value to match the selected month
+            monthDropdown.value = selectedMonth;
         }
 
         const headerSub = document.getElementById('header-period');
         if (headerSub) {
-            headerSub.innerText = `TLV Periodens Varor • ${formatMedicineDate(latestMonth)}`;
+            headerSub.innerText = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}`;
         }
     } catch (e) {
         console.error("Kunde inte ladda data", e);
@@ -162,7 +177,7 @@ async function fetchLatestPV(sub, form, str, size) {
         `;
 
         // 5. Rendera de olika delarna - nu med cheaperExists definierad
-        renderPriceCard(pvProduct, sub, str, form, stats, cheaperExists);
+        await renderPriceCard(pvProduct, sub, str, form, stats, cheaperExists);
         renderTableOnly(); 
         
         // 6. Rendera grafen
@@ -225,7 +240,7 @@ async function getPriceStatistics(sub, form, str, size) {
     };
 }
 
-function renderPriceCard(pvProduct, sub, str, form, stats, cheaperExists) {
+async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperExists) {
     const area = document.getElementById('price-card-area');
     if (!pvProduct || !area) return;
 
@@ -234,6 +249,74 @@ function renderPriceCard(pvProduct, sub, str, form, stats, cheaperExists) {
         currency: "SEK" 
     }).format(p);
 
+    // --- 1. TREND LOGIC (PREVIOUS/UPCOMING) ---
+    const currentIndex = availableMonths.indexOf(parseInt(selectedMonth));
+    const prevMonthCode = availableMonths[currentIndex + 1]; 
+    const nextMonthCode = availableMonths[currentIndex - 1]; 
+
+    // Helper to fetch price for relative months
+    async function fetchSpecificPrice(monthCode) {
+        if (!monthCode) return null;
+        try {
+            const res = await fetch(`data/${monthCode}.json`);
+            const data = await res.json();
+            const match = data.find(i => 
+                i.Substans === sub && 
+                i.Beredningsform === form && 
+                i.Styrka === str && 
+                (i.Storlek_Clean === pvProduct.Storlek_Clean || i.Storlek.toString() === pvProduct.Storlek.toString()) &&
+                i.Status.trim().toUpperCase() === "PV"
+            );
+            return match ? match["Försäljningspris"] : null;
+        } catch (e) { return null; }
+    }
+
+    const prevPrice = await fetchSpecificPrice(prevMonthCode);
+    const nextPrice = await fetchSpecificPrice(nextMonthCode);
+
+let trendHtml = "";
+
+    // 1. Förra månaden Logic
+    if (prevPrice) {
+        let prevColor = "#64748b"; // Default gray
+        let prevIcon = "";
+
+        if (prevPrice > lastPVPrice) {
+            prevColor = "#dc2626"; // Red
+            prevIcon = '<span class="material-symbols-outlined" style="font-size: 16px; vertical-align: middle; margin-left: 4px;">trending_down</span>';
+        } else if (prevPrice < lastPVPrice) {
+            prevColor = "#16a34a"; // Green
+            prevIcon = '<span class="material-symbols-outlined" style="font-size: 16px; vertical-align: middle; margin-left: 4px;">trending_up</span>';
+        }
+
+        trendHtml += `
+            <p class="past-price-text">
+                Förra månaden: 
+                <strong style="color: ${prevColor};">${formatPrice(prevPrice)}${prevIcon}</strong>
+            </p>`;
+    }
+
+    // 2. Nästkommande månad Logic
+    if (nextMonthCode && nextPrice) {
+        let nextColor = "#64748b"; // Default gray
+        let nextIcon = "";
+
+        if (nextPrice > lastPVPrice) {
+            nextColor = "#dc2626"; // Red
+            nextIcon = '<span class="material-symbols-outlined" style="font-size: 16px; vertical-align: middle; margin-left: 4px;">trending_up</span>';
+        } else if (nextPrice < lastPVPrice) {
+            nextColor = "#16a34a"; // Green
+            nextIcon = '<span class="material-symbols-outlined" style="font-size: 16px; vertical-align: middle; margin-left: 4px;">trending_down</span>';
+        }
+
+        trendHtml += `
+            <p class="past-price-text">
+                Nästa månad: 
+                <strong style="color: ${nextColor};">${formatPrice(nextPrice)}${nextIcon}</strong>
+            </p>`;
+    }
+
+    // --- 2. BADGE & STATUS LOGIC ---
     const diffFromAvg = stats ? ((lastPVPrice - stats.avgPrice) / stats.avgPrice) * 100 : 0;
     const diffAbs = Math.abs(diffFromAvg).toFixed(0);
 
@@ -241,26 +324,20 @@ function renderPriceCard(pvProduct, sub, str, form, stats, cheaperExists) {
         ? `<div class="tooltip">
             <span class="status-badge" style="background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; font-weight: 700; cursor: help;">
                 <span class="material-symbols-outlined" style="font-size: 14px; vertical-align: middle; color: #f97316;">warning</span> 
-                Billigare alternativ finns
+                Billigare finns
             </span>
-            <span class="tooltiptext">
-                <strong>Varför inte billigast?</strong><br>
-                Priserna för andra varor kan sänkas efter att Periodens Vara utsetts, vilket gör dem billigare än vinnaren.
-            </span>
+            <span class="tooltiptext">Priserna för andra varor kan sänkas efter att Periodens Vara utsetts.</span>
            </div>`
         : `<span class="lowest-price-badge">Lägst pris</span>`;
 
     let priceStatusLabel = "";
     if (stats) {
-        if (diffFromAvg < -0.5) {
-            priceStatusLabel = `<span style="color: #16a34a;">↓ ${diffAbs}% mot normalpris</span>`;
-        } else if (diffFromAvg > 0.5) {
-            priceStatusLabel = `<span style="color: #dc2626;">↑ ${diffAbs}% mot normalpris</span>`;
-        } else {
-            priceStatusLabel = `<span style="color: #64748b;">Samma som normalpris</span>`;
-        }
+        if (diffFromAvg < -0.5) priceStatusLabel = `<span style="color: #16a34a;">↓ ${diffAbs}% mot normalpris</span>`;
+        else if (diffFromAvg > 0.5) priceStatusLabel = `<span style="color: #dc2626;">↑ ${diffAbs}% mot normalpris</span>`;
+        else priceStatusLabel = `<span style="color: #64748b;">Normalpris</span>`;
     }
 
+    // --- 3. FINAL HTML INJECTION ---
     const cardAccentStyle = cheaperExists 
         ? 'border-left: 5px solid #f97316; background: linear-gradient(to right, #fffaf5, #ffffff);' 
         : 'border-left: 5px solid #2563eb;';
@@ -280,14 +357,29 @@ function renderPriceCard(pvProduct, sub, str, form, stats, cheaperExists) {
                 <div class="price-info-side">
                     <p class="price-value" style="font-size: 32px; margin: 0; color: #1e293b; font-weight: 800; line-height: 1;">${formatPrice(lastPVPrice)}</p>
                     <p class="price-status-label" style="margin: 8px 0 0 0; font-size: 14px; font-weight: 600;">${priceStatusLabel}</p>
+                    <div class="price-trends" style="margin-top: 10px;">
+                        ${trendHtml}
+                    </div>
                 </div>
             </div>
 
             <div class="card-grid" style="margin-top: 24px; border-top: 1px solid #f1f5f9; padding-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px;">
-                <div class="info-item"><span class="material-symbols-outlined">pill</span><div><p class="label">Pris per enhet</p><p class="value">${formatPrice(pvProduct["Försäljningspris per minsta enhet"])}</p></div></div>
-                <div class="info-item"><span class="material-symbols-outlined">corporate_fare</span><div><p class="label">Tillverkare</p><p class="value">${pvProduct.Företag}</p></div></div>
-                <div class="info-item"><span class="material-symbols-outlined">package_2</span><div><p class="label">Förpackning</p><p class="value">${formatUnit(form, pvProduct.Storlek)}</p></div></div>
-                <div class="info-item"><span class="material-symbols-outlined">public</span><div><p class="label">Ursprung</p><p class="value">${pvProduct.Ursprung || 'Information saknas'}</p></div></div>
+                <div class="info-item">
+                    <span class="material-symbols-outlined">pill</span>
+                    <div><p class="label">Pris per enhet</p><p class="value">${formatPrice(pvProduct["Försäljningspris per minsta enhet"])}</p></div>
+                </div>
+                <div class="info-item">
+                    <span class="material-symbols-outlined">corporate_fare</span>
+                    <div><p class="label">Tillverkare</p><p class="value">${pvProduct.Företag}</p></div>
+                </div>
+                <div class="info-item">
+                    <span class="material-symbols-outlined">package_2</span>
+                    <div><p class="label">Förpackning</p><p class="value">${formatUnit(form, pvProduct.Storlek)}</p></div>
+                </div>
+                <div class="info-item">
+                    <span class="material-symbols-outlined">public</span>
+                    <div><p class="label">Ursprung</p><p class="value">${pvProduct.Ursprung || 'Information saknas'}</p></div>
+                </div>
             </div>
         </div>
     `;
