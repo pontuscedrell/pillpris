@@ -307,6 +307,43 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     color: #64748b;
 }
 
+.info-summary-card {
+    transition: all 0.2s ease;
+}
+
+/* Ta bort standard-pilen från webbläsaren */
+.info-accordion summary::-webkit-details-marker {
+    display: none;
+}
+.info-accordion summary {
+    outline: none;
+}
+
+/* Rotera vår egen pil när details är öppen */
+.info-accordion[open] .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* Lite hover-effekt på rubriken */
+.info-accordion summary:hover {
+    background-color: #f8fafc;
+}
+
+/* Om du vill att det ska se extra proffsigt ut på mobilen */
+@media (max-width: 600px) {
+    .info-summary-card {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 12px;
+    }
+    .info-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .info-icon .material-symbols-outlined {
+        font-size: 20px !important;
+    }
+}
 
 
 @media screen and (max-width: 768px) {
@@ -338,6 +375,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
         display: block !important;
         box-sizing: border-box;
     }
+
 
     /* 3. THE CHART BREAKOUT: Touches screen edges */
 @media screen and (max-width: 768px) {
