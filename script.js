@@ -9,11 +9,11 @@ let lastPVPrice = 0;
 async function init() {
     try {
         // Om din fil heter substances.json men innehåller den nya index-listan:
-        const res = await fetch('./search-index.json'); 
+        const res = await fetch('search-index.json'); 
         searchIndex = await res.json();
 
         // Ladda månader (antingen från separat fil eller från indexet)
-        const resMonths = await fetch('./months.json');
+        const resMonths = await fetch('months.json');
         availableMonths = await resMonths.json();
         availableMonths.sort((a, b) => b - a);
 
@@ -408,23 +408,25 @@ function renderTableOnly() {
     if (!area) return;
 
     area.innerHTML = `
-        <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; margin-top: 20px;">
-            <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #1e293b;">Utbytbara alternativ</h3>
-            <p style="margin: 8px 0 24px 0; color: #64748b; font-size: 14px;">
-                Alla dessa innehåller samma verksamma ämne: <strong style="color: #1e293b;">${currentSearch.sub} ${currentSearch.str}</strong>
-            </p>
+        <div class="reserves-container" style="background: white; border-radius: 16px; padding: 24px 0; border: 1px solid #e2e8f0; margin-top: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+            <div style="padding: 0 1rem;">
+                <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #1e293b;">Utbytbara alternativ</h3>
+                <p style="margin: 8px 0 24px 0; color: #64748b; font-size: 14px;">
+                    Alla dessa innehåller samma verksamma ämne: <strong style="color: #1e293b;">${currentSearch.sub} ${currentSearch.str}</strong>
+                </p>
+            </div>
             
             <div id="comparison-list" style="display: flex; flex-direction: column; gap: 12px;">
                 </div>
 
-            <div id="pagination-footer" style="text-align: center; margin-top: 20px;"></div>
+            <div id="pagination-footer" style="text-align: center; margin-top: 20px; padding: 0 1rem;"></div>
 
-            <div style="background: #f0fdfa; border-radius: 12px; padding: 16px; margin-top: 24px; display: flex; gap: 12px; border: 1px solid #ccfbf1;">
+            <div style="margin: 24px 1rem 0 1rem; background: #f0fdfa; border-radius: 12px; padding: 16px; display: flex; gap: 12px; border: 1px solid #ccfbf1;">
                 <span class="material-symbols-outlined" style="color: #14b8a6; font-size: 20px;">check_circle</span>
                 <div>
                     <p style="margin: 0; font-weight: 700; color: #134e4a; font-size: 14px;">Tips!</p>
                     <p style="margin: 4px 0 0 0; color: #115e59; font-size: 13px; line-height: 1.5;">
-                        Be apoteket om det billigaste alternativet om du inte specifikt behöver ett visst märke. Du har alltid rätt att välja ett billigare utbytbart läkemedel.
+                        Be apoteket om det billigaste alternativet...
                     </p>
                 </div>
             </div>
@@ -577,14 +579,14 @@ function renderInfoCard(item) {
     const area = document.getElementById('info-card-area');
     if (!area) return;
 
-    area.innerHTML = `
-        <details class="info-accordion" style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 20px; overflow: hidden;">
-            <summary style="padding: 16px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-                <div style="display: flex; align-items: center; gap: 8px;">
-                    <span class="material-symbols-outlined" style="color: #2563eb;">science</span>
-                    <span style="font-weight: 700;">${item.sub}</span>
-                    <span style="color: #64748b;">${item.str}</span>
-                </div>
+area.innerHTML = `
+        <div class="reserves-container" style="background: white; border-radius: 16px; padding: 24px 0; border: 1px solid #e2e8f0; margin-top: 20px;">
+            <div style="padding: 0 1rem;">
+                <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #1e293b;">Utbytbara alternativ</h3>
+                <p style="margin: 8px 0 24px 0; color: #64748b; font-size: 14px;">
+                    Alla dessa innehåller samma verksamma ämne...
+                </p>
+            </div>
                 <span class="material-symbols-outlined">expand_more</span>
             </summary>
             <div style="padding: 15px; border-top: 1px solid #f1f5f9; background: #f8fafc; font-size: 13px;">
@@ -828,4 +830,3 @@ function getPriceRecommendation(currentPrice, stats, nextPrice) {
 
 
 document.addEventListener('DOMContentLoaded', init);
-
