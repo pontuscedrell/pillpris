@@ -5,6 +5,8 @@ let currentSearch = null;
 let isExpanded = false;
 let lastMatches = [];
 let lastPVPrice = 0;
+let selectedRowId = null;
+let chartPriceType = "pv"; // "pv" or "cheapest"
 
 async function init() {
     try {
@@ -33,6 +35,12 @@ async function init() {
             ).join('');
             monthDropdown.value = selectedMonth;
         }
+        
+        // Update header with current month
+        const headerPeriod = document.getElementById('header-period');
+        if (headerPeriod) {
+            headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}`;
+        }
     } catch (e) {
         console.error("Kunde inte ladda startdata", e);
     }
@@ -42,6 +50,13 @@ document.getElementById('sub-input').oninput = function () {
     const searchTerm = this.value.toLowerCase().trim();
     const listContainer = document.getElementById('package-list');
     const dropdown = document.getElementById('custom-select');
+    const clearBtn = document.getElementById('clear-search');
+
+    selectedDropdownIndex = -1; // Reset selection when search updates
+    originalSearchInput = this.value; // Store original search
+
+    // Show/hide clear button
+    clearBtn.style.display = this.value.length > 0 ? 'flex' : 'none';
 
     listContainer.innerHTML = "";
 
@@ -52,10 +67,40 @@ document.getElementById('sub-input').oninput = function () {
 
     // 1. Filtrera sökindexet
     let matches = searchIndex.filter(item => {
+        const fullText = (item.sub + ' ' + item.str).toLowerCase();
         const subMatch = item.sub.toLowerCase().includes(searchTerm);
         const nameMatch = item.names.some(name => name.toLowerCase().includes(searchTerm));
-        return subMatch || nameMatch;
+        const fullMatch = fullText.includes(searchTerm);
+        
+        // Also check if search term without "mg" matches
+        const searchTermNoMg = searchTerm.replace(/\s*mg\s*$/i, '').trim();
+        const subMatchNoMg = searchTermNoMg && item.sub.toLowerCase().includes(searchTermNoMg);
+        const nameMatchNoMg = searchTermNoMg && item.names.some(name => name.toLowerCase().includes(searchTermNoMg));
+        const fullMatchNoMg = searchTermNoMg && fullText.includes(searchTermNoMg);
+        
+        // Check if search contains both substance and strength (e.g., "Etoricoxib 90")
+        // Split on numbers to handle multi-part searches, but be flexible with delimiters
+        let multiPartMatch = false;
+        
+        // Extract just the substance part (everything before first number or special chars)
+        const subPartMatch = searchTerm.match(/^([a-zåäö\s\+\-]+?)(?:\s*(?:\d|\/|$))/i);
+        if (subPartMatch) {
+            const subPart = subPartMatch[1].trim().toLowerCase();
+            // Check if item.sub contains the substance part
+            if (item.sub.toLowerCase().includes(subPart)) {
+                // Also check if the strength/numbers part matches
+                const numberPart = searchTerm.substring(subPartMatch[1].length).trim().toLowerCase();
+                if (!numberPart || item.str.toLowerCase().includes(numberPart)) {
+                    multiPartMatch = true;
+                }
+            }
+        }
+        
+        return subMatch || nameMatch || subMatchNoMg || nameMatchNoMg || multiPartMatch || fullMatch || fullMatchNoMg;
     });
+
+    // Store matches for keyboard navigation
+    lastDropdownMatches = matches.slice(0, 20);
 
     // 2. Avancerad sortering
     matches.sort((a, b) => {
@@ -82,6 +127,9 @@ document.getElementById('sub-input').oninput = function () {
         return sizeA - sizeB;
     });
 
+    // Update stored matches after sorting
+    lastDropdownMatches = matches.slice(0, 20);
+
     // 3. Rendera resultaten
     if (matches.length > 0) {
         // Vi begränsar till 20 träffar för prestanda
@@ -96,7 +144,7 @@ document.getElementById('sub-input').oninput = function () {
             `;
 
             div.onclick = function () {
-                document.getElementById('sub-input').value = item.sub;
+                document.getElementById('sub-input').value = item.sub + ' ' + item.str;
                 dropdown.style.display = "none";
                 
                 // Använd ID:n från indexet för en exakt och snabb sökning i data-filen
@@ -106,43 +154,120 @@ document.getElementById('sub-input').oninput = function () {
         });
         dropdown.style.display = "block";
     } else {
-        dropdown.style.display = "none";
+        // Show no results message in dropdown
+        const noResultsDiv = document.createElement('div');
+        noResultsDiv.className = 'dropdown-item';
+        noResultsDiv.innerHTML = `
+            <div class="item-line1">Varför finns inte min vara?</div>
+            <div class="item-line2">Alla läkemedel upphandlas inte med periodens vara. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a></div>
+        `;
+        listContainer.appendChild(noResultsDiv);
+        dropdown.style.display = "block";
     }
 };
 
+document.getElementById('sub-input').onfocus = function () {
+    const searchTerm = this.value.toLowerCase().trim();
+    if (searchTerm.length >= 2) {
+        this.oninput();
+    }
+};
+
+document.getElementById('clear-search').onclick = function () {
+    const input = document.getElementById('sub-input');
+    const dropdown = document.getElementById('custom-select');
+    input.value = '';
+    this.style.display = 'none';
+    dropdown.style.display = 'none';
+    input.focus();
+};
+
+// Keyboard navigation for search dropdown
+let selectedDropdownIndex = -1;
+let lastDropdownMatches = [];
+let originalSearchInput = '';
+
+document.getElementById('sub-input').onkeydown = function (e) {
+    const dropdown = document.getElementById('custom-select');
+    const listContainer = document.getElementById('package-list');
+    const items = listContainer.querySelectorAll('.dropdown-item');
+    
+    if (dropdown.style.display === 'none') return;
+    
+    switch(e.key) {
+        case 'ArrowDown':
+            e.preventDefault();
+            selectedDropdownIndex = Math.min(selectedDropdownIndex + 1, items.length - 1);
+            highlightDropdownItem(items, selectedDropdownIndex);
+            updateInputFromSelection(selectedDropdownIndex);
+            break;
+        case 'ArrowUp':
+            e.preventDefault();
+            selectedDropdownIndex = Math.max(selectedDropdownIndex - 1, -1);
+            highlightDropdownItem(items, selectedDropdownIndex);
+            updateInputFromSelection(selectedDropdownIndex);
+            break;
+        case 'Enter':
+            e.preventDefault();
+            if (selectedDropdownIndex >= 0 && selectedDropdownIndex < items.length) {
+                items[selectedDropdownIndex].click();
+                selectedDropdownIndex = -1;
+            }
+            break;
+        case 'Escape':
+            dropdown.style.display = 'none';
+            selectedDropdownIndex = -1;
+            document.getElementById('sub-input').value = originalSearchInput;
+            break;
+    }
+};
+
+function updateInputFromSelection(index) {
+    const input = document.getElementById('sub-input');
+    if (index >= 0 && index < lastDropdownMatches.length) {
+        input.value = lastDropdownMatches[index].sub + ' ' + lastDropdownMatches[index].str;
+    } else {
+        input.value = originalSearchInput;
+    }
+}
+
+function highlightDropdownItem(items, index) {
+    items.forEach((item, i) => {
+        if (i === index) {
+            item.style.background = '#eff6ff';
+            item.style.cursor = 'pointer';
+            item.scrollIntoView({ block: 'nearest' });
+        } else {
+            item.style.background = '';
+        }
+    });
+}
+
 
 async function fetchLatestPV(searchItem) {
-    // 1. Spara sökningen globalt
     currentSearch = searchItem; 
-    
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = "<p style='text-align:center; padding: 40px;'>Hämtar prisdata...</p>";
 
     try {
-        // 2. Hämta data för den valda månaden
         const res = await fetch(`data/${selectedMonth}.json`);
         const data = await res.json();
         
-        // 3. Matcha på ID:n
-        const sub = searchItem.sub;
-        const form = searchItem.form;
-        const str = searchItem.str;
-        const size = searchItem.size;
-
         let matches = data.filter(i => 
             String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
             String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id)
         );
 
         if (matches.length === 0) {
-            resultsDiv.innerHTML = `<div class="reserves-container"><p style="padding:20px; text-align:center;">Ingen data hittades för denna period.</p></div>`;
+            resultsDiv.innerHTML = `
+                <div class="bleed-card" style="padding: 24px;">
+                    <div class="item-line1" style="margin-bottom: 8px;">Varför finns inte min vara</div>
+                    <div class="item-line2" style="margin-top: 0;">Alla läkemedel upphandlas inte med periodens vara. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a></div>
+                </div>
+            `;
             return;
         }
 
-        // 4. Beräkna lägsta pris
-        const absoluteMinPrice = Math.min(...matches.map(i => i["Försäljningspris"]));
-        
-        // 5. Sortering (PV -> Reserv -> Pris)
         lastMatches = matches.sort((a, b) => {
             const getPriority = (s) => {
                 const status = (s || "").trim().toUpperCase();
@@ -153,24 +278,31 @@ async function fetchLatestPV(searchItem) {
             return getPriority(a.Status) - getPriority(b.Status);
         });
 
+        // Hitta PV och det absoluta lägsta priset
         const pvProduct = lastMatches.find(i => i.Status.trim().toUpperCase() === "PV") || lastMatches[0];
         lastPVPrice = pvProduct["Försäljningspris"];
-        const cheaperExists = absoluteMinPrice < lastPVPrice;
+        const absoluteMinPrice = Math.min(...matches.map(i => i["Försäljningspris"]));
 
-        // 6. Hämta historisk statistik
+        // Beräkna sparande och hitta den billigaste produkten
+        const savings = lastPVPrice - absoluteMinPrice;
+        // Vi visar bara alerten om man sparar minst 1 kr (för att slippa avrundningsdiffar)
+        const cheaperProduct = savings >= 1 ? lastMatches.find(i => i["Försäljningspris"] === absoluteMinPrice) : null;
+
         const stats = await getPriceStatistics(searchItem);
 
-        // 7. Förbered ytan (Både info-card och insight-card är nu borta)
         resultsDiv.innerHTML = `
             <div id="price-card-area"></div>
             <div id="table-area"></div>
-            <div id="chart-container" style="background:white; border-radius:12px; padding:20px; border:1px solid #e2e8f0; margin-top:20px;">
-                <canvas id="priceChart" style="height:300px;"></canvas>
-            </div>
         `;
 
-        // 8. Rendera komponenter
-        await renderPriceCard(pvProduct, sub, str, form, stats, cheaperExists);
+        const chartCont = document.getElementById('chart-container');
+        if (chartCont) {
+            chartCont.style.display = "block";
+            chartCont.className = "bleed-card";
+        }
+
+        // Skicka med spar-data till renderaren
+        await renderPriceCard(pvProduct, searchItem.sub, searchItem.str, searchItem.form, stats, cheaperProduct, savings);
         renderTableOnly(); 
         renderHistoryChart(searchItem);
 
@@ -180,7 +312,6 @@ async function fetchLatestPV(searchItem) {
     }
 }
 
-// Hjälpfunktion för att växla tabellens storlek
 function toggleTableExpansion() {
     isExpanded = !isExpanded;
 
@@ -215,16 +346,12 @@ async function getPriceStatistics(searchItem) {
     };
 }
 
-async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperExists) {
+async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct, savings) {
     const area = document.getElementById('price-card-area');
     if (!pvProduct || !area) return;
 
-    const formatPrice = (p) => new Intl.NumberFormat("sv-SE", { 
-        style: "currency", 
-        currency: "SEK" 
-    }).format(p);
+    const formatPrice = (p) => new Intl.NumberFormat("sv-SE", { style: "currency", currency: "SEK" }).format(p);
 
-    // --- 1. DATAHÄMTNING (FÖRRA OCH NÄSTA MÅNAD) ---
     const currentIndex = availableMonths.indexOf(parseInt(selectedMonth));
     const prevMonthCode = availableMonths[currentIndex + 1]; 
     const nextMonthCode = availableMonths[currentIndex - 1]; 
@@ -245,160 +372,144 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperExists) 
 
     const prevPrice = await fetchSpecificPrice(prevMonthCode);
     const nextPrice = await fetchSpecificPrice(nextMonthCode);
-    const rec = getPriceRecommendation(lastPVPrice, stats, nextPrice);
+    const rec = getPriceRecommendation(pvProduct["Försäljningspris"], stats, nextPrice);
 
-    // --- 2. HJÄLPFUNKTION FÖR STATISTIK-BLOCK (FÄRGLOGIK & STOCK-PILAR) ---
     const createStatBlock = (price, label, currentPrice, monthCode, isFuture) => {
-        if (!price) {
-            return `
-                <div style="flex: 1; min-width: 120px;">
-                    <p style="margin: 0; color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase;">${label}</p>
-                    <p style="margin: 4px 0 0 0; color: #cbd5e1; font-size: 14px;">Ej fastställt</p>
-                </div>`;
-        }
-
+        if (!price) return `<div class="stat-block"><p class="stat-block-label">${label}</p><p style="margin: 4px 0 0 0; color: #cbd5e1; font-size: 14px;">Ej fastställt</p></div>`;
         const diff = price - currentPrice;
-        const diffPercent = (Math.abs(currentPrice - price) / price) * 100;
-        
-        let priceColor = "#1e293b"; 
-        let trendColor = "#64748b"; 
-        let icon = "horizontal_rule";
+        const diffPercent = Math.round((Math.abs(diff) / currentPrice) * 100);
+        let priceColor = "#1e293b", trendColor = "#64748b", icon = "horizontal_rule";
 
         if (price !== currentPrice) {
-            if (isFuture) {
-                const priceWillIncrease = price > currentPrice;
-                priceColor = priceWillIncrease ? "#dc2626" : "#16a34a";
-                trendColor = priceColor;
-                icon = priceWillIncrease ? "trending_up" : "trending_down";
+            // For Föregående (isFuture=false): text and arrow colors should be opposite/reversed
+            // For Nästa (isFuture=true): text and arrow colors should match
+            if (!isFuture) {
+                // Föregående: text shows comparison, arrow shows trend (opposite)
+                priceColor = price > currentPrice ? "#dc2626" : "#16a34a";  // Text: red if was higher, green if lower
+                trendColor = price > currentPrice ? "#16a34a" : "#dc2626";  // Arrow: opposite color
             } else {
-                const priceHasDecreased = currentPrice < price; 
-                priceColor = !priceHasDecreased ? "#16a34a" : "#dc2626"; 
-                trendColor = priceHasDecreased ? "#16a34a" : "#dc2626"; 
-                icon = priceHasDecreased ? "trending_down" : "trending_up";
+                // Nästa: text and arrow show same sentiment
+                priceColor = price > currentPrice ? "#dc2626" : "#16a34a";
+                trendColor = priceColor;
             }
+            // Arrow shows direction: DOWN if price is/was lower, UP if price is/will be higher
+            icon = isFuture === (price > currentPrice) ? "trending_up" : "trending_down";
         }
 
         return `
-            <div style="flex: 1; min-width: 120px;">
-                <p style="margin: 0; color: #64748b; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">${label} (${formatMedicineDate(monthCode)})</p>
-                <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
-                    <span style="font-size: 18px; font-weight: 700; color: ${priceColor};">${formatPrice(price)}</span>
+            <div class="stat-block">
+                <p class="stat-block-label">${label}</p>
+                <div class="stat-block-content">
+                    <span class="stat-block-price" style="color: ${priceColor};">${formatPrice(price)}</span>
                     ${price !== currentPrice ? `
-                    <span style="background: ${trendColor}15; color: ${trendColor}; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700; display: flex; align-items: center; gap: 2px;">
-                        <span class="material-symbols-outlined" style="font-size: 16px;">${icon}</span>
-                        ${diffPercent.toFixed(0)}%
-                    </span>` : ''}
+                        <span class="stat-block-trend" style="background: ${trendColor}15; color: ${trendColor};">
+                            <span class="material-symbols-outlined">${icon}</span>
+                            ${diffPercent}%
+                        </span>` : ''}
                 </div>
             </div>`;
     };
 
-    // --- 3. VOLATILITET & STABILITET ---
-    let stabilityHtml = "";
-    if (stats && stats.minPrice && stats.maxPrice) {
-        const spread = ((stats.maxPrice - stats.minPrice) / stats.minPrice) * 100;
-        if (spread > 15) {
-            stabilityHtml = `
-                <div style="background: #fffbeb; border-radius: 12px; padding: 16px; margin-top: 20px; display: flex; align-items: flex-start; gap: 12px; border: 1px solid #fef3c7;">
-                    <div style="width: 12px; height: 12px; background: #f59e0b; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+    let savingsAlertHtml = "";
+    if (cheaperProduct && savings >= 1) {
+        savingsAlertHtml = `
+            <div class="savings-alert-box" style="flex: 1.2; min-width: 250px; background: #f0fdf4; border: 1px solid #16a34a30; border-left: 4px solid #16a34a; border-radius: 12px; padding: 20px;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span class="material-symbols-outlined" style="color: #16a34a; font-size: 28px;">account_balance_wallet</span>
                     <div>
-                        <p style="margin: 0; font-weight: 700; color: #92400e; font-size: 14px;">Varierande pris</p>
-                        <p style="margin: 2px 0 0 0; color: #b45309; font-size: 13px;">Det här läkemedlet har haft stora prisvariationer senaste året</p>
+                        <strong style="display: block; font-size: 16px; color: #134e4a; margin-bottom: 4px;">Spara ${savings.toFixed(2)} kr!</strong>
+                        <p style="margin: 0; font-size: 13px; color: #166534; line-height: 1.5;">
+                            <strong>${cheaperProduct.Produktnamn}</strong> är billigare än Periodens Vara.
+                        </p>
                     </div>
-                </div>`;
-        } else if (spread < 10) {
-            stabilityHtml = `
-                <div style="background: #f0fdf4; border-radius: 12px; padding: 16px; margin-top: 20px; display: flex; align-items: flex-start; gap: 12px; border: 1px solid #dcfce7;">
-                    <div style="width: 12px; height: 12px; background: #22c55e; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
-                    <div>
-                        <p style="margin: 0; font-weight: 700; color: #166534; font-size: 14px;">Stabilt pris</p>
-                        <p style="margin: 2px 0 0 0; color: #15803d; font-size: 13px;">Priset på denna vara har varit stabilt över en längre tid.</p>
-                    </div>
-                </div>`;
-        }
+                </div>
+            </div>
+        `;
     }
 
-    // --- 4. URSPRUNG & BADGE FÖR BILLIGARE UTBYTE ---
-    const ursprungValue = pvProduct.Ursprung || 'Information saknas';
-const cheaperBadgeHtml = cheaperExists 
-    ? `<span 
-        title="Det finns ett annat utbytbart läkemedel i listan nedan som har ett lägre pris än Periodens Vara." 
-        style="background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; padding: 2px 10px; border-radius: 6px; font-size: 13px; font-weight: 700; margin-left: 12px; display: inline-flex; align-items: center; gap: 4px; cursor: help;">
-            <span class="material-symbols-outlined" style="font-size: 16px;">warning</span> Billigare utbyte finns
-       </span>` 
-    : "";
-
-    // --- 5. RENDERING ---
     area.innerHTML = `
-        <div style="background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); overflow: hidden; font-family: sans-serif; width: 100%; border: 1px solid #f1f5f9; margin-bottom: 20px;">
-            
-            <div style="background: ${rec.bg}; padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
-                <div style="background: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <span class="material-symbols-outlined" style="color: ${rec.color}; font-size: 20px;">${rec.icon}</span>
+        <div class="bleed-card">
+            <div class="price-card-header-bar" style="background: ${rec.bg};">
+                <div class="price-card-icon-wrapper">
+                    <span class="material-symbols-outlined price-card-icon" style="color: ${rec.color};">${rec.icon}</span>
                 </div>
-                <div>
-                    <p style="margin: 0; font-weight: 800; color: ${rec.color}; font-size: 15px;">${rec.label}!</p>
-                    <p style="margin: 2px 0 0 0; color: ${rec.color}; opacity: 0.8; font-size: 13px;">${rec.subtext}</p>
+                <div class="price-card-header-text">
+                    <p class="price-card-header-label" style="color: ${rec.color};">${rec.label}!</p>
+                    <p class="price-card-header-subtext" style="color: ${rec.color};">${rec.subtext}</p>
                 </div>
             </div>
 
-            <div style="padding: 24px;">
-                <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px;">
+            <div class="price-card-content-wrapper">
+                <div class="price-card-grid">
                     
-                    <div style="flex: 1; min-width: 300px;">
-                        <div style="display: flex; align-items: center; flex-wrap: wrap;">
-                            <h2 style="margin: 0; font-size: clamp(20px, 5vw, 24px); font-weight: 800; color: #1e293b; line-height: 1.2;">
-                                ${pvProduct.Produktnamn}
-                            </h2>
-                            ${cheaperBadgeHtml}
-                        </div>
-                        <p style="margin: 6px 0; color: #64748b; font-size: 15px;">${sub} · ${str} · ${form}</p>
+                    <div class="price-card-left-column">
                         
-                        <div style="margin-top: 32px;">
-                            <p style="margin: 0; color: #64748b; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Aktuellt pris</p>
-                            <span style="font-size: clamp(32px, 8vw, 42px); font-weight: 800; color: #1e293b; display: block; margin-top: 4px;">${formatPrice(lastPVPrice)}</span>
-                            
-                            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #f1f5f9; display: flex; gap: 24px; flex-wrap: wrap;">
-                                ${createStatBlock(prevPrice, "Föregående", lastPVPrice, prevMonthCode, false)}
-                                ${createStatBlock(nextPrice, "Kommande", lastPVPrice, nextMonthCode, true)}
+                        <div class="price-card-title-section">
+                            <h2 class="price-card-title">
+                                ${pvProduct.Produktnamn} 
+                            </h2>
+                            <p class="price-card-subtitle">${sub} · ${str} · ${form}</p>
+                        </div>
+
+                        <div class="price-card-price-section">
+                            <div class="price-card-current-wrapper">
+                                <p class="price-card-current-label">Aktuellt pris</p>
+                                <span class="price-card-current-value">${formatPrice(pvProduct["Försäljningspris"])}</span>
+                            </div>
+                            ${savingsAlertHtml}
+                        </div>
+
+                        <div class="stat-blocks-container">
+                            ${createStatBlock(prevPrice, "Föregående", pvProduct["Försäljningspris"], prevMonthCode, false)}
+                            ${createStatBlock(nextPrice, "Nästa", pvProduct["Försäljningspris"], nextMonthCode, true)}
+                        </div>
+                    </div>
+
+                    <div class="price-card-info-panel">
+                        <p class="price-card-info-header">Information</p>
+                        <div class="price-card-info-list">
+                            <div class="price-card-info-item">
+                                <span class="material-symbols-outlined price-card-info-icon">inventory_2</span>
+                                <div class="price-card-info-content">
+                                    <span class="price-card-info-label">Antal i förpackning</span>
+                                    <span class="price-card-info-value">${formatUnit(form, pvProduct.Storlek)}</span>
+                                </div>
+                            </div>
+                            <div class="price-card-info-item">
+                                <span class="material-symbols-outlined price-card-info-icon">category</span>
+                                <div class="price-card-info-content">
+                                    <span class="price-card-info-label">Förpackningstyp</span>
+                                    <span class="price-card-info-value">${(() => {
+                                        const map = currentSearch?.packagingMap || {};
+                                        const vnr = pvProduct.Varunummer ?? pvProduct.Vnr;
+                                        const byVnr = map[vnr] || map[String(vnr)];
+                                        return pvProduct.Förpackning
+                                            || byVnr
+                                            || (currentSearch?.packaging && currentSearch.packaging[0])
+                                            || pvProduct.Beredningsform
+                                            || pvProduct.Läkemedelsform
+                                            || '-';
+                                    })()}</span>
+                                </div>
+                            </div>
+                            <div class="price-card-info-item">
+                                <span class="material-symbols-outlined price-card-info-icon">factory</span>
+                                <div class="price-card-info-content">
+                                    <span class="price-card-info-label">Tillverkare</span>
+                                    <span class="price-card-info-value">${pvProduct.Företag}</span>
+                                </div>
+                            </div>
+                            <div class="price-card-info-item">
+                                <span class="material-symbols-outlined price-card-info-icon">info</span>
+                                <div class="price-card-info-content">
+                                    <span class="price-card-info-label">Typ</span>
+                                    <span class="price-card-info-value">${pvProduct.Ursprung || 'Generics'}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div style="flex: 0 1 260px; background: #f8fafc; border-radius: 12px; padding: 16px; border: 1px solid #f1f5f9;">
-                        <p style="margin: 0 0 12px 0; color: #64748b; font-size: 11px; font-weight: 700; text-transform: uppercase;">Information</p>
-                        <div style="display: flex; flex-direction: column; gap: 12px;">
-                            <div style="display: flex; align-items: center; gap: 10px;">
-                                <span class="material-symbols-outlined" style="font-size: 18px; color: #94a3b8;">payments</span>
-                                <div style="font-size: 13px;">
-                                    <span style="display:block; color: #64748b; font-size: 11px;">Pris per enhet</span>
-                                    <span style="font-weight: 700; color: #1e293b;">${formatPrice(pvProduct["Försäljningspris per minsta enhet"])}</span>
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 10px;">
-                                <span class="material-symbols-outlined" style="font-size: 18px; color: #94a3b8;">inventory_2</span>
-                                <div style="font-size: 13px;">
-                                    <span style="display:block; color: #64748b; font-size: 11px;">Förpackning</span>
-                                    <span style="font-weight: 700; color: #1e293b;">${formatUnit(form, pvProduct.Storlek)}</span>
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 10px;">
-                                <span class="material-symbols-outlined" style="font-size: 18px; color: #94a3b8;">info</span>
-                                <div style="font-size: 13px;">
-                                    <span style="display:block; color: #64748b; font-size: 11px;">Typ</span>
-                                    <span style="font-weight: 700; color: #1e293b;">${ursprungValue}</span>
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 10px;">
-                                <span class="material-symbols-outlined" style="font-size: 18px; color: #94a3b8;">factory</span>
-                                <div style="font-size: 13px;">
-                                    <span style="display:block; color: #64748b; font-size: 11px;">Tillverkare</span>
-                                    <span style="font-weight: 700; color: #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px; display: inline-block;">${pvProduct.Företag}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                ${stabilityHtml}
             </div>
         </div>`;
 }
@@ -407,31 +518,32 @@ function renderTableOnly() {
     const area = document.getElementById('table-area');
     if (!area) return;
 
-    area.innerHTML = `
-        <div class="reserves-container" style="background: white; border-radius: 16px; padding: 24px 0; border: 1px solid #e2e8f0; margin-top: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-            <div style="padding: 0 1rem;">
-                <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #1e293b;">Utbytbara alternativ</h3>
-                <p style="margin: 8px 0 24px 0; color: #64748b; font-size: 14px;">
-                    Alla dessa innehåller samma verksamma ämne: <strong style="color: #1e293b;">${currentSearch.sub} ${currentSearch.str}</strong>
+   area.innerHTML = `
+    <div class="bleed-card comparison-container">
+        <div class="comparison-inner-padding">
+            <h3 class="comparison-title">Utbytbara alternativ</h3>
+            <p class="comparison-subtitle">
+                Alla dessa innehåller samma verksamma ämne: 
+                <strong>${currentSearch.sub} ${currentSearch.str}</strong>
+            </p>
+        </div>
+        
+        <div id="comparison-list" class="comparison-list-wrapper">
+            </div>
+
+        <div id="pagination-footer"></div>
+
+        <div class="tlv-info-box">
+            <span class="material-symbols-outlined tlv-info-icon">info</span>
+            <div>
+                <p class="tlv-info-title">Periodens vara är inte alltid billigast</p>
+                <p class="tlv-info-text">
+                    Billigaste läkemedel blir inte alltid "periodens vara" om företaget inte har bekräftat leveransförmåga till TLV. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a>
                 </p>
             </div>
-            
-            <div id="comparison-list" style="display: flex; flex-direction: column; gap: 12px;">
-                </div>
-
-            <div id="pagination-footer" style="text-align: center; margin-top: 20px; padding: 0 1rem;"></div>
-
-            <div style="margin: 24px 1rem 0 1rem; background: #f0fdfa; border-radius: 12px; padding: 16px; display: flex; gap: 12px; border: 1px solid #ccfbf1;">
-                <span class="material-symbols-outlined" style="color: #14b8a6; font-size: 20px;">check_circle</span>
-                <div>
-                    <p style="margin: 0; font-weight: 700; color: #134e4a; font-size: 14px;">Tips!</p>
-                    <p style="margin: 4px 0 0 0; color: #115e59; font-size: 13px; line-height: 1.5;">
-                        Be apoteket om det billigaste alternativet...
-                    </p>
-                </div>
-            </div>
         </div>
-    `;
+    </div>
+`;
 
     updateTableRows(lastMatches);
 }
@@ -448,90 +560,104 @@ function updateTableRows(data) {
         const itemPrice = item["Försäljningspris"];
         const diff = itemPrice - lastPVPrice;
         const status = (item.Status || "").trim().toUpperCase();
+        // Robust rad-ID även när Vnr saknas
+        const rowId = String(
+            item.Vnr ?? `${(item.Produktnamn || '')}-${(item.Företag || '')}-${(item.Storlek || '')}-${index}`
+        );
         
+        // Enhetslogik
+        const form = (item.Läkemedelsform || "").toLowerCase();
+        const size = item.Storlek || "";
+        let unit = "st";
+        if (form.includes("gel") || form.includes("salva") || form.includes("kräm")) unit = "g";
+        else if (form.includes("droppar") || form.includes("lösning")) unit = "ml";
+
         const isPV = status === "PV";
         const isR1 = status === "R1";
         const isR2 = status === "R2";
         const isCheapest = itemPrice === minPriceInData;
+        const isOpen = selectedRowId === rowId;
 
-        // FÄRGLOGIK
-        let bgColor = "#f8f9fa";
-        let borderColor = "transparent";
-        let rankColor = "#cbd5e1";
+        // PV is blue unless it's also cheapest (then green)
+        const isPVAndCheapest = isPV && isCheapest;
+        let rowBgColor = isCheapest ? "#f0fdf4" : (isPV ? "#eff6ff" : (isR1 || isR2 ? "#fffbeb" : "#ffffff"));
+        let rowBorderColor = isCheapest ? "#5eead4" : (isPV ? "#bfdbfe" : (isR1 || isR2 ? "#fde68a" : "#e2e8f0"));
+
         let statusBadgeHtml = "";
-
-        if (isCheapest) {
-            // Billigaste är alltid grönt
-            bgColor = "#f0fdf4";
-            borderColor = "#5eead4";
-            rankColor = "#14b8a6";
-            statusBadgeHtml = `
-                <span title="Detta är det billigaste tillgängliga alternativet för denna period." 
-                      style="background: white; color: #14b8a6; border: 1px solid #14b8a6; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 700; display: flex; align-items: center; gap: 4px; cursor: help;">
-                    <span class="material-symbols-outlined" style="font-size: 12px;">star</span> Billigast
-                </span>`;
-        } 
-        
-        if (isPV) {
-            // Om PV inte är billigast -> Blå, annars ingår den i det gröna ovan
-            if (!isCheapest) {
-                bgColor = "#eff6ff";
-                borderColor = "#bfdbfe";
-                rankColor = "#2563eb";
-            }
-            statusBadgeHtml += `
-                <span title="Periodens Vara: Det läkemedel som apoteken i första hand ska erbjuda." 
-                      style="background: white; color: #3b82f6; border: 1px solid #3b82f6; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 700; cursor: help;">
-                    Periodens vara
-                </span>`;
+        if (isPVAndCheapest) {
+            statusBadgeHtml = `<span class="status-badge-mini badge-pv">PV</span><span class="status-badge-mini" style="color: #16a34a; border: 1px solid #10b981;"><span class="material-symbols-outlined" style="font-size: 14px;">star</span></span>`;
+        } else if (isPV) {
+            statusBadgeHtml = `<span class="status-badge-mini badge-pv">PV</span>`;
         } else if (isR1 || isR2) {
-            // Reserv 1 och 2 är gula
-            bgColor = "#fffbeb";
-            borderColor = "#fde68a";
-            rankColor = "#f59e0b";
-            statusBadgeHtml = `
-                <span title="Reservalternativ: Används om Periodens Vara är slut på lagret." 
-                      style="background: white; color: #d97706; border: 1px solid #f59e0b; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 700; cursor: help;">
-                    ${status}
-                </span>`;
+            statusBadgeHtml = `<span class="status-badge-mini badge-reserve">${status}</span>`;
+        } else if (isCheapest) {
+            statusBadgeHtml = `<span class="status-badge-mini" style="color: #16a34a; border: 1px solid #10b981;"><span class="material-symbols-outlined" style="font-size: 14px;">star</span></span>`;
         }
 
         return `
-            <div style="background: ${bgColor}; border: 2px solid ${borderColor}; border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: space-between; position: relative;">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <div style="width: 32px; height: 32px; background: ${rankColor}; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0;">
-                        ${index + 1}
-                    </div>
-                    
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                            <strong style="font-size: 16px; color: #1e293b;">${item.Produktnamn}</strong>
+            <div onclick="toggleRowDetails('${rowId}')" class="comparison-row ${isCheapest ? 'cheapest-row' : (isPV ? 'pv-row' : (isR1 || isR2 ? 'reserve-row' : 'default-row'))}">
+                <div class="comparison-row-header">
+                    <div class="comparison-row-left">
+                        <div class="comparison-row-product">
                             ${statusBadgeHtml}
+                            <strong class="comparison-row-name">${item.Produktnamn}</strong>
                         </div>
-                        <p style="margin: 2px 0 0 0; color: #94a3b8; font-size: 13px;">${item.Företag}</p>
+                        <p class="comparison-row-info">
+                            ${item.Företag} · ${size} ${unit}
+                        </p>
+                    </div>
+                    <div class="price-display-container">
+                        <div class="price-value">${itemPrice.toLocaleString('sv-SE', { minimumFractionDigits: 2 })} kr</div>
+                        <div class="price-diff" style="${diff > 0 ? 'color: #dc2626;' : ''}">${diff === 0 ? 'PV' : (diff > 0 ? `+${diff.toFixed(2)} kr` : `${diff.toFixed(2)} kr`)}</div>
                     </div>
                 </div>
 
-                <div style="text-align: right;">
-                    <div style="font-size: 18px; font-weight: 800; color: #1e293b;">
-                        ${itemPrice.toLocaleString('sv-SE', { minimumFractionDigits: 2 })} kr
+                ${isOpen ? `
+                <div class="row-details-container">
+                    <div class="row-detail-item">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                        <div class="row-detail-content">
+                            <span class="row-detail-label">Antal i förpackning</span>
+                            <span class="row-detail-value">${size} ${unit}</span>
+                        </div>
                     </div>
-                    <div style="font-size: 12px; font-weight: 600; color: #94a3b8; margin-top: 2px;">
-                        ${diff === 0 ? 'PV' : (diff > 0 ? `+${diff.toFixed(2)} kr` : `${diff.toFixed(2)} kr`)}
+                    <div class="row-detail-item">
+                        <span class="material-symbols-outlined">category</span>
+                        <div class="row-detail-content">
+                            <span class="row-detail-label">Förpackningstyp</span>
+                            <span class="row-detail-value">${(() => {
+                                const map = currentSearch?.packagingMap || {};
+                                const vnr = item.Varunummer ?? item.Vnr;
+                                const byVnr = map[vnr] || map[String(vnr)];
+                                return item["Förpackning"]
+                                    || byVnr
+                                    || (currentSearch?.packaging && currentSearch.packaging[0])
+                                    || item["Beredningsform"]
+                                    || item["Läkemedelsform"]
+                                    || '—';
+                            })()}</span>
+                        </div>
+                    </div>
+                    <div class="row-detail-item">
+                        <span class="material-symbols-outlined">factory</span>
+                        <div class="row-detail-content">
+                            <span class="row-detail-label">Tillverkare</span>
+                            <span class="row-detail-value">${item.Företag || '—'}</span>
+                        </div>
+                    </div>
+                    <div class="row-detail-item">
+                        <span class="material-symbols-outlined">info</span>
+                        <div class="row-detail-content">
+                            <span class="row-detail-label">Typ</span>
+                            <span class="row-detail-value">${item.Ursprung || 'Generics'}</span>
+                        </div>
                     </div>
                 </div>
+                ` : ''}
             </div>
         `;
     }).join('');
 
-    if (footer) {
-        footer.innerHTML = `
-            <button onclick="toggleTableExpansion()" style="background: white; border: 1px solid #e2e8f0; color: #64748b; padding: 8px 24px; border-radius: 24px; cursor: pointer; font-weight: 700; font-size: 13px; display: inline-flex; align-items: center; gap: 8px;">
-                ${isExpanded ? 'Visa färre' : `Visa alla (${data.length})`}
-                <span class="material-symbols-outlined" style="font-size: 18px;">${isExpanded ? 'expand_less' : 'expand_more'}</span>
-            </button>
-        `;
-    }
 }
 
 function renderMonthSelector() {
@@ -550,11 +676,16 @@ function renderMonthSelector() {
 
 function updateMonth(newMonth) {
     selectedMonth = newMonth;
-    // Om en medicin redan är vald, ladda om datan för den nya månaden
+    
+    // Update header with new month
+    const headerPeriod = document.getElementById('header-period');
+    if (headerPeriod) {
+        headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}`;
+    }
+    
     if (currentSearch) {
-        // Vi nollställer expansionen när man byter månad för att inte förvirra användaren
         isExpanded = false; 
-        fetchLatestPV(currentSearch.sub, currentSearch.form, currentSearch.str, currentSearch.size);
+        fetchLatestPV(currentSearch); // Skicka hela objektet
     }
 }
 
@@ -562,6 +693,14 @@ function toggleTableExpansion() {
     isExpanded = !isExpanded;
     
     // Vi skickar med den sparade datan direkt till rad-renderaren
+    updateTableRows(lastMatches);
+}
+
+function toggleRowDetails(vnr) {
+    // Om vi klickar på samma rad igen, stäng den. Annars öppna den nya.
+    selectedRowId = (selectedRowId === vnr) ? null : vnr;
+    
+    // Vi anropar updateTableRows direkt för att rita om listan med den nya selectedRowId
     updateTableRows(lastMatches);
 }
 
@@ -628,10 +767,18 @@ function formatUnit(form, size) {
 }
 
 async function renderHistoryChart(searchItem) {
-    const ctx = document.getElementById('priceChart').getContext('2d');
+    const canvas = document.getElementById('priceChart');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
     const container = document.getElementById('chart-container');
     const rangeSelect = document.getElementById('chart-range-select');
-    const rangeVal = rangeSelect ? rangeSelect.value : "12"; 
+    const priceTypeSelect = document.getElementById('chart-price-type');
+    const rangeVal = rangeSelect ? rangeSelect.value : "12";
+    
+    // Update global chart price type
+    if (priceTypeSelect) {
+        chartPriceType = priceTypeSelect.value;
+    }
     
     if (window.myChart instanceof Chart) {
         window.myChart.destroy();
@@ -640,13 +787,18 @@ async function renderHistoryChart(searchItem) {
     let filteredMonths = [...availableMonths];
     if (rangeVal !== "all") {
         const limit = parseInt(rangeVal);
-        filteredMonths = filteredMonths.slice(0, limit);
+        // Check if it's a year selection (4 digits starting with 2)
+        if (rangeVal.length === 4 && rangeVal.startsWith('2')) {
+            const yearPrefix = rangeVal.slice(2); // "26" from "2026"
+            filteredMonths = filteredMonths.filter(m => String(m).startsWith(yearPrefix));
+        } else {
+            // It's a number of months
+            filteredMonths = filteredMonths.slice(0, limit);
+        }
     }
 
     const chronologicalMonths = filteredMonths.reverse();
     let historyPoints = [];
-    
-    // Hämta statistik för att kunna visa avvikelse i tooltip
     const stats = await getPriceStatistics(searchItem);
     
     for (const month of chronologicalMonths) {
@@ -654,17 +806,30 @@ async function renderHistoryChart(searchItem) {
             const res = await fetch(`data/${month}.json`);
             const data = await res.json();
             
-            // Använd ID-matchning istället för sträng-matchning
-            const match = data.find(i => 
-                String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
-                String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id) &&
-                i.Status.trim().toUpperCase() === "PV"
-            );
+            let match;
+            if (chartPriceType === "cheapest") {
+                // Find cheapest price for this exchange group and size
+                const allMatches = data.filter(i => 
+                    String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
+                    String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id)
+                );
+                if (allMatches.length > 0) {
+                    match = allMatches.reduce((min, curr) => 
+                        curr["Försäljningspris"] < min["Försäljningspris"] ? curr : min
+                    );
+                }
+            } else {
+                // Find PV (Periodens vara)
+                match = data.find(i => 
+                    String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
+                    String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id) &&
+                    i.Status.trim().toUpperCase() === "PV"
+                );
+            }
             
             if (match) {
                 const price = match["Försäljningspris"];
                 const diffFromAvg = stats ? ((price - stats.avgPrice) / stats.avgPrice) * 100 : 0;
-
                 historyPoints.push({
                     x: formatMedicineDate(month),
                     y: price,
@@ -672,9 +837,7 @@ async function renderHistoryChart(searchItem) {
                     diff: diffFromAvg.toFixed(1)
                 });
             }
-        } catch (e) { 
-            console.warn(`Kunde inte hämta historik för ${month}`, e); 
-        }
+        } catch (e) {}
     }
 
     if (historyPoints.length === 0) {
@@ -683,6 +846,24 @@ async function renderHistoryChart(searchItem) {
     }
 
     container.style.display = "block";
+
+    // --- NY LOGIK FÖR ATT MOTVERKA DRAMATISK GRAF ---
+    const allPrices = historyPoints.map(p => p.y);
+    const minPrice = Math.min(...allPrices);
+    const maxPrice = Math.max(...allPrices);
+    const priceDiff = maxPrice - minPrice;
+
+    // Vi vill att y-axeln alltid ska visa ett spann på minst 60 kr (eller mer om priset varierar mer)
+    // Detta gör att småändringar på 2-5 kr ser flacka och "normala" ut.
+    const minSpan = 60; 
+    let yMin = minPrice - 10; // Standard: 10 kr marginal under
+    let yMax = maxPrice + 10; // Standard: 10 kr marginal över
+
+    if (priceDiff < minSpan) {
+        const paddingNeeded = (minSpan - priceDiff) / 2;
+        yMin = Math.max(0, minPrice - paddingNeeded); // Gå inte under 0 kr
+        yMax = maxPrice + paddingNeeded;
+    }
 
     window.myChart = new Chart(ctx, {
         type: 'line',
@@ -694,38 +875,106 @@ async function renderHistoryChart(searchItem) {
                 borderColor: '#2563eb',
                 backgroundColor: 'rgba(37, 99, 235, 0.08)',
                 borderWidth: 3,
-                pointRadius: 5,
-                pointBackgroundColor: '#2563eb',
-                pointBorderColor: '#fff',
-                pointBorderWidth: 2,
-                tension: 0.35,
+                pointRadius: 4,
+                tension: 0.3,
                 fill: true
             }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            scales: {
+                y: { 
+                    // Applicera det beräknade spannet
+                    min: Math.floor(yMin / 5) * 5, // Avrunda neråt till närmsta 5-lapp för snyggare skala
+                    max: Math.ceil(yMax / 5) * 5,  // Avrunda uppåt till närmsta 5-lapp
+                    ticks: { 
+                        callback: (v) => v + ' kr',
+                        stepSize: 10 // Gör skalan lugnare med fasta steg
+                    },
+                    grid: { color: '#f1f5f9' }
+                },
+                x: { 
+                    ticks: { maxRotation: 45, minRotation: 45, font: { size: 11 } },
+                    grid: { display: false }
+                }
+            },
             plugins: {
                 legend: { display: false },
                 tooltip: {
+                    padding: 12,
                     callbacks: {
                         label: function(context) {
                             const point = historyPoints[context.dataIndex];
                             return [
-                                `Pris: ${point.y.toLocaleString('sv-SE')} kr`,
-                                `Företag: ${point.company}`,
-                                `vs Snitt: ${point.diff > 0 ? '+' : ''}${point.diff}%`
+                                ` Pris: ${point.y.toLocaleString('sv-SE')} kr`,
+                                ` Företag: ${point.company}`
                             ];
                         }
                     }
                 }
-            },
-            scales: {
-                y: { ticks: { callback: (v) => v + ' kr' } },
-                x: { ticks: { maxRotation: 45, minRotation: 45 } }
             }
         }
     });
+
+    // Lägg till prisstabilitetsanalys under grafen
+    renderPriceStabilityInsight(allPrices, minPrice, maxPrice, priceDiff);
+}
+
+function renderPriceStabilityInsight(allPrices, minPrice, maxPrice, priceDiff) {
+    const chartContainer = document.getElementById('chart-container');
+    if (!chartContainer) return;
+
+    // Ta bort tidigare insight om den finns
+    const existingInsight = document.getElementById('stability-insight');
+    if (existingInsight) existingInsight.remove();
+
+    const avgPrice = allPrices.reduce((a, b) => a + b, 0) / allPrices.length;
+    const variance = allPrices.reduce((sum, price) => sum + Math.pow(price - avgPrice, 2), 0) / allPrices.length;
+    const stdDev = Math.sqrt(variance);
+    const coefficientOfVariation = (stdDev / avgPrice) * 100; // CV i procent
+
+    let stabilityLabel, stabilityColor, stabilityIcon, stabilityText, stabilityBg;
+
+    if (coefficientOfVariation < 3) {
+        stabilityLabel = "Mycket stabilt pris";
+        stabilityColor = "#16a34a";
+        stabilityIcon = "check_circle";
+        stabilityText = `Priset har varit mycket stabilt med minimal variation (±${coefficientOfVariation.toFixed(1)}%).`;
+        stabilityBg = "#f0fdf4";
+    } else if (coefficientOfVariation < 8) {
+        stabilityLabel = "Stabilt pris";
+        stabilityColor = "#0891b2";
+        stabilityIcon = "trending_flat";
+        stabilityText = `Priset har varit relativt stabilt med låg variation (±${coefficientOfVariation.toFixed(1)}%).`;
+        stabilityBg = "#ecfeff";
+    } else if (coefficientOfVariation < 15) {
+        stabilityLabel = "Måttlig prisvariation";
+        stabilityColor = "#f59e0b";
+        stabilityIcon = "swap_vert";
+        stabilityText = `Priset varierar måttligt mellan ${minPrice.toFixed(2)} kr och ${maxPrice.toFixed(2)} kr.`;
+        stabilityBg = "#fffbeb";
+    } else {
+        stabilityLabel = "Volatilt pris";
+        stabilityColor = "#dc2626";
+        stabilityIcon = "warning";
+        stabilityText = `Priset har varierat kraftigt med ${priceDiff.toFixed(2)} kr skillnad mellan lägsta och högsta pris.`;
+        stabilityBg = "#fef2f2";
+    }
+
+    const insightHtml = `
+        <div id="stability-insight" style="background: ${stabilityBg}; border: 1px solid ${stabilityColor}30; border-left: 4px solid ${stabilityColor}; border-radius: 12px; padding: 16px 20px; margin-top: 16px;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <span class="material-symbols-outlined" style="color: ${stabilityColor}; font-size: 24px;">${stabilityIcon}</span>
+                <div>
+                    <strong style="display: block; font-size: 15px; color: ${stabilityColor}; margin-bottom: 4px;">${stabilityLabel}</strong>
+                    <p style="margin: 0; font-size: 13px; color: #64748b; line-height: 1.5;">${stabilityText}</p>
+                </div>
+            </div>
+        </div>
+    `;
+
+    chartContainer.insertAdjacentHTML('beforeend', insightHtml);
 }
 
 document.addEventListener('click', function (e) {
@@ -740,85 +989,90 @@ function getPriceRecommendation(currentPrice, stats, nextPrice) {
     const minPrice = stats?.minPrice;
     const maxPrice = stats?.maxPrice;
 
-    // Standardinställning (Neutral)
     let rec = {
         label: "Normalt pris",
         color: "#64748b",
         icon: "balance",
         bg: "#f8fafc",
         subtext: "Priset är i linje med det historiska snittet.",
-        urgency: 0 // 0-3 för att prioritera olika rekommendationer
+        urgency: 0
     };
 
-    // --- 1. ANALYS AV FRAMTIDA PRIS (HÖGST PRIORITET) ---
+    // --- 1. ANALYS AV FRAMTIDA PRIS ---
     if (nextPrice !== null && nextPrice !== undefined) {
-        const diffNext = ((nextPrice - currentPrice) / currentPrice) * 100;
+        const diffNext = nextPrice - currentPrice;
+        const diffNextPercent = (diffNext / currentPrice) * 100;
 
-        if (diffNext >= 5) {
-            // Priset går upp nästa månad
+        // Kräv minst 5% skillnad OCH minst 15 kr i prisskillnad
+        if (diffNextPercent >= 5 && diffNext >= 15) {
             rec = {
                 label: "Köp nu – Prishöjning väntar",
-                color: "#c2410c", // Orange/Mörkröd
+                color: "#c2410c",
                 icon: "shopping_cart_checkout",
                 bg: "#fff7ed",
-                subtext: `Priset beräknas stiga med ${diffNext.toFixed(0)}% nästa månad.`,
+                subtext: `Priset beräknas stiga med ${Math.abs(diffNext).toFixed(2)} kr nästa månad.`,
                 urgency: 3
             };
-        } else if (diffNext <= -5) {
-            // Priset går ner nästa månad
+        } else if (diffNextPercent <= -5 && Math.abs(diffNext) >= 15) {
             rec = {
                 label: "Vänta – Sänkning på väg",
-                color: "#7c3aed", // Lila
+                color: "#7c3aed",
                 icon: "hourglass_empty",
                 bg: "#f5f3ff",
-                subtext: `Priset beräknas sänkas med ${Math.abs(diffNext).toFixed(0)}% nästa månad.`,
+                subtext: `Priset beräknas sänkas med ${Math.abs(diffNext).toFixed(2)} kr nästa månad.`,
                 urgency: 3
             };
         }
     }
 
-    // --- 2. HISTORISK ANALYS (ANVÄNDS OM FRAMTIDEN ÄR STABIL ELLER SAKNAS) ---
+    // --- 2. HISTORISK ANALYS ---
     if (rec.urgency < 3 && avgPrice) {
-        const diffAvg = ((currentPrice - avgPrice) / avgPrice) * 100;
-        
-        // Är priset extremt lågt just nu? (All-time low territory)
-        const isNearMin = minPrice && currentPrice <= minPrice * 1.02; 
-        const isNearMax = maxPrice && currentPrice >= maxPrice * 0.95;
+        const diffAvg = currentPrice - avgPrice;
+        const diffAvgPercent = (diffAvg / avgPrice) * 100;
+        const absDiffAvg = Math.abs(diffAvg); // Skillnad i kronor
+        const priceRange = maxPrice - minPrice; // Total prisspridning
 
-        if (isNearMin) {
+        // "Fyndläge" kräver både att priset är nära minimum OCH att det finns en betydande prisspridning
+        const isNearMin = minPrice && currentPrice <= minPrice * 1.02; 
+        const hasSignificantRange = priceRange > avgPrice * 0.10; // Minst 10% spridning
+        
+        // Ovanligt högt kräver nu: Nära max ELLER >20% över snitt, SAMT minst 15 kr dyrare än snitt
+        const isHigh = (currentPrice >= maxPrice * 0.95 || diffAvgPercent > 20) && diffAvg >= 15;
+
+        if (isNearMin && hasSignificantRange) {
             rec = {
                 label: "Historiskt fyndläge",
-                color: "#16a34a", // Grön
+                color: "#16a34a",
                 icon: "auto_awesome",
                 bg: "#f0fdf4",
                 subtext: "Detta är ett av de lägsta priserna som noterats det senaste året.",
                 urgency: 2
             };
-        } else if (diffAvg < -15) {
+        } else if (diffAvgPercent < -15 && absDiffAvg >= 15) {
             rec = {
                 label: "Mycket bra pris",
                 color: "#15803d",
                 icon: "thumb_up",
                 bg: "#f0fdf4",
-                subtext: `Ca ${Math.abs(diffAvg).toFixed(0)}% billigare än normalt.`,
+                subtext: `Ca ${absDiffAvg.toFixed(0)} kr billigare än genomsnittet.`,
                 urgency: 2
             };
-        } else if (isNearMax || diffAvg > 20) {
+        } else if (isHigh) {
             rec = {
                 label: "Ovanligt högt pris",
-                color: "#dc2626", // Röd
+                color: "#dc2626",
                 icon: "error",
                 bg: "#fef2f2",
-                subtext: "Priset är betydligt högre än genomsnittet.",
+                subtext: "Priset är betydligt högre än genomsnittet just nu.",
                 urgency: 2
             };
-        } else if (diffAvg > 8) {
+        } else if (diffAvgPercent > 8 && diffAvg >= 15) {
             rec = {
                 label: "Något dyrt just nu",
                 color: "#b45309",
                 icon: "trending_up",
                 bg: "#fffbeb",
-                subtext: `Priset ligger ${diffAvg.toFixed(0)}% över snittet.`,
+                subtext: `Priset ligger ${absDiffAvg.toFixed(0)} kr över snittet.`,
                 urgency: 1
             };
         }
