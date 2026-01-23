@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jämför läkemedelspriser från TLV:s Periodens Varor. Hitta billigaste alternativ och följ prishistorik för svenska läkemedel.">
+    <meta property="og:title" content="pillpris.se - Jämför läkemedelspriser">
+    <meta property="og:description" content="Jämför priser och hitta billigaste läkemedel enligt TLV:s Periodens Varor">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pillpris.se">
     <script src="script.js" defer></script>
-    <title>Medicin Sökverktyg</title>
+    <title>pillpris.se - Jämför läkemedelspriser från TLV</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -18,7 +23,7 @@
                 <span class="material-symbols-outlined header-icon" style="color: white;">pill</span>
             </div>
             <div class="text-wrapper">
-                <h1 class="main-title">Jämför läkemedelspriser</h1>
+                <h1 class="main-title">pillpris.se</h1>
                 <p class="sub-title" id="header-period">TLV Periodens Varor • Laddar...</p>
             </div>
         </div>
@@ -31,7 +36,12 @@
         <div class="search-controls">
             <div class="input-group">
                 <label for="sub-input">Välj läkemedel</label>
-                <input type="text" id="sub-input" placeholder="Skriv substans eller produkt..." autocomplete="off">
+                <div style="position: relative;">
+                    <input type="text" id="sub-input" placeholder="Skriv substans eller produkt..." autocomplete="off">
+                    <button id="clear-search" class="clear-search-btn" style="display: none;" title="Rensa">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
                 <div id="custom-select" class="custom-dropdown">
                     <div id="package-list"></div>
                 </div>
@@ -57,8 +67,13 @@
     <div id="chart-container" style="display:none; position: relative; margin-top: 20px; margin-bottom: 30px; background: white; padding: 24px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
         
         <div id="chart-filter-wrapper" style="display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-bottom: 15px;">
+            <label for="chart-price-type" style="margin: 0; font-size: 12px; color: #64748b; font-weight: 600; text-transform: uppercase;">Typ:</label>
+            <select id="chart-price-type" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #1e293b; background: #f8fafc; cursor: pointer;" onchange="renderHistoryChart(currentSearch)">
+                <option value="pv">Periodens vara</option>
+                <option value="cheapest">Billigaste pris</option>
+            </select>
             <label for="chart-range-select" style="margin: 0; font-size: 12px; color: #64748b; font-weight: 600; text-transform: uppercase;">Visa:</label>
-            <select id="chart-range-select" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #1e293b; background: #f8fafc; cursor: pointer;" onchange="renderHistoryChart(currentSearch.sub, currentSearch.form, currentSearch.str, currentSearch.size)">
+            <select id="chart-range-select" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #1e293b; background: #f8fafc; cursor: pointer;" onchange="renderHistoryChart(currentSearch)">
                 <option value="12">Senaste 12 månaderna</option>
                 <option value="24">Senaste 24 månaderna</option>
                 <option value="6">Senaste 6 månaderna</option>
@@ -74,5 +89,17 @@
         </div>
     </div>
 
-</div> </body>
+</div> 
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <p style="margin: 0; color: #64748b; font-size: 13px;">
+                © 2026 pillpris.se. <a href="index.html" style="color: #2563eb; text-decoration: none;">Hem</a> • <a href="faq.html" style="color: #2563eb; text-decoration: none;">FAQ</a> • <a href="kontakt.html" style="color: #2563eb; text-decoration: none;">Kontakt</a> • <a href="integritet.html" style="color: #2563eb; text-decoration: none;">Integritet</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
 </html>
