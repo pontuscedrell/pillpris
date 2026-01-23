@@ -1,0 +1,1383 @@
+/* --- Global Reset & Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+/* --- Header Section --- */
+.site-header {
+    background: #ffffff;
+    border-bottom: 2px solid #e2e8f0;
+    width: 100%;
+    padding: 16px 0;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: opacity 0.2s;
+}
+
+.logo-wrapper:hover {
+    opacity: 0.8;
+}
+
+.header-nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 14px;
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #0891b2;
+}
+
+.nav-link.active {
+    color: #0891b2;
+    border-bottom-color: #0891b2;
+}
+
+@media (max-width: 640px) {
+    .header-content {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+    
+    .header-nav {
+        gap: 16px;
+        width: 100%;
+    }
+    
+    .nav-link {
+        font-size: 13px;
+    }
+}
+
+.icon-box {
+    background-color: #2563eb;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.main-title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.025em;
+}
+
+.sub-title {
+    margin: 4px 0 0 0;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+/* --- Search & Filter Controls --- */
+.search-section {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.search-controls {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.input-group {
+    position: relative;
+    flex-grow: 1;
+}
+
+.clear-search-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.clear-search-btn:hover {
+    color: #64748b;
+    background: #f1f5f9;
+}
+
+.clear-search-btn .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.month-group {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.time-filter-group {
+    margin-top: 15px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+input, #month-select-main, #time-period-select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+}
+
+input:focus, #month-select-main:focus, #time-period-select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* --- Dropdown Results --- */
+.custom-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: none;
+    margin-top: 4px;
+}
+
+.dropdown-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    cursor: pointer;
+}
+
+.dropdown-item:hover { background: #f8fafc; }
+
+.item-line1 { font-weight: 700; font-size: 13px; text-transform: uppercase; display: block; color: #1e293b; }
+.item-line2 { font-size: 12px; color: #64748b; display: block; margin-top: 2px; }
+
+/* --- Price Card (Hero Section) --- */
+.price-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.pv-badge-container { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.pv-title { background: #eff6ff; color: #2563eb; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+.lowest-price-badge { background: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+.product-name { margin: 8px 0; font-size: 1.6rem; color: #0f172a; }
+.sub-info { color: #64748b; margin: 0; font-size: 0.95rem; }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; }
+.info-item { display: flex; align-items: center; gap: 12px; }
+.info-item .label { font-size: 0.75rem; color: #64748b; font-weight: 500; text-transform: uppercase; }
+.info-item .value { font-size: 0.95rem; font-weight: 700; color: #1e293b; }
+
+/* --- Comparison Table --- */
+.reserves-container {
+    width: 100%;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    padding: 24px 20px !important; 
+    box-sizing: border-box !important;
+}
+
+.reserves-header { padding: 16px 20px; background: #f8fafc; border-bottom: 1px solid #e2e8f0; font-weight: 700; color: #334155; }
+.reserves-table { width: 100%; border-collapse: collapse; }
+.reserves-table th { text-align: left; padding: 12px 16px; background: #ffffff; color: #64748b; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; border-bottom: 1px solid #f1f5f9; }
+.reserves-table td { padding: 14px 16px; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; }
+
+/* Status & Row Styling */
+.status-badge { padding: 4px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; }
+.status-pv { background: #dcfce7; color: #166534; }
+.status-r { background: #fef3c7; color: #92400e; }
+.status-other { background: #f1f5f9; color: #475569; }
+
+.pv-row { background-color: #eff6ff !important; }
+.reserve-row { background-color: #fffbeb !important; }
+.cheapest-row { background-color: #f0fdf4 !important; border-left: 4px solid; border-image: linear-gradient(to bottom, #10b981, #2dd4bf) 1 100%; position: relative; }
+
+.best-value-tag { font-size: 0.65rem; background: #10b981; color: white; padding: 2px 6px; border-radius: 4px; margin-left: 8px; vertical-align: middle; text-transform: uppercase; font-weight: 700; }
+
+.price-wrapper { display: flex; flex-direction: column; align-items: flex-end; }
+.diff-subtext { font-size: 0.75rem; font-weight: 700; }
+.company-subtext { display: none; }
+.col-company-desktop { display: table-cell; }
+
+#chart-container {
+    width: 100%;           /* Fills the 1100px container */
+    min-height: 500px;         /* Desktop height */
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    position: relative;    /* Crucial for Chart.js responsiveness */
+}
+
+/* --- Förbättrad Empty State (Startbox) --- */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    text-align: center;
+    background: #f8fafc;
+    border-radius: 24px;
+    border: none;
+    margin-top: 20px;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+/* Cirkeln runt pillret */
+.empty-icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #f1f5f9; /* Ljusgrå/blå bakgrund */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.empty-icon-circle .material-symbols-outlined {
+    font-size: 40px;
+    color: #64748b; /* Gråblå ikonfärg */
+}
+
+.empty-state h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.empty-state p {
+    margin: 0;
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 400px; /* Håller texten centrerad och läsbar */
+}
+/* --- Expansion Button --- */
+.expansion-btn {
+    background: none; border: none; color: #2563eb; padding: 12px 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; margin: 0 auto;
+}
+.expansion-btn:hover { color: #1d4ed8; background-color: #eff6ff; }
+#pagination-footer { text-align: center; padding: 10px; border-top: 1px solid #f1f5f9; }
+
+/* Container for the tooltip */
+.tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Hidden tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #1e293b;
+    color: #fff;
+    text-align: left;
+    border-radius: 8px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%; /* Position above the badge */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.price-info-side {
+    text-align: right;
+}
+
+.price-value {
+    font-size: 32px;
+    margin: 0;
+    color: #1e293b;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.price-trends {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.price-trends p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+.past-price-text {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.info-summary-card {
+    transition: all 0.2s ease;
+}
+
+/* Ta bort standard-pilen från webbläsaren */
+.info-accordion summary::-webkit-details-marker {
+    display: none;
+}
+.info-accordion summary {
+    outline: none;
+}
+
+/* Rotera vår egen pil när details är öppen */
+.info-accordion[open] .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* Lite hover-effekt på rubriken */
+.info-accordion summary:hover {
+    background-color: #f8fafc;
+}
+
+.rec-header {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rec-icon-circle {
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.price-card-body {
+    padding: 24px;
+}
+
+.price-card-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.price-main-content {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.price-display-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.current-price-block {
+    flex: 1;
+    min-width: 200px;
+}
+
+.price-large {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1e293b;
+    display: block;
+    margin-top: 4px;
+}
+
+/* --- Savings Alert --- */
+.savings-alert-box {
+    flex: 1.2;
+    min-width: 250px;
+    background: #f0fdf4;
+    border: 1px solid rgba(22, 163, 74, 0.19);
+    border-left: 4px solid #16a34a;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+/* --- Stat Blocks (Next/Prev Month) --- */
+.stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.stat-block {
+    flex: 1;
+    min-width: 140px;
+}
+
+.stat-label {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-value-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.trend-badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+/* --- Comparison List (Table Area) --- */
+.comparison-container {
+    padding: 24px 0;
+}
+
+.comparison-header {
+    padding: 0 1rem;
+}
+
+.comparison-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 1rem;
+}
+
+.comparison-row {
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid;
+}
+
+.row-content {
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.row-details-grid {
+    margin: 0 12px 12px 12px;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.detail-label {
+    display: block;
+    color: #64748b;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.detail-value {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 12px;
+}
+
+/* Table Layout & Spacing */
+.comparison-container {
+    padding: 24px 0;
+}
+
+.comparison-inner-padding {
+    padding: 0 1rem;
+}
+
+.comparison-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.comparison-subtitle {
+    margin: 8px 0 24px 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.comparison-subtitle strong {
+    color: #1e293b;
+}
+
+/* The dynamic list of medicines */
+.comparison-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 1rem;
+}
+
+/* TLV Info Box at the bottom */
+.tlv-info-box {
+    margin: 24px 1rem 0 1rem;
+    background: #f0fdf4;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    border: 1px solid #ccfbf1;
+}
+
+.tlv-info-icon {
+    color: #14b8a6;
+    font-size: 20px;
+}
+
+.tlv-info-title {
+    margin: 0;
+    font-weight: 700;
+    color: #134e4a;
+    font-size: 14px;
+}
+
+.tlv-info-text {
+    margin: 4px 0 0 0;
+    color: #115e59;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Base Badge Style */
+.status-badge-mini {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: white;
+}
+
+/* Modifier: Periodens Vara (Blue) */
+.badge-pv {
+    color: #2563eb;
+    border: 1px solid #3b82f6;
+}
+
+/* Modifier: Reserve (Amber/Yellow) */
+.badge-reserve {
+    color: #d97706;
+    border: 1px solid #f59e0b;
+}
+
+/* Om du vill att det ska se extra proffsigt ut på mobilen */
+@media (max-width: 600px) {
+    .info-summary-card {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 12px;
+    }
+    .info-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .info-icon .material-symbols-outlined {
+        font-size: 20px !important;
+    }
+}
+/* Grundregler för alla kort på Desktop */
+.bleed-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    overflow: hidden; /* För att bakgrundsfärger i header inte ska gå över runda hörn */
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    /* Gemensam breakout-logik för alla bleed-kort */
+    .bleed-card {
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        margin-left: -50vw !important;
+        border-radius: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: none !important;
+        padding: 24px 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    .search-controls {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+
+    /* INFORMATION I TVÅ KOLUMNER */
+    .info-grid-mobile {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        margin-top: 15px !important;
+    }
+
+    .info-grid-mobile div[style*="display: flex; flex-direction: column"] {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px 12px !important;
+    }
+
+    .current-price-deal {
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 10px !important;
+    }
+
+    .cheaper-exists-badge {
+        margin-left: 0 !important;
+    }
+
+    /* 1. Gör den grå boxen till fullbredd under priset */
+    .info-grid-mobile {
+        flex: 1 1 100% !important; /* Tar upp hela bredden i priskortet */
+        max-width: 100% !important;
+        margin-top: 15px !important;
+    }
+
+    /* 2. Targeta containern för informationspunkterna och gör dem till två kolumner */
+    .info-grid-mobile div[style*="display: flex; flex-direction: column"] {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* Skapar två lika stora kolumner */
+        gap: 16px 12px !important; /* Justerar avstånd mellan rader och kolumner */
+    }
+
+    /* 3. Se till att ikon och text ligger bra bredvid varandra i de nya kolumnerna */
+    .info-grid-mobile div[style*="display: flex; align-items: flex-start"] {
+        gap: 8px !important;
+    }
+
+    .savings-alert-box {
+        flex: 1 1 100% !important;
+        margin: 10px 0 !important;
+        box-sizing: border-box;
+    }
+    
+    /* Behåll två kolumner för informationspunkterna inuti boxen */
+    .info-grid-mobile div[style*="display: flex; flex-direction: column"] {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px 12px !important;
+    }
+}
+
+/* --- Price Display Container --- */
+.price-display-container {
+    text-align: right;
+    min-width: fit-content;
+}
+
+.price-display-container .price-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.price-display-container .price-diff {
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+/* --- Expanded Row Details --- */
+.row-details-container {
+    margin: 0 12px 12px 12px;
+    padding: 12px 14px;
+    background: #f9fafb;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px 16px;
+}
+
+.row-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.row-detail-item .material-symbols-outlined {
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+.row-detail-content {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+    .row-details-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.row-detail-label {
+    display: block;
+    color: #64748b;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.row-detail-value {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* --- Comparison Row Container --- */
+.comparison-row {
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 4px;
+}
+
+.comparison-row.cheapest-row {
+    background: #f0fdf4 !important;
+    border: 2px solid #10b981 !important;
+}
+
+.comparison-row.pv-row {
+    background: #eff6ff !important;
+    border: 2px solid #3b82f6 !important;
+}
+
+.comparison-row.reserve-row {
+    background: #fffbeb;
+    border: 2px solid #f59e0b;
+}
+
+.comparison-row.default-row {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+}
+
+/* --- Comparison Row Header --- */
+.comparison-row-header {
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.comparison-row-left {
+    min-width: 0;
+    flex: 1;
+}
+
+.comparison-row-product {
+    display: flex;
+    align-items: center;
+    line-height: 1.3;
+}
+
+.comparison-row-name {
+    font-size: 20px;
+    color: #1e293b;
+}
+
+.comparison-row-info {
+    margin: 2px 0 0 0;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* --- Price Card Layout --- */
+.price-card-header {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.price-card-icon {
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.price-card-icon .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.price-card-header-text p:first-child {
+    margin-bottom: 2px;
+}
+
+.price-card-header-text .subtext {
+    font-weight: 400;
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+.price-card-content {
+    padding: 24px;
+}
+
+.price-card-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.price-card-main {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.price-card-price-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.price-card-current {
+    flex: 1;
+    min-width: 200px;
+}
+
+.price-card-current-label {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.price-card-current-value {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1e293b;
+    display: block;
+    margin-top: 4px;
+}
+
+.price-card-comparison {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.price-card-info-panel {
+    flex: 0 0 280px;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #f1f5f9;
+}
+
+@media (max-width: 640px) {
+    .price-card-info-panel {
+        flex: 1 1 100%;
+        width: 100%;
+        min-width: 0;
+        margin-top: 12px;
+        max-height: 175px;
+    }
+}
+
+.price-card-info-title {
+    margin: 0 0 16px 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.price-card-info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.price-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.price-info-item .material-symbols-outlined {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+.price-info-item-content {
+    font-size: 13px;
+}
+
+.price-info-item-label {
+    display: block;
+    color: #64748b;
+    font-size: 10px;
+}
+
+.price-info-item-value {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* --- Stat Blocks (Previous/Next) --- */
+.stat-blocks-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.stat-block {
+    flex: 1;
+    min-width: 120px;
+}
+
+.stat-block-label {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-block-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.stat-block-price {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.stat-block-trend {
+    background: 15;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.stat-block-trend span {
+    font-size: 16px;
+}
+
+/* --- Price Card Header & Layout --- */
+.price-card-header-bar {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.price-card-icon-wrapper {
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.price-card-icon {
+    font-size: 20px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+
+.price-card-header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card-header-label {
+    margin: 0;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.price-card-header-subtext {
+    margin: 2px 0 0 0;
+    opacity: 0.8;
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+.price-card-content-wrapper {
+    padding: 24px;
+}
+
+.price-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+@media (max-width: 900px) {
+    .price-card-grid {
+        flex-direction: column;
+    }
+
+    .price-card-left-column,
+    .price-card-info-panel {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: none;
+    }
+
+    .price-card-info-panel {
+        padding: 12px 14px;
+        margin-top: 10px;
+    }
+}
+
+.price-card-left-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.price-card-title-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.2;
+}
+
+.price-card-subtitle {
+    margin: 6px 0 0 0;
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.price-card-price-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.price-card-current-wrapper {
+    flex: 1;
+    min-width: 200px;
+}
+
+.price-card-current-label {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.price-card-current-value {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1e293b;
+    display: block;
+    margin-top: 4px;
+}
+
+.price-card-info-panel {
+    flex: 0 0 280px;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #f1f5f9;
+}
+
+.price-card-info-header {
+    margin: 0 0 12px 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.price-card-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.price-card-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.price-card-info-icon {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+.price-card-info-content {
+    font-size: 13px;
+}
+
+.price-card-info-label {
+    display: block;
+    color: #64748b;
+    font-size: 10px;
+}
+
+.price-card-info-value {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+@media (max-width: 640px) {
+    .price-card-info-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 14px;
+    }
+}
+
+/* --- Footer Section --- */
+.site-footer {
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    width: 100%;
+    padding: 24px 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+/* --- Mobile optimizations --- */
+@media (max-width: 640px) {
+    .comparison-row-header {
+        gap: 8px;
+    }
+
+    .comparison-row-left {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .comparison-row-name {
+        font-size: 16px;
+        word-break: break-word;
+    }
+
+    .comparison-row-info {
+        font-size: 11px;
+    }
+}

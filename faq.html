@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - pillpris.se</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-header p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: #ffffff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #f8fafc;
+        }
+
+        .faq-question-text {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #0f172a;
+            flex: 1;
+        }
+
+        .faq-icon {
+            margin-left: 1rem;
+            color: #2563eb;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #f8fafc;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-text {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: #64748b;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .faq-answer a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: gap 0.2s ease;
+        }
+
+        .back-link:hover {
+            gap: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-container">
+        <div class="header-content">
+            <a href="index.html" class="logo-wrapper" style="text-decoration: none;">
+                <div class="icon-box">
+                    <span class="material-symbols-outlined header-icon" style="color: white;">pill</span>
+                </div>
+                <div class="text-wrapper">
+                    <h1 class="main-title">pillpris.se</h1>
+                    <p class="sub-title">TLV Periodens Varor</p>
+                </div>
+            </a>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Hem</a>
+                <a href="faq.html" class="nav-link active">FAQ</a>
+                <a href="kontakt.html" class="nav-link">Kontakt</a>
+                <a href="integritet.html" class="nav-link">Integritet</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="faq-container">
+    <a href="index.html" class="back-link">
+        <span class="material-symbols-outlined">arrow_back</span>
+        Tillbaka till start
+    </a>
+
+    <div class="faq-header">
+        <h1>Ofta ställda frågor</h1>
+        <p>Hitta svar på vanliga frågor om pillpris.se</p>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span class="faq-question-text">Vad är pillpris.se?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-text">
+                Pillpris.se hjälper dig att hitta de billigaste läkemedelsalternativen i Sverige genom att visa prisinformation från TLV (Tandvårds- och läkemedelförmånsverket). Du kan söka efter läkemedel, jämföra priser och se prishistorik för olika produkter.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span class="faq-question-text">Hur använder jag pillpris.se?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-text">
+                1. Sök efter ditt läkemedel i sökfältet (tex "Etoricoxib 90")<br>
+                2. Välj rätt läkemedel, styrka och förpackning från dropdownlistan<br>
+                3. Titta på priserna för olika alternativ<br>
+                4. Se prishistorik i diagrammet för att jämföra trender<br>
+                5. Välja olika perioder från rullgardinsmenyn för att se prishistorik
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span class="faq-question-text">Vad betyder "Periodens Vara"?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-text">
+                "Periodens Vara" (PV) är det läkemedel som TLV har upphandlat för en viss period. Det är ofta det billigaste alternativet bland de utbytbara läkemedlen för en given substans, styrka och förpackningsstorlek. Genom att välja Periodens Vara kan du ofta spara pengar på dina läkemedelskostnader.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item" id="billigare-pv">
+        <div class="faq-question">
+            <span class="faq-question-text">Varför är ett läkemedel billigare än Periodens Vara?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-text">
+                Läkemedel kan nekas status som "periodens vara" trots lägst pris om företaget inte garanterat leverans till TLV. Apotek får dock slutförsälja föregående periods vara till det gamla priset under de första 15 dagarna i en ny period, förutsatt att varan fanns i lager vid periodskiftet. Detta kan leda till att vissa läkemedel är billigare än den aktuella periodens vara under en kort tid efter periodskiftet.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item" id="varfor-hitta">
+        <div class="faq-question">
+            <span class="faq-question-text">Varför kan jag inte hitta mitt läkemedel?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-text">
+                Inte alla läkemedel är upphandlade med Periodens Vara. pillpris.se visar bara läkemedel som är del av TLVs prisövervakning. Om du inte kan hitta ditt läkemedel kan det bero på att det inte är utbytbart eller inte ingår i TLVs "Periodens Vara"-system.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span class="faq-question-text">Hur ofta uppdateras priserna?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-text">
+                Priserna uppdateras varje månad när TLV publicerar nya data. Du kan välja vilken period du vill visa med rullgardinsmenyn för att se prishistorik över tid.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span class="faq-question-text">Kan jag kopiera denna sida?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-text">
+                pillpris.se är ett öppet projekt. Du kan fritt använda och dela informationen härifrån. Kontakta oss om du har frågor om licensiering eller användning av data.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span class="faq-question-text">Vem står bakom pillpris.se?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-text">
+                Pillpris.se är utvecklat som ett verktyg för att göra läkemedelspriser mer transparenta och tillgängliga för alla. Hemsidan är inte utvecklad eller finansierad av TLV. Alla data kommer från TLVs offentliga databaser.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <p style="margin: 0; color: #64748b; font-size: 13px;">
+                © 2026 pillpris.se. <a href="index.html" style="color: #2563eb; text-decoration: none;">Hem</a> • <a href="faq.html" style="color: #2563eb; text-decoration: none;">FAQ</a> • <a href="kontakt.html" style="color: #2563eb; text-decoration: none;">Kontakt</a> • <a href="integritet.html" style="color: #2563eb; text-decoration: none;">Integritet</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('active');
+        });
+    });
+
+    // Expand FAQ item if hash matches
+    if (window.location.hash) {
+        const hashId = window.location.hash.substring(1);
+        const targetItem = document.getElementById(hashId);
+        if (targetItem) {
+            targetItem.classList.add('active');
+            targetItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+</script>
+
+</body>
+</html>
