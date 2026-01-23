@@ -88,6 +88,32 @@ body {
     flex-grow: 1;
 }
 
+.clear-search-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.clear-search-btn:hover {
+    color: #64748b;
+    background: #f1f5f9;
+}
+
+.clear-search-btn .material-symbols-outlined {
+    font-size: 20px;
+}
+
 .month-group {
     width: 180px;
     flex-shrink: 0;
@@ -196,9 +222,9 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 .status-r { background: #fef3c7; color: #92400e; }
 .status-other { background: #f1f5f9; color: #475569; }
 
-.pv-row { background-color: #f0fdf4 !important; }
+.pv-row { background-color: #eff6ff !important; }
 .reserve-row { background-color: #fffbeb !important; }
-.cheapest-row { background: linear-gradient(to right, #f0fdf4, #ffffff) !important; border-left: 4px solid; border-image: linear-gradient(to bottom, #10b981, #2dd4bf) 1 100%; position: relative; }
+.cheapest-row { background-color: #f0fdf4 !important; border-left: 4px solid; border-image: linear-gradient(to bottom, #10b981, #2dd4bf) 1 100%; position: relative; }
 
 .best-value-tag { font-size: 0.65rem; background: #10b981; color: white; padding: 2px 6px; border-radius: 4px; margin-left: 8px; vertical-align: middle; text-transform: uppercase; font-weight: 700; }
 
@@ -380,6 +406,267 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     background-color: #f8fafc;
 }
 
+.rec-header {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rec-icon-circle {
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.price-card-body {
+    padding: 24px;
+}
+
+.price-card-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.price-main-content {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.price-display-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.current-price-block {
+    flex: 1;
+    min-width: 200px;
+}
+
+.price-large {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1e293b;
+    display: block;
+    margin-top: 4px;
+}
+
+/* --- Savings Alert --- */
+.savings-alert-box {
+    flex: 1.2;
+    min-width: 250px;
+    background: #f0fdf4;
+    border: 1px solid rgba(22, 163, 74, 0.19);
+    border-left: 4px solid #16a34a;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+/* --- Stat Blocks (Next/Prev Month) --- */
+.stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.stat-block {
+    flex: 1;
+    min-width: 140px;
+}
+
+.stat-label {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-value-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.trend-badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+/* --- Comparison List (Table Area) --- */
+.comparison-container {
+    padding: 24px 0;
+}
+
+.comparison-header {
+    padding: 0 1rem;
+}
+
+.comparison-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 1rem;
+}
+
+.comparison-row {
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid;
+}
+
+.row-content {
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.row-details-grid {
+    margin: 0 12px 12px 12px;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.detail-label {
+    display: block;
+    color: #64748b;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.detail-value {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 12px;
+}
+
+/* Table Layout & Spacing */
+.comparison-container {
+    padding: 24px 0;
+}
+
+.comparison-inner-padding {
+    padding: 0 1rem;
+}
+
+.comparison-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.comparison-subtitle {
+    margin: 8px 0 24px 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.comparison-subtitle strong {
+    color: #1e293b;
+}
+
+/* The dynamic list of medicines */
+.comparison-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 1rem;
+}
+
+/* TLV Info Box at the bottom */
+.tlv-info-box {
+    margin: 24px 1rem 0 1rem;
+    background: #f0fdf4;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    border: 1px solid #ccfbf1;
+}
+
+.tlv-info-icon {
+    color: #14b8a6;
+    font-size: 20px;
+}
+
+.tlv-info-title {
+    margin: 0;
+    font-weight: 700;
+    color: #134e4a;
+    font-size: 14px;
+}
+
+.tlv-info-text {
+    margin: 4px 0 0 0;
+    color: #115e59;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Base Badge Style */
+.status-badge-mini {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: white;
+}
+
+/* Modifier: Periodens Vara (Blue) */
+.badge-pv {
+    color: #2563eb;
+    border: 1px solid #3b82f6;
+}
+
+/* Modifier: Reserve (Amber/Yellow) */
+.badge-reserve {
+    color: #d97706;
+    border: 1px solid #f59e0b;
+}
+
 /* Om du vill att det ska se extra proffsigt ut på mobilen */
 @media (max-width: 600px) {
     .info-summary-card {
@@ -395,29 +682,19 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
         font-size: 20px !important;
     }
 }
-
+/* Grundregler för alla kort på Desktop */
+.bleed-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    overflow: hidden; /* För att bakgrundsfärger i header inte ska gå över runda hörn */
+    width: 100%;
+}
 @media screen and (max-width: 768px) {
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* 1. SÖK OCH PERIOD PÅ SEPARATA RADER */
-    .search-controls {
-        flex-direction: column !important; /* Tvingar ny rad */
-        align-items: stretch !important;
-        gap: 16px !important;
-        padding: 0 12px;
-    }
-
-    .input-group, 
-    .month-group {
-        width: 100% !important; /* Fyller hela bredden */
-    }
-
-    /* 2. BREAKOUT LOGIK (Som grafen) */
-    .reserves-container,
-    #chart-container {
+    /* Gemensam breakout-logik för alla bleed-kort */
+    .bleed-card {
         width: 100vw !important;
         position: relative !important;
         left: 50% !important;
@@ -426,37 +703,618 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
         border-left: none !important;
         border-right: none !important;
         box-shadow: none !important;
-        padding: 24px 12px !important; 
+        padding: 24px 12px !important;
         box-sizing: border-box !important;
     }
 
-    /* 3. PRIS- OCH TEXTLOGIK FÖR LIST-ITEMS */
-    #comparison-list > div {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
+    .search-controls {
+        flex-direction: column !important;
+        align-items: stretch !important;
         gap: 12px !important;
-        padding: 12px !important;
     }
 
-    /* Vänstersidan: Namn och märkningar krymper/radbryter */
-    #comparison-list > div > div:first-child {
-        min-width: 0 !important; 
-        flex: 1 !important;
+    /* INFORMATION I TVÅ KOLUMNER */
+    .info-grid-mobile {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        margin-top: 15px !important;
     }
 
-    /* Högersidan: Prislappen behåller sin bredd */
-    #comparison-list > div > div:last-child {
-        flex-shrink: 0 !important; 
-        text-align: right !important;
-        min-width: fit-content !important;
-        white-space: nowrap !important;
+    .info-grid-mobile div[style*="display: flex; flex-direction: column"] {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px 12px !important;
     }
 
-    /* Gör starkt namn mer läsbart vid radbrytning */
-    #comparison-list strong {
-        display: inline-block;
-        word-break: break-word;
-        line-height: 1.2;
+    .current-price-deal {
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 10px !important;
+    }
+
+    .cheaper-exists-badge {
+        margin-left: 0 !important;
+    }
+
+    /* 1. Gör den grå boxen till fullbredd under priset */
+    .info-grid-mobile {
+        flex: 1 1 100% !important; /* Tar upp hela bredden i priskortet */
+        max-width: 100% !important;
+        margin-top: 15px !important;
+    }
+
+    /* 2. Targeta containern för informationspunkterna och gör dem till två kolumner */
+    .info-grid-mobile div[style*="display: flex; flex-direction: column"] {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* Skapar två lika stora kolumner */
+        gap: 16px 12px !important; /* Justerar avstånd mellan rader och kolumner */
+    }
+
+    /* 3. Se till att ikon och text ligger bra bredvid varandra i de nya kolumnerna */
+    .info-grid-mobile div[style*="display: flex; align-items: flex-start"] {
+        gap: 8px !important;
+    }
+
+    .savings-alert-box {
+        flex: 1 1 100% !important;
+        margin: 10px 0 !important;
+        box-sizing: border-box;
+    }
+    
+    /* Behåll två kolumner för informationspunkterna inuti boxen */
+    .info-grid-mobile div[style*="display: flex; flex-direction: column"] {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px 12px !important;
+    }
+}
+
+/* --- Price Display Container --- */
+.price-display-container {
+    text-align: right;
+    min-width: fit-content;
+}
+
+.price-display-container .price-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.price-display-container .price-diff {
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+/* --- Expanded Row Details --- */
+.row-details-container {
+    margin: 0 12px 12px 12px;
+    padding: 12px 14px;
+    background: #f9fafb;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px 16px;
+}
+
+.row-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.row-detail-item .material-symbols-outlined {
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+.row-detail-content {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+    .row-details-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.row-detail-label {
+    display: block;
+    color: #64748b;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.row-detail-value {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* --- Comparison Row Container --- */
+.comparison-row {
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 4px;
+}
+
+.comparison-row.cheapest-row {
+    background: #f0fdf4 !important;
+    border: 2px solid #10b981 !important;
+}
+
+.comparison-row.pv-row {
+    background: #eff6ff !important;
+    border: 2px solid #3b82f6 !important;
+}
+
+.comparison-row.reserve-row {
+    background: #fffbeb;
+    border: 2px solid #f59e0b;
+}
+
+.comparison-row.default-row {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+}
+
+/* --- Comparison Row Header --- */
+.comparison-row-header {
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.comparison-row-left {
+    min-width: 0;
+    flex: 1;
+}
+
+.comparison-row-product {
+    display: flex;
+    align-items: center;
+    line-height: 1.3;
+}
+
+.comparison-row-name {
+    font-size: 20px;
+    color: #1e293b;
+}
+
+.comparison-row-info {
+    margin: 2px 0 0 0;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* --- Price Card Layout --- */
+.price-card-header {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.price-card-icon {
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.price-card-icon .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.price-card-header-text p:first-child {
+    margin-bottom: 2px;
+}
+
+.price-card-header-text .subtext {
+    font-weight: 400;
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+.price-card-content {
+    padding: 24px;
+}
+
+.price-card-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.price-card-main {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.price-card-price-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.price-card-current {
+    flex: 1;
+    min-width: 200px;
+}
+
+.price-card-current-label {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.price-card-current-value {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1e293b;
+    display: block;
+    margin-top: 4px;
+}
+
+.price-card-comparison {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.price-card-info-panel {
+    flex: 0 0 280px;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #f1f5f9;
+}
+
+@media (max-width: 640px) {
+    .price-card-info-panel {
+        flex: 1 1 100%;
+        width: 100%;
+        min-width: 0;
+        margin-top: 12px;
+    }
+}
+
+.price-card-info-title {
+    margin: 0 0 16px 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.price-card-info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.price-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.price-info-item .material-symbols-outlined {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+.price-info-item-content {
+    font-size: 13px;
+}
+
+.price-info-item-label {
+    display: block;
+    color: #64748b;
+    font-size: 10px;
+}
+
+.price-info-item-value {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* --- Stat Blocks (Previous/Next) --- */
+.stat-blocks-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.stat-block {
+    flex: 1;
+    min-width: 120px;
+}
+
+.stat-block-label {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-block-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.stat-block-price {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.stat-block-trend {
+    background: 15;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.stat-block-trend span {
+    font-size: 16px;
+}
+
+/* --- Price Card Header & Layout --- */
+.price-card-header-bar {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.price-card-icon-wrapper {
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.price-card-icon {
+    font-size: 20px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+
+.price-card-header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card-header-label {
+    margin: 0;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.price-card-header-subtext {
+    margin: 2px 0 0 0;
+    opacity: 0.8;
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+.price-card-content-wrapper {
+    padding: 24px;
+}
+
+.price-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+@media (max-width: 900px) {
+    .price-card-grid {
+        flex-direction: column;
+    }
+
+    .price-card-left-column,
+    .price-card-info-panel {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: none;
+    }
+
+    .price-card-info-panel {
+        padding: 12px 14px;
+        margin-top: 10px;
+    }
+}
+
+.price-card-left-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.price-card-title-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.2;
+}
+
+.price-card-subtitle {
+    margin: 6px 0 0 0;
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.price-card-price-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.price-card-current-wrapper {
+    flex: 1;
+    min-width: 200px;
+}
+
+.price-card-current-label {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.price-card-current-value {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1e293b;
+    display: block;
+    margin-top: 4px;
+}
+
+.price-card-info-panel {
+    flex: 0 0 280px;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #f1f5f9;
+}
+
+.price-card-info-header {
+    margin: 0 0 12px 0;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.price-card-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.price-card-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.price-card-info-icon {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+.price-card-info-content {
+    font-size: 13px;
+}
+
+.price-card-info-label {
+    display: block;
+    color: #64748b;
+    font-size: 10px;
+}
+
+.price-card-info-value {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+@media (max-width: 640px) {
+    .price-card-info-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 14px;
+    }
+}
+
+/* --- Footer Section --- */
+.site-footer {
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    width: 100%;
+    padding: 24px 0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+/* --- Mobile optimizations --- */
+@media (max-width: 640px) {
+    .comparison-row-name {
+        font-size: 16px;
+    }
+
+    .comparison-row-info {
+        font-size: 11px;
     }
 }
