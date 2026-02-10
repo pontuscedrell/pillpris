@@ -1,6 +1,7 @@
 let searchIndex = []; // Ändra från tree = {} till searchIndex = []
 let availableMonths = [];
 let selectedMonth = "";
+let systemMonthCode = null;
 let currentSearch = null;
 let isExpanded = false;
 let lastMatches = [];
@@ -20,11 +21,12 @@ async function init() {
         availableMonths = await resMonths.json();
         availableMonths.sort((a, b) => b - a);
 
+
         // ... resten av din datum-logik och dropdown-bygge ...
         const now = new Date();
         const yy = now.getFullYear().toString().slice(-2);
         const mm = (now.getMonth() + 1).toString().padStart(2, '0');
-        const systemMonthCode = parseInt(yy + mm);
+        systemMonthCode = parseInt(yy + mm);
 
         selectedMonth = availableMonths[0] > systemMonthCode
             ? availableMonths[0]
@@ -33,16 +35,18 @@ async function init() {
         // Uppdatera UI
         const monthDropdown = document.getElementById('month-select-main');
         if (monthDropdown) {
-            monthDropdown.innerHTML = availableMonths.map(m => 
-                `<option value="${m}" ${m == selectedMonth ? 'selected' : ''}>${formatMedicineDate(m)}</option>`
-            ).join('');
+            monthDropdown.innerHTML = availableMonths.map(m => {
+                const prelimTag = isPrelimMonth(m) ? ' (Preliminär)' : '';
+                return `<option value="${m}" ${m == selectedMonth ? 'selected' : ''}>${formatMedicineDate(m)}${prelimTag}</option>`;
+            }).join('');
             monthDropdown.value = selectedMonth;
         }
         
         // Update header with current month
         const headerPeriod = document.getElementById('header-period');
         if (headerPeriod) {
-            headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}`;
+            const prelimTag = isPrelimMonth(selectedMonth) ? " • Preliminär" : "";
+            headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}${prelimTag}`;
         }
     } catch (e) {
         console.error("Kunde inte ladda startdata", e);
@@ -282,7 +286,7 @@ async function fetchLatestPV(searchItem) {
         });
 
         // Hitta PV och det absoluta lägsta priset
-        const pvProduct = lastMatches.find(i => i.Status.trim().toUpperCase() === "PV") || lastMatches[0];
+        const pvProduct = lastMatches.find(i => (i.Status || "").trim().toUpperCase() === "PV") || lastMatches[0];
         lastPVPrice = pvProduct["Försäljningspris"];
         const absoluteMinPrice = Math.min(...matches.map(i => i["Försäljningspris"]));
 
@@ -332,7 +336,7 @@ async function getPriceStatistics(searchItem) {
             const match = data.find(i => 
                 String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
                 String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id) &&
-                i.Status.trim().toUpperCase() === "PV"
+                (i.Status || "").trim().toUpperCase() === "PV"
             );
             
             if (match) prices.push(match["Försäljningspris"]);
@@ -367,7 +371,7 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
             const match = data.find(i => 
                 String(i["Utbytesgrupps ID"]) === String(currentSearch.id) &&
                 String(i["Förpackningsstorleksgrupp"]) === String(currentSearch.size_id) &&
-                i.Status.trim().toUpperCase() === "PV"
+                (i.Status || "").trim().toUpperCase() === "PV"
             );
             return match ? match["Försäljningspris"] : null;
         } catch (e) { return null; }
@@ -379,6 +383,13 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
 
     const createStatBlock = (price, label, currentPrice, monthCode, isFuture) => {
         if (!price) return `<div class="stat-block"><p class="stat-block-label">${label}</p><p style="margin: 4px 0 0 0; color: #cbd5e1; font-size: 14px;">Ej fastställt</p></div>`;
+        let prelimNote = "";
+        let prelimIcon = "";
+        if (isFuture && isPrelimMonth(monthCode)) {
+            label = `${label} (preliminär)`;
+            prelimNote = "Priset är preliminärt och kan komma att ändras";
+            prelimIcon = `<span class="prelim-info" tabindex="0" role="button" aria-label="Preliminärt pris" data-tooltip="${prelimNote}">!</span>`;
+        }
         const diff = price - currentPrice;
         const diffPercent = Math.round((Math.abs(diff) / currentPrice) * 100);
         let priceColor = "#1e293b", trendColor = "#64748b", icon = "horizontal_rule";
@@ -401,7 +412,7 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
 
         return `
             <div class="stat-block">
-                <p class="stat-block-label">${label}</p>
+                <p class="stat-block-label">${label} ${prelimIcon}</p>
                 <div class="stat-block-content">
                     <span class="stat-block-price" style="color: ${priceColor};">${formatPrice(price)}</span>
                     ${price !== currentPrice ? `
@@ -685,7 +696,7 @@ function renderMonthSelector() {
             <select id="month-select" onchange="updateMonth(this.value)">
                 ${availableMonths.map(m => `
                     <option value="${m}" ${m == selectedMonth ? 'selected' : ''}>
-                        ${formatMedicineDate(m)}
+                        ${formatMedicineDate(m)}${isPrelimMonth(m) ? ' (Preliminär)' : ''}
                     </option>
                 `).join('')}
             </select>
@@ -698,7 +709,8 @@ function updateMonth(newMonth) {
     // Update header with new month
     const headerPeriod = document.getElementById('header-period');
     if (headerPeriod) {
-        headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}`;
+        const prelimTag = isPrelimMonth(selectedMonth) ? " • Preliminär" : "";
+        headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}${prelimTag}`;
     }
     
     if (currentSearch) {
@@ -730,6 +742,12 @@ function formatMedicineDate(dateCode) {
     const fullYear = "20" + yearShort;
     const monthName = months[parseInt(monthIndex, 10) - 1];
     return monthName ? `${monthName} ${fullYear}` : "Okänt datum";
+}
+
+function isPrelimMonth(monthCode) {
+    const code = Number(monthCode);
+    if (!code || !systemMonthCode) return false;
+    return code > systemMonthCode;
 }
 
 function renderInfoCard(item) {
