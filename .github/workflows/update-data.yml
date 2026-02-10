@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-tlv-data
+  cancel-in-progress: true
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
@@ -39,14 +43,29 @@ jobs:
         run: |
           python search2.py
 
+      - name: Remove Excel temp files
+        run: |
+          rm -f data/~$*.xlsx
+
       - name: Commit and push if changes
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git fetch origin main
+          git pull --rebase origin main
           if [ -n "$(git status --porcelain)" ]; then
             git add data/*.json search-index.json months.json substances.json
             git commit -m "Automated TLV data update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-            git push
+            for i in 1 2 3; do
+              git pull --rebase origin main
+              if git push; then
+                exit 0
+              fi
+              echo "Push failed, retrying ($i/3)..."
+              sleep 2
+            done
+            echo "Push failed after retries"
+            exit 1
           else
             echo "No changes to commit."
           fi
