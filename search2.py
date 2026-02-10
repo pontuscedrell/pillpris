@@ -151,14 +151,20 @@ def create_global_search_index():
         json.dump(search_index, f, ensure_ascii=False, indent=2)
 
 # --- NY DEL: Skapa months.json automatiskt ---
-    # Extrahera siffrorna från filnamnen (t.ex. '2512' från '2512.xlsx')
-    month_codes = []
+    # Extrahera siffrorna från filnamnen (t.ex. '2512' från '2512.xlsx' eller '2512.json')
+    month_codes = set()
     for f in pv_files:
         name = os.path.basename(f).replace('.xlsx', '')
         if name.isdigit():
-            month_codes.append(int(name))
-    
-    month_codes.sort(reverse=True) # Nyast först
+            month_codes.add(int(name))
+
+    json_files = glob.glob(os.path.join(pv_folder, "*.json"))
+    for f in json_files:
+        name = os.path.basename(f).replace('.json', '')
+        if name.isdigit():
+            month_codes.add(int(name))
+
+    month_codes = sorted(month_codes, reverse=True) # Nyast först
     
     with open('months.json', 'w', encoding='utf-8') as f:
         json.dump(month_codes, f)
