@@ -42,7 +42,10 @@ def get_natural_size(code):
 def create_global_search_index():
     pv_folder = "data"
     medprice_file = "MEDPrice.xlsx"
-    pv_files = glob.glob(os.path.join(pv_folder, "*.xlsx"))
+    pv_files = [
+        f for f in glob.glob(os.path.join(pv_folder, "*.xlsx"))
+        if not os.path.basename(f).startswith("~$")
+    ]
     pv_files.sort(key=os.path.basename, reverse=True)
 
     vnr_to_group_data = {}

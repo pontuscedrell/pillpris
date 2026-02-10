@@ -159,7 +159,14 @@ def main():
         
         # Download file
         if download_file(url, filepath):
-            downloaded_files.append((filepath, month_code))
+            data_xlsx_path = data_folder / filename
+            use_path = filepath
+            try:
+                shutil.copy2(filepath, data_xlsx_path)
+                use_path = data_xlsx_path
+            except Exception as e:
+                print(f"   ⚠️  Could not copy to data/: {e}")
+            downloaded_files.append((use_path, month_code))
     
     if not downloaded_files:
         print("\n❌ No files were downloaded")
