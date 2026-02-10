@@ -2276,9 +2276,11 @@
     "names": [
       "Amimox®",
       "Amoxicillin 2care4",
+      "Amoxicillin Abacus Medicine",
       "Amoxicillin Ebb"
     ],
     "vnr": [
+      "143887",
       "431489",
       "468983",
       "481089",
@@ -2292,6 +2294,7 @@
       "481089": "Blister",
       "468983": "Burk",
       "431489": "Blister",
+      "143887": "Blister",
       "552946": "Blister"
     }
   },
@@ -2328,11 +2331,13 @@
     "names": [
       "Amimox®",
       "Amoxicillin 2care4",
+      "Amoxicillin Abacus Medicine",
       "Amoxicillin Ebb",
       "Amoxicillin Sandoz"
     ],
     "vnr": [
       "449964",
+      "497177",
       "67981",
       "77145",
       "8276"
@@ -2344,6 +2349,7 @@
     "packagingMap": {
       "8276": "Burk",
       "67981": "Blister",
+      "497177": "Blister",
       "449964": "Blister",
       "77145": "Blister"
     }
@@ -5576,13 +5582,15 @@
     "size": "90–105 st",
     "names": [
       "Betahistin 2care4",
+      "Betahistin Abacus Medicine",
       "Betahistin Ebb",
       "Betahistine STADA"
     ],
     "vnr": [
       "116577",
       "178769",
-      "372683"
+      "372683",
+      "407644"
     ],
     "packaging": [
       "Blister",
@@ -5590,6 +5598,7 @@
     ],
     "packagingMap": {
       "372683": "Burk",
+      "407644": "Blister",
       "116577": "Blister",
       "178769": "Blister"
     }
@@ -5603,12 +5612,14 @@
     "size": "90–105 st",
     "names": [
       "Betahistin 2care4",
+      "Betahistin Abacus Medicine",
       "Betahistin Ebb",
       "Betahistine STADA"
     ],
     "vnr": [
       "26999",
       "371835",
+      "558497",
       "569075"
     ],
     "packaging": [
@@ -5617,6 +5628,7 @@
     ],
     "packagingMap": {
       "26999": "Burk",
+      "558497": "Blister",
       "569075": "Blister",
       "371835": "Blister"
     }
@@ -43839,6 +43851,26 @@
     ],
     "packagingMap": {
       "480863": "Blister"
+    }
+  },
+  {
+    "id": "113982",
+    "size_id": "T21",
+    "sub": "Raltegravir",
+    "form": "Tablett",
+    "str": "600 mg",
+    "size": "57–63 st",
+    "names": [
+      "ISENTRESS"
+    ],
+    "vnr": [
+      "564264"
+    ],
+    "packaging": [
+      "Burk"
+    ],
+    "packagingMap": {
+      "564264": "Burk"
     }
   },
   {
