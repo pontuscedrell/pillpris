@@ -11,11 +11,12 @@ let chartPriceType = "pv"; // "pv" or "cheapest"
 async function init() {
     try {
         // Om din fil heter substances.json men innehåller den nya index-listan:
-        const res = await fetch('search-index.json'); 
+        const cacheBust = `v=${Date.now()}`;
+        const res = await fetch(`search-index.json?${cacheBust}`);
         searchIndex = await res.json();
 
         // Ladda månader (antingen från separat fil eller från indexet)
-        const resMonths = await fetch('months.json');
+        const resMonths = await fetch(`months.json?${cacheBust}`);
         availableMonths = await resMonths.json();
         availableMonths.sort((a, b) => b - a);
 
@@ -25,7 +26,9 @@ async function init() {
         const mm = (now.getMonth() + 1).toString().padStart(2, '0');
         const systemMonthCode = parseInt(yy + mm);
 
-        selectedMonth = availableMonths.includes(systemMonthCode) ? systemMonthCode : availableMonths[0];
+        selectedMonth = availableMonths[0] > systemMonthCode
+            ? availableMonths[0]
+            : (availableMonths.includes(systemMonthCode) ? systemMonthCode : availableMonths[0]);
         
         // Uppdatera UI
         const monthDropdown = document.getElementById('month-select-main');

@@ -15,6 +15,7 @@ from pathlib import Path
 import pandas as pd
 import shutil
 from datetime import datetime
+import unicodedata
 
 # TLV website URL
 TLV_URL = "https://www.tlv.se/apotek/generiskt-utbyte/periodens-varor.html"
@@ -103,6 +104,59 @@ def convert_xlsx_to_json(xlsx_path, json_path):
     """Convert XLSX file to JSON"""
     try:
         df = pd.read_excel(xlsx_path, engine='openpyxl')
+
+        def _norm_col(name: str) -> str:
+            txt = str(name).strip().lower()
+            txt = unicodedata.normalize("NFKD", txt)
+            txt = "".join(ch for ch in txt if not unicodedata.combining(ch))
+            return "".join(ch for ch in txt if ch.isalnum())
+
+        normalized_map = {
+            "produktnamn": "Produktnamn",
+            "varunummer": "Varunummer",
+            "styrka": "Styrka",
+            "forpackningsstorleksgrupp": "Förpackningsstorleksgrupp",
+            "substans": "Substans",
+            "beredningsform": "Beredningsform",
+            "storlek": "Storlek",
+            "apotekensinkopspris": "Apotekens inköpspris",
+            "forsaljningspris": "Försäljningspris",
+            "inkopsprisperminstaenhet": "Inköpspris per minsta enhet",
+            "forsaljningsprisperminstaenhet": "Försäljningspris per minsta enhet",
+            "nplid": "NPL ID",
+            "nplpackid": "NPL pack ID",
+            "ursprung": "Ursprung",
+            "foretag": "Företag",
+            "utbytesgruppsid": "Utbytesgrupps ID",
+            "marknadsfors": "Marknadsförs",
+            "rang": "Rang",
+            "status": "Status",
+            "forpackning": "Förpackning",
+        }
+
+        rename_cols = {}
+        for col in df.columns:
+            norm = _norm_col(col)
+            if norm in normalized_map:
+                rename_cols[col] = normalized_map[norm]
+        if rename_cols:
+            df = df.rename(columns=rename_cols)
+
+        if "Status" not in df.columns and "Rang" in df.columns:
+            def _rank_to_status(val):
+                try:
+                    rank = int(float(val))
+                except Exception:
+                    return ""
+                if rank == 1:
+                    return "PV"
+                if rank == 2:
+                    return "R1"
+                if rank == 3:
+                    return "R2"
+                return ""
+
+            df["Status"] = df["Rang"].apply(_rank_to_status)
         df.to_json(json_path, orient='records', indent=4, force_ascii=False)
         
         file_size = os.path.getsize(json_path) / 1024  # Size in KB
