@@ -24,11 +24,11 @@ async function init() {
     try {
         // Om din fil heter substances.json men innehåller den nya index-listan:
         const cacheBust = `v=${Date.now()}`;
-        const res = await fetch(`search-index.json?${cacheBust}`);
+        const res = await fetch(`data/search-index.json?${cacheBust}`);
         searchIndex = await res.json();
 
         // Ladda månader (antingen från separat fil eller från indexet)
-        const resMonths = await fetch(`months.json?${cacheBust}`);
+        const resMonths = await fetch(`data/months.json?${cacheBust}`);
         availableMonths = await resMonths.json();
         availableMonths.sort((a, b) => b - a);
 

@@ -41,7 +41,7 @@ def get_natural_size(code):
 
 def create_global_search_index():
     pv_folder = "data"
-    medprice_file = "MEDPrice.xlsx"
+    medprice_file = os.path.join(pv_folder, "MEDPrice.xlsx")
     pv_files = [
         f for f in glob.glob(os.path.join(pv_folder, "*.xlsx"))
         if not os.path.basename(f).startswith("~$")
@@ -147,7 +147,7 @@ def create_global_search_index():
             })
 
     search_index.sort(key=lambda x: x['sub'])
-    with open('search-index.json', 'w', encoding='utf-8') as f:
+    with open(os.path.join(pv_folder, 'search-index.json'), 'w', encoding='utf-8') as f:
         json.dump(search_index, f, ensure_ascii=False, indent=2)
 
 # --- NY DEL: Skapa months.json automatiskt ---
@@ -166,7 +166,7 @@ def create_global_search_index():
 
     month_codes = sorted(month_codes, reverse=True) # Nyast först
     
-    with open('months.json', 'w', encoding='utf-8') as f:
+    with open(os.path.join(pv_folder, 'months.json'), 'w', encoding='utf-8') as f:
         json.dump(month_codes, f)
     print(f"✅ Skapade months.json med {len(month_codes)} månader.")
 

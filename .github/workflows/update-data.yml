@@ -54,7 +54,7 @@ jobs:
           git fetch origin main
           git pull --rebase --autostash origin main
           if [ -n "$(git status --porcelain)" ]; then
-            git add data/*.json search-index.json months.json substances.json
+            git add data/*.json data/search-index.json data/months.json data/substances.json
             git commit -m "Automated TLV data update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
             for i in 1 2 3; do
               git pull --rebase --autostash origin main

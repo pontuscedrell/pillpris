@@ -78,8 +78,8 @@ def build_substances():
         "tree": substance_tree
     }
 
-    # Spara substances.json i rotmappen
-    output_path = 'substances.json'
+    # Spara substances.json i data-mappen
+    output_path = os.path.join(data_folder, 'substances.json')
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(final_output, f, ensure_ascii=False, indent=4)
 
