@@ -610,12 +610,16 @@ function updateTableRows(data) {
         rowDiv.setAttribute('onclick', `toggleRowDetails('${rowId}')`);
         rowDiv.classList.add(rowClass);
         
-        replaceContent(rowDiv, '.comparison-row-status-badges', statusBadgeHtml);
+        replaceContent(rowDiv, '.comparison-row-status', statusBadgeHtml);
         replaceContent(rowDiv, '.comparison-row-name', item.Produktnamn);
         replaceContent(rowDiv, '.comparison-row-info', `${item.Företag} · ${size} ${unit}`);
         replaceContent(rowDiv, '.price-value', `${itemPrice.toLocaleString('sv-SE', { minimumFractionDigits: 2 })} kr`);
         replaceContent(rowDiv, '.price-diff', priceDiffText);
-        rowDiv.querySelector('.price-diff').setAttribute('style', priceDiffStyle);
+        
+        const priceDiffEl = rowDiv.querySelector('.price-diff');
+        if (priceDiffEl && priceDiffStyle) {
+            priceDiffEl.setAttribute('style', priceDiffStyle);
+        }
 
         if (isOpen) {
             const map = currentSearch?.packagingMap || {};
