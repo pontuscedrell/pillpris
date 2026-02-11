@@ -9,6 +9,17 @@ let lastPVPrice = 0;
 let selectedRowId = null;
 let chartPriceType = "pv"; // "pv" or "cheapest"
 
+function getItemStatus(item) {
+    const rawStatus = (item?.Status ?? "").toString().trim();
+    if (rawStatus) return rawStatus;
+    const rankVal = item?.Rang ?? item?.rang;
+    const rank = Number(String(rankVal ?? "").replace(',', '.'));
+    if (rank === 1) return "PV";
+    if (rank === 2) return "R1";
+    if (rank === 3) return "R2";
+    return "";
+}
+
 async function init() {
     try {
         // Om din fil heter substances.json men innehåller den nya index-listan:
@@ -277,7 +288,7 @@ async function fetchLatestPV(searchItem) {
 
         lastMatches = matches.sort((a, b) => {
             const getPriority = (s) => {
-                const status = (s || "").trim().toUpperCase();
+                const status = getItemStatus(s).trim().toUpperCase();
                 if (status === "PV") return 1;
                 if (status.startsWith("R")) return parseInt(status.substring(1)) + 1;
                 return 100;
@@ -286,7 +297,7 @@ async function fetchLatestPV(searchItem) {
         });
 
         // Hitta PV och det absoluta lägsta priset
-        const pvProduct = lastMatches.find(i => (i.Status || "").trim().toUpperCase() === "PV") || lastMatches[0];
+        const pvProduct = lastMatches.find(i => getItemStatus(i).trim().toUpperCase() === "PV") || lastMatches[0];
         lastPVPrice = pvProduct["Försäljningspris"];
         const absoluteMinPrice = Math.min(...matches.map(i => i["Försäljningspris"]));
 
@@ -336,7 +347,7 @@ async function getPriceStatistics(searchItem) {
             const match = data.find(i => 
                 String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
                 String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id) &&
-                (i.Status || "").trim().toUpperCase() === "PV"
+                getItemStatus(i).trim().toUpperCase() === "PV"
             );
             
             if (match) prices.push(match["Försäljningspris"]);
@@ -371,7 +382,7 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
             const match = data.find(i => 
                 String(i["Utbytesgrupps ID"]) === String(currentSearch.id) &&
                 String(i["Förpackningsstorleksgrupp"]) === String(currentSearch.size_id) &&
-                (i.Status || "").trim().toUpperCase() === "PV"
+                getItemStatus(i).trim().toUpperCase() === "PV"
             );
             return match ? match["Försäljningspris"] : null;
         } catch (e) { return null; }
@@ -588,7 +599,7 @@ function updateTableRows(data) {
     container.innerHTML = rowsToShow.map((item, index) => {
         const itemPrice = item["Försäljningspris"];
         const diff = itemPrice - lastPVPrice;
-        const status = (item.Status || "").trim().toUpperCase();
+        const status = getItemStatus(item).trim().toUpperCase();
         // Robust rad-ID även när Vnr saknas
         const rowId = String(
             item.Vnr ?? `${(item.Produktnamn || '')}-${(item.Företag || '')}-${(item.Storlek || '')}-${index}`
@@ -859,7 +870,7 @@ async function renderHistoryChart(searchItem) {
                 match = data.find(i => 
                     String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
                     String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id) &&
-                    i.Status.trim().toUpperCase() === "PV"
+                    getItemStatus(i).trim().toUpperCase() === "PV"
                 );
             }
             

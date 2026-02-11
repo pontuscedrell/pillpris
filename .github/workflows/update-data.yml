@@ -33,15 +33,15 @@ jobs:
 
       - name: Download and convert TLV data
         run: |
-          python update_tlv_data.py
+          python scripts/update_tlv_data.py
 
       - name: Build substances index
         run: |
-          python getsubstances.py
+          python scripts/getsubstances.py
 
       - name: Build search index
         run: |
-          python search2.py
+          python scripts/search2.py
 
       - name: Remove Excel temp files
         run: |
