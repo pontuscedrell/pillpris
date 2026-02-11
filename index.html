@@ -250,5 +250,63 @@
     </div>
 </template>
 
+<template id="template-month-selector">
+    <div class="month-selector-wrapper">
+        <label for="month-select" style="font-size: 12px; color: #64748b; font-weight: 400;">Period:</label>
+        <select id="month-select"></select>
+    </div>
+</template>
+
+<template id="template-comparison-row">
+    <div class="comparison-row">
+        <div class="comparison-row-header">
+            <div class="comparison-row-left">
+                <div class="comparison-row-product">
+                    <span class="comparison-row-status"></span>
+                    <strong class="comparison-row-name"></strong>
+                </div>
+                <p class="comparison-row-info"></p>
+            </div>
+            <div class="price-display-container">
+                <div class="price-value"></div>
+                <div class="price-diff"></div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="template-row-details">
+    <div class="row-details-container">
+        <div class="row-detail-item">
+            <span class="material-symbols-outlined">inventory_2</span>
+            <div class="row-detail-content">
+                <span class="row-detail-label">Antal i förpackning</span>
+                <span class="row-detail-value" data-field="pack-size"></span>
+            </div>
+        </div>
+        <div class="row-detail-item">
+            <span class="material-symbols-outlined">category</span>
+            <div class="row-detail-content">
+                <span class="row-detail-label">Förpackningstyp</span>
+                <span class="row-detail-value" data-field="packaging"></span>
+            </div>
+        </div>
+        <div class="row-detail-item">
+            <span class="material-symbols-outlined">factory</span>
+            <div class="row-detail-content">
+                <span class="row-detail-label">Tillverkare</span>
+                <span class="row-detail-value" data-field="manufacturer"></span>
+            </div>
+        </div>
+        <div class="row-detail-item">
+            <span class="material-symbols-outlined">info</span>
+            <div class="row-detail-content">
+                <span class="row-detail-label">Typ</span>
+                <span class="row-detail-value" data-field="origin"></span>
+            </div>
+        </div>
+    </div>
+</template>
+
 </body>
 </html>

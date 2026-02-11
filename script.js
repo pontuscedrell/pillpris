@@ -562,7 +562,9 @@ function updateTableRows(data) {
         footer.innerHTML = '';
     }
 
-    container.innerHTML = rowsToShow.map((item, index) => {
+    container.innerHTML = '';
+    
+    rowsToShow.forEach((item, index) => {
         const itemPrice = item["Försäljningspris"];
         const diff = itemPrice - lastPVPrice;
         const status = getItemStatus(item).trim().toUpperCase();
@@ -586,8 +588,6 @@ function updateTableRows(data) {
 
         // PV is blue unless it's also cheapest (then green)
         const isPVAndCheapest = isPV && isCheapest;
-        let rowBgColor = isCheapest ? "#f0fdf4" : (isPV ? "#eff6ff" : (isR1 || isR2 ? "#fffbeb" : "#ffffff"));
-        let rowBorderColor = isCheapest ? "#5eead4" : (isPV ? "#bfdbfe" : (isR1 || isR2 ? "#fde68a" : "#e2e8f0"));
 
         let statusBadgeHtml = "";
         if (isPVAndCheapest) {
@@ -600,84 +600,68 @@ function updateTableRows(data) {
             statusBadgeHtml = `<span class="status-badge-mini" style="color: #16a34a; border: 1px solid #10b981;"><span class="material-symbols-outlined" style="font-size: 14px;">star</span></span>`;
         }
 
-        return `
-            <div onclick="toggleRowDetails('${rowId}')" class="comparison-row ${isCheapest ? 'cheapest-row' : (isPV ? 'pv-row' : (isR1 || isR2 ? 'reserve-row' : 'default-row'))}">
-                <div class="comparison-row-header">
-                    <div class="comparison-row-left">
-                        <div class="comparison-row-product">
-                            ${statusBadgeHtml}
-                            <strong class="comparison-row-name">${item.Produktnamn}</strong>
-                        </div>
-                        <p class="comparison-row-info">
-                            ${item.Företag} · ${size} ${unit}
-                        </p>
-                    </div>
-                    <div class="price-display-container">
-                        <div class="price-value">${itemPrice.toLocaleString('sv-SE', { minimumFractionDigits: 2 })} kr</div>
-                        <div class="price-diff" style="${diff > 0 ? 'color: #dc2626;' : ''}">${diff === 0 ? 'PV' : (diff > 0 ? `+${diff.toFixed(2)} kr` : `${diff.toFixed(2)} kr`)}</div>
-                    </div>
-                </div>
+        const rowClass = isCheapest ? 'cheapest-row' : (isPV ? 'pv-row' : (isR1 || isR2 ? 'reserve-row' : 'default-row'));
+        const priceDiffStyle = diff > 0 ? 'color: #dc2626;' : '';
+        const priceDiffText = diff === 0 ? 'PV' : (diff > 0 ? `+${diff.toFixed(2)} kr` : `${diff.toFixed(2)} kr`);
 
-                ${isOpen ? `
-                <div class="row-details-container">
-                    <div class="row-detail-item">
-                        <span class="material-symbols-outlined">inventory_2</span>
-                        <div class="row-detail-content">
-                            <span class="row-detail-label">Antal i förpackning</span>
-                            <span class="row-detail-value">${size} ${unit}</span>
-                        </div>
-                    </div>
-                    <div class="row-detail-item">
-                        <span class="material-symbols-outlined">category</span>
-                        <div class="row-detail-content">
-                            <span class="row-detail-label">Förpackningstyp</span>
-                            <span class="row-detail-value">${(() => {
-                                const map = currentSearch?.packagingMap || {};
-                                const vnr = item.Varunummer ?? item.Vnr;
-                                const byVnr = map[vnr] || map[String(vnr)];
-                                return item["Förpackning"]
-                                    || byVnr
-                                    || (currentSearch?.packaging && currentSearch.packaging[0])
-                                    || item["Beredningsform"]
-                                    || item["Läkemedelsform"]
-                                    || '—';
-                            })()}</span>
-                        </div>
-                    </div>
-                    <div class="row-detail-item">
-                        <span class="material-symbols-outlined">factory</span>
-                        <div class="row-detail-content">
-                            <span class="row-detail-label">Tillverkare</span>
-                            <span class="row-detail-value">${item.Företag || '—'}</span>
-                        </div>
-                    </div>
-                    <div class="row-detail-item">
-                        <span class="material-symbols-outlined">info</span>
-                        <div class="row-detail-content">
-                            <span class="row-detail-label">Typ</span>
-                            <span class="row-detail-value">${item.Ursprung || 'Generics'}</span>
-                        </div>
-                    </div>
-                </div>
-                ` : ''}
-            </div>
-        `;
-    }).join('');
+        const rowFragment = cloneTemplate('template-comparison-row');
+        const rowDiv = rowFragment.querySelector('.comparison-row');
+        
+        rowDiv.setAttribute('onclick', `toggleRowDetails('${rowId}')`);
+        rowDiv.classList.add(rowClass);
+        
+        replaceContent(rowDiv, '.comparison-row-status-badges', statusBadgeHtml);
+        replaceContent(rowDiv, '.comparison-row-name', item.Produktnamn);
+        replaceContent(rowDiv, '.comparison-row-info', `${item.Företag} · ${size} ${unit}`);
+        replaceContent(rowDiv, '.price-value', `${itemPrice.toLocaleString('sv-SE', { minimumFractionDigits: 2 })} kr`);
+        replaceContent(rowDiv, '.price-diff', priceDiffText);
+        rowDiv.querySelector('.price-diff').setAttribute('style', priceDiffStyle);
+
+        if (isOpen) {
+            const map = currentSearch?.packagingMap || {};
+            const vnr = item.Varunummer ?? item.Vnr;
+            const byVnr = map[vnr] || map[String(vnr)];
+            const forpackning = item["Förpackning"]
+                || byVnr
+                || (currentSearch?.packaging && currentSearch.packaging[0])
+                || item["Beredningsform"]
+                || item["Läkemedelsform"]
+                || '—';
+
+            const detailsFragment = cloneTemplate('template-row-details');
+            const detailsDiv = detailsFragment.querySelector('.row-details-container');
+            const detailItems = detailsDiv.querySelectorAll('.row-detail-item');
+            
+            replaceContent(detailItems[0], '.row-detail-value', `${size} ${unit}`);
+            replaceContent(detailItems[1], '.row-detail-value', forpackning);
+            replaceContent(detailItems[2], '.row-detail-value', item.Företag || '—');
+            replaceContent(detailItems[3], '.row-detail-value', item.Ursprung || 'Generics');
+
+            rowDiv.appendChild(detailsDiv);
+        }
+
+        container.appendChild(rowFragment);
+    });
 
 }
 
 function renderMonthSelector() {
-    return `
-        <div class="month-selector-wrapper">
-            <label for="month-select" style="font-size: 12px; color: #64748b; font-weight: 400;">Period:</label>
-            <select id="month-select" onchange="updateMonth(this.value)">
-                ${availableMonths.map(m => `
-                    <option value="${m}" ${m == selectedMonth ? 'selected' : ''}>
-                        ${formatMedicineDate(m)}${isPrelimMonth(m) ? ' (Preliminär)' : ''}
-                    </option>
-                `).join('')}
-            </select>
-        </div>`;
+    const fragment = cloneTemplate('template-month-selector');
+    const select = fragment.querySelector('#month-select');
+    
+    availableMonths.forEach(m => {
+        const option = document.createElement('option');
+        option.value = m;
+        option.textContent = `${formatMedicineDate(m)}${isPrelimMonth(m) ? ' (Preliminär)' : ''}`;
+        if (m == selectedMonth) {
+            option.selected = true;
+        }
+        select.appendChild(option);
+    });
+    
+    const tempDiv = document.createElement('div');
+    tempDiv.appendChild(fragment);
+    return tempDiv.innerHTML;
 }
 
 function updateMonth(newMonth) {
