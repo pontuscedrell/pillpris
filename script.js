@@ -65,11 +65,17 @@ async function init() {
         // Uppdatera UI
         const monthDropdown = document.getElementById('month-select-main');
         if (monthDropdown) {
-            monthDropdown.innerHTML = availableMonths.map(m => {
+            monthDropdown.replaceChildren();
+            availableMonths.forEach(m => {
+                const option = document.createElement('option');
                 const prelimTag = isPrelimMonth(m) ? ' (Preliminär)' : '';
-                return `<option value="${m}" ${m == selectedMonth ? 'selected' : ''}>${formatMedicineDate(m)}${prelimTag}</option>`;
-            }).join('');
-            monthDropdown.value = selectedMonth;
+                option.value = m;
+                option.textContent = `${formatMedicineDate(m)}${prelimTag}`;
+                if (m == selectedMonth) {
+                    option.selected = true;
+                }
+                monthDropdown.appendChild(option);
+            });
         }
         
         // Update header with current month
@@ -171,14 +177,16 @@ document.getElementById('sub-input').oninput = function () {
     if (matches.length > 0) {
         // Vi begränsar till 20 träffar för prestanda
         matches.slice(0, 20).forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'dropdown-item';
-            
-            // Highlighta substansen i fetstil
-            div.innerHTML = `
-                <div class="item-line1"><strong>${item.sub}</strong> ${item.str}</div>
-                <div class="item-line2">${item.form} | ${item.size}</div>
-            `;
+            const itemTemplate = cloneTemplate('template-dropdown-item');
+            if (!itemTemplate) return;
+            const div = itemTemplate.querySelector('.dropdown-item');
+            const subEl = div.querySelector('[data-field="sub"]');
+            const strEl = div.querySelector('[data-field="str"]');
+            const metaEl = div.querySelector('[data-field="meta"]');
+
+            if (subEl) subEl.textContent = item.sub;
+            if (strEl) strEl.textContent = item.str;
+            if (metaEl) metaEl.textContent = `${item.form} | ${item.size}`;
 
             div.onclick = function () {
                 document.getElementById('sub-input').value = item.sub + ' ' + item.str;
@@ -187,18 +195,15 @@ document.getElementById('sub-input').oninput = function () {
                 // Använd ID:n från indexet för en exakt och snabb sökning i data-filen
                 fetchLatestPV(item); 
             };
-            listContainer.appendChild(div);
+            listContainer.appendChild(itemTemplate);
         });
         dropdown.style.display = "block";
     } else {
         // Show no results message in dropdown
-        const noResultsDiv = document.createElement('div');
-        noResultsDiv.className = 'dropdown-item';
-        noResultsDiv.innerHTML = `
-            <div class="item-line1">Varför finns inte min vara?</div>
-            <div class="item-line2">Alla läkemedel upphandlas inte med periodens vara. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a></div>
-        `;
-        listContainer.appendChild(noResultsDiv);
+        const noResultsTemplate = cloneTemplate('template-dropdown-no-results');
+        if (noResultsTemplate) {
+            listContainer.appendChild(noResultsTemplate);
+        }
         dropdown.style.display = "block";
     }
 };
@@ -728,23 +733,17 @@ function renderInfoCard(item) {
     const area = document.getElementById('info-card-area');
     if (!area) return;
 
-area.innerHTML = `
-        <div class="reserves-container" style="background: white; border-radius: 16px; padding: 24px 0; border: 1px solid #e2e8f0; margin-top: 20px;">
-            <div style="padding: 0 1rem;">
-                <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #1e293b;">Utbytbara alternativ</h3>
-                <p style="margin: 8px 0 24px 0; color: #64748b; font-size: 14px;">
-                    Alla dessa innehåller samma verksamma ämne...
-                </p>
-            </div>
-                <span class="material-symbols-outlined">expand_more</span>
-            </summary>
-            <div style="padding: 15px; border-top: 1px solid #f1f5f9; background: #f8fafc; font-size: 13px;">
-                <p><strong>Utbytesgrupp:</strong> ${item.id}</p>
-                <p><strong>Varunummer:</strong> ${item.vnr.join(', ')}</p>
-                <p><strong>Synonymer:</strong> ${item.names.join(', ')}</p>
-            </div>
-        </details>
-    `;
+    const infoTemplate = cloneTemplate('template-info-card');
+    if (!infoTemplate) return;
+    replaceContent(area, infoTemplate);
+
+    const exchangeGroup = area.querySelector('[data-field="exchange-group"]');
+    const productNumbers = area.querySelector('[data-field="product-numbers"]');
+    const synonyms = area.querySelector('[data-field="synonyms"]');
+
+    if (exchangeGroup) exchangeGroup.textContent = item?.id ?? '—';
+    if (productNumbers) productNumbers.textContent = Array.isArray(item?.vnr) ? item.vnr.join(', ') : (item?.vnr ?? '—');
+    if (synonyms) synonyms.textContent = Array.isArray(item?.names) ? item.names.join(', ') : (item?.names ?? '—');
 }
 
 function renderInsightCard(pvPrice, stats, nextPrice) {
@@ -752,18 +751,15 @@ function renderInsightCard(pvPrice, stats, nextPrice) {
     if (!area || !stats) return;
 
     // Här kan du lägga till den analyzeMarketData-logik vi tittade på tidigare
-    area.innerHTML = `
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; margin-bottom: 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-            <div>
-                <p style="font-size: 10px; color: #64748b; margin: 0;">HISTORISKT SNITT</p>
-                <p style="font-weight: 700; margin: 0;">${stats.avgPrice.toFixed(2)} kr</p>
-            </div>
-            <div>
-                <p style="font-size: 10px; color: #64748b; margin: 0;">LÄGSTA NOTERADE</p>
-                <p style="font-weight: 700; margin: 0;">${stats.minPrice.toFixed(2)} kr</p>
-            </div>
-        </div>
-    `;
+    const insightTemplate = cloneTemplate('template-insight-card');
+    if (!insightTemplate) return;
+    replaceContent(area, insightTemplate);
+
+    const avgPriceEl = area.querySelector('[data-field="avg-price"]');
+    const minPriceEl = area.querySelector('[data-field="min-price"]');
+
+    if (avgPriceEl) avgPriceEl.textContent = `${stats.avgPrice.toFixed(2)} kr`;
+    if (minPriceEl) minPriceEl.textContent = `${stats.minPrice.toFixed(2)} kr`;
 }
 
 function formatUnit(form, size) {
