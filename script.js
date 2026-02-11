@@ -14,11 +14,18 @@ function cloneTemplate(id) {
     return tpl ? tpl.content.cloneNode(true) : null;
 }
 
-function replaceContent(parent, selector, content) {
+function replaceContent(parent, selectorOrFragment, content) {
     if (!parent) return;
-    const target = typeof selector === 'string' ? parent.querySelector(selector) : selector;
-    if (!target) return;
-    target.innerHTML = content;
+    
+    // If content is provided, we're using selector mode: replaceContent(parent, '.selector', 'html')
+    if (arguments.length === 3) {
+        const target = parent.querySelector(selectorOrFragment);
+        if (target) target.innerHTML = content;
+    } 
+    // Otherwise, we're replacing the parent's children with a fragment: replaceContent(parent, fragment)
+    else {
+        parent.replaceChildren(selectorOrFragment);
+    }
 }
 
 function getItemStatus(item) {
