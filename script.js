@@ -14,9 +14,11 @@ function cloneTemplate(id) {
     return tpl ? tpl.content.cloneNode(true) : null;
 }
 
-function replaceContent(target, fragment) {
-    if (!target || !fragment) return;
-    target.replaceChildren(fragment);
+function replaceContent(parent, selector, content) {
+    if (!parent) return;
+    const target = typeof selector === 'string' ? parent.querySelector(selector) : selector;
+    if (!target) return;
+    target.innerHTML = content;
 }
 
 function getItemStatus(item) {
