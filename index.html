@@ -109,5 +109,146 @@
     </div>
 </footer>
 
+<template id="template-loading">
+    <p style="text-align:center; padding: 40px;">Hämtar prisdata...</p>
+</template>
+
+<template id="template-error">
+    <p>Ett fel uppstod när data skulle laddas.</p>
+</template>
+
+<template id="template-no-results">
+    <div style="padding: 24px; background: #f8fafc;">
+        <div class="item-line1" style="margin-bottom: 8px;">Varför finns inte min vara</div>
+        <div class="item-line2" style="margin-top: 0;">Alla läkemedel upphandlas inte med periodens vara. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a></div>
+    </div>
+</template>
+
+<template id="template-results-container">
+    <div id="price-card-area"></div>
+    <div id="table-area"></div>
+</template>
+
+<template id="template-price-card">
+    <div class="bleed-card">
+        <div class="price-card-header-bar">
+            <div class="price-card-icon-wrapper">
+                <span class="material-symbols-outlined price-card-icon"></span>
+            </div>
+            <div class="price-card-header-text">
+                <p class="price-card-header-label"></p>
+                <p class="price-card-header-subtext"></p>
+            </div>
+        </div>
+
+        <div class="price-card-content-wrapper">
+            <div class="price-card-grid">
+                <div class="price-card-left-column">
+                    <div class="price-card-title-section">
+                        <h2 class="price-card-title"></h2>
+                        <p class="price-card-subtitle"></p>
+                    </div>
+
+                    <div class="price-card-price-section">
+                        <div class="price-card-current-wrapper">
+                            <p class="price-card-current-label">Aktuellt pris</p>
+                            <span class="price-card-current-value"></span>
+                        </div>
+                        <div class="price-card-savings-slot"></div>
+                    </div>
+
+                    <div class="stat-blocks-container"></div>
+                </div>
+
+                <div class="price-card-info-panel">
+                    <p class="price-card-info-header">Information</p>
+                    <div class="price-card-info-list">
+                        <div class="price-card-info-item">
+                            <span class="material-symbols-outlined price-card-info-icon">inventory_2</span>
+                            <div class="price-card-info-content">
+                                <span class="price-card-info-label">Antal i förpackning</span>
+                                <span class="price-card-info-value" data-field="pack-size"></span>
+                            </div>
+                        </div>
+                        <div class="price-card-info-item">
+                            <span class="material-symbols-outlined price-card-info-icon">category</span>
+                            <div class="price-card-info-content">
+                                <span class="price-card-info-label">Förpackningstyp</span>
+                                <span class="price-card-info-value" data-field="packaging"></span>
+                            </div>
+                        </div>
+                        <div class="price-card-info-item">
+                            <span class="material-symbols-outlined price-card-info-icon">factory</span>
+                            <div class="price-card-info-content">
+                                <span class="price-card-info-label">Tillverkare</span>
+                                <span class="price-card-info-value" data-field="manufacturer"></span>
+                            </div>
+                        </div>
+                        <div class="price-card-info-item">
+                            <span class="material-symbols-outlined price-card-info-icon">info</span>
+                            <div class="price-card-info-content">
+                                <span class="price-card-info-label">Typ</span>
+                                <span class="price-card-info-value" data-field="origin"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="template-stat-block">
+    <div class="stat-block">
+        <p class="stat-block-label"></p>
+        <div class="stat-block-content">
+            <span class="stat-block-price"></span>
+            <span class="stat-block-trend">
+                <span class="material-symbols-outlined"></span>
+                <span class="stat-block-trend-value"></span>
+            </span>
+        </div>
+        <p class="stat-block-empty" style="margin: 4px 0 0 0; color: #cbd5e1; font-size: 14px; display: none;">Ej fastställt</p>
+    </div>
+</template>
+
+<template id="template-savings-alert">
+    <div class="savings-alert-box" style="flex: 1.2; min-width: 250px; background: #f0fdf4; border: 1px solid #16a34a30; border-left: 4px solid #16a34a; border-radius: 12px; padding: 20px;">
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <span class="material-symbols-outlined" style="color: #16a34a; font-size: 28px;">account_balance_wallet</span>
+            <div>
+                <strong class="savings-alert-title" style="display: block; font-size: 16px; color: #134e4a; margin-bottom: 4px;"></strong>
+                <p class="savings-alert-text" style="margin: 0; font-size: 13px; color: #166534; line-height: 1.5;"></p>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="template-table-container">
+    <div class="bleed-card comparison-container">
+        <div class="comparison-inner-padding">
+            <h3 class="comparison-title">Utbytbara alternativ</h3>
+            <p class="comparison-subtitle">
+                Alla dessa innehåller samma verksamma ämne:
+                <strong class="comparison-subtitle-strong"></strong>
+            </p>
+        </div>
+
+        <div id="comparison-list" class="comparison-list-wrapper"></div>
+
+        <div id="pagination-footer"></div>
+
+        <div class="tlv-info-box">
+            <span class="material-symbols-outlined tlv-info-icon">info</span>
+            <div>
+                <p class="tlv-info-title">Periodens vara är inte alltid billigast</p>
+                <p class="tlv-info-text">
+                    Billigaste läkemedel blir inte alltid "periodens vara" om företaget inte har bekräftat leveransförmåga till TLV. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</template>
+
 </body>
 </html>

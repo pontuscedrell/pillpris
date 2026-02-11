@@ -9,6 +9,16 @@ let lastPVPrice = 0;
 let selectedRowId = null;
 let chartPriceType = "pv"; // "pv" or "cheapest"
 
+function cloneTemplate(id) {
+    const tpl = document.getElementById(id);
+    return tpl ? tpl.content.cloneNode(true) : null;
+}
+
+function replaceContent(target, fragment) {
+    if (!target || !fragment) return;
+    target.replaceChildren(fragment);
+}
+
 function getItemStatus(item) {
     const rawStatus = (item?.Status ?? "").toString().trim();
     if (rawStatus) return rawStatus;
@@ -265,7 +275,7 @@ function highlightDropdownItem(items, index) {
 async function fetchLatestPV(searchItem) {
     currentSearch = searchItem; 
     const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = "<p style='text-align:center; padding: 40px;'>Hämtar prisdata...</p>";
+    replaceContent(resultsDiv, cloneTemplate('template-loading'));
 
     try {
         const res = await fetch(`data/${selectedMonth}.json`);
@@ -277,12 +287,7 @@ async function fetchLatestPV(searchItem) {
         );
 
         if (matches.length === 0) {
-            resultsDiv.innerHTML = `
-                <div style="padding: 24px; background: #f8fafc;">
-                    <div class="item-line1" style="margin-bottom: 8px;">Varför finns inte min vara</div>
-                    <div class="item-line2" style="margin-top: 0;">Alla läkemedel upphandlas inte med periodens vara. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a></div>
-                </div>
-            `;
+            replaceContent(resultsDiv, cloneTemplate('template-no-results'));
             return;
         }
 
@@ -308,10 +313,7 @@ async function fetchLatestPV(searchItem) {
 
         const stats = await getPriceStatistics(searchItem);
 
-        resultsDiv.innerHTML = `
-            <div id="price-card-area"></div>
-            <div id="table-area"></div>
-        `;
+        replaceContent(resultsDiv, cloneTemplate('template-results-container'));
 
         const chartCont = document.getElementById('chart-container');
         if (chartCont) {
@@ -326,7 +328,7 @@ async function fetchLatestPV(searchItem) {
 
     } catch (err) {
         console.error("Fel vid hämtning av detaljer:", err);
-        resultsDiv.innerHTML = "<p>Ett fel uppstod när data skulle laddas.</p>";
+        replaceContent(resultsDiv, cloneTemplate('template-error'));
     }
 }
 
@@ -393,182 +395,146 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
     const rec = getPriceRecommendation(pvProduct["Försäljningspris"], stats, nextPrice);
 
     const createStatBlock = (price, label, currentPrice, monthCode, isFuture) => {
-        if (!price) return `<div class="stat-block"><p class="stat-block-label">${label}</p><p style="margin: 4px 0 0 0; color: #cbd5e1; font-size: 14px;">Ej fastställt</p></div>`;
-        let prelimNote = "";
-        let prelimIcon = "";
+        const fragment = cloneTemplate('template-stat-block');
+        if (!fragment) return null;
+        const block = fragment.querySelector('.stat-block');
+        const labelEl = block.querySelector('.stat-block-label');
+        const priceEl = block.querySelector('.stat-block-price');
+        const trendEl = block.querySelector('.stat-block-trend');
+        const trendIcon = block.querySelector('.stat-block-trend .material-symbols-outlined');
+        const trendValue = block.querySelector('.stat-block-trend-value');
+        const emptyEl = block.querySelector('.stat-block-empty');
+
+        let prelimIconEl = null;
         if (isFuture && isPrelimMonth(monthCode)) {
             label = `${label} (preliminär)`;
-            prelimNote = "Priset är preliminärt och kan komma att ändras";
-            prelimIcon = `<span class="prelim-info" tabindex="0" role="button" aria-label="Preliminärt pris" data-tooltip="${prelimNote}">!</span>`;
+            prelimIconEl = document.createElement('span');
+            prelimIconEl.className = 'prelim-info';
+            prelimIconEl.setAttribute('tabindex', '0');
+            prelimIconEl.setAttribute('role', 'button');
+            prelimIconEl.setAttribute('aria-label', 'Preliminärt pris');
+            prelimIconEl.setAttribute('data-tooltip', 'Priset är preliminärt och kan komma att ändras');
+            prelimIconEl.textContent = '!';
         }
+
+        labelEl.textContent = label;
+        if (prelimIconEl) {
+            labelEl.append(' ');
+            labelEl.appendChild(prelimIconEl);
+        }
+
+        if (!price) {
+            trendEl.style.display = 'none';
+            priceEl.style.display = 'none';
+            emptyEl.style.display = 'block';
+            return block;
+        }
+
         const diff = price - currentPrice;
         const diffPercent = Math.round((Math.abs(diff) / currentPrice) * 100);
         let priceColor = "#1e293b", trendColor = "#64748b", icon = "horizontal_rule";
 
         if (price !== currentPrice) {
-            // For Föregående (isFuture=false): text and arrow colors should be opposite/reversed
-            // For Nästa (isFuture=true): text and arrow colors should match
             if (!isFuture) {
-                // Föregående: text shows comparison, arrow shows trend (opposite)
-                priceColor = price > currentPrice ? "#dc2626" : "#16a34a";  // Text: red if was higher, green if lower
-                trendColor = price > currentPrice ? "#16a34a" : "#dc2626";  // Arrow: opposite color
+                priceColor = price > currentPrice ? "#dc2626" : "#16a34a";
+                trendColor = price > currentPrice ? "#16a34a" : "#dc2626";
             } else {
-                // Nästa: text and arrow show same sentiment
                 priceColor = price > currentPrice ? "#dc2626" : "#16a34a";
                 trendColor = priceColor;
             }
-            // Arrow shows direction: DOWN if price is/was lower, UP if price is/will be higher
             icon = isFuture === (price > currentPrice) ? "trending_up" : "trending_down";
+        } else {
+            trendEl.style.display = 'none';
         }
 
-        return `
-            <div class="stat-block">
-                <p class="stat-block-label">${label} ${prelimIcon}</p>
-                <div class="stat-block-content">
-                    <span class="stat-block-price" style="color: ${priceColor};">${formatPrice(price)}</span>
-                    ${price !== currentPrice ? `
-                        <span class="stat-block-trend" style="background: ${trendColor}15; color: ${trendColor};">
-                            <span class="material-symbols-outlined">${icon}</span>
-                            ${diffPercent}%
-                        </span>` : ''}
-                </div>
-            </div>`;
+        priceEl.textContent = formatPrice(price);
+        priceEl.style.color = priceColor;
+        trendEl.style.background = `${trendColor}15`;
+        trendEl.style.color = trendColor;
+        trendIcon.textContent = icon;
+        trendValue.textContent = `${diffPercent}%`;
+
+        return block;
     };
 
-    let savingsAlertHtml = "";
+    const cardTemplate = cloneTemplate('template-price-card');
+    replaceContent(area, cardTemplate);
+
+    const headerBar = area.querySelector('.price-card-header-bar');
+    headerBar.style.background = rec.bg;
+
+    const headerIcon = area.querySelector('.price-card-icon');
+    headerIcon.textContent = rec.icon;
+    headerIcon.style.color = rec.color;
+
+    const headerLabel = area.querySelector('.price-card-header-label');
+    headerLabel.textContent = `${rec.label}!`;
+    headerLabel.style.color = rec.color;
+
+    const headerSubtext = area.querySelector('.price-card-header-subtext');
+    headerSubtext.textContent = rec.subtext;
+    headerSubtext.style.color = rec.color;
+
+    area.querySelector('.price-card-title').textContent = pvProduct.Produktnamn;
+    area.querySelector('.price-card-subtitle').textContent = `${sub} · ${str} · ${form}`;
+    area.querySelector('.price-card-current-value').textContent = formatPrice(pvProduct["Försäljningspris"]);
+
+    const savingsSlot = area.querySelector('.price-card-savings-slot');
     if (cheaperProduct && savings >= 1) {
-        savingsAlertHtml = `
-            <div class="savings-alert-box" style="flex: 1.2; min-width: 250px; background: #f0fdf4; border: 1px solid #16a34a30; border-left: 4px solid #16a34a; border-radius: 12px; padding: 20px;">
-                <div style="display: flex; align-items: flex-start; gap: 12px;">
-                    <span class="material-symbols-outlined" style="color: #16a34a; font-size: 28px;">account_balance_wallet</span>
-                    <div>
-                        <strong style="display: block; font-size: 16px; color: #134e4a; margin-bottom: 4px;">Spara ${savings.toFixed(2)} kr!</strong>
-                        <p style="margin: 0; font-size: 13px; color: #166534; line-height: 1.5;">
-                            <strong>${cheaperProduct.Produktnamn}</strong> är billigare än Periodens Vara.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        `;
+        const savingsTpl = cloneTemplate('template-savings-alert');
+        if (savingsTpl) {
+            const savingsNode = savingsTpl.querySelector('.savings-alert-box');
+            const title = savingsNode.querySelector('.savings-alert-title');
+            const text = savingsNode.querySelector('.savings-alert-text');
+            title.textContent = `Spara ${savings.toFixed(2)} kr!`;
+            text.textContent = '';
+            const strong = document.createElement('strong');
+            strong.textContent = cheaperProduct.Produktnamn;
+            text.appendChild(strong);
+            text.append(' är billigare än Periodens Vara.');
+            savingsSlot.appendChild(savingsNode);
+        }
     }
 
-    area.innerHTML = `
-        <div class="bleed-card">
-            <div class="price-card-header-bar" style="background: ${rec.bg};">
-                <div class="price-card-icon-wrapper">
-                    <span class="material-symbols-outlined price-card-icon" style="color: ${rec.color};">${rec.icon}</span>
-                </div>
-                <div class="price-card-header-text">
-                    <p class="price-card-header-label" style="color: ${rec.color};">${rec.label}!</p>
-                    <p class="price-card-header-subtext" style="color: ${rec.color};">${rec.subtext}</p>
-                </div>
-            </div>
+    const statContainer = area.querySelector('.stat-blocks-container');
+    const prevBlock = createStatBlock(prevPrice, "Förra månaden", pvProduct["Försäljningspris"], prevMonthCode, false);
+    const nextBlock = createStatBlock(nextPrice, "Nästa månad", pvProduct["Försäljningspris"], nextMonthCode, true);
+    if (prevBlock) statContainer.appendChild(prevBlock);
+    if (nextBlock) statContainer.appendChild(nextBlock);
 
-            <div class="price-card-content-wrapper">
-                <div class="price-card-grid">
-                    
-                    <div class="price-card-left-column">
-                        
-                        <div class="price-card-title-section">
-                            <h2 class="price-card-title">
-                                ${pvProduct.Produktnamn} 
-                            </h2>
-                            <p class="price-card-subtitle">${sub} · ${str} · ${form}</p>
-                        </div>
+    const packagingValue = (() => {
+        const map = currentSearch?.packagingMap || {};
+        const vnr = pvProduct.Varunummer ?? pvProduct.Vnr;
+        const byVnr = map[vnr] || map[String(vnr)];
+        return pvProduct.Förpackning
+            || byVnr
+            || (currentSearch?.packaging && currentSearch.packaging[0])
+            || pvProduct.Beredningsform
+            || pvProduct.Läkemedelsform
+            || '-';
+    })();
 
-                        <div class="price-card-price-section">
-                            <div class="price-card-current-wrapper">
-                                <p class="price-card-current-label">Aktuellt pris</p>
-                                <span class="price-card-current-value">${formatPrice(pvProduct["Försäljningspris"])}</span>
-                            </div>
-                            ${savingsAlertHtml}
-                        </div>
+    const packSizeEl = area.querySelector('[data-field="pack-size"]');
+    const packagingEl = area.querySelector('[data-field="packaging"]');
+    const manufacturerEl = area.querySelector('[data-field="manufacturer"]');
+    const originEl = area.querySelector('[data-field="origin"]');
 
-                        <div class="stat-blocks-container">
-                            ${createStatBlock(prevPrice, "Förra månaden", pvProduct["Försäljningspris"], prevMonthCode, false)}
-                            ${createStatBlock(nextPrice, "Nästa månad", pvProduct["Försäljningspris"], nextMonthCode, true)}
-                        </div>
-                    </div>
-
-                    <div class="price-card-info-panel">
-                        <p class="price-card-info-header">Information</p>
-                        <div class="price-card-info-list">
-                            <div class="price-card-info-item">
-                                <span class="material-symbols-outlined price-card-info-icon">inventory_2</span>
-                                <div class="price-card-info-content">
-                                    <span class="price-card-info-label">Antal i förpackning</span>
-                                    <span class="price-card-info-value">${formatUnit(form, pvProduct.Storlek)}</span>
-                                </div>
-                            </div>
-                            <div class="price-card-info-item">
-                                <span class="material-symbols-outlined price-card-info-icon">category</span>
-                                <div class="price-card-info-content">
-                                    <span class="price-card-info-label">Förpackningstyp</span>
-                                    <span class="price-card-info-value">${(() => {
-                                        const map = currentSearch?.packagingMap || {};
-                                        const vnr = pvProduct.Varunummer ?? pvProduct.Vnr;
-                                        const byVnr = map[vnr] || map[String(vnr)];
-                                        return pvProduct.Förpackning
-                                            || byVnr
-                                            || (currentSearch?.packaging && currentSearch.packaging[0])
-                                            || pvProduct.Beredningsform
-                                            || pvProduct.Läkemedelsform
-                                            || '-';
-                                    })()}</span>
-                                </div>
-                            </div>
-                            <div class="price-card-info-item">
-                                <span class="material-symbols-outlined price-card-info-icon">factory</span>
-                                <div class="price-card-info-content">
-                                    <span class="price-card-info-label">Tillverkare</span>
-                                    <span class="price-card-info-value">${pvProduct.Företag}</span>
-                                </div>
-                            </div>
-                            <div class="price-card-info-item">
-                                <span class="material-symbols-outlined price-card-info-icon">info</span>
-                                <div class="price-card-info-content">
-                                    <span class="price-card-info-label">Typ</span>
-                                    <span class="price-card-info-value">${pvProduct.Ursprung || 'Generics'}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>`;
+    if (packSizeEl) packSizeEl.textContent = formatUnit(form, pvProduct.Storlek);
+    if (packagingEl) packagingEl.textContent = packagingValue;
+    if (manufacturerEl) manufacturerEl.textContent = pvProduct.Företag || '—';
+    if (originEl) originEl.textContent = pvProduct.Ursprung || 'Generics';
 }
 
 function renderTableOnly() {
     const area = document.getElementById('table-area');
     if (!area) return;
 
-   area.innerHTML = `
-    <div class="bleed-card comparison-container">
-        <div class="comparison-inner-padding">
-            <h3 class="comparison-title">Utbytbara alternativ</h3>
-            <p class="comparison-subtitle">
-                Alla dessa innehåller samma verksamma ämne: 
-                <strong>${currentSearch.sub} ${currentSearch.str}</strong>
-            </p>
-        </div>
-        
-        <div id="comparison-list" class="comparison-list-wrapper">
-            </div>
-
-        <div id="pagination-footer"></div>
-
-        <div class="tlv-info-box">
-            <span class="material-symbols-outlined tlv-info-icon">info</span>
-            <div>
-                <p class="tlv-info-title">Periodens vara är inte alltid billigast</p>
-                <p class="tlv-info-text">
-                    Billigaste läkemedel blir inte alltid "periodens vara" om företaget inte har bekräftat leveransförmåga till TLV. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a>
-                </p>
-            </div>
-        </div>
-    </div>
-`;
+    const template = cloneTemplate('template-table-container');
+    replaceContent(area, template);
+    const strong = area.querySelector('.comparison-subtitle-strong');
+    if (strong) {
+        strong.textContent = `${currentSearch.sub} ${currentSearch.str}`;
+    }
 
     updateTableRows(lastMatches);
 }
