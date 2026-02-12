@@ -1115,9 +1115,8 @@ function formatMedicineDate(dateCode) {
     const yearShort = codeStr.substring(0, 2);
     const monthIndex = codeStr.substring(2, 4);
     const months = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
-    const fullYear = "20" + yearShort;
     const monthName = months[parseInt(monthIndex, 10) - 1];
-    return monthName ? `${monthName} ${fullYear}` : "Okänt datum";
+    return monthName || "Okänt datum";
 }
 
 function isPrelimMonth(monthCode) {

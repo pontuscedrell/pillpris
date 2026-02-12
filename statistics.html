@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statistik - pillpris.se</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -11,25 +12,25 @@
     <header class="site-header">
         <div class="header-container">
             <div class="header-content">
-                <div class="site-title">
-                    <div class="icon-wrapper">
+                <a href="index.html" class="logo-wrapper" style="text-decoration: none;">
+                    <div class="icon-box">
                         <span class="material-symbols-outlined header-icon" style="color: white;">pill</span>
                     </div>
-                    <div>
-                        <h1>pillpris.se</h1>
-                        <p class="sub-title" id="header-period">TLV Periodens Varor • Statistik</p>
+                    <div class="text-wrapper">
+                        <h1 class="main-title">pillpris.se</h1>
+                        <p class="sub-title">TLV Periodens Varor</p>
                     </div>
-                </div>
+                </a>
                 <nav class="header-nav">
                     <a href="index.html" class="nav-link">Hem</a>
                     <a href="statistics.html" class="nav-link active">Statistik</a>
                     <a href="faq.html" class="nav-link">FAQ</a>
                     <a href="kontakt.html" class="nav-link">Kontakt</a>
                     <a href="integritet.html" class="nav-link">Integritet</a>
+                    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Växla mörkt läge">
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </button>
                 </nav>
-                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Växla mörkt läge">
-                    <span class="material-symbols-outlined">dark_mode</span>
-                </button>
             </div>
         </div>
     </header>
