@@ -1,5 +1,6 @@
 let searchIndex = []; // Ändra från tree = {} till searchIndex = []
 let availableMonths = [];
+let packagingMap = {}; // New: Global packaging map from MEDPrice.xlsx
 let selectedMonth = "";
 let systemMonthCode = null;
 let currentSearch = null;
@@ -134,6 +135,10 @@ async function init() {
         const cacheBust = `v=${Date.now()}`;
         const res = await fetch(`data/search-index.json?${cacheBust}`);
         searchIndex = await res.json();
+
+        // Load packaging map from MEDPrice.xlsx
+        const packRes = await fetch(`data/packaging-map.json?${cacheBust}`);
+        packagingMap = await packRes.json();
 
         // Ladda månader (antingen från separat fil eller från indexet)
         const resMonths = await fetch(`data/months.json?${cacheBust}`);
@@ -842,15 +847,11 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
     }
 
     const packagingValue = (() => {
-        const map = currentSearch?.packagingMap || {};
         const vnr = pvProduct.Varunummer ?? pvProduct.Vnr;
-        const byVnr = map[vnr] || map[String(vnr)];
         return pvProduct.Förpackning
-            || byVnr
-            || (currentSearch?.packaging && currentSearch.packaging[0])
-            || pvProduct.Beredningsform
-            || pvProduct.Läkemedelsform
-            || '-';
+            || packagingMap[vnr]
+            || packagingMap[String(vnr)]
+            || '—';
     })();
 
     const packSizeEl = area.querySelector('[data-field="pack-size"]');
@@ -973,14 +974,10 @@ function updateTableRows(data) {
         }
 
         if (isOpen) {
-            const map = currentSearch?.packagingMap || {};
             const vnr = item.Varunummer ?? item.Vnr;
-            const byVnr = map[vnr] || map[String(vnr)];
             const forpackning = item["Förpackning"]
-                || byVnr
-                || (currentSearch?.packaging && currentSearch.packaging[0])
-                || item["Beredningsform"]
-                || item["Läkemedelsform"]
+                || packagingMap[vnr]
+                || packagingMap[String(vnr)]
                 || '—';
 
             const detailsFragment = cloneTemplate('template-row-details');
