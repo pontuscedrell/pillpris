@@ -739,7 +739,14 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
     const price = toNumber(pvProduct["Försäljningspris"]);
     if (packageSize && price) {
         const pricePerUnit = price / packageSize;
-        pricePerPillDiv.textContent = `${pricePerUnit.toFixed(2)} kr/tablett`;
+        // Determine correct unit based on medicine form
+        const f = form.toLowerCase();
+        let unit = "enhet";
+        if (f.includes("tablett")) unit = "tablett";
+        else if (f.includes("kapsel")) unit = "kapsel";
+        else if (f === "gel" || f.includes("kräm") || f.includes("salva")) unit = "g";
+        else if (f.includes("droppar") || f.includes("lösning")) unit = "ml";
+        pricePerPillDiv.textContent = `${pricePerUnit.toFixed(2)} kr/${unit}`;
     }
 
     const savingsSlot = area.querySelector('.price-card-savings-slot');
