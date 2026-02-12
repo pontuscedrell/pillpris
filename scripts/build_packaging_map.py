@@ -19,7 +19,7 @@ def build_packaging_map():
     try:
         df = pd.read_excel(medprice_file)
         
-        # Create mapping from Varunummer to Förpackning
+        # Create mapping from Varunummer to Förpackning (only the type before first comma)
         packaging_map = {}
         
         for _, row in df.iterrows():
@@ -33,7 +33,9 @@ def build_packaging_map():
                 
                 # Only add if we have a valid packaging description
                 if forpackning_str and forpackning_str.lower() != 'nan':
-                    packaging_map[vnr_str] = forpackning_str
+                    # Extract only the part before the first comma
+                    packaging_type = forpackning_str.split(',')[0].strip()
+                    packaging_map[vnr_str] = packaging_type
         
         print(f"✅ Built packaging map with {len(packaging_map)} entries")
         
