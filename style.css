@@ -4,15 +4,50 @@
     margin: 0;
 }
 
+:root {
+    --bg-primary: #f5fbfb;
+    --bg-secondary: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    --header-bg: #ffffff;
+    --input-bg: #ffffff;
+    --shadow-color: rgba(15, 23, 42, 0.08);
+}
+
+body.dark-mode {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --card-bg: #1e293b;
+    --header-bg: #1e293b;
+    --input-bg: #334155;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #f8fafc;
-    color: #1e293b;
+    background: var(--bg-primary);
+    background-image:
+        radial-gradient(900px 520px at 12% 8%, rgba(20, 184, 166, 0.18), transparent 65%),
+        radial-gradient(900px 520px at 88% 12%, rgba(59, 130, 246, 0.16), transparent 65%),
+        linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 45%, var(--bg-primary) 100%);
+    color: var(--text-primary);
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-image:
+        radial-gradient(900px 520px at 12% 8%, rgba(20, 184, 166, 0.08), transparent 65%),
+        radial-gradient(900px 520px at 88% 12%, rgba(59, 130, 246, 0.08), transparent 65%);
 }
 
 .container {
@@ -22,15 +57,217 @@ body {
     margin: 0 auto;
 }
 
+@media (max-width: 640px) {
+    body.has-selection .container {
+        padding: 3px 0.5rem;
+        padding-bottom: 12px;
+    }
+    
+    body.has-selection .site-header {
+        margin-bottom: 3px;
+        border-bottom: none;
+        background: #ffffff;
+    }
+    
+    body.has-selection {
+        background: #ffffff;
+        background-image: none;
+    }
+}
+
+/* --- Hero Layout --- */
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 40px;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-badge {
+    align-self: flex-start;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(20, 184, 166, 0.12);
+    color: #0f766e;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+body.dark-mode .hero-badge {
+    background: rgba(20, 184, 166, 0.2);
+    color: #5eead4;
+}
+
+.hero-title {
+    font-size: 2.6rem;
+    line-height: 1.1;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+}
+
+.hero-title span {
+    color: #14b8a6;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-btn.primary {
+    background: #14b8a6;
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(20, 184, 166, 0.28);
+}
+
+.hero-btn.primary:hover {
+    transform: translateY(-1px);
+}
+
+.hero-btn.ghost {
+    background: #ffffff;
+    color: #0f766e;
+    border: 1px solid #d2eee7;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.hero-stat {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode .hero-stat {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+}
+
+.hero-stat span {
+    color: #14b8a6;
+}
+
+.hero-stat strong {
+    display: block;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+body.dark-mode .hero-stat strong {
+    color: #f1f5f9;
+}
+
+.hero-stat p {
+    font-size: 12px;
+    color: #64748b;
+    margin: 2px 0 0;
+}
+
+.hero-art {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    position: relative;
+    width: min(100%, 360px);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-pill {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.18), rgba(59, 130, 246, 0.18));
+    top: -30px;
+    right: -20px;
+    z-index: 0;
+}
+
+.hero-illustration {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-main-rect {
+    fill: #f8fafc;
+    stroke: #cbd5e1;
+    stroke-width: 1;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+body.dark-mode .hero-main-rect {
+    fill: #334155;
+    stroke: #475569;
+}
+
+.hero-bar {
+    fill: #cbd5e1;
+    transition: fill 0.3s ease;
+}
+
+body.dark-mode .hero-bar {
+    fill: #64748b;
+}
+
 /* --- Header Section --- */
 .site-header {
-    background: #ffffff;
-    border-bottom: 2px solid #e2e8f0;
+    background: var(--header-bg);
+    border-bottom: 2px solid var(--border-color);
     width: 100%;
     padding: 16px 0;
     margin-bottom: 24px;
     display: flex;
     justify-content: center;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .header-container {
@@ -61,6 +298,28 @@ body {
     display: flex;
     gap: 24px;
     align-items: center;
+}
+
+.dark-mode-toggle {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-primary);
+}
+
+.dark-mode-toggle:hover {
+    background: var(--bg-primary);
+    border-color: #0891b2;
+}
+
+.dark-mode-toggle .material-symbols-outlined {
+    font-size: 20px;
 }
 
 .nav-link {
@@ -113,33 +372,54 @@ body {
     margin: 0;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #0f172a;
+    color: var(--text-primary);
     letter-spacing: -0.025em;
 }
 
 .sub-title {
     margin: 4px 0 0 0;
     font-size: 0.875rem;
-    color: #64748b;
+    color: var(--text-secondary);
 }
 
 /* --- Search & Filter Controls --- */
 .search-section {
     position: relative;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .search-controls {
     display: flex;
     gap: 12px;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
+    max-width: 100%;
 }
 
 .input-group {
     position: relative;
     flex-grow: 1;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 14px 30px var(--shadow-color);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    color: #94a3b8;
+    font-size: 20px;
 }
 
 .clear-search-btn {
@@ -192,9 +472,18 @@ input, #month-select-main, #time-period-select {
     border: 1px solid #cbd5e1;
     border-radius: 8px;
     font-size: 16px;
-    background: white;
+    background: var(--bg-secondary);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     transition: all 0.2s;
+}
+
+#sub-input {
+    border: none;
+    box-shadow: none;
+    padding: 14px 12px 14px 34px;
+    font-size: 16px;
+    background: transparent;
+    color: var(--text-primary);
 }
 
 input:focus, #month-select-main:focus, #time-period-select:focus {
@@ -203,59 +492,271 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
+#sub-input:focus {
+    box-shadow: none;
+}
+
+.search-bar:focus-within {
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.18), 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.popular-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: 10px;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.popular-label {
+    margin-right: 4px;
+}
+
+.popular-chip {
+    background: #e8f6f2;
+    border: 1px solid #d2eee7;
+    color: #14806f;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-art {
+        order: -1;
+        display: none;
+    }
+}
+
+.popular-chip:hover {
+    background: #e4f4f0;
+    border-color: #bfe3dc;
+}
+
+/* --- Search Bar Container --- */
+.search-bar-container {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.search-bar-container .search-bar {
+    flex: 1;
+}
+
+/* --- Month Picker Button --- */
+.month-picker-btn {
+    display: none;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.month-picker-btn:hover {
+    background: var(--bg-primary);
+    border-color: #cbd5e1;
+}
+
+.month-picker-btn .material-symbols-outlined {
+    font-size: 24px;
+    color: #0891b2;
+}
+
+/* --- Month Picker Calendar Dropdown --- */
+.month-picker-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 320px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.month-picker-calendar {
+    padding: 20px;
+}
+
+.month-picker-year-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.year-nav-btn {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    padding: 0;
+}
+
+.year-nav-btn:hover {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+}
+
+.year-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.year-nav-btn .material-symbols-outlined {
+    font-size: 20px;
+    color: #475569;
+}
+
+.month-picker-year {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+.month-picker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.month-picker-month {
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.15s;
+    border: 1px solid transparent;
+}
+
+.month-picker-month:hover {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+}
+
+.month-picker-month.selected {
+    background: #0891b2;
+    color: white;
+    font-weight: 600;
+}
+
+.month-picker-month.unavailable {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.month-picker-month.prelim {
+    border: 1px dashed #fbbf24;
+    background: #fffbeb;
+    color: #92400e;
+}
+
+.month-picker-month.prelim.selected {
+    background: #f59e0b;
+    color: white;
+    border-color: #f59e0b;
+}
+
 /* --- Dropdown Results --- */
 .custom-dropdown {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 4px);
     left: 0;
+    right: 0;
     width: 100%;
     z-index: 1000;
-    background: white;
-    border: 1px solid #e2e8f0;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     max-height: 400px;
     overflow-y: auto;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px var(--shadow-color);
     display: none;
-    margin-top: 4px;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .dropdown-item {
     padding: 12px 16px;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid var(--border-color);
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.dropdown-item:hover { background: #f8fafc; }
+.dropdown-item:hover { 
+    background: var(--bg-primary); 
+}
 
-.item-line1 { font-weight: 700; font-size: 13px; text-transform: uppercase; display: block; color: #1e293b; }
-.item-line2 { font-size: 12px; color: #64748b; display: block; margin-top: 2px; }
+.item-line1 { 
+    font-weight: 700; 
+    font-size: 13px; 
+    text-transform: uppercase; 
+    display: block; 
+    color: var(--text-primary); 
+}
+
+.item-line2 { 
+    font-size: 12px; 
+    color: var(--text-secondary); 
+    display: block; 
+    margin-top: 2px; 
+}
 
 /* --- Price Card (Hero Section) --- */
 .price-card {
-    background: #ffffff;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 24px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .pv-badge-container { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
 .pv-title { background: #eff6ff; color: #2563eb; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
 .lowest-price-badge { background: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
-.product-name { margin: 8px 0; font-size: 1.6rem; color: #0f172a; }
-.sub-info { color: #64748b; margin: 0; font-size: 0.95rem; }
+.product-name { margin: 8px 0; font-size: 1.6rem; color: var(--text-primary); }
+.sub-info { color: var(--text-secondary); margin: 0; font-size: 0.95rem; }
 
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; }
 .info-item { display: flex; align-items: center; gap: 12px; }
-.info-item .label { font-size: 0.75rem; color: #64748b; font-weight: 500; text-transform: uppercase; }
-.info-item .value { font-size: 0.95rem; font-weight: 700; color: #1e293b; }
+.info-item .label { font-size: 0.75rem; color: var(--text-secondary); font-weight: 500; text-transform: uppercase; }
+.info-item .value { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
 
 /* --- Comparison Table --- */
 .reserves-container {
     width: 100%;
-    background: white;
-    border: 1px solid #e2e8f0;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
     margin-top: 20px;
@@ -280,6 +781,10 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 .reserve-row { background-color: #fffbeb !important; }
 .cheapest-row { background-color: #f0fdf4 !important; border-left: 4px solid; border-image: linear-gradient(to bottom, #10b981, #2dd4bf) 1 100%; position: relative; }
 
+body.dark-mode .pv-row { background-color: var(--card-bg) !important; }
+body.dark-mode .reserve-row { background-color: var(--card-bg) !important; }
+body.dark-mode .cheapest-row { background-color: var(--card-bg) !important; }
+
 .best-value-tag { font-size: 0.65rem; background: #10b981; color: white; padding: 2px 6px; border-radius: 4px; margin-left: 8px; vertical-align: middle; text-transform: uppercase; font-weight: 700; }
 
 .price-wrapper { display: flex; flex-direction: column; align-items: flex-end; }
@@ -290,13 +795,45 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 #chart-container {
     width: 100%;           /* Fills the 1100px container */
     min-height: 500px;         /* Desktop height */
-    background: white;
+    background: var(--card-bg);
     padding: 24px;
     border-radius: 12px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-color);
     margin-top: 20px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px var(--shadow-color);
     position: relative;    /* Crucial for Chart.js responsiveness */
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+#chart-filter-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+#chart-filter-wrapper label {
+    margin: 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#chart-filter-wrapper select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    font-size: 13px;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#chart-filter-wrapper select:hover {
+    border-color: #0891b2;
 }
 
 /* --- Förbättrad Empty State (Startbox) --- */
@@ -336,7 +873,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     margin: 0 0 12px 0;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 .prelim-info {
@@ -372,6 +909,16 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     pointer-events: none;
     transition: opacity 0.15s ease;
     z-index: 10;
+}
+
+@media (max-width: 640px) {
+    .prelim-info::after {
+        white-space: normal;
+        max-width: 150px;
+        left: auto;
+        right: 0;
+        transform: none;
+    }
 }
 
 .prelim-info:hover::after,
@@ -452,7 +999,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 .price-value {
     font-size: 32px;
     margin: 0;
-    color: #1e293b;
+    color: var(--text-primary);
     font-weight: 800;
     line-height: 1;
 }
@@ -505,7 +1052,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 }
 
 .rec-icon-circle {
-    background: white;
+    background: var(--bg-secondary);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -548,7 +1095,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 .price-large {
     font-size: 42px;
     font-weight: 800;
-    color: #1e293b;
+    color: var(--text-primary);
     display: block;
     margin-top: 4px;
 }
@@ -565,6 +1112,84 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     display: flex;
     align-items: flex-start;
     gap: 12px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode .savings-alert-box {
+    background: rgba(22, 163, 74, 0.1);
+    border: 1px solid rgba(22, 163, 74, 0.3);
+    border-left: 4px solid #22c55e;
+}
+
+.savings-alert-box .material-symbols-outlined {
+    color: #16a34a;
+    font-size: 28px;
+}
+
+body.dark-mode .savings-alert-box .material-symbols-outlined {
+    color: #22c55e;
+}
+
+.savings-alert-title {
+    display: block;
+    font-size: 16px;
+    color: #134e4a;
+    margin-bottom: 4px;
+}
+
+body.dark-mode .savings-alert-title {
+    color: #86efac;
+}
+
+.savings-alert-text {
+    margin: 0;
+    font-size: 13px;
+    color: #166534;
+    line-height: 1.5;
+}
+
+body.dark-mode .savings-alert-text {
+    color: #bbf7d0;
+}
+
+/* --- Stability Insight Box --- */
+.stability-insight-box {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode .stability-insight-box {
+    background: var(--card-bg) !important;
+}
+
+.stability-insight-icon {
+    font-size: 24px;
+}
+
+.stability-insight-title {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+body.dark-mode .stability-insight-title {
+    color: var(--text-primary) !important;
+}
+
+.stability-insight-text {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+body.dark-mode .stability-insight-text {
+    color: var(--text-secondary);
 }
 
 /* --- Stat Blocks (Next/Prev Month) --- */
@@ -641,8 +1266,10 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 .row-details-grid {
     margin: 0 12px 12px 12px;
     padding: 16px;
-    background: #f8fafc;
+    background: var(--bg-primary);
     border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: background 0.3s ease, border-color 0.3s ease;
     border: 1px solid #f1f5f9;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -665,7 +1292,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 
 .detail-value {
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-primary);
     font-size: 12px;
 }
 
@@ -682,17 +1309,17 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     margin: 0;
     font-size: 20px;
     font-weight: 800;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 .comparison-subtitle {
     margin: 8px 0 24px 0;
-    color: #64748b;
+    color: var(--text-secondary);
     font-size: 14px;
 }
 
 .comparison-subtitle strong {
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 /* The dynamic list of medicines */
@@ -712,6 +1339,64 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     display: flex;
     gap: 12px;
     border: 1px solid #ccfbf1;
+}
+
+.tlv-info-box.hidden {
+    display: none !important;
+}
+
+/* Month warning banner */
+.month-warning-banner {
+    display: none;
+    background: #fef9c3;
+    border-radius: 0;
+    margin: 0;
+    padding: 16px 24px;
+    align-items: center;
+    gap: 16px;
+}
+
+.month-banner-icon-wrapper {
+    background: var(--bg-secondary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+.month-banner-icon {
+    font-size: 20px;
+    color: #ca8a04;
+}
+
+.month-banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.month-banner-label {
+    margin: 0;
+    font-weight: 700;
+    font-size: 15px;
+    color: #713f12;
+}
+
+.month-banner-action {
+    margin: 0;
+    font-size: 13px;
+    color: #854d0e;
+    line-height: 1.3;
+}
+
+.month-banner-action b {
+    color: #713f12;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .tlv-info-icon {
@@ -743,7 +1428,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     font-weight: 800;
     margin-right: 8px;
     vertical-align: middle;
-    background: white;
+    background: var(--bg-secondary);
 }
 
 /* Modifier: Periodens Vara (Blue) */
@@ -775,13 +1460,14 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 }
 /* Grundregler för alla kort på Desktop */
 .bleed-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: 16px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px var(--shadow-color);
     margin-bottom: 20px;
     overflow: hidden; /* För att bakgrundsfärger i header inte ska gå över runda hörn */
     width: 100%;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 @media screen and (max-width: 768px) {
     /* Gemensam breakout-logik för alla bleed-kort */
@@ -868,7 +1554,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 .price-display-container .price-value {
     font-size: 22px;
     font-weight: 800;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 .price-display-container .price-diff {
@@ -881,12 +1567,13 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 .row-details-container {
     margin: 0 12px 12px 12px;
     padding: 12px 14px;
-    background: #f9fafb;
+    background: var(--bg-secondary);
     border-radius: 10px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-color);
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px 16px;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .row-detail-item {
@@ -924,7 +1611,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 
 .row-detail-value {
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 /* --- Comparison Row Container --- */
@@ -933,10 +1620,16 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     cursor: pointer;
     transition: all 0.2s ease;
     margin-bottom: 4px;
+    background: var(--card-bg);
 }
 
 .comparison-row.cheapest-row {
     background: #f0fdf4 !important;
+    border: 2px solid #10b981 !important;
+}
+
+body.dark-mode .comparison-row.cheapest-row {
+    background: var(--card-bg) !important;
     border: 2px solid #10b981 !important;
 }
 
@@ -945,14 +1638,24 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     border: 2px solid #3b82f6 !important;
 }
 
+body.dark-mode .comparison-row.pv-row {
+    background: var(--card-bg) !important;
+    border: 2px solid #3b82f6 !important;
+}
+
 .comparison-row.reserve-row {
     background: #fffbeb;
     border: 2px solid #f59e0b;
 }
 
+body.dark-mode .comparison-row.reserve-row {
+    background: var(--card-bg);
+    border: 2px solid #f59e0b;
+}
+
 .comparison-row.default-row {
-    background: #ffffff;
-    border: 2px solid #cbd5e1;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
 }
 
 /* --- Comparison Row Header --- */
@@ -977,12 +1680,12 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 
 .comparison-row-name {
     font-size: 20px;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 .comparison-row-info {
     margin: 2px 0 0 0;
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 12px;
 }
 
@@ -995,7 +1698,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 }
 
 .price-card-icon {
-    background: white;
+    background: var(--bg-secondary);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -1076,10 +1779,11 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 
 .price-card-info-panel {
     flex: 0 0 280px;
-    background: #f8fafc;
+    background: var(--bg-primary);
     border-radius: 12px;
     padding: 20px;
-    border: 1px solid #f1f5f9;
+    border: 1px solid var(--border-color);
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 @media (max-width: 640px) {
@@ -1130,7 +1834,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 
 .price-info-item-value {
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 /* --- Stat Blocks (Previous/Next) --- */
@@ -1166,6 +1870,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 .stat-block-price {
     font-size: 18px;
     font-weight: 700;
+    color: var(--text-primary);
 }
 
 .stat-block-trend {
@@ -1189,10 +1894,11 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     display: flex;
     align-items: center;
     gap: 16px;
+    border-radius: 15px 15px 0 0;
 }
 
 .price-card-icon-wrapper {
-    background: white;
+    background: var(--bg-secondary);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -1200,6 +1906,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: background 0.3s ease;
 }
 
 .price-card-icon {
@@ -1228,6 +1935,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     font-size: 15px;
     text-transform: none;
     letter-spacing: normal;
+    color: var(--text-primary);
 }
 
 .price-card-header-subtext {
@@ -1235,6 +1943,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     opacity: 0.8;
     font-size: 13px;
     line-height: 1.3;
+    color: var(--text-primary);
 }
 
 .price-card-content-wrapper {
@@ -1282,7 +1991,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     margin: 0;
     font-size: 22px;
     font-weight: 800;
-    color: #1e293b;
+    color: var(--text-primary);
     line-height: 1.2;
 }
 
@@ -1317,17 +2026,18 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 .price-card-current-value {
     font-size: 42px;
     font-weight: 800;
-    color: #1e293b;
+    color: var(--text-primary);
     display: block;
     margin-top: 4px;
 }
 
 .price-card-info-panel {
     flex: 0 0 280px;
-    background: #f8fafc;
+    background: var(--bg-primary);
     border-radius: 12px;
     padding: 20px;
-    border: 1px solid #f1f5f9;
+    border: 1px solid var(--border-color);
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .price-card-info-header {
@@ -1353,7 +2063,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 
 .price-card-info-icon {
     font-size: 20px;
-    color: #94a3b8;
+    color: var(--text-secondary);
 }
 
 .price-card-info-content {
@@ -1362,13 +2072,13 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 
 .price-card-info-label {
     display: block;
-    color: #64748b;
+    color: var(--text-secondary);
     font-size: 10px;
 }
 
 .price-card-info-value {
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 @media (max-width: 640px) {
@@ -1381,13 +2091,14 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 
 /* --- Footer Section --- */
 .site-footer {
-    background: #ffffff;
-    border-top: 1px solid #e2e8f0;
+    background: var(--header-bg);
+    border-top: 1px solid var(--border-color);
     width: 100%;
     padding: 24px 0;
     margin-top: 40px;
     display: flex;
     justify-content: center;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .footer-container {
@@ -1398,6 +2109,7 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 
 .footer-content {
     text-align: center;
+    color: var(--text-secondary);
 }
 
 /* --- Mobile optimizations --- */
@@ -1418,5 +2130,48 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
 
     .comparison-row-info {
         font-size: 11px;
+    }
+}
+
+/* --- State Management --- */
+body.has-selection .hero-badge {
+    display: none;
+}
+
+body.has-selection .hero-title {
+    display: none;
+}
+
+body.has-selection .hero-subtitle {
+    display: none;
+}
+
+body.has-selection .hero-actions {
+    display: none;
+}
+
+body.has-selection .hero-stats {
+    display: none;
+}
+
+body.has-selection .hero-art {
+    display: none;
+}
+
+body.has-selection .popular-row {
+    display: none;
+}
+
+body.has-selection .hero {
+    background: transparent;
+    border: none;
+    padding: 8px 0;
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 640px) {
+    body.has-selection .hero {
+        padding: 0;
+        margin: 3px 0;
     }
 }

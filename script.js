@@ -9,6 +9,36 @@ let lastPVPrice = 0;
 let selectedRowId = null;
 let chartPriceType = "pv"; // "pv" or "cheapest"
 
+// Dark mode initialization
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+}
+
+// Dark mode toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if (darkModeToggle) {
+        const icon = darkModeToggle.querySelector('.material-symbols-outlined');
+        
+        // Set initial icon
+        if (document.body.classList.contains('dark-mode')) {
+            icon.textContent = 'light_mode';
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                icon.textContent = 'light_mode';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                icon.textContent = 'dark_mode';
+            }
+        });
+    }
+});
+
 function cloneTemplate(id) {
     const tpl = document.getElementById(id);
     return tpl ? tpl.content.cloneNode(true) : null;
@@ -58,9 +88,18 @@ async function init() {
         const mm = (now.getMonth() + 1).toString().padStart(2, '0');
         systemMonthCode = parseInt(yy + mm);
 
-        selectedMonth = availableMonths[0] > systemMonthCode
-            ? availableMonths[0]
-            : (availableMonths.includes(systemMonthCode) ? systemMonthCode : availableMonths[0]);
+        // Prefer the current month if available, otherwise use the closest month
+        if (availableMonths.includes(systemMonthCode)) {
+            selectedMonth = systemMonthCode;
+        } else {
+            // Find the closest month (prefer earlier months over future months)
+            selectedMonth = availableMonths.reduce((closest, month) => {
+                if (month <= systemMonthCode) {
+                    return !closest || month > closest ? month : closest;
+                }
+                return closest || month;
+            });
+        }
         
         // Uppdatera UI
         const monthDropdown = document.getElementById('month-select-main');
@@ -186,7 +225,7 @@ document.getElementById('sub-input').oninput = function () {
 
             if (subEl) subEl.textContent = item.sub;
             if (strEl) strEl.textContent = item.str;
-            if (metaEl) metaEl.textContent = `${item.form} | ${item.size}`;
+            if (metaEl) metaEl.textContent = `${item.form} | ${formatSizeDisplay(item.size)}`;
 
             div.onclick = function () {
                 document.getElementById('sub-input').value = item.sub + ' ' + item.str;
@@ -224,6 +263,25 @@ document.getElementById('clear-search').onclick = function () {
     input.focus();
 };
 
+document.querySelectorAll('.popular-chip').forEach((chip) => {
+    chip.addEventListener('click', () => {
+        const input = document.getElementById('sub-input');
+        if (!input) return;
+        
+        // Remove selection state to allow new search
+        document.body.classList.remove('has-selection');
+        
+        // Set the input value and trigger search after a brief delay
+        input.value = chip.dataset.search || '';
+        
+        // Use setTimeout to ensure the class removal takes effect
+        setTimeout(() => {
+            input.dispatchEvent(new Event('input'));
+            input.focus();
+        }, 10);
+    });
+});
+
 // Keyboard navigation for search dropdown
 let selectedDropdownIndex = -1;
 let lastDropdownMatches = [];
@@ -260,6 +318,10 @@ document.getElementById('sub-input').onkeydown = function (e) {
             dropdown.style.display = 'none';
             selectedDropdownIndex = -1;
             document.getElementById('sub-input').value = originalSearchInput;
+            if (!originalSearchInput) {
+                currentSearch = null;
+                document.body.classList.remove('has-selection');
+            }
             break;
     }
 };
@@ -287,7 +349,11 @@ function highlightDropdownItem(items, index) {
 
 
 async function fetchLatestPV(searchItem) {
-    currentSearch = searchItem; 
+    currentSearch = searchItem;
+    
+    // Hide hero content and show search bar for medicine selection
+    document.body.classList.add('has-selection');
+    
     const resultsDiv = document.getElementById('results');
     replaceContent(resultsDiv, cloneTemplate('template-loading'));
 
@@ -335,10 +401,27 @@ async function fetchLatestPV(searchItem) {
             chartCont.className = "bleed-card";
         }
 
+        // Show month picker button when viewing medicine
+        showMonthPicker();
+
         // Skicka med spar-data till renderaren
         await renderPriceCard(pvProduct, searchItem.sub, searchItem.str, searchItem.form, stats, cheaperProduct, savings);
+        
+        // Create and inject month warning banner after price card is rendered
+        createMonthBanner(resultsDiv);
+        
         renderTableOnly(); 
         renderHistoryChart(searchItem);
+
+        // Visa info-boxen endast om PV inte är billigast (efter renderTableOnly som skapar den)
+        if (!cheaperProduct) {
+            const infoBox = document.querySelector('.tlv-info-box');
+            if (infoBox) {
+                infoBox.classList.add('hidden');
+            }
+        }
+
+        updateMonthBanner();
 
     } catch (err) {
         console.error("Fel vid hämtning av detaljer:", err);
@@ -421,7 +504,6 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
 
         let prelimIconEl = null;
         if (isFuture && isPrelimMonth(monthCode)) {
-            label = `${label} (preliminär)`;
             prelimIconEl = document.createElement('span');
             prelimIconEl.className = 'prelim-info';
             prelimIconEl.setAttribute('tabindex', '0');
@@ -446,23 +528,39 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
 
         const diff = price - currentPrice;
         const diffPercent = Math.round((Math.abs(diff) / currentPrice) * 100);
-        let priceColor = "#1e293b", trendColor = "#64748b", icon = "horizontal_rule";
+        const isStable = diffPercent <= 2; // Consider <= 2% as stable
+        
+        // Default to CSS variable color, or use semantic colors for significant changes
+        let priceColor = "", trendColor = "#64748b", icon = "horizontal_rule";
 
         if (price !== currentPrice) {
-            if (!isFuture) {
-                priceColor = price > currentPrice ? "#dc2626" : "#16a34a";
-                trendColor = price > currentPrice ? "#16a34a" : "#dc2626";
-            } else {
-                priceColor = price > currentPrice ? "#dc2626" : "#16a34a";
-                trendColor = priceColor;
-            }
+            // Determine icon based on direction
             icon = isFuture === (price > currentPrice) ? "trending_up" : "trending_down";
+            
+            if (!isStable) {
+                // Significant change - use color coding
+                if (!isFuture) {
+                    priceColor = price > currentPrice ? "#dc2626" : "#16a34a";
+                    trendColor = price > currentPrice ? "#16a34a" : "#dc2626";
+                } else {
+                    priceColor = price > currentPrice ? "#dc2626" : "#16a34a";
+                    trendColor = priceColor;
+                }
+            } else {
+                // Stable price - use default (CSS will apply --text-primary)
+                priceColor = "";
+                trendColor = "#64748b";
+            }
         } else {
             trendEl.style.display = 'none';
         }
 
         priceEl.textContent = formatPrice(price);
-        priceEl.style.color = priceColor;
+        if (priceColor) {
+            priceEl.style.color = priceColor;
+        } else {
+            priceEl.style.color = ''; // Clear inline style to use CSS
+        }
         trendEl.style.background = `${trendColor}15`;
         trendEl.style.color = trendColor;
         trendIcon.textContent = icon;
@@ -475,19 +573,36 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
     replaceContent(area, cardTemplate);
 
     const headerBar = area.querySelector('.price-card-header-bar');
-    headerBar.style.background = rec.bg;
+    
+    // If no recommendation (viewing historical month), hide the header bar
+    if (!rec) {
+        headerBar.style.display = 'none';
+    } else {
+        headerBar.style.display = 'flex';
+        
+        // Use dark mode compatible background
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        headerBar.style.background = isDarkMode ? 'var(--card-bg)' : rec.bg;
+        
+        // Add border for dark mode to show color indication
+        if (isDarkMode) {
+            headerBar.style.border = `2px solid ${rec.color}`;
+        } else {
+            headerBar.style.border = '';
+        }
 
-    const headerIcon = area.querySelector('.price-card-icon');
-    headerIcon.textContent = rec.icon;
-    headerIcon.style.color = rec.color;
+        const headerIcon = area.querySelector('.price-card-icon');
+        headerIcon.textContent = rec.icon;
+        headerIcon.style.color = rec.color;
 
-    const headerLabel = area.querySelector('.price-card-header-label');
-    headerLabel.textContent = `${rec.label}!`;
-    headerLabel.style.color = rec.color;
+        const headerLabel = area.querySelector('.price-card-header-label');
+        headerLabel.textContent = `${rec.label}!`;
+        headerLabel.style.color = isDarkMode ? 'var(--text-primary)' : rec.color;
 
-    const headerSubtext = area.querySelector('.price-card-header-subtext');
-    headerSubtext.textContent = rec.subtext;
-    headerSubtext.style.color = rec.color;
+        const headerSubtext = area.querySelector('.price-card-header-subtext');
+        headerSubtext.textContent = rec.subtext;
+        headerSubtext.style.color = isDarkMode ? 'var(--text-secondary)' : rec.color;
+    }
 
     area.querySelector('.price-card-title').textContent = pvProduct.Produktnamn;
     area.querySelector('.price-card-subtitle').textContent = `${sub} · ${str} · ${form}`;
@@ -500,7 +615,7 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
             const savingsNode = savingsTpl.querySelector('.savings-alert-box');
             const title = savingsNode.querySelector('.savings-alert-title');
             const text = savingsNode.querySelector('.savings-alert-text');
-            title.textContent = `Spara ${savings.toFixed(2)} kr!`;
+            title.textContent = `Spara ${savings.toFixed(2).replace('.', ',')} kr!`;
             text.textContent = '';
             const strong = document.createElement('strong');
             strong.textContent = cheaperProduct.Produktnamn;
@@ -511,10 +626,18 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
     }
 
     const statContainer = area.querySelector('.stat-blocks-container');
+    
+    // Always show prev/next month blocks if data exists
+    statContainer.style.display = 'flex';
     const prevBlock = createStatBlock(prevPrice, "Förra månaden", pvProduct["Försäljningspris"], prevMonthCode, false);
     const nextBlock = createStatBlock(nextPrice, "Nästa månad", pvProduct["Försäljningspris"], nextMonthCode, true);
     if (prevBlock) statContainer.appendChild(prevBlock);
     if (nextBlock) statContainer.appendChild(nextBlock);
+    
+    // Hide container only if no blocks were added
+    if (statContainer.children.length === 0) {
+        statContainer.style.display = 'none';
+    }
 
     const packagingValue = (() => {
         const map = currentSearch?.packagingMap || {};
@@ -692,10 +815,68 @@ function updateMonth(newMonth) {
         headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}${prelimTag}`;
     }
     
+    updateMonthBanner();
+    
     if (currentSearch) {
         isExpanded = false; 
         fetchLatestPV(currentSearch); // Skicka hela objektet
     }
+}
+
+function createMonthBanner(container) {
+    // Remove existing banner if present
+    const existingBanner = document.getElementById('month-warning-banner');
+    if (existingBanner) {
+        existingBanner.remove();
+    }
+
+    // Create new banner
+    const banner = document.createElement('div');
+    banner.id = 'month-warning-banner';
+    banner.className = 'month-warning-banner';
+    banner.innerHTML = `
+        <div class="month-banner-icon-wrapper">
+            <span class="material-symbols-outlined month-banner-icon">calendar_month</span>
+        </div>
+        <div class="month-banner-text">
+            <span class="month-banner-label">Du visar nu priset för <b class="banner-month-name"></b>.</span>
+            <span class="month-banner-action">Klicka <b onclick="goToCurrentMonth()">här</b> för att gå till nuvarande månad.</span>
+        </div>
+    `;
+    
+    // Insert right after the header bar (between header and content wrapper)
+    const headerBar = document.querySelector('.price-card-header-bar');
+    if (headerBar) {
+        headerBar.insertAdjacentElement('afterend', banner);
+    } else {
+        // Fallback: insert into price-card-area
+        const priceCardArea = document.getElementById('price-card-area');
+        if (priceCardArea) {
+            priceCardArea.insertBefore(banner, priceCardArea.firstChild);
+        }
+    }
+    
+    // Update visibility based on current month
+    updateMonthBanner();
+}
+
+function updateMonthBanner() {
+    const banner = document.getElementById('month-warning-banner');
+    if (!banner) return;
+    
+    if (selectedMonth !== systemMonthCode) {
+        banner.style.display = 'flex';
+        const monthNameEl = banner.querySelector('.banner-month-name');
+        if (monthNameEl) {
+            monthNameEl.textContent = formatMedicineDate(selectedMonth);
+        }
+    } else {
+        banner.style.display = 'none';
+    }
+}
+
+function goToCurrentMonth() {
+    updateMonth(systemMonthCode);
 }
 
 function toggleTableExpansion() {
@@ -772,6 +953,19 @@ function formatUnit(form, size) {
     return `${size} ${unit}`;
 }
 
+function formatSizeDisplay(size) {
+    if (!size) return size;
+    // Check if it's a range like "28-32"
+    const match = size.match(/(\d+)\s*-\s*(\d+)/);
+    if (match) {
+        const min = parseInt(match[1]);
+        const max = parseInt(match[2]);
+        const avg = Math.round((min + max) / 2);
+        return `ca ${avg}`;
+    }
+    return size;
+}
+
 async function renderHistoryChart(searchItem) {
     const canvas = document.getElementById('priceChart');
     if (!canvas) return;
@@ -840,7 +1034,8 @@ async function renderHistoryChart(searchItem) {
                     x: formatMedicineDate(month),
                     y: price,
                     company: match.Företag,
-                    diff: diffFromAvg.toFixed(1)
+                    diff: diffFromAvg.toFixed(1),
+                    monthCode: month
                 });
             }
         } catch (e) {}
@@ -896,12 +1091,20 @@ async function renderHistoryChart(searchItem) {
                     max: Math.ceil(yMax / 5) * 5,  // Avrunda uppåt till närmsta 5-lapp
                     ticks: { 
                         callback: (v) => v + ' kr',
-                        stepSize: 10 // Gör skalan lugnare med fasta steg
+                        stepSize: 10, // Gör skalan lugnare med fasta steg
+                        color: document.body.classList.contains('dark-mode') ? '#94a3b8' : '#64748b'
                     },
-                    grid: { color: '#f1f5f9' }
+                    grid: { 
+                        color: document.body.classList.contains('dark-mode') ? '#334155' : '#e2e8f0'
+                    }
                 },
                 x: { 
-                    ticks: { maxRotation: 45, minRotation: 45, font: { size: 11 } },
+                    ticks: { 
+                        maxRotation: 45, 
+                        minRotation: 45, 
+                        font: { size: 11 },
+                        color: document.body.classList.contains('dark-mode') ? '#94a3b8' : '#64748b'
+                    },
                     grid: { display: false }
                 }
             },
@@ -914,9 +1117,22 @@ async function renderHistoryChart(searchItem) {
                             const point = historyPoints[context.dataIndex];
                             return [
                                 ` Pris: ${point.y.toLocaleString('sv-SE')} kr`,
-                                ` Företag: ${point.company}`
+                                ` Företag: ${point.company}`,
+                                '',
+                                ' 💡 Klicka för att gå till månad'
                             ];
                         }
+                    }
+                }
+            },
+            onClick: (event, elements) => {
+                if (elements.length > 0) {
+                    const dataIndex = elements[0].index;
+                    const point = historyPoints[dataIndex];
+                    if (point && point.monthCode) {
+                        updateMonth(point.monthCode);
+                        window.scrollTo(0, 0);
+                        fetchLatestPV(currentSearch);
                     }
                 }
             }
@@ -968,14 +1184,16 @@ function renderPriceStabilityInsight(allPrices, minPrice, maxPrice, priceDiff) {
         stabilityBg = "#fef2f2";
     }
 
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    const bgStyle = isDarkMode ? 'var(--card-bg)' : stabilityBg;
+    const borderStyle = isDarkMode ? `2px solid ${stabilityColor}` : `1px solid ${stabilityColor}30; border-left: 4px solid ${stabilityColor}`;
+    
     const insightHtml = `
-        <div id="stability-insight" style="background: ${stabilityBg}; border: 1px solid ${stabilityColor}30; border-left: 4px solid ${stabilityColor}; border-radius: 12px; padding: 16px 20px; margin-top: 16px;">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
-                <span class="material-symbols-outlined" style="color: ${stabilityColor}; font-size: 24px;">${stabilityIcon}</span>
-                <div>
-                    <strong style="display: block; font-size: 15px; color: ${stabilityColor}; margin-bottom: 4px;">${stabilityLabel}</strong>
-                    <p style="margin: 0; font-size: 13px; color: #64748b; line-height: 1.5;">${stabilityText}</p>
-                </div>
+        <div id="stability-insight" class="stability-insight-box" style="background: ${bgStyle}; border: ${borderStyle};">
+            <span class="material-symbols-outlined stability-insight-icon" style="color: ${stabilityColor};">${stabilityIcon}</span>
+            <div>
+                <strong class="stability-insight-title" style="color: ${isDarkMode ? 'var(--text-primary)' : stabilityColor};">${stabilityLabel}</strong>
+                <p class="stability-insight-text">${stabilityText}</p>
             </div>
         </div>
     `;
@@ -994,6 +1212,11 @@ function getPriceRecommendation(currentPrice, stats, nextPrice) {
     const avgPrice = stats?.avgPrice;
     const minPrice = stats?.minPrice;
     const maxPrice = stats?.maxPrice;
+
+    // If viewing historical month, return null (no recommendation)
+    if (selectedMonth !== systemMonthCode) {
+        return null;
+    }
 
     let rec = {
         label: "Normalt pris",
@@ -1086,6 +1309,121 @@ function getPriceRecommendation(currentPrice, stats, nextPrice) {
 
     return rec;
 }
+
+// Month Picker Functions
+let currentPickerYear = Math.floor(selectedMonth / 100);
+
+function showMonthPicker() {
+    const btn = document.getElementById('month-picker-btn');
+    if (btn) {
+        btn.style.display = 'block';
+        currentPickerYear = Math.floor(selectedMonth / 100);
+        populateMonthPicker();
+    }
+}
+
+function populateMonthPicker() {
+    const yearEl = document.getElementById('month-picker-year');
+    const grid = document.getElementById('month-picker-grid');
+    const prevBtn = document.getElementById('prev-year-btn');
+    const nextBtn = document.getElementById('next-year-btn');
+    
+    if (!yearEl || !grid) return;
+    
+    // Get available years from month codes (e.g., 2602 -> 26 -> 2026)
+    const availableYears = [...new Set(availableMonths.map(m => Math.floor(m / 100)))].sort();
+    const minYear = Math.min(...availableYears);
+    const maxYear = Math.max(...availableYears);
+    
+    // Update year display
+    yearEl.textContent = '20' + String(currentPickerYear).padStart(2, '0');
+    
+    // Enable/disable navigation buttons
+    if (prevBtn) prevBtn.disabled = currentPickerYear <= minYear;
+    if (nextBtn) nextBtn.disabled = currentPickerYear >= maxYear;
+    
+    grid.innerHTML = '';
+    
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Maj', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'];
+    
+    // Create grid for all 12 months
+    months.forEach((monthName, index) => {
+        const monthNum = String(index + 1).padStart(2, '0');
+        const monthCode = parseInt(String(currentPickerYear) + monthNum);
+        
+        const monthDiv = document.createElement('div');
+        monthDiv.className = 'month-picker-month';
+        monthDiv.textContent = monthName;
+        
+        // Check if this month is available
+        if (availableMonths.includes(monthCode)) {
+            monthDiv.classList.add('available');
+            
+            if (monthCode == selectedMonth) {
+                monthDiv.classList.add('selected');
+            }
+            if (isPrelimMonth(monthCode)) {
+                monthDiv.classList.add('prelim');
+            }
+            
+            monthDiv.onclick = () => {
+                document.getElementById('month-picker-dropdown').style.display = 'none';
+                updateMonth(monthCode);
+                if (currentSearch) {
+                    fetchLatestPV(currentSearch);
+                }
+            };
+        } else {
+            monthDiv.classList.add('unavailable');
+        }
+        
+        grid.appendChild(monthDiv);
+    });
+}
+
+// Toggle month picker dropdown
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('month-picker-btn');
+    const dropdown = document.getElementById('month-picker-dropdown');
+    const prevBtn = document.getElementById('prev-year-btn');
+    const nextBtn = document.getElementById('next-year-btn');
+    
+    if (btn && dropdown) {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isVisible = dropdown.style.display === 'block';
+            dropdown.style.display = isVisible ? 'none' : 'block';
+            if (!isVisible) {
+                currentPickerYear = Math.floor(selectedMonth / 100);
+                populateMonthPicker();
+            }
+        });
+        
+        // Year navigation
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentPickerYear--;
+                populateMonthPicker();
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentPickerYear++;
+                populateMonthPicker();
+            });
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target) && e.target !== btn) {
+                dropdown.style.display = 'none';
+            }
+        });
+    }
+});
 
 
 
