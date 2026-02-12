@@ -9,6 +9,49 @@ let lastPVPrice = 0;
 let selectedRowId = null;
 let chartPriceType = "pv"; // "pv" or "cheapest"
 
+// Constants
+const SEARCH_RESULTS_LIMIT = 20;
+const PACKAGE_SIZE_SAVINGS_THRESHOLD = 0.05; // 5%
+const PRICE_SAVINGS_MIN = 1; // Minimum kr savings to show alerts
+
+// DOM Element Cache - populated in init()
+const DOM = {
+    searchInput: null,
+    customSelect: null,
+    packageList: null,
+    resultsDiv: null,
+    chartCont: null,
+    monthDropdown: null,
+    headerPeriod: null,
+    clearSearch: null,
+    monthPickerBtn: null,
+    monthPickerDropdown: null,
+    darkModeToggle: null,
+    priceCardArea: null,
+    tableArea: null,
+    monthWarningBanner: null,
+};
+
+function cacheDOM() {
+    DOM.searchInput = document.getElementById('sub-input');
+    DOM.customSelect = document.getElementById('custom-select');
+    DOM.packageList = document.getElementById('package-list');
+    DOM.resultsDiv = document.getElementById('results');
+    DOM.chartCont = document.getElementById('chart-container');
+    DOM.monthDropdown = document.getElementById('month-select-main');
+    DOM.headerPeriod = document.getElementById('header-period');
+    DOM.clearSearch = document.getElementById('clear-search');
+    DOM.monthPickerBtn = document.getElementById('month-picker-btn');
+    DOM.monthPickerDropdown = document.getElementById('month-picker-dropdown');
+    DOM.darkModeToggle = document.getElementById('dark-mode-toggle');
+    DOM.priceCardArea = document.getElementById('price-card-area');
+    DOM.tableArea = document.getElementById('table-area');
+    DOM.monthWarningBanner = document.getElementById('month-warning-banner');
+    
+    // Attach event handlers after DOM is cached
+    attachEventHandlers();
+}
+
 // Dark mode initialization
 if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('dark-mode');
@@ -58,6 +101,13 @@ function replaceContent(parent, selectorOrFragment, content) {
     }
 }
 
+/**
+ * Determines the status label (PV, R1, R2) for a medicine item.
+ * @param {Object} item - Medicine item from data file
+ * @param {string} [item.Status] - Explicit status field
+ * @param {number} [item.Rang] - Numeric ranking (1=PV, 2=R1, 3=R2)
+ * @returns {string} Status label ("PV", "R1", "R2", or empty string)
+ */
 function getItemStatus(item) {
     const rawStatus = (item?.Status ?? "").toString().trim();
     if (rawStatus) return rawStatus;
@@ -69,8 +119,17 @@ function getItemStatus(item) {
     return "";
 }
 
+/**
+ * Initializes the application by loading data, caching DOM elements,
+ * and setting up the initial UI state.
+ * @async
+ * @throws {Error} If data files cannot be loaded
+ */
 async function init() {
     try {
+        // Cache DOM elements for performance
+        cacheDOM();
+        
         // Om din fil heter substances.json men innehåller den nya index-listan:
         const cacheBust = `v=${Date.now()}`;
         const res = await fetch(`data/search-index.json?${cacheBust}`);
@@ -92,19 +151,13 @@ async function init() {
         if (availableMonths.includes(systemMonthCode)) {
             selectedMonth = systemMonthCode;
         } else {
-            // Find the closest month (prefer earlier months over future months)
-            selectedMonth = availableMonths.reduce((closest, month) => {
-                if (month <= systemMonthCode) {
-                    return !closest || month > closest ? month : closest;
-                }
-                return closest || month;
-            });
+            // Find the closest earlier month, or fall back to the first available month
+            selectedMonth = availableMonths.find(m => m <= systemMonthCode) || availableMonths[0];
         }
         
         // Uppdatera UI
-        const monthDropdown = document.getElementById('month-select-main');
-        if (monthDropdown) {
-            monthDropdown.replaceChildren();
+        if (DOM.monthDropdown) {
+            DOM.monthDropdown.replaceChildren();
             availableMonths.forEach(m => {
                 const option = document.createElement('option');
                 const prelimTag = isPrelimMonth(m) ? ' (Preliminär)' : '';
@@ -113,221 +166,240 @@ async function init() {
                 if (m == selectedMonth) {
                     option.selected = true;
                 }
-                monthDropdown.appendChild(option);
+                DOM.monthDropdown.appendChild(option);
             });
         }
         
         // Update header with current month
-        const headerPeriod = document.getElementById('header-period');
-        if (headerPeriod) {
+        if (DOM.headerPeriod) {
             const prelimTag = isPrelimMonth(selectedMonth) ? " • Preliminär" : "";
-            headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}${prelimTag}`;
+            DOM.headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}${prelimTag}`;
         }
+        
+        // Load medicine from URL if VNR is present
+        loadMedicineFromUrl();
     } catch (e) {
         console.error("Kunde inte ladda startdata", e);
     }
 }
 
-document.getElementById('sub-input').oninput = function () {
-    const searchTerm = this.value.toLowerCase().trim();
-    const listContainer = document.getElementById('package-list');
-    const dropdown = document.getElementById('custom-select');
-    const clearBtn = document.getElementById('clear-search');
-
-    selectedDropdownIndex = -1; // Reset selection when search updates
-    originalSearchInput = this.value; // Store original search
-
-    // Show/hide clear button
-    clearBtn.style.display = this.value.length > 0 ? 'flex' : 'none';
-
-    listContainer.innerHTML = "";
-
-    if (searchTerm.length < 2) {
-        dropdown.style.display = "none";
-        return;
-    }
-
-    // 1. Filtrera sökindexet
-    let matches = searchIndex.filter(item => {
-        const fullText = (item.sub + ' ' + item.str).toLowerCase();
-        const subMatch = item.sub.toLowerCase().includes(searchTerm);
-        const nameMatch = item.names.some(name => name.toLowerCase().includes(searchTerm));
-        const fullMatch = fullText.includes(searchTerm);
-        
-        // Also check if search term without "mg" matches
-        const searchTermNoMg = searchTerm.replace(/\s*mg\s*$/i, '').trim();
-        const subMatchNoMg = searchTermNoMg && item.sub.toLowerCase().includes(searchTermNoMg);
-        const nameMatchNoMg = searchTermNoMg && item.names.some(name => name.toLowerCase().includes(searchTermNoMg));
-        const fullMatchNoMg = searchTermNoMg && fullText.includes(searchTermNoMg);
-        
-        // Check if search contains both substance and strength (e.g., "Etoricoxib 90")
-        // Split on numbers to handle multi-part searches, but be flexible with delimiters
-        let multiPartMatch = false;
-        
-        // Extract just the substance part (everything before first number or special chars)
-        const subPartMatch = searchTerm.match(/^([a-zåäö\s\+\-]+?)(?:\s*(?:\d|\/|$))/i);
-        if (subPartMatch) {
-            const subPart = subPartMatch[1].trim().toLowerCase();
-            // Check if item.sub contains the substance part
-            if (item.sub.toLowerCase().includes(subPart)) {
-                // Also check if the strength/numbers part matches
-                const numberPart = searchTerm.substring(subPartMatch[1].length).trim().toLowerCase();
-                if (!numberPart || item.str.toLowerCase().includes(numberPart)) {
-                    multiPartMatch = true;
-                }
-            }
-        }
-        
-        return subMatch || nameMatch || subMatchNoMg || nameMatchNoMg || multiPartMatch || fullMatch || fullMatchNoMg;
-    });
-
-    // Store matches for keyboard navigation
-    lastDropdownMatches = matches.slice(0, 20);
-
-    // 2. Avancerad sortering
-    matches.sort((a, b) => {
-        // Nivå 1: Exakt start-matchning (Prioritera det användaren börjat skriva)
-        const aStarts = a.sub.toLowerCase().startsWith(searchTerm);
-        const bStarts = b.sub.toLowerCase().startsWith(searchTerm);
-        if (aStarts !== bStarts) return aStarts ? -1 : 1;
-
-        // Nivå 2: Substansnamn (Alfabetiskt)
-        if (a.sub.toLowerCase() !== b.sub.toLowerCase()) {
-            return a.sub.localeCompare(b.sub);
-        }
-
-        // Nivå 3: Styrka (Numeriskt - t.ex. 5 mg < 10 mg)
-        const strengthA = parseFloat(a.str.replace(',', '.')) || 0;
-        const strengthB = parseFloat(b.str.replace(',', '.')) || 0;
-        if (strengthA !== strengthB) {
-            return strengthA - strengthB;
-        }
-
-        // Nivå 4: Förpackningsstorlek (Numeriskt)
-        const sizeA = parseFloat(a.size) || 0;
-        const sizeB = parseFloat(b.size) || 0;
-        return sizeA - sizeB;
-    });
-
-    // Update stored matches after sorting
-    lastDropdownMatches = matches.slice(0, 20);
-
-    // 3. Rendera resultaten
-    if (matches.length > 0) {
-        // Vi begränsar till 20 träffar för prestanda
-        matches.slice(0, 20).forEach(item => {
-            const itemTemplate = cloneTemplate('template-dropdown-item');
-            if (!itemTemplate) return;
-            const div = itemTemplate.querySelector('.dropdown-item');
-            const subEl = div.querySelector('[data-field="sub"]');
-            const strEl = div.querySelector('[data-field="str"]');
-            const metaEl = div.querySelector('[data-field="meta"]');
-
-            if (subEl) subEl.textContent = item.sub;
-            if (strEl) strEl.textContent = item.str;
-            if (metaEl) metaEl.textContent = `${item.form} | ${formatSizeDisplay(item.size)}`;
-
-            div.onclick = function () {
-                document.getElementById('sub-input').value = item.sub + ' ' + item.str;
-                dropdown.style.display = "none";
-                
-                // Använd ID:n från indexet för en exakt och snabb sökning i data-filen
-                fetchLatestPV(item); 
-            };
-            listContainer.appendChild(itemTemplate);
-        });
-        dropdown.style.display = "block";
-    } else {
-        // Show no results message in dropdown
-        const noResultsTemplate = cloneTemplate('template-dropdown-no-results');
-        if (noResultsTemplate) {
-            listContainer.appendChild(noResultsTemplate);
-        }
-        dropdown.style.display = "block";
-    }
-};
-
-document.getElementById('sub-input').onfocus = function () {
-    const searchTerm = this.value.toLowerCase().trim();
-    if (searchTerm.length >= 2) {
-        this.oninput();
-    }
-};
-
-document.getElementById('clear-search').onclick = function () {
-    const input = document.getElementById('sub-input');
-    const dropdown = document.getElementById('custom-select');
-    input.value = '';
-    this.style.display = 'none';
-    dropdown.style.display = 'none';
-    input.focus();
-};
-
-document.querySelectorAll('.popular-chip').forEach((chip) => {
-    chip.addEventListener('click', () => {
-        const input = document.getElementById('sub-input');
-        if (!input) return;
-        
-        // Remove selection state to allow new search
-        document.body.classList.remove('has-selection');
-        
-        // Set the input value and trigger search after a brief delay
-        input.value = chip.dataset.search || '';
-        
-        // Use setTimeout to ensure the class removal takes effect
-        setTimeout(() => {
-            input.dispatchEvent(new Event('input'));
-            input.focus();
-        }, 10);
-    });
-});
-
-// Keyboard navigation for search dropdown
+// Keyboard navigation for search dropdown - declare variables before attachEventHandlers
 let selectedDropdownIndex = -1;
 let lastDropdownMatches = [];
 let originalSearchInput = '';
 
-document.getElementById('sub-input').onkeydown = function (e) {
-    const dropdown = document.getElementById('custom-select');
-    const listContainer = document.getElementById('package-list');
-    const items = listContainer.querySelectorAll('.dropdown-item');
+function attachEventHandlers() {
+    if (!DOM.searchInput) return; // Exit if DOM not cached
     
-    if (dropdown.style.display === 'none') return;
-    
-    switch(e.key) {
-        case 'ArrowDown':
-            e.preventDefault();
-            selectedDropdownIndex = Math.min(selectedDropdownIndex + 1, items.length - 1);
-            highlightDropdownItem(items, selectedDropdownIndex);
-            updateInputFromSelection(selectedDropdownIndex);
-            break;
-        case 'ArrowUp':
-            e.preventDefault();
-            selectedDropdownIndex = Math.max(selectedDropdownIndex - 1, -1);
-            highlightDropdownItem(items, selectedDropdownIndex);
-            updateInputFromSelection(selectedDropdownIndex);
-            break;
-        case 'Enter':
-            e.preventDefault();
-            if (selectedDropdownIndex >= 0 && selectedDropdownIndex < items.length) {
-                items[selectedDropdownIndex].click();
+    // Search input - oninput event
+    DOM.searchInput.addEventListener('input', function () {
+        const searchTerm = this.value.toLowerCase().trim();
+        const listContainer = DOM.packageList;
+        const dropdown = DOM.customSelect;
+        const clearBtn = DOM.clearSearch;
+
+        selectedDropdownIndex = -1; // Reset selection when search updates
+        originalSearchInput = this.value; // Store original search
+
+        // Show/hide clear button
+        clearBtn.style.display = this.value.length > 0 ? 'flex' : 'none';
+
+        listContainer.innerHTML = "";
+
+        if (searchTerm.length < 2) {
+            dropdown.style.display = "none";
+            return;
+        }
+
+        // 1. Filtrera sökindexet
+        let matches = searchIndex.filter(item => {
+            const fullText = (item.sub + ' ' + item.str).toLowerCase();
+            const subMatch = item.sub.toLowerCase().includes(searchTerm);
+            const nameMatch = item.names.some(name => name.toLowerCase().includes(searchTerm));
+            const fullMatch = fullText.includes(searchTerm);
+            
+            // Also check if search term without "mg" matches
+            const searchTermNoMg = searchTerm.replace(/\s*mg\s*$/i, '').trim();
+            const subMatchNoMg = searchTermNoMg && item.sub.toLowerCase().includes(searchTermNoMg);
+            const nameMatchNoMg = searchTermNoMg && item.names.some(name => name.toLowerCase().includes(searchTermNoMg));
+            const fullMatchNoMg = searchTermNoMg && fullText.includes(searchTermNoMg);
+            
+            // Check if search contains both substance and strength (e.g., "Etoricoxib 90")
+            // Split on numbers to handle multi-part searches, but be flexible with delimiters
+            let multiPartMatch = false;
+            
+            // Extract just the substance part (everything before first number or special chars)
+            const subPartMatch = searchTerm.match(/^([a-zåäö\s\+\-]+?)(?:\s*(?:\d|\/|$))/i);
+            if (subPartMatch) {
+                const subPart = subPartMatch[1].trim().toLowerCase();
+                // Check if item.sub contains the substance part
+                if (item.sub.toLowerCase().includes(subPart)) {
+                    // Also check if the strength/numbers part matches
+                    const numberPart = searchTerm.substring(subPartMatch[1].length).trim().toLowerCase();
+                    if (!numberPart || item.str.toLowerCase().includes(numberPart)) {
+                        multiPartMatch = true;
+                    }
+                }
+            }
+            
+            return subMatch || nameMatch || subMatchNoMg || nameMatchNoMg || multiPartMatch || fullMatch || fullMatchNoMg;
+        });
+
+        // Store matches for keyboard navigation
+        lastDropdownMatches = matches.slice(0, SEARCH_RESULTS_LIMIT);
+
+        // 2. Avancerad sortering
+        matches.sort((a, b) => {
+            // Nivå 1: Exakt start-matchning (Prioritera det användaren börjat skriva)
+            const aStarts = a.sub.toLowerCase().startsWith(searchTerm);
+            const bStarts = b.sub.toLowerCase().startsWith(searchTerm);
+            if (aStarts !== bStarts) return aStarts ? -1 : 1;
+
+            // Nivå 2: Substansnamn (Alfabetiskt)
+            if (a.sub.toLowerCase() !== b.sub.toLowerCase()) {
+                return a.sub.localeCompare(b.sub);
+            }
+
+            // Nivå 3: Styrka (Numeriskt - t.ex. 5 mg < 10 mg)
+            const strengthA = parseFloat(a.str.replace(',', '.')) || 0;
+            const strengthB = parseFloat(b.str.replace(',', '.')) || 0;
+            if (strengthA !== strengthB) {
+                return strengthA - strengthB;
+            }
+
+            // Nivå 4: Förpackningsstorlek (Numeriskt)
+            const sizeA = parseFloat(a.size) || 0;
+            const sizeB = parseFloat(b.size) || 0;
+            return sizeA - sizeB;
+        });
+
+        // Update stored matches after sorting
+        lastDropdownMatches = matches.slice(0, SEARCH_RESULTS_LIMIT);
+
+        // 3. Rendera resultaten
+        if (matches.length > 0) {
+            // Vi begränsar till SEARCH_RESULTS_LIMIT träffar för prestanda
+            // Use DocumentFragment to batch DOM appends for better performance
+            const fragment = document.createDocumentFragment();
+            
+            matches.slice(0, SEARCH_RESULTS_LIMIT).forEach(item => {
+                const itemTemplate = cloneTemplate('template-dropdown-item');
+                if (!itemTemplate) return;
+                const div = itemTemplate.querySelector('.dropdown-item');
+                const subEl = div.querySelector('[data-field="sub"]');
+                const strEl = div.querySelector('[data-field="str"]');
+                const metaEl = div.querySelector('[data-field="meta"]');
+
+                if (subEl) subEl.textContent = item.sub;
+                if (strEl) strEl.textContent = item.str;
+                if (metaEl) metaEl.textContent = `${item.form} | ${formatSizeDisplay(item.size)}`;
+
+                div.addEventListener('click', function () {
+                    DOM.searchInput.value = item.sub + ' ' + item.str;
+                    dropdown.style.display = "none";
+                    
+                    // Använd ID:n från indexet för en exakt och snabb sökning i data-filen
+                    // Lägg till VNR för URL-delning
+                    if (item.vnr && item.vnr.length > 0) {
+                        item.vnr = item.vnr[0]; // Use first VNR for initial load
+                    }
+                    fetchLatestPV(item); 
+                });
+                fragment.appendChild(itemTemplate);
+            });
+            listContainer.appendChild(fragment);
+            dropdown.style.display = "block";
+        } else {
+            // Show no results message in dropdown
+            const noResultsTemplate = cloneTemplate('template-dropdown-no-results');
+            if (noResultsTemplate) {
+                listContainer.appendChild(noResultsTemplate);
+            }
+            dropdown.style.display = "block";
+        }
+    });
+
+    // Search input - focus event
+    DOM.searchInput.addEventListener('focus', function () {
+        const searchTerm = this.value.toLowerCase().trim();
+        if (searchTerm.length >= 2) {
+            this.dispatchEvent(new Event('input'));
+        }
+    });
+
+    // Clear search button - click event
+    DOM.clearSearch.addEventListener('click', function () {
+        const input = DOM.searchInput;
+        const dropdown = DOM.customSelect;
+        input.value = '';
+        this.style.display = 'none';
+        dropdown.style.display = 'none';
+        input.focus();
+    });
+
+    // Popular chips - click event (already using addEventListener, no change needed)
+    document.querySelectorAll('.popular-chip').forEach((chip) => {
+        chip.addEventListener('click', () => {
+            const input = DOM.searchInput;
+            if (!input) return;
+            
+            // Remove selection state to allow new search
+            document.body.classList.remove('has-selection');
+            
+            // Set the input value and trigger search after a brief delay
+            input.value = chip.dataset.search || '';
+            
+            // Use setTimeout to ensure the class removal takes effect
+            setTimeout(() => {
+                input.dispatchEvent(new Event('input'));
+                input.focus();
+            }, 10);
+        });
+    });
+
+    // Search input - keydown event
+    DOM.searchInput.addEventListener('keydown', function (e) {
+        const dropdown = DOM.customSelect;
+        const listContainer = DOM.packageList;
+        const items = listContainer.querySelectorAll('.dropdown-item');
+        
+        if (dropdown.style.display === 'none') return;
+        
+        switch(e.key) {
+            case 'ArrowDown':
+                e.preventDefault();
+                selectedDropdownIndex = Math.min(selectedDropdownIndex + 1, items.length - 1);
+                highlightDropdownItem(items, selectedDropdownIndex);
+                updateInputFromSelection(selectedDropdownIndex);
+                break;
+            case 'ArrowUp':
+                e.preventDefault();
+                selectedDropdownIndex = Math.max(selectedDropdownIndex - 1, -1);
+                highlightDropdownItem(items, selectedDropdownIndex);
+                updateInputFromSelection(selectedDropdownIndex);
+                break;
+            case 'Enter':
+                e.preventDefault();
+                if (selectedDropdownIndex >= 0 && selectedDropdownIndex < items.length) {
+                    items[selectedDropdownIndex].click();
+                    selectedDropdownIndex = -1;
+                }
+                break;
+            case 'Escape':
+                dropdown.style.display = 'none';
                 selectedDropdownIndex = -1;
-            }
-            break;
-        case 'Escape':
-            dropdown.style.display = 'none';
-            selectedDropdownIndex = -1;
-            document.getElementById('sub-input').value = originalSearchInput;
-            if (!originalSearchInput) {
-                currentSearch = null;
-                document.body.classList.remove('has-selection');
-            }
-            break;
-    }
-};
+                DOM.searchInput.value = originalSearchInput;
+                if (!originalSearchInput) {
+                    currentSearch = null;
+                    document.body.classList.remove('has-selection');
+                }
+                break;
+        }
+    });
+}
 
 function updateInputFromSelection(index) {
-    const input = document.getElementById('sub-input');
+    const input = DOM.searchInput;
     if (index >= 0 && index < lastDropdownMatches.length) {
         input.value = lastDropdownMatches[index].sub + ' ' + lastDropdownMatches[index].str;
     } else {
@@ -348,13 +420,34 @@ function highlightDropdownItem(items, index) {
 }
 
 
-async function fetchLatestPV(searchItem) {
+/**
+ * Fetches and displays medicine details for the selected product.
+ * Updates URL with VNR for shareability and loads price data.
+ * @async
+ * @param {Object} searchItem - Selected medicine from search index
+ * @param {string} searchItem.id - Exchange group ID
+ * @param {string} searchItem.size_id - Package size group ID
+ * @param {string} searchItem.sub - Substance name
+ * @param {string} searchItem.str - Strength
+ * @param {string} searchItem.form - Medicine form
+ * @param {string} searchItem.vnr - Varunummer (product number)
+ * @param {boolean} [skipPushState=false] - If true, don't update browser history
+ */
+async function fetchLatestPV(searchItem, skipPushState = false) {
     currentSearch = searchItem;
+    
+    // Update URL with VNR for shareability and history support (unless we're responding to popstate)
+    const vnr = searchItem.vnr;
+    if (vnr && !skipPushState) {
+        const url = new URL(window.location);
+        url.searchParams.set('vnr', vnr);
+        window.history.pushState({ searchItem }, '', url.toString());
+    }
     
     // Hide hero content and show search bar for medicine selection
     document.body.classList.add('has-selection');
     
-    const resultsDiv = document.getElementById('results');
+    const resultsDiv = DOM.resultsDiv;
     replaceContent(resultsDiv, cloneTemplate('template-loading'));
 
     try {
@@ -388,14 +481,14 @@ async function fetchLatestPV(searchItem) {
 
         // Beräkna sparande och hitta den billigaste produkten
         const savings = lastPVPrice - absoluteMinPrice;
-        // Vi visar bara alerten om man sparar minst 1 kr (för att slippa avrundningsdiffar)
-        const cheaperProduct = savings >= 1 ? lastMatches.find(i => i["Försäljningspris"] === absoluteMinPrice) : null;
+        // Vi visar bara alerten om man sparar minst PRICE_SAVINGS_MIN kr (för att slippa avrundningsdiffar)
+        const cheaperProduct = savings >= PRICE_SAVINGS_MIN ? lastMatches.find(i => i["Försäljningspris"] === absoluteMinPrice) : null;
 
         const stats = await getPriceStatistics(searchItem);
 
         replaceContent(resultsDiv, cloneTemplate('template-results-container'));
 
-        const chartCont = document.getElementById('chart-container');
+        const chartCont = DOM.chartCont;
         if (chartCont) {
             chartCont.style.display = "block";
             chartCont.className = "bleed-card";
@@ -405,7 +498,7 @@ async function fetchLatestPV(searchItem) {
         showMonthPicker();
 
         // Skicka med spar-data till renderaren
-        await renderPriceCard(pvProduct, searchItem.sub, searchItem.str, searchItem.form, stats, cheaperProduct, savings);
+        await renderPriceCard(pvProduct, searchItem.sub, searchItem.str, searchItem.form, stats, cheaperProduct, savings, data);
         
         // Create and inject month warning banner after price card is rendered
         createMonthBanner(resultsDiv);
@@ -435,6 +528,12 @@ function toggleTableExpansion() {
     renderTableOnly();
 }
 
+/**
+ * Calculates price statistics across available months for trend analysis.
+ * @async
+ * @param {Object} searchItem - Medicine search item
+ * @returns {Promise<Object|null>} Statistics object with avgPrice, minPrice, maxPrice, count
+ */
 async function getPriceStatistics(searchItem) {
     let prices = [];
     // Vi kollar de 12 senaste månaderna (eller alla tillgängliga)
@@ -463,7 +562,19 @@ async function getPriceStatistics(searchItem) {
     };
 }
 
-async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct, savings) {
+/**
+ * Renders the price card showing current price, trends, and recommendations.
+ * @async
+ * @param {Object} pvProduct - PV product data
+ * @param {string} sub - Substance name
+ * @param {string} str - Strength
+ * @param {string} form - Medicine form
+ * @param {Object} stats - Price statistics from getPriceStatistics()
+ * @param {Object|null} cheaperProduct - Alternative cheaper product if exists
+ * @param {number} savings - Amount saved with cheaper product
+ * @param {Array} allData - All products for package size comparison
+ */
+async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct, savings, allData) {
     const area = document.getElementById('price-card-area');
     if (!pvProduct || !area) return;
 
@@ -607,21 +718,112 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
     area.querySelector('.price-card-title').textContent = pvProduct.Produktnamn;
     area.querySelector('.price-card-subtitle').textContent = `${sub} · ${str} · ${form}`;
     area.querySelector('.price-card-current-value').textContent = formatPrice(pvProduct["Försäljningspris"]);
+    
+    // Add price per pill under current price
+    const currentWrapper = area.querySelector('.price-card-current-wrapper');
+    let pricePerPillDiv = currentWrapper.querySelector('.price-per-pill');
+    if (!pricePerPillDiv) {
+        pricePerPillDiv = document.createElement('div');
+        pricePerPillDiv.className = 'price-per-pill';
+        pricePerPillDiv.style.fontSize = '12px';
+        pricePerPillDiv.style.marginTop = '4px';
+        pricePerPillDiv.style.color = '#64748b';
+        currentWrapper.appendChild(pricePerPillDiv);
+    }
+    const packageSize = toNumber(pvProduct.Storlek);
+    const price = toNumber(pvProduct["Försäljningspris"]);
+    if (packageSize && price) {
+        const pricePerUnit = price / packageSize;
+        pricePerPillDiv.textContent = `${pricePerUnit.toFixed(2)} kr/tablett`;
+    }
 
     const savingsSlot = area.querySelector('.price-card-savings-slot');
-    if (cheaperProduct && savings >= 1) {
+    
+    // Check for better package size deals - search in all data for same substance/strength PV variants
+    let betterSizeDeal = null;
+    let cheaperProductDeal = null;
+    
+    if (allData) {
+        betterSizeDeal = findBetterPackageSize(pvProduct, allData);
+    }
+    
+    if (cheaperProduct && savings >= PRICE_SAVINGS_MIN) {
+        cheaperProductDeal = {
+            type: 'brand',
+            savings: savings,
+            produktnamn: cheaperProduct.Produktnamn
+        };
+    }
+    
+    // Determine which deal to show - the one with biggest savings
+    let dealToShow = null;
+    if (betterSizeDeal && cheaperProductDeal) {
+        // Show the one with biggest savings percentage
+        const sizeSavingsKr = pvProduct["Försäljningspris"] - (betterSizeDeal.pricePerUnit * toNumber(pvProduct.Storlek));
+        dealToShow = sizeSavingsKr > cheaperProductDeal.savings ? 'size' : 'brand';
+    } else if (betterSizeDeal) {
+        dealToShow = 'size';
+    } else if (cheaperProductDeal) {
+        dealToShow = 'brand';
+    }
+    
+    // Show the selected deal
+    if (dealToShow === 'brand' && cheaperProductDeal) {
         const savingsTpl = cloneTemplate('template-savings-alert');
         if (savingsTpl) {
             const savingsNode = savingsTpl.querySelector('.savings-alert-box');
             const title = savingsNode.querySelector('.savings-alert-title');
             const text = savingsNode.querySelector('.savings-alert-text');
-            title.textContent = `Spara ${savings.toFixed(2).replace('.', ',')} kr!`;
+            title.textContent = `Spara ${cheaperProductDeal.savings.toFixed(2).replace('.', ',')} kr!`;
             text.textContent = '';
             const strong = document.createElement('strong');
-            strong.textContent = cheaperProduct.Produktnamn;
+            strong.textContent = cheaperProductDeal.produktnamn;
             text.appendChild(strong);
             text.append(' är billigare än Periodens Vara.');
             savingsSlot.appendChild(savingsNode);
+        }
+    } else if (dealToShow === 'size' && betterSizeDeal) {
+        const dealTpl = cloneTemplate('template-savings-alert');
+        if (dealTpl) {
+            const dealNode = dealTpl.querySelector('.savings-alert-box');
+            const title = dealNode.querySelector('.savings-alert-title');
+            const text = dealNode.querySelector('.savings-alert-text');
+            title.textContent = `${betterSizeDeal.size} är ${betterSizeDeal.savings.toFixed(1)}% billigare`;
+            text.textContent = 'Be din läkare skriva ut ';
+            
+            // Create clickable strong element that loads the alternative product
+            const button = document.createElement('button');
+            button.textContent = betterSizeDeal.size;
+            button.style.background = 'none';
+            button.style.border = 'none';
+            button.style.color = 'inherit';
+            button.style.cursor = 'pointer';
+            button.style.padding = '0';
+            button.style.font = 'inherit';
+            button.style.fontWeight = '900';
+            button.style.textDecoration = 'none';
+            button.addEventListener('click', function() {
+                // Find the product with this size in allData
+                const alternativeProduct = allData.find(item => 
+                    item.Substans === pvProduct.Substans &&
+                    item.Styrka === pvProduct.Styrka &&
+                    item.Storlek === betterSizeDeal.targetSize &&
+                    getItemStatus(item) === "PV"
+                );
+                if (alternativeProduct) {
+                    fetchLatestPV({
+                        id: alternativeProduct["Utbytesgrupps ID"],
+                        size_id: alternativeProduct["Förpackningsstorleksgrupp"],
+                        sub: alternativeProduct.Substans,
+                        str: alternativeProduct.Styrka,
+                        form: alternativeProduct.Beredningsform,
+                        vnr: alternativeProduct.Varunummer || alternativeProduct.Vnr
+                    });
+                }
+            });
+            text.appendChild(button);
+            text.append(' istället.');
+            savingsSlot.appendChild(dealNode);
         }
     }
 
@@ -662,6 +864,10 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
     if (originEl) originEl.textContent = pvProduct.Ursprung || 'Generics';
 }
 
+/**
+ * Renders the comparison table showing all available products with prices.
+ * Updates the table based on isExpanded state.
+ */
 function renderTableOnly() {
     const area = document.getElementById('table-area');
     if (!area) return;
@@ -676,6 +882,11 @@ function renderTableOnly() {
     updateTableRows(lastMatches);
 }
 
+/**
+ * Updates table rows with medicine data, including status badges and pricing.
+ * Uses DocumentFragment for efficient DOM manipulation.
+ * @param {Array<Object>} data - Array of medicine items to display
+ */
 function updateTableRows(data) {
     const container = document.getElementById('comparison-list');
     const footer = document.getElementById('pagination-footer');
@@ -700,6 +911,9 @@ function updateTableRows(data) {
     }
 
     container.innerHTML = '';
+    
+    // Use DocumentFragment to batch DOM appends for better performance
+    const tableFragment = document.createDocumentFragment();
     
     rowsToShow.forEach((item, index) => {
         const itemPrice = item["Försäljningspris"];
@@ -781,8 +995,10 @@ function updateTableRows(data) {
             rowDiv.appendChild(detailsDiv);
         }
 
-        container.appendChild(rowFragment);
+        tableFragment.appendChild(rowFragment);
     });
+    
+    container.appendChild(tableFragment);
 
 }
 
@@ -825,7 +1041,7 @@ function updateMonth(newMonth) {
 
 function createMonthBanner(container) {
     // Remove existing banner if present
-    const existingBanner = document.getElementById('month-warning-banner');
+    let existingBanner = document.getElementById('month-warning-banner');
     if (existingBanner) {
         existingBanner.remove();
     }
@@ -966,6 +1182,12 @@ function formatSizeDisplay(size) {
     return size;
 }
 
+/**
+ * Renders price history chart showing trends across available months.
+ * Supports both PV and cheapest price views with configurable date ranges.
+ * @async
+ * @param {Object} searchItem - Medicine search item to chart
+ */
 async function renderHistoryChart(searchItem) {
     const canvas = document.getElementById('priceChart');
     if (!canvas) return;
@@ -1366,13 +1588,13 @@ function populateMonthPicker() {
                 monthDiv.classList.add('prelim');
             }
             
-            monthDiv.onclick = () => {
-                document.getElementById('month-picker-dropdown').style.display = 'none';
+            monthDiv.addEventListener('click', () => {
+                DOM.monthPickerDropdown.style.display = 'none';
                 updateMonth(monthCode);
                 if (currentSearch) {
                     fetchLatestPV(currentSearch);
                 }
-            };
+            });
         } else {
             monthDiv.classList.add('unavailable');
         }
@@ -1425,6 +1647,138 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/**
+ * Finds better package sizes of the same medicine that offer lower per-unit pricing.
+ * @param {Object} selectedProduct - Currently selected medicine product
+ * @param {Array<Object>} dataToSearch - All available products to compare
+ * @returns {Object|null} Best deal object with size, savings percentage, and target size
+ */
+function findBetterPackageSize(selectedProduct, dataToSearch) {
+    const selectedSize = toNumber(selectedProduct.Storlek);
+    const selectedPrice = toNumber(selectedProduct["Försäljningspris"]);
+    
+    if (!Number.isFinite(selectedSize) || !Number.isFinite(selectedPrice) || selectedSize === 0) {
+        return null;
+    }
 
+    const selectedPricePerUnit = selectedPrice / selectedSize;
+    const substance = selectedProduct.Substans;
+    const strength = selectedProduct.Styrka;
+    const selectedVnr = selectedProduct.Varunummer || selectedProduct.Vnr;
+
+    let bestDeal = null;
+    const threshold = PACKAGE_SIZE_SAVINGS_THRESHOLD; // 5% threshold
+
+    dataToSearch.forEach(item => {
+        const itemStatus = getItemStatus(item);
+        if (itemStatus !== "PV") return;
+        if (item.Substans !== substance || item.Styrka !== strength) return;
+        
+        const itemVnr = item.Varunummer || item.Vnr;
+        if (itemVnr === selectedVnr) return;
+
+        const itemSize = toNumber(item.Storlek);
+        const itemPrice = toNumber(item["Försäljningspris"]);
+
+        if (!Number.isFinite(itemSize) || !Number.isFinite(itemPrice) || itemSize === 0) {
+            return;
+        }
+
+        const itemPricePerUnit = itemPrice / itemSize;
+        const savingsPercent = (selectedPricePerUnit - itemPricePerUnit) / selectedPricePerUnit;
+
+        if (savingsPercent >= threshold && (!bestDeal || itemPricePerUnit < bestDeal.pricePerUnit)) {
+            bestDeal = {
+                size: `${itemSize} ${formatUnit(item.Beredningsform, itemSize).split(' ').slice(1).join(' ')}`,
+                targetSize: itemSize,
+                pricePerUnit: itemPricePerUnit,
+                currentPricePerUnit: selectedPricePerUnit,
+                savings: savingsPercent * 100
+            };
+        }
+    });
+
+    return bestDeal;
+}
+
+function loadMedicineFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const vnr = params.get('vnr');
+    
+    if (!vnr) {
+        // No VNR in URL - show landing page
+        document.body.classList.remove('has-selection');
+        const resultsDiv = DOM.resultsDiv;
+        if (resultsDiv) {
+            resultsDiv.innerHTML = '';
+        }
+        // Clear search bar
+        const searchInput = DOM.searchInput;
+        if (searchInput) {
+            searchInput.value = '';
+        }
+        // Hide chart
+        const chartCont = DOM.chartCont;
+        if (chartCont) {
+            chartCont.style.display = 'none';
+        }
+        return;
+    }
+    
+    // Find the medicine in the search index by VNR
+    const searchItem = searchIndex.find(item => 
+        item.vnr && (Array.isArray(item.vnr) ? item.vnr.includes(vnr) : item.vnr === vnr)
+    );
+    
+    if (searchItem) {
+        // Set the first VNR from the array if it's an array
+        if (Array.isArray(searchItem.vnr)) {
+            searchItem.vnr = vnr;
+        }
+        fetchLatestPV(searchItem, true); // Skip pushState - we're loading from existing URL
+    }
+}
+
+// Handle browser back/forward navigation
+window.addEventListener('popstate', function(event) {
+    const params = new URLSearchParams(window.location.search);
+    const vnr = params.get('vnr');
+    
+    if (!vnr) {
+        // No VNR - show landing page
+        document.body.classList.remove('has-selection');
+        const resultsDiv = DOM.resultsDiv;
+        if (resultsDiv) {
+            resultsDiv.innerHTML = '';
+        }
+        // Clear search bar
+        const searchInput = DOM.searchInput;
+        if (searchInput) {
+            searchInput.value = '';
+        }
+        // Hide chart
+        const chartCont = DOM.chartCont;
+        if (chartCont) {
+            chartCont.style.display = 'none';
+        }
+        return;
+    }
+    
+    if (event.state && event.state.searchItem) {
+        currentSearch = event.state.searchItem;
+        fetchLatestPV(event.state.searchItem, true); // Skip pushState to avoid duplicate history entries
+    }
+});
+
+/**
+ * Converts a value to number, handling Swedish decimal format (comma).
+ * @param {*} value - Value to convert
+ * @returns {number|null} Numeric value or null if conversion fails
+ */
+function toNumber(value) {
+    if (value === null || value === undefined) return null;
+    const numeric = typeof value === 'number' ? value : Number(String(value).replace(',', '.'));
+    return Number.isFinite(numeric) ? numeric : null;
+}
 
 document.addEventListener('DOMContentLoaded', init);
