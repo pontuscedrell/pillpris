@@ -597,11 +597,11 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
 
         const headerLabel = area.querySelector('.price-card-header-label');
         headerLabel.textContent = `${rec.label}!`;
-        headerLabel.style.color = isDarkMode ? 'var(--text-primary)' : rec.color;
+        headerLabel.style.color = isDarkMode ? 'var(--text-primary)' : 'var(--text-primary)';
 
         const headerSubtext = area.querySelector('.price-card-header-subtext');
         headerSubtext.textContent = rec.subtext;
-        headerSubtext.style.color = isDarkMode ? 'var(--text-secondary)' : rec.color;
+        headerSubtext.style.color = isDarkMode ? 'var(--text-secondary)' : 'var(--text-secondary)';
     }
 
     area.querySelector('.price-card-title').textContent = pvProduct.Produktnamn;
