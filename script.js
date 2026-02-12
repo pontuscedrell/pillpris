@@ -222,6 +222,12 @@ function attachEventHandlers() {
             const subMatch = item.sub.toLowerCase().includes(searchTerm);
             const nameMatch = item.names.some(name => name.toLowerCase().includes(searchTerm));
             const fullMatch = fullText.includes(searchTerm);
+            // Also check VNR (Varunummer)
+            const vnrMatch = item.vnr && (
+                Array.isArray(item.vnr) 
+                    ? item.vnr.some(v => String(v).includes(searchTerm))
+                    : String(item.vnr).includes(searchTerm)
+            );
             
             // Also check if search term without "mg" matches
             const searchTermNoMg = searchTerm.replace(/\s*mg\s*$/i, '').trim();
@@ -247,7 +253,7 @@ function attachEventHandlers() {
                 }
             }
             
-            return subMatch || nameMatch || subMatchNoMg || nameMatchNoMg || multiPartMatch || fullMatch || fullMatchNoMg;
+            return subMatch || nameMatch || subMatchNoMg || nameMatchNoMg || multiPartMatch || fullMatch || fullMatchNoMg || vnrMatch;
         });
 
         // Store matches for keyboard navigation
