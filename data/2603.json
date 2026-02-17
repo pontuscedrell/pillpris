@@ -83678,25 +83678,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Metoprolol Sandoz",
-        "Varunummer":60096,
-        "Styrka":"200 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Metoprolol",
-        "Beredningsform":"Depottablett Typ 1",
-        "Storlek":100.0,
-        "Apotekens inköpspris":62.89,
-        "Försäljningspris":122.49,
-        "Inköpspris per minsta enhet":0.63,
-        "Försäljningspris per minsta enhet":1.22,
-        "NPL ID":20041011000058,
-        "NPL pack ID":20050107100442,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":440
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Metoprolol Sandoz",
         "Varunummer":52141,
         "Styrka":"200 mg",
         "Förpackningsstorleksgrupp":"T23",
@@ -83714,7 +83695,7 @@
         "Utbytesgrupps ID":440
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Metomylan",
         "Varunummer":81047,
         "Styrka":"200 mg",
@@ -83733,7 +83714,7 @@
         "Utbytesgrupps ID":440
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Metoprolol Teva",
         "Varunummer":545688,
         "Styrka":"200 mg",
@@ -83749,6 +83730,25 @@
         "NPL pack ID":20080407101443,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":440
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Metoprolol Sandoz",
+        "Varunummer":60096,
+        "Styrka":"200 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Metoprolol",
+        "Beredningsform":"Depottablett Typ 1",
+        "Storlek":100.0,
+        "Apotekens inköpspris":62.89,
+        "Försäljningspris":122.49,
+        "Inköpspris per minsta enhet":0.63,
+        "Försäljningspris per minsta enhet":1.22,
+        "NPL ID":20041011000058,
+        "NPL pack ID":20050107100442,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":440
     },
     {
@@ -112292,7 +112292,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Pregabalin 1A Farma",
-        "Varunummer":593698,
+        "Varunummer":395933,
         "Styrka":"300 mg (Grupp F)",
         "Förpackningsstorleksgrupp":"TN60",
         "Substans":"Pregabalin",
