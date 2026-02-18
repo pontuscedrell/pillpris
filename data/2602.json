@@ -28368,25 +28368,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Desloratadine Glenmark",
-        "Varunummer":162281,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Desloratadin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":18.54,
-        "Försäljningspris":73.49,
-        "Inköpspris per minsta enhet":0.19,
-        "Försäljningspris per minsta enhet":0.73,
-        "NPL ID":20110119000021,
-        "NPL pack ID":20110530100867,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":112204
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Dasselta",
         "Varunummer":188829,
         "Styrka":"5 mg",
@@ -28405,7 +28386,7 @@
         "Utbytesgrupps ID":112204
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Desloratadine Actavis",
         "Varunummer":542693,
         "Styrka":"5 mg",
@@ -28424,7 +28405,7 @@
         "Utbytesgrupps ID":112204
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Desloratadin STADA",
         "Varunummer":399400,
         "Styrka":"5 mg",
@@ -28440,6 +28421,25 @@
         "NPL pack ID":20110511100077,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":112204
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Desloratadine Glenmark",
+        "Varunummer":162281,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Desloratadin",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":18.54,
+        "Försäljningspris":73.49,
+        "Inköpspris per minsta enhet":0.19,
+        "Försäljningspris per minsta enhet":0.73,
+        "NPL ID":20110119000021,
+        "NPL pack ID":20110530100867,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":112204
     },
     {
@@ -30154,25 +30154,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Dexamfetamin Sea Pharma",
-        "Varunummer":588526,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"TN30",
-        "Substans":"Dexamfetamin",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":70.0,
-        "Försäljningspris":130.35,
-        "Inköpspris per minsta enhet":2.33,
-        "Försäljningspris per minsta enhet":4.35,
-        "NPL ID":20200825000061,
-        "NPL pack ID":20201006100280,
-        "Ursprung":"Generics",
-        "Företag":"Sea Pharma AB",
-        "Utbytesgrupps ID":114146
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Dexatin",
         "Varunummer":128642,
         "Styrka":"5 mg",
@@ -30191,7 +30172,7 @@
         "Utbytesgrupps ID":114146
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Dexamfetamin Waymade",
         "Varunummer":535579,
         "Styrka":"5 mg",
@@ -30207,6 +30188,25 @@
         "NPL pack ID":20230907100082,
         "Ursprung":"Generics",
         "Företag":"Waymade BV",
+        "Utbytesgrupps ID":114146
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Dexamfetamin Sea Pharma",
+        "Varunummer":588526,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"TN30",
+        "Substans":"Dexamfetamin",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":70.0,
+        "Försäljningspris":130.35,
+        "Inköpspris per minsta enhet":2.33,
+        "Försäljningspris per minsta enhet":4.35,
+        "NPL ID":20200825000061,
+        "NPL pack ID":20201006100280,
+        "Ursprung":"Generics",
+        "Företag":"Sea Pharma AB",
         "Utbytesgrupps ID":114146
     },
     {
@@ -64621,25 +64621,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Clopidogrel Zentiva",
-        "Varunummer":522799,
-        "Styrka":"75 mg",
-        "Förpackningsstorleksgrupp":"T22",
-        "Substans":"Klopidogrel",
-        "Beredningsform":"Tablett",
-        "Storlek":84.0,
-        "Apotekens inköpspris":70.24,
-        "Försäljningspris":130.62,
-        "Inköpspris per minsta enhet":0.84,
-        "Försäljningspris per minsta enhet":1.56,
-        "NPL ID":20080310000024,
-        "NPL pack ID":20251028100034,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":111297
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Clopidogrel Zentiva",
         "Varunummer":141933,
         "Styrka":"75 mg",
         "Förpackningsstorleksgrupp":"T22",
@@ -64657,7 +64638,7 @@
         "Utbytesgrupps ID":111297
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Clopidogrel Zentiva",
         "Varunummer":138238,
         "Styrka":"75 mg",
@@ -64673,6 +64654,25 @@
         "NPL pack ID":20230309100116,
         "Ursprung":"ParallelDistribution",
         "Företag":"2care4 ApS",
+        "Utbytesgrupps ID":111297
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Clopidogrel Zentiva",
+        "Varunummer":129159,
+        "Styrka":"75 mg",
+        "Förpackningsstorleksgrupp":"T22",
+        "Substans":"Klopidogrel",
+        "Beredningsform":"Tablett",
+        "Storlek":84.0,
+        "Apotekens inköpspris":201.22,
+        "Försäljningspris":266.51,
+        "Inköpspris per minsta enhet":2.4,
+        "Försäljningspris per minsta enhet":3.17,
+        "NPL ID":20080310000024,
+        "NPL pack ID":20230602100312,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":111297
     },
     {
@@ -64697,20 +64697,20 @@
     {
         "Status":"Nej",
         "Produktnamn":"Clopidogrel Zentiva",
-        "Varunummer":129159,
+        "Varunummer":522799,
         "Styrka":"75 mg",
         "Förpackningsstorleksgrupp":"T22",
         "Substans":"Klopidogrel",
         "Beredningsform":"Tablett",
         "Storlek":84.0,
-        "Apotekens inköpspris":201.22,
-        "Försäljningspris":266.51,
-        "Inköpspris per minsta enhet":2.4,
-        "Försäljningspris per minsta enhet":3.17,
+        "Apotekens inköpspris":70.24,
+        "Försäljningspris":130.62,
+        "Inköpspris per minsta enhet":0.84,
+        "Försäljningspris per minsta enhet":1.56,
         "NPL ID":20080310000024,
-        "NPL pack ID":20230602100312,
+        "NPL pack ID":20251028100034,
         "Ursprung":"ParallelDistribution",
-        "Företag":"Abacus Medicine A\/S",
+        "Företag":"Ebb Medical AB",
         "Utbytesgrupps ID":111297
     },
     {
@@ -83279,7 +83279,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Metoprolol Sandoz",
-        "Varunummer":60096,
+        "Varunummer":42870,
         "Styrka":"200 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Metoprolol",

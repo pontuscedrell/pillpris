@@ -47615,25 +47615,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Fesoterodine Accord",
-        "Varunummer":583553,
-        "Styrka":"4 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Fesoterodin",
-        "Beredningsform":"Depottablett",
-        "Storlek":28.0,
-        "Apotekens inköpspris":28.0,
-        "Försäljningspris":83.94,
-        "Inköpspris per minsta enhet":1.0,
-        "Försäljningspris per minsta enhet":3.0,
-        "NPL ID":20210524000033,
-        "NPL pack ID":20211020100203,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":112857
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Fesoterodine STADA",
         "Varunummer":450974,
         "Styrka":"4 mg",
@@ -47652,7 +47633,7 @@
         "Utbytesgrupps ID":112857
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Fesoterodine Zentiva",
         "Varunummer":480693,
         "Styrka":"4 mg",
@@ -47668,6 +47649,25 @@
         "NPL pack ID":20221111100555,
         "Ursprung":"Generics",
         "Företag":"Zentiva Denmark ApS",
+        "Utbytesgrupps ID":112857
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Fesoterodine Accord",
+        "Varunummer":583553,
+        "Styrka":"4 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Fesoterodin",
+        "Beredningsform":"Depottablett",
+        "Storlek":28.0,
+        "Apotekens inköpspris":28.0,
+        "Försäljningspris":83.94,
+        "Inköpspris per minsta enhet":1.0,
+        "Försäljningspris per minsta enhet":3.0,
+        "NPL ID":20210524000033,
+        "NPL pack ID":20211020100203,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":112857
     },
     {
@@ -83735,7 +83735,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Metoprolol Sandoz",
-        "Varunummer":60096,
+        "Varunummer":42870,
         "Styrka":"200 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Metoprolol",
@@ -144515,25 +144515,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Vildagliptin\/Metformin hydrochloride Accord",
-        "Varunummer":595776,
-        "Styrka":"50 mg\/1000 mg",
-        "Förpackningsstorleksgrupp":"T21",
-        "Substans":"Vildagliptin + metformin",
-        "Beredningsform":"Tablett",
-        "Storlek":60.0,
-        "Apotekens inköpspris":50.0,
-        "Försäljningspris":108.25,
-        "Inköpspris per minsta enhet":0.83,
-        "Försäljningspris per minsta enhet":1.8,
-        "NPL ID":20201108000020,
-        "NPL pack ID":20210326100221,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":111074
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Vildagliptin\/Metformin Krka",
         "Varunummer":594425,
         "Styrka":"50 mg\/1000 mg",
@@ -144552,7 +144533,7 @@
         "Utbytesgrupps ID":111074
     },
     {
-        "Status":"R1",
+        "Status":"PV",
         "Produktnamn":"Vildagliptin\/Metformin STADA",
         "Varunummer":385928,
         "Styrka":"50 mg\/1000 mg",
@@ -144568,6 +144549,25 @@
         "NPL pack ID":20200405100389,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111074
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Vildagliptin\/Metformin hydrochloride Accord",
+        "Varunummer":595776,
+        "Styrka":"50 mg\/1000 mg",
+        "Förpackningsstorleksgrupp":"T21",
+        "Substans":"Vildagliptin + metformin",
+        "Beredningsform":"Tablett",
+        "Storlek":60.0,
+        "Apotekens inköpspris":50.0,
+        "Försäljningspris":108.25,
+        "Inköpspris per minsta enhet":0.83,
+        "Försäljningspris per minsta enhet":1.8,
+        "NPL ID":20201108000020,
+        "NPL pack ID":20210326100221,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":111074
     },
     {
