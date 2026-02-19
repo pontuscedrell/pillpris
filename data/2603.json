@@ -91429,25 +91429,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Natriumbikarbonat Evolan",
-        "Varunummer":149557,
-        "Styrka":"1 g",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Natriumvätekarbonat",
-        "Beredningsform":"Tablett",
-        "Storlek":105.0,
-        "Apotekens inköpspris":130.89,
-        "Försäljningspris":193.72,
-        "Inköpspris per minsta enhet":1.25,
-        "Försäljningspris per minsta enhet":1.84,
-        "NPL ID":20190304000074,
-        "NPL pack ID":20190506100060,
-        "Ursprung":"Generics",
-        "Företag":"Evolan Pharma AB",
-        "Utbytesgrupps ID":115466
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Natriumbikarbonat Viatris",
         "Varunummer":129668,
         "Styrka":"1 g",
@@ -91463,6 +91444,25 @@
         "NPL pack ID":20000101100160,
         "Ursprung":"Original",
         "Företag":"Viatris AB",
+        "Utbytesgrupps ID":115466
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Natriumbikarbonat Evolan",
+        "Varunummer":149557,
+        "Styrka":"1 g",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Natriumvätekarbonat",
+        "Beredningsform":"Tablett",
+        "Storlek":105.0,
+        "Apotekens inköpspris":130.89,
+        "Försäljningspris":193.72,
+        "Inköpspris per minsta enhet":1.25,
+        "Försäljningspris per minsta enhet":1.84,
+        "NPL ID":20190304000074,
+        "NPL pack ID":20190506100060,
+        "Ursprung":"Generics",
+        "Företag":"Evolan Pharma AB",
         "Utbytesgrupps ID":115466
     },
     {
@@ -112083,7 +112083,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Pregabalin 1A Farma",
-        "Varunummer":419244,
+        "Varunummer":186797,
         "Styrka":"100 mg (Grupp F)",
         "Förpackningsstorleksgrupp":"TN84",
         "Substans":"Pregabalin",
@@ -112178,7 +112178,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Pregabalin 1A Farma",
-        "Varunummer":49204,
+        "Varunummer":83636,
         "Styrka":"25 mg (Grupp F)",
         "Förpackningsstorleksgrupp":"TN56",
         "Substans":"Pregabalin",
@@ -112330,7 +112330,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Pregabalin 1A Farma",
-        "Varunummer":514569,
+        "Varunummer":486272,
         "Styrka":"50 mg (Grupp F)",
         "Förpackningsstorleksgrupp":"TN56",
         "Substans":"Pregabalin",
@@ -112387,7 +112387,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Pregabalin 1A Farma",
-        "Varunummer":60488,
+        "Varunummer":543031,
         "Styrka":"75 mg (Grupp F)",
         "Förpackningsstorleksgrupp":"TN56",
         "Substans":"Pregabalin",
