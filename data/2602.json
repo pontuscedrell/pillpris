@@ -6804,25 +6804,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Abilify",
-        "Varunummer":189442,
-        "Styrka":"1 mg\/ml",
-        "Förpackningsstorleksgrupp":"M150",
-        "Substans":"Aripiprazol",
-        "Beredningsform":"Oral lösning",
-        "Storlek":150.0,
-        "Apotekens inköpspris":289.0,
-        "Försäljningspris":357.37,
-        "Inköpspris per minsta enhet":1.93,
-        "Försäljningspris per minsta enhet":2.38,
-        "NPL ID":20050131000046,
-        "NPL pack ID":20161212100071,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Medartuum AB",
-        "Utbytesgrupps ID":111923
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Abilify",
         "Varunummer":32533,
         "Styrka":"1 mg\/ml",
         "Förpackningsstorleksgrupp":"M150",
@@ -6840,7 +6821,7 @@
         "Utbytesgrupps ID":111923
     },
     {
-        "Status":"R1",
+        "Status":"PV",
         "Produktnamn":"Aripiprazol Ebb",
         "Varunummer":458198,
         "Styrka":"1 mg\/ml",
@@ -6875,6 +6856,25 @@
         "NPL pack ID":20160429100089,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111923
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Abilify",
+        "Varunummer":189442,
+        "Styrka":"1 mg\/ml",
+        "Förpackningsstorleksgrupp":"M150",
+        "Substans":"Aripiprazol",
+        "Beredningsform":"Oral lösning",
+        "Storlek":150.0,
+        "Apotekens inköpspris":289.0,
+        "Försäljningspris":357.37,
+        "Inköpspris per minsta enhet":1.93,
+        "Försäljningspris per minsta enhet":2.38,
+        "NPL ID":20050131000046,
+        "NPL pack ID":20161212100071,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Medartuum AB",
         "Utbytesgrupps ID":111923
     },
     {
