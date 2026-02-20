@@ -515,7 +515,8 @@ async function fetchLatestPV(searchItem, skipPushState = false) {
         createMonthBanner(resultsDiv);
         
         renderTableOnly(); 
-        renderHistoryChart(searchItem);
+        await renderHistoryChart(searchItem);
+        renderAlternativePackageSizes(pvProduct, data);
 
         // Visa info-boxen endast om PV inte är billigast (efter renderTableOnly som skapar den)
         if (!cheaperProduct) {
@@ -699,31 +700,24 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
     // If no recommendation (viewing historical month), hide the header bar
     if (!rec) {
         headerBar.style.display = 'none';
+        headerBar.classList.remove('is-alert-red');
     } else {
         headerBar.style.display = 'flex';
-        
-        // Use dark mode compatible background
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        headerBar.style.background = isDarkMode ? 'var(--card-bg)' : rec.bg;
-        
-        // Add border for dark mode to show color indication
-        if (isDarkMode) {
-            headerBar.style.border = `2px solid ${rec.color}`;
-        } else {
-            headerBar.style.border = '';
-        }
+        headerBar.style.background = '';
+        headerBar.style.border = '';
+        headerBar.classList.toggle('is-alert-red', rec.icon === 'shopping_cart_checkout');
 
         const headerIcon = area.querySelector('.price-card-icon');
         headerIcon.textContent = rec.icon;
-        headerIcon.style.color = rec.color;
+        headerIcon.style.color = '';
 
         const headerLabel = area.querySelector('.price-card-header-label');
         headerLabel.textContent = `${rec.label}!`;
-        headerLabel.style.color = isDarkMode ? 'var(--text-primary)' : 'var(--text-primary)';
+        headerLabel.style.color = '';
 
         const headerSubtext = area.querySelector('.price-card-header-subtext');
         headerSubtext.textContent = rec.subtext;
-        headerSubtext.style.color = isDarkMode ? 'var(--text-secondary)' : 'var(--text-secondary)';
+        headerSubtext.style.color = '';
     }
 
     area.querySelector('.price-card-title').textContent = pvProduct.Produktnamn;
@@ -806,8 +800,9 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
             const dealNode = dealTpl.querySelector('.savings-alert-box');
             const title = dealNode.querySelector('.savings-alert-title');
             const text = dealNode.querySelector('.savings-alert-text');
-            title.textContent = `${betterSizeDeal.size} är ${betterSizeDeal.savings.toFixed(1)}% billigare`;
-            text.textContent = 'Be din läkare skriva ut ';
+            const unit = formatUnitSingular(pvProduct.Beredningsform);
+            title.textContent = `${betterSizeDeal.size} är ${betterSizeDeal.savings.toFixed(1).replace('.', ',')}% billigare per ${unit}`;
+            text.textContent = 'Fråga din läkare om du kan få ';
             
             // Create clickable strong element that loads the alternative product
             const button = document.createElement('button');
@@ -840,7 +835,7 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
                 }
             });
             text.appendChild(button);
-            text.append(' istället.');
+            text.append(' istället');
             savingsSlot.appendChild(dealNode);
         }
     }
@@ -1178,6 +1173,16 @@ function formatUnit(form, size) {
     return `${size} ${unit}`;
 }
 
+function formatUnitSingular(form) {
+    const f = (form || '').toLowerCase();
+    let unit = "enhet";
+    if (f.includes("tablett")) unit = "tablett";
+    else if (f.includes("kapsel")) unit = "kapsel";
+    else if (f === "gel" || f.includes("kräm") || f.includes("salva")) unit = "gram";
+    else if (f.includes("droppar") || f.includes("lösning")) unit = "ml";
+    return unit;
+}
+
 function formatSizeDisplay(size) {
     if (!size) return size;
     // Check if it's a range like "28-32"
@@ -1211,9 +1216,13 @@ async function renderHistoryChart(searchItem) {
         chartPriceType = priceTypeSelect.value;
     }
     
-    if (window.myChart instanceof Chart) {
+    const existingChart = typeof Chart.getChart === 'function' ? Chart.getChart(canvas) : null;
+    if (existingChart) {
+        existingChart.destroy();
+    } else if (window.myChart instanceof Chart) {
         window.myChart.destroy();
     }
+    window.myChart = null;
 
     let filteredMonths = [...availableMonths];
     if (rangeVal !== "all") {
@@ -1393,13 +1402,13 @@ function renderPriceStabilityInsight(allPrices, minPrice, maxPrice, priceDiff) {
         stabilityLabel = "Mycket stabilt pris";
         stabilityColor = "#16a34a";
         stabilityIcon = "check_circle";
-        stabilityText = `Priset har varit mycket stabilt med minimal variation (±${coefficientOfVariation.toFixed(1)}%).`;
+        stabilityText = `Priset har varit mycket stabilt med minimal variation (±${coefficientOfVariation.toFixed(1).replace('.', ',')}%).`;
         stabilityBg = "#f0fdf4";
     } else if (coefficientOfVariation < 8) {
         stabilityLabel = "Stabilt pris";
         stabilityColor = "#0891b2";
         stabilityIcon = "trending_flat";
-        stabilityText = `Priset har varit relativt stabilt med låg variation (±${coefficientOfVariation.toFixed(1)}%).`;
+        stabilityText = `Priset har varit relativt stabilt med låg variation (±${coefficientOfVariation.toFixed(1).replace('.', ',')}%).`;
         stabilityBg = "#ecfeff";
     } else if (coefficientOfVariation < 15) {
         stabilityLabel = "Måttlig prisvariation";
@@ -1430,6 +1439,144 @@ function renderPriceStabilityInsight(allPrices, minPrice, maxPrice, priceDiff) {
     `;
 
     chartContainer.insertAdjacentHTML('beforeend', insightHtml);
+}
+
+function renderAlternativePackageSizes(currentProduct, allMonthData) {
+    const sectionContainer = document.getElementById('alt-package-sizes-container');
+    if (!sectionContainer) return;
+
+    const existingSection = document.getElementById('alt-package-sizes');
+    if (existingSection) existingSection.remove();
+
+    if (!currentProduct || !Array.isArray(allMonthData)) return;
+
+    const normalize = (value) => String(value ?? '').trim().toLowerCase();
+    const currentSizeGroup = String(currentProduct["Förpackningsstorleksgrupp"] ?? '');
+
+    const relatedItems = allMonthData.filter(item =>
+        normalize(item.Substans) === normalize(currentProduct.Substans) &&
+        normalize(item.Styrka) === normalize(currentProduct.Styrka)
+    );
+
+    if (relatedItems.length === 0) return;
+
+    const groupedBySizeGroup = new Map();
+    relatedItems.forEach(item => {
+        const key = String(item["Förpackningsstorleksgrupp"] ?? item.Storlek ?? item.Varunummer ?? item.Vnr);
+        if (!groupedBySizeGroup.has(key)) groupedBySizeGroup.set(key, []);
+        groupedBySizeGroup.get(key).push(item);
+    });
+
+    const alternatives = [];
+    groupedBySizeGroup.forEach(groupItems => {
+        const pvItem = groupItems.find(entry => getItemStatus(entry).trim().toUpperCase() === 'PV');
+        const fallbackCheapest = groupItems.reduce((lowest, entry) => {
+            if (!lowest) return entry;
+            return toNumber(entry["Försäljningspris"]) < toNumber(lowest["Försäljningspris"]) ? entry : lowest;
+        }, null);
+        const representative = pvItem || fallbackCheapest;
+        if (representative) alternatives.push(representative);
+    });
+
+    const hasOtherSizes = alternatives.some(item =>
+        String(item["Förpackningsstorleksgrupp"] ?? '') !== currentSizeGroup
+    );
+    if (!hasOtherSizes) return;
+
+    alternatives.sort((a, b) => toNumber(a.Storlek) - toNumber(b.Storlek));
+
+    const compareValues = alternatives
+        .map(item => {
+            const sizeValue = toNumber(item.Storlek);
+            const priceValue = toNumber(item["Försäljningspris"]);
+            if (!Number.isFinite(sizeValue) || sizeValue <= 0 || !Number.isFinite(priceValue)) return null;
+            return priceValue / sizeValue;
+        })
+        .filter(value => Number.isFinite(value));
+
+    const minCompare = compareValues.length > 0 ? Math.min(...compareValues) : null;
+    const maxCompare = compareValues.length > 0 ? Math.max(...compareValues) : null;
+
+    const section = document.createElement('div');
+    section.id = 'alt-package-sizes';
+    section.className = 'bleed-card alt-package-sizes-card';
+
+    const title = document.createElement('h3');
+    title.className = 'alt-package-sizes-title';
+    title.textContent = 'Samma substans och styrka i andra förpackningsstorlekar';
+
+    const subtitle = document.createElement('p');
+    subtitle.className = 'alt-package-sizes-subtitle';
+    subtitle.textContent = 'Samma substans och styrka – jämför förpackningsstorlekar. Scrolla i sidled och klicka för att öppna.';
+
+    const list = document.createElement('div');
+    list.className = 'alt-package-sizes-list';
+
+    alternatives.forEach(item => {
+        const rowButton = document.createElement('button');
+        rowButton.type = 'button';
+        rowButton.className = 'alt-package-size-row';
+
+        const isCurrentSize = String(item["Förpackningsstorleksgrupp"] ?? '') === currentSizeGroup;
+        if (isCurrentSize) {
+            rowButton.classList.add('is-current');
+        }
+
+        const sizeValue = toNumber(item.Storlek);
+        const priceValue = toNumber(item["Försäljningspris"]);
+        const unit = formatUnitSingular(item.Beredningsform || currentProduct.Beredningsform || currentSearch?.form || '');
+        const compareValue = Number.isFinite(sizeValue) && sizeValue > 0 && Number.isFinite(priceValue)
+            ? (priceValue / sizeValue)
+            : null;
+        const comparePrice = Number.isFinite(compareValue)
+            ? `${compareValue.toFixed(2).replace('.', ',')} kr/${unit}`
+            : '—';
+        const priceText = Number.isFinite(priceValue)
+            ? `${priceValue.toLocaleString('sv-SE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`
+            : '—';
+
+        let compareClass = '';
+        if (Number.isFinite(compareValue) && Number.isFinite(minCompare) && Number.isFinite(maxCompare) && minCompare !== maxCompare) {
+            if (Math.abs(compareValue - minCompare) < 0.000001) compareClass = ' alt-compare-lowest';
+            else if (Math.abs(compareValue - maxCompare) < 0.000001) compareClass = ' alt-compare-highest';
+        }
+
+        const sizeText = formatUnit(item.Beredningsform || currentProduct.Beredningsform || '', item.Storlek);
+        const currentBadge = isCurrentSize ? '<span class="alt-current-badge">Visas nu</span>' : '';
+
+        rowButton.innerHTML = `
+            <div class="alt-package-size-main">
+                <div class="alt-package-size-topline">
+                    <strong>${sizeText}</strong>
+                    ${currentBadge}
+                </div>
+                <span>${item.Företag || '—'}</span>
+            </div>
+            <div class="alt-package-size-prices">
+                <span class="alt-price">${priceText}</span>
+                <span class="alt-compare${compareClass}">${comparePrice}</span>
+            </div>
+        `;
+
+        rowButton.addEventListener('click', () => {
+            fetchLatestPV({
+                id: item["Utbytesgrupps ID"],
+                size_id: item["Förpackningsstorleksgrupp"],
+                sub: item.Substans,
+                str: item.Styrka,
+                form: item.Beredningsform,
+                vnr: item.Varunummer || item.Vnr
+            });
+            window.scrollTo(0, 0);
+        });
+
+        list.appendChild(rowButton);
+    });
+
+    section.appendChild(title);
+    section.appendChild(subtitle);
+    section.appendChild(list);
+    sectionContainer.appendChild(section);
 }
 
 document.addEventListener('click', function (e) {
@@ -1717,6 +1864,8 @@ function loadMedicineFromUrl() {
     if (!vnr) {
         // No VNR in URL - show landing page
         document.body.classList.remove('has-selection');
+        const existingAltSection = document.getElementById('alt-package-sizes');
+        if (existingAltSection) existingAltSection.remove();
         const resultsDiv = DOM.resultsDiv;
         if (resultsDiv) {
             resultsDiv.innerHTML = '';
@@ -1756,6 +1905,8 @@ window.addEventListener('popstate', function(event) {
     if (!vnr) {
         // No VNR - show landing page
         document.body.classList.remove('has-selection');
+        const existingAltSection = document.getElementById('alt-package-sizes');
+        if (existingAltSection) existingAltSection.remove();
         const resultsDiv = DOM.resultsDiv;
         if (resultsDiv) {
             resultsDiv.innerHTML = '';

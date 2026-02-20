@@ -305,10 +305,10 @@ function getTrendLabel(avgByMonth, chronological) {
     }
 
     if (diffPercent > 0) {
-        return { label: 'Stigande prisnivå', detail: `+${diffPercent.toFixed(1)}% sedan periodens start`, icon: 'trending_up' };
+        return { label: 'Stigande prisnivå', detail: `+${diffPercent.toFixed(1).replace('.', ',')}% sedan periodens start`, icon: 'trending_up' };
     }
 
-    return { label: 'Sjunkande prisnivå', detail: `${diffPercent.toFixed(1)}% sedan periodens start`, icon: 'trending_down' };
+    return { label: 'Sjunkande prisnivå', detail: `${diffPercent.toFixed(1).replace('.', ',')}% sedan periodens start`, icon: 'trending_down' };
 }
 
 function buildFluctuationItem(item) {
