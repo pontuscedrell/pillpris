@@ -56316,7 +56316,7 @@
         "Utbytesgrupps ID":112316
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Salipra",
         "Varunummer":472131,
         "Styrka":"0,5 mg \/ 2,5 mg",
@@ -81246,25 +81246,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Claversal",
-        "Varunummer":104016,
-        "Styrka":"500 mg",
-        "Förpackningsstorleksgrupp":"T21",
-        "Substans":"Mesalazin",
-        "Beredningsform":"Suppositorium",
-        "Storlek":60.0,
-        "Apotekens inköpspris":287.56,
-        "Försäljningspris":355.87,
-        "Inköpspris per minsta enhet":4.79,
-        "Försäljningspris per minsta enhet":5.93,
-        "NPL ID":20220107000022,
-        "NPL pack ID":20220916100029,
-        "Ursprung":"ParallelImport",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":111409
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Claversal",
         "Varunummer":151776,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T21",
@@ -81282,7 +81263,7 @@
         "Utbytesgrupps ID":111409
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Asacol®",
         "Varunummer":164871,
         "Styrka":"500 mg",
@@ -81301,7 +81282,7 @@
         "Utbytesgrupps ID":111409
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Mesalazin Orion",
         "Varunummer":192933,
         "Styrka":"500 mg",
@@ -81317,6 +81298,25 @@
         "NPL pack ID":20200210100017,
         "Ursprung":"Generics",
         "Företag":"Orion Pharma AB",
+        "Utbytesgrupps ID":111409
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Claversal",
+        "Varunummer":104016,
+        "Styrka":"500 mg",
+        "Förpackningsstorleksgrupp":"T21",
+        "Substans":"Mesalazin",
+        "Beredningsform":"Suppositorium",
+        "Storlek":60.0,
+        "Apotekens inköpspris":287.56,
+        "Försäljningspris":355.87,
+        "Inköpspris per minsta enhet":4.79,
+        "Försäljningspris per minsta enhet":5.93,
+        "NPL ID":20220107000022,
+        "NPL pack ID":20220916100029,
+        "Ursprung":"ParallelImport",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":111409
     },
     {
@@ -93690,25 +93690,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Olanzapine Glenmark",
-        "Varunummer":118811,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Olanzapin",
-        "Beredningsform":"Tablett",
-        "Storlek":56.0,
-        "Apotekens inköpspris":26.27,
-        "Försäljningspris":82.03,
-        "Inköpspris per minsta enhet":0.47,
-        "Försäljningspris per minsta enhet":1.46,
-        "NPL ID":20081211000045,
-        "NPL pack ID":20090216100292,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":111950
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Olanzapine Accord",
         "Varunummer":533395,
         "Styrka":"10 mg",
@@ -93727,7 +93708,7 @@
         "Utbytesgrupps ID":111950
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Olanzapin STADA",
         "Varunummer":135270,
         "Styrka":"10 mg",
@@ -93746,7 +93727,7 @@
         "Utbytesgrupps ID":111950
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Olanzapine Viatris",
         "Varunummer":70493,
         "Styrka":"10 mg",
@@ -93762,6 +93743,25 @@
         "NPL pack ID":20080929100283,
         "Ursprung":"Generics",
         "Företag":"Mylan AB",
+        "Utbytesgrupps ID":111950
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Olanzapine Glenmark",
+        "Varunummer":118811,
+        "Styrka":"10 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Olanzapin",
+        "Beredningsform":"Tablett",
+        "Storlek":56.0,
+        "Apotekens inköpspris":26.27,
+        "Försäljningspris":82.03,
+        "Inköpspris per minsta enhet":0.47,
+        "Försäljningspris per minsta enhet":1.46,
+        "NPL ID":20081211000045,
+        "NPL pack ID":20090216100292,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":111950
     },
     {
@@ -110258,25 +110258,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Pramipexol STADA",
-        "Varunummer":436795,
-        "Styrka":"0,18 mg (Grupp B)",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Pramipexol",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":108.0,
-        "Försäljningspris":170.03,
-        "Inköpspris per minsta enhet":1.08,
-        "Försäljningspris per minsta enhet":1.7,
-        "NPL ID":20071031000035,
-        "NPL pack ID":20080214101674,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":112496
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Derinik",
         "Varunummer":379409,
         "Styrka":"0,18 mg (Grupp B)",
@@ -110292,6 +110273,25 @@
         "NPL pack ID":20080515100468,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":112496
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Pramipexol STADA",
+        "Varunummer":436795,
+        "Styrka":"0,18 mg (Grupp B)",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Pramipexol",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":108.0,
+        "Försäljningspris":170.03,
+        "Inköpspris per minsta enhet":1.08,
+        "Försäljningspris per minsta enhet":1.7,
+        "NPL ID":20071031000035,
+        "NPL pack ID":20080214101674,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":112496
     },
     {
@@ -114362,25 +114362,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Repaglinid Actavis",
-        "Varunummer":599442,
-        "Styrka":"1 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Repaglinid",
-        "Beredningsform":"Tablett",
-        "Storlek":90.0,
-        "Apotekens inköpspris":57.5,
-        "Försäljningspris":116.54,
-        "Inköpspris per minsta enhet":0.64,
-        "Försäljningspris per minsta enhet":1.29,
-        "NPL ID":20081210000060,
-        "NPL pack ID":20090325100077,
-        "Ursprung":"Generics",
-        "Företag":"Teva Sweden AB",
-        "Utbytesgrupps ID":111132
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Repaglinid STADA",
         "Varunummer":552080,
         "Styrka":"1 mg",
@@ -114399,7 +114380,7 @@
         "Utbytesgrupps ID":111132
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Repaglinide Krka",
         "Varunummer":39168,
         "Styrka":"1 mg",
@@ -114434,6 +114415,25 @@
         "NPL pack ID":20011115100053,
         "Ursprung":"ParallelDistribution",
         "Företag":"Orifarm AB",
+        "Utbytesgrupps ID":111132
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Repaglinid Actavis",
+        "Varunummer":599442,
+        "Styrka":"1 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Repaglinid",
+        "Beredningsform":"Tablett",
+        "Storlek":90.0,
+        "Apotekens inköpspris":57.5,
+        "Försäljningspris":116.54,
+        "Inköpspris per minsta enhet":0.64,
+        "Försäljningspris per minsta enhet":1.29,
+        "NPL ID":20081210000060,
+        "NPL pack ID":20090325100077,
+        "Ursprung":"Generics",
+        "Företag":"Teva Sweden AB",
         "Utbytesgrupps ID":111132
     },
     {
