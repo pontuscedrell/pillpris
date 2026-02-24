@@ -35892,25 +35892,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Emtricitabine\/Tenofovir disoproxil Tillomed",
-        "Varunummer":560959,
-        "Styrka":"200 mg\/245 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Emtricitabin + tenofovirdisoproxil",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":72.0,
-        "Försäljningspris":132.56,
-        "Inköpspris per minsta enhet":2.4,
-        "Försäljningspris per minsta enhet":4.42,
-        "NPL ID":20180802000010,
-        "NPL pack ID":20190426100065,
-        "Ursprung":"Generics",
-        "Företag":"FrostPharma AB",
-        "Utbytesgrupps ID":111647
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Emtricitabine\/Tenofovir disoproxil Zentiva",
         "Varunummer":585354,
         "Styrka":"200 mg\/245 mg",
@@ -35929,7 +35910,7 @@
         "Utbytesgrupps ID":111647
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Emtricitabine\/Tenofovir disoproxil Sandoz",
         "Varunummer":103728,
         "Styrka":"200 mg\/245 mg",
@@ -35948,7 +35929,7 @@
         "Utbytesgrupps ID":111647
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Emtricitabine\/Tenofovir disoproxil STADA",
         "Varunummer":571617,
         "Styrka":"200 mg\/245 mg",
@@ -35964,6 +35945,25 @@
         "NPL pack ID":20160203100045,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111647
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Emtricitabine\/Tenofovir disoproxil Tillomed",
+        "Varunummer":560959,
+        "Styrka":"200 mg\/245 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Emtricitabin + tenofovirdisoproxil",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":72.0,
+        "Försäljningspris":132.56,
+        "Inköpspris per minsta enhet":2.4,
+        "Försäljningspris per minsta enhet":4.42,
+        "NPL ID":20180802000010,
+        "NPL pack ID":20190426100065,
+        "Ursprung":"Generics",
+        "Företag":"FrostPharma AB",
         "Utbytesgrupps ID":111647
     },
     {
@@ -82841,25 +82841,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Metoclopramide Medical Valley",
-        "Varunummer":464985,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T19",
-        "Substans":"Metoklopramid",
-        "Beredningsform":"Tablett",
-        "Storlek":45.0,
-        "Apotekens inköpspris":39.82,
-        "Försäljningspris":97.0,
-        "Inköpspris per minsta enhet":0.88,
-        "Försäljningspris per minsta enhet":2.16,
-        "NPL ID":20230829000057,
-        "NPL pack ID":20231121100445,
-        "Ursprung":"Generics",
-        "Företag":"Medical Valley Invest AB",
-        "Utbytesgrupps ID":111146
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Metoclopramide Orion",
         "Varunummer":585568,
         "Styrka":"10 mg",
@@ -82878,7 +82859,7 @@
         "Utbytesgrupps ID":111146
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Metoclopramide Accord",
         "Varunummer":372354,
         "Styrka":"10 mg",
@@ -82894,6 +82875,25 @@
         "NPL pack ID":20151217101012,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":111146
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Metoclopramide Medical Valley",
+        "Varunummer":464985,
+        "Styrka":"10 mg",
+        "Förpackningsstorleksgrupp":"T19",
+        "Substans":"Metoklopramid",
+        "Beredningsform":"Tablett",
+        "Storlek":45.0,
+        "Apotekens inköpspris":39.82,
+        "Försäljningspris":97.0,
+        "Inköpspris per minsta enhet":0.88,
+        "Försäljningspris per minsta enhet":2.16,
+        "NPL ID":20230829000057,
+        "NPL pack ID":20231121100445,
+        "Ursprung":"Generics",
+        "Företag":"Medical Valley Invest AB",
         "Utbytesgrupps ID":111146
     },
     {
@@ -106934,25 +106934,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Pioglitazone Accord",
-        "Varunummer":457575,
-        "Styrka":"30 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Pioglitazon",
-        "Beredningsform":"Tablett",
-        "Storlek":90.0,
-        "Apotekens inköpspris":191.0,
-        "Försäljningspris":255.94,
-        "Inköpspris per minsta enhet":2.12,
-        "Försäljningspris per minsta enhet":2.84,
-        "NPL ID":20101223000144,
-        "NPL pack ID":20160201100146,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"2care4 ApS",
-        "Utbytesgrupps ID":111080
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Pioglitazone Accord",
         "Varunummer":433232,
         "Styrka":"30 mg",
         "Förpackningsstorleksgrupp":"T23",
@@ -106970,7 +106951,7 @@
         "Utbytesgrupps ID":111080
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Pioglitazone Actavis",
         "Varunummer":409720,
         "Styrka":"30 mg",
@@ -106986,6 +106967,25 @@
         "NPL pack ID":20110206100696,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":111080
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Pioglitazone Accord",
+        "Varunummer":457575,
+        "Styrka":"30 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Pioglitazon",
+        "Beredningsform":"Tablett",
+        "Storlek":90.0,
+        "Apotekens inköpspris":191.0,
+        "Försäljningspris":255.94,
+        "Inköpspris per minsta enhet":2.12,
+        "Försäljningspris per minsta enhet":2.84,
+        "NPL ID":20101223000144,
+        "NPL pack ID":20160201100146,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"2care4 ApS",
         "Utbytesgrupps ID":111080
     },
     {
@@ -145902,25 +145902,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Zolmitriptan Rivopharm",
-        "Varunummer":400372,
-        "Styrka":"2,5 mg",
-        "Förpackningsstorleksgrupp":"T6",
-        "Substans":"Zolmitriptan",
-        "Beredningsform":"Munsönderfallande tablett",
-        "Storlek":6.0,
-        "Apotekens inköpspris":163.97,
-        "Försäljningspris":227.96,
-        "Inköpspris per minsta enhet":27.33,
-        "Försäljningspris per minsta enhet":37.99,
-        "NPL ID":20080131000050,
-        "NPL pack ID":20080604101024,
-        "Ursprung":"Generics",
-        "Företag":"SanoSwiss UAB",
-        "Utbytesgrupps ID":112359
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Zolmitriptan STADA",
         "Varunummer":507587,
         "Styrka":"2,5 mg",
@@ -145955,6 +145936,25 @@
         "NPL pack ID":20100517100416,
         "Ursprung":"Generics",
         "Företag":"Medical Valley Invest AB",
+        "Utbytesgrupps ID":112359
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Zolmitriptan Rivopharm",
+        "Varunummer":400372,
+        "Styrka":"2,5 mg",
+        "Förpackningsstorleksgrupp":"T6",
+        "Substans":"Zolmitriptan",
+        "Beredningsform":"Munsönderfallande tablett",
+        "Storlek":6.0,
+        "Apotekens inköpspris":163.97,
+        "Försäljningspris":227.96,
+        "Inköpspris per minsta enhet":27.33,
+        "Försäljningspris per minsta enhet":37.99,
+        "NPL ID":20080131000050,
+        "NPL pack ID":20080604101024,
+        "Ursprung":"Generics",
+        "Företag":"SanoSwiss UAB",
         "Utbytesgrupps ID":112359
     },
     {
