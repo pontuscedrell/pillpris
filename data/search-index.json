@@ -5728,6 +5728,33 @@
     }
   },
   {
+    "id": "111829",
+    "size_id": "T23",
+    "sub": "Bexaroten",
+    "form": "Kapsel, mjuk",
+    "str": "75 mg",
+    "size": "90–105 st",
+    "names": [
+      "Bexarotene Amdipharm",
+      "Targretin"
+    ],
+    "vnr": [
+      "376298",
+      "393513",
+      "431604",
+      "474378"
+    ],
+    "packaging": [
+      "Burk"
+    ],
+    "packagingMap": {
+      "474378": "Burk",
+      "376298": "Burk",
+      "393513": "Burk",
+      "431604": "Burk"
+    }
+  },
+  {
     "id": "111456",
     "size_id": "T18",
     "sub": "Bikalutamid",
