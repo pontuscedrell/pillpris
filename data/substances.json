@@ -1910,6 +1910,9 @@
             "Inhalationsspray": {
                 "125 mikrog/dos": [
                     "120"
+                ],
+                "125 mikrogram/dos": [
+                    "120"
                 ]
             },
             "Nässpray": {
@@ -6126,6 +6129,13 @@
                 ]
             }
         },
+        "Efavirenz + emtricitabin + tenofovirdisoproxil": {
+            "Tablett": {
+                "600 mg/200 mg/245 mg": [
+                    "30"
+                ]
+            }
+        },
         "Eltrombopag": {
             "Tablett": {
                 "25 mg": [
@@ -6402,7 +6412,7 @@
                 ]
             }
         },
-        "Triamcinolohexacetonid": {
+        "Triamcinolonhexacetonid": {
             "Injektionsvätska, suspension": {
                 "20 mg/ml": [
                     "1"
@@ -6420,6 +6430,13 @@
                 "50 mg/g": [
                     "350",
                     "700"
+                ]
+            }
+        },
+        "Triamcinolohexacetonid": {
+            "Injektionsvätska, suspension": {
+                "20 mg/ml": [
+                    "1"
                 ]
             }
         },

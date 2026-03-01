@@ -2276,9 +2276,11 @@
     "names": [
       "Amimox®",
       "Amoxicillin 2care4",
+      "Amoxicillin Abacus Medicine",
       "Amoxicillin Ebb"
     ],
     "vnr": [
+      "143887",
       "431489",
       "468983",
       "481089",
@@ -2292,6 +2294,7 @@
       "481089": "Blister",
       "468983": "Burk",
       "431489": "Blister",
+      "143887": "Blister",
       "552946": "Blister"
     }
   },
@@ -2328,11 +2331,13 @@
     "names": [
       "Amimox®",
       "Amoxicillin 2care4",
+      "Amoxicillin Abacus Medicine",
       "Amoxicillin Ebb",
       "Amoxicillin Sandoz"
     ],
     "vnr": [
       "449964",
+      "497177",
       "67981",
       "77145",
       "8276"
@@ -2344,6 +2349,7 @@
     "packagingMap": {
       "8276": "Burk",
       "67981": "Blister",
+      "497177": "Blister",
       "449964": "Blister",
       "77145": "Blister"
     }
@@ -5576,13 +5582,15 @@
     "size": "90–105 st",
     "names": [
       "Betahistin 2care4",
+      "Betahistin Abacus Medicine",
       "Betahistin Ebb",
       "Betahistine STADA"
     ],
     "vnr": [
       "116577",
       "178769",
-      "372683"
+      "372683",
+      "407644"
     ],
     "packaging": [
       "Blister",
@@ -5590,6 +5598,7 @@
     ],
     "packagingMap": {
       "372683": "Burk",
+      "407644": "Blister",
       "116577": "Blister",
       "178769": "Blister"
     }
@@ -5603,12 +5612,14 @@
     "size": "90–105 st",
     "names": [
       "Betahistin 2care4",
+      "Betahistin Abacus Medicine",
       "Betahistin Ebb",
       "Betahistine STADA"
     ],
     "vnr": [
       "26999",
       "371835",
+      "558497",
       "569075"
     ],
     "packaging": [
@@ -5617,6 +5628,7 @@
     ],
     "packagingMap": {
       "26999": "Burk",
+      "558497": "Blister",
       "569075": "Blister",
       "371835": "Blister"
     }
@@ -5713,6 +5725,33 @@
     ],
     "packagingMap": {
       "8243": "Plastflaska"
+    }
+  },
+  {
+    "id": "111829",
+    "size_id": "T23",
+    "sub": "Bexaroten",
+    "form": "Kapsel, mjuk",
+    "str": "75 mg",
+    "size": "90–105 st",
+    "names": [
+      "Bexarotene Amdipharm",
+      "Targretin"
+    ],
+    "vnr": [
+      "376298",
+      "393513",
+      "431604",
+      "474378"
+    ],
+    "packaging": [
+      "Burk"
+    ],
+    "packagingMap": {
+      "474378": "Burk",
+      "376298": "Burk",
+      "393513": "Burk",
+      "431604": "Burk"
     }
   },
   {
@@ -7698,7 +7737,7 @@
   {
     "id": "112032",
     "size_id": "TN28",
-    "sub": "Buprenorfin + Naloxon",
+    "sub": "Buprenorfin + naloxon",
     "form": "Resoriblett, sublingual",
     "str": "2 mg/0,5 mg",
     "size": "28 st",
@@ -7729,7 +7768,7 @@
   {
     "id": "112033",
     "size_id": "TN7",
-    "sub": "Buprenorfin + Naloxon",
+    "sub": "Buprenorfin + naloxon",
     "form": "Resoriblett, sublingual",
     "str": "8 mg/2 mg",
     "size": "7 st",
@@ -7759,7 +7798,7 @@
   {
     "id": "112033",
     "size_id": "TN28",
-    "sub": "Buprenorfin + Naloxon",
+    "sub": "Buprenorfin + naloxon",
     "form": "Resoriblett, sublingual",
     "str": "8 mg/2 mg",
     "size": "28 st",
@@ -7792,7 +7831,7 @@
   {
     "id": "112032",
     "size_id": "TN7",
-    "sub": "Buprenorfin + Naloxon",
+    "sub": "Buprenorfin + naloxon",
     "form": "Resoriblett, sublingual",
     "str": "2 mg/0,5 mg",
     "size": "7 st",
@@ -12990,7 +13029,7 @@
   {
     "id": "111649",
     "size_id": "T18",
-    "sub": "Efavirenz + Emtricitabin + Tenofovirdisoproxil",
+    "sub": "Efavirenz + emtricitabin + tenofovirdisoproxil",
     "form": "Tablett",
     "str": "600 mg/200 mg/245 mg",
     "size": "28–32 st",
@@ -43842,6 +43881,26 @@
     }
   },
   {
+    "id": "113982",
+    "size_id": "T21",
+    "sub": "Raltegravir",
+    "form": "Tablett",
+    "str": "600 mg",
+    "size": "57–63 st",
+    "names": [
+      "ISENTRESS"
+    ],
+    "vnr": [
+      "564264"
+    ],
+    "packaging": [
+      "Burk"
+    ],
+    "packagingMap": {
+      "564264": "Burk"
+    }
+  },
+  {
     "id": "111837",
     "size_id": "T23",
     "sub": "Ramipril",
@@ -53337,7 +53396,7 @@
   {
     "id": "111562",
     "size_id": "F1A",
-    "sub": "Triamcinolohexacetonid",
+    "sub": "Triamcinolonhexacetonid",
     "form": "Injektionsvätska, suspension",
     "str": "20 mg/ml",
     "size": "F1A",
@@ -53360,7 +53419,7 @@
   {
     "id": "111562",
     "size_id": "F1B",
-    "sub": "Triamcinolohexacetonid",
+    "sub": "Triamcinolonhexacetonid",
     "form": "Injektionsvätska, suspension",
     "str": "20 mg/ml",
     "size": "F1B",
