@@ -2189,11 +2189,19 @@
             "Lösning för nebulisator": {
                 "0,25 mg/ml (endos)": [
                     "120"
+                ],
+                "0,25 mg/ml": [
+                    "120"
                 ]
             }
         },
         "Ipratropium + salbutamol": {
             "Lösning för nebulisator, endosbehållare": {
+                "0,5 mg / 2,5 mg": [
+                    "150"
+                ]
+            },
+            "Lösning för nebulisator": {
                 "0,5 mg / 2,5 mg": [
                     "150"
                 ]
