@@ -1,5 +1,6 @@
 let searchIndex = []; // Ändra från tree = {} till searchIndex = []
 let availableMonths = [];
+let packagingMap = {}; // New: Global packaging map from MEDPrice.xlsx
 let selectedMonth = "";
 let systemMonthCode = null;
 let currentSearch = null;
@@ -9,6 +10,105 @@ let lastPVPrice = 0;
 let selectedRowId = null;
 let chartPriceType = "pv"; // "pv" or "cheapest"
 
+// Constants
+const SEARCH_RESULTS_LIMIT = 20;
+const PACKAGE_SIZE_SAVINGS_THRESHOLD = 0.05; // 5%
+const PRICE_SAVINGS_MIN = 1; // Minimum kr savings to show alerts
+
+// DOM Element Cache - populated in init()
+const DOM = {
+    searchInput: null,
+    customSelect: null,
+    packageList: null,
+    resultsDiv: null,
+    chartCont: null,
+    monthDropdown: null,
+    headerPeriod: null,
+    clearSearch: null,
+    monthPickerBtn: null,
+    monthPickerDropdown: null,
+    darkModeToggle: null,
+    priceCardArea: null,
+    tableArea: null,
+    monthWarningBanner: null,
+};
+
+function cacheDOM() {
+    DOM.searchInput = document.getElementById('sub-input');
+    DOM.customSelect = document.getElementById('custom-select');
+    DOM.packageList = document.getElementById('package-list');
+    DOM.resultsDiv = document.getElementById('results');
+    DOM.chartCont = document.getElementById('chart-container');
+    DOM.monthDropdown = document.getElementById('month-select-main');
+    DOM.headerPeriod = document.getElementById('header-period');
+    DOM.clearSearch = document.getElementById('clear-search');
+    DOM.monthPickerBtn = document.getElementById('month-picker-btn');
+    DOM.monthPickerDropdown = document.getElementById('month-picker-dropdown');
+    DOM.darkModeToggle = document.getElementById('dark-mode-toggle');
+    DOM.priceCardArea = document.getElementById('price-card-area');
+    DOM.tableArea = document.getElementById('table-area');
+    DOM.monthWarningBanner = document.getElementById('month-warning-banner');
+    
+    // Attach event handlers after DOM is cached
+    attachEventHandlers();
+}
+
+// Dark mode initialization
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+}
+
+// Dark mode toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if (darkModeToggle) {
+        const icon = darkModeToggle.querySelector('.material-symbols-outlined');
+        
+        // Set initial icon
+        if (document.body.classList.contains('dark-mode')) {
+            icon.textContent = 'light_mode';
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                icon.textContent = 'light_mode';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                icon.textContent = 'dark_mode';
+            }
+        });
+    }
+});
+
+function cloneTemplate(id) {
+    const tpl = document.getElementById(id);
+    return tpl ? tpl.content.cloneNode(true) : null;
+}
+
+function replaceContent(parent, selectorOrFragment, content) {
+    if (!parent) return;
+    
+    // If content is provided, we're using selector mode: replaceContent(parent, '.selector', 'html')
+    if (arguments.length === 3) {
+        const target = parent.querySelector(selectorOrFragment);
+        if (target) target.innerHTML = content;
+    } 
+    // Otherwise, we're replacing the parent's children with a fragment: replaceContent(parent, fragment)
+    else {
+        parent.replaceChildren(selectorOrFragment);
+    }
+}
+
+/**
+ * Determines the status label (PV, R1, R2) for a medicine item.
+ * @param {Object} item - Medicine item from data file
+ * @param {string} [item.Status] - Explicit status field
+ * @param {number} [item.Rang] - Numeric ranking (1=PV, 2=R1, 3=R2)
+ * @returns {string} Status label ("PV", "R1", "R2", or empty string)
+ */
 function getItemStatus(item) {
     const rawStatus = (item?.Status ?? "").toString().trim();
     if (rawStatus) return rawStatus;
@@ -20,12 +120,25 @@ function getItemStatus(item) {
     return "";
 }
 
+/**
+ * Initializes the application by loading data, caching DOM elements,
+ * and setting up the initial UI state.
+ * @async
+ * @throws {Error} If data files cannot be loaded
+ */
 async function init() {
     try {
+        // Cache DOM elements for performance
+        cacheDOM();
+        
         // Om din fil heter substances.json men innehåller den nya index-listan:
         const cacheBust = `v=${Date.now()}`;
         const res = await fetch(`data/search-index.json?${cacheBust}`);
         searchIndex = await res.json();
+
+        // Load packaging map from MEDPrice.xlsx
+        const packRes = await fetch(`data/packaging-map.json?${cacheBust}`);
+        packagingMap = await packRes.json();
 
         // Ladda månader (antingen från separat fil eller från indexet)
         const resMonths = await fetch(`data/months.json?${cacheBust}`);
@@ -39,209 +152,265 @@ async function init() {
         const mm = (now.getMonth() + 1).toString().padStart(2, '0');
         systemMonthCode = parseInt(yy + mm);
 
-        selectedMonth = availableMonths[0] > systemMonthCode
-            ? availableMonths[0]
-            : (availableMonths.includes(systemMonthCode) ? systemMonthCode : availableMonths[0]);
+        // Prefer the current month if available, otherwise use the closest month
+        if (availableMonths.includes(systemMonthCode)) {
+            selectedMonth = systemMonthCode;
+        } else {
+            // Find the closest earlier month, or fall back to the first available month
+            selectedMonth = availableMonths.find(m => m <= systemMonthCode) || availableMonths[0];
+        }
         
         // Uppdatera UI
-        const monthDropdown = document.getElementById('month-select-main');
-        if (monthDropdown) {
-            monthDropdown.innerHTML = availableMonths.map(m => {
+        if (DOM.monthDropdown) {
+            DOM.monthDropdown.replaceChildren();
+            availableMonths.forEach(m => {
+                const option = document.createElement('option');
                 const prelimTag = isPrelimMonth(m) ? ' (Preliminär)' : '';
-                return `<option value="${m}" ${m == selectedMonth ? 'selected' : ''}>${formatMedicineDate(m)}${prelimTag}</option>`;
-            }).join('');
-            monthDropdown.value = selectedMonth;
+                option.value = m;
+                option.textContent = `${formatMedicineDate(m)}${prelimTag}`;
+                if (m == selectedMonth) {
+                    option.selected = true;
+                }
+                DOM.monthDropdown.appendChild(option);
+            });
         }
         
         // Update header with current month
-        const headerPeriod = document.getElementById('header-period');
-        if (headerPeriod) {
+        if (DOM.headerPeriod) {
             const prelimTag = isPrelimMonth(selectedMonth) ? " • Preliminär" : "";
-            headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}${prelimTag}`;
+            DOM.headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}${prelimTag}`;
         }
+        
+        // Load medicine from URL if VNR is present
+        loadMedicineFromUrl();
     } catch (e) {
         console.error("Kunde inte ladda startdata", e);
     }
 }
 
-document.getElementById('sub-input').oninput = function () {
-    const searchTerm = this.value.toLowerCase().trim();
-    const listContainer = document.getElementById('package-list');
-    const dropdown = document.getElementById('custom-select');
-    const clearBtn = document.getElementById('clear-search');
-
-    selectedDropdownIndex = -1; // Reset selection when search updates
-    originalSearchInput = this.value; // Store original search
-
-    // Show/hide clear button
-    clearBtn.style.display = this.value.length > 0 ? 'flex' : 'none';
-
-    listContainer.innerHTML = "";
-
-    if (searchTerm.length < 2) {
-        dropdown.style.display = "none";
-        return;
-    }
-
-    // 1. Filtrera sökindexet
-    let matches = searchIndex.filter(item => {
-        const fullText = (item.sub + ' ' + item.str).toLowerCase();
-        const subMatch = item.sub.toLowerCase().includes(searchTerm);
-        const nameMatch = item.names.some(name => name.toLowerCase().includes(searchTerm));
-        const fullMatch = fullText.includes(searchTerm);
-        
-        // Also check if search term without "mg" matches
-        const searchTermNoMg = searchTerm.replace(/\s*mg\s*$/i, '').trim();
-        const subMatchNoMg = searchTermNoMg && item.sub.toLowerCase().includes(searchTermNoMg);
-        const nameMatchNoMg = searchTermNoMg && item.names.some(name => name.toLowerCase().includes(searchTermNoMg));
-        const fullMatchNoMg = searchTermNoMg && fullText.includes(searchTermNoMg);
-        
-        // Check if search contains both substance and strength (e.g., "Etoricoxib 90")
-        // Split on numbers to handle multi-part searches, but be flexible with delimiters
-        let multiPartMatch = false;
-        
-        // Extract just the substance part (everything before first number or special chars)
-        const subPartMatch = searchTerm.match(/^([a-zåäö\s\+\-]+?)(?:\s*(?:\d|\/|$))/i);
-        if (subPartMatch) {
-            const subPart = subPartMatch[1].trim().toLowerCase();
-            // Check if item.sub contains the substance part
-            if (item.sub.toLowerCase().includes(subPart)) {
-                // Also check if the strength/numbers part matches
-                const numberPart = searchTerm.substring(subPartMatch[1].length).trim().toLowerCase();
-                if (!numberPart || item.str.toLowerCase().includes(numberPart)) {
-                    multiPartMatch = true;
-                }
-            }
-        }
-        
-        return subMatch || nameMatch || subMatchNoMg || nameMatchNoMg || multiPartMatch || fullMatch || fullMatchNoMg;
-    });
-
-    // Store matches for keyboard navigation
-    lastDropdownMatches = matches.slice(0, 20);
-
-    // 2. Avancerad sortering
-    matches.sort((a, b) => {
-        // Nivå 1: Exakt start-matchning (Prioritera det användaren börjat skriva)
-        const aStarts = a.sub.toLowerCase().startsWith(searchTerm);
-        const bStarts = b.sub.toLowerCase().startsWith(searchTerm);
-        if (aStarts !== bStarts) return aStarts ? -1 : 1;
-
-        // Nivå 2: Substansnamn (Alfabetiskt)
-        if (a.sub.toLowerCase() !== b.sub.toLowerCase()) {
-            return a.sub.localeCompare(b.sub);
-        }
-
-        // Nivå 3: Styrka (Numeriskt - t.ex. 5 mg < 10 mg)
-        const strengthA = parseFloat(a.str.replace(',', '.')) || 0;
-        const strengthB = parseFloat(b.str.replace(',', '.')) || 0;
-        if (strengthA !== strengthB) {
-            return strengthA - strengthB;
-        }
-
-        // Nivå 4: Förpackningsstorlek (Numeriskt)
-        const sizeA = parseFloat(a.size) || 0;
-        const sizeB = parseFloat(b.size) || 0;
-        return sizeA - sizeB;
-    });
-
-    // Update stored matches after sorting
-    lastDropdownMatches = matches.slice(0, 20);
-
-    // 3. Rendera resultaten
-    if (matches.length > 0) {
-        // Vi begränsar till 20 träffar för prestanda
-        matches.slice(0, 20).forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'dropdown-item';
-            
-            // Highlighta substansen i fetstil
-            div.innerHTML = `
-                <div class="item-line1"><strong>${item.sub}</strong> ${item.str}</div>
-                <div class="item-line2">${item.form} | ${item.size}</div>
-            `;
-
-            div.onclick = function () {
-                document.getElementById('sub-input').value = item.sub + ' ' + item.str;
-                dropdown.style.display = "none";
-                
-                // Använd ID:n från indexet för en exakt och snabb sökning i data-filen
-                fetchLatestPV(item); 
-            };
-            listContainer.appendChild(div);
-        });
-        dropdown.style.display = "block";
-    } else {
-        // Show no results message in dropdown
-        const noResultsDiv = document.createElement('div');
-        noResultsDiv.className = 'dropdown-item';
-        noResultsDiv.innerHTML = `
-            <div class="item-line1">Varför finns inte min vara?</div>
-            <div class="item-line2">Alla läkemedel upphandlas inte med periodens vara. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a></div>
-        `;
-        listContainer.appendChild(noResultsDiv);
-        dropdown.style.display = "block";
-    }
-};
-
-document.getElementById('sub-input').onfocus = function () {
-    const searchTerm = this.value.toLowerCase().trim();
-    if (searchTerm.length >= 2) {
-        this.oninput();
-    }
-};
-
-document.getElementById('clear-search').onclick = function () {
-    const input = document.getElementById('sub-input');
-    const dropdown = document.getElementById('custom-select');
-    input.value = '';
-    this.style.display = 'none';
-    dropdown.style.display = 'none';
-    input.focus();
-};
-
-// Keyboard navigation for search dropdown
+// Keyboard navigation for search dropdown - declare variables before attachEventHandlers
 let selectedDropdownIndex = -1;
 let lastDropdownMatches = [];
 let originalSearchInput = '';
 
-document.getElementById('sub-input').onkeydown = function (e) {
-    const dropdown = document.getElementById('custom-select');
-    const listContainer = document.getElementById('package-list');
-    const items = listContainer.querySelectorAll('.dropdown-item');
+function attachEventHandlers() {
+    if (!DOM.searchInput) return; // Exit if DOM not cached
     
-    if (dropdown.style.display === 'none') return;
-    
-    switch(e.key) {
-        case 'ArrowDown':
-            e.preventDefault();
-            selectedDropdownIndex = Math.min(selectedDropdownIndex + 1, items.length - 1);
-            highlightDropdownItem(items, selectedDropdownIndex);
-            updateInputFromSelection(selectedDropdownIndex);
-            break;
-        case 'ArrowUp':
-            e.preventDefault();
-            selectedDropdownIndex = Math.max(selectedDropdownIndex - 1, -1);
-            highlightDropdownItem(items, selectedDropdownIndex);
-            updateInputFromSelection(selectedDropdownIndex);
-            break;
-        case 'Enter':
-            e.preventDefault();
-            if (selectedDropdownIndex >= 0 && selectedDropdownIndex < items.length) {
-                items[selectedDropdownIndex].click();
-                selectedDropdownIndex = -1;
+    // Search input - oninput event
+    DOM.searchInput.addEventListener('input', function () {
+        const searchTerm = this.value.toLowerCase().trim();
+        const listContainer = DOM.packageList;
+        const dropdown = DOM.customSelect;
+        const clearBtn = DOM.clearSearch;
+
+        selectedDropdownIndex = -1; // Reset selection when search updates
+        originalSearchInput = this.value; // Store original search
+
+        // Show/hide clear button
+        clearBtn.style.display = this.value.length > 0 ? 'flex' : 'none';
+
+        listContainer.innerHTML = "";
+
+        if (searchTerm.length < 2) {
+            dropdown.style.display = "none";
+            return;
+        }
+
+        // 1. Filtrera sökindexet
+        let matches = searchIndex.filter(item => {
+            const fullText = (item.sub + ' ' + item.str).toLowerCase();
+            const subMatch = item.sub.toLowerCase().includes(searchTerm);
+            const nameMatch = item.names.some(name => name.toLowerCase().includes(searchTerm));
+            const fullMatch = fullText.includes(searchTerm);
+            // Also check VNR (Varunummer)
+            const vnrMatch = item.vnr && (
+                Array.isArray(item.vnr) 
+                    ? item.vnr.some(v => String(v).includes(searchTerm))
+                    : String(item.vnr).includes(searchTerm)
+            );
+            
+            // Also check if search term without "mg" matches
+            const searchTermNoMg = searchTerm.replace(/\s*mg\s*$/i, '').trim();
+            const subMatchNoMg = searchTermNoMg && item.sub.toLowerCase().includes(searchTermNoMg);
+            const nameMatchNoMg = searchTermNoMg && item.names.some(name => name.toLowerCase().includes(searchTermNoMg));
+            const fullMatchNoMg = searchTermNoMg && fullText.includes(searchTermNoMg);
+            
+            // Check if search contains both substance and strength (e.g., "Etoricoxib 90")
+            // Split on numbers to handle multi-part searches, but be flexible with delimiters
+            let multiPartMatch = false;
+            
+            // Extract just the substance part (everything before first number or special chars)
+            const subPartMatch = searchTerm.match(/^([a-zåäö\s\+\-]+?)(?:\s*(?:\d|\/|$))/i);
+            if (subPartMatch) {
+                const subPart = subPartMatch[1].trim().toLowerCase();
+                // Check if item.sub contains the substance part
+                if (item.sub.toLowerCase().includes(subPart)) {
+                    // Also check if the strength/numbers part matches
+                    const numberPart = searchTerm.substring(subPartMatch[1].length).trim().toLowerCase();
+                    if (!numberPart || item.str.toLowerCase().includes(numberPart)) {
+                        multiPartMatch = true;
+                    }
+                }
             }
-            break;
-        case 'Escape':
-            dropdown.style.display = 'none';
-            selectedDropdownIndex = -1;
-            document.getElementById('sub-input').value = originalSearchInput;
-            break;
-    }
-};
+            
+            return subMatch || nameMatch || subMatchNoMg || nameMatchNoMg || multiPartMatch || fullMatch || fullMatchNoMg || vnrMatch;
+        });
+
+        // Store matches for keyboard navigation
+        lastDropdownMatches = matches.slice(0, SEARCH_RESULTS_LIMIT);
+
+        // 2. Avancerad sortering
+        matches.sort((a, b) => {
+            // Nivå 1: Exakt start-matchning (Prioritera det användaren börjat skriva)
+            const aStarts = a.sub.toLowerCase().startsWith(searchTerm);
+            const bStarts = b.sub.toLowerCase().startsWith(searchTerm);
+            if (aStarts !== bStarts) return aStarts ? -1 : 1;
+
+            // Nivå 2: Substansnamn (Alfabetiskt)
+            if (a.sub.toLowerCase() !== b.sub.toLowerCase()) {
+                return a.sub.localeCompare(b.sub);
+            }
+
+            // Nivå 3: Styrka (Numeriskt - t.ex. 5 mg < 10 mg)
+            const strengthA = parseFloat(a.str.replace(',', '.')) || 0;
+            const strengthB = parseFloat(b.str.replace(',', '.')) || 0;
+            if (strengthA !== strengthB) {
+                return strengthA - strengthB;
+            }
+
+            // Nivå 4: Förpackningsstorlek (Numeriskt)
+            const sizeA = parseFloat(a.size) || 0;
+            const sizeB = parseFloat(b.size) || 0;
+            return sizeA - sizeB;
+        });
+
+        // Update stored matches after sorting
+        lastDropdownMatches = matches.slice(0, SEARCH_RESULTS_LIMIT);
+
+        // 3. Rendera resultaten
+        if (matches.length > 0) {
+            // Vi begränsar till SEARCH_RESULTS_LIMIT träffar för prestanda
+            // Use DocumentFragment to batch DOM appends for better performance
+            const fragment = document.createDocumentFragment();
+            
+            matches.slice(0, SEARCH_RESULTS_LIMIT).forEach(item => {
+                const itemTemplate = cloneTemplate('template-dropdown-item');
+                if (!itemTemplate) return;
+                const div = itemTemplate.querySelector('.dropdown-item');
+                const subEl = div.querySelector('[data-field="sub"]');
+                const strEl = div.querySelector('[data-field="str"]');
+                const metaEl = div.querySelector('[data-field="meta"]');
+
+                if (subEl) subEl.textContent = item.sub;
+                if (strEl) strEl.textContent = item.str;
+                if (metaEl) metaEl.textContent = `${item.form} | ${formatSizeDisplay(item.size)}`;
+
+                div.addEventListener('click', function () {
+                    DOM.searchInput.value = item.sub + ' ' + item.str;
+                    dropdown.style.display = "none";
+                    
+                    // Använd ID:n från indexet för en exakt och snabb sökning i data-filen
+                    // Lägg till VNR för URL-delning
+                    if (item.vnr && item.vnr.length > 0) {
+                        item.vnr = item.vnr[0]; // Use first VNR for initial load
+                    }
+                    fetchLatestPV(item); 
+                });
+                fragment.appendChild(itemTemplate);
+            });
+            listContainer.appendChild(fragment);
+            dropdown.style.display = "block";
+        } else {
+            // Show no results message in dropdown
+            const noResultsTemplate = cloneTemplate('template-dropdown-no-results');
+            if (noResultsTemplate) {
+                listContainer.appendChild(noResultsTemplate);
+            }
+            dropdown.style.display = "block";
+        }
+    });
+
+    // Search input - focus event
+    DOM.searchInput.addEventListener('focus', function () {
+        const searchTerm = this.value.toLowerCase().trim();
+        if (searchTerm.length >= 2) {
+            this.dispatchEvent(new Event('input'));
+        }
+    });
+
+    // Clear search button - click event
+    DOM.clearSearch.addEventListener('click', function () {
+        const input = DOM.searchInput;
+        const dropdown = DOM.customSelect;
+        input.value = '';
+        this.style.display = 'none';
+        dropdown.style.display = 'none';
+        input.focus();
+    });
+
+    // Popular chips - click event (already using addEventListener, no change needed)
+    document.querySelectorAll('.popular-chip').forEach((chip) => {
+        chip.addEventListener('click', () => {
+            const input = DOM.searchInput;
+            if (!input) return;
+            
+            // Remove selection state to allow new search
+            document.body.classList.remove('has-selection');
+            
+            // Set the input value and trigger search after a brief delay
+            input.value = chip.dataset.search || '';
+            
+            // Use setTimeout to ensure the class removal takes effect
+            setTimeout(() => {
+                input.dispatchEvent(new Event('input'));
+                input.focus();
+            }, 10);
+        });
+    });
+
+    // Search input - keydown event
+    DOM.searchInput.addEventListener('keydown', function (e) {
+        const dropdown = DOM.customSelect;
+        const listContainer = DOM.packageList;
+        const items = listContainer.querySelectorAll('.dropdown-item');
+        
+        if (dropdown.style.display === 'none') return;
+        
+        switch(e.key) {
+            case 'ArrowDown':
+                e.preventDefault();
+                selectedDropdownIndex = Math.min(selectedDropdownIndex + 1, items.length - 1);
+                highlightDropdownItem(items, selectedDropdownIndex);
+                updateInputFromSelection(selectedDropdownIndex);
+                break;
+            case 'ArrowUp':
+                e.preventDefault();
+                selectedDropdownIndex = Math.max(selectedDropdownIndex - 1, -1);
+                highlightDropdownItem(items, selectedDropdownIndex);
+                updateInputFromSelection(selectedDropdownIndex);
+                break;
+            case 'Enter':
+                e.preventDefault();
+                if (selectedDropdownIndex >= 0 && selectedDropdownIndex < items.length) {
+                    items[selectedDropdownIndex].click();
+                    selectedDropdownIndex = -1;
+                }
+                break;
+            case 'Escape':
+                dropdown.style.display = 'none';
+                selectedDropdownIndex = -1;
+                DOM.searchInput.value = originalSearchInput;
+                if (!originalSearchInput) {
+                    currentSearch = null;
+                    document.body.classList.remove('has-selection');
+                }
+                break;
+        }
+    });
+}
 
 function updateInputFromSelection(index) {
-    const input = document.getElementById('sub-input');
+    const input = DOM.searchInput;
     if (index >= 0 && index < lastDropdownMatches.length) {
         input.value = lastDropdownMatches[index].sub + ' ' + lastDropdownMatches[index].str;
     } else {
@@ -262,10 +431,35 @@ function highlightDropdownItem(items, index) {
 }
 
 
-async function fetchLatestPV(searchItem) {
-    currentSearch = searchItem; 
-    const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = "<p style='text-align:center; padding: 40px;'>Hämtar prisdata...</p>";
+/**
+ * Fetches and displays medicine details for the selected product.
+ * Updates URL with VNR for shareability and loads price data.
+ * @async
+ * @param {Object} searchItem - Selected medicine from search index
+ * @param {string} searchItem.id - Exchange group ID
+ * @param {string} searchItem.size_id - Package size group ID
+ * @param {string} searchItem.sub - Substance name
+ * @param {string} searchItem.str - Strength
+ * @param {string} searchItem.form - Medicine form
+ * @param {string} searchItem.vnr - Varunummer (product number)
+ * @param {boolean} [skipPushState=false] - If true, don't update browser history
+ */
+async function fetchLatestPV(searchItem, skipPushState = false) {
+    currentSearch = searchItem;
+    
+    // Update URL with VNR for shareability and history support (unless we're responding to popstate)
+    const vnr = searchItem.vnr;
+    if (vnr && !skipPushState) {
+        const url = new URL(window.location);
+        url.searchParams.set('vnr', vnr);
+        window.history.pushState({ searchItem }, '', url.toString());
+    }
+    
+    // Hide hero content and show search bar for medicine selection
+    document.body.classList.add('has-selection');
+    
+    const resultsDiv = DOM.resultsDiv;
+    replaceContent(resultsDiv, cloneTemplate('template-loading'));
 
     try {
         const res = await fetch(`data/${selectedMonth}.json`);
@@ -277,12 +471,7 @@ async function fetchLatestPV(searchItem) {
         );
 
         if (matches.length === 0) {
-            resultsDiv.innerHTML = `
-                <div style="padding: 24px; background: #f8fafc;">
-                    <div class="item-line1" style="margin-bottom: 8px;">Varför finns inte min vara</div>
-                    <div class="item-line2" style="margin-top: 0;">Alla läkemedel upphandlas inte med periodens vara. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a></div>
-                </div>
-            `;
+            replaceContent(resultsDiv, cloneTemplate('template-no-results'));
             return;
         }
 
@@ -303,30 +492,45 @@ async function fetchLatestPV(searchItem) {
 
         // Beräkna sparande och hitta den billigaste produkten
         const savings = lastPVPrice - absoluteMinPrice;
-        // Vi visar bara alerten om man sparar minst 1 kr (för att slippa avrundningsdiffar)
-        const cheaperProduct = savings >= 1 ? lastMatches.find(i => i["Försäljningspris"] === absoluteMinPrice) : null;
+        // Vi visar bara alerten om man sparar minst PRICE_SAVINGS_MIN kr (för att slippa avrundningsdiffar)
+        const cheaperProduct = savings >= PRICE_SAVINGS_MIN ? lastMatches.find(i => i["Försäljningspris"] === absoluteMinPrice) : null;
 
         const stats = await getPriceStatistics(searchItem);
 
-        resultsDiv.innerHTML = `
-            <div id="price-card-area"></div>
-            <div id="table-area"></div>
-        `;
+        replaceContent(resultsDiv, cloneTemplate('template-results-container'));
 
-        const chartCont = document.getElementById('chart-container');
+        const chartCont = DOM.chartCont;
         if (chartCont) {
             chartCont.style.display = "block";
             chartCont.className = "bleed-card";
         }
 
+        // Show month picker button when viewing medicine
+        showMonthPicker();
+
         // Skicka med spar-data till renderaren
-        await renderPriceCard(pvProduct, searchItem.sub, searchItem.str, searchItem.form, stats, cheaperProduct, savings);
+        await renderPriceCard(pvProduct, searchItem.sub, searchItem.str, searchItem.form, stats, cheaperProduct, savings, data);
+        
+        // Create and inject month warning banner after price card is rendered
+        createMonthBanner(resultsDiv);
+        
         renderTableOnly(); 
-        renderHistoryChart(searchItem);
+        await renderHistoryChart(searchItem);
+        renderAlternativePackageSizes(pvProduct, data);
+
+        // Visa info-boxen endast om PV inte är billigast (efter renderTableOnly som skapar den)
+        if (!cheaperProduct) {
+            const infoBox = document.querySelector('.tlv-info-box');
+            if (infoBox) {
+                infoBox.classList.add('hidden');
+            }
+        }
+
+        updateMonthBanner();
 
     } catch (err) {
         console.error("Fel vid hämtning av detaljer:", err);
-        resultsDiv.innerHTML = "<p>Ett fel uppstod när data skulle laddas.</p>";
+        replaceContent(resultsDiv, cloneTemplate('template-error'));
     }
 }
 
@@ -336,6 +540,12 @@ function toggleTableExpansion() {
     renderTableOnly();
 }
 
+/**
+ * Calculates price statistics across available months for trend analysis.
+ * @async
+ * @param {Object} searchItem - Medicine search item
+ * @returns {Promise<Object|null>} Statistics object with avgPrice, minPrice, maxPrice, count
+ */
 async function getPriceStatistics(searchItem) {
     let prices = [];
     // Vi kollar de 12 senaste månaderna (eller alla tillgängliga)
@@ -364,7 +574,19 @@ async function getPriceStatistics(searchItem) {
     };
 }
 
-async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct, savings) {
+/**
+ * Renders the price card showing current price, trends, and recommendations.
+ * @async
+ * @param {Object} pvProduct - PV product data
+ * @param {string} sub - Substance name
+ * @param {string} str - Strength
+ * @param {string} form - Medicine form
+ * @param {Object} stats - Price statistics from getPriceStatistics()
+ * @param {Object|null} cheaperProduct - Alternative cheaper product if exists
+ * @param {number} savings - Amount saved with cheaper product
+ * @param {Array} allData - All products for package size comparison
+ */
+async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct, savings, allData) {
     const area = document.getElementById('price-card-area');
     if (!pvProduct || !area) return;
 
@@ -393,186 +615,287 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
     const rec = getPriceRecommendation(pvProduct["Försäljningspris"], stats, nextPrice);
 
     const createStatBlock = (price, label, currentPrice, monthCode, isFuture) => {
-        if (!price) return `<div class="stat-block"><p class="stat-block-label">${label}</p><p style="margin: 4px 0 0 0; color: #cbd5e1; font-size: 14px;">Ej fastställt</p></div>`;
-        let prelimNote = "";
-        let prelimIcon = "";
+        const fragment = cloneTemplate('template-stat-block');
+        if (!fragment) return null;
+        const block = fragment.querySelector('.stat-block');
+        const labelEl = block.querySelector('.stat-block-label');
+        const priceEl = block.querySelector('.stat-block-price');
+        const trendEl = block.querySelector('.stat-block-trend');
+        const trendIcon = block.querySelector('.stat-block-trend .material-symbols-outlined');
+        const trendValue = block.querySelector('.stat-block-trend-value');
+        const emptyEl = block.querySelector('.stat-block-empty');
+
+        let prelimIconEl = null;
         if (isFuture && isPrelimMonth(monthCode)) {
-            label = `${label} (preliminär)`;
-            prelimNote = "Priset är preliminärt och kan komma att ändras";
-            prelimIcon = `<span class="prelim-info" tabindex="0" role="button" aria-label="Preliminärt pris" data-tooltip="${prelimNote}">!</span>`;
+            prelimIconEl = document.createElement('span');
+            prelimIconEl.className = 'prelim-info';
+            prelimIconEl.setAttribute('tabindex', '0');
+            prelimIconEl.setAttribute('role', 'button');
+            prelimIconEl.setAttribute('aria-label', 'Preliminärt pris');
+            prelimIconEl.setAttribute('data-tooltip', 'Priset är preliminärt och kan komma att ändras');
+            prelimIconEl.textContent = '!';
         }
+
+        labelEl.textContent = label;
+        if (prelimIconEl) {
+            labelEl.append(' ');
+            labelEl.appendChild(prelimIconEl);
+        }
+
+        if (!price) {
+            trendEl.style.display = 'none';
+            priceEl.style.display = 'none';
+            emptyEl.style.display = 'block';
+            return block;
+        }
+
         const diff = price - currentPrice;
         const diffPercent = Math.round((Math.abs(diff) / currentPrice) * 100);
-        let priceColor = "#1e293b", trendColor = "#64748b", icon = "horizontal_rule";
+        const isStable = diffPercent <= 2; // Consider <= 2% as stable
+        
+        // Default to CSS variable color, or use semantic colors for significant changes
+        let priceColor = "", trendColor = "#64748b", icon = "horizontal_rule";
 
         if (price !== currentPrice) {
-            // For Föregående (isFuture=false): text and arrow colors should be opposite/reversed
-            // For Nästa (isFuture=true): text and arrow colors should match
-            if (!isFuture) {
-                // Föregående: text shows comparison, arrow shows trend (opposite)
-                priceColor = price > currentPrice ? "#dc2626" : "#16a34a";  // Text: red if was higher, green if lower
-                trendColor = price > currentPrice ? "#16a34a" : "#dc2626";  // Arrow: opposite color
-            } else {
-                // Nästa: text and arrow show same sentiment
-                priceColor = price > currentPrice ? "#dc2626" : "#16a34a";
-                trendColor = priceColor;
-            }
-            // Arrow shows direction: DOWN if price is/was lower, UP if price is/will be higher
+            // Determine icon based on direction
             icon = isFuture === (price > currentPrice) ? "trending_up" : "trending_down";
+            
+            if (!isStable) {
+                // Significant change - use color coding
+                if (!isFuture) {
+                    priceColor = price > currentPrice ? "#dc2626" : "#16a34a";
+                    trendColor = price > currentPrice ? "#16a34a" : "#dc2626";
+                } else {
+                    priceColor = price > currentPrice ? "#dc2626" : "#16a34a";
+                    trendColor = priceColor;
+                }
+            } else {
+                // Stable price - use default (CSS will apply --text-primary)
+                priceColor = "";
+                trendColor = "#64748b";
+            }
+        } else {
+            trendEl.style.display = 'none';
         }
 
-        return `
-            <div class="stat-block">
-                <p class="stat-block-label">${label} ${prelimIcon}</p>
-                <div class="stat-block-content">
-                    <span class="stat-block-price" style="color: ${priceColor};">${formatPrice(price)}</span>
-                    ${price !== currentPrice ? `
-                        <span class="stat-block-trend" style="background: ${trendColor}15; color: ${trendColor};">
-                            <span class="material-symbols-outlined">${icon}</span>
-                            ${diffPercent}%
-                        </span>` : ''}
-                </div>
-            </div>`;
+        priceEl.textContent = formatPrice(price);
+        if (priceColor) {
+            priceEl.style.color = priceColor;
+        } else {
+            priceEl.style.color = ''; // Clear inline style to use CSS
+        }
+        trendEl.style.background = `${trendColor}15`;
+        trendEl.style.color = trendColor;
+        trendIcon.textContent = icon;
+        trendValue.textContent = `${diffPercent}%`;
+
+        return block;
     };
 
-    let savingsAlertHtml = "";
-    if (cheaperProduct && savings >= 1) {
-        savingsAlertHtml = `
-            <div class="savings-alert-box" style="flex: 1.2; min-width: 250px; background: #f0fdf4; border: 1px solid #16a34a30; border-left: 4px solid #16a34a; border-radius: 12px; padding: 20px;">
-                <div style="display: flex; align-items: flex-start; gap: 12px;">
-                    <span class="material-symbols-outlined" style="color: #16a34a; font-size: 28px;">account_balance_wallet</span>
-                    <div>
-                        <strong style="display: block; font-size: 16px; color: #134e4a; margin-bottom: 4px;">Spara ${savings.toFixed(2)} kr!</strong>
-                        <p style="margin: 0; font-size: 13px; color: #166534; line-height: 1.5;">
-                            <strong>${cheaperProduct.Produktnamn}</strong> är billigare än Periodens Vara.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        `;
+    const cardTemplate = cloneTemplate('template-price-card');
+    replaceContent(area, cardTemplate);
+
+    const headerBar = area.querySelector('.price-card-header-bar');
+    
+    // If no recommendation (viewing historical month), hide the header bar
+    if (!rec) {
+        headerBar.style.display = 'none';
+        headerBar.classList.remove('is-alert-red');
+    } else {
+        headerBar.style.display = 'flex';
+        headerBar.style.background = '';
+        headerBar.style.border = '';
+        headerBar.classList.toggle('is-alert-red', rec.icon === 'shopping_cart_checkout');
+
+        const headerIcon = area.querySelector('.price-card-icon');
+        headerIcon.textContent = rec.icon;
+        headerIcon.style.color = '';
+
+        const headerLabel = area.querySelector('.price-card-header-label');
+        headerLabel.textContent = `${rec.label}!`;
+        headerLabel.style.color = '';
+
+        const headerSubtext = area.querySelector('.price-card-header-subtext');
+        headerSubtext.textContent = rec.subtext;
+        headerSubtext.style.color = '';
     }
 
-    area.innerHTML = `
-        <div class="bleed-card">
-            <div class="price-card-header-bar" style="background: ${rec.bg};">
-                <div class="price-card-icon-wrapper">
-                    <span class="material-symbols-outlined price-card-icon" style="color: ${rec.color};">${rec.icon}</span>
-                </div>
-                <div class="price-card-header-text">
-                    <p class="price-card-header-label" style="color: ${rec.color};">${rec.label}!</p>
-                    <p class="price-card-header-subtext" style="color: ${rec.color};">${rec.subtext}</p>
-                </div>
-            </div>
+    area.querySelector('.price-card-title').textContent = pvProduct.Produktnamn;
+    area.querySelector('.price-card-subtitle').textContent = `${sub} · ${str} · ${form}`;
+    area.querySelector('.price-card-current-value').textContent = formatPrice(pvProduct["Försäljningspris"]);
+    
+    // Add price per pill under current price
+    const currentWrapper = area.querySelector('.price-card-current-wrapper');
+    let pricePerPillDiv = currentWrapper.querySelector('.price-per-pill');
+    if (!pricePerPillDiv) {
+        pricePerPillDiv = document.createElement('div');
+        pricePerPillDiv.className = 'price-per-pill';
+        pricePerPillDiv.style.fontSize = '12px';
+        pricePerPillDiv.style.marginTop = '4px';
+        pricePerPillDiv.style.color = '#64748b';
+        currentWrapper.appendChild(pricePerPillDiv);
+    }
+    const packageSize = toNumber(pvProduct.Storlek);
+    const price = toNumber(pvProduct["Försäljningspris"]);
+    if (packageSize && price) {
+        const pricePerUnit = price / packageSize;
+        // Determine correct unit based on medicine form
+        const f = form.toLowerCase();
+        let unit = "enhet";
+        if (f.includes("tablett")) unit = "tablett";
+        else if (f.includes("kapsel")) unit = "kapsel";
+        else if (f === "gel" || f.includes("kräm") || f.includes("salva")) unit = "g";
+        else if (f.includes("droppar") || f.includes("lösning")) unit = "ml";
+        pricePerPillDiv.textContent = `${pricePerUnit.toFixed(2)} kr/${unit}`;
+    }
 
-            <div class="price-card-content-wrapper">
-                <div class="price-card-grid">
-                    
-                    <div class="price-card-left-column">
-                        
-                        <div class="price-card-title-section">
-                            <h2 class="price-card-title">
-                                ${pvProduct.Produktnamn} 
-                            </h2>
-                            <p class="price-card-subtitle">${sub} · ${str} · ${form}</p>
-                        </div>
+    const savingsSlot = area.querySelector('.price-card-savings-slot');
+    
+    // Check for better package size deals - search in all data for same substance/strength PV variants
+    let betterSizeDeal = null;
+    let cheaperProductDeal = null;
+    
+    if (allData) {
+        betterSizeDeal = findBetterPackageSize(pvProduct, allData);
+    }
+    
+    if (cheaperProduct && savings >= PRICE_SAVINGS_MIN) {
+        cheaperProductDeal = {
+            type: 'brand',
+            savings: savings,
+            produktnamn: cheaperProduct.Produktnamn
+        };
+    }
+    
+    // Determine which deal to show - the one with biggest savings
+    let dealToShow = null;
+    if (betterSizeDeal && cheaperProductDeal) {
+        // Show the one with biggest savings percentage
+        const sizeSavingsKr = pvProduct["Försäljningspris"] - (betterSizeDeal.pricePerUnit * toNumber(pvProduct.Storlek));
+        dealToShow = sizeSavingsKr > cheaperProductDeal.savings ? 'size' : 'brand';
+    } else if (betterSizeDeal) {
+        dealToShow = 'size';
+    } else if (cheaperProductDeal) {
+        dealToShow = 'brand';
+    }
+    
+    // Show the selected deal
+    if (dealToShow === 'brand' && cheaperProductDeal) {
+        const savingsTpl = cloneTemplate('template-savings-alert');
+        if (savingsTpl) {
+            const savingsNode = savingsTpl.querySelector('.savings-alert-box');
+            const title = savingsNode.querySelector('.savings-alert-title');
+            const text = savingsNode.querySelector('.savings-alert-text');
+            title.textContent = `Spara ${cheaperProductDeal.savings.toFixed(2).replace('.', ',')} kr!`;
+            text.textContent = '';
+            const strong = document.createElement('strong');
+            strong.textContent = cheaperProductDeal.produktnamn;
+            text.appendChild(strong);
+            text.append(' är billigare än Periodens Vara.');
+            savingsSlot.appendChild(savingsNode);
+        }
+    } else if (dealToShow === 'size' && betterSizeDeal) {
+        const dealTpl = cloneTemplate('template-savings-alert');
+        if (dealTpl) {
+            const dealNode = dealTpl.querySelector('.savings-alert-box');
+            const title = dealNode.querySelector('.savings-alert-title');
+            const text = dealNode.querySelector('.savings-alert-text');
+            const unit = formatUnitSingular(pvProduct.Beredningsform);
+            title.textContent = `${betterSizeDeal.size} är ${betterSizeDeal.savings.toFixed(1).replace('.', ',')}% billigare per ${unit}`;
+            text.textContent = 'Fråga din läkare om du kan få ';
+            
+            // Create clickable strong element that loads the alternative product
+            const button = document.createElement('button');
+            button.textContent = betterSizeDeal.size;
+            button.style.background = 'none';
+            button.style.border = 'none';
+            button.style.color = 'inherit';
+            button.style.cursor = 'pointer';
+            button.style.padding = '0';
+            button.style.font = 'inherit';
+            button.style.fontWeight = '900';
+            button.style.textDecoration = 'none';
+            button.addEventListener('click', function() {
+                // Find the product with this size in allData
+                const alternativeProduct = allData.find(item => 
+                    item.Substans === pvProduct.Substans &&
+                    item.Styrka === pvProduct.Styrka &&
+                    item.Storlek === betterSizeDeal.targetSize &&
+                    getItemStatus(item) === "PV"
+                );
+                if (alternativeProduct) {
+                    fetchLatestPV({
+                        id: alternativeProduct["Utbytesgrupps ID"],
+                        size_id: alternativeProduct["Förpackningsstorleksgrupp"],
+                        sub: alternativeProduct.Substans,
+                        str: alternativeProduct.Styrka,
+                        form: alternativeProduct.Beredningsform,
+                        vnr: alternativeProduct.Varunummer || alternativeProduct.Vnr
+                    });
+                }
+            });
+            text.appendChild(button);
+            text.append(' istället');
+            savingsSlot.appendChild(dealNode);
+        }
+    }
 
-                        <div class="price-card-price-section">
-                            <div class="price-card-current-wrapper">
-                                <p class="price-card-current-label">Aktuellt pris</p>
-                                <span class="price-card-current-value">${formatPrice(pvProduct["Försäljningspris"])}</span>
-                            </div>
-                            ${savingsAlertHtml}
-                        </div>
+    const statContainer = area.querySelector('.stat-blocks-container');
+    
+    // Always show prev/next month blocks if data exists
+    statContainer.style.display = 'flex';
+    const prevBlock = createStatBlock(prevPrice, "Förra månaden", pvProduct["Försäljningspris"], prevMonthCode, false);
+    const nextBlock = createStatBlock(nextPrice, "Nästa månad", pvProduct["Försäljningspris"], nextMonthCode, true);
+    if (prevBlock) statContainer.appendChild(prevBlock);
+    if (nextBlock) statContainer.appendChild(nextBlock);
+    
+    // Hide container only if no blocks were added
+    if (statContainer.children.length === 0) {
+        statContainer.style.display = 'none';
+    }
 
-                        <div class="stat-blocks-container">
-                            ${createStatBlock(prevPrice, "Förra månaden", pvProduct["Försäljningspris"], prevMonthCode, false)}
-                            ${createStatBlock(nextPrice, "Nästa månad", pvProduct["Försäljningspris"], nextMonthCode, true)}
-                        </div>
-                    </div>
+    const packagingValue = (() => {
+        const vnr = pvProduct.Varunummer ?? pvProduct.Vnr;
+        return pvProduct.Förpackning
+            || packagingMap[vnr]
+            || packagingMap[String(vnr)]
+            || '—';
+    })();
 
-                    <div class="price-card-info-panel">
-                        <p class="price-card-info-header">Information</p>
-                        <div class="price-card-info-list">
-                            <div class="price-card-info-item">
-                                <span class="material-symbols-outlined price-card-info-icon">inventory_2</span>
-                                <div class="price-card-info-content">
-                                    <span class="price-card-info-label">Antal i förpackning</span>
-                                    <span class="price-card-info-value">${formatUnit(form, pvProduct.Storlek)}</span>
-                                </div>
-                            </div>
-                            <div class="price-card-info-item">
-                                <span class="material-symbols-outlined price-card-info-icon">category</span>
-                                <div class="price-card-info-content">
-                                    <span class="price-card-info-label">Förpackningstyp</span>
-                                    <span class="price-card-info-value">${(() => {
-                                        const map = currentSearch?.packagingMap || {};
-                                        const vnr = pvProduct.Varunummer ?? pvProduct.Vnr;
-                                        const byVnr = map[vnr] || map[String(vnr)];
-                                        return pvProduct.Förpackning
-                                            || byVnr
-                                            || (currentSearch?.packaging && currentSearch.packaging[0])
-                                            || pvProduct.Beredningsform
-                                            || pvProduct.Läkemedelsform
-                                            || '-';
-                                    })()}</span>
-                                </div>
-                            </div>
-                            <div class="price-card-info-item">
-                                <span class="material-symbols-outlined price-card-info-icon">factory</span>
-                                <div class="price-card-info-content">
-                                    <span class="price-card-info-label">Tillverkare</span>
-                                    <span class="price-card-info-value">${pvProduct.Företag}</span>
-                                </div>
-                            </div>
-                            <div class="price-card-info-item">
-                                <span class="material-symbols-outlined price-card-info-icon">info</span>
-                                <div class="price-card-info-content">
-                                    <span class="price-card-info-label">Typ</span>
-                                    <span class="price-card-info-value">${pvProduct.Ursprung || 'Generics'}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    const packSizeEl = area.querySelector('[data-field="pack-size"]');
+    const packagingEl = area.querySelector('[data-field="packaging"]');
+    const manufacturerEl = area.querySelector('[data-field="manufacturer"]');
+    const originEl = area.querySelector('[data-field="origin"]');
 
-                </div>
-            </div>
-        </div>`;
+    if (packSizeEl) packSizeEl.textContent = formatUnit(form, pvProduct.Storlek);
+    if (packagingEl) packagingEl.textContent = packagingValue;
+    if (manufacturerEl) manufacturerEl.textContent = pvProduct.Företag || '—';
+    if (originEl) originEl.textContent = pvProduct.Ursprung || 'Generics';
 }
 
+/**
+ * Renders the comparison table showing all available products with prices.
+ * Updates the table based on isExpanded state.
+ */
 function renderTableOnly() {
     const area = document.getElementById('table-area');
     if (!area) return;
 
-   area.innerHTML = `
-    <div class="bleed-card comparison-container">
-        <div class="comparison-inner-padding">
-            <h3 class="comparison-title">Utbytbara alternativ</h3>
-            <p class="comparison-subtitle">
-                Alla dessa innehåller samma verksamma ämne: 
-                <strong>${currentSearch.sub} ${currentSearch.str}</strong>
-            </p>
-        </div>
-        
-        <div id="comparison-list" class="comparison-list-wrapper">
-            </div>
-
-        <div id="pagination-footer"></div>
-
-        <div class="tlv-info-box">
-            <span class="material-symbols-outlined tlv-info-icon">info</span>
-            <div>
-                <p class="tlv-info-title">Periodens vara är inte alltid billigast</p>
-                <p class="tlv-info-text">
-                    Billigaste läkemedel blir inte alltid "periodens vara" om företaget inte har bekräftat leveransförmåga till TLV. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a>
-                </p>
-            </div>
-        </div>
-    </div>
-`;
+    const template = cloneTemplate('template-table-container');
+    replaceContent(area, template);
+    const strong = area.querySelector('.comparison-subtitle-strong');
+    if (strong) {
+        strong.textContent = `${currentSearch.sub} ${currentSearch.str}`;
+    }
 
     updateTableRows(lastMatches);
 }
 
+/**
+ * Updates table rows with medicine data, including status badges and pricing.
+ * Uses DocumentFragment for efficient DOM manipulation.
+ * @param {Array<Object>} data - Array of medicine items to display
+ */
 function updateTableRows(data) {
     const container = document.getElementById('comparison-list');
     const footer = document.getElementById('pagination-footer');
@@ -596,7 +919,12 @@ function updateTableRows(data) {
         footer.innerHTML = '';
     }
 
-    container.innerHTML = rowsToShow.map((item, index) => {
+    container.innerHTML = '';
+    
+    // Use DocumentFragment to batch DOM appends for better performance
+    const tableFragment = document.createDocumentFragment();
+    
+    rowsToShow.forEach((item, index) => {
         const itemPrice = item["Försäljningspris"];
         const diff = itemPrice - lastPVPrice;
         const status = getItemStatus(item).trim().toUpperCase();
@@ -620,8 +948,6 @@ function updateTableRows(data) {
 
         // PV is blue unless it's also cheapest (then green)
         const isPVAndCheapest = isPV && isCheapest;
-        let rowBgColor = isCheapest ? "#f0fdf4" : (isPV ? "#eff6ff" : (isR1 || isR2 ? "#fffbeb" : "#ffffff"));
-        let rowBorderColor = isCheapest ? "#5eead4" : (isPV ? "#bfdbfe" : (isR1 || isR2 ? "#fde68a" : "#e2e8f0"));
 
         let statusBadgeHtml = "";
         if (isPVAndCheapest) {
@@ -634,84 +960,70 @@ function updateTableRows(data) {
             statusBadgeHtml = `<span class="status-badge-mini" style="color: #16a34a; border: 1px solid #10b981;"><span class="material-symbols-outlined" style="font-size: 14px;">star</span></span>`;
         }
 
-        return `
-            <div onclick="toggleRowDetails('${rowId}')" class="comparison-row ${isCheapest ? 'cheapest-row' : (isPV ? 'pv-row' : (isR1 || isR2 ? 'reserve-row' : 'default-row'))}">
-                <div class="comparison-row-header">
-                    <div class="comparison-row-left">
-                        <div class="comparison-row-product">
-                            ${statusBadgeHtml}
-                            <strong class="comparison-row-name">${item.Produktnamn}</strong>
-                        </div>
-                        <p class="comparison-row-info">
-                            ${item.Företag} · ${size} ${unit}
-                        </p>
-                    </div>
-                    <div class="price-display-container">
-                        <div class="price-value">${itemPrice.toLocaleString('sv-SE', { minimumFractionDigits: 2 })} kr</div>
-                        <div class="price-diff" style="${diff > 0 ? 'color: #dc2626;' : ''}">${diff === 0 ? 'PV' : (diff > 0 ? `+${diff.toFixed(2)} kr` : `${diff.toFixed(2)} kr`)}</div>
-                    </div>
-                </div>
+        const rowClass = isCheapest ? 'cheapest-row' : (isPV ? 'pv-row' : (isR1 || isR2 ? 'reserve-row' : 'default-row'));
+        const priceDiffStyle = diff > 0 ? 'color: #dc2626;' : '';
+        const priceDiffText = diff === 0 ? 'PV' : (diff > 0 ? `+${diff.toFixed(2)} kr` : `${diff.toFixed(2)} kr`);
 
-                ${isOpen ? `
-                <div class="row-details-container">
-                    <div class="row-detail-item">
-                        <span class="material-symbols-outlined">inventory_2</span>
-                        <div class="row-detail-content">
-                            <span class="row-detail-label">Antal i förpackning</span>
-                            <span class="row-detail-value">${size} ${unit}</span>
-                        </div>
-                    </div>
-                    <div class="row-detail-item">
-                        <span class="material-symbols-outlined">category</span>
-                        <div class="row-detail-content">
-                            <span class="row-detail-label">Förpackningstyp</span>
-                            <span class="row-detail-value">${(() => {
-                                const map = currentSearch?.packagingMap || {};
-                                const vnr = item.Varunummer ?? item.Vnr;
-                                const byVnr = map[vnr] || map[String(vnr)];
-                                return item["Förpackning"]
-                                    || byVnr
-                                    || (currentSearch?.packaging && currentSearch.packaging[0])
-                                    || item["Beredningsform"]
-                                    || item["Läkemedelsform"]
-                                    || '—';
-                            })()}</span>
-                        </div>
-                    </div>
-                    <div class="row-detail-item">
-                        <span class="material-symbols-outlined">factory</span>
-                        <div class="row-detail-content">
-                            <span class="row-detail-label">Tillverkare</span>
-                            <span class="row-detail-value">${item.Företag || '—'}</span>
-                        </div>
-                    </div>
-                    <div class="row-detail-item">
-                        <span class="material-symbols-outlined">info</span>
-                        <div class="row-detail-content">
-                            <span class="row-detail-label">Typ</span>
-                            <span class="row-detail-value">${item.Ursprung || 'Generics'}</span>
-                        </div>
-                    </div>
-                </div>
-                ` : ''}
-            </div>
-        `;
-    }).join('');
+        const rowFragment = cloneTemplate('template-comparison-row');
+        const rowDiv = rowFragment.querySelector('.comparison-row');
+        
+        rowDiv.setAttribute('onclick', `toggleRowDetails('${rowId}')`);
+        rowDiv.classList.add(rowClass);
+        
+        replaceContent(rowDiv, '.comparison-row-status', statusBadgeHtml);
+        replaceContent(rowDiv, '.comparison-row-name', item.Produktnamn);
+        replaceContent(rowDiv, '.comparison-row-info', `${item.Företag} · ${size} ${unit}`);
+        replaceContent(rowDiv, '.price-value', `${itemPrice.toLocaleString('sv-SE', { minimumFractionDigits: 2 })} kr`);
+        replaceContent(rowDiv, '.price-diff', priceDiffText);
+        
+        const priceDiffEl = rowDiv.querySelector('.price-diff');
+        if (priceDiffEl && priceDiffStyle) {
+            priceDiffEl.setAttribute('style', priceDiffStyle);
+        }
+
+        if (isOpen) {
+            const vnr = item.Varunummer ?? item.Vnr;
+            const forpackning = item["Förpackning"]
+                || packagingMap[vnr]
+                || packagingMap[String(vnr)]
+                || '—';
+
+            const detailsFragment = cloneTemplate('template-row-details');
+            const detailsDiv = detailsFragment.querySelector('.row-details-container');
+            const detailItems = detailsDiv.querySelectorAll('.row-detail-item');
+            
+            replaceContent(detailItems[0], '.row-detail-value', `${size} ${unit}`);
+            replaceContent(detailItems[1], '.row-detail-value', forpackning);
+            replaceContent(detailItems[2], '.row-detail-value', item.Företag || '—');
+            replaceContent(detailItems[3], '.row-detail-value', item.Ursprung || 'Generics');
+
+            rowDiv.appendChild(detailsDiv);
+        }
+
+        tableFragment.appendChild(rowFragment);
+    });
+    
+    container.appendChild(tableFragment);
 
 }
 
 function renderMonthSelector() {
-    return `
-        <div class="month-selector-wrapper">
-            <label for="month-select" style="font-size: 12px; color: #64748b; font-weight: 400;">Period:</label>
-            <select id="month-select" onchange="updateMonth(this.value)">
-                ${availableMonths.map(m => `
-                    <option value="${m}" ${m == selectedMonth ? 'selected' : ''}>
-                        ${formatMedicineDate(m)}${isPrelimMonth(m) ? ' (Preliminär)' : ''}
-                    </option>
-                `).join('')}
-            </select>
-        </div>`;
+    const fragment = cloneTemplate('template-month-selector');
+    const select = fragment.querySelector('#month-select');
+    
+    availableMonths.forEach(m => {
+        const option = document.createElement('option');
+        option.value = m;
+        option.textContent = `${formatMedicineDate(m)}${isPrelimMonth(m) ? ' (Preliminär)' : ''}`;
+        if (m == selectedMonth) {
+            option.selected = true;
+        }
+        select.appendChild(option);
+    });
+    
+    const tempDiv = document.createElement('div');
+    tempDiv.appendChild(fragment);
+    return tempDiv.innerHTML;
 }
 
 function updateMonth(newMonth) {
@@ -724,10 +1036,68 @@ function updateMonth(newMonth) {
         headerPeriod.textContent = `TLV Periodens Varor • ${formatMedicineDate(selectedMonth)}${prelimTag}`;
     }
     
+    updateMonthBanner();
+    
     if (currentSearch) {
         isExpanded = false; 
         fetchLatestPV(currentSearch); // Skicka hela objektet
     }
+}
+
+function createMonthBanner(container) {
+    // Remove existing banner if present
+    let existingBanner = document.getElementById('month-warning-banner');
+    if (existingBanner) {
+        existingBanner.remove();
+    }
+
+    // Create new banner
+    const banner = document.createElement('div');
+    banner.id = 'month-warning-banner';
+    banner.className = 'month-warning-banner';
+    banner.innerHTML = `
+        <div class="month-banner-icon-wrapper">
+            <span class="material-symbols-outlined month-banner-icon">calendar_month</span>
+        </div>
+        <div class="month-banner-text">
+            <span class="month-banner-label">Du visar nu priset för <b class="banner-month-name"></b>.</span>
+            <span class="month-banner-action">Klicka <b onclick="goToCurrentMonth()">här</b> för att gå till nuvarande månad.</span>
+        </div>
+    `;
+    
+    // Insert right after the header bar (between header and content wrapper)
+    const headerBar = document.querySelector('.price-card-header-bar');
+    if (headerBar) {
+        headerBar.insertAdjacentElement('afterend', banner);
+    } else {
+        // Fallback: insert into price-card-area
+        const priceCardArea = document.getElementById('price-card-area');
+        if (priceCardArea) {
+            priceCardArea.insertBefore(banner, priceCardArea.firstChild);
+        }
+    }
+    
+    // Update visibility based on current month
+    updateMonthBanner();
+}
+
+function updateMonthBanner() {
+    const banner = document.getElementById('month-warning-banner');
+    if (!banner) return;
+    
+    if (selectedMonth !== systemMonthCode) {
+        banner.style.display = 'flex';
+        const monthNameEl = banner.querySelector('.banner-month-name');
+        if (monthNameEl) {
+            monthNameEl.textContent = formatMedicineDate(selectedMonth);
+        }
+    } else {
+        banner.style.display = 'none';
+    }
+}
+
+function goToCurrentMonth() {
+    updateMonth(systemMonthCode);
 }
 
 function toggleTableExpansion() {
@@ -750,9 +1120,8 @@ function formatMedicineDate(dateCode) {
     const yearShort = codeStr.substring(0, 2);
     const monthIndex = codeStr.substring(2, 4);
     const months = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
-    const fullYear = "20" + yearShort;
     const monthName = months[parseInt(monthIndex, 10) - 1];
-    return monthName ? `${monthName} ${fullYear}` : "Okänt datum";
+    return monthName || "Okänt datum";
 }
 
 function isPrelimMonth(monthCode) {
@@ -765,23 +1134,17 @@ function renderInfoCard(item) {
     const area = document.getElementById('info-card-area');
     if (!area) return;
 
-area.innerHTML = `
-        <div class="reserves-container" style="background: white; border-radius: 16px; padding: 24px 0; border: 1px solid #e2e8f0; margin-top: 20px;">
-            <div style="padding: 0 1rem;">
-                <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #1e293b;">Utbytbara alternativ</h3>
-                <p style="margin: 8px 0 24px 0; color: #64748b; font-size: 14px;">
-                    Alla dessa innehåller samma verksamma ämne...
-                </p>
-            </div>
-                <span class="material-symbols-outlined">expand_more</span>
-            </summary>
-            <div style="padding: 15px; border-top: 1px solid #f1f5f9; background: #f8fafc; font-size: 13px;">
-                <p><strong>Utbytesgrupp:</strong> ${item.id}</p>
-                <p><strong>Varunummer:</strong> ${item.vnr.join(', ')}</p>
-                <p><strong>Synonymer:</strong> ${item.names.join(', ')}</p>
-            </div>
-        </details>
-    `;
+    const infoTemplate = cloneTemplate('template-info-card');
+    if (!infoTemplate) return;
+    replaceContent(area, infoTemplate);
+
+    const exchangeGroup = area.querySelector('[data-field="exchange-group"]');
+    const productNumbers = area.querySelector('[data-field="product-numbers"]');
+    const synonyms = area.querySelector('[data-field="synonyms"]');
+
+    if (exchangeGroup) exchangeGroup.textContent = item?.id ?? '—';
+    if (productNumbers) productNumbers.textContent = Array.isArray(item?.vnr) ? item.vnr.join(', ') : (item?.vnr ?? '—');
+    if (synonyms) synonyms.textContent = Array.isArray(item?.names) ? item.names.join(', ') : (item?.names ?? '—');
 }
 
 function renderInsightCard(pvPrice, stats, nextPrice) {
@@ -789,18 +1152,15 @@ function renderInsightCard(pvPrice, stats, nextPrice) {
     if (!area || !stats) return;
 
     // Här kan du lägga till den analyzeMarketData-logik vi tittade på tidigare
-    area.innerHTML = `
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; margin-bottom: 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-            <div>
-                <p style="font-size: 10px; color: #64748b; margin: 0;">HISTORISKT SNITT</p>
-                <p style="font-weight: 700; margin: 0;">${stats.avgPrice.toFixed(2)} kr</p>
-            </div>
-            <div>
-                <p style="font-size: 10px; color: #64748b; margin: 0;">LÄGSTA NOTERADE</p>
-                <p style="font-weight: 700; margin: 0;">${stats.minPrice.toFixed(2)} kr</p>
-            </div>
-        </div>
-    `;
+    const insightTemplate = cloneTemplate('template-insight-card');
+    if (!insightTemplate) return;
+    replaceContent(area, insightTemplate);
+
+    const avgPriceEl = area.querySelector('[data-field="avg-price"]');
+    const minPriceEl = area.querySelector('[data-field="min-price"]');
+
+    if (avgPriceEl) avgPriceEl.textContent = `${stats.avgPrice.toFixed(2)} kr`;
+    if (minPriceEl) minPriceEl.textContent = `${stats.minPrice.toFixed(2)} kr`;
 }
 
 function formatUnit(form, size) {
@@ -813,6 +1173,35 @@ function formatUnit(form, size) {
     return `${size} ${unit}`;
 }
 
+function formatUnitSingular(form) {
+    const f = (form || '').toLowerCase();
+    let unit = "enhet";
+    if (f.includes("tablett")) unit = "tablett";
+    else if (f.includes("kapsel")) unit = "kapsel";
+    else if (f === "gel" || f.includes("kräm") || f.includes("salva")) unit = "gram";
+    else if (f.includes("droppar") || f.includes("lösning")) unit = "ml";
+    return unit;
+}
+
+function formatSizeDisplay(size) {
+    if (!size) return size;
+    // Check if it's a range like "28-32"
+    const match = size.match(/(\d+)\s*-\s*(\d+)/);
+    if (match) {
+        const min = parseInt(match[1]);
+        const max = parseInt(match[2]);
+        const avg = Math.round((min + max) / 2);
+        return `ca ${avg}`;
+    }
+    return size;
+}
+
+/**
+ * Renders price history chart showing trends across available months.
+ * Supports both PV and cheapest price views with configurable date ranges.
+ * @async
+ * @param {Object} searchItem - Medicine search item to chart
+ */
 async function renderHistoryChart(searchItem) {
     const canvas = document.getElementById('priceChart');
     if (!canvas) return;
@@ -827,9 +1216,13 @@ async function renderHistoryChart(searchItem) {
         chartPriceType = priceTypeSelect.value;
     }
     
-    if (window.myChart instanceof Chart) {
+    const existingChart = typeof Chart.getChart === 'function' ? Chart.getChart(canvas) : null;
+    if (existingChart) {
+        existingChart.destroy();
+    } else if (window.myChart instanceof Chart) {
         window.myChart.destroy();
     }
+    window.myChart = null;
 
     let filteredMonths = [...availableMonths];
     if (rangeVal !== "all") {
@@ -881,7 +1274,8 @@ async function renderHistoryChart(searchItem) {
                     x: formatMedicineDate(month),
                     y: price,
                     company: match.Företag,
-                    diff: diffFromAvg.toFixed(1)
+                    diff: diffFromAvg.toFixed(1),
+                    monthCode: month
                 });
             }
         } catch (e) {}
@@ -937,12 +1331,20 @@ async function renderHistoryChart(searchItem) {
                     max: Math.ceil(yMax / 5) * 5,  // Avrunda uppåt till närmsta 5-lapp
                     ticks: { 
                         callback: (v) => v + ' kr',
-                        stepSize: 10 // Gör skalan lugnare med fasta steg
+                        stepSize: 10, // Gör skalan lugnare med fasta steg
+                        color: document.body.classList.contains('dark-mode') ? '#94a3b8' : '#64748b'
                     },
-                    grid: { color: '#f1f5f9' }
+                    grid: { 
+                        color: document.body.classList.contains('dark-mode') ? '#334155' : '#e2e8f0'
+                    }
                 },
                 x: { 
-                    ticks: { maxRotation: 45, minRotation: 45, font: { size: 11 } },
+                    ticks: { 
+                        maxRotation: 45, 
+                        minRotation: 45, 
+                        font: { size: 11 },
+                        color: document.body.classList.contains('dark-mode') ? '#94a3b8' : '#64748b'
+                    },
                     grid: { display: false }
                 }
             },
@@ -955,9 +1357,22 @@ async function renderHistoryChart(searchItem) {
                             const point = historyPoints[context.dataIndex];
                             return [
                                 ` Pris: ${point.y.toLocaleString('sv-SE')} kr`,
-                                ` Företag: ${point.company}`
+                                ` Företag: ${point.company}`,
+                                '',
+                                ' 💡 Klicka för att gå till månad'
                             ];
                         }
+                    }
+                }
+            },
+            onClick: (event, elements) => {
+                if (elements.length > 0) {
+                    const dataIndex = elements[0].index;
+                    const point = historyPoints[dataIndex];
+                    if (point && point.monthCode) {
+                        updateMonth(point.monthCode);
+                        window.scrollTo(0, 0);
+                        fetchLatestPV(currentSearch);
                     }
                 }
             }
@@ -987,13 +1402,13 @@ function renderPriceStabilityInsight(allPrices, minPrice, maxPrice, priceDiff) {
         stabilityLabel = "Mycket stabilt pris";
         stabilityColor = "#16a34a";
         stabilityIcon = "check_circle";
-        stabilityText = `Priset har varit mycket stabilt med minimal variation (±${coefficientOfVariation.toFixed(1)}%).`;
+        stabilityText = `Priset har varit mycket stabilt med minimal variation (±${coefficientOfVariation.toFixed(1).replace('.', ',')}%).`;
         stabilityBg = "#f0fdf4";
     } else if (coefficientOfVariation < 8) {
         stabilityLabel = "Stabilt pris";
         stabilityColor = "#0891b2";
         stabilityIcon = "trending_flat";
-        stabilityText = `Priset har varit relativt stabilt med låg variation (±${coefficientOfVariation.toFixed(1)}%).`;
+        stabilityText = `Priset har varit relativt stabilt med låg variation (±${coefficientOfVariation.toFixed(1).replace('.', ',')}%).`;
         stabilityBg = "#ecfeff";
     } else if (coefficientOfVariation < 15) {
         stabilityLabel = "Måttlig prisvariation";
@@ -1009,19 +1424,159 @@ function renderPriceStabilityInsight(allPrices, minPrice, maxPrice, priceDiff) {
         stabilityBg = "#fef2f2";
     }
 
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    const bgStyle = isDarkMode ? 'var(--card-bg)' : stabilityBg;
+    const borderStyle = isDarkMode ? `2px solid ${stabilityColor}` : `1px solid ${stabilityColor}30; border-left: 4px solid ${stabilityColor}`;
+    
     const insightHtml = `
-        <div id="stability-insight" style="background: ${stabilityBg}; border: 1px solid ${stabilityColor}30; border-left: 4px solid ${stabilityColor}; border-radius: 12px; padding: 16px 20px; margin-top: 16px;">
-            <div style="display: flex; align-items: flex-start; gap: 12px;">
-                <span class="material-symbols-outlined" style="color: ${stabilityColor}; font-size: 24px;">${stabilityIcon}</span>
-                <div>
-                    <strong style="display: block; font-size: 15px; color: ${stabilityColor}; margin-bottom: 4px;">${stabilityLabel}</strong>
-                    <p style="margin: 0; font-size: 13px; color: #64748b; line-height: 1.5;">${stabilityText}</p>
-                </div>
+        <div id="stability-insight" class="stability-insight-box" style="background: ${bgStyle}; border: ${borderStyle};">
+            <span class="material-symbols-outlined stability-insight-icon" style="color: ${stabilityColor};">${stabilityIcon}</span>
+            <div>
+                <strong class="stability-insight-title" style="color: ${isDarkMode ? 'var(--text-primary)' : stabilityColor};">${stabilityLabel}</strong>
+                <p class="stability-insight-text">${stabilityText}</p>
             </div>
         </div>
     `;
 
     chartContainer.insertAdjacentHTML('beforeend', insightHtml);
+}
+
+function renderAlternativePackageSizes(currentProduct, allMonthData) {
+    const sectionContainer = document.getElementById('alt-package-sizes-container');
+    if (!sectionContainer) return;
+
+    const existingSection = document.getElementById('alt-package-sizes');
+    if (existingSection) existingSection.remove();
+
+    if (!currentProduct || !Array.isArray(allMonthData)) return;
+
+    const normalize = (value) => String(value ?? '').trim().toLowerCase();
+    const currentSizeGroup = String(currentProduct["Förpackningsstorleksgrupp"] ?? '');
+
+    const relatedItems = allMonthData.filter(item =>
+        normalize(item.Substans) === normalize(currentProduct.Substans) &&
+        normalize(item.Styrka) === normalize(currentProduct.Styrka)
+    );
+
+    if (relatedItems.length === 0) return;
+
+    const groupedBySizeGroup = new Map();
+    relatedItems.forEach(item => {
+        const key = String(item["Förpackningsstorleksgrupp"] ?? item.Storlek ?? item.Varunummer ?? item.Vnr);
+        if (!groupedBySizeGroup.has(key)) groupedBySizeGroup.set(key, []);
+        groupedBySizeGroup.get(key).push(item);
+    });
+
+    const alternatives = [];
+    groupedBySizeGroup.forEach(groupItems => {
+        const pvItem = groupItems.find(entry => getItemStatus(entry).trim().toUpperCase() === 'PV');
+        const fallbackCheapest = groupItems.reduce((lowest, entry) => {
+            if (!lowest) return entry;
+            return toNumber(entry["Försäljningspris"]) < toNumber(lowest["Försäljningspris"]) ? entry : lowest;
+        }, null);
+        const representative = pvItem || fallbackCheapest;
+        if (representative) alternatives.push(representative);
+    });
+
+    const hasOtherSizes = alternatives.some(item =>
+        String(item["Förpackningsstorleksgrupp"] ?? '') !== currentSizeGroup
+    );
+    if (!hasOtherSizes) return;
+
+    alternatives.sort((a, b) => toNumber(a.Storlek) - toNumber(b.Storlek));
+
+    const compareValues = alternatives
+        .map(item => {
+            const sizeValue = toNumber(item.Storlek);
+            const priceValue = toNumber(item["Försäljningspris"]);
+            if (!Number.isFinite(sizeValue) || sizeValue <= 0 || !Number.isFinite(priceValue)) return null;
+            return priceValue / sizeValue;
+        })
+        .filter(value => Number.isFinite(value));
+
+    const minCompare = compareValues.length > 0 ? Math.min(...compareValues) : null;
+    const maxCompare = compareValues.length > 0 ? Math.max(...compareValues) : null;
+
+    const section = document.createElement('div');
+    section.id = 'alt-package-sizes';
+    section.className = 'bleed-card alt-package-sizes-card';
+
+    const title = document.createElement('h3');
+    title.className = 'alt-package-sizes-title';
+    title.textContent = 'Samma substans och styrka i andra förpackningsstorlekar';
+
+    const subtitle = document.createElement('p');
+    subtitle.className = 'alt-package-sizes-subtitle';
+    subtitle.textContent = 'Samma substans och styrka – jämför förpackningsstorlekar. Scrolla i sidled och klicka för att öppna.';
+
+    const list = document.createElement('div');
+    list.className = 'alt-package-sizes-list';
+
+    alternatives.forEach(item => {
+        const rowButton = document.createElement('button');
+        rowButton.type = 'button';
+        rowButton.className = 'alt-package-size-row';
+
+        const isCurrentSize = String(item["Förpackningsstorleksgrupp"] ?? '') === currentSizeGroup;
+        if (isCurrentSize) {
+            rowButton.classList.add('is-current');
+        }
+
+        const sizeValue = toNumber(item.Storlek);
+        const priceValue = toNumber(item["Försäljningspris"]);
+        const unit = formatUnitSingular(item.Beredningsform || currentProduct.Beredningsform || currentSearch?.form || '');
+        const compareValue = Number.isFinite(sizeValue) && sizeValue > 0 && Number.isFinite(priceValue)
+            ? (priceValue / sizeValue)
+            : null;
+        const comparePrice = Number.isFinite(compareValue)
+            ? `${compareValue.toFixed(2).replace('.', ',')} kr/${unit}`
+            : '—';
+        const priceText = Number.isFinite(priceValue)
+            ? `${priceValue.toLocaleString('sv-SE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`
+            : '—';
+
+        let compareClass = '';
+        if (Number.isFinite(compareValue) && Number.isFinite(minCompare) && Number.isFinite(maxCompare) && minCompare !== maxCompare) {
+            if (Math.abs(compareValue - minCompare) < 0.000001) compareClass = ' alt-compare-lowest';
+            else if (Math.abs(compareValue - maxCompare) < 0.000001) compareClass = ' alt-compare-highest';
+        }
+
+        const sizeText = formatUnit(item.Beredningsform || currentProduct.Beredningsform || '', item.Storlek);
+        const currentBadge = isCurrentSize ? '<span class="alt-current-badge">Visas nu</span>' : '';
+
+        rowButton.innerHTML = `
+            <div class="alt-package-size-main">
+                <div class="alt-package-size-topline">
+                    <strong>${sizeText}</strong>
+                    ${currentBadge}
+                </div>
+                <span>${item.Företag || '—'}</span>
+            </div>
+            <div class="alt-package-size-prices">
+                <span class="alt-price">${priceText}</span>
+                <span class="alt-compare${compareClass}">${comparePrice}</span>
+            </div>
+        `;
+
+        rowButton.addEventListener('click', () => {
+            fetchLatestPV({
+                id: item["Utbytesgrupps ID"],
+                size_id: item["Förpackningsstorleksgrupp"],
+                sub: item.Substans,
+                str: item.Styrka,
+                form: item.Beredningsform,
+                vnr: item.Varunummer || item.Vnr
+            });
+            window.scrollTo(0, 0);
+        });
+
+        list.appendChild(rowButton);
+    });
+
+    section.appendChild(title);
+    section.appendChild(subtitle);
+    section.appendChild(list);
+    sectionContainer.appendChild(section);
 }
 
 document.addEventListener('click', function (e) {
@@ -1035,6 +1590,11 @@ function getPriceRecommendation(currentPrice, stats, nextPrice) {
     const avgPrice = stats?.avgPrice;
     const minPrice = stats?.minPrice;
     const maxPrice = stats?.maxPrice;
+
+    // If viewing historical month, return null (no recommendation)
+    if (selectedMonth !== systemMonthCode) {
+        return null;
+    }
 
     let rec = {
         label: "Normalt pris",
@@ -1128,6 +1688,257 @@ function getPriceRecommendation(currentPrice, stats, nextPrice) {
     return rec;
 }
 
+// Month Picker Functions
+let currentPickerYear = Math.floor(selectedMonth / 100);
 
+function showMonthPicker() {
+    const btn = document.getElementById('month-picker-btn');
+    if (btn) {
+        btn.style.display = 'block';
+        currentPickerYear = Math.floor(selectedMonth / 100);
+        populateMonthPicker();
+    }
+}
+
+function populateMonthPicker() {
+    const yearEl = document.getElementById('month-picker-year');
+    const grid = document.getElementById('month-picker-grid');
+    const prevBtn = document.getElementById('prev-year-btn');
+    const nextBtn = document.getElementById('next-year-btn');
+    
+    if (!yearEl || !grid) return;
+    
+    // Get available years from month codes (e.g., 2602 -> 26 -> 2026)
+    const availableYears = [...new Set(availableMonths.map(m => Math.floor(m / 100)))].sort();
+    const minYear = Math.min(...availableYears);
+    const maxYear = Math.max(...availableYears);
+    
+    // Update year display
+    yearEl.textContent = '20' + String(currentPickerYear).padStart(2, '0');
+    
+    // Enable/disable navigation buttons
+    if (prevBtn) prevBtn.disabled = currentPickerYear <= minYear;
+    if (nextBtn) nextBtn.disabled = currentPickerYear >= maxYear;
+    
+    grid.innerHTML = '';
+    
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Maj', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'];
+    
+    // Create grid for all 12 months
+    months.forEach((monthName, index) => {
+        const monthNum = String(index + 1).padStart(2, '0');
+        const monthCode = parseInt(String(currentPickerYear) + monthNum);
+        
+        const monthDiv = document.createElement('div');
+        monthDiv.className = 'month-picker-month';
+        monthDiv.textContent = monthName;
+        
+        // Check if this month is available
+        if (availableMonths.includes(monthCode)) {
+            monthDiv.classList.add('available');
+            
+            if (monthCode == selectedMonth) {
+                monthDiv.classList.add('selected');
+            }
+            if (isPrelimMonth(monthCode)) {
+                monthDiv.classList.add('prelim');
+            }
+            
+            monthDiv.addEventListener('click', () => {
+                DOM.monthPickerDropdown.style.display = 'none';
+                updateMonth(monthCode);
+                if (currentSearch) {
+                    fetchLatestPV(currentSearch);
+                }
+            });
+        } else {
+            monthDiv.classList.add('unavailable');
+        }
+        
+        grid.appendChild(monthDiv);
+    });
+}
+
+// Toggle month picker dropdown
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('month-picker-btn');
+    const dropdown = document.getElementById('month-picker-dropdown');
+    const prevBtn = document.getElementById('prev-year-btn');
+    const nextBtn = document.getElementById('next-year-btn');
+    
+    if (btn && dropdown) {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isVisible = dropdown.style.display === 'block';
+            dropdown.style.display = isVisible ? 'none' : 'block';
+            if (!isVisible) {
+                currentPickerYear = Math.floor(selectedMonth / 100);
+                populateMonthPicker();
+            }
+        });
+        
+        // Year navigation
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentPickerYear--;
+                populateMonthPicker();
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentPickerYear++;
+                populateMonthPicker();
+            });
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target) && e.target !== btn) {
+                dropdown.style.display = 'none';
+            }
+        });
+    }
+});
+
+/**
+ * Finds better package sizes of the same medicine that offer lower per-unit pricing.
+ * @param {Object} selectedProduct - Currently selected medicine product
+ * @param {Array<Object>} dataToSearch - All available products to compare
+ * @returns {Object|null} Best deal object with size, savings percentage, and target size
+ */
+function findBetterPackageSize(selectedProduct, dataToSearch) {
+    const selectedSize = toNumber(selectedProduct.Storlek);
+    const selectedPrice = toNumber(selectedProduct["Försäljningspris"]);
+    
+    if (!Number.isFinite(selectedSize) || !Number.isFinite(selectedPrice) || selectedSize === 0) {
+        return null;
+    }
+
+    const selectedPricePerUnit = selectedPrice / selectedSize;
+    const substance = selectedProduct.Substans;
+    const strength = selectedProduct.Styrka;
+    const selectedVnr = selectedProduct.Varunummer || selectedProduct.Vnr;
+
+    let bestDeal = null;
+    const threshold = PACKAGE_SIZE_SAVINGS_THRESHOLD; // 5% threshold
+
+    dataToSearch.forEach(item => {
+        const itemStatus = getItemStatus(item);
+        if (itemStatus !== "PV") return;
+        if (item.Substans !== substance || item.Styrka !== strength) return;
+        
+        const itemVnr = item.Varunummer || item.Vnr;
+        if (itemVnr === selectedVnr) return;
+
+        const itemSize = toNumber(item.Storlek);
+        const itemPrice = toNumber(item["Försäljningspris"]);
+
+        if (!Number.isFinite(itemSize) || !Number.isFinite(itemPrice) || itemSize === 0) {
+            return;
+        }
+
+        const itemPricePerUnit = itemPrice / itemSize;
+        const savingsPercent = (selectedPricePerUnit - itemPricePerUnit) / selectedPricePerUnit;
+
+        if (savingsPercent >= threshold && (!bestDeal || itemPricePerUnit < bestDeal.pricePerUnit)) {
+            bestDeal = {
+                size: `${itemSize} ${formatUnit(item.Beredningsform, itemSize).split(' ').slice(1).join(' ')}`,
+                targetSize: itemSize,
+                pricePerUnit: itemPricePerUnit,
+                currentPricePerUnit: selectedPricePerUnit,
+                savings: savingsPercent * 100
+            };
+        }
+    });
+
+    return bestDeal;
+}
+
+function loadMedicineFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const vnr = params.get('vnr');
+    
+    if (!vnr) {
+        // No VNR in URL - show landing page
+        document.body.classList.remove('has-selection');
+        const existingAltSection = document.getElementById('alt-package-sizes');
+        if (existingAltSection) existingAltSection.remove();
+        const resultsDiv = DOM.resultsDiv;
+        if (resultsDiv) {
+            resultsDiv.innerHTML = '';
+        }
+        // Clear search bar
+        const searchInput = DOM.searchInput;
+        if (searchInput) {
+            searchInput.value = '';
+        }
+        // Hide chart
+        const chartCont = DOM.chartCont;
+        if (chartCont) {
+            chartCont.style.display = 'none';
+        }
+        return;
+    }
+    
+    // Find the medicine in the search index by VNR
+    const searchItem = searchIndex.find(item => 
+        item.vnr && (Array.isArray(item.vnr) ? item.vnr.includes(vnr) : item.vnr === vnr)
+    );
+    
+    if (searchItem) {
+        // Set the first VNR from the array if it's an array
+        if (Array.isArray(searchItem.vnr)) {
+            searchItem.vnr = vnr;
+        }
+        fetchLatestPV(searchItem, true); // Skip pushState - we're loading from existing URL
+    }
+}
+
+// Handle browser back/forward navigation
+window.addEventListener('popstate', function(event) {
+    const params = new URLSearchParams(window.location.search);
+    const vnr = params.get('vnr');
+    
+    if (!vnr) {
+        // No VNR - show landing page
+        document.body.classList.remove('has-selection');
+        const existingAltSection = document.getElementById('alt-package-sizes');
+        if (existingAltSection) existingAltSection.remove();
+        const resultsDiv = DOM.resultsDiv;
+        if (resultsDiv) {
+            resultsDiv.innerHTML = '';
+        }
+        // Clear search bar
+        const searchInput = DOM.searchInput;
+        if (searchInput) {
+            searchInput.value = '';
+        }
+        // Hide chart
+        const chartCont = DOM.chartCont;
+        if (chartCont) {
+            chartCont.style.display = 'none';
+        }
+        return;
+    }
+    
+    if (event.state && event.state.searchItem) {
+        currentSearch = event.state.searchItem;
+        fetchLatestPV(event.state.searchItem, true); // Skip pushState to avoid duplicate history entries
+    }
+});
+
+/**
+ * Converts a value to number, handling Swedish decimal format (comma).
+ * @param {*} value - Value to convert
+ * @returns {number|null} Numeric value or null if conversion fails
+ */
+function toNumber(value) {
+    if (value === null || value === undefined) return null;
+    const numeric = typeof value === 'number' ? value : Number(String(value).replace(',', '.'));
+    return Number.isFinite(numeric) ? numeric : null;
+}
 
 document.addEventListener('DOMContentLoaded', init);

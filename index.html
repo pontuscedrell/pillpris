@@ -8,6 +8,7 @@
     <meta property="og:description" content="Jämför priser och hitta billigaste läkemedel enligt TLV:s Periodens Varor">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pillpris.se">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="script.js" defer></script>
     <title>pillpris.se - Jämför läkemedelspriser från TLV</title>
     <link rel="stylesheet" href="style.css">
@@ -19,15 +20,20 @@
 <header class="site-header">
     <div class="header-container">
         <div class="header-content">
-            <a href="index.html" class="logo-wrapper" style="text-decoration: none;">
-                <div class="icon-box">
-                    <span class="material-symbols-outlined header-icon" style="color: white;">pill</span>
-                </div>
-                <div class="text-wrapper">
-                    <h1 class="main-title">pillpris.se</h1>
-                    <p class="sub-title" id="header-period">TLV Periodens Varor • Laddar...</p>
-                </div>
-            </a>
+            <div class="logo-shell">
+                <a href="index.html" class="logo-wrapper" style="text-decoration: none;">
+                    <div class="icon-box">
+                        <span class="material-symbols-outlined header-icon" style="color: white;">pill</span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h1 class="main-title">pillpris.se</h1>
+                        <p class="sub-title" id="header-period">TLV Periodens Varor • Laddar...</p>
+                    </div>
+                </a>
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Växla mörkt läge">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
             <nav class="header-nav">
                 <a href="index.html" class="nav-link active">Hem</a>
                 <a href="faq.html" class="nav-link">FAQ</a>
@@ -39,49 +45,126 @@
 </header>
 
 <div class="container">
-    
-    <div class="search-section">
-        <div class="search-controls">
-            <div class="input-group">
-                <label for="sub-input">Välj läkemedel</label>
-                <div style="position: relative;">
-                    <input type="text" id="sub-input" placeholder="Skriv substans eller produkt..." autocomplete="off">
-                    <button id="clear-search" class="clear-search-btn" style="display: none;" title="Rensa">
-                        <span class="material-symbols-outlined">close</span>
-                    </button>
-                </div>
-                <div id="custom-select" class="custom-dropdown">
-                    <div id="package-list"></div>
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">TLV-insikter i realtid</span>
+            <h2 class="hero-title">Jämför priser på <span>läkemedel</span></h2>
+            <p class="hero-subtitle">Hitta bästa priset, se prishistorik och få smarta köpråd — allt på några sekunder.</p>
+            <div class="hero-actions">
+                <button class="hero-btn primary" type="button" onclick="document.getElementById('sub-input').focus()">Sök läkemedel</button>
+                <a class="hero-btn ghost" href="faq.html">Så fungerar det</a>
+            </div>
+            <div class="search-section">
+                <div class="search-controls">
+                    <div class="input-group">
+                        <div class="search-bar-container">
+                            <div class="search-bar">
+                                <span class="material-symbols-outlined search-icon">search</span>
+                                <input type="text" id="sub-input" placeholder="Skriv substans eller produkt..." autocomplete="off">
+                                <button id="clear-search" class="clear-search-btn" style="display: none;" title="Rensa">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                                <div id="custom-select" class="custom-dropdown">
+                                    <div id="package-list"></div>
+                                </div>
+                            </div>
+                            <button id="month-picker-btn" class="month-picker-btn" style="display: none;" title="Välj period">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                            </button>
+                        </div>
+                        <div id="month-picker-dropdown" class="month-picker-dropdown" style="display: none;">
+                            <div class="month-picker-calendar">
+                                <div class="month-picker-year-nav">
+                                    <button class="year-nav-btn" id="prev-year-btn" title="Föregående år">
+                                        <span class="material-symbols-outlined">chevron_left</span>
+                                    </button>
+                                    <div class="month-picker-year" id="month-picker-year"></div>
+                                    <button class="year-nav-btn" id="next-year-btn" title="Nästa år">
+                                        <span class="material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </div>
+                                <div class="month-picker-grid" id="month-picker-grid"></div>
+                            </div>
+                        </div>
+                        <div class="popular-row">
+                            <span class="popular-label">Vanliga:</span>
+                            <button class="popular-chip" type="button" data-search="Paracetamol">Paracetamol</button>
+                            <button class="popular-chip" type="button" data-search="Loratadin">Loratadin</button>
+                            <button class="popular-chip" type="button" data-search="Omeprazol">Omeprazol</button>
+                            <button class="popular-chip" type="button" data-search="Enalapril">Enalapril</button>
+                        </div>
+                    </div>
+                    
+                    <div class="month-group" style="display: none;">
+                        <label for="month-select-main">Period</label>
+                        <select id="month-select-main" onchange="updateMonth(this.value)"></select>
+                    </div>
                 </div>
             </div>
-            
-            <div class="month-group">
-                <label for="month-select-main">Period</label>
-                <select id="month-select-main" onchange="updateMonth(this.value)"></select>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="material-symbols-outlined">price_check</span>
+                    <div>
+                        <strong>Prisjämförelse</strong>
+                        <p>Alltid uppdaterade TLV-priser</p>
+                    </div>
+                </div>
+                <div class="hero-stat">
+                    <span class="material-symbols-outlined">insights</span>
+                    <div>
+                        <strong>Prishistorik</strong>
+                        <p>Se trender och förändringar</p>
+                    </div>
+                </div>
+                <div class="hero-stat">
+                    <span class="material-symbols-outlined">verified</span>
+                    <div>
+                        <strong>Trygg data</strong>
+                        <p>Baseras på officiella källor</p>
+                    </div>
+                </div>
+                <div class="hero-stat">
+                    <span class="material-symbols-outlined">speed</span>
+                    <div>
+                        <strong>Snabb sökning</strong>
+                        <p>Hitta priser på sekunder</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="hero-art" aria-hidden="true">
+            <div class="hero-card">
+                <div class="hero-pill"></div>
+                <svg class="hero-illustration" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="pillGradient" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#14b8a6" />
+                            <stop offset="100%" stop-color="#2563eb" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="20" y="30" width="240" height="140" rx="28" fill="#ffffff" stroke="#e2e8f0"/>
+                    <rect x="40" y="55" width="200" height="18" rx="9" fill="#e2e8f0"/>
+                    <rect x="40" y="85" width="160" height="10" rx="5" fill="#e2e8f0"/>
+                    <rect x="40" y="105" width="120" height="10" rx="5" fill="#e2e8f0"/>
+                    <circle cx="210" cy="120" r="28" fill="url(#pillGradient)" opacity="0.9"/>
+                </svg>
+            </div>
+        </div>
+    </section>
 
 <div id="results">
-    <div id="empty-state" class="empty-state">
-        <div class="empty-icon-circle">
-            <span class="material-symbols-outlined">pill</span>
-        </div>
-        <h2>Välj ett läkemedel</h2>
-        <p>Sök efter ett läkemedel ovan för att se prisinformation, jämföra alternativ och se prishistorik.</p>
-    </div>
 </div>
 
-    <div id="chart-container" style="display:none; position: relative; margin-top: 20px; margin-bottom: 30px; background: white; padding: 24px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+    <div id="chart-container" style="display:none;">
         
-        <div id="chart-filter-wrapper" style="display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-bottom: 15px;">
-            <label for="chart-price-type" style="margin: 0; font-size: 12px; color: #64748b; font-weight: 600; text-transform: uppercase;">Typ:</label>
-            <select id="chart-price-type" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #1e293b; background: #f8fafc; cursor: pointer;" onchange="renderHistoryChart(currentSearch)">
+        <div id="chart-filter-wrapper">
+            <label for="chart-price-type">Typ:</label>
+            <select id="chart-price-type" onchange="renderHistoryChart(currentSearch)">
                 <option value="pv">Periodens vara</option>
                 <option value="cheapest">Billigaste pris</option>
             </select>
-            <label for="chart-range-select" style="margin: 0; font-size: 12px; color: #64748b; font-weight: 600; text-transform: uppercase;">Visa:</label>
-            <select id="chart-range-select" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 13px; color: #1e293b; background: #f8fafc; cursor: pointer;" onchange="renderHistoryChart(currentSearch)">
+            <label for="chart-range-select">Visa:</label>
+            <select id="chart-range-select" onchange="renderHistoryChart(currentSearch)">
                 <option value="12">Senaste 12 månaderna</option>
                 <option value="24">Senaste 24 månaderna</option>
                 <option value="6">Senaste 6 månaderna</option>
@@ -97,6 +180,8 @@
         </div>
     </div>
 
+    <div id="alt-package-sizes-container"></div>
+
 </div> 
 
 <footer class="site-footer">
@@ -108,6 +193,250 @@
         </div>
     </div>
 </footer>
+
+<template id="template-loading">
+    <p style="text-align:center; padding: 40px;">Hämtar prisdata...</p>
+</template>
+
+<template id="template-error">
+    <p>Ett fel uppstod när data skulle laddas.</p>
+</template>
+
+<template id="template-no-results">
+    <div style="padding: 24px; background: #f8fafc;">
+        <div class="item-line1" style="margin-bottom: 8px;">Varför finns inte min vara</div>
+        <div class="item-line2" style="margin-top: 0;">Alla läkemedel upphandlas inte med periodens vara. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a></div>
+    </div>
+</template>
+
+<template id="template-results-container">
+    <div id="price-card-area"></div>
+    <div id="table-area"></div>
+</template>
+
+<template id="template-price-card">
+    <div class="bleed-card">
+        <div class="price-card-header-bar">
+            <div class="price-card-icon-wrapper">
+                <span class="material-symbols-outlined price-card-icon"></span>
+            </div>
+            <div class="price-card-header-text">
+                <p class="price-card-header-label"></p>
+                <p class="price-card-header-subtext"></p>
+            </div>
+        </div>
+
+        <div class="price-card-content-wrapper">
+            <div class="price-card-grid">
+                <div class="price-card-left-column">
+                    <div class="price-card-title-section">
+                        <h2 class="price-card-title"></h2>
+                        <p class="price-card-subtitle"></p>
+                    </div>
+
+                    <div class="price-card-price-section">
+                        <div class="price-card-current-wrapper">
+                            <p class="price-card-current-label">Aktuellt pris</p>
+                            <span class="price-card-current-value"></span>
+                        </div>
+                        <div class="price-card-savings-slot"></div>
+                    </div>
+
+                    <div class="stat-blocks-container"></div>
+                </div>
+
+                <div class="price-card-info-panel">
+                    <p class="price-card-info-header">Information</p>
+                    <div class="price-card-info-list">
+                        <div class="price-card-info-item">
+                            <span class="material-symbols-outlined price-card-info-icon">inventory_2</span>
+                            <div class="price-card-info-content">
+                                <span class="price-card-info-label">Antal i förpackning</span>
+                                <span class="price-card-info-value" data-field="pack-size"></span>
+                            </div>
+                        </div>
+                        <div class="price-card-info-item">
+                            <span class="material-symbols-outlined price-card-info-icon">category</span>
+                            <div class="price-card-info-content">
+                                <span class="price-card-info-label">Förpackningstyp</span>
+                                <span class="price-card-info-value" data-field="packaging"></span>
+                            </div>
+                        </div>
+                        <div class="price-card-info-item">
+                            <span class="material-symbols-outlined price-card-info-icon">factory</span>
+                            <div class="price-card-info-content">
+                                <span class="price-card-info-label">Tillverkare</span>
+                                <span class="price-card-info-value" data-field="manufacturer"></span>
+                            </div>
+                        </div>
+                        <div class="price-card-info-item">
+                            <span class="material-symbols-outlined price-card-info-icon">info</span>
+                            <div class="price-card-info-content">
+                                <span class="price-card-info-label">Typ</span>
+                                <span class="price-card-info-value" data-field="origin"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="template-stat-block">
+    <div class="stat-block">
+        <p class="stat-block-label"></p>
+        <div class="stat-block-content">
+            <span class="stat-block-price"></span>
+            <span class="stat-block-trend">
+                <span class="material-symbols-outlined"></span>
+                <span class="stat-block-trend-value"></span>
+            </span>
+        </div>
+        <p class="stat-block-empty" style="margin: 4px 0 0 0; color: #cbd5e1; font-size: 14px; display: none;">Ej fastställt</p>
+    </div>
+</template>
+
+<template id="template-savings-alert">
+    <div class="savings-alert-box">
+        <span class="material-symbols-outlined">account_balance_wallet</span>
+        <div>
+            <strong class="savings-alert-title"></strong>
+            <p class="savings-alert-text"></p>
+        </div>
+    </div>
+</template>
+
+<template id="template-table-container">
+    <div class="bleed-card comparison-container">
+        <div class="comparison-inner-padding">
+            <h3 class="comparison-title">Utbytbara alternativ</h3>
+            <p class="comparison-subtitle">
+                Alla dessa innehåller samma verksamma ämne:
+                <strong class="comparison-subtitle-strong"></strong>
+            </p>
+        </div>
+
+        <div id="comparison-list" class="comparison-list-wrapper"></div>
+
+        <div id="pagination-footer"></div>
+
+        <div class="tlv-info-box">
+            <span class="material-symbols-outlined tlv-info-icon">info</span>
+            <div>
+                <p class="tlv-info-title">Periodens vara är inte alltid billigast</p>
+                <p class="tlv-info-text">
+                    Billigaste läkemedel blir inte alltid "periodens vara" om företaget inte har bekräftat leveransförmåga till TLV. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="template-month-selector">
+    <div class="month-selector-wrapper">
+        <label for="month-select" style="font-size: 12px; color: #64748b; font-weight: 400;">Period:</label>
+        <select id="month-select"></select>
+    </div>
+</template>
+
+<template id="template-comparison-row">
+    <div class="comparison-row">
+        <div class="comparison-row-header">
+            <div class="comparison-row-left">
+                <div class="comparison-row-product">
+                    <span class="comparison-row-status"></span>
+                    <strong class="comparison-row-name"></strong>
+                </div>
+                <p class="comparison-row-info"></p>
+            </div>
+            <div class="price-display-container">
+                <div class="price-value"></div>
+                <div class="price-diff"></div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="template-row-details">
+    <div class="row-details-container">
+        <div class="row-detail-item">
+            <span class="material-symbols-outlined">inventory_2</span>
+            <div class="row-detail-content">
+                <span class="row-detail-label">Antal i förpackning</span>
+                <span class="row-detail-value" data-field="pack-size"></span>
+            </div>
+        </div>
+        <div class="row-detail-item">
+            <span class="material-symbols-outlined">category</span>
+            <div class="row-detail-content">
+                <span class="row-detail-label">Förpackningstyp</span>
+                <span class="row-detail-value" data-field="packaging"></span>
+            </div>
+        </div>
+        <div class="row-detail-item">
+            <span class="material-symbols-outlined">factory</span>
+            <div class="row-detail-content">
+                <span class="row-detail-label">Tillverkare</span>
+                <span class="row-detail-value" data-field="manufacturer"></span>
+            </div>
+        </div>
+        <div class="row-detail-item">
+            <span class="material-symbols-outlined">info</span>
+            <div class="row-detail-content">
+                <span class="row-detail-label">Typ</span>
+                <span class="row-detail-value" data-field="origin"></span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="template-info-card">
+    <div class="reserves-container" style="background: white; border-radius: 16px; padding: 24px 0; border: 1px solid #e2e8f0; margin-top: 20px;">
+        <div style="padding: 0 1rem;">
+            <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #1e293b;">Utbytbara alternativ</h3>
+            <p style="margin: 8px 0 24px 0; color: #64748b; font-size: 14px;">
+                Alla dessa innehåller samma verksamma ämne...
+            </p>
+        </div>
+            <span class="material-symbols-outlined">expand_more</span>
+        </summary>
+        <div style="padding: 15px; border-top: 1px solid #f1f5f9; background: #f8fafc; font-size: 13px;">
+            <p><strong>Utbytesgrupp:</strong> <span data-field="exchange-group"></span></p>
+            <p><strong>Varunummer:</strong> <span data-field="product-numbers"></span></p>
+            <p><strong>Synonymer:</strong> <span data-field="synonyms"></span></p>
+        </div>
+    </details>
+</template>
+
+<template id="template-insight-card">
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; margin-bottom: 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+        <div>
+            <p style="font-size: 10px; color: #64748b; margin: 0;">HISTORISKT SNITT</p>
+            <p style="font-weight: 700; margin: 0;" data-field="avg-price"></p>
+        </div>
+        <div>
+            <p style="font-size: 10px; color: #64748b; margin: 0;">LÄGSTA NOTERADE</p>
+            <p style="font-weight: 700; margin: 0;" data-field="min-price"></p>
+        </div>
+    </div>
+</template>
+
+<template id="template-dropdown-item">
+    <div class="dropdown-item">
+        <div class="item-line1"><strong data-field="sub"></strong> <span data-field="str"></span></div>
+        <div class="item-line2" data-field="meta"></div>
+    </div>
+</template>
+
+<template id="template-dropdown-no-results">
+    <div class="dropdown-item">
+        <div class="item-line1">Varför finns inte min vara?</div>
+        <div class="item-line2">
+            Alla läkemedel upphandlas inte med periodens vara. <a href="faq.html#varfor-hitta" style="color: #2563eb; text-decoration: none; font-weight: 600;">Läs mer</a>
+        </div>
+    </div>
+</template>
 
 </body>
 </html>
