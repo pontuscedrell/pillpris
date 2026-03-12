@@ -9,6 +9,7 @@ let lastMatches = [];
 let lastPVPrice = 0;
 let selectedRowId = null;
 let chartPriceType = "pv"; // "pv" or "cheapest"
+let altPackageView = "cards"; // "cards" or "table"
 
 // Constants
 const SEARCH_RESULTS_LIMIT = 20;
@@ -1501,9 +1502,17 @@ function renderAlternativePackageSizes(currentProduct, allMonthData) {
     section.id = 'alt-package-sizes';
     section.className = 'bleed-card alt-package-sizes-card';
 
+    const heading = document.createElement('div');
+    heading.className = 'alt-package-sizes-heading';
+
     const title = document.createElement('h3');
     title.className = 'alt-package-sizes-title';
     title.textContent = 'Samma substans och styrka i andra förpackningsstorlekar';
+
+    const toggleBtn = document.createElement('button');
+    toggleBtn.type = 'button';
+    toggleBtn.className = 'alt-view-toggle';
+    toggleBtn.innerHTML = '<span class="material-symbols-outlined">list</span>';
 
     const subtitle = document.createElement('p');
     subtitle.className = 'alt-package-sizes-subtitle';
@@ -1512,15 +1521,29 @@ function renderAlternativePackageSizes(currentProduct, allMonthData) {
     const list = document.createElement('div');
     list.className = 'alt-package-sizes-list';
 
-    alternatives.forEach(item => {
-        const rowButton = document.createElement('button');
-        rowButton.type = 'button';
-        rowButton.className = 'alt-package-size-row';
+    const tableWrap = document.createElement('div');
+    tableWrap.className = 'alt-package-sizes-table-wrap';
 
+    const table = document.createElement('table');
+    table.className = 'alt-package-sizes-table';
+    table.innerHTML = `
+        <thead>
+            <tr>
+                <th>Förpackning</th>
+                <th>Pris</th>
+                <th>Jmf pris</th>
+                <th>Tillverkare</th>
+            </tr>
+        </thead>
+    `;
+    const tableBody = document.createElement('tbody');
+    table.appendChild(tableBody);
+    tableWrap.appendChild(table);
+
+    const rows = [];
+
+    alternatives.forEach(item => {
         const isCurrentSize = String(item["Förpackningsstorleksgrupp"] ?? '') === currentSizeGroup;
-        if (isCurrentSize) {
-            rowButton.classList.add('is-current');
-        }
 
         const sizeValue = toNumber(item.Storlek);
         const priceValue = toNumber(item["Försäljningspris"]);
@@ -1544,38 +1567,94 @@ function renderAlternativePackageSizes(currentProduct, allMonthData) {
         const sizeText = formatUnit(item.Beredningsform || currentProduct.Beredningsform || '', item.Storlek);
         const currentBadge = isCurrentSize ? '<span class="alt-current-badge">Visas nu</span>' : '';
 
+        rows.push({
+            item,
+            isCurrentSize,
+            compareClass,
+            comparePrice,
+            priceText,
+            sizeText,
+            currentBadge,
+            company: item.Företag || '—'
+        });
+    });
+
+    const goToItem = (item) => {
+        fetchLatestPV({
+            id: item["Utbytesgrupps ID"],
+            size_id: item["Förpackningsstorleksgrupp"],
+            sub: item.Substans,
+            str: item.Styrka,
+            form: item.Beredningsform,
+            vnr: item.Varunummer || item.Vnr
+        });
+        window.scrollTo(0, 0);
+    };
+
+    rows.forEach(row => {
+        const rowButton = document.createElement('button');
+        rowButton.type = 'button';
+        rowButton.className = 'alt-package-size-row';
+        if (row.isCurrentSize) {
+            rowButton.classList.add('is-current');
+        }
+
         rowButton.innerHTML = `
             <div class="alt-package-size-main">
                 <div class="alt-package-size-topline">
-                    <strong>${sizeText}</strong>
-                    ${currentBadge}
+                    <strong>${row.sizeText}</strong>
+                    ${row.currentBadge}
                 </div>
-                <span>${item.Företag || '—'}</span>
+                <span>${row.company}</span>
             </div>
             <div class="alt-package-size-prices">
-                <span class="alt-price">${priceText}</span>
-                <span class="alt-compare${compareClass}">${comparePrice}</span>
+                <span class="alt-price">${row.priceText}</span>
+                <span class="alt-compare${row.compareClass}">${row.comparePrice}</span>
             </div>
         `;
 
-        rowButton.addEventListener('click', () => {
-            fetchLatestPV({
-                id: item["Utbytesgrupps ID"],
-                size_id: item["Förpackningsstorleksgrupp"],
-                sub: item.Substans,
-                str: item.Styrka,
-                form: item.Beredningsform,
-                vnr: item.Varunummer || item.Vnr
-            });
-            window.scrollTo(0, 0);
-        });
+        rowButton.addEventListener('click', () => goToItem(row.item));
 
         list.appendChild(rowButton);
+
+        const tr = document.createElement('tr');
+        tr.className = 'alt-package-size-table-row';
+        if (row.isCurrentSize) tr.classList.add('is-current');
+        tr.innerHTML = `
+            <td>${row.sizeText} ${row.currentBadge}</td>
+            <td>${row.priceText}</td>
+            <td class="alt-table-compare${row.compareClass}">${row.comparePrice}</td>
+            <td>${row.company}</td>
+        `;
+        tr.addEventListener('click', () => goToItem(row.item));
+        tableBody.appendChild(tr);
     });
 
-    section.appendChild(title);
+    const syncView = () => {
+        const isTable = altPackageView === 'table';
+        list.classList.toggle('is-hidden', isTable);
+        tableWrap.classList.toggle('is-hidden', !isTable);
+        const iconEl = toggleBtn.querySelector('.material-symbols-outlined');
+        if (iconEl) {
+            iconEl.textContent = isTable ? 'view_carousel' : 'list';
+        }
+        toggleBtn.setAttribute('aria-label', isTable ? 'Visa kortvy' : 'Visa tabellvy');
+        toggleBtn.title = isTable ? 'Visa kortvy' : 'Visa tabellvy';
+    };
+
+    toggleBtn.addEventListener('click', () => {
+        altPackageView = altPackageView === 'table' ? 'cards' : 'table';
+        syncView();
+    });
+
+    heading.appendChild(title);
+    heading.appendChild(toggleBtn);
+
+    section.appendChild(heading);
     section.appendChild(subtitle);
     section.appendChild(list);
+    section.appendChild(tableWrap);
+    syncView();
     sectionContainer.appendChild(section);
 }
 

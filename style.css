@@ -1885,10 +1885,38 @@ body.dark-mode .comparison-row.reserve-row {
     margin-top: 0;
     padding: 16px;
 }
+.alt-package-sizes-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
 .alt-package-sizes-title {
     margin: 0;
     font-size: 16px;
     color: var(--text-primary);
+}
+.alt-view-toggle {
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 10px;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.alt-view-toggle:hover {
+    border-color: #0891b2;
+    color: #0891b2;
+}
+
+.alt-view-toggle .material-symbols-outlined {
+    font-size: 20px;
 }
 .alt-package-sizes-subtitle {
     margin: 6px 0 12px 0;
@@ -1982,10 +2010,66 @@ body.dark-mode .comparison-row.reserve-row {
     font-weight: 700;
 }
 
+.alt-package-sizes-table-wrap {
+    overflow-x: auto;
+}
+
+.alt-package-sizes-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.alt-package-sizes-table th,
+.alt-package-sizes-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.alt-package-sizes-table th {
+    color: var(--text-secondary);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.alt-package-size-table-row {
+    cursor: pointer;
+}
+
+.alt-package-size-table-row:hover {
+    background: rgba(8, 145, 178, 0.08);
+}
+
+.alt-package-size-table-row.is-current {
+    background: rgba(8, 145, 178, 0.10);
+}
+
+.alt-table-compare.alt-compare-lowest {
+    color: #15803d;
+    font-weight: 700;
+}
+
+.alt-table-compare.alt-compare-highest {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
 @media (max-width: 640px) {
     .alt-package-size-row {
         width: 240px;
         min-width: 240px;
+    }
+
+    .alt-package-sizes-heading {
+        align-items: flex-start;
     }
 }
 

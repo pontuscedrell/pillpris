@@ -22,32 +22,32 @@
         .faq-header h1 {
             font-size: 2rem;
             font-weight: 700;
-            color: #0f172a;
+            color: var(--text-primary);
             margin-bottom: 0.5rem;
         }
 
         .faq-header p {
-            color: #64748b;
+            color: var(--text-secondary);
             font-size: 1rem;
         }
 
         .faq-item {
             margin-bottom: 1.5rem;
-            background: #ffffff;
+            background: var(--card-bg);
             border-radius: 12px;
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--border-color);
             overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 1px 3px var(--shadow-color);
             transition: all 0.3s ease;
         }
 
         .faq-item:hover {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px var(--shadow-color);
         }
 
         .faq-question {
             padding: 1.5rem;
-            background: #ffffff;
+            background: var(--card-bg);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -57,13 +57,13 @@
         }
 
         .faq-question:hover {
-            background-color: #f8fafc;
+            background-color: var(--bg-primary);
         }
 
         .faq-question-text {
             font-weight: 600;
             font-size: 1rem;
-            color: #0f172a;
+            color: var(--text-primary);
             flex: 1;
         }
 
@@ -84,7 +84,7 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
-            background: #f8fafc;
+            background: var(--bg-primary);
         }
 
         .faq-item.active .faq-answer {
@@ -93,7 +93,7 @@
 
         .faq-answer-text {
             padding: 0 1.5rem 1.5rem 1.5rem;
-            color: #64748b;
+            color: var(--text-secondary);
             line-height: 1.6;
             font-size: 0.95rem;
         }
@@ -121,6 +121,10 @@
 
         .back-link:hover {
             gap: 0.75rem;
+        }
+
+        body.dark-mode .faq-answer a {
+            color: #60a5fa;
         }
     </style>
 </head>
@@ -199,7 +203,7 @@
         </div>
         <div class="faq-answer">
             <div class="faq-answer-text">
-                "Periodens Vara" (PV) är det läkemedel som TLV har upphandlat för en viss period. Det är ofta det billigaste alternativet bland de utbytbara läkemedlen för en given substans, styrka och förpackningsstorlek. Genom att välja Periodens Vara kan du ofta spara pengar på dina läkemedelskostnader.
+                "Periodens Vara" (PV) är det läkemedel som TLV har upphandlat för en viss period. Det är ofta det billigaste alternativet bland de utbytbara läkemedlen för en given substans, styrka och förpackningsstorlek. Genom att välja Periodens Vara kan du ofta spara pengar på dina läkemedelskostnader. Du kan läsa mer på TLVs hemsida: <a href="https://www.tlv.se/apotek/generiskt-utbyte/periodens-varor.html" target="_blank" rel="noopener">https://www.tlv.se/apotek/generiskt-utbyte/periodens-varor.html</a>
             </div>
         </div>
     </div>
@@ -211,7 +215,7 @@
         </div>
         <div class="faq-answer">
             <div class="faq-answer-text">
-                Läkemedel kan nekas status som "periodens vara" trots lägst pris om företaget inte garanterat leverans till TLV. Apotek får dock slutförsälja föregående periods vara till det gamla priset under de första 15 dagarna i en ny period, förutsatt att varan fanns i lager vid periodskiftet. Detta kan leda till att vissa läkemedel är billigare än den aktuella periodens vara under en kort tid efter periodskiftet.
+                Läkemedel kan nekas status som "periodens vara" trots lägst pris om företaget inte garanterat leverans till TLV. Apotek får dock slutförsälja föregående periods vara till det gamla priset under de första 15 dagarna i en ny period, förutsatt att varan fanns i lager vid periodskiftet. Detta kan leda till att vissa läkemedel är billigare än den aktuella periodens vara under en kort tid efter periodskiftet. Läs mer här: <a href="https://www.tlv.se/apotek/generiskt-utbyte/periodens-varor.html" target="_blank" rel="noopener">https://www.tlv.se/apotek/generiskt-utbyte/periodens-varor.html</a>
             </div>
         </div>
     </div>
@@ -223,7 +227,7 @@
         </div>
         <div class="faq-answer">
             <div class="faq-answer-text">
-                Inte alla läkemedel är upphandlade med Periodens Vara. pillpris.se visar bara läkemedel som är del av TLVs prisövervakning. Om du inte kan hitta ditt läkemedel kan det bero på att det inte är utbytbart eller inte ingår i TLVs "Periodens Vara"-system.
+                Alla läkemedel upphandlas inte med systemet för periodens vara. pillpris.se visar bara de läkemedel som upphandlas på detta sätt. Om du inte kan hitta ditt läkemedel kan det bero på att det inte är utbytbart eller inte ingår i TLVs "Periodens Vara"-system.
             </div>
         </div>
     </div>
@@ -235,7 +239,7 @@
         </div>
         <div class="faq-answer">
             <div class="faq-answer-text">
-                Priserna uppdateras varje månad när TLV publicerar nya data. Du kan välja vilken period du vill visa med rullgardinsmenyn för att se prishistorik över tid.
+                Priserna uppdateras varje månad när TLV publicerar nya data. 
             </div>
         </div>
     </div>
@@ -247,7 +251,8 @@
         </div>
         <div class="faq-answer">
             <div class="faq-answer-text">
-                pillpris.se är ett öppet projekt. Du kan fritt använda och dela informationen härifrån. Kontakta oss om du har frågor om licensiering eller användning av data.
+                Ja, hemsidan är skriven i  äkta open source-anda. Men hör gärna av dig om du tänkt bygga vidare på koden eller använda den i ett annat projekt, jag vill gärna veta hur den används! Du hittar koden på GitHub. 
+                Hemsidan är utvecklad med hjälp av AI. 
             </div>
         </div>
     </div>
@@ -259,7 +264,7 @@
         </div>
         <div class="faq-answer">
             <div class="faq-answer-text">
-                Pillpris.se är utvecklat som ett verktyg för att göra läkemedelspriser mer transparenta och tillgängliga för alla. Hemsidan är inte utvecklad eller finansierad av TLV. Alla data kommer från TLVs offentliga databaser.
+                Pillpris.se är utvecklat av Pontus Cedrell. Jag störde mig på att läkemedelspriser oannoserat kunde vara dyrare från ena månaden till den andra. Genom att hämta och visa TLV:s prisdata på ett tydligare sätt, kunde det hjälpa mig planera mina inköp och spara pengar. Jag hoppas att det kan hjälpa fler!
             </div>
         </div>
     </div>
@@ -277,6 +282,32 @@
 </footer>
 
 <script>
+    // Dark mode initialization and toggle
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if (darkModeToggle) {
+        const icon = darkModeToggle.querySelector('.material-symbols-outlined');
+
+        if (document.body.classList.contains('dark-mode')) {
+            icon.textContent = 'light_mode';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                icon.textContent = 'light_mode';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                icon.textContent = 'dark_mode';
+            }
+        });
+    }
+
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
             const faqItem = button.parentElement;
