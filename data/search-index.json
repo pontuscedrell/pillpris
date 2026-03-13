@@ -461,6 +461,22 @@
   },
   {
     "id": "112009",
+    "size_id": "T28",
+    "sub": "Akamprosat",
+    "form": "Enterotablett",
+    "str": "333 mg",
+    "size": "ca 261 st",
+    "names": [
+      "Akamprosat Viatris"
+    ],
+    "vnr": [
+      "421562"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112009",
     "size_id": "T31",
     "sub": "Akamprosat",
     "form": "Enterotablett",
@@ -1998,10 +2014,12 @@
       "Apremilast Accord",
       "Apremilast Krka",
       "Apremilast STADA",
+      "Apremilast Zentiva",
       "Otezla"
     ],
     "vnr": [
       "177869",
+      "414928",
       "551307",
       "553909",
       "566052",
@@ -2025,11 +2043,13 @@
       "Apremilast Krka",
       "Apremilast STADA",
       "Apremilast Teva",
+      "Apremilast Zentiva",
       "Otezla"
     ],
     "vnr": [
       "130056",
       "153709",
+      "159476",
       "181713",
       "413080",
       "46852",
@@ -3824,6 +3844,7 @@
       "Baklofen Viatris"
     ],
     "vnr": [
+      "130367",
       "181320",
       "380916",
       "384279",
@@ -3866,6 +3887,7 @@
     ],
     "vnr": [
       "402341",
+      "403822",
       "456301",
       "475707",
       "520051"
@@ -4159,53 +4181,6 @@
     "id": "111503",
     "size_id": "T23",
     "sub": "Betametason",
-    "form": "Kutan lösning",
-    "str": "1 mg/ml",
-    "size": "30 ml",
-    "names": [
-      "Betnovat®"
-    ],
-    "vnr": [
-      "8243"
-    ],
-    "packaging": [
-      "Plastflaska"
-    ],
-    "packagingMap": {
-      "8243": "Plastflaska"
-    }
-  },
-  {
-    "id": "111829",
-    "size_id": "T23",
-    "sub": "Bexaroten",
-    "form": "Kapsel, mjuk",
-    "str": "75 mg",
-    "size": "90–105 st",
-    "names": [
-      "Bexarotene Amdipharm",
-      "Targretin"
-    ],
-    "vnr": [
-      "376298",
-      "393513",
-      "431604",
-      "474378"
-    ],
-    "packaging": [
-      "Burk"
-    ],
-    "packagingMap": {
-      "474378": "Burk",
-      "376298": "Burk",
-      "393513": "Burk",
-      "431604": "Burk"
-    }
-  },
-  {
-    "id": "111456",
-    "size_id": "T18",
-    "sub": "Bikalutamid",
     "form": "Tablett",
     "str": "0,5 mg",
     "size": "ca 90 st",
@@ -4217,6 +4192,26 @@
       "15381",
       "371266",
       "61877"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111829",
+    "size_id": "T23",
+    "sub": "Bexaroten",
+    "form": "Kapsel, mjuk",
+    "str": "75 mg",
+    "size": "ca 90 st",
+    "names": [
+      "Bexarotene Amdipharm",
+      "Targretin"
+    ],
+    "vnr": [
+      "376298",
+      "393513",
+      "431604",
+      "474378"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -4583,6 +4578,22 @@
     "packagingMap": {}
   },
   {
+    "id": "111175",
+    "size_id": "T31",
+    "sub": "Bisoprolol",
+    "form": "Tablett",
+    "str": "1,25 mg",
+    "size": "ca 492 st",
+    "names": [
+      "Bisoprolol Viatris"
+    ],
+    "vnr": [
+      "561664"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
     "id": "111174",
     "size_id": "T23",
     "sub": "Bisoprolol",
@@ -4683,7 +4694,23 @@
     ],
     "vnr": [
       "426448",
-      "541965"
+      "44908"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111176",
+    "size_id": "T31",
+    "sub": "Bisoprolol",
+    "form": "Tablett",
+    "str": "2,5 mg",
+    "size": "ca 492 st",
+    "names": [
+      "Bisoprolol Viatris"
+    ],
+    "vnr": [
+      "496262"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -4768,6 +4795,22 @@
     ],
     "vnr": [
       "434949"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "528",
+    "size_id": "T31",
+    "sub": "Bisoprolol",
+    "form": "Tablett",
+    "str": "5 mg",
+    "size": "ca 492 st",
+    "names": [
+      "Bisoprolol Viatris"
+    ],
+    "vnr": [
+      "498503"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -5685,7 +5728,7 @@
     "size_id": "TN28",
     "sub": "Buprenorfin + naloxon",
     "form": "Resoriblett, sublingual",
-    "str": "2 mg / 0,5 mg",
+    "str": "2 mg/0,5 mg",
     "size": "28 st",
     "names": [
       "Bunalict",
@@ -5708,7 +5751,7 @@
     "size_id": "TN7",
     "sub": "Buprenorfin + naloxon",
     "form": "Resoriblett, sublingual",
-    "str": "2 mg / 0,5 mg",
+    "str": "2 mg/0,5 mg",
     "size": "7 st",
     "names": [
       "Buprenorphine/Naloxone G.L. Pharma",
@@ -5727,7 +5770,7 @@
     "size_id": "TN28",
     "sub": "Buprenorfin + naloxon",
     "form": "Resoriblett, sublingual",
-    "str": "8 mg / 2 mg",
+    "str": "8 mg/2 mg",
     "size": "28 st",
     "names": [
       "Bunalict",
@@ -5751,7 +5794,7 @@
     "size_id": "TN7",
     "sub": "Buprenorfin + naloxon",
     "form": "Resoriblett, sublingual",
-    "str": "8 mg / 2 mg",
+    "str": "8 mg/2 mg",
     "size": "7 st",
     "names": [
       "Bunalict",
@@ -6285,20 +6328,16 @@
       "Cinacalcet Orion",
       "Cinacalcet STADA",
       "Cinacalcet Teva",
-      "Cinacalcet Viatris",
-      "Mimpara"
+      "Cinacalcet Viatris"
     ],
     "vnr": [
-      "105854",
       "132106",
       "179758",
-      "199519",
-      "37858",
       "401627",
-      "42100",
       "497395",
       "515361",
-      "572528"
+      "572528",
+      "583911"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -6333,16 +6372,13 @@
       "Cinacalcet Orion",
       "Cinacalcet STADA",
       "Cinacalcet Teva",
-      "Cinacalcet Viatris",
-      "Mimpara"
+      "Cinacalcet Viatris"
     ],
     "vnr": [
       "379142",
       "385528",
       "385988",
-      "421908",
       "457185",
-      "491348",
       "535596",
       "61071"
     ],
@@ -6362,14 +6398,12 @@
       "Cinacalcet Orion",
       "Cinacalcet STADA",
       "Cinacalcet Teva",
-      "Cinacalcet Viatris",
-      "Mimpara"
+      "Cinacalcet Viatris"
     ],
     "vnr": [
       "140354",
       "178729",
       "450325",
-      "484434",
       "51306",
       "592961",
       "70370"
@@ -6674,6 +6708,7 @@
     ],
     "vnr": [
       "131564",
+      "160151",
       "40075",
       "578081",
       "69224",
@@ -6934,7 +6969,6 @@
     "size": "ca 90 st",
     "names": [
       "Asmoken",
-      "Cytisinicline Orifarm",
       "Cytisiniklin Ebb",
       "Cytisiniklin Medartuum",
       "Recigar"
@@ -7551,31 +7585,17 @@
   },
   {
     "id": "117789",
-    "size_id": "EK5425",
+    "size_id": "F1B",
     "sub": "Denosumab",
     "form": "Injektionsvätska",
     "str": "120 mg (Grupp B)",
-    "size": "EK5425",
+    "size": "F1B",
     "names": [
+      "Denbrayce",
       "Enwylma"
     ],
     "vnr": [
-      "100549"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "117789",
-    "size_id": "EK5426",
-    "sub": "Denosumab",
-    "form": "Injektionsvätska",
-    "str": "120 mg (Grupp B)",
-    "size": "EK5426",
-    "names": [
-      "Denbrayce"
-    ],
-    "vnr": [
+      "100549",
       "527460"
     ],
     "packaging": [],
@@ -7583,32 +7603,18 @@
   },
   {
     "id": "117787",
-    "size_id": "EK5427",
+    "size_id": "F1B",
     "sub": "Denosumab",
     "form": "Injektionsvätska, förfylld spruta",
     "str": "60 mg (Grupp B)",
-    "size": "EK5427",
+    "size": "F1B",
     "names": [
+      "Izamby",
       "ZADENVI"
     ],
     "vnr": [
+      "406391",
       "74745"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "117787",
-    "size_id": "EK5428",
-    "sub": "Denosumab",
-    "form": "Injektionsvätska, förfylld spruta",
-    "str": "60 mg (Grupp B)",
-    "size": "EK5428",
-    "names": [
-      "Izamby"
-    ],
-    "vnr": [
-      "406391"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -7720,6 +7726,22 @@
       "542693",
       "54616",
       "83993"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112204",
+    "size_id": "T28",
+    "sub": "Desloratadin",
+    "form": "Tablett",
+    "str": "5 mg",
+    "size": "ca 261 st",
+    "names": [
+      "Desloratadin Viatris"
+    ],
+    "vnr": [
+      "415652"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -8300,10 +8322,12 @@
     "str": "5 mg (Grupp A)",
     "size": "25 st",
     "names": [
-      "Diazepam Orifarm"
+      "Diazepam Orifarm",
+      "Stesolid®"
     ],
     "vnr": [
-      "180386"
+      "180386",
+      "523126"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -9639,14 +9663,12 @@
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Krka",
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Mylan",
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Teva",
-      "Efavirenz/Emtricitabine/Tenofovir disoproxil Zentiva",
       "Emtenef"
     ],
     "vnr": [
       "156066",
       "378152",
       "508400",
-      "524532",
       "569385",
       "60397"
     ],
@@ -9828,6 +9850,7 @@
     "vnr": [
       "103728",
       "170710",
+      "386265",
       "391634",
       "392234",
       "455223",
@@ -10977,6 +11000,7 @@
     "size": "ca 90 st",
     "names": [
       "Esomeprazol Actavis",
+      "Esomeprazol Hexal",
       "Esomeprazol Jubilant",
       "Esomeprazol Krka",
       "Esomeprazol SUN",
@@ -10986,6 +11010,7 @@
     ],
     "vnr": [
       "149944",
+      "187251",
       "413261",
       "440713",
       "455019",
@@ -11092,6 +11117,7 @@
     "size": "ca 90 st",
     "names": [
       "Esomeprazol Actavis",
+      "Esomeprazol Hexal",
       "Esomeprazol Jubilant",
       "Esomeprazol Krka",
       "Esomeprazol STADA",
@@ -11106,6 +11132,7 @@
       "138880",
       "178253",
       "178423",
+      "180993",
       "379",
       "391382",
       "422973",
@@ -11119,6 +11146,22 @@
     "packagingMap": {}
   },
   {
+    "id": "111126",
+    "size_id": "T24",
+    "sub": "Esomeprazol",
+    "form": "Enterotablett/enterokapsel",
+    "str": "40 mg",
+    "size": "ca 113 st",
+    "names": [
+      "Esomeprazol Hexal"
+    ],
+    "vnr": [
+      "429991"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
     "id": "810",
     "size_id": "T18",
     "sub": "Estradiol + noretisteronacetat",
@@ -11127,11 +11170,13 @@
     "size": "ca 30 st",
     "names": [
       "Activelle®",
-      "Cliovelle"
+      "Cliovelle",
+      "Noresmea"
     ],
     "vnr": [
       "179245",
-      "438994"
+      "438994",
+      "448606"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -11313,6 +11358,7 @@
     "size": "ca 30 st",
     "names": [
       "Etoricoxib Brown",
+      "Etoricoxib Ebb",
       "Etoricoxib Krka",
       "Etoricoxib Orion",
       "Etoricoxib STADA",
@@ -11323,6 +11369,7 @@
     "vnr": [
       "150812",
       "26679",
+      "31313",
       "386806",
       "415676",
       "490174",
@@ -11615,6 +11662,7 @@
       "Exemestane Accord"
     ],
     "vnr": [
+      "124401",
       "153507",
       "171837",
       "175699",
@@ -13849,7 +13897,7 @@
     "size_id": "T24",
     "sub": "Flutikasonpropionat",
     "form": "Inhalationsspray",
-    "str": "125 mikrog/dos",
+    "str": "125 mikrogram/dos",
     "size": "ca 113 st",
     "names": [
       "Fluticasone Cipla",
@@ -14574,12 +14622,14 @@
     "names": [
       "Cremarol",
       "Glycerol Evolan",
+      "Glycerol NET",
       "Miniderm®"
     ],
     "vnr": [
       "112062",
       "120004",
-      "555009"
+      "555009",
+      "582844"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -15546,7 +15596,7 @@
     "size_id": "T21",
     "sub": "Ipratropium",
     "form": "Lösning för nebulisator",
-    "str": "0,25 mg/ml (endos)",
+    "str": "0,25 mg/ml",
     "size": "ca 60 st",
     "names": [
       "Atrovent®",
@@ -15564,8 +15614,8 @@
     "size_id": "T21",
     "sub": "Ipratropium + salbutamol",
     "form": "Lösning för nebulisator",
-    "str": "0,5 mg/2,5 mg",
-    "size": "57–63 st",
+    "str": "0,5 mg / 2,5 mg",
+    "size": "ca 60 st",
     "names": [
       "Combivent®",
       "Ipratropium/Salbutamol Orion",
@@ -17451,10 +17501,10 @@
     ],
     "vnr": [
       "196101",
-      "425679",
       "447596",
       "512592",
-      "520165"
+      "520165",
+      "599488"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -18965,7 +19015,7 @@
     ],
     "vnr": [
       "187657",
-      "374709"
+      "402469"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -19143,7 +19193,7 @@
     "size_id": "T20",
     "sub": "Lamotrigin",
     "form": "Tablett",
-    "str": "100 mg (grupp D)",
+    "str": "100 mg (Grupp D)",
     "size": "ca 52 st",
     "names": [
       "Lamotrigin 1A Farma",
@@ -19162,7 +19212,7 @@
     "size_id": "T23",
     "sub": "Lamotrigin",
     "form": "Tablett",
-    "str": "100 mg (grupp D)",
+    "str": "100 mg (Grupp D)",
     "size": "ca 90 st",
     "names": [
       "Lamotrigin 1A Farma",
@@ -19185,7 +19235,7 @@
     "size_id": "T20",
     "sub": "Lamotrigin",
     "form": "Tablett",
-    "str": "200 mg (grupp D)",
+    "str": "200 mg (Grupp D)",
     "size": "ca 52 st",
     "names": [
       "Lamotrigin 1A Farma",
@@ -19204,7 +19254,7 @@
     "size_id": "T23",
     "sub": "Lamotrigin",
     "form": "Tablett",
-    "str": "200 mg (grupp D)",
+    "str": "200 mg (Grupp D)",
     "size": "ca 90 st",
     "names": [
       "Lamotrigin 1A Farma",
@@ -19226,7 +19276,7 @@
     "size_id": "T20",
     "sub": "Lamotrigin",
     "form": "Tablett",
-    "str": "25 mg (grupp D)",
+    "str": "25 mg (Grupp D)",
     "size": "ca 52 st",
     "names": [
       "Lamotrigin 1A Farma"
@@ -19243,7 +19293,7 @@
     "size_id": "T23",
     "sub": "Lamotrigin",
     "form": "Tablett",
-    "str": "25 mg (grupp D)",
+    "str": "25 mg (Grupp D)",
     "size": "ca 90 st",
     "names": [
       "Lamotrigin 1A Farma",
@@ -19262,7 +19312,7 @@
     "size_id": "T20",
     "sub": "Lamotrigin",
     "form": "Tablett",
-    "str": "50 mg (grupp D)",
+    "str": "50 mg (Grupp D)",
     "size": "ca 52 st",
     "names": [
       "Lamotrigin 1A Farma",
@@ -19281,7 +19331,7 @@
     "size_id": "T23",
     "sub": "Lamotrigin",
     "form": "Tablett",
-    "str": "50 mg (grupp D)",
+    "str": "50 mg (Grupp D)",
     "size": "ca 90 st",
     "names": [
       "Lamotrigin 1A Farma",
@@ -20954,7 +21004,7 @@
     "size_id": "T16",
     "sub": "Lidokain + prilokain",
     "form": "Medicinskt plåster",
-    "str": "25mg/25 mg",
+    "str": "25 mg/25 mg",
     "size": "ca 20 st",
     "names": [
       "EMLA®",
@@ -22163,7 +22213,8 @@
     ],
     "vnr": [
       "175285",
-      "414036"
+      "414036",
+      "542692"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -22618,13 +22669,15 @@
     "names": [
       "Ebixa®",
       "Memantine ratiopharm",
-      "Memantine-Merz"
+      "Memantine-Merz",
+      "Nemdatine"
     ],
     "vnr": [
       "151540",
       "166700",
       "169322",
       "174543",
+      "461353",
       "479979",
       "495088",
       "501215",
@@ -23243,9 +23296,9 @@
     "vnr": [
       "25668",
       "37471",
+      "42870",
       "52141",
       "545688",
-      "60096",
       "75561",
       "81047"
     ],
@@ -24375,10 +24428,12 @@
       "Mirtazapin Actavis",
       "Mirtazapin Alternova",
       "Mirtazapin Krka",
+      "Mirtazapin Newbury",
       "Mirtazapin Orion",
       "Mirtazapine Bluefish"
     ],
     "vnr": [
+      "118443",
       "20312",
       "23901",
       "24310",
@@ -24399,6 +24454,7 @@
       "Mirtazapin Actavis",
       "Mirtazapin Alternova",
       "Mirtazapin Krka",
+      "Mirtazapin Newbury",
       "Mirtazapin Orion",
       "Mirtazapin Sandoz",
       "Mirtazapine Bluefish"
@@ -24412,6 +24468,7 @@
       "27058",
       "423411",
       "459367",
+      "488798",
       "579147"
     ],
     "packaging": [],
@@ -24475,12 +24532,14 @@
     "names": [
       "Mirtazapin Hexal",
       "Mirtazapin Krka",
+      "Mirtazapin Newbury",
       "Mirtazapin Orion",
       "Mirtazapine Bluefish"
     ],
     "vnr": [
       "23886",
       "24346",
+      "405436",
       "432147",
       "524152"
     ],
@@ -24498,6 +24557,7 @@
       "Mirtazapin Actavis",
       "Mirtazapin Hexal",
       "Mirtazapin Krka",
+      "Mirtazapin Newbury",
       "Mirtazapin Orion",
       "Mirtazapin Sandoz",
       "Mirtazapine Bluefish"
@@ -24508,6 +24568,7 @@
       "376680",
       "447398",
       "455050",
+      "499828",
       "521350"
     ],
     "packaging": [],
@@ -24541,10 +24602,12 @@
     "str": "30 mg",
     "size": "ca 492 st",
     "names": [
-      "Mirtazapin Actavis"
+      "Mirtazapin Actavis",
+      "Mirtazapin Newbury"
     ],
     "vnr": [
-      "147974"
+      "147974",
+      "572755"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -24561,6 +24624,7 @@
       "Mirtazapin Abacus Medicine",
       "Mirtazapin Ebb",
       "Mirtazapin Krka",
+      "Mirtazapin Newbury",
       "Mirtazapin Orion",
       "Mirtazapine Bluefish"
     ],
@@ -24568,6 +24632,7 @@
       "170128",
       "23859",
       "24344",
+      "377116",
       "451800",
       "498985",
       "77937"
@@ -24587,6 +24652,7 @@
       "Mirtazapin Actavis",
       "Mirtazapin Hexal",
       "Mirtazapin Krka",
+      "Mirtazapin Newbury",
       "Mirtazapin Orion",
       "Mirtazapin Sandoz",
       "Mirtazapine Bluefish"
@@ -24599,7 +24665,8 @@
       "179043",
       "193734",
       "23847",
-      "24248"
+      "24248",
+      "407638"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -26064,6 +26131,22 @@
   },
   {
     "id": "111460",
+    "size_id": "EK5436",
+    "sub": "Oktreotid",
+    "form": "Pulver och vätska till injektionsvätska",
+    "str": "30 mg",
+    "size": "EK5436",
+    "names": [
+      "Sandostatin LAR"
+    ],
+    "vnr": [
+      "140125"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111460",
     "size_id": "F1A",
     "sub": "Oktreotid",
     "form": "Pulver och vätska till injektionsvätska",
@@ -26651,7 +26734,7 @@
     "vnr": [
       "114952",
       "128058",
-      "133315",
+      "136710",
       "177767",
       "199504",
       "415923",
@@ -28419,7 +28502,8 @@
       "128703",
       "197304",
       "495568",
-      "502786"
+      "502786",
+      "536871"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -28660,6 +28744,7 @@
     ],
     "vnr": [
       "131983",
+      "143646",
       "394185",
       "520757",
       "548478",
@@ -28874,6 +28959,22 @@
     ],
     "vnr": [
       "95725"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111956",
+    "size_id": "EK5437",
+    "sub": "Paliperidon",
+    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
+    "str": "100 mg",
+    "size": "EK5437",
+    "names": [
+      "Paliperidon Teva"
+    ],
+    "vnr": [
+      "181345"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -29834,8 +29935,8 @@
     "str": "20 mg",
     "size": "ca 60 st",
     "names": [
-      "Paroxetin Aristo",
       "Paroxetin Orion",
+      "Paroxetine Oresund Pharma",
       "Paroxiflex",
       "Seroxat®"
     ],
@@ -29857,10 +29958,10 @@
     "str": "20 mg",
     "size": "ca 90 st",
     "names": [
-      "Paroxetin Aristo",
       "Paroxetin HEXAL",
       "Paroxetin Orion",
       "Paroxetin Teva",
+      "Paroxetine Oresund Pharma",
       "Paroxiflex",
       "Seroxat®"
     ],
@@ -29884,10 +29985,10 @@
     "str": "20 mg",
     "size": "ca 261 st",
     "names": [
-      "Paroxetin Aristo",
       "Paroxetin HEXAL",
       "Paroxetin Orion",
-      "Paroxetin Teva"
+      "Paroxetin Teva",
+      "Paroxetine Oresund Pharma"
     ],
     "vnr": [
       "142839",
@@ -30954,7 +31055,7 @@
       "39047",
       "450823",
       "501417",
-      "539974",
+      "50316",
       "542611",
       "576253",
       "83240"
@@ -31218,8 +31319,8 @@
       "Pregabalin EQL Pharma"
     ],
     "vnr": [
-      "414558",
-      "419244"
+      "186797",
+      "414558"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -31270,8 +31371,8 @@
       "Pregabalin EQL Pharma"
     ],
     "vnr": [
-      "49204",
-      "598694"
+      "598694",
+      "83636"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -31339,7 +31440,7 @@
       "Pregabalin 1A Farma"
     ],
     "vnr": [
-      "593698"
+      "395933"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -31357,7 +31458,7 @@
     ],
     "vnr": [
       "469702",
-      "514569"
+      "486272"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -31390,8 +31491,8 @@
       "Pregabalin EQL Pharma"
     ],
     "vnr": [
-      "56376",
-      "60488"
+      "543031",
+      "56376"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -33350,12 +33451,14 @@
       "Rivaroxaban Orion",
       "Rivaroxaban STADA",
       "Rivaroxaban Sandoz",
-      "Rivaroxaban Teva"
+      "Rivaroxaban Teva",
+      "Rivaroxaban Zentiva"
     ],
     "vnr": [
       "113767",
       "427460",
       "433430",
+      "462210",
       "514535",
       "55379",
       "558640",
@@ -33757,6 +33860,7 @@
       "188632",
       "28933",
       "454398",
+      "486042",
       "491138",
       "72482"
     ],
@@ -35497,7 +35601,7 @@
       "23685",
       "513195",
       "64623",
-      "79253"
+      "84755"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -36012,11 +36116,13 @@
       "Janumet®",
       "Sitagliptin/Metformin Glenmark",
       "Sitagliptin/Metformin Grindeks",
+      "Sitagliptin/Metformin Krka",
       "Sitagliptin/Metformin Medical Valley",
       "Sitagliptin/Metformin STADA"
     ],
     "vnr": [
       "169063",
+      "196589",
       "434612",
       "516778",
       "520880",
@@ -36036,12 +36142,14 @@
       "Janumet®",
       "Sitagliptin/Metformin Glenmark",
       "Sitagliptin/Metformin Grindeks",
+      "Sitagliptin/Metformin Krka",
       "Sitagliptin/Metformin Medical Valley",
       "Sitagliptin/Metformin STADA",
       "Sitagliptin/Metformin Zentiva k.s."
     ],
     "vnr": [
       "131344",
+      "153199",
       "165868",
       "185669",
       "436187",
@@ -36710,15 +36818,33 @@
       "Tadalafil 1A Farma",
       "Tadalafil AOP",
       "Tadalafil Accord",
+      "Tadalafil Bluefish",
       "Talmanco",
       "Yanatawa"
     ],
     "vnr": [
       "101516",
+      "181428",
       "461785",
       "47808",
       "587512",
       "589708"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "113192",
+    "size_id": "T24",
+    "sub": "Tadalafil",
+    "form": "Tablett",
+    "str": "20 mg (Grupp B)",
+    "size": "ca 113 st",
+    "names": [
+      "Tadalafil Bluefish"
+    ],
+    "vnr": [
+      "55104"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -37564,11 +37690,13 @@
       "Terbinafin 2care4",
       "Terbinafin Ebb",
       "Terbinafin Hexal",
-      "Terbinafin Medical Valley"
+      "Terbinafin Medical Valley",
+      "Terbinafine Bijon"
     ],
     "vnr": [
       "107322",
       "130463",
+      "165655",
       "485093",
       "56922",
       "587597"
@@ -38052,32 +38180,16 @@
   },
   {
     "id": "112155",
-    "size_id": "EK5422",
+    "size_id": "EK5435",
     "sub": "Tiotropium",
     "form": "Inhalationspulver, kapsel",
     "str": "18 mikrogram",
-    "size": "EK5422",
+    "size": "EK5435",
     "names": [
       "Tiotropium STADA"
     ],
     "vnr": [
-      "196862"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112155",
-    "size_id": "EK5423",
-    "sub": "Tiotropium",
-    "form": "Inhalationspulver, kapsel",
-    "str": "18 mikrogram",
-    "size": "EK5423",
-    "names": [
-      "Tiotropium STADA"
-    ],
-    "vnr": [
-      "551292"
+      "171628"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -38091,11 +38203,14 @@
     "size": "F18A",
     "names": [
       "Spiriva®",
-      "Tiogiva"
+      "Tiogiva",
+      "Tiotropium STADA"
     ],
     "vnr": [
       "153420",
+      "196862",
       "510482",
+      "551292",
       "5588",
       "5600"
     ],
@@ -38117,22 +38232,6 @@
       "21617",
       "413829",
       "580249"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112155",
-    "size_id": "T23",
-    "sub": "Tiotropium",
-    "form": "Inhalationspulver, kapsel",
-    "str": "18 mikrogram",
-    "size": "ca 90 st",
-    "names": [
-      "Tiotropium STADA"
-    ],
-    "vnr": [
-      "171628"
     ],
     "packaging": [],
     "packagingMap": {}
