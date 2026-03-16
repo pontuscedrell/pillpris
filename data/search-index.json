@@ -15391,7 +15391,6 @@
       "Glivec®",
       "Imatinib Accord",
       "Imatinib Amarox",
-      "Imatinib Cipla",
       "Imatinib Grindeks",
       "Imatinib Krka d.d.",
       "Imatinib STADA",
@@ -15407,7 +15406,6 @@
       "33272",
       "382112",
       "433850",
-      "515167",
       "52276",
       "532339",
       "558086",
@@ -15460,7 +15458,6 @@
       "Glivec®",
       "Imatinib Accord",
       "Imatinib Amarox",
-      "Imatinib Cipla",
       "Imatinib Krka d.d.",
       "Imatinib STADA",
       "Imatinib Sandoz",
@@ -15471,7 +15468,6 @@
     "vnr": [
       "109612",
       "13982",
-      "161433",
       "161829",
       "174141",
       "36577",
@@ -29162,88 +29158,6 @@
     ],
     "vnr": [
       "127610"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112559",
-    "size_id": "F10A",
-    "sub": "Pamidronsyra",
-    "form": "Koncentrat till infusionsvätska",
-    "str": "3 mg/ml",
-    "size": "F10A",
-    "names": [
-      "Pamidronatdinatrium Pfizer",
-      "Pamifos"
-    ],
-    "vnr": [
-      "136180",
-      "17700"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112559",
-    "size_id": "F20A",
-    "sub": "Pamidronsyra",
-    "form": "Koncentrat till infusionsvätska",
-    "str": "3 mg/ml",
-    "size": "F20A",
-    "names": [
-      "Pamifos"
-    ],
-    "vnr": [
-      "17736"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112559",
-    "size_id": "F25A",
-    "sub": "Pamidronsyra",
-    "form": "Koncentrat till infusionsvätska",
-    "str": "3 mg/ml",
-    "size": "F25A",
-    "names": [
-      "Pamidronatdinatrium Pfizer"
-    ],
-    "vnr": [
-      "26290"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112559",
-    "size_id": "F30A",
-    "sub": "Pamidronsyra",
-    "form": "Koncentrat till infusionsvätska",
-    "str": "3 mg/ml",
-    "size": "F30A",
-    "names": [
-      "Pamifos"
-    ],
-    "vnr": [
-      "17766"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112559",
-    "size_id": "F5A",
-    "sub": "Pamidronsyra",
-    "form": "Koncentrat till infusionsvätska",
-    "str": "3 mg/ml",
-    "size": "F5A",
-    "names": [
-      "Pamifos"
-    ],
-    "vnr": [
-      "17444"
     ],
     "packaging": [],
     "packagingMap": {}
