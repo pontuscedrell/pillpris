@@ -9660,12 +9660,10 @@
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Glenmark",
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Krka",
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Mylan",
-      "Efavirenz/Emtricitabine/Tenofovir disoproxil Teva",
-      "Emtenef"
+      "Efavirenz/Emtricitabine/Tenofovir disoproxil Teva"
     ],
     "vnr": [
       "156066",
-      "378152",
       "508400",
       "569385",
       "60397"
@@ -19824,7 +19822,6 @@
       "Lenalidomide Glenmark",
       "Lenalidomide Grindeks",
       "Lenalidomide Krka",
-      "Lenalidomide Orion",
       "Lenalidomide STADA",
       "Lenalidomide Sandoz",
       "Lenalidomide Teva",
@@ -19835,7 +19832,6 @@
       "185282",
       "388070",
       "389245",
-      "393412",
       "401087",
       "41801",
       "513790",
@@ -19866,7 +19862,6 @@
       "Lenalidomide Glenmark",
       "Lenalidomide Grindeks",
       "Lenalidomide Krka",
-      "Lenalidomide Orion",
       "Lenalidomide STADA",
       "Lenalidomide Sandoz",
       "Lenalidomide Teva",
@@ -19881,7 +19876,6 @@
       "510902",
       "525784",
       "526537",
-      "574083",
       "72791",
       "82509",
       "83091",
@@ -19932,7 +19926,6 @@
       "Lenalidomide Accord",
       "Lenalidomide Grindeks",
       "Lenalidomide Krka",
-      "Lenalidomide Orion",
       "Lenalidomide STADA",
       "Lenalidomide Sandoz",
       "Revlimid"
@@ -19943,7 +19936,6 @@
       "42131",
       "468596",
       "516597",
-      "518081",
       "524729",
       "535568",
       "576339",
@@ -19969,7 +19961,6 @@
       "Lenalidomide Glenmark",
       "Lenalidomide Grindeks",
       "Lenalidomide Krka",
-      "Lenalidomide Orion",
       "Lenalidomide STADA",
       "Lenalidomide Sandoz",
       "Lenalidomide Teva",
@@ -19991,7 +19982,6 @@
       "49408",
       "544119",
       "569220",
-      "87044",
       "96551"
     ],
     "packaging": [],
@@ -20013,14 +20003,12 @@
       "Lenalidomide Glenmark",
       "Lenalidomide Grindeks",
       "Lenalidomide Krka",
-      "Lenalidomide Orion",
       "Lenalidomide STADA",
       "Lenalidomide Sandoz",
       "Revlimid"
     ],
     "vnr": [
       "158684",
-      "372543",
       "375214",
       "376207",
       "420016",
@@ -21883,12 +21871,10 @@
     "str": "300 mg",
     "size": "ca 20 st",
     "names": [
-      "Lymelysal",
       "Tetralysal®"
     ],
     "vnr": [
-      "2422",
-      "51865"
+      "2422"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -21904,16 +21890,13 @@
       "Lymecycline Actavis",
       "Lymecycline Glenmark",
       "Lymecyklin Abacus Medicine",
-      "Lymelysal",
       "Tetralysal®"
     ],
     "vnr": [
       "100884",
       "12831",
       "192965",
-      "394029",
-      "395831",
-      "427255"
+      "394029"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -40494,22 +40477,6 @@
       "405105",
       "499020",
       "499038"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112617",
-    "size_id": "F100A",
-    "sub": "Zoledronsyra",
-    "form": "Infusionsvätska",
-    "str": "4 mg/100 ml",
-    "size": "F100A",
-    "names": [
-      "Zoledronsyra medac"
-    ],
-    "vnr": [
-      "108103"
     ],
     "packaging": [],
     "packagingMap": {}
