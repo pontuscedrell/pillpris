@@ -502,7 +502,6 @@
     "str": "70 mg",
     "size": "12 st",
     "names": [
-      "Alendronat Aristo Veckotablett",
       "Alendronat Aurobindo Veckotablett",
       "Alendronat Bluefish Veckotablett",
       "Alendronat Ebb Veckotablett",
@@ -512,7 +511,6 @@
     ],
     "vnr": [
       "143141",
-      "196336",
       "25243",
       "28189",
       "28870",
@@ -31730,6 +31728,22 @@
   },
   {
     "id": "114926",
+    "size_id": "T14",
+    "sub": "Prukaloprid",
+    "form": "Tablett",
+    "str": "1 mg",
+    "size": "ca 14 st",
+    "names": [
+      "Resolor®"
+    ],
+    "vnr": [
+      "491402"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "114926",
     "size_id": "T18",
     "sub": "Prukaloprid",
     "form": "Tablett",
@@ -31756,6 +31770,38 @@
     "packagingMap": {}
   },
   {
+    "id": "114926",
+    "size_id": "T22",
+    "sub": "Prukaloprid",
+    "form": "Tablett",
+    "str": "1 mg",
+    "size": "ca 82 st",
+    "names": [
+      "Resolor®"
+    ],
+    "vnr": [
+      "85692"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111284",
+    "size_id": "T14",
+    "sub": "Prukaloprid",
+    "form": "Tablett",
+    "str": "2 mg",
+    "size": "ca 14 st",
+    "names": [
+      "Resolor®"
+    ],
+    "vnr": [
+      "370772"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
     "id": "111284",
     "size_id": "T18",
     "sub": "Prukaloprid",
@@ -31777,6 +31823,22 @@
       "42353",
       "542942",
       "576168"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111284",
+    "size_id": "T22",
+    "sub": "Prukaloprid",
+    "form": "Tablett",
+    "str": "2 mg",
+    "size": "ca 82 st",
+    "names": [
+      "Resolor®"
+    ],
+    "vnr": [
+      "484847"
     ],
     "packaging": [],
     "packagingMap": {}
