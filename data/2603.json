@@ -2808,7 +2808,7 @@
         "NPL ID":19950628000013,
         "NPL pack ID":19950628100027,
         "Ursprung":"Original",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111978
     },
     {
@@ -2846,7 +2846,7 @@
         "NPL ID":19950628000013,
         "NPL pack ID":19950628100010,
         "Ursprung":"Original",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111978
     },
     {
@@ -5297,7 +5297,7 @@
         "NPL ID":20100714000113,
         "NPL pack ID":20101001101322,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":112697
     },
     {
@@ -14669,25 +14669,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Betahistine STADA",
-        "Varunummer":178769,
-        "Styrka":"16 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Betahistin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":170.0,
-        "Försäljningspris":234.2,
-        "Inköpspris per minsta enhet":1.7,
-        "Försäljningspris per minsta enhet":2.34,
-        "NPL ID":20170726000081,
-        "NPL pack ID":20180508100243,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":112943
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Betahistin 2care4",
         "Varunummer":372683,
         "Styrka":"16 mg",
@@ -14722,6 +14703,25 @@
         "NPL pack ID":20251103100218,
         "Ursprung":"ParallelImport",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":112943
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Betahistine STADA",
+        "Varunummer":178769,
+        "Styrka":"16 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Betahistin",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":170.0,
+        "Försäljningspris":234.2,
+        "Inköpspris per minsta enhet":1.7,
+        "Försäljningspris per minsta enhet":2.34,
+        "NPL ID":20170726000081,
+        "NPL pack ID":20180508100243,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":112943
     },
     {
@@ -22682,7 +22682,7 @@
         "NPL ID":20010223000040,
         "NPL pack ID":10010101103040,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":112190
     },
     {
@@ -22758,7 +22758,7 @@
         "NPL ID":20010223000040,
         "NPL pack ID":10010101103057,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":112190
     },
     {
@@ -25043,25 +25043,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Dabigatran etexilate Glenmark",
-        "Varunummer":500547,
-        "Styrka":"110 mg",
-        "Förpackningsstorleksgrupp":"T21",
-        "Substans":"Dabigatranetexilat",
-        "Beredningsform":"Kapsel",
-        "Storlek":60.0,
-        "Apotekens inköpspris":9.31,
-        "Försäljningspris":63.29,
-        "Inköpspris per minsta enhet":0.16,
-        "Försäljningspris per minsta enhet":1.05,
-        "NPL ID":20230523000087,
-        "NPL pack ID":20230705100541,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":111384
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Dabigatran Etexilate Accord",
         "Varunummer":99263,
         "Styrka":"110 mg",
@@ -25080,7 +25061,7 @@
         "Utbytesgrupps ID":111384
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Dabigatran etexilate STADA Nordic",
         "Varunummer":189853,
         "Styrka":"110 mg",
@@ -25099,7 +25080,7 @@
         "Utbytesgrupps ID":111384
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Dabigatran etexilate Orion",
         "Varunummer":588908,
         "Styrka":"110 mg",
@@ -25115,6 +25096,25 @@
         "NPL pack ID":20210311100090,
         "Ursprung":"Generics",
         "Företag":"Orion Pharma AB",
+        "Utbytesgrupps ID":111384
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Dabigatran etexilate Glenmark",
+        "Varunummer":500547,
+        "Styrka":"110 mg",
+        "Förpackningsstorleksgrupp":"T21",
+        "Substans":"Dabigatranetexilat",
+        "Beredningsform":"Kapsel",
+        "Storlek":60.0,
+        "Apotekens inköpspris":9.31,
+        "Försäljningspris":63.29,
+        "Inköpspris per minsta enhet":0.16,
+        "Försäljningspris per minsta enhet":1.05,
+        "NPL ID":20230523000087,
+        "NPL pack ID":20230705100541,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":111384
     },
     {
@@ -36082,25 +36082,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Emtricitabine\/Tenofovir disoproxil Zentiva",
-        "Varunummer":585354,
-        "Styrka":"200 mg\/245 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Emtricitabin + tenofovirdisoproxil",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":180.0,
-        "Försäljningspris":244.55,
-        "Inköpspris per minsta enhet":6.0,
-        "Försäljningspris per minsta enhet":8.15,
-        "NPL ID":20151009000011,
-        "NPL pack ID":20160121100141,
-        "Ursprung":"Generics",
-        "Företag":"Zentiva Denmark ApS",
-        "Utbytesgrupps ID":111647
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Emtricitabine\/Tenofovir disoproxil STADA",
         "Varunummer":571617,
         "Styrka":"200 mg\/245 mg",
@@ -36119,7 +36100,7 @@
         "Utbytesgrupps ID":111647
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Emtricitabine\/tenofovir disoproxil Krka",
         "Varunummer":455223,
         "Styrka":"200 mg\/245 mg",
@@ -36135,6 +36116,25 @@
         "NPL pack ID":20160323100130,
         "Ursprung":"Generics",
         "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":111647
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Emtricitabine\/Tenofovir disoproxil Abacus Medicine",
+        "Varunummer":392234,
+        "Styrka":"200 mg\/245 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Emtricitabin + tenofovirdisoproxil",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":1984.0,
+        "Försäljningspris":2094.85,
+        "Inköpspris per minsta enhet":66.13,
+        "Försäljningspris per minsta enhet":69.83,
+        "NPL ID":20230523000100,
+        "NPL pack ID":20240117100581,
+        "Ursprung":"ParallelImport",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":111647
     },
     {
@@ -36173,6 +36173,25 @@
         "NPL pack ID":20190426100065,
         "Ursprung":"Generics",
         "Företag":"FrostPharma AB",
+        "Utbytesgrupps ID":111647
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Emtricitabine\/Tenofovir disoproxil Zentiva",
+        "Varunummer":585354,
+        "Styrka":"200 mg\/245 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Emtricitabin + tenofovirdisoproxil",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":180.0,
+        "Försäljningspris":244.55,
+        "Inköpspris per minsta enhet":6.0,
+        "Försäljningspris per minsta enhet":8.15,
+        "NPL ID":20151009000011,
+        "NPL pack ID":20160121100141,
+        "Ursprung":"Generics",
+        "Företag":"Zentiva Denmark ApS",
         "Utbytesgrupps ID":111647
     },
     {
@@ -36249,25 +36268,6 @@
         "NPL pack ID":20180704100160,
         "Ursprung":"Generics",
         "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":111647
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Emtricitabine\/Tenofovir disoproxil Abacus Medicine",
-        "Varunummer":392234,
-        "Styrka":"200 mg\/245 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Emtricitabin + tenofovirdisoproxil",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":1984.0,
-        "Försäljningspris":2094.85,
-        "Inköpspris per minsta enhet":66.13,
-        "Försäljningspris per minsta enhet":69.83,
-        "NPL ID":20230523000100,
-        "NPL pack ID":20240117100581,
-        "Ursprung":"ParallelImport",
-        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":111647
     },
     {
@@ -37787,7 +37787,7 @@
         "NPL ID":20100630000075,
         "NPL pack ID":20101001100509,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":112138
     },
     {
@@ -37887,25 +37887,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Entecavir Amarox",
-        "Varunummer":172856,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Entekavir",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":209.95,
-        "Försäljningspris":275.55,
-        "Inköpspris per minsta enhet":7.0,
-        "Försäljningspris per minsta enhet":9.19,
-        "NPL ID":20241108000057,
-        "NPL pack ID":20250212100263,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":111607
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Entecavir Viatris",
         "Varunummer":556301,
         "Styrka":"0,5 mg",
@@ -37924,7 +37905,7 @@
         "Utbytesgrupps ID":111607
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Entecavir Accord",
         "Varunummer":375861,
         "Styrka":"0,5 mg",
@@ -37940,6 +37921,25 @@
         "NPL pack ID":20160825100577,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":111607
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Entecavir STADA",
+        "Varunummer":30089,
+        "Styrka":"0,5 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Entekavir",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":1699.0,
+        "Försäljningspris":1802.73,
+        "Inköpspris per minsta enhet":56.63,
+        "Försäljningspris per minsta enhet":60.09,
+        "NPL ID":20160630000055,
+        "NPL pack ID":20160812100276,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":111607
     },
     {
@@ -37963,21 +37963,21 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Entecavir STADA",
-        "Varunummer":30089,
+        "Produktnamn":"Entecavir Amarox",
+        "Varunummer":172856,
         "Styrka":"0,5 mg",
         "Förpackningsstorleksgrupp":"T18",
         "Substans":"Entekavir",
         "Beredningsform":"Tablett",
         "Storlek":30.0,
-        "Apotekens inköpspris":1699.0,
-        "Försäljningspris":1802.73,
-        "Inköpspris per minsta enhet":56.63,
-        "Försäljningspris per minsta enhet":60.09,
-        "NPL ID":20160630000055,
-        "NPL pack ID":20160812100276,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
+        "Apotekens inköpspris":209.95,
+        "Försäljningspris":275.55,
+        "Inköpspris per minsta enhet":7.0,
+        "Försäljningspris per minsta enhet":9.19,
+        "NPL ID":20241108000057,
+        "NPL pack ID":20250212100263,
+        "Ursprung":"ParallelImport",
+        "Företag":"Ebb Medical AB",
         "Utbytesgrupps ID":111607
     },
     {
@@ -40148,25 +40148,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Escitalopram Glenmark",
-        "Varunummer":186506,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Escitalopram",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":23.07,
-        "Försäljningspris":78.49,
-        "Inköpspris per minsta enhet":0.23,
-        "Försäljningspris per minsta enhet":0.78,
-        "NPL ID":20130614000036,
-        "NPL pack ID":20140501100053,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":111909
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Escitalopram Teva",
         "Varunummer":113289,
         "Styrka":"5 mg",
@@ -40185,7 +40166,7 @@
         "Utbytesgrupps ID":111909
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Escitalopram STADA",
         "Varunummer":46625,
         "Styrka":"5 mg",
@@ -40201,6 +40182,44 @@
         "NPL pack ID":20130407100103,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111909
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Escitalopram Krka",
+        "Varunummer":110362,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Escitalopram",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":120.0,
+        "Försäljningspris":182.45,
+        "Inköpspris per minsta enhet":1.2,
+        "Försäljningspris per minsta enhet":1.82,
+        "NPL ID":20130410000032,
+        "NPL pack ID":20130717100176,
+        "Ursprung":"Generics",
+        "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":111909
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Escitalopram Glenmark",
+        "Varunummer":186506,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Escitalopram",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":23.07,
+        "Försäljningspris":78.49,
+        "Inköpspris per minsta enhet":0.23,
+        "Försäljningspris per minsta enhet":0.78,
+        "NPL ID":20130614000036,
+        "NPL pack ID":20140501100053,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":111909
     },
     {
@@ -40220,25 +40239,6 @@
         "NPL pack ID":20220408100445,
         "Ursprung":"Generics",
         "Företag":"Grindeks Kalceks Sverige AB",
-        "Utbytesgrupps ID":111909
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Escitalopram Krka",
-        "Varunummer":110362,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Escitalopram",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":120.0,
-        "Försäljningspris":182.45,
-        "Inköpspris per minsta enhet":1.2,
-        "Försäljningspris per minsta enhet":1.82,
-        "NPL ID":20130410000032,
-        "NPL pack ID":20130717100176,
-        "Ursprung":"Generics",
-        "Företag":"KRKA Sverige AB",
         "Utbytesgrupps ID":111909
     },
     {
@@ -64767,7 +64767,7 @@
         "NPL ID":19910426000059,
         "NPL pack ID":19910401100217,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":112056
     },
     {
@@ -65988,25 +65988,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Colecalciferol EQL Pharma",
-        "Varunummer":90754,
-        "Styrka":"2000 IE",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Kolekalciferol (Vitamin D3)",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":205.06,
-        "Försäljningspris":270.49,
-        "Inköpspris per minsta enhet":2.05,
-        "Försäljningspris per minsta enhet":2.7,
-        "NPL ID":20200302000058,
-        "NPL pack ID":20200706100156,
-        "Ursprung":"Generics",
-        "Företag":"EQL Pharma AB",
-        "Utbytesgrupps ID":113491
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Divisun",
         "Varunummer":431317,
         "Styrka":"2000 IE",
@@ -66025,7 +66006,7 @@
         "Utbytesgrupps ID":113491
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Kolekalciferol Evolan",
         "Varunummer":458501,
         "Styrka":"2000 IE",
@@ -66041,6 +66022,25 @@
         "NPL pack ID":20200907100108,
         "Ursprung":"Generics",
         "Företag":"Evolan Pharma AB",
+        "Utbytesgrupps ID":113491
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Colecalciferol EQL Pharma",
+        "Varunummer":90754,
+        "Styrka":"2000 IE",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Kolekalciferol (Vitamin D3)",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":205.06,
+        "Försäljningspris":270.49,
+        "Inköpspris per minsta enhet":2.05,
+        "Försäljningspris per minsta enhet":2.7,
+        "NPL ID":20200302000058,
+        "NPL pack ID":20200706100156,
+        "Ursprung":"Generics",
+        "Företag":"EQL Pharma AB",
         "Utbytesgrupps ID":113491
     },
     {
@@ -67603,25 +67603,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Biquetan",
-        "Varunummer":519544,
-        "Styrka":"50 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Kvetiapin",
-        "Beredningsform":"Depottablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":381.0,
-        "Försäljningspris":451.78,
-        "Inköpspris per minsta enhet":3.81,
-        "Försäljningspris per minsta enhet":4.52,
-        "NPL ID":20160628000043,
-        "NPL pack ID":20160811100284,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":112066
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Quetiapin Krka",
         "Varunummer":104688,
         "Styrka":"50 mg",
@@ -67637,6 +67618,25 @@
         "NPL pack ID":20150331100802,
         "Ursprung":"Generics",
         "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":112066
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Biquetan",
+        "Varunummer":519544,
+        "Styrka":"50 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Kvetiapin",
+        "Beredningsform":"Depottablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":381.0,
+        "Försäljningspris":451.78,
+        "Inköpspris per minsta enhet":3.81,
+        "Försäljningspris per minsta enhet":4.52,
+        "NPL ID":20160628000043,
+        "NPL pack ID":20160811100284,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":112066
     },
     {
@@ -93894,7 +93894,7 @@
         "NPL ID":20080124000067,
         "NPL pack ID":20080929100283,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111950
     },
     {
@@ -94122,7 +94122,7 @@
         "NPL ID":20080124000067,
         "NPL pack ID":20080929100320,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111950
     },
     {
@@ -94293,7 +94293,7 @@
         "NPL ID":20080124000074,
         "NPL pack ID":20080929100337,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111966
     },
     {
@@ -94369,7 +94369,7 @@
         "NPL ID":20080124000036,
         "NPL pack ID":20080326100152,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111991
     },
     {
@@ -94825,7 +94825,7 @@
         "NPL ID":20080124000081,
         "NPL pack ID":20080929100382,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111967
     },
     {
@@ -94920,7 +94920,7 @@
         "NPL ID":20080124000043,
         "NPL pack ID":20080929100153,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111992
     },
     {
@@ -95148,7 +95148,7 @@
         "NPL ID":20080124000043,
         "NPL pack ID":20080929100191,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111992
     },
     {
@@ -95376,7 +95376,7 @@
         "NPL ID":20080124000050,
         "NPL pack ID":20080929100252,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":112010
     },
     {
@@ -96255,25 +96255,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Omeprazol Bluefish",
-        "Varunummer":470290,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Omeprazol",
-        "Beredningsform":"Enterokapsel\/Enterotablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":7.6,
-        "Försäljningspris":61.4,
-        "Inköpspris per minsta enhet":0.08,
-        "Försäljningspris per minsta enhet":0.61,
-        "NPL ID":20070713000028,
-        "NPL pack ID":20130530100575,
-        "Ursprung":"Generics",
-        "Företag":"Bluefish Pharmaceuticals AB",
-        "Utbytesgrupps ID":111431
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Omeprazol Apofri",
         "Varunummer":173123,
         "Styrka":"20 mg",
@@ -96292,7 +96273,7 @@
         "Utbytesgrupps ID":111431
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Omestad",
         "Varunummer":595064,
         "Styrka":"20 mg",
@@ -96308,6 +96289,44 @@
         "NPL pack ID":20160726100058,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111431
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Omeprazol Teva",
+        "Varunummer":399235,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Omeprazol",
+        "Beredningsform":"Enterokapsel\/Enterotablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":42.07,
+        "Försäljningspris":99.49,
+        "Inköpspris per minsta enhet":0.42,
+        "Försäljningspris per minsta enhet":0.99,
+        "NPL ID":20061129000085,
+        "NPL pack ID":20070215100417,
+        "Ursprung":"Generics",
+        "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":111431
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Omeprazol Bluefish",
+        "Varunummer":470290,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Omeprazol",
+        "Beredningsform":"Enterokapsel\/Enterotablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":7.6,
+        "Försäljningspris":61.4,
+        "Inköpspris per minsta enhet":0.08,
+        "Försäljningspris per minsta enhet":0.61,
+        "NPL ID":20070713000028,
+        "NPL pack ID":20130530100575,
+        "Ursprung":"Generics",
+        "Företag":"Bluefish Pharmaceuticals AB",
         "Utbytesgrupps ID":111431
     },
     {
@@ -96403,25 +96422,6 @@
         "NPL pack ID":20150618100273,
         "Ursprung":"Generics",
         "Företag":"Pensa Pharma AB",
-        "Utbytesgrupps ID":111431
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Omeprazol Teva",
-        "Varunummer":399235,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Omeprazol",
-        "Beredningsform":"Enterokapsel\/Enterotablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":42.07,
-        "Försäljningspris":99.49,
-        "Inköpspris per minsta enhet":0.42,
-        "Försäljningspris per minsta enhet":0.99,
-        "NPL ID":20061129000085,
-        "NPL pack ID":20070215100417,
-        "Ursprung":"Generics",
-        "Företag":"Teva Sweden AB",
         "Utbytesgrupps ID":111431
     },
     {
@@ -99955,7 +99955,7 @@
         "NPL ID":20170403000090,
         "NPL pack ID":20180427100171,
         "Ursprung":"Generics",
-        "Företag":"2Care4 Generics ApS",
+        "Företag":"G.L. Pharma GmbH",
         "Utbytesgrupps ID":112469
     },
     {
@@ -100031,7 +100031,7 @@
         "NPL ID":20170403000090,
         "NPL pack ID":20180427100140,
         "Ursprung":"Generics",
-        "Företag":"2Care4 Generics ApS",
+        "Företag":"G.L. Pharma GmbH",
         "Utbytesgrupps ID":112469
     },
     {
@@ -108206,25 +108206,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Pomalidomide Grindeks",
-        "Varunummer":162912,
-        "Styrka":"2 mg",
-        "Förpackningsstorleksgrupp":"T16",
-        "Substans":"Pomalidomid",
-        "Beredningsform":"Kapsel",
-        "Storlek":21.0,
-        "Apotekens inköpspris":950.19,
-        "Försäljningspris":1035.19,
-        "Inköpspris per minsta enhet":45.25,
-        "Försäljningspris per minsta enhet":49.29,
-        "NPL ID":20230810000066,
-        "NPL pack ID":20231130100146,
-        "Ursprung":"Generics",
-        "Företag":"Grindeks Kalceks Sverige AB",
-        "Utbytesgrupps ID":116866
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Pomalidomide Newbury",
         "Varunummer":595749,
         "Styrka":"2 mg",
@@ -108243,7 +108224,7 @@
         "Utbytesgrupps ID":116866
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Pomalidomide Accord",
         "Varunummer":489722,
         "Styrka":"2 mg",
@@ -108259,6 +108240,25 @@
         "NPL pack ID":20231220100667,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":116866
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Pomalidomide Grindeks",
+        "Varunummer":162912,
+        "Styrka":"2 mg",
+        "Förpackningsstorleksgrupp":"T16",
+        "Substans":"Pomalidomid",
+        "Beredningsform":"Kapsel",
+        "Storlek":21.0,
+        "Apotekens inköpspris":950.19,
+        "Försäljningspris":1035.19,
+        "Inköpspris per minsta enhet":45.25,
+        "Försäljningspris per minsta enhet":49.29,
+        "NPL ID":20230810000066,
+        "NPL pack ID":20231130100146,
+        "Ursprung":"Generics",
+        "Företag":"Grindeks Kalceks Sverige AB",
         "Utbytesgrupps ID":116866
     },
     {
@@ -108866,7 +108866,7 @@
         "NPL ID":20180329000067,
         "NPL pack ID":20180613100107,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111446
     },
     {
@@ -108904,7 +108904,7 @@
         "NPL ID":20180329000067,
         "NPL pack ID":20180613100114,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111446
     },
     {
@@ -114913,25 +114913,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Glentek",
-        "Varunummer":549431,
-        "Styrka":"50 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Riluzol",
-        "Beredningsform":"Tablett",
-        "Storlek":56.0,
-        "Apotekens inköpspris":350.26,
-        "Försäljningspris":420.27,
-        "Inköpspris per minsta enhet":6.25,
-        "Försäljningspris per minsta enhet":7.5,
-        "NPL ID":20110430000168,
-        "NPL pack ID":20110917100015,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":112036
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Riluzol Actavis",
         "Varunummer":511954,
         "Styrka":"50 mg",
@@ -114950,7 +114931,7 @@
         "Utbytesgrupps ID":112036
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Riluzol Abacus Medicine",
         "Varunummer":110190,
         "Styrka":"50 mg",
@@ -114966,6 +114947,25 @@
         "NPL pack ID":20200528100372,
         "Ursprung":"ParallelImport",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":112036
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Riluzol Stada",
+        "Varunummer":527053,
+        "Styrka":"50 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Riluzol",
+        "Beredningsform":"Tablett",
+        "Storlek":56.0,
+        "Apotekens inköpspris":764.0,
+        "Försäljningspris":844.35,
+        "Inköpspris per minsta enhet":13.64,
+        "Försäljningspris per minsta enhet":15.08,
+        "NPL ID":20091231000031,
+        "NPL pack ID":20100301100653,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":112036
     },
     {
@@ -114989,21 +114989,21 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Riluzol Stada",
-        "Varunummer":527053,
+        "Produktnamn":"Glentek",
+        "Varunummer":549431,
         "Styrka":"50 mg",
         "Förpackningsstorleksgrupp":"T20",
         "Substans":"Riluzol",
         "Beredningsform":"Tablett",
         "Storlek":56.0,
-        "Apotekens inköpspris":764.0,
-        "Försäljningspris":844.35,
-        "Inköpspris per minsta enhet":13.64,
-        "Försäljningspris per minsta enhet":15.08,
-        "NPL ID":20091231000031,
-        "NPL pack ID":20100301100653,
+        "Apotekens inköpspris":350.26,
+        "Försäljningspris":420.27,
+        "Inköpspris per minsta enhet":6.25,
+        "Försäljningspris per minsta enhet":7.5,
+        "NPL ID":20110430000168,
+        "NPL pack ID":20110917100015,
         "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":112036
     },
     {
@@ -125187,7 +125187,7 @@
         "NPL ID":20040920000265,
         "NPL pack ID":20041025103622,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":375
     },
     {
@@ -125472,7 +125472,7 @@
         "NPL ID":20040920000265,
         "NPL pack ID":20041025103677,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":375
     },
     {
@@ -125567,7 +125567,7 @@
         "NPL ID":20040920000265,
         "NPL pack ID":20041025103691,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":375
     },
     {
@@ -125947,7 +125947,7 @@
         "NPL ID":20040920000258,
         "NPL pack ID":20041025103394,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":579
     },
     {
@@ -126137,7 +126137,7 @@
         "NPL ID":20040920000258,
         "NPL pack ID":20041025103387,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":579
     },
     {
@@ -126270,7 +126270,7 @@
         "NPL ID":20040920000258,
         "NPL pack ID":20041025103509,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":579
     },
     {
@@ -126308,7 +126308,7 @@
         "NPL ID":20040920000258,
         "NPL pack ID":20041025103530,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":579
     },
     {
