@@ -32710,7 +32710,6 @@
     "str": "0,5 mg",
     "size": "ca 20 st",
     "names": [
-      "Medorisper",
       "Risperdal®",
       "Risperidon Actavis",
       "Risperidon Krka",
@@ -32719,7 +32718,6 @@
     ],
     "vnr": [
       "110260",
-      "111024",
       "161574",
       "5",
       "88342",
@@ -39224,8 +39222,8 @@
     "size": "10 st",
     "names": [
       "Valaciclovir Actavis",
-      "Valaciclovir Aristo",
       "Valaciclovir Bluefish",
+      "Valaciclovir Oresund Pharma",
       "Valaciclovir Orion",
       "Valaciclovir Sandoz",
       "Valaciclovir Viatris",
@@ -39253,7 +39251,7 @@
     "names": [
       "Valaciclovir Abacus Medicine",
       "Valaciclovir Actavis",
-      "Valaciclovir Aristo",
+      "Valaciclovir Oresund Pharma",
       "Valaciclovir Orion",
       "Valaciklovir Ebb"
     ],
@@ -39277,8 +39275,8 @@
     "size": "ca 30 st",
     "names": [
       "Valaciclovir Actavis",
-      "Valaciclovir Aristo",
       "Valaciclovir Bluefish",
+      "Valaciclovir Oresund Pharma",
       "Valaciclovir Orion",
       "Valaciclovir Sandoz",
       "Valaciclovir Viatris",
@@ -39307,8 +39305,8 @@
     "names": [
       "Valaciclovir Abacus Medicine",
       "Valaciclovir Actavis",
-      "Valaciclovir Aristo",
       "Valaciclovir Bluefish",
+      "Valaciclovir Oresund Pharma",
       "Valaciclovir Orion",
       "Valaciclovir Sandoz",
       "Valaciclovir Viatris",
@@ -39336,8 +39334,8 @@
     "size": "ca 90 st",
     "names": [
       "Valaciclovir Actavis",
-      "Valaciclovir Aristo",
       "Valaciclovir Bluefish",
+      "Valaciclovir Oresund Pharma",
       "Valaciclovir Orion",
       "Valaciclovir Sandoz",
       "Valaciclovir Viatris"

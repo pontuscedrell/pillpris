@@ -5415,25 +5415,6 @@
         "Utbytesgrupps ID":111595
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Amoxicillin Sandoz",
-        "Varunummer":77111,
-        "Styrka":"500 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Amoxicillin",
-        "Beredningsform":"Tablett\/Kapsel",
-        "Storlek":30.0,
-        "Apotekens inköpspris":48.14,
-        "Försäljningspris":106.19,
-        "Inköpspris per minsta enhet":1.6,
-        "Försäljningspris per minsta enhet":3.54,
-        "NPL ID":20070919000037,
-        "NPL pack ID":20080213100111,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":111596
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Amimox®",
         "Varunummer":567416,
@@ -5450,6 +5431,25 @@
         "NPL pack ID":20191023100601,
         "Ursprung":"Generics",
         "Företag":"Viatris AB",
+        "Utbytesgrupps ID":111596
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Amoxicillin Sandoz",
+        "Varunummer":77111,
+        "Styrka":"500 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Amoxicillin",
+        "Beredningsform":"Tablett\/Kapsel",
+        "Storlek":30.0,
+        "Apotekens inköpspris":48.14,
+        "Försäljningspris":106.19,
+        "Inköpspris per minsta enhet":1.6,
+        "Försäljningspris per minsta enhet":3.54,
+        "NPL ID":20070919000037,
+        "NPL pack ID":20080213100111,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":111596
     },
     {
@@ -5791,7 +5791,7 @@
         "NPL ID":20101218000036,
         "NPL pack ID":20110329100719,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":374
     },
     {
@@ -5943,7 +5943,7 @@
         "NPL ID":20101218000043,
         "NPL pack ID":20110329100863,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111710
     },
     {
@@ -40485,7 +40485,7 @@
         "NPL ID":20100604000049,
         "NPL pack ID":20141211100388,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111115
     },
     {
@@ -40504,7 +40504,7 @@
         "NPL ID":20100604000049,
         "NPL pack ID":20140911100117,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111115
     },
     {
@@ -40637,7 +40637,7 @@
         "NPL ID":20100604000049,
         "NPL pack ID":20151102100113,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111115
     },
     {
@@ -40808,7 +40808,7 @@
         "NPL ID":20100604000049,
         "NPL pack ID":20190121100018,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111115
     },
     {
@@ -40998,7 +40998,7 @@
         "NPL ID":20100604000094,
         "NPL pack ID":20141211100395,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111126
     },
     {
@@ -41017,7 +41017,7 @@
         "NPL ID":20100604000094,
         "NPL pack ID":20140911100148,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111126
     },
     {
@@ -41169,7 +41169,7 @@
         "NPL ID":20100604000094,
         "NPL pack ID":20151102100137,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111126
     },
     {
@@ -41283,7 +41283,7 @@
         "NPL ID":20100604000094,
         "NPL pack ID":20190121100032,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111126
     },
     {
@@ -45487,25 +45487,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Fenoximetylpenicillin EQL Pharma",
-        "Varunummer":118074,
-        "Styrka":"800 mg",
-        "Förpackningsstorleksgrupp":"T16",
-        "Substans":"Fenoximetylpenicillin",
-        "Beredningsform":"Tablett",
-        "Storlek":20.0,
-        "Apotekens inköpspris":50.94,
-        "Försäljningspris":109.29,
-        "Inköpspris per minsta enhet":2.55,
-        "Försäljningspris per minsta enhet":5.46,
-        "NPL ID":20120302000097,
-        "NPL pack ID":20120502100405,
-        "Ursprung":"Generics",
-        "Företag":"EQL Pharma AB",
-        "Utbytesgrupps ID":111640
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Kåvepenin®",
         "Varunummer":36442,
         "Styrka":"800 mg",
@@ -45524,7 +45505,7 @@
         "Utbytesgrupps ID":111640
     },
     {
-        "Status":"R1",
+        "Status":"PV",
         "Produktnamn":"Tikacillin",
         "Varunummer":458992,
         "Styrka":"800 mg",
@@ -45540,6 +45521,25 @@
         "NPL pack ID":19920401100612,
         "Ursprung":"Generics",
         "Företag":"Meda AB",
+        "Utbytesgrupps ID":111640
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Fenoximetylpenicillin EQL Pharma",
+        "Varunummer":118074,
+        "Styrka":"800 mg",
+        "Förpackningsstorleksgrupp":"T16",
+        "Substans":"Fenoximetylpenicillin",
+        "Beredningsform":"Tablett",
+        "Storlek":20.0,
+        "Apotekens inköpspris":50.94,
+        "Försäljningspris":109.29,
+        "Inköpspris per minsta enhet":2.55,
+        "Försäljningspris per minsta enhet":5.46,
+        "NPL ID":20120302000097,
+        "NPL pack ID":20120502100405,
+        "Ursprung":"Generics",
+        "Företag":"EQL Pharma AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -55614,25 +55614,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Imatinib Accord",
-        "Varunummer":63759,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"T24",
-        "Substans":"Imatinib",
-        "Beredningsform":"Tablett\/Kapsel",
-        "Storlek":120.0,
-        "Apotekens inköpspris":555.55,
-        "Försäljningspris":630.69,
-        "Inköpspris per minsta enhet":4.63,
-        "Försäljningspris per minsta enhet":5.26,
-        "NPL ID":20120711000022,
-        "NPL pack ID":20240426100203,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":111726
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Imatinib Grindeks",
         "Varunummer":403443,
         "Styrka":"100 mg",
@@ -55651,7 +55632,7 @@
         "Utbytesgrupps ID":111726
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Imatinib Krka d.d.",
         "Varunummer":54602,
         "Styrka":"100 mg",
@@ -55667,6 +55648,44 @@
         "NPL pack ID":20150101100056,
         "Ursprung":"Generics",
         "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":111726
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Imatinib Accord",
+        "Varunummer":132775,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"T24",
+        "Substans":"Imatinib",
+        "Beredningsform":"Tablett\/Kapsel",
+        "Storlek":120.0,
+        "Apotekens inköpspris":7750.0,
+        "Försäljningspris":8005.0,
+        "Inköpspris per minsta enhet":64.58,
+        "Försäljningspris per minsta enhet":66.71,
+        "NPL ID":20120711000022,
+        "NPL pack ID":20230217100055,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":111726
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Imatinib Accord",
+        "Varunummer":63759,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"T24",
+        "Substans":"Imatinib",
+        "Beredningsform":"Tablett\/Kapsel",
+        "Storlek":120.0,
+        "Apotekens inköpspris":555.55,
+        "Försäljningspris":630.69,
+        "Inköpspris per minsta enhet":4.63,
+        "Försäljningspris per minsta enhet":5.26,
+        "NPL ID":20120711000022,
+        "NPL pack ID":20240426100203,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":111726
     },
     {
@@ -55705,25 +55724,6 @@
         "NPL pack ID":20180205100010,
         "Ursprung":"ParallelDistribution",
         "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":111726
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Imatinib Accord",
-        "Varunummer":132775,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"T24",
-        "Substans":"Imatinib",
-        "Beredningsform":"Tablett\/Kapsel",
-        "Storlek":120.0,
-        "Apotekens inköpspris":7750.0,
-        "Försäljningspris":8005.0,
-        "Inköpspris per minsta enhet":64.58,
-        "Försäljningspris per minsta enhet":66.71,
-        "NPL ID":20120711000022,
-        "NPL pack ID":20230217100055,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":111726
     },
     {
@@ -75622,25 +75622,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Emla",
-        "Varunummer":168925,
-        "Styrka":"25 mg\/g + 25 mg\/g",
-        "Förpackningsstorleksgrupp":"G30",
-        "Substans":"Lidokain + prilokain",
-        "Beredningsform":"Kräm",
-        "Storlek":30.0,
-        "Apotekens inköpspris":138.0,
-        "Försäljningspris":201.08,
-        "Inköpspris per minsta enhet":4.6,
-        "Försäljningspris per minsta enhet":6.7,
-        "NPL ID":20190828000031,
-        "NPL pack ID":20191205100023,
-        "Ursprung":"ParallelImport",
-        "Företag":"2care4 ApS",
-        "Utbytesgrupps ID":691
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Emla",
         "Varunummer":371129,
         "Styrka":"25 mg\/g + 25 mg\/g",
         "Förpackningsstorleksgrupp":"G30",
@@ -75658,7 +75639,7 @@
         "Utbytesgrupps ID":691
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"EMLA®",
         "Varunummer":494534,
         "Styrka":"25 mg\/g + 25 mg\/g",
@@ -75693,6 +75674,25 @@
         "NPL pack ID":20060811100072,
         "Ursprung":"Generics",
         "Företag":"Orifarm Generics AB",
+        "Utbytesgrupps ID":691
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Emla",
+        "Varunummer":168925,
+        "Styrka":"25 mg\/g + 25 mg\/g",
+        "Förpackningsstorleksgrupp":"G30",
+        "Substans":"Lidokain + prilokain",
+        "Beredningsform":"Kräm",
+        "Storlek":30.0,
+        "Apotekens inköpspris":138.0,
+        "Försäljningspris":201.08,
+        "Inköpspris per minsta enhet":4.6,
+        "Försäljningspris per minsta enhet":6.7,
+        "NPL ID":20190828000031,
+        "NPL pack ID":20191205100023,
+        "Ursprung":"ParallelImport",
+        "Företag":"2care4 ApS",
         "Utbytesgrupps ID":691
     },
     {
@@ -78054,25 +78054,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Latuda",
-        "Varunummer":571342,
-        "Styrka":"18,5 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Lurasidon",
-        "Beredningsform":"Tablett",
-        "Storlek":28.0,
-        "Apotekens inköpspris":281.21,
-        "Försäljningspris":349.3,
-        "Inköpspris per minsta enhet":10.04,
-        "Försäljningspris per minsta enhet":12.48,
-        "NPL ID":20121003000072,
-        "NPL pack ID":20251203100880,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":113801
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Latuda",
         "Varunummer":92535,
         "Styrka":"18,5 mg",
         "Förpackningsstorleksgrupp":"T18",
@@ -78090,7 +78071,7 @@
         "Utbytesgrupps ID":113801
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Lurasidone Orifarm",
         "Varunummer":390167,
         "Styrka":"18,5 mg",
@@ -78109,7 +78090,7 @@
         "Utbytesgrupps ID":113801
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Lurasidon G.L. Pharma",
         "Varunummer":189426,
         "Styrka":"18,5 mg",
@@ -78125,6 +78106,25 @@
         "NPL pack ID":20241107100413,
         "Ursprung":"Generics",
         "Företag":"G.L. Pharma Nordic Aktiebolag",
+        "Utbytesgrupps ID":113801
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Latuda",
+        "Varunummer":571342,
+        "Styrka":"18,5 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Lurasidon",
+        "Beredningsform":"Tablett",
+        "Storlek":28.0,
+        "Apotekens inköpspris":281.21,
+        "Försäljningspris":349.3,
+        "Inköpspris per minsta enhet":10.04,
+        "Försäljningspris per minsta enhet":12.48,
+        "NPL ID":20121003000072,
+        "NPL pack ID":20251203100880,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":113801
     },
     {
@@ -88654,25 +88654,6 @@
         "Utbytesgrupps ID":112283
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Mometason Glenmark",
-        "Varunummer":83159,
-        "Styrka":"1 mg\/g",
-        "Förpackningsstorleksgrupp":"G100",
-        "Substans":"Mometasonfuroat",
-        "Beredningsform":"Salva",
-        "Storlek":100.0,
-        "Apotekens inköpspris":67.41,
-        "Försäljningspris":127.49,
-        "Inköpspris per minsta enhet":0.67,
-        "Försäljningspris per minsta enhet":1.27,
-        "NPL ID":20070915000017,
-        "NPL pack ID":20080118100087,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":112775
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Mometasone Teva",
         "Varunummer":556756,
@@ -88727,6 +88708,25 @@
         "NPL pack ID":19901001100172,
         "Ursprung":"Original",
         "Företag":"Organon Sweden AB",
+        "Utbytesgrupps ID":112775
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Mometason Glenmark",
+        "Varunummer":83159,
+        "Styrka":"1 mg\/g",
+        "Förpackningsstorleksgrupp":"G100",
+        "Substans":"Mometasonfuroat",
+        "Beredningsform":"Salva",
+        "Storlek":100.0,
+        "Apotekens inköpspris":67.41,
+        "Försäljningspris":127.49,
+        "Inköpspris per minsta enhet":0.67,
+        "Försäljningspris per minsta enhet":1.27,
+        "NPL ID":20070915000017,
+        "NPL pack ID":20080118100087,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":112775
     },
     {
@@ -97319,25 +97319,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Zofran®",
-        "Varunummer":68214,
-        "Styrka":"4 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Ondansetron",
-        "Beredningsform":"Tablett",
-        "Storlek":50.0,
-        "Apotekens inköpspris":105.3,
-        "Försäljningspris":167.24,
-        "Inköpspris per minsta enhet":2.11,
-        "Försäljningspris per minsta enhet":3.34,
-        "NPL ID":19920124000053,
-        "NPL pack ID":19931001100384,
-        "Ursprung":"Original",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":111178
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Ondansetron Aurobindo",
         "Varunummer":147243,
         "Styrka":"4 mg",
@@ -97356,7 +97337,7 @@
         "Utbytesgrupps ID":111178
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Ondansetron Bluefish",
         "Varunummer":374672,
         "Styrka":"4 mg",
@@ -97372,6 +97353,44 @@
         "NPL pack ID":20060810101957,
         "Ursprung":"Generics",
         "Företag":"Bluefish Pharmaceuticals AB",
+        "Utbytesgrupps ID":111178
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Ondansetron STADA",
+        "Varunummer":163445,
+        "Styrka":"4 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Ondansetron",
+        "Beredningsform":"Tablett",
+        "Storlek":50.0,
+        "Apotekens inköpspris":197.0,
+        "Försäljningspris":262.15,
+        "Inköpspris per minsta enhet":3.94,
+        "Försäljningspris per minsta enhet":5.24,
+        "NPL ID":20050830000033,
+        "NPL pack ID":20050929100095,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111178
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Zofran®",
+        "Varunummer":68214,
+        "Styrka":"4 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Ondansetron",
+        "Beredningsform":"Tablett",
+        "Storlek":50.0,
+        "Apotekens inköpspris":105.3,
+        "Försäljningspris":167.24,
+        "Inköpspris per minsta enhet":2.11,
+        "Försäljningspris per minsta enhet":3.34,
+        "NPL ID":19920124000053,
+        "NPL pack ID":19931001100384,
+        "Ursprung":"Original",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":111178
     },
     {
@@ -97391,25 +97410,6 @@
         "NPL pack ID":20230823100074,
         "Ursprung":"Generics",
         "Företag":"EQL Pharma AB",
-        "Utbytesgrupps ID":111178
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Ondansetron STADA",
-        "Varunummer":163445,
-        "Styrka":"4 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Ondansetron",
-        "Beredningsform":"Tablett",
-        "Storlek":50.0,
-        "Apotekens inköpspris":197.0,
-        "Försäljningspris":262.15,
-        "Inköpspris per minsta enhet":3.94,
-        "Försäljningspris per minsta enhet":5.24,
-        "NPL ID":20050830000033,
-        "NPL pack ID":20050929100095,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":111178
     },
     {
@@ -106073,7 +106073,7 @@
         "NPL ID":20100224000061,
         "NPL pack ID":20100325100653,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":112084
     },
     {
@@ -106206,7 +106206,7 @@
         "NPL ID":20100224000061,
         "NPL pack ID":20100325100646,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":112084
     },
     {
@@ -106339,7 +106339,7 @@
         "NPL ID":20100224000061,
         "NPL pack ID":20100325100660,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":112084
     },
     {
@@ -113198,7 +113198,7 @@
         "NPL ID":19980805000017,
         "NPL pack ID":19980805100021,
         "Ursprung":"Original",
-        "Företag":"Daiichi Sankyo Europe GmbH",
+        "Företag":"Substipharm",
         "Utbytesgrupps ID":112813
     },
     {
@@ -113312,7 +113312,7 @@
         "NPL ID":19980805000017,
         "NPL pack ID":19980805100038,
         "Ursprung":"Original",
-        "Företag":"Daiichi Sankyo Europe GmbH",
+        "Företag":"Substipharm",
         "Utbytesgrupps ID":112813
     },
     {
@@ -115787,25 +115787,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Risperidon Ebb",
-        "Varunummer":169622,
-        "Styrka":"0,25 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Risperidon",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":90.09,
-        "Försäljningspris":151.49,
-        "Inköpspris per minsta enhet":0.9,
-        "Försäljningspris per minsta enhet":1.51,
-        "NPL ID":20160308000073,
-        "NPL pack ID":20160923100059,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":112154
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Risperidon Actavis",
         "Varunummer":161563,
         "Styrka":"0,25 mg",
@@ -115824,7 +115805,7 @@
         "Utbytesgrupps ID":112154
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Risperidon Sandoz",
         "Varunummer":71781,
         "Styrka":"0,25 mg",
@@ -115840,6 +115821,25 @@
         "NPL pack ID":20090216100100,
         "Ursprung":"Generics",
         "Företag":"Sandoz A\/S",
+        "Utbytesgrupps ID":112154
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Risperidon Ebb",
+        "Varunummer":169622,
+        "Styrka":"0,25 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Risperidon",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":90.09,
+        "Försäljningspris":151.49,
+        "Inköpspris per minsta enhet":0.9,
+        "Försäljningspris per minsta enhet":1.51,
+        "NPL ID":20160308000073,
+        "NPL pack ID":20160923100059,
+        "Ursprung":"ParallelImport",
+        "Företag":"Ebb Medical AB",
         "Utbytesgrupps ID":112154
     },
     {
@@ -115992,25 +115992,6 @@
         "NPL pack ID":20060707100124,
         "Ursprung":"Generics",
         "Företag":"KRKA Sverige AB",
-        "Utbytesgrupps ID":111907
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Medorisper",
-        "Varunummer":111024,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"T16",
-        "Substans":"Risperidon",
-        "Beredningsform":"Tablett",
-        "Storlek":20.0,
-        "Apotekens inköpspris":27.0,
-        "Försäljningspris":82.84,
-        "Inköpspris per minsta enhet":1.35,
-        "Försäljningspris per minsta enhet":4.14,
-        "NPL ID":20061110000049,
-        "NPL pack ID":20061115100294,
-        "Ursprung":"Generics",
-        "Företag":"Medochemie Ltd",
         "Utbytesgrupps ID":111907
     },
     {
@@ -125800,25 +125781,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Sertralin Hexal",
-        "Varunummer":66094,
-        "Styrka":"50 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Sertralin",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":63.2,
-        "Försäljningspris":122.84,
-        "Inköpspris per minsta enhet":2.11,
-        "Försäljningspris per minsta enhet":4.09,
-        "NPL ID":20040607009758,
-        "NPL pack ID":20040628100281,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":579
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Sertraline Accord",
         "Varunummer":594901,
         "Styrka":"50 mg",
@@ -125837,7 +125799,7 @@
         "Utbytesgrupps ID":579
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Sertralin Teva",
         "Varunummer":81124,
         "Styrka":"50 mg",
@@ -125853,6 +125815,25 @@
         "NPL pack ID":20060626100090,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":579
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Sertralin Hexal",
+        "Varunummer":66094,
+        "Styrka":"50 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Sertralin",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":63.2,
+        "Försäljningspris":122.84,
+        "Inköpspris per minsta enhet":2.11,
+        "Försäljningspris per minsta enhet":4.09,
+        "NPL ID":20040607009758,
+        "NPL pack ID":20040628100281,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":579
     },
     {
@@ -131001,7 +130982,7 @@
         "NPL ID":20100323000016,
         "NPL pack ID":20100521103335,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":358
     },
     {
@@ -131115,7 +131096,7 @@
         "NPL ID":20100323000016,
         "NPL pack ID":20100521103274,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":358
     },
     {
@@ -131210,7 +131191,7 @@
         "NPL ID":20100323000016,
         "NPL pack ID":20100521103342,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":358
     },
     {
@@ -131913,7 +131894,7 @@
         "NPL ID":20180221000059,
         "NPL pack ID":20180402100028,
         "Ursprung":"Generics",
-        "Företag":"AOP Orphan Pharmaceuticals AG",
+        "Företag":"AOP Orphan Pharmaceuticals GmbH",
         "Utbytesgrupps ID":113192
     },
     {
@@ -136454,7 +136435,7 @@
         "NPL ID":20170718000013,
         "NPL pack ID":20170803100031,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":112729
     },
     {
@@ -139893,7 +139874,7 @@
         "NPL ID":20191029000035,
         "NPL pack ID":20191219100019,
         "Ursprung":"Generics",
-        "Företag":"AOP Orphan Pharmaceuticals AG",
+        "Företag":"AOP Orphan Pharmaceuticals GmbH",
         "Utbytesgrupps ID":111341
     },
     {
@@ -139950,7 +139931,7 @@
         "NPL ID":20191029000066,
         "NPL pack ID":20191219100040,
         "Ursprung":"Generics",
-        "Företag":"AOP Orphan Pharmaceuticals AG",
+        "Företag":"AOP Orphan Pharmaceuticals GmbH",
         "Utbytesgrupps ID":115105
     },
     {
@@ -140007,7 +139988,7 @@
         "NPL ID":20191029000042,
         "NPL pack ID":20191219100033,
         "Ursprung":"Generics",
-        "Företag":"AOP Orphan Pharmaceuticals AG",
+        "Företag":"AOP Orphan Pharmaceuticals GmbH",
         "Utbytesgrupps ID":115104
     },
     {
@@ -140045,7 +140026,7 @@
         "NPL ID":20191029000059,
         "NPL pack ID":20191219100026,
         "Ursprung":"Generics",
-        "Företag":"AOP Orphan Pharmaceuticals AG",
+        "Företag":"AOP Orphan Pharmaceuticals GmbH",
         "Utbytesgrupps ID":114568
     },
     {
@@ -140772,7 +140753,7 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Valaciclovir Aristo",
+        "Produktnamn":"Valaciclovir Oresund Pharma",
         "Varunummer":32930,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T10",
@@ -140905,7 +140886,7 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Valaciclovir Aristo",
+        "Produktnamn":"Valaciclovir Oresund Pharma",
         "Varunummer":142533,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T16",
@@ -141076,7 +141057,7 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Valaciclovir Aristo",
+        "Produktnamn":"Valaciclovir Oresund Pharma",
         "Varunummer":385469,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T18",
@@ -141190,7 +141171,7 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Valaciclovir Aristo",
+        "Produktnamn":"Valaciclovir Oresund Pharma",
         "Varunummer":575091,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T19",
@@ -141380,7 +141361,7 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Valaciclovir Aristo",
+        "Produktnamn":"Valaciclovir Oresund Pharma",
         "Varunummer":155254,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T23",

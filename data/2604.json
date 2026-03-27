@@ -5791,7 +5791,7 @@
         "NPL ID":20101218000036,
         "NPL pack ID":20110329100719,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":374
     },
     {
@@ -5962,7 +5962,7 @@
         "NPL ID":20101218000043,
         "NPL pack ID":20110329100863,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111710
     },
     {
@@ -40694,7 +40694,7 @@
         "NPL ID":20100604000049,
         "NPL pack ID":20141211100388,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111115
     },
     {
@@ -40751,7 +40751,7 @@
         "NPL ID":20100604000049,
         "NPL pack ID":20140911100117,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111115
     },
     {
@@ -40827,7 +40827,7 @@
         "NPL ID":20100604000049,
         "NPL pack ID":20151102100113,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111115
     },
     {
@@ -41036,7 +41036,7 @@
         "NPL ID":20100604000049,
         "NPL pack ID":20190121100018,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111115
     },
     {
@@ -41226,7 +41226,7 @@
         "NPL ID":20100604000094,
         "NPL pack ID":20141211100395,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111126
     },
     {
@@ -41264,7 +41264,7 @@
         "NPL ID":20100604000094,
         "NPL pack ID":20140911100148,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111126
     },
     {
@@ -41416,7 +41416,7 @@
         "NPL ID":20100604000094,
         "NPL pack ID":20151102100137,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111126
     },
     {
@@ -41511,7 +41511,7 @@
         "NPL ID":20100604000094,
         "NPL pack ID":20190121100032,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":111126
     },
     {
@@ -106643,7 +106643,7 @@
         "NPL ID":20100224000061,
         "NPL pack ID":20100325100653,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":112084
     },
     {
@@ -106795,7 +106795,7 @@
         "NPL ID":20100224000061,
         "NPL pack ID":20100325100646,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":112084
     },
     {
@@ -106928,7 +106928,7 @@
         "NPL ID":20100224000061,
         "NPL pack ID":20100325100660,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":112084
     },
     {
@@ -113787,7 +113787,7 @@
         "NPL ID":19980805000017,
         "NPL pack ID":19980805100021,
         "Ursprung":"Original",
-        "Företag":"Daiichi Sankyo Europe GmbH",
+        "Företag":"Substipharm",
         "Utbytesgrupps ID":112813
     },
     {
@@ -113882,7 +113882,7 @@
         "NPL ID":19980805000017,
         "NPL pack ID":19980805100038,
         "Ursprung":"Original",
-        "Företag":"Daiichi Sankyo Europe GmbH",
+        "Företag":"Substipharm",
         "Utbytesgrupps ID":112813
     },
     {
@@ -116581,25 +116581,6 @@
         "NPL pack ID":20060504100389,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":111907
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Medorisper",
-        "Varunummer":111024,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"T16",
-        "Substans":"Risperidon",
-        "Beredningsform":"Tablett",
-        "Storlek":20.0,
-        "Apotekens inköpspris":27.0,
-        "Försäljningspris":82.84,
-        "Inköpspris per minsta enhet":1.35,
-        "Försäljningspris per minsta enhet":4.14,
-        "NPL ID":20061110000049,
-        "NPL pack ID":20061115100294,
-        "Ursprung":"Generics",
-        "Företag":"Medochemie Ltd",
         "Utbytesgrupps ID":111907
     },
     {
@@ -131666,7 +131647,7 @@
         "NPL ID":20100323000016,
         "NPL pack ID":20100521103335,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":358
     },
     {
@@ -131761,7 +131742,7 @@
         "NPL ID":20100323000016,
         "NPL pack ID":20100521103274,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":358
     },
     {
@@ -131875,7 +131856,7 @@
         "NPL ID":20100323000016,
         "NPL pack ID":20100521103342,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":358
     },
     {
@@ -132616,7 +132597,7 @@
         "NPL ID":20180221000059,
         "NPL pack ID":20180402100028,
         "Ursprung":"Generics",
-        "Företag":"AOP Orphan Pharmaceuticals AG",
+        "Företag":"AOP Orphan Pharmaceuticals GmbH",
         "Utbytesgrupps ID":113192
     },
     {
@@ -137157,7 +137138,7 @@
         "NPL ID":20170718000013,
         "NPL pack ID":20170803100031,
         "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
+        "Företag":"Oresund  Pharma ApS",
         "Utbytesgrupps ID":112729
     },
     {
@@ -140615,7 +140596,7 @@
         "NPL ID":20191029000035,
         "NPL pack ID":20191219100019,
         "Ursprung":"Generics",
-        "Företag":"AOP Orphan Pharmaceuticals AG",
+        "Företag":"AOP Orphan Pharmaceuticals GmbH",
         "Utbytesgrupps ID":111341
     },
     {
@@ -140672,7 +140653,7 @@
         "NPL ID":20191029000066,
         "NPL pack ID":20191219100040,
         "Ursprung":"Generics",
-        "Företag":"AOP Orphan Pharmaceuticals AG",
+        "Företag":"AOP Orphan Pharmaceuticals GmbH",
         "Utbytesgrupps ID":115105
     },
     {
@@ -140729,7 +140710,7 @@
         "NPL ID":20191029000042,
         "NPL pack ID":20191219100033,
         "Ursprung":"Generics",
-        "Företag":"AOP Orphan Pharmaceuticals AG",
+        "Företag":"AOP Orphan Pharmaceuticals GmbH",
         "Utbytesgrupps ID":115104
     },
     {
@@ -140767,7 +140748,7 @@
         "NPL ID":20191029000059,
         "NPL pack ID":20191219100026,
         "Ursprung":"Generics",
-        "Företag":"AOP Orphan Pharmaceuticals AG",
+        "Företag":"AOP Orphan Pharmaceuticals GmbH",
         "Utbytesgrupps ID":114568
     },
     {
@@ -141532,7 +141513,7 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Valaciclovir Aristo",
+        "Produktnamn":"Valaciclovir Oresund Pharma",
         "Varunummer":32930,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T10",
@@ -141646,7 +141627,7 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Valaciclovir Aristo",
+        "Produktnamn":"Valaciclovir Oresund Pharma",
         "Varunummer":142533,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T16",
@@ -141760,7 +141741,7 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Valaciclovir Aristo",
+        "Produktnamn":"Valaciclovir Oresund Pharma",
         "Varunummer":385469,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T18",
@@ -141931,7 +141912,7 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Valaciclovir Aristo",
+        "Produktnamn":"Valaciclovir Oresund Pharma",
         "Varunummer":575091,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T19",
@@ -142121,7 +142102,7 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Valaciclovir Aristo",
+        "Produktnamn":"Valaciclovir Oresund Pharma",
         "Varunummer":155254,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T23",
