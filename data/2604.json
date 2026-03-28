@@ -55101,25 +55101,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Ibuprofen Zentiva",
-        "Varunummer":396092,
-        "Styrka":"400 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Ibuprofen",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":14.0,
-        "Försäljningspris":68.47,
-        "Inköpspris per minsta enhet":0.47,
-        "Försäljningspris per minsta enhet":2.28,
-        "NPL ID":20191218000075,
-        "NPL pack ID":20200427100244,
-        "Ursprung":"Generics",
-        "Företag":"Zentiva k.s.",
-        "Utbytesgrupps ID":112413
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Ibumax",
         "Varunummer":379790,
         "Styrka":"400 mg",
@@ -55138,7 +55119,7 @@
         "Utbytesgrupps ID":112413
     },
     {
-        "Status":"R1",
+        "Status":"PV",
         "Produktnamn":"Ibumax",
         "Varunummer":372617,
         "Styrka":"400 mg",
@@ -55157,7 +55138,7 @@
         "Utbytesgrupps ID":112413
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Brufen®",
         "Varunummer":132290,
         "Styrka":"400 mg",
@@ -55173,6 +55154,25 @@
         "NPL pack ID":20070122100128,
         "Ursprung":"Original",
         "Företag":"Viatris AB",
+        "Utbytesgrupps ID":112413
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Ibuprofen Zentiva",
+        "Varunummer":396092,
+        "Styrka":"400 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Ibuprofen",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":14.0,
+        "Försäljningspris":68.47,
+        "Inköpspris per minsta enhet":0.47,
+        "Försäljningspris per minsta enhet":2.28,
+        "NPL ID":20191218000075,
+        "NPL pack ID":20200427100244,
+        "Ursprung":"Generics",
+        "Företag":"Zentiva k.s.",
         "Utbytesgrupps ID":112413
     },
     {
@@ -133052,6 +133052,25 @@
         "Försäljningspris per minsta enhet":10.57,
         "NPL ID":20201002000034,
         "NPL pack ID":20210112100084,
+        "Ursprung":"ParallelImport",
+        "Företag":"Orifarm AB",
+        "Utbytesgrupps ID":112818
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Takrolimus Accord",
+        "Varunummer":393665,
+        "Styrka":"0,1%",
+        "Förpackningsstorleksgrupp":"G60",
+        "Substans":"Takrolimus",
+        "Beredningsform":"Salva",
+        "Storlek":60.0,
+        "Apotekens inköpspris":559.0,
+        "Försäljningspris":634.23,
+        "Inköpspris per minsta enhet":9.32,
+        "Försäljningspris per minsta enhet":10.57,
+        "NPL ID":20260107000059,
+        "NPL pack ID":20260312100148,
         "Ursprung":"ParallelImport",
         "Företag":"Orifarm AB",
         "Utbytesgrupps ID":112818
