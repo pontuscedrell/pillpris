@@ -2585,7 +2585,7 @@
     "id": "112125",
     "size_id": "T18",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "10 mg",
     "size": "ca 30 st",
     "names": [
@@ -2614,7 +2614,7 @@
     "id": "112125",
     "size_id": "T7",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "10 mg",
     "size": "7 st",
     "names": [
@@ -2632,7 +2632,7 @@
     "id": "112126",
     "size_id": "T18",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "100 mg",
     "size": "ca 30 st",
     "names": [
@@ -2654,7 +2654,7 @@
     "id": "112132",
     "size_id": "T18",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "18 mg",
     "size": "ca 30 st",
     "names": [
@@ -2680,7 +2680,7 @@
     "id": "112132",
     "size_id": "T20",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "18 mg",
     "size": "ca 52 st",
     "names": [
@@ -2696,7 +2696,7 @@
     "id": "112132",
     "size_id": "T7",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "18 mg",
     "size": "7 st",
     "names": [
@@ -2714,7 +2714,7 @@
     "id": "112133",
     "size_id": "T18",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "25 mg",
     "size": "ca 30 st",
     "names": [
@@ -2745,7 +2745,7 @@
     "id": "112133",
     "size_id": "T20",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "25 mg",
     "size": "ca 52 st",
     "names": [
@@ -2761,7 +2761,7 @@
     "id": "112133",
     "size_id": "T7",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "25 mg",
     "size": "7 st",
     "names": [
@@ -2779,7 +2779,7 @@
     "id": "112134",
     "size_id": "T18",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "40 mg",
     "size": "ca 30 st",
     "names": [
@@ -2810,7 +2810,7 @@
     "id": "112134",
     "size_id": "T20",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "40 mg",
     "size": "ca 52 st",
     "names": [
@@ -2826,7 +2826,7 @@
     "id": "112134",
     "size_id": "T7",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "40 mg",
     "size": "7 st",
     "names": [
@@ -2844,7 +2844,7 @@
     "id": "112135",
     "size_id": "T18",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "60 mg",
     "size": "ca 30 st",
     "names": [
@@ -2872,7 +2872,7 @@
     "id": "112135",
     "size_id": "T20",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "60 mg",
     "size": "ca 52 st",
     "names": [
@@ -2888,7 +2888,7 @@
     "id": "112135",
     "size_id": "T23",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "60 mg",
     "size": "ca 90 st",
     "names": [
@@ -2904,7 +2904,7 @@
     "id": "112144",
     "size_id": "T18",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "80 mg",
     "size": "ca 30 st",
     "names": [
@@ -2934,7 +2934,7 @@
     "id": "112144",
     "size_id": "T23",
     "sub": "Atomoxetin",
-    "form": "Kapsel/Tablett",
+    "form": "Kapsel",
     "str": "80 mg",
     "size": "ca 90 st",
     "names": [
@@ -6350,7 +6350,7 @@
     ],
     "vnr": [
       "191879",
-      "540596"
+      "71349"
     ],
     "packaging": [],
     "packagingMap": {}
