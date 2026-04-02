@@ -4316,6 +4316,48 @@
     "packagingMap": {}
   },
   {
+    "id": "112273",
+    "size_id": "M3",
+    "sub": "Bimatoprost",
+    "form": "Ögondroppar",
+    "str": "0,1 mg/ml",
+    "size": "3 ml",
+    "names": [
+      "Bimatoprost STADA",
+      "LUMIGAN"
+    ],
+    "vnr": [
+      "197932",
+      "587067",
+      "85838"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112273",
+    "size_id": "M9",
+    "sub": "Bimatoprost",
+    "form": "Ögondroppar",
+    "str": "0,1 mg/ml",
+    "size": "9 ml",
+    "names": [
+      "Bimaprez",
+      "Bimatoprost STADA",
+      "LUMIGAN"
+    ],
+    "vnr": [
+      "108527",
+      "124451",
+      "171437",
+      "400166",
+      "458303",
+      "85849"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
     "id": "112274",
     "size_id": "M3",
     "sub": "Bimatoprost",
