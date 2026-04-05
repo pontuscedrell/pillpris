@@ -15637,7 +15637,7 @@
         "Utbytesgrupps ID":112273
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"LUMIGAN",
         "Varunummer":85838,
         "Styrka":"0,1 mg\/ml",
@@ -15694,7 +15694,7 @@
         "Utbytesgrupps ID":112273
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"LUMIGAN",
         "Varunummer":108527,
         "Styrka":"0,1 mg\/ml",
@@ -15713,7 +15713,7 @@
         "Utbytesgrupps ID":112273
     },
     {
-        "Status":"PV",
+        "Status":"R2",
         "Produktnamn":"LUMIGAN",
         "Varunummer":171437,
         "Styrka":"0,1 mg\/ml",
@@ -15729,25 +15729,6 @@
         "NPL pack ID":20140107100235,
         "Ursprung":"ParallelDistribution",
         "Företag":"Medartuum AB",
-        "Utbytesgrupps ID":112273
-    },
-    {
-        "Status":"PV",
-        "Produktnamn":"LUMIGAN",
-        "Varunummer":124451,
-        "Styrka":"0,1 mg\/ml",
-        "Förpackningsstorleksgrupp":"M9",
-        "Substans":"Bimatoprost",
-        "Beredningsform":"Ögondroppar",
-        "Storlek":9.0,
-        "Apotekens inköpspris":325.72,
-        "Försäljningspris":382.11,
-        "Inköpspris per minsta enhet":36.19,
-        "Försäljningspris per minsta enhet":42.46,
-        "NPL ID":20080416000058,
-        "NPL pack ID":20140915100076,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Orifarm AB",
         "Utbytesgrupps ID":112273
     },
     {
@@ -15767,6 +15748,25 @@
         "NPL pack ID":20231012100769,
         "Ursprung":"Generics",
         "Företag":"Astimex Pharma AB",
+        "Utbytesgrupps ID":112273
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"LUMIGAN",
+        "Varunummer":124451,
+        "Styrka":"0,1 mg\/ml",
+        "Förpackningsstorleksgrupp":"M9",
+        "Substans":"Bimatoprost",
+        "Beredningsform":"Ögondroppar",
+        "Storlek":9.0,
+        "Apotekens inköpspris":325.72,
+        "Försäljningspris":382.11,
+        "Inköpspris per minsta enhet":36.19,
+        "Försäljningspris per minsta enhet":42.46,
+        "NPL ID":20080416000058,
+        "NPL pack ID":20140915100076,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Orifarm AB",
         "Utbytesgrupps ID":112273
     },
     {
