@@ -15656,7 +15656,7 @@
         "Utbytesgrupps ID":112273
     },
     {
-        "Status":"R2",
+        "Status":"Nej",
         "Produktnamn":"LUMIGAN",
         "Varunummer":197932,
         "Styrka":"0,1 mg\/ml",
@@ -20577,7 +20577,7 @@
         "Utbytesgrupps ID":112585
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Temgesic®",
         "Varunummer":158905,
         "Styrka":"0,2 mg",
@@ -24226,25 +24226,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Ciprofloxacin 2care4",
-        "Varunummer":569745,
-        "Styrka":"500 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Ciprofloxacin",
-        "Beredningsform":"Tablett",
-        "Storlek":28.0,
-        "Apotekens inköpspris":72.0,
-        "Försäljningspris":132.56,
-        "Inköpspris per minsta enhet":2.57,
-        "Försäljningspris per minsta enhet":4.73,
-        "NPL ID":20250603000073,
-        "NPL pack ID":20250901100185,
-        "Ursprung":"ParallelImport",
-        "Företag":"2care4 ApS",
-        "Utbytesgrupps ID":111897
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Ciprofloxacin Accord",
         "Varunummer":428032,
         "Styrka":"500 mg",
@@ -24263,7 +24244,7 @@
         "Utbytesgrupps ID":111897
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Ciprofloxacin Krka",
         "Varunummer":511582,
         "Styrka":"500 mg",
@@ -24279,6 +24260,25 @@
         "NPL pack ID":20060627100785,
         "Ursprung":"Generics",
         "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":111897
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Ciprofloxacin 2care4",
+        "Varunummer":569745,
+        "Styrka":"500 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Ciprofloxacin",
+        "Beredningsform":"Tablett",
+        "Storlek":28.0,
+        "Apotekens inköpspris":72.0,
+        "Försäljningspris":132.56,
+        "Inköpspris per minsta enhet":2.57,
+        "Försäljningspris per minsta enhet":4.73,
+        "NPL ID":20250603000073,
+        "NPL pack ID":20250901100185,
+        "Ursprung":"ParallelImport",
+        "Företag":"2care4 ApS",
         "Utbytesgrupps ID":111897
     },
     {
@@ -63365,7 +63365,7 @@
         "Utbytesgrupps ID":112185
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Ucedane",
         "Varunummer":194133,
         "Styrka":"200 mg",
@@ -63993,25 +63993,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Clarithromycin Aurobindo",
-        "Varunummer":493052,
-        "Styrka":"250 mg",
-        "Förpackningsstorleksgrupp":"T14",
-        "Substans":"Klaritromycin",
-        "Beredningsform":"Tablett",
-        "Storlek":14.0,
-        "Apotekens inköpspris":116.0,
-        "Försäljningspris":178.31,
-        "Inköpspris per minsta enhet":8.29,
-        "Försäljningspris per minsta enhet":12.74,
-        "NPL ID":20180322000026,
-        "NPL pack ID":20181109100069,
-        "Ursprung":"ParallelImport",
-        "Företag":"2care4 ApS",
-        "Utbytesgrupps ID":111841
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Clarithromycin Krka",
         "Varunummer":158860,
         "Styrka":"250 mg",
@@ -64030,7 +64011,7 @@
         "Utbytesgrupps ID":111841
     },
     {
-        "Status":"R1",
+        "Status":"PV",
         "Produktnamn":"Klaritromycin Ebb",
         "Varunummer":528069,
         "Styrka":"250 mg",
@@ -64049,7 +64030,7 @@
         "Utbytesgrupps ID":111841
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Klacid",
         "Varunummer":106021,
         "Styrka":"250 mg",
@@ -64065,6 +64046,25 @@
         "NPL pack ID":19910401100163,
         "Ursprung":"Original",
         "Företag":"Viatris AB",
+        "Utbytesgrupps ID":111841
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Clarithromycin Aurobindo",
+        "Varunummer":493052,
+        "Styrka":"250 mg",
+        "Förpackningsstorleksgrupp":"T14",
+        "Substans":"Klaritromycin",
+        "Beredningsform":"Tablett",
+        "Storlek":14.0,
+        "Apotekens inköpspris":116.0,
+        "Försäljningspris":178.31,
+        "Inköpspris per minsta enhet":8.29,
+        "Försäljningspris per minsta enhet":12.74,
+        "NPL ID":20180322000026,
+        "NPL pack ID":20181109100069,
+        "Ursprung":"ParallelImport",
+        "Företag":"2care4 ApS",
         "Utbytesgrupps ID":111841
     },
     {
@@ -67850,25 +67850,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Quetiapin Medical Valley",
-        "Varunummer":459838,
-        "Styrka":"400 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Kvetiapin",
-        "Beredningsform":"Depottablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":1107.55,
-        "Försäljningspris":1196.49,
-        "Inköpspris per minsta enhet":11.08,
-        "Försäljningspris per minsta enhet":11.96,
-        "NPL ID":20170327000084,
-        "NPL pack ID":20170705100528,
-        "Ursprung":"Generics",
-        "Företag":"Medical Valley Invest AB",
-        "Utbytesgrupps ID":112053
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Quetiapin Krka",
         "Varunummer":586939,
         "Styrka":"400 mg",
@@ -67887,7 +67868,7 @@
         "Utbytesgrupps ID":112053
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Quetiapine Teva",
         "Varunummer":437672,
         "Styrka":"400 mg",
@@ -67903,6 +67884,25 @@
         "NPL pack ID":20170104100426,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":112053
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Quetiapin Medical Valley",
+        "Varunummer":459838,
+        "Styrka":"400 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Kvetiapin",
+        "Beredningsform":"Depottablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":1107.55,
+        "Försäljningspris":1196.49,
+        "Inköpspris per minsta enhet":11.08,
+        "Försäljningspris per minsta enhet":11.96,
+        "NPL ID":20170327000084,
+        "NPL pack ID":20170705100528,
+        "Ursprung":"Generics",
+        "Företag":"Medical Valley Invest AB",
         "Utbytesgrupps ID":112053
     },
     {
@@ -78926,25 +78926,6 @@
         "Utbytesgrupps ID":113802
     },
     {
-        "Status":"R1",
-        "Produktnamn":"Latuda",
-        "Varunummer":410432,
-        "Styrka":"37 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Lurasidon",
-        "Beredningsform":"Tablett",
-        "Storlek":98.0,
-        "Apotekens inköpspris":2490.0,
-        "Försäljningspris":2613.5,
-        "Inköpspris per minsta enhet":25.41,
-        "Försäljningspris per minsta enhet":26.67,
-        "NPL ID":20121003000089,
-        "NPL pack ID":20121023100226,
-        "Ursprung":"Original",
-        "Företag":"CNX Therapeutics Netherlands B.V.",
-        "Utbytesgrupps ID":113802
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Lurasidone Orifarm",
         "Varunummer":502395,
@@ -78961,6 +78942,25 @@
         "NPL pack ID":20230125100291,
         "Ursprung":"Generics",
         "Företag":"Orifarm Generics AB",
+        "Utbytesgrupps ID":113802
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Latuda",
+        "Varunummer":410432,
+        "Styrka":"37 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Lurasidon",
+        "Beredningsform":"Tablett",
+        "Storlek":98.0,
+        "Apotekens inköpspris":2490.0,
+        "Försäljningspris":2613.5,
+        "Inköpspris per minsta enhet":25.41,
+        "Försäljningspris per minsta enhet":26.67,
+        "NPL ID":20121003000089,
+        "NPL pack ID":20121023100226,
+        "Ursprung":"Original",
+        "Företag":"CNX Therapeutics Netherlands B.V.",
         "Utbytesgrupps ID":113802
     },
     {
@@ -79135,7 +79135,7 @@
         "Utbytesgrupps ID":113803
     },
     {
-        "Status":"R2",
+        "Status":"Nej",
         "Produktnamn":"Latuda",
         "Varunummer":53309,
         "Styrka":"74 mg",
