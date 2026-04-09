@@ -2281,25 +2281,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Alimemazin Orifarm",
-        "Varunummer":59348,
-        "Styrka":"40 mg\/ml",
-        "Förpackningsstorleksgrupp":"M25",
-        "Substans":"Alimemazin",
-        "Beredningsform":"Orala droppar",
-        "Storlek":25.0,
-        "Apotekens inköpspris":76.44,
-        "Försäljningspris":137.37,
-        "Inköpspris per minsta enhet":3.06,
-        "Försäljningspris per minsta enhet":5.49,
-        "NPL ID":20160927000027,
-        "NPL pack ID":20240725100010,
-        "Ursprung":"Generics",
-        "Företag":"Orifarm Generics AB",
-        "Utbytesgrupps ID":114111
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Alimemazin Evolan",
         "Varunummer":494030,
         "Styrka":"40 mg\/ml",
@@ -2315,6 +2296,25 @@
         "NPL pack ID":20240624100081,
         "Ursprung":"Generics",
         "Företag":"Evolan Pharma AB",
+        "Utbytesgrupps ID":114111
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Alimemazin Orifarm",
+        "Varunummer":59348,
+        "Styrka":"40 mg\/ml",
+        "Förpackningsstorleksgrupp":"M25",
+        "Substans":"Alimemazin",
+        "Beredningsform":"Orala droppar",
+        "Storlek":25.0,
+        "Apotekens inköpspris":76.44,
+        "Försäljningspris":137.37,
+        "Inköpspris per minsta enhet":3.06,
+        "Försäljningspris per minsta enhet":5.49,
+        "NPL ID":20160927000027,
+        "NPL pack ID":20240725100010,
+        "Ursprung":"Generics",
+        "Företag":"Orifarm Generics AB",
         "Utbytesgrupps ID":114111
     },
     {
@@ -15637,7 +15637,7 @@
         "Utbytesgrupps ID":112273
     },
     {
-        "Status":"R1",
+        "Status":"Nej",
         "Produktnamn":"LUMIGAN",
         "Varunummer":85838,
         "Styrka":"0,1 mg\/ml",
@@ -25348,7 +25348,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Asmoken",
-        "Varunummer":183314,
+        "Varunummer":596545,
         "Styrka":"1,5 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Cytisiniklin",
@@ -31257,6 +31257,25 @@
     {
         "Status":"PV",
         "Produktnamn":"Voltaren",
+        "Varunummer":32957,
+        "Styrka":"50 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Diklofenak",
+        "Beredningsform":"Suppositorium",
+        "Storlek":50.0,
+        "Apotekens inköpspris":336.09,
+        "Försäljningspris":405.74,
+        "Inköpspris per minsta enhet":6.72,
+        "Försäljningspris per minsta enhet":8.11,
+        "NPL ID":20220429000045,
+        "NPL pack ID":20221004100051,
+        "Ursprung":"ParallelImport",
+        "Företag":"Ebb Medical AB",
+        "Utbytesgrupps ID":112375
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Voltaren",
         "Varunummer":64918,
         "Styrka":"50 mg",
         "Förpackningsstorleksgrupp":"T20",
@@ -31274,7 +31293,7 @@
         "Utbytesgrupps ID":112375
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Voltaren",
         "Varunummer":64918,
         "Styrka":"50 mg",
@@ -31290,25 +31309,6 @@
         "NPL pack ID":20251027100028,
         "Ursprung":"ParallelImport",
         "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":112375
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Voltaren",
-        "Varunummer":32957,
-        "Styrka":"50 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Diklofenak",
-        "Beredningsform":"Suppositorium",
-        "Storlek":50.0,
-        "Apotekens inköpspris":336.09,
-        "Försäljningspris":405.74,
-        "Inköpspris per minsta enhet":6.72,
-        "Försäljningspris per minsta enhet":8.11,
-        "NPL ID":20220429000045,
-        "NPL pack ID":20221004100051,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
         "Utbytesgrupps ID":112375
     },
     {
@@ -45596,7 +45596,7 @@
         "NPL ID":19920410000064,
         "NPL pack ID":19930101100454,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45634,7 +45634,7 @@
         "NPL ID":19790831000024,
         "NPL pack ID":19880101100070,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45672,7 +45672,7 @@
         "NPL ID":19920410000064,
         "NPL pack ID":19920401100650,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45691,7 +45691,7 @@
         "NPL ID":19790831000024,
         "NPL pack ID":19801001100168,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45710,7 +45710,7 @@
         "NPL ID":19920410000064,
         "NPL pack ID":20060621100026,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45748,7 +45748,7 @@
         "NPL ID":19790831000024,
         "NPL pack ID":19801001100182,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45767,7 +45767,7 @@
         "NPL ID":19920410000064,
         "NPL pack ID":20031023103175,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45805,7 +45805,7 @@
         "NPL ID":19920410000064,
         "NPL pack ID":19920401100643,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45843,7 +45843,7 @@
         "NPL ID":19790831000024,
         "NPL pack ID":19801001100175,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45862,7 +45862,7 @@
         "NPL ID":19920410000064,
         "NPL pack ID":20031023103182,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45900,7 +45900,7 @@
         "NPL ID":19920410000064,
         "NPL pack ID":19920401100629,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45919,7 +45919,7 @@
         "NPL ID":19790831000024,
         "NPL pack ID":19801001100199,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111636
     },
     {
@@ -45957,7 +45957,7 @@
         "NPL ID":19920410000057,
         "NPL pack ID":19921007100013,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -45976,7 +45976,7 @@
         "NPL ID":19731214000071,
         "NPL pack ID":19880101100032,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -45995,7 +45995,7 @@
         "NPL ID":19920410000057,
         "NPL pack ID":19920401100612,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -46014,7 +46014,7 @@
         "NPL ID":19731214000071,
         "NPL pack ID":19730401100075,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -46071,7 +46071,7 @@
         "NPL ID":19920410000057,
         "NPL pack ID":20051124100132,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -46090,7 +46090,7 @@
         "NPL ID":19731214000071,
         "NPL pack ID":19730401100051,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -46128,7 +46128,7 @@
         "NPL ID":19920410000057,
         "NPL pack ID":19920401100605,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -46147,7 +46147,7 @@
         "NPL ID":19731214000071,
         "NPL pack ID":19730401100044,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -46204,7 +46204,7 @@
         "NPL ID":19920410000057,
         "NPL pack ID":19920401100599,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -46223,7 +46223,7 @@
         "NPL ID":19731214000071,
         "NPL pack ID":19730401100068,
         "Ursprung":"Generics",
-        "Företag":"Meda AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111640
     },
     {
@@ -65399,25 +65399,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Clopidogrel Zentiva",
-        "Varunummer":493112,
-        "Styrka":"75 mg",
-        "Förpackningsstorleksgrupp":"T22",
-        "Substans":"Klopidogrel",
-        "Beredningsform":"Tablett",
-        "Storlek":84.0,
-        "Apotekens inköpspris":59.0,
-        "Försäljningspris":118.2,
-        "Inköpspris per minsta enhet":0.7,
-        "Försäljningspris per minsta enhet":1.41,
-        "NPL ID":20080310000024,
-        "NPL pack ID":20080401100305,
-        "Ursprung":"Generics",
-        "Företag":"Zentiva Denmark ApS",
-        "Utbytesgrupps ID":111297
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Clopidogrel Accord",
         "Varunummer":476554,
         "Styrka":"75 mg",
@@ -65436,7 +65417,7 @@
         "Utbytesgrupps ID":111297
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Clopidogrel Zentiva",
         "Varunummer":129159,
         "Styrka":"75 mg",
@@ -65455,7 +65436,7 @@
         "Utbytesgrupps ID":111297
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Clopidogrel Zentiva",
         "Varunummer":138238,
         "Styrka":"75 mg",
@@ -65471,6 +65452,25 @@
         "NPL pack ID":20230309100116,
         "Ursprung":"ParallelDistribution",
         "Företag":"2care4 ApS",
+        "Utbytesgrupps ID":111297
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Clopidogrel Zentiva",
+        "Varunummer":493112,
+        "Styrka":"75 mg",
+        "Förpackningsstorleksgrupp":"T22",
+        "Substans":"Klopidogrel",
+        "Beredningsform":"Tablett",
+        "Storlek":84.0,
+        "Apotekens inköpspris":59.0,
+        "Försäljningspris":118.2,
+        "Inköpspris per minsta enhet":0.7,
+        "Försäljningspris per minsta enhet":1.41,
+        "NPL ID":20080310000024,
+        "NPL pack ID":20080401100305,
+        "Ursprung":"Generics",
+        "Företag":"Zentiva Denmark ApS",
         "Utbytesgrupps ID":111297
     },
     {
@@ -77008,25 +77008,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Loperamid Viatris",
-        "Varunummer":399857,
-        "Styrka":"2 mg",
-        "Förpackningsstorleksgrupp":"T28",
-        "Substans":"Loperamid",
-        "Beredningsform":"Tablett\/kapsel",
-        "Storlek":250.0,
-        "Apotekens inköpspris":80.18,
-        "Försäljningspris":141.24,
-        "Inköpspris per minsta enhet":0.32,
-        "Försäljningspris per minsta enhet":0.56,
-        "NPL ID":19941229000021,
-        "NPL pack ID":19960401100298,
-        "Ursprung":"Generics",
-        "Företag":"Viatris AB",
-        "Utbytesgrupps ID":111288
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Loperamide Medical Valley",
         "Varunummer":485648,
         "Styrka":"2 mg",
@@ -77045,7 +77026,7 @@
         "Utbytesgrupps ID":111288
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Imolopera",
         "Varunummer":87328,
         "Styrka":"2 mg",
@@ -77064,7 +77045,7 @@
         "Utbytesgrupps ID":111288
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Imolopera",
         "Varunummer":422651,
         "Styrka":"2 mg",
@@ -77080,6 +77061,25 @@
         "NPL pack ID":20170130100056,
         "Ursprung":"Generics",
         "Företag":"Orifarm Generics AB",
+        "Utbytesgrupps ID":111288
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Loperamid Viatris",
+        "Varunummer":399857,
+        "Styrka":"2 mg",
+        "Förpackningsstorleksgrupp":"T28",
+        "Substans":"Loperamid",
+        "Beredningsform":"Tablett\/kapsel",
+        "Storlek":250.0,
+        "Apotekens inköpspris":80.18,
+        "Försäljningspris":141.24,
+        "Inköpspris per minsta enhet":0.32,
+        "Försäljningspris per minsta enhet":0.56,
+        "NPL ID":19941229000021,
+        "NPL pack ID":19960401100298,
+        "Ursprung":"Generics",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111288
     },
     {
@@ -88936,25 +88936,6 @@
         "NPL pack ID":20110902100105,
         "Ursprung":"Generics",
         "Företag":"Galenica AB",
-        "Utbytesgrupps ID":112774
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Elocon®",
-        "Varunummer":37531,
-        "Styrka":"1 mg\/g",
-        "Förpackningsstorleksgrupp":"M30",
-        "Substans":"Mometasonfuroat",
-        "Beredningsform":"Kutan lösning",
-        "Storlek":30.0,
-        "Apotekens inköpspris":46.5,
-        "Försäljningspris":104.38,
-        "Inköpspris per minsta enhet":1.55,
-        "Försäljningspris per minsta enhet":3.48,
-        "NPL ID":19910222000031,
-        "NPL pack ID":19910401100132,
-        "Ursprung":"Original",
-        "Företag":"Organon Sweden AB",
         "Utbytesgrupps ID":112774
     },
     {
@@ -120879,25 +120860,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Rivastigmin STADA Arzneimittel",
-        "Varunummer":152226,
-        "Styrka":"4,6 mg\/24 timmar",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Rivastigmin",
-        "Beredningsform":"Depotplåster",
-        "Storlek":90.0,
-        "Apotekens inköpspris":620.0,
-        "Försäljningspris":696.75,
-        "Inköpspris per minsta enhet":6.89,
-        "Försäljningspris per minsta enhet":7.74,
-        "NPL ID":20210113000062,
-        "NPL pack ID":20210329100280,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":111913
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Rivastor",
         "Varunummer":467222,
         "Styrka":"4,6 mg\/24 timmar",
@@ -120932,6 +120894,25 @@
         "NPL pack ID":20170607100107,
         "Ursprung":"ParallelDistribution",
         "Företag":"Ebb Medical AB",
+        "Utbytesgrupps ID":111913
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Rivastigmin STADA Arzneimittel",
+        "Varunummer":152226,
+        "Styrka":"4,6 mg\/24 timmar",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Rivastigmin",
+        "Beredningsform":"Depotplåster",
+        "Storlek":90.0,
+        "Apotekens inköpspris":620.0,
+        "Försäljningspris":696.75,
+        "Inköpspris per minsta enhet":6.89,
+        "Försäljningspris per minsta enhet":7.74,
+        "NPL ID":20210113000062,
+        "NPL pack ID":20210329100280,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":111913
     },
     {
