@@ -43,6 +43,10 @@ jobs:
         run: |
           python scripts/search2.py
 
+      - name: Build aggregated product history
+        run: |
+          python scripts/build_product_history.py
+
       - name: Remove Excel temp files
         run: |
           rm -f data/~$*.xlsx
@@ -53,19 +57,24 @@ jobs:
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git fetch origin main
           git pull --rebase --autostash origin main
-          if [ -n "$(git status --porcelain)" ]; then
-            git add data/*.json data/search-index.json data/months.json data/substances.json
-            git commit -m "Automated TLV data update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-            for i in 1 2 3; do
-              git pull --rebase --autostash origin main
-              if git push; then
-                exit 0
-              fi
-              echo "Push failed, retrying ($i/3)..."
-              sleep 2
-            done
-            echo "Push failed after retries"
-            exit 1
-          else
-            echo "No changes to commit."
+
+          # Stage only the artifacts produced by this workflow.
+          git add data/*.json data/*.xlsx data/search-index.json data/months.json data/substances.json
+
+          # Avoid failing when there are unrelated untracked files.
+          if git diff --cached --quiet; then
+            echo "No staged data changes to commit."
+            exit 0
           fi
+
+          git commit -m "Automated TLV data update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin main
+            if git push; then
+              exit 0
+            fi
+            echo "Push failed, retrying ($i/3)..."
+            sleep 2
+          done
+          echo "Push failed after retries"
+          exit 1

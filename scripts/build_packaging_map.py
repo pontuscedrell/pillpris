@@ -8,12 +8,15 @@ import pandas as pd
 import json
 from pathlib import Path
 
-def build_packaging_map():
-    """Extract packaging data from MEDPrice.xlsx"""
+def build_packaging_map(output_file: Path | None = Path("data/packaging-map.json")):
+    """Extract packaging data from MEDPrice.xlsx.
+
+    If output_file is None, the map is returned in-memory only.
+    """
     medprice_file = Path("data/MEDPrice.xlsx")
     
     if not medprice_file.exists():
-        print(f"❌ MEDPrice.xlsx not found at {medprice_file.absolute()}")
+        print(f"ERROR: MEDPrice.xlsx not found at {medprice_file.absolute()}")
         return {}
     
     try:
@@ -37,18 +40,18 @@ def build_packaging_map():
                     packaging_type = forpackning_str.split(',')[0].strip()
                     packaging_map[vnr_str] = packaging_type
         
-        print(f"✅ Built packaging map with {len(packaging_map)} entries")
+        print(f"OK: Built packaging map with {len(packaging_map)} entries")
         
-        # Save to JSON
-        output_file = Path("data/packaging-map.json")
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(packaging_map, f, ensure_ascii=False, indent=2)
-        
-        print(f"✅ Saved to {output_file}")
+        # Save to JSON when requested.
+        if output_file is not None:
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(packaging_map, f, ensure_ascii=False, indent=2)
+            print(f"OK: Saved to {output_file}")
+
         return packaging_map
         
     except Exception as e:
-        print(f"❌ Error building packaging map: {e}")
+        print(f"ERROR: Error building packaging map: {e}")
         return {}
 
 if __name__ == "__main__":

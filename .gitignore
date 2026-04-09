@@ -1,3 +1,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Python tooling and local env
+.venv/
+.pytest_cache/
+
+# Build/temporary artifacts
+tmp/
+data/~$*.xlsx

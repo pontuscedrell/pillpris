@@ -1,17 +1,7 @@
-import pandas as pd
 import json
 import re
 import glob
 import os
-
-def extract_packaging_type(val):
-    """Return the text before the first comma from Förpackning, or None if empty."""
-    if val is None:
-        return None
-    txt = str(val).strip()
-    if not txt or txt.lower() == 'nan':
-        return None
-    return txt.split(',')[0].strip() or None
 
 def get_natural_size(code):
     code = str(code).strip().upper()

@@ -1,6 +1,5 @@
 let searchIndex = []; // Ändra från tree = {} till searchIndex = []
 let availableMonths = [];
-let packagingMap = {}; // New: Global packaging map from MEDPrice.xlsx
 let selectedMonth = "";
 let systemMonthCode = null;
 let currentSearch = null;
@@ -10,6 +9,11 @@ let lastPVPrice = 0;
 let selectedRowId = null;
 let chartPriceType = "pv"; // "pv" or "cheapest"
 let altPackageView = "cards"; // "cards" or "table"
+let historyChartRenderSeq = 0;
+let historyData = null;
+let historyGroupMap = new Map();
+let historySubStrengthMap = new Map();
+let currentViewModel = null;
 
 // Constants
 const SEARCH_RESULTS_LIMIT = 20;
@@ -121,6 +125,208 @@ function getItemStatus(item) {
     return "";
 }
 
+function normalizeHistoryKey(value) {
+    return String(value ?? '').trim().toLowerCase();
+}
+
+function makeHistoryGroupKey(id, sizeId) {
+    return `${String(id ?? '')}|${String(sizeId ?? '')}`;
+}
+
+function makeHistorySubStrengthKey(sub, strength) {
+    return `${normalizeHistoryKey(sub)}|${normalizeHistoryKey(strength)}`;
+}
+
+function getStatusPriority(item) {
+    const status = getItemStatus(item).trim().toUpperCase();
+    if (status === "PV") return 1;
+    if (status.startsWith("R")) {
+        const reserveRank = parseInt(status.substring(1), 10);
+        return Number.isFinite(reserveRank) ? reserveRank + 1 : 100;
+    }
+    return 100;
+}
+
+function buildHistoryIndexes() {
+    historyGroupMap = new Map();
+    historySubStrengthMap = new Map();
+
+    const groups = Array.isArray(historyData?.groups) ? historyData.groups : [];
+    groups.forEach(group => {
+        const groupKey = makeHistoryGroupKey(group.id, group.size_id);
+        historyGroupMap.set(groupKey, group);
+
+        const subKey = makeHistorySubStrengthKey(group.sub, group.str);
+        if (!historySubStrengthMap.has(subKey)) {
+            historySubStrengthMap.set(subKey, []);
+        }
+        historySubStrengthMap.get(subKey).push(group);
+
+        group._monthCache = new Map();
+    });
+
+    for (const groupsForSub of historySubStrengthMap.values()) {
+        groupsForSub.sort((a, b) => {
+            const sizeA = toNumber(a.size) ?? 0;
+            const sizeB = toNumber(b.size) ?? 0;
+            if (sizeA !== sizeB) return sizeA - sizeB;
+            return String(a.size_id).localeCompare(String(b.size_id), 'sv');
+        });
+    }
+}
+
+function getHistoryGroup(searchItem) {
+    if (!searchItem) return null;
+    return historyGroupMap.get(makeHistoryGroupKey(searchItem.id, searchItem.size_id)) || null;
+}
+
+function getHistorySubGroups(group) {
+    if (!group) return [];
+    return historySubStrengthMap.get(makeHistorySubStrengthKey(group.sub, group.str)) || [];
+}
+
+function getGroupMonthRows(group, monthCode) {
+    if (!group) return [];
+    const monthKey = String(monthCode);
+
+    if (group._monthCache && group._monthCache.has(monthKey)) {
+        return group._monthCache.get(monthKey);
+    }
+
+    const rows = [];
+    for (const brand of group.brands || []) {
+        const monthRecord = brand.history?.[monthKey];
+        if (!monthRecord) continue;
+
+        const row = {
+            Produktnamn: brand.name,
+            Varunummer: toNumber(brand.vnr),
+            Vnr: toNumber(brand.vnr),
+            Styrka: group.str,
+            Substans: group.sub,
+            Beredningsform: group.form,
+            Läkemedelsform: group.form,
+            Storlek: group.size,
+            Företag: brand.company,
+            Ursprung: brand.origin,
+            Status: monthRecord.status,
+            Rang: monthRecord.rank ?? null,
+            "Försäljningspris": monthRecord.price,
+            "Utbytesgrupps ID": toNumber(group.id),
+            "Förpackningsstorleksgrupp": group.size_id,
+        };
+
+        if (brand.packaging) {
+            row.Förpackning = brand.packaging;
+        }
+
+        rows.push(row);
+    }
+
+    rows.sort((a, b) => {
+        const priorityDiff = getStatusPriority(a) - getStatusPriority(b);
+        if (priorityDiff !== 0) return priorityDiff;
+        const priceDiff = toNumber(a["Försäljningspris"]) - toNumber(b["Försäljningspris"]);
+        if (priceDiff !== 0) return priceDiff;
+        return String(a.Produktnamn).localeCompare(String(b.Produktnamn), 'sv');
+    });
+
+    if (group._monthCache) {
+        group._monthCache.set(monthKey, rows);
+    }
+
+    return rows;
+}
+
+function getMonthPvRow(group, monthCode) {
+    const rows = getGroupMonthRows(group, monthCode);
+    return rows.find(item => getItemStatus(item).trim().toUpperCase() === "PV") || rows[0] || null;
+}
+
+function getMonthCheapestRow(group, monthCode) {
+    const rows = getGroupMonthRows(group, monthCode);
+    if (rows.length === 0) return null;
+    return rows.reduce((lowest, item) => {
+        if (!lowest) return item;
+        return toNumber(item["Försäljningspris"]) < toNumber(lowest["Försäljningspris"]) ? item : lowest;
+    }, null);
+}
+
+function calculatePriceStatsForGroup(group, months = availableMonths.slice(0, 12)) {
+    if (!group) return null;
+
+    const prices = [];
+    for (const month of months) {
+        const match = getMonthPvRow(group, month);
+        const price = toNumber(match?.["Försäljningspris"]);
+        if (Number.isFinite(price)) {
+            prices.push(price);
+        }
+    }
+
+    if (prices.length === 0) return null;
+
+    return {
+        avgPrice: prices.reduce((a, b) => a + b, 0) / prices.length,
+        minPrice: Math.min(...prices),
+        maxPrice: Math.max(...prices),
+        count: prices.length
+    };
+}
+
+function getMonthPvPrice(group, monthCode) {
+    if (!group || !monthCode) return null;
+    const monthRow = getMonthPvRow(group, monthCode);
+    const price = toNumber(monthRow?.["Försäljningspris"]);
+    return Number.isFinite(price) ? price : null;
+}
+
+function buildProductViewModel(searchItem, monthCode = selectedMonth) {
+    const group = getHistoryGroup(searchItem);
+    if (!group) return null;
+
+    const monthRows = getGroupMonthRows(group, monthCode);
+    if (monthRows.length === 0) {
+        return {
+            searchItem,
+            group,
+            monthCode,
+            monthRows: []
+        };
+    }
+
+    const pvProduct = monthRows.find(i => getItemStatus(i).trim().toUpperCase() === "PV") || monthRows[0];
+    const pvPrice = toNumber(pvProduct["Försäljningspris"]);
+    const absoluteMinPrice = Math.min(...monthRows.map(i => toNumber(i["Försäljningspris"])).filter(Number.isFinite));
+    const savings = Number.isFinite(pvPrice) && Number.isFinite(absoluteMinPrice) ? pvPrice - absoluteMinPrice : 0;
+    const cheaperProduct = savings >= PRICE_SAVINGS_MIN
+        ? monthRows.find(i => toNumber(i["Försäljningspris"]) === absoluteMinPrice) || null
+        : null;
+
+    const stats = calculatePriceStatsForGroup(group);
+    const currentIndex = availableMonths.indexOf(parseInt(monthCode, 10));
+    const prevMonthCode = currentIndex >= 0 ? availableMonths[currentIndex + 1] : null;
+    const nextMonthCode = currentIndex >= 0 ? availableMonths[currentIndex - 1] : null;
+
+    return {
+        searchItem,
+        group,
+        monthCode,
+        monthRows,
+        pvProduct,
+        pvPrice,
+        absoluteMinPrice,
+        savings,
+        cheaperProduct,
+        stats,
+        prevMonthCode,
+        nextMonthCode,
+        prevPrice: getMonthPvPrice(group, prevMonthCode),
+        nextPrice: getMonthPvPrice(group, nextMonthCode),
+        subGroups: getHistorySubGroups(group)
+    };
+}
+
 /**
  * Initializes the application by loading data, caching DOM elements,
  * and setting up the initial UI state.
@@ -137,9 +343,10 @@ async function init() {
         const res = await fetch(`data/search-index.json?${cacheBust}`);
         searchIndex = await res.json();
 
-        // Load packaging map from MEDPrice.xlsx
-        const packRes = await fetch(`data/packaging-map.json?${cacheBust}`);
-        packagingMap = await packRes.json();
+        // Load aggregated product history for instant month switching
+        const historyRes = await fetch(`data/product-history.json?${cacheBust}`);
+        historyData = await historyRes.json();
+        buildHistoryIndexes();
 
         // Ladda månader (antingen från separat fil eller från indexet)
         const resMonths = await fetch(`data/months.json?${cacheBust}`);
@@ -447,6 +654,7 @@ function highlightDropdownItem(items, index) {
  */
 async function fetchLatestPV(searchItem, skipPushState = false) {
     currentSearch = searchItem;
+    currentViewModel = null;
     
     // Update URL with VNR for shareability and history support (unless we're responding to popstate)
     const vnr = searchItem.vnr;
@@ -463,40 +671,21 @@ async function fetchLatestPV(searchItem, skipPushState = false) {
     replaceContent(resultsDiv, cloneTemplate('template-loading'));
 
     try {
-        const res = await fetch(`data/${selectedMonth}.json`);
-        const data = await res.json();
-        
-        let matches = data.filter(i => 
-            String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
-            String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id)
-        );
-
-        if (matches.length === 0) {
+        const viewModel = buildProductViewModel(searchItem, selectedMonth);
+        if (!viewModel || !viewModel.group) {
             replaceContent(resultsDiv, cloneTemplate('template-no-results'));
             return;
         }
 
-        lastMatches = matches.sort((a, b) => {
-            const getPriority = (s) => {
-                const status = getItemStatus(s).trim().toUpperCase();
-                if (status === "PV") return 1;
-                if (status.startsWith("R")) return parseInt(status.substring(1)) + 1;
-                return 100;
-            };
-            return getPriority(a.Status) - getPriority(b.Status);
-        });
+        if (!Array.isArray(viewModel.monthRows) || viewModel.monthRows.length === 0) {
+            replaceContent(resultsDiv, cloneTemplate('template-no-results'));
+            return;
+        }
 
-        // Hitta PV och det absoluta lägsta priset
-        const pvProduct = lastMatches.find(i => getItemStatus(i).trim().toUpperCase() === "PV") || lastMatches[0];
-        lastPVPrice = pvProduct["Försäljningspris"];
-        const absoluteMinPrice = Math.min(...matches.map(i => i["Försäljningspris"]));
+        currentViewModel = viewModel;
 
-        // Beräkna sparande och hitta den billigaste produkten
-        const savings = lastPVPrice - absoluteMinPrice;
-        // Vi visar bara alerten om man sparar minst PRICE_SAVINGS_MIN kr (för att slippa avrundningsdiffar)
-        const cheaperProduct = savings >= PRICE_SAVINGS_MIN ? lastMatches.find(i => i["Försäljningspris"] === absoluteMinPrice) : null;
-
-        const stats = await getPriceStatistics(searchItem);
+        lastMatches = viewModel.monthRows;
+        lastPVPrice = viewModel.pvPrice;
 
         replaceContent(resultsDiv, cloneTemplate('template-results-container'));
 
@@ -510,17 +699,17 @@ async function fetchLatestPV(searchItem, skipPushState = false) {
         showMonthPicker();
 
         // Skicka med spar-data till renderaren
-        await renderPriceCard(pvProduct, searchItem.sub, searchItem.str, searchItem.form, stats, cheaperProduct, savings, data);
+        await renderPriceCard(viewModel);
         
         // Create and inject month warning banner after price card is rendered
         createMonthBanner(resultsDiv);
         
         renderTableOnly(); 
-        await renderHistoryChart(searchItem);
-        renderAlternativePackageSizes(pvProduct, data);
+        await renderHistoryChart(viewModel);
+        renderAlternativePackageSizes(viewModel);
 
         // Visa info-boxen endast om PV inte är billigast (efter renderTableOnly som skapar den)
-        if (!cheaperProduct) {
+        if (!viewModel.cheaperProduct) {
             const infoBox = document.querySelector('.tlv-info-box');
             if (infoBox) {
                 infoBox.classList.add('hidden');
@@ -535,12 +724,6 @@ async function fetchLatestPV(searchItem, skipPushState = false) {
     }
 }
 
-function toggleTableExpansion() {
-    isExpanded = !isExpanded;
-
-    renderTableOnly();
-}
-
 /**
  * Calculates price statistics across available months for trend analysis.
  * @async
@@ -548,71 +731,29 @@ function toggleTableExpansion() {
  * @returns {Promise<Object|null>} Statistics object with avgPrice, minPrice, maxPrice, count
  */
 async function getPriceStatistics(searchItem) {
-    let prices = [];
-    // Vi kollar de 12 senaste månaderna (eller alla tillgängliga)
-    for (const month of availableMonths.slice(0, 12)) {
-        try {
-            const res = await fetch(`data/${month}.json`);
-            const data = await res.json();
-            
-            const match = data.find(i => 
-                String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
-                String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id) &&
-                getItemStatus(i).trim().toUpperCase() === "PV"
-            );
-            
-            if (match) prices.push(match["Försäljningspris"]);
-        } catch (e) {}
-    }
-
-    if (prices.length === 0) return null;
-
-    return {
-        avgPrice: prices.reduce((a, b) => a + b, 0) / prices.length,
-        minPrice: Math.min(...prices),
-        maxPrice: Math.max(...prices),
-        count: prices.length
-    };
+    const group = getHistoryGroup(searchItem);
+    return calculatePriceStatsForGroup(group);
 }
 
 /**
  * Renders the price card showing current price, trends, and recommendations.
  * @async
- * @param {Object} pvProduct - PV product data
- * @param {string} sub - Substance name
- * @param {string} str - Strength
- * @param {string} form - Medicine form
- * @param {Object} stats - Price statistics from getPriceStatistics()
- * @param {Object|null} cheaperProduct - Alternative cheaper product if exists
- * @param {number} savings - Amount saved with cheaper product
- * @param {Array} allData - All products for package size comparison
+ * @param {Object} viewModel - Product view model for current month
  */
-async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct, savings, allData) {
+async function renderPriceCard(viewModel) {
+    const { pvProduct, searchItem, stats, cheaperProduct, savings, monthRows: currentMonthRows } = viewModel;
+    const sub = searchItem.sub;
+    const str = searchItem.str;
+    const form = searchItem.form;
     const area = document.getElementById('price-card-area');
     if (!pvProduct || !area) return;
 
     const formatPrice = (p) => new Intl.NumberFormat("sv-SE", { style: "currency", currency: "SEK" }).format(p);
 
-    const currentIndex = availableMonths.indexOf(parseInt(selectedMonth));
-    const prevMonthCode = availableMonths[currentIndex + 1]; 
-    const nextMonthCode = availableMonths[currentIndex - 1]; 
-
-    async function fetchSpecificPrice(monthCode) {
-        if (!monthCode) return null;
-        try {
-            const res = await fetch(`data/${monthCode}.json`);
-            const data = await res.json();
-            const match = data.find(i => 
-                String(i["Utbytesgrupps ID"]) === String(currentSearch.id) &&
-                String(i["Förpackningsstorleksgrupp"]) === String(currentSearch.size_id) &&
-                getItemStatus(i).trim().toUpperCase() === "PV"
-            );
-            return match ? match["Försäljningspris"] : null;
-        } catch (e) { return null; }
-    }
-
-    const prevPrice = await fetchSpecificPrice(prevMonthCode);
-    const nextPrice = await fetchSpecificPrice(nextMonthCode);
+    const prevMonthCode = viewModel.prevMonthCode;
+    const nextMonthCode = viewModel.nextMonthCode;
+    const prevPrice = viewModel.prevPrice;
+    const nextPrice = viewModel.nextPrice;
     const rec = getPriceRecommendation(pvProduct["Försäljningspris"], stats, nextPrice);
 
     const createStatBlock = (price, label, currentPrice, monthCode, isFuture) => {
@@ -752,12 +893,12 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
 
     const savingsSlot = area.querySelector('.price-card-savings-slot');
     
-    // Check for better package size deals - search in all data for same substance/strength PV variants
+    // Check for better package size deals - search in the current month's rows for same substance/strength PV variants
     let betterSizeDeal = null;
     let cheaperProductDeal = null;
     
-    if (allData) {
-        betterSizeDeal = findBetterPackageSize(pvProduct, allData);
+    if (currentMonthRows) {
+        betterSizeDeal = findBetterPackageSize(pvProduct, currentMonthRows);
     }
     
     if (cheaperProduct && savings >= PRICE_SAVINGS_MIN) {
@@ -817,8 +958,8 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
             button.style.fontWeight = '900';
             button.style.textDecoration = 'none';
             button.addEventListener('click', function() {
-                // Find the product with this size in allData
-                const alternativeProduct = allData.find(item => 
+                // Find the product with this size in the current month rows
+                const alternativeProduct = currentMonthRows.find(item => 
                     item.Substans === pvProduct.Substans &&
                     item.Styrka === pvProduct.Styrka &&
                     item.Storlek === betterSizeDeal.targetSize &&
@@ -856,11 +997,7 @@ async function renderPriceCard(pvProduct, sub, str, form, stats, cheaperProduct,
     }
 
     const packagingValue = (() => {
-        const vnr = pvProduct.Varunummer ?? pvProduct.Vnr;
-        return pvProduct.Förpackning
-            || packagingMap[vnr]
-            || packagingMap[String(vnr)]
-            || '—';
+        return pvProduct.Förpackning || '—';
     })();
 
     const packSizeEl = area.querySelector('[data-field="pack-size"]');
@@ -983,10 +1120,7 @@ function updateTableRows(data) {
         }
 
         if (isOpen) {
-            const vnr = item.Varunummer ?? item.Vnr;
             const forpackning = item["Förpackning"]
-                || packagingMap[vnr]
-                || packagingMap[String(vnr)]
                 || '—';
 
             const detailsFragment = cloneTemplate('template-row-details');
@@ -1201,9 +1335,10 @@ function formatSizeDisplay(size) {
  * Renders price history chart showing trends across available months.
  * Supports both PV and cheapest price views with configurable date ranges.
  * @async
- * @param {Object} searchItem - Medicine search item to chart
+ * @param {Object} viewModel - Product view model
  */
-async function renderHistoryChart(searchItem) {
+async function renderHistoryChart(viewModel) {
+    const renderSeq = ++historyChartRenderSeq;
     const canvas = document.getElementById('priceChart');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -1225,6 +1360,9 @@ async function renderHistoryChart(searchItem) {
     }
     window.myChart = null;
 
+    const group = viewModel?.group;
+    if (!group) return;
+
     let filteredMonths = [...availableMonths];
     if (rangeVal !== "all") {
         const limit = parseInt(rangeVal);
@@ -1240,53 +1378,33 @@ async function renderHistoryChart(searchItem) {
 
     const chronologicalMonths = filteredMonths.reverse();
     let historyPoints = [];
-    const stats = await getPriceStatistics(searchItem);
+    const stats = viewModel.stats || calculatePriceStatsForGroup(group);
     
     for (const month of chronologicalMonths) {
-        try {
-            const res = await fetch(`data/${month}.json`);
-            const data = await res.json();
-            
-            let match;
-            if (chartPriceType === "cheapest") {
-                // Find cheapest price for this exchange group and size
-                const allMatches = data.filter(i => 
-                    String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
-                    String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id)
-                );
-                if (allMatches.length > 0) {
-                    match = allMatches.reduce((min, curr) => 
-                        curr["Försäljningspris"] < min["Försäljningspris"] ? curr : min
-                    );
-                }
-            } else {
-                // Find PV (Periodens vara)
-                match = data.find(i => 
-                    String(i["Utbytesgrupps ID"]) === String(searchItem.id) &&
-                    String(i["Förpackningsstorleksgrupp"]) === String(searchItem.size_id) &&
-                    getItemStatus(i).trim().toUpperCase() === "PV"
-                );
-            }
-            
-            if (match) {
-                const price = match["Försäljningspris"];
-                const diffFromAvg = stats ? ((price - stats.avgPrice) / stats.avgPrice) * 100 : 0;
-                historyPoints.push({
-                    x: formatMedicineDate(month),
-                    y: price,
-                    company: match.Företag,
-                    diff: diffFromAvg.toFixed(1),
-                    monthCode: month
-                });
-            }
-        } catch (e) {}
+        const match = chartPriceType === "cheapest"
+            ? getMonthCheapestRow(group, month)
+            : getMonthPvRow(group, month);
+
+        if (!match) continue;
+
+        const price = match["Försäljningspris"];
+        const diffFromAvg = stats ? ((price - stats.avgPrice) / stats.avgPrice) * 100 : 0;
+        historyPoints.push({
+            x: formatMedicineDate(month),
+            y: price,
+            company: match.Företag,
+            diff: diffFromAvg.toFixed(1),
+            monthCode: month
+        });
     }
 
     if (historyPoints.length === 0) {
+        if (renderSeq !== historyChartRenderSeq) return;
         container.style.display = "none";
         return;
     }
 
+    if (renderSeq !== historyChartRenderSeq) return;
     container.style.display = "block";
 
     // --- NY LOGIK FÖR ATT MOTVERKA DRAMATISK GRAF ---
@@ -1305,6 +1423,16 @@ async function renderHistoryChart(searchItem) {
         const paddingNeeded = (minSpan - priceDiff) / 2;
         yMin = Math.max(0, minPrice - paddingNeeded); // Gå inte under 0 kr
         yMax = maxPrice + paddingNeeded;
+    }
+
+    // A later render may have completed while this async render was fetching data.
+    // Re-check and clear any chart on this canvas right before creating a new one.
+    if (renderSeq !== historyChartRenderSeq) return;
+    const latestChart = typeof Chart.getChart === 'function' ? Chart.getChart(canvas) : null;
+    if (latestChart) {
+        latestChart.destroy();
+    } else if (window.myChart && typeof window.myChart.destroy === 'function') {
+        window.myChart.destroy();
     }
 
     window.myChart = new Chart(ctx, {
@@ -1373,7 +1501,6 @@ async function renderHistoryChart(searchItem) {
                     if (point && point.monthCode) {
                         updateMonth(point.monthCode);
                         window.scrollTo(0, 0);
-                        fetchLatestPV(currentSearch);
                     }
                 }
             }
@@ -1442,34 +1569,27 @@ function renderPriceStabilityInsight(allPrices, minPrice, maxPrice, priceDiff) {
     chartContainer.insertAdjacentHTML('beforeend', insightHtml);
 }
 
-function renderAlternativePackageSizes(currentProduct, allMonthData) {
+function renderAlternativePackageSizes(viewModel) {
     const sectionContainer = document.getElementById('alt-package-sizes-container');
     if (!sectionContainer) return;
 
     const existingSection = document.getElementById('alt-package-sizes');
     if (existingSection) existingSection.remove();
 
-    if (!currentProduct || !Array.isArray(allMonthData)) return;
+    const currentProduct = viewModel?.pvProduct;
+    const monthCode = viewModel?.monthCode;
+    if (!currentProduct || !monthCode) return;
 
-    const normalize = (value) => String(value ?? '').trim().toLowerCase();
+    const currentGroup = viewModel.group;
+    if (!currentGroup) return;
+
     const currentSizeGroup = String(currentProduct["Förpackningsstorleksgrupp"] ?? '');
-
-    const relatedItems = allMonthData.filter(item =>
-        normalize(item.Substans) === normalize(currentProduct.Substans) &&
-        normalize(item.Styrka) === normalize(currentProduct.Styrka)
-    );
-
-    if (relatedItems.length === 0) return;
-
-    const groupedBySizeGroup = new Map();
-    relatedItems.forEach(item => {
-        const key = String(item["Förpackningsstorleksgrupp"] ?? item.Storlek ?? item.Varunummer ?? item.Vnr);
-        if (!groupedBySizeGroup.has(key)) groupedBySizeGroup.set(key, []);
-        groupedBySizeGroup.get(key).push(item);
-    });
-
     const alternatives = [];
-    groupedBySizeGroup.forEach(groupItems => {
+
+    for (const group of (viewModel.subGroups || [])) {
+        const groupItems = getGroupMonthRows(group, monthCode);
+        if (groupItems.length === 0) continue;
+
         const pvItem = groupItems.find(entry => getItemStatus(entry).trim().toUpperCase() === 'PV');
         const fallbackCheapest = groupItems.reduce((lowest, entry) => {
             if (!lowest) return entry;
@@ -1477,7 +1597,7 @@ function renderAlternativePackageSizes(currentProduct, allMonthData) {
         }, null);
         const representative = pvItem || fallbackCheapest;
         if (representative) alternatives.push(representative);
-    });
+    }
 
     const hasOtherSizes = alternatives.some(item =>
         String(item["Förpackningsstorleksgrupp"] ?? '') !== currentSizeGroup
