@@ -1360,7 +1360,12 @@ async function renderHistoryChart(viewModel) {
     }
     window.myChart = null;
 
-    const group = viewModel?.group;
+    const resolvedViewModel = viewModel?.group
+        ? viewModel
+        : (currentViewModel?.group
+            ? currentViewModel
+            : (currentSearch ? buildProductViewModel(currentSearch, selectedMonth) : null));
+    const group = resolvedViewModel?.group;
     if (!group) return;
 
     let filteredMonths = [...availableMonths];
@@ -1378,7 +1383,7 @@ async function renderHistoryChart(viewModel) {
 
     const chronologicalMonths = filteredMonths.reverse();
     let historyPoints = [];
-    const stats = viewModel.stats || calculatePriceStatsForGroup(group);
+    const stats = resolvedViewModel.stats || calculatePriceStatsForGroup(group);
     
     for (const month of chronologicalMonths) {
         const match = chartPriceType === "cheapest"
@@ -1482,6 +1487,14 @@ async function renderHistoryChart(viewModel) {
                 tooltip: {
                     padding: 12,
                     callbacks: {
+                        title: function(context) {
+                            if (!context || context.length === 0) return '';
+                            const point = historyPoints[context[0].dataIndex];
+                            if (!point?.monthCode) return context[0].label;
+                            const monthCode = String(point.monthCode);
+                            if (monthCode.length !== 4) return formatMedicineDate(point.monthCode);
+                            return `${formatMedicineDate(point.monthCode)} 20${monthCode.substring(0, 2)}`;
+                        },
                         label: function(context) {
                             const point = historyPoints[context.dataIndex];
                             return [

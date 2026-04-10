@@ -959,10 +959,10 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     box-sizing: border-box !important;
 }
 
-.reserves-header { padding: 16px 20px; background: #f8fafc; border-bottom: 1px solid #e2e8f0; font-weight: 700; color: #334155; }
+.reserves-header { padding: 16px 20px; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); font-weight: 700; color: var(--text-primary); }
 .reserves-table { width: 100%; border-collapse: collapse; }
-.reserves-table th { text-align: left; padding: 12px 16px; background: #ffffff; color: #64748b; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; border-bottom: 1px solid #f1f5f9; }
-.reserves-table td { padding: 14px 16px; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; }
+.reserves-table th { text-align: left; padding: 12px 16px; background: var(--bg-secondary); color: var(--text-secondary); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; border-bottom: 1px solid var(--border-color); }
+.reserves-table td { padding: 14px 16px; border-bottom: 1px solid var(--border-color); font-size: 0.9rem; }
 
 /* Status & Row Styling */
 .status-badge { padding: 4px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; }
@@ -1126,11 +1126,20 @@ body.dark-mode .cheapest-row { background-color: var(--card-bg) !important; }
     max-width: 400px; /* Håller texten centrerad och läsbar */
 }
 /* --- Expansion Button --- */
-.expansion-btn {
+.expansion-btn { 
     background: none; border: none; color: #2563eb; padding: 12px 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; margin: 0 auto;
 }
 .expansion-btn:hover { color: #1d4ed8; background-color: #eff6ff; }
-#pagination-footer { text-align: center; padding: 10px; border-top: 1px solid #f1f5f9; }
+#pagination-footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+body.dark-mode #pagination-footer {
+    background: var(--card-bg);
+}
 
 /* Container for the tooltip */
 .tooltip {
@@ -1391,7 +1400,7 @@ body.dark-mode .stability-insight-text {
     flex-wrap: wrap;
     gap: 24px;
     padding-top: 16px;
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid var(--border-color);
 }
 
 .stat-block {

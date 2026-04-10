@@ -160,12 +160,12 @@
         
         <div id="chart-filter-wrapper">
             <label for="chart-price-type">Typ:</label>
-            <select id="chart-price-type" onchange="renderHistoryChart(currentSearch)">
+            <select id="chart-price-type" onchange="renderHistoryChart()">
                 <option value="pv">Periodens vara</option>
                 <option value="cheapest">Billigaste pris</option>
             </select>
             <label for="chart-range-select">Visa:</label>
-            <select id="chart-range-select" onchange="renderHistoryChart(currentSearch)">
+            <select id="chart-range-select" onchange="renderHistoryChart()">
                 <option value="12">Senaste 12 månaderna</option>
                 <option value="24">Senaste 24 månaderna</option>
                 <option value="6">Senaste 6 månaderna</option>
