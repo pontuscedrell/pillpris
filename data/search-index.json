@@ -3172,9 +3172,9 @@
     "vnr": [
       "387252",
       "396610",
-      "430690",
       "547132",
-      "563336"
+      "563336",
+      "70743"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -10847,12 +10847,12 @@
     ],
     "vnr": [
       "113867",
-      "115854",
       "144445",
       "373843",
       "406897",
       "477987",
       "539950",
+      "540777",
       "553392"
     ],
     "packaging": [],
@@ -25883,6 +25883,59 @@
       "593592",
       "72937",
       "94328"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "116821",
+    "size_id": "T21",
+    "sub": "Nintedanib",
+    "form": "Kapsel, mjuk",
+    "str": "100 mg",
+    "size": "ca 60 st",
+    "names": [
+      "Nintedanib Newbury",
+      "Nintedanib STADA",
+      "Nintedanib Sandoz",
+      "Nintedanib Teva",
+      "Nintedanib Zentiva",
+      "Ofev"
+    ],
+    "vnr": [
+      "161108",
+      "197927",
+      "488351",
+      "516380",
+      "58055",
+      "585903"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "113281",
+    "size_id": "T21",
+    "sub": "Nintedanib",
+    "form": "Kapsel, mjuk",
+    "str": "150 mg",
+    "size": "ca 60 st",
+    "names": [
+      "Nintedanib Newbury",
+      "Nintedanib STADA",
+      "Nintedanib Sandoz",
+      "Nintedanib Teva",
+      "Nintedanib Zentiva",
+      "Ofev"
+    ],
+    "vnr": [
+      "181806",
+      "396972",
+      "454704",
+      "472234",
+      "484271",
+      "55307",
+      "555279"
     ],
     "packaging": [],
     "packagingMap": {}
