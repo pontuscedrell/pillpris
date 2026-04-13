@@ -92492,25 +92492,6 @@
         "Utbytesgrupps ID":113281
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Ofev",
-        "Varunummer":472234,
-        "Styrka":"150 mg",
-        "Förpackningsstorleksgrupp":"T21",
-        "Substans":"Nintedanib",
-        "Beredningsform":"Kapsel, mjuk",
-        "Storlek":60.0,
-        "Apotekens inköpspris":19661.0,
-        "Försäljningspris":20200.78,
-        "Inköpspris per minsta enhet":327.68,
-        "Försäljningspris per minsta enhet":336.68,
-        "NPL ID":20140523000010,
-        "NPL pack ID":20170512100049,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":113281
-    },
-    {
         "Status":"R1",
         "Produktnamn":"Nintedanib Teva",
         "Varunummer":396972,
@@ -92527,6 +92508,25 @@
         "NPL pack ID":20230926100247,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":113281
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Ofev",
+        "Varunummer":472234,
+        "Styrka":"150 mg",
+        "Förpackningsstorleksgrupp":"T21",
+        "Substans":"Nintedanib",
+        "Beredningsform":"Kapsel, mjuk",
+        "Storlek":60.0,
+        "Apotekens inköpspris":19661.0,
+        "Försäljningspris":20200.78,
+        "Inköpspris per minsta enhet":327.68,
+        "Försäljningspris per minsta enhet":336.68,
+        "NPL ID":20140523000010,
+        "NPL pack ID":20170512100049,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":113281
     },
     {
