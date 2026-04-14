@@ -1,5 +1,6 @@
 {
     "months": [
+        "2605",
         "2604",
         "2603",
         "2602",
@@ -1656,6 +1657,7 @@
                     "98",
                     "100",
                     "105",
+                    "120",
                     "250"
                 ],
                 "40 mg": [
@@ -4043,7 +4045,9 @@
         "Oktreotid": {
             "Injektionsvätska": {
                 "100 mikrogram/ml": [
-                    "5"
+                    "5",
+                    "10",
+                    "15"
                 ],
                 "50 mikrogram/ml": [
                     "5"
@@ -5804,6 +5808,7 @@
                     "30",
                     "42",
                     "90",
+                    "96",
                     "100",
                     "112"
                 ]
@@ -6534,13 +6539,6 @@
                 ]
             }
         },
-        "Alendronat + kolekalciferol": {
-            "Tablett": {
-                "70 mg + 2800 IE": [
-                    "12"
-                ]
-            }
-        },
         "Efavirenz + emtricitabin + tenofovirdisoproxil": {
             "Tablett": {
                 "600 mg/200 mg/245 mg": [
@@ -6576,6 +6574,13 @@
             "Injektionsvätska, suspension": {
                 "20 mg/ml": [
                     "1"
+                ]
+            }
+        },
+        "Alendronat + kolekalciferol": {
+            "Tablett": {
+                "70 mg + 2800 IE": [
+                    "12"
                 ]
             }
         }
