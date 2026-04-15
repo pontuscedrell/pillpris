@@ -21224,25 +21224,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Bunalict",
-        "Varunummer":377544,
-        "Styrka":"8 mg\/2 mg",
-        "Förpackningsstorleksgrupp":"TN28",
-        "Substans":"Buprenorfin + naloxon",
-        "Beredningsform":"Resoriblett, sublingual",
-        "Storlek":28.0,
-        "Apotekens inköpspris":126.45,
-        "Försäljningspris":189.13,
-        "Inköpspris per minsta enhet":4.52,
-        "Försäljningspris per minsta enhet":6.75,
-        "NPL ID":20161026000031,
-        "NPL pack ID":20170215100599,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":112033
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Buprenorphine\/Naloxone Viatris",
         "Varunummer":170347,
         "Styrka":"8 mg\/2 mg",
@@ -21261,7 +21242,7 @@
         "Utbytesgrupps ID":112033
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Buprenorphine\/Naloxone G.L. Pharma",
         "Varunummer":180439,
         "Styrka":"8 mg\/2 mg",
@@ -21277,6 +21258,25 @@
         "NPL pack ID":20180515100311,
         "Ursprung":"Generics",
         "Företag":"G.L. Pharma Nordic Aktiebolag",
+        "Utbytesgrupps ID":112033
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Bunalict",
+        "Varunummer":377544,
+        "Styrka":"8 mg\/2 mg",
+        "Förpackningsstorleksgrupp":"TN28",
+        "Substans":"Buprenorfin + naloxon",
+        "Beredningsform":"Resoriblett, sublingual",
+        "Storlek":28.0,
+        "Apotekens inköpspris":126.45,
+        "Försäljningspris":189.13,
+        "Inköpspris per minsta enhet":4.52,
+        "Försäljningspris per minsta enhet":6.75,
+        "NPL ID":20161026000031,
+        "NPL pack ID":20170215100599,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":112033
     },
     {
@@ -31255,25 +31255,6 @@
         "Utbytesgrupps ID":112375
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Voltaren",
-        "Varunummer":32957,
-        "Styrka":"50 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Diklofenak",
-        "Beredningsform":"Suppositorium",
-        "Storlek":50.0,
-        "Apotekens inköpspris":336.09,
-        "Försäljningspris":405.74,
-        "Inköpspris per minsta enhet":6.72,
-        "Försäljningspris per minsta enhet":8.11,
-        "NPL ID":20220429000045,
-        "NPL pack ID":20221004100051,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":112375
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Voltaren",
         "Varunummer":64918,
@@ -31328,6 +31309,25 @@
         "NPL pack ID":10010101110949,
         "Ursprung":"Generics",
         "Företag":"Viatris AB",
+        "Utbytesgrupps ID":112375
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Voltaren",
+        "Varunummer":32957,
+        "Styrka":"50 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Diklofenak",
+        "Beredningsform":"Suppositorium",
+        "Storlek":50.0,
+        "Apotekens inköpspris":336.09,
+        "Försäljningspris":405.74,
+        "Inköpspris per minsta enhet":6.72,
+        "Försäljningspris per minsta enhet":8.11,
+        "NPL ID":20220429000045,
+        "NPL pack ID":20221004100051,
+        "Ursprung":"ParallelImport",
+        "Företag":"Ebb Medical AB",
         "Utbytesgrupps ID":112375
     },
     {
@@ -67659,7 +67659,7 @@
         "Utbytesgrupps ID":112038
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Quetiapine Teva",
         "Varunummer":435004,
         "Styrka":"300 mg",
