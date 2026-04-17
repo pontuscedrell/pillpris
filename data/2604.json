@@ -45372,7 +45372,7 @@
         "Utbytesgrupps ID":115342
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Kåvepenin®",
         "Varunummer":4445,
         "Styrka":"250 mg\/ml",
@@ -58635,25 +58635,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Isotretinoin Sandoz",
-        "Varunummer":108176,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Isotretinoin",
-        "Beredningsform":"Kapsel, mjuk",
-        "Storlek":100.0,
-        "Apotekens inköpspris":260.14,
-        "Försäljningspris":327.49,
-        "Inköpspris per minsta enhet":2.6,
-        "Försäljningspris per minsta enhet":3.27,
-        "NPL ID":20190228000112,
-        "NPL pack ID":20190618100156,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":112816
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Isotretinoin Actavis",
         "Varunummer":27132,
         "Styrka":"20 mg",
@@ -58672,7 +58653,7 @@
         "Utbytesgrupps ID":112816
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Isotracin",
         "Varunummer":395965,
         "Styrka":"20 mg",
@@ -58688,6 +58669,25 @@
         "NPL pack ID":20190820100418,
         "Ursprung":"Generics",
         "Företag":"2Care4 Generics ApS",
+        "Utbytesgrupps ID":112816
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Isotretinoin Sandoz",
+        "Varunummer":108176,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Isotretinoin",
+        "Beredningsform":"Kapsel, mjuk",
+        "Storlek":100.0,
+        "Apotekens inköpspris":260.14,
+        "Försäljningspris":327.49,
+        "Inköpspris per minsta enhet":2.6,
+        "Försäljningspris per minsta enhet":3.27,
+        "NPL ID":20190228000112,
+        "NPL pack ID":20190618100156,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":112816
     },
     {
