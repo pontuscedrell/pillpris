@@ -40205,25 +40205,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Escitalopram Accord",
-        "Varunummer":578711,
-        "Styrka":"20 mg (Grupp A)",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Escitalopram",
-        "Beredningsform":"Tablett",
-        "Storlek":98.0,
-        "Apotekens inköpspris":23.41,
-        "Försäljningspris":78.87,
-        "Inköpspris per minsta enhet":0.24,
-        "Försäljningspris per minsta enhet":0.8,
-        "NPL ID":20140506000075,
-        "NPL pack ID":20140721100239,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":112143
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Escitalopram Grindeks",
         "Varunummer":511013,
         "Styrka":"20 mg (Grupp A)",
@@ -40242,7 +40223,7 @@
         "Utbytesgrupps ID":112143
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Escitalopram Sandoz",
         "Varunummer":161756,
         "Styrka":"20 mg (Grupp A)",
@@ -40261,7 +40242,7 @@
         "Utbytesgrupps ID":112143
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Escitalopram STADA",
         "Varunummer":532726,
         "Styrka":"20 mg (Grupp A)",
@@ -40277,6 +40258,25 @@
         "NPL pack ID":20130405100068,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":112143
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Escitalopram Accord",
+        "Varunummer":578711,
+        "Styrka":"20 mg (Grupp A)",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Escitalopram",
+        "Beredningsform":"Tablett",
+        "Storlek":98.0,
+        "Apotekens inköpspris":23.41,
+        "Försäljningspris":78.87,
+        "Inköpspris per minsta enhet":0.24,
+        "Försäljningspris per minsta enhet":0.8,
+        "NPL ID":20140506000075,
+        "NPL pack ID":20140721100239,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":112143
     },
     {
@@ -80866,25 +80866,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Memantine Accord",
-        "Varunummer":412311,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Memantin",
-        "Beredningsform":"Tablett",
-        "Storlek":56.0,
-        "Apotekens inköpspris":175.0,
-        "Försäljningspris":239.38,
-        "Inköpspris per minsta enhet":3.13,
-        "Försäljningspris per minsta enhet":4.27,
-        "NPL ID":20120927000045,
-        "NPL pack ID":20131017100064,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":111965
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Memantine Accord",
         "Varunummer":596050,
         "Styrka":"10 mg",
         "Förpackningsstorleksgrupp":"T20",
@@ -80902,7 +80883,7 @@
         "Utbytesgrupps ID":111965
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Marbodin",
         "Varunummer":190291,
         "Styrka":"10 mg",
@@ -80921,7 +80902,7 @@
         "Utbytesgrupps ID":111965
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Memantine Accord",
         "Varunummer":424336,
         "Styrka":"10 mg",
@@ -80937,6 +80918,25 @@
         "NPL pack ID":20250425100074,
         "Ursprung":"ParallelDistribution",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":111965
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Memantine Accord",
+        "Varunummer":412311,
+        "Styrka":"10 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Memantin",
+        "Beredningsform":"Tablett",
+        "Storlek":56.0,
+        "Apotekens inköpspris":175.0,
+        "Försäljningspris":239.38,
+        "Inköpspris per minsta enhet":3.13,
+        "Försäljningspris per minsta enhet":4.27,
+        "NPL ID":20120927000045,
+        "NPL pack ID":20131017100064,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":111965
     },
     {
