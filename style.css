@@ -3065,6 +3065,21 @@ body.dark-mode .price-card-header-bar.is-alert-red .price-card-icon {
     .comparison-row-name {
         font-size: 16px;
         word-break: break-word;
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .comparison-row-product {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        row-gap: 4px;
+    }
+
+    .badge-shortage-inline {
+        flex: 0 0 100%;
+        margin-left: 0;
+        margin-top: 2px;
+        width: max-content;
     }
 
     .comparison-row-info {
