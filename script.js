@@ -1100,6 +1100,28 @@ function renderTableOnly() {
         strong.textContent = `${currentSearch.sub} ${currentSearch.str}`;
     }
 
+    const shortageCount = Array.isArray(lastMatches)
+        ? lastMatches.filter(item => item?.shortage).length
+        : 0;
+    const hasShortages = shortageCount > 0;
+    if (hasShortages) {
+        const comparisonCard = area.querySelector('.comparison-container');
+        if (comparisonCard) {
+            const bannerCard = document.createElement('div');
+            bannerCard.className = 'shortage-impact-card price-card-header-bar is-alert-red';
+            bannerCard.innerHTML = `
+                <div class="price-card-icon-wrapper">
+                    <span class="material-symbols-outlined price-card-icon">warning</span>
+                </div>
+                <div class="price-card-header-text">
+                    <p class="price-card-header-label">Restnoterat läkemedel</p>
+                    <p class="price-card-header-subtext"><strong>${shortageCount} st</strong> tillverkare har rapporterat en restnotering. Det kan påverka tillgången och leda till ett högre pris.</p>
+                </div>
+            `;
+            area.insertBefore(bannerCard, comparisonCard);
+        }
+    }
+
     updateTableRows(lastMatches);
 }
 
