@@ -9,6 +9,8 @@ let lastPVPrice = 0;
 let selectedRowId = null;
 let chartPriceType = "pv"; // "pv" or "cheapest"
 let altPackageView = "cards"; // "cards" or "table"
+let comparisonView = "list"; // "list" or "table"
+let selectedComparisonShortageId = null;
 let historyChartRenderSeq = 0;
 let historyData = null;
 let historyGroupMap = new Map();
@@ -1100,6 +1102,12 @@ function renderTableOnly() {
         strong.textContent = `${currentSearch.sub} ${currentSearch.str}`;
     }
 
+    const comparisonToggleBtn = area.querySelector('#comparison-view-toggle');
+    if (comparisonToggleBtn) {
+        updateComparisonViewToggle(comparisonToggleBtn);
+        comparisonToggleBtn.addEventListener('click', toggleComparisonView);
+    }
+
     const shortageCount = Array.isArray(lastMatches)
         ? lastMatches.filter(item => item?.shortage).length
         : 0;
@@ -1125,6 +1133,168 @@ function renderTableOnly() {
     updateTableRows(lastMatches);
 }
 
+function getComparisonItemUnit(item) {
+    const form = (item?.Läkemedelsform || "").toLowerCase();
+    if (form.includes("gel") || form.includes("salva") || form.includes("kräm")) return "g";
+    if (form.includes("droppar") || form.includes("lösning")) return "ml";
+    return "st";
+}
+
+function updateComparisonViewToggle(button) {
+    if (!button) return;
+    const showingTable = comparisonView === 'table';
+    const icon = button.querySelector('.material-symbols-outlined');
+    const label = showingTable ? 'Visa listvy' : 'Visa tabellvy';
+
+    button.setAttribute('aria-label', label);
+    button.title = label;
+    if (icon) {
+        icon.textContent = showingTable ? 'table_rows' : 'list';
+    }
+}
+
+function renderComparisonTableRows(data, minPriceInData) {
+    const tableContainer = document.getElementById('comparison-table');
+    if (!tableContainer) return;
+
+    const table = document.createElement('table');
+    table.className = 'comparison-alt-table';
+    table.innerHTML = `
+        <thead>
+            <tr>
+                <th>PV</th>
+                <th>Namn</th>
+                <th>Tillverkare</th>
+                <th>Antal</th>
+                <th>typ</th>
+                <th>Typ</th>
+                <th>Pris</th>
+            </tr>
+        </thead>
+    `;
+
+    const tbody = document.createElement('tbody');
+
+    data.forEach((item, index) => {
+        const rawStatus = getItemStatus(item).trim().toUpperCase();
+        const status = (rawStatus === 'PV' || rawStatus === 'R1' || rawStatus === 'R2') ? rawStatus : '';
+        const size = item?.Storlek ?? '—';
+        const unit = getComparisonItemUnit(item);
+        const packagingType = item?.["Förpackning"] || '—';
+        const type = (item?.Ursprung || 'Generics').toString();
+        const manufacturer = item?.Företag || '—';
+        const name = item?.Produktnamn || '—';
+        const priceVal = Number(item?.["Försäljningspris"]);
+        const price = Number.isFinite(priceVal)
+            ? `${priceVal.toLocaleString('sv-SE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`
+            : '—';
+        const priceDiff = Number.isFinite(priceVal) && Number.isFinite(lastPVPrice)
+            ? priceVal - lastPVPrice
+            : null;
+        const priceDiffText = priceDiff === null
+            ? '—'
+            : priceDiff === 0
+                ? 'PV'
+                : priceDiff > 0
+                    ? `+${priceDiff.toLocaleString('sv-SE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`
+                    : `${priceDiff.toLocaleString('sv-SE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kr`;
+        const priceDiffClass = priceDiff === null
+            ? 'diff-neutral'
+            : priceDiff === 0
+                ? 'diff-pv'
+                : priceDiff > 0
+                    ? 'diff-up'
+                    : 'diff-down';
+        const rowStatusClass = status === 'PV'
+            ? 'status-pv'
+            : (status === 'R1' || status === 'R2')
+                ? 'status-r'
+                : 'status-other';
+        const statusCellHtml = status
+            ? `<span class="comparison-status-pill ${rowStatusClass}">${status}</span>`
+            : '';
+        const rowClass = status === 'PV'
+            ? 'pv-row'
+            : (status === 'R1' || status === 'R2')
+                ? 'reserve-row'
+                : 'comparison-other-row';
+        const isCheapest = Number.isFinite(priceVal) && Number.isFinite(minPriceInData) && priceVal === minPriceInData;
+        const effectiveRowClass = isCheapest ? `${rowClass} cheapest-row` : rowClass;
+        const rowId = String(
+            item.Vnr ?? `${(item.Produktnamn || '')}-${(item.Företag || '')}-${(item.Storlek || '')}-${index}`
+        );
+        const hasShortage = Boolean(item?.shortage);
+        const isShortageOpen = hasShortage && selectedComparisonShortageId === rowId;
+        const shortageType = String(item?.shortage?.shortage_type || '').trim() || 'Restnoterad';
+
+        const row = document.createElement('tr');
+        row.className = effectiveRowClass;
+        if (isShortageOpen) {
+            row.classList.add('comparison-row-expanded');
+        }
+        row.innerHTML = `
+            <td>${statusCellHtml}</td>
+            <td>${name}</td>
+            <td>
+                <div class="comparison-manufacturer-cell">
+                    <span>${manufacturer}</span>
+                    ${hasShortage ? `<button type="button" class="comparison-shortage-btn${isShortageOpen ? ' is-open' : ''}"><span class="material-symbols-outlined">warning</span>${shortageType}</button>` : ''}
+                </div>
+            </td>
+            <td>${size} ${unit}</td>
+            <td>${packagingType}</td>
+            <td>${type}</td>
+            <td class="comparison-price-cell">
+                <div class="price-wrapper comparison-price-wrapper">
+                    <span class="comparison-price-main">${price}</span>
+                    <span class="diff-subtext ${priceDiffClass}">${priceDiffText}</span>
+                </div>
+            </td>
+        `;
+
+        if (hasShortage) {
+            const shortageBtn = row.querySelector('.comparison-shortage-btn');
+            if (shortageBtn) {
+                shortageBtn.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    toggleComparisonShortageDetails(rowId);
+                });
+            }
+        }
+
+        tbody.appendChild(row);
+
+        if (isShortageOpen) {
+            const detailsRow = document.createElement('tr');
+            detailsRow.className = `comparison-shortage-expand-row ${effectiveRowClass}`;
+
+            const detailCell = document.createElement('td');
+            detailCell.colSpan = 7;
+
+            const shortage = item.shortage || {};
+            const title = String(shortage.status || '').trim() || String(shortage.shortage_type || '').trim() || 'Restnotering';
+            const startText = shortage.start_text || shortage.start_date || 'Okänt';
+            const endText = shortage.end_text || shortage.end_date || 'Tills vidare';
+            const reasonText = shortage.reason || 'Ingen orsak angiven.';
+
+            detailCell.innerHTML = `
+                <div class="row-shortage-note comparison-shortage-note">
+                    <p class="row-shortage-title">${title}</p>
+                    <p class="row-shortage-dates">${startText} - ${endText}</p>
+                    <p class="row-shortage-reason">${reasonText}</p>
+                </div>
+            `;
+
+            detailsRow.appendChild(detailCell);
+            tbody.appendChild(detailsRow);
+        }
+    });
+
+    table.appendChild(tbody);
+    tableContainer.replaceChildren(table);
+}
+
 /**
  * Updates table rows with medicine data, including status badges and pricing.
  * Uses DocumentFragment for efficient DOM manipulation.
@@ -1132,8 +1302,9 @@ function renderTableOnly() {
  */
 function updateTableRows(data) {
     const container = document.getElementById('comparison-list');
+    const tableContainer = document.getElementById('comparison-table');
     const footer = document.getElementById('pagination-footer');
-    if (!container) return;
+    if (!container || !tableContainer) return;
 
     const minPriceInData = Math.min(...data.map(item => item["Försäljningspris"]));
     const rowsToShow = (data.length > 5 && !isExpanded) ? data.slice(0, 5) : data;
@@ -1154,6 +1325,17 @@ function updateTableRows(data) {
     }
 
     container.innerHTML = '';
+    tableContainer.innerHTML = '';
+
+    if (comparisonView === 'table') {
+        container.hidden = true;
+        tableContainer.hidden = false;
+        renderComparisonTableRows(rowsToShow, minPriceInData);
+        return;
+    }
+
+    container.hidden = false;
+    tableContainer.hidden = true;
     
     // Use DocumentFragment to batch DOM appends for better performance
     const tableFragment = document.createDocumentFragment();
@@ -1362,6 +1544,21 @@ function toggleTableExpansion() {
     isExpanded = !isExpanded;
     
     // Vi skickar med den sparade datan direkt till rad-renderaren
+    updateTableRows(lastMatches);
+}
+
+function toggleComparisonShortageDetails(rowId) {
+    selectedComparisonShortageId = (selectedComparisonShortageId === rowId) ? null : rowId;
+    updateTableRows(lastMatches);
+}
+
+function toggleComparisonView() {
+    comparisonView = comparisonView === 'table' ? 'list' : 'table';
+    selectedRowId = null;
+    selectedComparisonShortageId = null;
+
+    const toggleBtn = document.getElementById('comparison-view-toggle');
+    updateComparisonViewToggle(toggleBtn);
     updateTableRows(lastMatches);
 }
 

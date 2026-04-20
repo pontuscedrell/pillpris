@@ -311,7 +311,12 @@
 <template id="template-table-container">
     <div class="bleed-card comparison-container">
         <div class="comparison-inner-padding">
-            <h3 class="comparison-title">Utbytbara alternativ</h3>
+            <div class="comparison-title-row">
+                <h3 class="comparison-title">Utbytbara alternativ</h3>
+                <button type="button" id="comparison-view-toggle" class="alt-view-toggle comparison-view-toggle" aria-label="Visa tabellvy" title="Visa tabellvy">
+                    <span class="material-symbols-outlined">table_rows</span>
+                </button>
+            </div>
             <p class="comparison-subtitle">
                 Alla dessa innehåller samma verksamma ämne:
                 <strong class="comparison-subtitle-strong"></strong>
@@ -319,6 +324,7 @@
         </div>
 
         <div id="comparison-list" class="comparison-list-wrapper"></div>
+        <div id="comparison-table" class="comparison-table-wrapper" hidden></div>
 
         <div id="pagination-footer"></div>
 

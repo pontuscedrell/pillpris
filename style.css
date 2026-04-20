@@ -1529,6 +1529,13 @@ body.dark-mode .stability-insight-text {
     color: var(--text-primary);
 }
 
+.comparison-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
 .comparison-subtitle {
     margin: 8px 0 24px 0;
     color: var(--text-secondary);
@@ -1574,6 +1581,200 @@ body.dark-mode .shortage-impact-card {
     flex-direction: column;
     gap: 10px;
     padding: 0 1rem;
+}
+
+.comparison-table-wrapper {
+    padding: 0 1rem;
+    overflow-x: auto;
+}
+
+.comparison-alt-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--card-bg);
+}
+
+.comparison-alt-table th,
+.comparison-alt-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 13px;
+}
+
+.comparison-alt-table th {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    white-space: nowrap;
+}
+
+.comparison-alt-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-alt-table tbody tr.comparison-row-expanded td {
+    border-bottom: none;
+}
+
+.comparison-alt-table tbody tr.pv-row {
+    background-color: #eff6ff;
+}
+
+.comparison-alt-table tbody tr.reserve-row {
+    background-color: #fffbeb;
+}
+
+.comparison-alt-table tbody tr.cheapest-row {
+    background-color: #f0fdf4;
+    border-left: none !important;
+    border-image: none !important;
+    position: static;
+}
+
+body.dark-mode .comparison-alt-table tbody tr.pv-row,
+body.dark-mode .comparison-alt-table tbody tr.reserve-row,
+body.dark-mode .comparison-alt-table tbody tr.cheapest-row {
+    background-color: var(--card-bg);
+}
+
+.comparison-status-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.comparison-status-pill.status-pv {
+    color: #2563eb;
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.comparison-status-pill.status-r {
+    color: #d97706;
+    border-color: #f59e0b;
+    background: #fffbeb;
+}
+
+.comparison-status-pill.status-other {
+    color: #475569;
+    border-color: var(--border-color);
+    background: var(--bg-secondary);
+}
+
+.comparison-price-cell {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.comparison-price-wrapper {
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.comparison-price-main {
+    line-height: 1.2;
+}
+
+.comparison-alt-table .diff-subtext {
+    font-size: 12px;
+}
+
+.comparison-alt-table .diff-up {
+    color: #dc2626;
+}
+
+.comparison-alt-table .diff-down {
+    color: #16a34a;
+}
+
+.comparison-alt-table .diff-pv {
+    color: #2563eb;
+}
+
+.comparison-alt-table .diff-neutral {
+    color: var(--text-secondary);
+}
+
+.comparison-manufacturer-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.comparison-shortage-btn {
+    border: 1px solid #f97316;
+    background: #fff7ed;
+    color: #b45309;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.comparison-shortage-btn .material-symbols-outlined {
+    font-size: 13px;
+}
+
+.comparison-shortage-btn.is-open {
+    background: #ffedd5;
+    border-color: #ea580c;
+}
+
+.comparison-shortage-expand-row td {
+    background: var(--card-bg);
+    padding: 8px 14px 12px 14px;
+}
+
+.comparison-alt-table tbody tr.comparison-shortage-expand-row.pv-row td {
+    background-color: #eff6ff;
+}
+
+.comparison-alt-table tbody tr.comparison-shortage-expand-row.reserve-row td {
+    background-color: #fffbeb;
+}
+
+.comparison-alt-table tbody tr.comparison-shortage-expand-row.cheapest-row td {
+    background-color: #f0fdf4;
+}
+
+body.dark-mode .comparison-alt-table tbody tr.comparison-shortage-expand-row.pv-row td,
+body.dark-mode .comparison-alt-table tbody tr.comparison-shortage-expand-row.reserve-row td,
+body.dark-mode .comparison-alt-table tbody tr.comparison-shortage-expand-row.cheapest-row td {
+    background-color: var(--card-bg);
+}
+
+.comparison-shortage-note {
+    margin-top: 0;
+}
+
+body.dark-mode .comparison-shortage-btn {
+    color: #fdba74;
+    border-color: #ea580c;
+    background: rgba(249, 115, 22, 0.14);
+}
+
+body.dark-mode .comparison-shortage-btn.is-open {
+    background: rgba(234, 88, 12, 0.22);
 }
 
 /* TLV Info Box at the bottom */
