@@ -41,6 +41,7 @@ class ShortageRecord(TypedDict):
     start_text: str
     end_text: str
     reason: str
+    alternatives_info: str
     updated_at: str
 
 
@@ -128,6 +129,28 @@ def fetch_shortage_records_by_vnr() -> dict[str, list[ShortageRecord]]:
         return {}
 
     by_vnr: dict[str, list[ShortageRecord]] = {}
+
+    def get_row_text(row_data: Any, candidates: list[str]) -> str:
+        # First try direct column names, then a normalized fallback for minor spacing/case differences.
+        for key in candidates:
+            value = str(row_data.get(key, "") or "").strip()
+            if value:
+                return value
+
+        normalized_values: dict[str, str] = {}
+        try:
+            for key, value in row_data.items():
+                normalized_key = str(key or "").strip().lower()
+                normalized_values[normalized_key] = str(value or "").strip()
+        except Exception:
+            return ""
+
+        for key in candidates:
+            value = normalized_values.get(str(key or "").strip().lower(), "")
+            if value:
+                return value
+        return ""
+
     for _, row in df.iterrows():
         vnr = parse_int(row.get("Varunummer"))
         if vnr is None:
@@ -145,6 +168,16 @@ def fetch_shortage_records_by_vnr() -> dict[str, list[ShortageRecord]]:
             "start_text": start_text,
             "end_text": end_text,
             "reason": str(row.get("Orsak", "") or "").strip(),
+            "alternatives_info": get_row_text(
+                row,
+                [
+                    "Läkemedelsverkets information om möjliga alternativ",
+                    "Information om möjliga alternativ",
+                    "Möjliga alternativ",
+                    "Lakemedelsverkets information om mojliga alternativ",
+                    "Information om mojliga alternativ",
+                ],
+            ),
             "updated_at": str(row.get("Senast uppdaterad (datum)", "") or "").strip(),
         }
 

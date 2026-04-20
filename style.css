@@ -55,6 +55,7 @@ body.dark-mode {
     max-width: 1100px;
     padding: 1.5rem;
     margin: 0 auto;
+    flex: 1 0 auto;
 }
 
 @media (max-width: 640px) {
@@ -1639,10 +1640,24 @@ body.dark-mode .shortage-impact-card {
     position: static;
 }
 
+.comparison-alt-table tbody tr:not(.comparison-shortage-expand-row):hover,
+.comparison-alt-table tbody tr.pv-row:hover,
+.comparison-alt-table tbody tr.reserve-row:hover,
+.comparison-alt-table tbody tr.cheapest-row:hover {
+    background: rgba(8, 145, 178, 0.08) !important;
+}
+
 body.dark-mode .comparison-alt-table tbody tr.pv-row,
 body.dark-mode .comparison-alt-table tbody tr.reserve-row,
 body.dark-mode .comparison-alt-table tbody tr.cheapest-row {
     background-color: var(--card-bg);
+}
+
+body.dark-mode .comparison-alt-table tbody tr:not(.comparison-shortage-expand-row):hover,
+body.dark-mode .comparison-alt-table tbody tr.pv-row:hover,
+body.dark-mode .comparison-alt-table tbody tr.reserve-row:hover,
+body.dark-mode .comparison-alt-table tbody tr.cheapest-row:hover {
+    background: rgba(8, 145, 178, 0.14) !important;
 }
 
 .comparison-status-pill {
@@ -1674,6 +1689,24 @@ body.dark-mode .comparison-alt-table tbody tr.cheapest-row {
     color: #475569;
     border-color: var(--border-color);
     background: var(--bg-secondary);
+}
+
+.comparison-status-pill.status-cheapest {
+    color: #16a34a;
+    border-color: #10b981;
+    background: #f0fdf4;
+    min-width: auto;
+    padding: 2px 6px;
+}
+
+.comparison-status-pill.status-cheapest .material-symbols-outlined {
+    font-size: 14px;
+}
+
+.comparison-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .comparison-price-cell {
@@ -1788,6 +1821,12 @@ body.dark-mode .comparison-shortage-btn.is-open {
     border: 1px solid #ccfbf1;
 }
 
+body.dark-mode .tlv-info-box {
+    background: rgba(20, 83, 45, 0.14);
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    box-shadow: none;
+}
+
 .tlv-info-box.hidden {
     display: none !important;
 }
@@ -1851,6 +1890,10 @@ body.dark-mode .comparison-shortage-btn.is-open {
     font-size: 20px;
 }
 
+body.dark-mode .tlv-info-icon {
+    color: #86efac;
+}
+
 .tlv-info-title {
     margin: 0;
     font-weight: 700;
@@ -1858,11 +1901,23 @@ body.dark-mode .comparison-shortage-btn.is-open {
     font-size: 14px;
 }
 
+body.dark-mode .tlv-info-title {
+    color: #dcfce7;
+}
+
 .tlv-info-text {
     margin: 4px 0 0 0;
     color: #115e59;
     font-size: 13px;
     line-height: 1.5;
+}
+
+body.dark-mode .tlv-info-text {
+    color: #bbf7d0;
+}
+
+body.dark-mode .tlv-info-text a {
+    color: #86efac !important;
 }
 
 /* Base Badge Style */
@@ -1899,6 +1954,11 @@ body.dark-mode .comparison-shortage-btn.is-open {
 
 .badge-shortage .material-symbols-outlined {
     font-size: 14px;
+}
+
+.badge-shortage-inline {
+    margin-right: 0;
+    margin-left: 8px;
 }
 
 body.dark-mode .badge-shortage {
@@ -2109,6 +2169,25 @@ body.dark-mode .badge-shortage {
     line-height: 1.45;
 }
 
+.row-shortage-actions {
+    margin-top: 10px;
+}
+
+.row-shortage-alt-btn {
+    border: 1px solid #fb923c;
+    background: #fff7ed;
+    color: #9a3412;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.row-shortage-alt-btn:hover {
+    background: #ffedd5;
+}
+
 body.dark-mode .row-shortage-note {
     border-color: #9a3412;
     background: rgba(194, 65, 12, 0.2);
@@ -2124,6 +2203,98 @@ body.dark-mode .row-shortage-dates {
 
 body.dark-mode .row-shortage-reason {
     color: #ffedd5;
+}
+
+body.dark-mode .row-shortage-alt-btn {
+    border-color: #ea580c;
+    background: rgba(249, 115, 22, 0.16);
+    color: #fdba74;
+}
+
+body.dark-mode .row-shortage-alt-btn:hover {
+    background: rgba(234, 88, 12, 0.24);
+}
+
+.shortage-alt-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.58);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 1200;
+}
+
+.shortage-alt-modal-overlay.is-open {
+    display: flex;
+}
+
+.shortage-alt-modal-overlay[hidden] {
+    display: none !important;
+}
+
+.shortage-alt-modal {
+    width: 100%;
+    max-width: 640px;
+    max-height: calc(100vh - 32px);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 20px 48px rgba(15, 23, 42, 0.35);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.shortage-alt-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+.shortage-alt-modal-header h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.shortage-alt-modal-close {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 2px;
+}
+
+.shortage-alt-modal-content {
+    padding: 16px;
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 640px) {
+    .shortage-alt-modal-overlay {
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .shortage-alt-modal {
+        max-height: calc(100vh - 24px);
+    }
 }
 
 /* --- Comparison Row Container --- */
@@ -2561,6 +2732,18 @@ body.dark-mode .comparison-row.reserve-row {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+}
+
+.stat-block-label-button {
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
 }
 
 .stat-block-content {

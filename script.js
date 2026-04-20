@@ -11,6 +11,7 @@ let chartPriceType = "pv"; // "pv" or "cheapest"
 let altPackageView = "cards"; // "cards" or "table"
 let comparisonView = "list"; // "list" or "table"
 let selectedComparisonShortageId = null;
+let shortageAlternativesModal = null;
 let historyChartRenderSeq = 0;
 let historyData = null;
 let historyGroupMap = new Map();
@@ -257,6 +258,72 @@ function getActiveShortageForMonth(brand, monthCode) {
         });
 
     return upcoming[0] || null;
+}
+
+function getShortageAlternativesText(shortage) {
+    return String(
+        shortage?.alternatives_info
+        || shortage?.alternatives
+        || shortage?.possible_alternatives
+        || ''
+    ).trim();
+}
+
+function ensureShortageAlternativesModal() {
+    if (shortageAlternativesModal) return shortageAlternativesModal;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'shortage-alt-modal-overlay';
+    overlay.hidden = true;
+    overlay.innerHTML = `
+        <div class="shortage-alt-modal" role="dialog" aria-modal="true" aria-labelledby="shortage-alt-modal-title">
+            <div class="shortage-alt-modal-header">
+                <h3 id="shortage-alt-modal-title">Läkemedelsverkets information om möjliga alternativ</h3>
+                <button type="button" class="shortage-alt-modal-close" aria-label="Stäng">&times;</button>
+            </div>
+            <div class="shortage-alt-modal-content"></div>
+        </div>
+    `;
+
+    const closeButton = overlay.querySelector('.shortage-alt-modal-close');
+    const modalPanel = overlay.querySelector('.shortage-alt-modal');
+    const close = () => {
+        overlay.setAttribute('hidden', '');
+        overlay.classList.remove('is-open');
+    };
+
+    closeButton?.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        close();
+    });
+    modalPanel?.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+    overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) close();
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (!overlay.hasAttribute('hidden') && event.key === 'Escape') {
+            close();
+        }
+    });
+
+    document.body.appendChild(overlay);
+    shortageAlternativesModal = overlay;
+    return overlay;
+}
+
+function openShortageAlternativesModal(shortage) {
+    const modal = ensureShortageAlternativesModal();
+    const content = modal.querySelector('.shortage-alt-modal-content');
+    if (!content) return;
+
+    const alternativesText = getShortageAlternativesText(shortage);
+    content.textContent = alternativesText || 'Ingen information om möjliga alternativ har publicerats för denna restnotering.';
+    modal.removeAttribute('hidden');
+    modal.classList.add('is-open');
 }
 
 function getGroupMonthRows(group, monthCode) {
@@ -854,7 +921,18 @@ async function renderPriceCard(viewModel) {
             prelimIconEl.textContent = '!';
         }
 
-        labelEl.textContent = label;
+        const canJumpToMonth = monthCode && monthCode !== selectedMonth;
+        if (canJumpToMonth) {
+            const monthButton = document.createElement('button');
+            monthButton.type = 'button';
+            monthButton.className = 'stat-block-label-button';
+            monthButton.textContent = label;
+            monthButton.setAttribute('aria-label', `Visa ${label.toLowerCase()}`);
+            monthButton.addEventListener('click', () => updateMonth(monthCode));
+            labelEl.appendChild(monthButton);
+        } else {
+            labelEl.textContent = label;
+        }
         if (prelimIconEl) {
             labelEl.append(' ');
             labelEl.appendChild(prelimIconEl);
@@ -1122,7 +1200,7 @@ function renderTableOnly() {
                     <span class="material-symbols-outlined price-card-icon">warning</span>
                 </div>
                 <div class="price-card-header-text">
-                    <p class="price-card-header-label">Restnoterat läkemedel</p>
+                    <p class="price-card-header-label">Restnoterade tillverkare</p>
                     <p class="price-card-header-subtext"><strong>${shortageCount} st</strong> tillverkare har rapporterat en restnotering. Det kan påverka tillgången och leda till ett högre pris.</p>
                 </div>
             `;
@@ -1162,7 +1240,6 @@ function renderComparisonTableRows(data, minPriceInData) {
     table.innerHTML = `
         <thead>
             <tr>
-                <th>PV</th>
                 <th>Namn</th>
                 <th>Tillverkare</th>
                 <th>Antal</th>
@@ -1219,6 +1296,9 @@ function renderComparisonTableRows(data, minPriceInData) {
                 ? 'reserve-row'
                 : 'comparison-other-row';
         const isCheapest = Number.isFinite(priceVal) && Number.isFinite(minPriceInData) && priceVal === minPriceInData;
+        const cheapestCellHtml = isCheapest
+            ? `<span class="comparison-status-pill status-cheapest"><span class="material-symbols-outlined">star</span></span>`
+            : '';
         const effectiveRowClass = isCheapest ? `${rowClass} cheapest-row` : rowClass;
         const rowId = String(
             item.Vnr ?? `${(item.Produktnamn || '')}-${(item.Företag || '')}-${(item.Storlek || '')}-${index}`
@@ -1233,8 +1313,13 @@ function renderComparisonTableRows(data, minPriceInData) {
             row.classList.add('comparison-row-expanded');
         }
         row.innerHTML = `
-            <td>${statusCellHtml}</td>
-            <td>${name}</td>
+            <td>
+                <div class="comparison-name-cell">
+                    ${statusCellHtml}
+                    ${cheapestCellHtml}
+                    <span>${name}</span>
+                </div>
+            </td>
             <td>
                 <div class="comparison-manufacturer-cell">
                     <span>${manufacturer}</span>
@@ -1270,14 +1355,13 @@ function renderComparisonTableRows(data, minPriceInData) {
             detailsRow.className = `comparison-shortage-expand-row ${effectiveRowClass}`;
 
             const detailCell = document.createElement('td');
-            detailCell.colSpan = 7;
+            detailCell.colSpan = 6;
 
             const shortage = item.shortage || {};
             const title = String(shortage.status || '').trim() || String(shortage.shortage_type || '').trim() || 'Restnotering';
             const startText = shortage.start_text || shortage.start_date || 'Okänt';
             const endText = shortage.end_text || shortage.end_date || 'Tills vidare';
             const reasonText = shortage.reason || 'Ingen orsak angiven.';
-
             detailCell.innerHTML = `
                 <div class="row-shortage-note comparison-shortage-note">
                     <p class="row-shortage-title">${title}</p>
@@ -1285,6 +1369,25 @@ function renderComparisonTableRows(data, minPriceInData) {
                     <p class="row-shortage-reason">${reasonText}</p>
                 </div>
             `;
+
+            const note = detailCell.querySelector('.comparison-shortage-note');
+            if (note) {
+                const actions = document.createElement('div');
+                actions.className = 'row-shortage-actions';
+
+                const alternativesButton = document.createElement('button');
+                alternativesButton.type = 'button';
+                alternativesButton.className = 'row-shortage-alt-btn';
+                alternativesButton.textContent = 'Möjliga alternativ (Läkemedelsverket)';
+                alternativesButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    openShortageAlternativesModal(shortage);
+                });
+
+                actions.appendChild(alternativesButton);
+                note.appendChild(actions);
+            }
 
             detailsRow.appendChild(detailCell);
             tbody.appendChild(detailsRow);
@@ -1376,9 +1479,10 @@ function updateTableRows(data) {
             statusBadgeHtml = `<span class="status-badge-mini" style="color: #16a34a; border: 1px solid #10b981;"><span class="material-symbols-outlined" style="font-size: 14px;">star</span></span>`;
         }
 
+        let shortageBadgeHtml = '';
         if (item.shortage) {
             const shortageType = String(item.shortage.shortage_type || '').trim() || 'Försäljningsuppehåll';
-            statusBadgeHtml += `<span class="status-badge-mini badge-shortage"><span class="material-symbols-outlined">warning</span>${shortageType}</span>`;
+            shortageBadgeHtml = `<span class="status-badge-mini badge-shortage badge-shortage-inline"><span class="material-symbols-outlined">warning</span>${shortageType}</span>`;
         }
 
         const rowClass = isCheapest ? 'cheapest-row' : (isPV ? 'pv-row' : (isR1 || isR2 ? 'reserve-row' : 'default-row'));
@@ -1396,6 +1500,13 @@ function updateTableRows(data) {
         replaceContent(rowDiv, '.comparison-row-info', `${item.Företag} · ${size} ${unit}`);
         replaceContent(rowDiv, '.price-value', `${itemPrice.toLocaleString('sv-SE', { minimumFractionDigits: 2 })} kr`);
         replaceContent(rowDiv, '.price-diff', priceDiffText);
+
+        if (shortageBadgeHtml) {
+            const rowProduct = rowDiv.querySelector('.comparison-row-product');
+            if (rowProduct) {
+                rowProduct.insertAdjacentHTML('beforeend', shortageBadgeHtml);
+            }
+        }
         
         const priceDiffEl = rowDiv.querySelector('.price-diff');
         if (priceDiffEl && priceDiffStyle) {
@@ -1434,6 +1545,23 @@ function updateTableRows(data) {
                 reason.textContent = item.shortage.reason || 'Ingen orsak angiven.';
 
                 shortageBox.append(title, dates, reason);
+
+                const actions = document.createElement('div');
+                actions.className = 'row-shortage-actions';
+
+                const alternativesButton = document.createElement('button');
+                alternativesButton.type = 'button';
+                alternativesButton.className = 'row-shortage-alt-btn';
+                alternativesButton.textContent = 'Möjliga alternativ (Läkemedelsverket)';
+                alternativesButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    openShortageAlternativesModal(item.shortage);
+                });
+
+                actions.appendChild(alternativesButton);
+                shortageBox.appendChild(actions);
+
                 detailsDiv.appendChild(shortageBox);
             }
 
