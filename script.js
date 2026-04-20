@@ -84,6 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('darkMode', 'disabled');
                 icon.textContent = 'dark_mode';
             }
+
+            // Re-render chart so axis/grid colors follow the active theme.
+            if (currentSearch) {
+                requestAnimationFrame(() => {
+                    renderHistoryChart();
+                });
+            }
         });
     }
 });
@@ -185,6 +192,71 @@ function getHistorySubGroups(group) {
     return historySubStrengthMap.get(makeHistorySubStrengthKey(group.sub, group.str)) || [];
 }
 
+function parseIsoDate(value) {
+    const text = String(value || '').trim();
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(text)) return null;
+    const date = new Date(`${text}T00:00:00Z`);
+    return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function addUtcMonths(date, months) {
+    return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() + months, date.getUTCDate()));
+}
+
+function getMonthDateRange(monthCode) {
+    const code = String(monthCode || '');
+    if (code.length !== 4) return null;
+
+    const year = 2000 + parseInt(code.slice(0, 2), 10);
+    const month = parseInt(code.slice(2, 4), 10);
+    if (!Number.isFinite(year) || !Number.isFinite(month) || month < 1 || month > 12) return null;
+
+    const monthStart = new Date(Date.UTC(year, month - 1, 1));
+    const monthEnd = new Date(Date.UTC(year, month, 0));
+    return { monthStart, monthEnd };
+}
+
+function isShortageActiveForMonth(shortage, monthCode) {
+    const range = getMonthDateRange(monthCode);
+    if (!range || !shortage) return false;
+
+    const startDate = parseIsoDate(shortage.start_date);
+    if (!startDate) return false;
+
+    const endDate = parseIsoDate(shortage.end_date);
+    const effectiveEnd = endDate || new Date(Date.UTC(9999, 11, 31));
+
+    return startDate <= range.monthEnd && effectiveEnd >= range.monthStart;
+}
+
+function isShortageUpcomingWithinMonths(shortage, monthCode, monthsAhead = 3) {
+    const range = getMonthDateRange(monthCode);
+    if (!range || !shortage) return false;
+
+    const startDate = parseIsoDate(shortage.start_date);
+    if (!startDate) return false;
+
+    const windowEnd = addUtcMonths(range.monthEnd, monthsAhead);
+    return startDate > range.monthEnd && startDate <= windowEnd;
+}
+
+function getActiveShortageForMonth(brand, monthCode) {
+    const shortages = Array.isArray(brand?.shortages) ? brand.shortages : [];
+
+    const active = shortages.find(shortage => isShortageActiveForMonth(shortage, monthCode));
+    if (active) return active;
+
+    const upcoming = shortages
+        .filter(shortage => isShortageUpcomingWithinMonths(shortage, monthCode, 3))
+        .sort((a, b) => {
+            const aDate = parseIsoDate(a.start_date)?.getTime() ?? Number.POSITIVE_INFINITY;
+            const bDate = parseIsoDate(b.start_date)?.getTime() ?? Number.POSITIVE_INFINITY;
+            return aDate - bDate;
+        });
+
+    return upcoming[0] || null;
+}
+
 function getGroupMonthRows(group, monthCode) {
     if (!group) return [];
     const monthKey = String(monthCode);
@@ -197,6 +269,7 @@ function getGroupMonthRows(group, monthCode) {
     for (const brand of group.brands || []) {
         const monthRecord = brand.history?.[monthKey];
         if (!monthRecord) continue;
+        const activeShortage = getActiveShortageForMonth(brand, monthCode);
 
         const row = {
             Produktnamn: brand.name,
@@ -214,6 +287,7 @@ function getGroupMonthRows(group, monthCode) {
             "Försäljningspris": monthRecord.price,
             "Utbytesgrupps ID": toNumber(group.id),
             "Förpackningsstorleksgrupp": group.size_id,
+            shortage: activeShortage,
         };
 
         if (brand.packaging) {
@@ -1098,6 +1172,11 @@ function updateTableRows(data) {
             statusBadgeHtml = `<span class="status-badge-mini" style="color: #16a34a; border: 1px solid #10b981;"><span class="material-symbols-outlined" style="font-size: 14px;">star</span></span>`;
         }
 
+        if (item.shortage) {
+            const shortageType = String(item.shortage.shortage_type || '').trim() || 'Försäljningsuppehåll';
+            statusBadgeHtml += `<span class="status-badge-mini badge-shortage"><span class="material-symbols-outlined">warning</span>${shortageType}</span>`;
+        }
+
         const rowClass = isCheapest ? 'cheapest-row' : (isPV ? 'pv-row' : (isR1 || isR2 ? 'reserve-row' : 'default-row'));
         const priceDiffStyle = diff > 0 ? 'color: #dc2626;' : '';
         const priceDiffText = diff === 0 ? 'PV' : (diff > 0 ? `+${diff.toFixed(2)} kr` : `${diff.toFixed(2)} kr`);
@@ -1131,6 +1210,28 @@ function updateTableRows(data) {
             replaceContent(detailItems[1], '.row-detail-value', forpackning);
             replaceContent(detailItems[2], '.row-detail-value', item.Företag || '—');
             replaceContent(detailItems[3], '.row-detail-value', item.Ursprung || 'Generics');
+
+            if (item.shortage) {
+                const shortageBox = document.createElement('div');
+                shortageBox.className = 'row-shortage-note';
+
+                const title = document.createElement('p');
+                title.className = 'row-shortage-title';
+                title.textContent = String(item.shortage.status || '').trim() || String(item.shortage.shortage_type || '').trim() || 'Försäljningsuppehåll';
+
+                const dates = document.createElement('p');
+                dates.className = 'row-shortage-dates';
+                const startText = item.shortage.start_text || item.shortage.start_date || 'Okänt';
+                const endText = item.shortage.end_text || item.shortage.end_date || 'Tills vidare';
+                dates.textContent = `${startText} - ${endText}`;
+
+                const reason = document.createElement('p');
+                reason.className = 'row-shortage-reason';
+                reason.textContent = item.shortage.reason || 'Ingen orsak angiven.';
+
+                shortageBox.append(title, dates, reason);
+                detailsDiv.appendChild(shortageBox);
+            }
 
             rowDiv.appendChild(detailsDiv);
         }

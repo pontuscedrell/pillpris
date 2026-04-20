@@ -9,15 +9,39 @@ load once and switch months locally without fetching each month file.
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime, timezone
+from io import BytesIO
 from pathlib import Path
-from typing import Any
+from typing import Any, TypedDict
+
+import pandas as pd
+import requests
 
 from build_packaging_map import build_packaging_map
 
 
 DATA_DIR = Path("data")
 OUTPUT_FILE = DATA_DIR / "product-history.json"
+SHORTAGE_EXPORT_URL = (
+    "https://www.lakemedelsverket.se/api/sts/exporttoxlsx"
+    "?shortageStatusOngoing=true"
+    "&shortageStatusComing=true"
+    "&cessationStatusComing=true"
+    "&dateFilter=0"
+    "&vetHum=1"
+)
+
+
+class ShortageRecord(TypedDict):
+    status: str
+    shortage_type: str
+    start_date: str
+    end_date: str
+    start_text: str
+    end_text: str
+    reason: str
+    updated_at: str
 
 
 def normalize_text(value: Any) -> str:
@@ -77,9 +101,66 @@ def natural_month_sort(month_code: str) -> int:
         return 0
 
 
+def extract_iso_date(value: Any) -> str:
+    text = str(value or "").strip()
+    if not text:
+        return ""
+
+    match = re.search(r"(\d{4}-\d{2}-\d{2})", text)
+    if not match:
+        return ""
+    return match.group(1)
+
+
+def fetch_shortage_records_by_vnr() -> dict[str, list[ShortageRecord]]:
+    headers = {"User-Agent": "Mozilla/5.0"}
+    try:
+        response = requests.get(SHORTAGE_EXPORT_URL, headers=headers, timeout=30)
+        response.raise_for_status()
+    except Exception as exc:
+        print(f"WARNING: Failed to fetch shortage export: {exc}")
+        return {}
+
+    try:
+        df = pd.read_excel(BytesIO(response.content), engine="openpyxl")
+    except Exception as exc:
+        print(f"WARNING: Failed to parse shortage export: {exc}")
+        return {}
+
+    by_vnr: dict[str, list[ShortageRecord]] = {}
+    for _, row in df.iterrows():
+        vnr = parse_int(row.get("Varunummer"))
+        if vnr is None:
+            continue
+
+        vnr_key = str(vnr)
+        start_text = str(row.get("Startdatum", "") or "").strip()
+        end_text = str(row.get("Slutdatum", "") or "").strip()
+
+        record: ShortageRecord = {
+            "status": str(row.get("Status", "") or "").strip(),
+            "shortage_type": str(row.get("Typ av försäljningsuppehåll", "") or "").strip(),
+            "start_date": extract_iso_date(start_text),
+            "end_date": extract_iso_date(end_text),
+            "start_text": start_text,
+            "end_text": end_text,
+            "reason": str(row.get("Orsak", "") or "").strip(),
+            "updated_at": str(row.get("Senast uppdaterad (datum)", "") or "").strip(),
+        }
+
+        by_vnr.setdefault(vnr_key, []).append(record)
+
+    for records in by_vnr.values():
+        records.sort(key=lambda r: (r.get("start_date", ""), r.get("updated_at", "")), reverse=True)
+
+    print(f"INFO: Loaded shortage records for {len(by_vnr)} VNRs")
+    return by_vnr
+
+
 def build_product_history() -> dict[str, Any]:
     # Build packaging map in-memory from MEDPrice to avoid a separate JSON artifact.
     packaging_map = build_packaging_map(output_file=None)
+    shortage_by_vnr = fetch_shortage_records_by_vnr()
 
     month_files = sorted(
         [p for p in DATA_DIR.glob("*.json") if p.stem.isdigit() and len(p.stem) == 4],
@@ -146,6 +227,7 @@ def build_product_history() -> dict[str, Any]:
                     "company": "",
                     "origin": "",
                     "packaging": "",
+                    "shortages": [dict(entry) for entry in shortage_by_vnr.get(brand_key, [])],
                     "history": {},
                 },
             )

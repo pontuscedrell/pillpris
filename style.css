@@ -66,11 +66,11 @@ body.dark-mode {
     body.has-selection .site-header {
         margin-bottom: 3px;
         border-bottom: none;
-        background: #ffffff;
+        background: var(--header-bg);
     }
     
     body.has-selection {
-        background: #ffffff;
+        background: var(--bg-primary);
         background-image: none;
     }
 }
@@ -1645,6 +1645,23 @@ body.dark-mode .stability-insight-text {
     border: 1px solid #f59e0b;
 }
 
+.badge-shortage {
+    color: #b45309;
+    border: 1px solid #f97316;
+    background: #fff7ed;
+    gap: 4px;
+}
+
+.badge-shortage .material-symbols-outlined {
+    font-size: 14px;
+}
+
+body.dark-mode .badge-shortage {
+    color: #fdba74;
+    border-color: #ea580c;
+    background: rgba(249, 115, 22, 0.14);
+}
+
 /* Om du vill att det ska se extra proffsigt ut på mobilen */
 @media (max-width: 600px) {
     .info-summary-card {
@@ -1814,6 +1831,54 @@ body.dark-mode .stability-insight-text {
 .row-detail-value {
     font-weight: 700;
     color: var(--text-primary);
+}
+
+.row-shortage-note {
+    grid-column: 1 / -1;
+    border: 1px solid #fed7aa;
+    background: #fff7ed;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-top: 2px;
+}
+
+.row-shortage-title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 800;
+    color: #9a3412;
+    text-transform: uppercase;
+}
+
+.row-shortage-dates {
+    margin: 4px 0 0 0;
+    font-size: 12px;
+    color: #c2410c;
+    font-weight: 600;
+}
+
+.row-shortage-reason {
+    margin: 6px 0 0 0;
+    font-size: 12px;
+    color: #7c2d12;
+    line-height: 1.45;
+}
+
+body.dark-mode .row-shortage-note {
+    border-color: #9a3412;
+    background: rgba(194, 65, 12, 0.2);
+}
+
+body.dark-mode .row-shortage-title {
+    color: #fdba74;
+}
+
+body.dark-mode .row-shortage-dates {
+    color: #fed7aa;
+}
+
+body.dark-mode .row-shortage-reason {
+    color: #ffedd5;
 }
 
 /* --- Comparison Row Container --- */
