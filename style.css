@@ -686,6 +686,26 @@ input, #month-select-main, #time-period-select {
     transition: all 0.2s;
 }
 
+body.dark-mode #month-select-main,
+body.dark-mode #time-period-select {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+    color-scheme: dark;
+}
+
+body.dark-mode #month-select-main option,
+body.dark-mode #time-period-select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+body.dark-mode #month-select-main:focus,
+body.dark-mode #time-period-select:focus {
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.18);
+}
+
 #sub-input {
     border: none;
     box-shadow: none;
@@ -3076,10 +3096,12 @@ body.dark-mode .price-card-header-bar.is-alert-red .price-card-icon {
     }
 
     .badge-shortage-inline {
-        flex: 0 0 100%;
+        display: inline-flex;
+        flex: 0 0 auto;
         margin-left: 0;
         margin-top: 2px;
-        width: max-content;
+        width: fit-content;
+        align-self: flex-start;
     }
 
     .comparison-row-info {
