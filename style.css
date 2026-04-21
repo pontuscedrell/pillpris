@@ -945,6 +945,19 @@ input:focus, #month-select-main:focus, #time-period-select:focus {
     background: var(--bg-primary); 
 }
 
+.dropdown-item.is-selected {
+    background: #eff6ff;
+}
+
+body.dark-mode .dropdown-item.is-selected {
+    background: rgba(20, 184, 166, 0.16);
+}
+
+body.dark-mode .dropdown-item.is-selected .item-line1,
+body.dark-mode .dropdown-item.is-selected .item-line2 {
+    color: var(--text-primary);
+}
+
 .item-line1 { 
     font-weight: 700; 
     font-size: 13px; 

@@ -772,11 +772,11 @@ function updateInputFromSelection(index) {
 function highlightDropdownItem(items, index) {
     items.forEach((item, i) => {
         if (i === index) {
-            item.style.background = '#eff6ff';
+            item.classList.add('is-selected');
             item.style.cursor = 'pointer';
             item.scrollIntoView({ block: 'nearest' });
         } else {
-            item.style.background = '';
+            item.classList.remove('is-selected');
         }
     });
 }
