@@ -64049,25 +64049,6 @@
         "Utbytesgrupps ID":111841
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Klaritromycin Ebb",
-        "Varunummer":528069,
-        "Styrka":"250 mg",
-        "Förpackningsstorleksgrupp":"T14",
-        "Substans":"Klaritromycin",
-        "Beredningsform":"Tablett",
-        "Storlek":14.0,
-        "Apotekens inköpspris":136.36,
-        "Försäljningspris":199.38,
-        "Inköpspris per minsta enhet":9.74,
-        "Försäljningspris per minsta enhet":14.24,
-        "NPL ID":20180907000021,
-        "NPL pack ID":20190225100051,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":111841
-    },
-    {
         "Status":"R1",
         "Produktnamn":"Klacid",
         "Varunummer":106021,
@@ -64103,6 +64084,25 @@
         "NPL pack ID":20181109100069,
         "Ursprung":"ParallelImport",
         "Företag":"2care4 ApS",
+        "Utbytesgrupps ID":111841
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Klaritromycin Ebb",
+        "Varunummer":528069,
+        "Styrka":"250 mg",
+        "Förpackningsstorleksgrupp":"T14",
+        "Substans":"Klaritromycin",
+        "Beredningsform":"Tablett",
+        "Storlek":14.0,
+        "Apotekens inköpspris":136.36,
+        "Försäljningspris":199.38,
+        "Inköpspris per minsta enhet":9.74,
+        "Försäljningspris per minsta enhet":14.24,
+        "NPL ID":20180907000021,
+        "NPL pack ID":20190225100051,
+        "Ursprung":"ParallelImport",
+        "Företag":"Ebb Medical AB",
         "Utbytesgrupps ID":111841
     },
     {
@@ -96730,25 +96730,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Omeprazol Bluefish",
-        "Varunummer":532064,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T14",
-        "Substans":"Omeprazol",
-        "Beredningsform":"Enterokapsel\/Enterotablett",
-        "Storlek":14.0,
-        "Apotekens inköpspris":6.0,
-        "Försäljningspris":59.63,
-        "Inköpspris per minsta enhet":0.43,
-        "Försäljningspris per minsta enhet":4.26,
-        "NPL ID":20070713000028,
-        "NPL pack ID":20130530100438,
-        "Ursprung":"Generics",
-        "Företag":"Bluefish Pharmaceuticals AB",
-        "Utbytesgrupps ID":111431
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Omeprazol Apofri",
         "Varunummer":509093,
         "Styrka":"20 mg",
@@ -96767,7 +96748,7 @@
         "Utbytesgrupps ID":111431
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Omeprazol Sandoz",
         "Varunummer":510136,
         "Styrka":"20 mg",
@@ -96783,6 +96764,25 @@
         "NPL pack ID":20130925100067,
         "Ursprung":"Generics",
         "Företag":"Sandoz A\/S",
+        "Utbytesgrupps ID":111431
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Omeprazol Bluefish",
+        "Varunummer":532064,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T14",
+        "Substans":"Omeprazol",
+        "Beredningsform":"Enterokapsel\/Enterotablett",
+        "Storlek":14.0,
+        "Apotekens inköpspris":6.0,
+        "Försäljningspris":59.63,
+        "Inköpspris per minsta enhet":0.43,
+        "Försäljningspris per minsta enhet":4.26,
+        "NPL ID":20070713000028,
+        "NPL pack ID":20130530100438,
+        "Ursprung":"Generics",
+        "Företag":"Bluefish Pharmaceuticals AB",
         "Utbytesgrupps ID":111431
     },
     {

@@ -91523,25 +91523,6 @@
         "Utbytesgrupps ID":112445
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Naproxen Evolan",
-        "Varunummer":451835,
-        "Styrka":"500 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Naproxen",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":54.74,
-        "Försäljningspris":113.49,
-        "Inköpspris per minsta enhet":1.82,
-        "Försäljningspris per minsta enhet":3.78,
-        "NPL ID":20160216000028,
-        "NPL pack ID":20160509100398,
-        "Ursprung":"Generics",
-        "Företag":"Evolan Pharma AB",
-        "Utbytesgrupps ID":112445
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Naproxen Bluefish",
         "Varunummer":385563,
@@ -91558,6 +91539,25 @@
         "NPL pack ID":20080508101137,
         "Ursprung":"Generics",
         "Företag":"Bluefish Pharmaceuticals AB",
+        "Utbytesgrupps ID":112445
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Naproxen Evolan",
+        "Varunummer":451835,
+        "Styrka":"500 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Naproxen",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":54.74,
+        "Försäljningspris":113.49,
+        "Inköpspris per minsta enhet":1.82,
+        "Försäljningspris per minsta enhet":3.78,
+        "NPL ID":20160216000028,
+        "NPL pack ID":20160509100398,
+        "Ursprung":"Generics",
+        "Företag":"Evolan Pharma AB",
         "Utbytesgrupps ID":112445
     },
     {
