@@ -11744,7 +11744,7 @@
     {
         "Status":"R2",
         "Produktnamn":"Atorbir",
-        "Varunummer":405145,
+        "Varunummer":511164,
         "Styrka":"40 mg",
         "Förpackningsstorleksgrupp":"T28",
         "Substans":"Atorvastatin",
@@ -53599,7 +53599,7 @@
         "Utbytesgrupps ID":112700
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Nitrolingual",
         "Varunummer":179258,
         "Styrka":"0,4 mg\/dos",
@@ -86698,25 +86698,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Midodrine Tillomed",
-        "Varunummer":522296,
-        "Styrka":"2,5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Midodrin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":95.0,
-        "Försäljningspris":156.58,
-        "Inköpspris per minsta enhet":0.95,
-        "Försäljningspris per minsta enhet":1.57,
-        "NPL ID":20220902000043,
-        "NPL pack ID":20250227100142,
-        "Ursprung":"Generics",
-        "Företag":"FrostPharma AB",
-        "Utbytesgrupps ID":113923
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Augermid",
         "Varunummer":466596,
         "Styrka":"2,5 mg",
@@ -86735,7 +86716,7 @@
         "Utbytesgrupps ID":113923
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Hypotron",
         "Varunummer":469899,
         "Styrka":"2,5 mg",
@@ -86770,6 +86751,25 @@
         "NPL pack ID":20160308101022,
         "Ursprung":"Original",
         "Företag":"Evolan Pharma AB",
+        "Utbytesgrupps ID":113923
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Midodrine Tillomed",
+        "Varunummer":522296,
+        "Styrka":"2,5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Midodrin",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":95.0,
+        "Försäljningspris":156.58,
+        "Inköpspris per minsta enhet":0.95,
+        "Försäljningspris per minsta enhet":1.57,
+        "NPL ID":20220902000043,
+        "NPL pack ID":20250227100142,
+        "Ursprung":"Generics",
+        "Företag":"FrostPharma AB",
         "Utbytesgrupps ID":113923
     },
     {
@@ -140278,25 +140278,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Cyklokapron",
-        "Varunummer":455653,
-        "Styrka":"500 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Tranexamsyra",
-        "Beredningsform":"Tablett",
-        "Storlek":50.0,
-        "Apotekens inköpspris":179.22,
-        "Försäljningspris":243.74,
-        "Inköpspris per minsta enhet":3.58,
-        "Försäljningspris per minsta enhet":4.87,
-        "NPL ID":19690328000028,
-        "NPL pack ID":20200602100113,
-        "Ursprung":"Original",
-        "Företag":"Viatris AB",
-        "Utbytesgrupps ID":111081
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Tranexamsyra Ebb",
         "Varunummer":482310,
         "Styrka":"500 mg",
@@ -140312,6 +140293,25 @@
         "NPL pack ID":20200907100191,
         "Ursprung":"ParallelImport",
         "Företag":"Ebb Medical AB",
+        "Utbytesgrupps ID":111081
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Cyklokapron",
+        "Varunummer":455653,
+        "Styrka":"500 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Tranexamsyra",
+        "Beredningsform":"Tablett",
+        "Storlek":50.0,
+        "Apotekens inköpspris":179.22,
+        "Försäljningspris":243.74,
+        "Inköpspris per minsta enhet":3.58,
+        "Försäljningspris per minsta enhet":4.87,
+        "NPL ID":19690328000028,
+        "NPL pack ID":20200602100113,
+        "Ursprung":"Original",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111081
     },
     {
