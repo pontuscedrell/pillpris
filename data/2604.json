@@ -17425,7 +17425,7 @@
     {
         "Status":"R1",
         "Produktnamn":"Bisoprolol Sandoz",
-        "Varunummer":69102,
+        "Varunummer":574055,
         "Styrka":"5 mg",
         "Förpackningsstorleksgrupp":"T28",
         "Substans":"Bisoprolol",
@@ -59243,25 +59243,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Ivabradine Anpharm",
-        "Varunummer":111631,
-        "Styrka":"7,5 mg",
-        "Förpackningsstorleksgrupp":"T24",
-        "Substans":"Ivabradin",
-        "Beredningsform":"Tablett",
-        "Storlek":112.0,
-        "Apotekens inköpspris":343.0,
-        "Försäljningspris":412.83,
-        "Inköpspris per minsta enhet":3.06,
-        "Försäljningspris per minsta enhet":3.69,
-        "NPL ID":20150524000025,
-        "NPL pack ID":20181012100200,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"2care4 ApS",
-        "Utbytesgrupps ID":111368
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Ivabradin Medical Valley",
         "Varunummer":196443,
         "Styrka":"7,5 mg",
@@ -59280,7 +59261,7 @@
         "Utbytesgrupps ID":111368
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Ivabradin Medical Valley",
         "Varunummer":106368,
         "Styrka":"7,5 mg",
@@ -59296,6 +59277,25 @@
         "NPL pack ID":20160302100427,
         "Ursprung":"Generics",
         "Företag":"Medical Valley Invest AB",
+        "Utbytesgrupps ID":111368
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Ivabradine Anpharm",
+        "Varunummer":111631,
+        "Styrka":"7,5 mg",
+        "Förpackningsstorleksgrupp":"T24",
+        "Substans":"Ivabradin",
+        "Beredningsform":"Tablett",
+        "Storlek":112.0,
+        "Apotekens inköpspris":343.0,
+        "Försäljningspris":412.83,
+        "Inköpspris per minsta enhet":3.06,
+        "Försäljningspris per minsta enhet":3.69,
+        "NPL ID":20150524000025,
+        "NPL pack ID":20181012100200,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"2care4 ApS",
         "Utbytesgrupps ID":111368
     },
     {
@@ -79800,25 +79800,6 @@
         "Utbytesgrupps ID":111247
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Lacrofarm",
-        "Varunummer":128110,
-        "Styrka":null,
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Makrogol + kaliumklorid + natriumbikarbonat + natriumklorid",
-        "Beredningsform":"Pulver till oral lösning, dospåse",
-        "Storlek":100.0,
-        "Apotekens inköpspris":249.46,
-        "Försäljningspris":316.44,
-        "Inköpspris per minsta enhet":2.49,
-        "Försäljningspris per minsta enhet":3.16,
-        "NPL ID":20090827000011,
-        "NPL pack ID":20090921100099,
-        "Ursprung":"Generics",
-        "Företag":"Orifarm Generics AB",
-        "Utbytesgrupps ID":111247
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Moxalole",
         "Varunummer":160503,
@@ -79854,6 +79835,25 @@
         "NPL pack ID":20070905100123,
         "Ursprung":"Generics",
         "Företag":"Cooper Consumer Health B.V",
+        "Utbytesgrupps ID":111247
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Lacrofarm",
+        "Varunummer":128110,
+        "Styrka":null,
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Makrogol + kaliumklorid + natriumbikarbonat + natriumklorid",
+        "Beredningsform":"Pulver till oral lösning, dospåse",
+        "Storlek":100.0,
+        "Apotekens inköpspris":249.46,
+        "Försäljningspris":316.44,
+        "Inköpspris per minsta enhet":2.49,
+        "Försäljningspris per minsta enhet":3.16,
+        "NPL ID":20090827000011,
+        "NPL pack ID":20090921100099,
+        "Ursprung":"Generics",
+        "Företag":"Orifarm Generics AB",
         "Utbytesgrupps ID":111247
     },
     {
@@ -117174,25 +117174,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Risperidon Krka",
-        "Varunummer":406430,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Risperidon",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":52.0,
-        "Försäljningspris":110.46,
-        "Inköpspris per minsta enhet":0.52,
-        "Försäljningspris per minsta enhet":1.1,
-        "NPL ID":20060606000013,
-        "NPL pack ID":20060707100186,
-        "Ursprung":"Generics",
-        "Företag":"KRKA Sverige AB",
-        "Utbytesgrupps ID":111907
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Risperidone Grindeks",
         "Varunummer":462656,
         "Styrka":"0,5 mg",
@@ -117211,7 +117192,7 @@
         "Utbytesgrupps ID":111907
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Risperidon 2care4",
         "Varunummer":415593,
         "Styrka":"0,5 mg",
@@ -117230,7 +117211,7 @@
         "Utbytesgrupps ID":111907
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Risperidon Abacus Medicine",
         "Varunummer":430369,
         "Styrka":"0,5 mg",
@@ -117249,7 +117230,7 @@
         "Utbytesgrupps ID":111907
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Risperidon Abacus Medicine",
         "Varunummer":430369,
         "Styrka":"0,5 mg",
@@ -117265,6 +117246,25 @@
         "NPL pack ID":20240613100061,
         "Ursprung":"ParallelImport",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":111907
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Risperidon Krka",
+        "Varunummer":406430,
+        "Styrka":"0,5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Risperidon",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":52.0,
+        "Försäljningspris":110.46,
+        "Inköpspris per minsta enhet":0.52,
+        "Försäljningspris per minsta enhet":1.1,
+        "NPL ID":20060606000013,
+        "NPL pack ID":20060707100186,
+        "Ursprung":"Generics",
+        "Företag":"KRKA Sverige AB",
         "Utbytesgrupps ID":111907
     },
     {
@@ -129030,25 +129030,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Sitagliptin Glenmark",
-        "Varunummer":584602,
-        "Styrka":"25 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Sitagliptin",
-        "Beredningsform":"Tablett",
-        "Storlek":98.0,
-        "Apotekens inköpspris":32.29,
-        "Försäljningspris":88.68,
-        "Inköpspris per minsta enhet":0.33,
-        "Försäljningspris per minsta enhet":0.9,
-        "NPL ID":20200529000039,
-        "NPL pack ID":20201209100100,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":111118
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Sitagliptin Zentiva k.s.",
         "Varunummer":198502,
         "Styrka":"25 mg",
@@ -129067,7 +129048,7 @@
         "Utbytesgrupps ID":111118
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Sitagliptin STADA",
         "Varunummer":154854,
         "Styrka":"25 mg",
@@ -129083,6 +129064,25 @@
         "NPL pack ID":20200211100122,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111118
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Sitagliptin Krka",
+        "Varunummer":166726,
+        "Styrka":"25 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Sitagliptin",
+        "Beredningsform":"Tablett",
+        "Storlek":98.0,
+        "Apotekens inköpspris":385.62,
+        "Försäljningspris":456.51,
+        "Inköpspris per minsta enhet":3.93,
+        "Försäljningspris per minsta enhet":4.66,
+        "NPL ID":20181227000050,
+        "NPL pack ID":20190529100146,
+        "Ursprung":"Generics",
+        "Företag":"KRKA Sverige AB",
         "Utbytesgrupps ID":111118
     },
     {
@@ -129102,6 +129102,25 @@
         "NPL pack ID":20250930100156,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":111118
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Sitagliptin Glenmark",
+        "Varunummer":584602,
+        "Styrka":"25 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Sitagliptin",
+        "Beredningsform":"Tablett",
+        "Storlek":98.0,
+        "Apotekens inköpspris":32.29,
+        "Försäljningspris":88.68,
+        "Inköpspris per minsta enhet":0.33,
+        "Försäljningspris per minsta enhet":0.9,
+        "NPL ID":20200529000039,
+        "NPL pack ID":20201209100100,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":111118
     },
     {
@@ -129292,25 +129311,6 @@
         "NPL pack ID":20210209100034,
         "Ursprung":"Generics",
         "Företag":"Grindeks Kalceks Sverige AB",
-        "Utbytesgrupps ID":111118
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Sitagliptin Krka",
-        "Varunummer":166726,
-        "Styrka":"25 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Sitagliptin",
-        "Beredningsform":"Tablett",
-        "Storlek":98.0,
-        "Apotekens inköpspris":385.62,
-        "Försäljningspris":456.51,
-        "Inköpspris per minsta enhet":3.93,
-        "Försäljningspris per minsta enhet":4.66,
-        "NPL ID":20181227000050,
-        "NPL pack ID":20190529100146,
-        "Ursprung":"Generics",
-        "Företag":"KRKA Sverige AB",
         "Utbytesgrupps ID":111118
     },
     {
