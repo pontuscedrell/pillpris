@@ -9386,25 +9386,6 @@
         "Utbytesgrupps ID":112125
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Atomoxetin Glenmark",
-        "Varunummer":564996,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Atomoxetin",
-        "Beredningsform":"Kapsel",
-        "Storlek":28.0,
-        "Apotekens inköpspris":380.18,
-        "Försäljningspris":450.93,
-        "Inköpspris per minsta enhet":13.58,
-        "Försäljningspris per minsta enhet":16.1,
-        "NPL ID":20170531000078,
-        "NPL pack ID":20171027100630,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":112126
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Atomoxetine Accord",
         "Varunummer":453350,
@@ -9421,6 +9402,25 @@
         "NPL pack ID":20180130100901,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":112126
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Atomoxetin Glenmark",
+        "Varunummer":564996,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Atomoxetin",
+        "Beredningsform":"Kapsel",
+        "Storlek":28.0,
+        "Apotekens inköpspris":380.18,
+        "Försäljningspris":450.93,
+        "Inköpspris per minsta enhet":13.58,
+        "Försäljningspris per minsta enhet":16.1,
+        "NPL ID":20170531000078,
+        "NPL pack ID":20171027100630,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":112126
     },
     {
@@ -9482,25 +9482,6 @@
     },
     {
         "Status":"R1",
-        "Produktnamn":"Atomoxetin Glenmark",
-        "Varunummer":105978,
-        "Styrka":"18 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Atomoxetin",
-        "Beredningsform":"Kapsel",
-        "Storlek":28.0,
-        "Apotekens inköpspris":65.17,
-        "Försäljningspris":125.01,
-        "Inköpspris per minsta enhet":2.33,
-        "Försäljningspris per minsta enhet":4.46,
-        "NPL ID":20170531000023,
-        "NPL pack ID":20171027100494,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":112132
-    },
-    {
-        "Status":"R2",
         "Produktnamn":"Atomoxetin Actavis",
         "Varunummer":401981,
         "Styrka":"18 mg",
@@ -9519,7 +9500,7 @@
         "Utbytesgrupps ID":112132
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Atomoxetine Accord",
         "Varunummer":178650,
         "Styrka":"18 mg",
@@ -9535,6 +9516,25 @@
         "NPL pack ID":20180130100307,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":112132
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Atomoxetin Glenmark",
+        "Varunummer":105978,
+        "Styrka":"18 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Atomoxetin",
+        "Beredningsform":"Kapsel",
+        "Storlek":28.0,
+        "Apotekens inköpspris":65.17,
+        "Försäljningspris":125.01,
+        "Inköpspris per minsta enhet":2.33,
+        "Försäljningspris per minsta enhet":4.46,
+        "NPL ID":20170531000023,
+        "NPL pack ID":20171027100494,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":112132
     },
     {
@@ -9576,7 +9576,7 @@
         "Utbytesgrupps ID":112132
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Atomoxetin Glenmark",
         "Varunummer":79122,
         "Styrka":"18 mg",
@@ -9804,7 +9804,7 @@
         "Utbytesgrupps ID":112133
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Atomoxetin Glenmark",
         "Varunummer":540943,
         "Styrka":"25 mg",
@@ -9881,25 +9881,6 @@
     },
     {
         "Status":"R1",
-        "Produktnamn":"Atomoxetin Glenmark",
-        "Varunummer":49831,
-        "Styrka":"40 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Atomoxetin",
-        "Beredningsform":"Kapsel",
-        "Storlek":28.0,
-        "Apotekens inköpspris":220.06,
-        "Försäljningspris":286.01,
-        "Inköpspris per minsta enhet":7.86,
-        "Försäljningspris per minsta enhet":10.21,
-        "NPL ID":20170531000047,
-        "NPL pack ID":20171027100562,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":112134
-    },
-    {
-        "Status":"R2",
         "Produktnamn":"Atomoxetin Medical Valley",
         "Varunummer":588259,
         "Styrka":"40 mg",
@@ -9953,6 +9934,25 @@
         "NPL pack ID":20171025100663,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":112134
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Atomoxetin Glenmark",
+        "Varunummer":49831,
+        "Styrka":"40 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Atomoxetin",
+        "Beredningsform":"Kapsel",
+        "Storlek":28.0,
+        "Apotekens inköpspris":220.06,
+        "Försäljningspris":286.01,
+        "Inköpspris per minsta enhet":7.86,
+        "Försäljningspris per minsta enhet":10.21,
+        "NPL ID":20170531000047,
+        "NPL pack ID":20171027100562,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":112134
     },
     {
@@ -10090,25 +10090,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Atomoxetin Glenmark",
-        "Varunummer":175170,
-        "Styrka":"60 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Atomoxetin",
-        "Beredningsform":"Kapsel",
-        "Storlek":28.0,
-        "Apotekens inköpspris":90.2,
-        "Försäljningspris":151.61,
-        "Inköpspris per minsta enhet":3.22,
-        "Försäljningspris per minsta enhet":5.41,
-        "NPL ID":20170531000054,
-        "NPL pack ID":20171027100593,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":112135
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Atomoxetine STADA",
         "Varunummer":577616,
         "Styrka":"60 mg",
@@ -10127,7 +10108,7 @@
         "Utbytesgrupps ID":112135
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Atomoxetin Actavis",
         "Varunummer":390152,
         "Styrka":"60 mg",
@@ -10143,6 +10124,44 @@
         "NPL pack ID":20150629100217,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":112135
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Atomoxetin Medical Valley",
+        "Varunummer":429917,
+        "Styrka":"60 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Atomoxetin",
+        "Beredningsform":"Kapsel",
+        "Storlek":30.0,
+        "Apotekens inköpspris":265.0,
+        "Försäljningspris":332.53,
+        "Inköpspris per minsta enhet":8.83,
+        "Försäljningspris per minsta enhet":11.08,
+        "NPL ID":20151002000285,
+        "NPL pack ID":20211111100075,
+        "Ursprung":"Generics",
+        "Företag":"Medical Valley Invest AB",
+        "Utbytesgrupps ID":112135
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Atomoxetin Glenmark",
+        "Varunummer":175170,
+        "Styrka":"60 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Atomoxetin",
+        "Beredningsform":"Kapsel",
+        "Storlek":28.0,
+        "Apotekens inköpspris":90.2,
+        "Försäljningspris":151.61,
+        "Inköpspris per minsta enhet":3.22,
+        "Försäljningspris per minsta enhet":5.41,
+        "NPL ID":20170531000054,
+        "NPL pack ID":20171027100593,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":112135
     },
     {
@@ -10185,25 +10204,6 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Atomoxetin Medical Valley",
-        "Varunummer":429917,
-        "Styrka":"60 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Atomoxetin",
-        "Beredningsform":"Kapsel",
-        "Storlek":30.0,
-        "Apotekens inköpspris":265.0,
-        "Försäljningspris":332.53,
-        "Inköpspris per minsta enhet":8.83,
-        "Försäljningspris per minsta enhet":11.08,
-        "NPL ID":20151002000285,
-        "NPL pack ID":20211111100075,
-        "Ursprung":"Generics",
-        "Företag":"Medical Valley Invest AB",
-        "Utbytesgrupps ID":112135
-    },
-    {
-        "Status":"Nej",
         "Produktnamn":"Atomoxetine Sandoz",
         "Varunummer":166721,
         "Styrka":"60 mg",
@@ -10222,7 +10222,7 @@
         "Utbytesgrupps ID":112135
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Atomoxetin Glenmark",
         "Varunummer":455001,
         "Styrka":"60 mg",
@@ -15846,7 +15846,7 @@
         "Utbytesgrupps ID":112273
     },
     {
-        "Status":"R1",
+        "Status":"Nej",
         "Produktnamn":"LUMIGAN",
         "Varunummer":85838,
         "Styrka":"0,1 mg\/ml",
@@ -15865,7 +15865,7 @@
         "Utbytesgrupps ID":112273
     },
     {
-        "Status":"R2",
+        "Status":"Nej",
         "Produktnamn":"LUMIGAN",
         "Varunummer":197932,
         "Styrka":"0,1 mg\/ml",
