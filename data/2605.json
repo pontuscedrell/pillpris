@@ -5396,7 +5396,7 @@
         "Utbytesgrupps ID":111595
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Amoxicillin Sandoz",
         "Varunummer":18874,
         "Styrka":"750 mg",
@@ -10794,7 +10794,7 @@
     {
         "Status":"R1",
         "Produktnamn":"Atorbir",
-        "Varunummer":172434,
+        "Varunummer":573031,
         "Styrka":"10 mg",
         "Förpackningsstorleksgrupp":"T28",
         "Substans":"Atorvastatin",
@@ -31483,7 +31483,7 @@
         "Utbytesgrupps ID":112377
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Dimetikon Cooper",
         "Varunummer":553099,
         "Styrka":"200 mg",
@@ -69274,7 +69274,7 @@
         "Utbytesgrupps ID":111216
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Duphalac®",
         "Varunummer":109199,
         "Styrka":"670 mg\/ml",
@@ -69293,7 +69293,7 @@
         "Utbytesgrupps ID":111216
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Laktulos Cooper",
         "Varunummer":9084,
         "Styrka":"670 mg\/ml",
@@ -86830,7 +86830,7 @@
         "Utbytesgrupps ID":112018
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Midodrin Abacus Medicine",
         "Varunummer":526470,
         "Styrka":"2,5 mg",
@@ -100056,7 +100056,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Oxycodone Depot 1A Farma",
-        "Varunummer":121478,
+        "Varunummer":556659,
         "Styrka":"10 mg",
         "Förpackningsstorleksgrupp":"TN100",
         "Substans":"Oxikodon",
@@ -133818,44 +133818,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Tamoxifen Sandoz",
-        "Varunummer":483518,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Tamoxifen",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":197.23,
-        "Försäljningspris":262.38,
-        "Inköpspris per minsta enhet":1.97,
-        "Försäljningspris per minsta enhet":2.62,
-        "NPL ID":20250605000040,
-        "NPL pack ID":20250920100081,
-        "Ursprung":"ParallelImport",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":111451
-    },
-    {
-        "Status":"PV",
-        "Produktnamn":"Tamoxifen Sandoz",
-        "Varunummer":483518,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Tamoxifen",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":197.23,
-        "Försäljningspris":262.38,
-        "Inköpspris per minsta enhet":1.97,
-        "Försäljningspris per minsta enhet":2.62,
-        "NPL ID":20250605000033,
-        "NPL pack ID":20251022100030,
-        "Ursprung":"ParallelImport",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":111451
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Tamoxifen Ebb",
         "Varunummer":470331,
         "Styrka":"20 mg",
@@ -133874,7 +133836,7 @@
         "Utbytesgrupps ID":111451
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Tamoxifen Sandoz",
         "Varunummer":564988,
         "Styrka":"20 mg",
@@ -133890,6 +133852,63 @@
         "NPL pack ID":20050609100063,
         "Ursprung":"Generics",
         "Företag":"Sandoz A\/S",
+        "Utbytesgrupps ID":111451
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Tamoxifen Orifarm",
+        "Varunummer":132119,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Tamoxifen",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":219.49,
+        "Försäljningspris":285.42,
+        "Inköpspris per minsta enhet":2.19,
+        "Försäljningspris per minsta enhet":2.85,
+        "NPL ID":20050310000027,
+        "NPL pack ID":20050809100313,
+        "Ursprung":"Generics",
+        "Företag":"Orifarm Generics AB",
+        "Utbytesgrupps ID":111451
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Tamoxifen Sandoz",
+        "Varunummer":483518,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Tamoxifen",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":197.23,
+        "Försäljningspris":262.38,
+        "Inköpspris per minsta enhet":1.97,
+        "Försäljningspris per minsta enhet":2.62,
+        "NPL ID":20250605000040,
+        "NPL pack ID":20250920100081,
+        "Ursprung":"ParallelImport",
+        "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":111451
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Tamoxifen Sandoz",
+        "Varunummer":483518,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Tamoxifen",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":197.23,
+        "Försäljningspris":262.38,
+        "Inköpspris per minsta enhet":1.97,
+        "Försäljningspris per minsta enhet":2.62,
+        "NPL ID":20250605000033,
+        "NPL pack ID":20251022100030,
+        "Ursprung":"ParallelImport",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":111451
     },
     {
@@ -133928,25 +133947,6 @@
         "NPL pack ID":19860701100106,
         "Ursprung":"Generics",
         "Företag":"Viatris AB",
-        "Utbytesgrupps ID":111451
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Tamoxifen Orifarm",
-        "Varunummer":132119,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Tamoxifen",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":219.49,
-        "Försäljningspris":285.42,
-        "Inköpspris per minsta enhet":2.19,
-        "Försäljningspris per minsta enhet":2.85,
-        "NPL ID":20050310000027,
-        "NPL pack ID":20050809100313,
-        "Ursprung":"Generics",
-        "Företag":"Orifarm Generics AB",
         "Utbytesgrupps ID":111451
     },
     {
