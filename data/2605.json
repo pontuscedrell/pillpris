@@ -120708,25 +120708,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Rivaroxaban Sandoz",
-        "Varunummer":586025,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Rivaroxaban",
-        "Beredningsform":"Tablett\/Kapsel",
-        "Storlek":98.0,
-        "Apotekens inköpspris":18.1,
-        "Försäljningspris":73.0,
-        "Inköpspris per minsta enhet":0.18,
-        "Försäljningspris per minsta enhet":0.74,
-        "NPL ID":20161004000107,
-        "NPL pack ID":20170110100908,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":111389
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Rivaroxaban STADA",
         "Varunummer":137789,
         "Styrka":"20 mg",
@@ -120745,7 +120726,7 @@
         "Utbytesgrupps ID":111389
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Rivaroxaban Accord",
         "Varunummer":120546,
         "Styrka":"20 mg",
@@ -120764,7 +120745,7 @@
         "Utbytesgrupps ID":111389
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Rivaroxaban Krka",
         "Varunummer":183121,
         "Styrka":"20 mg",
@@ -120780,6 +120761,25 @@
         "NPL pack ID":20190829100105,
         "Ursprung":"Generics",
         "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":111389
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Rivaroxaban Sandoz",
+        "Varunummer":586025,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Rivaroxaban",
+        "Beredningsform":"Tablett\/Kapsel",
+        "Storlek":98.0,
+        "Apotekens inköpspris":18.1,
+        "Försäljningspris":73.0,
+        "Inköpspris per minsta enhet":0.18,
+        "Försäljningspris per minsta enhet":0.74,
+        "NPL ID":20161004000107,
+        "NPL pack ID":20170110100908,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":111389
     },
     {
