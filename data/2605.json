@@ -139024,25 +139024,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Tiotropium STADA",
-        "Varunummer":171628,
-        "Styrka":"18 mikrogram",
-        "Förpackningsstorleksgrupp":"F23A",
-        "Substans":"Tiotropium",
-        "Beredningsform":"Inhalationspulver, kapsel",
-        "Storlek":90.0,
-        "Apotekens inköpspris":648.0,
-        "Försäljningspris":725.45,
-        "Inköpspris per minsta enhet":7.2,
-        "Försäljningspris per minsta enhet":8.06,
-        "NPL ID":20211223000010,
-        "NPL pack ID":20220902100187,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":112155
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Tiogiva",
         "Varunummer":413829,
         "Styrka":"18 mikrogram",
@@ -139061,7 +139042,7 @@
         "Utbytesgrupps ID":112155
     },
     {
-        "Status":"R1",
+        "Status":"PV",
         "Produktnamn":"Tiogiva",
         "Varunummer":580249,
         "Styrka":"18 mikrogram",
@@ -139077,6 +139058,25 @@
         "NPL pack ID":20191202100040,
         "Ursprung":"Generics",
         "Företag":"Glenmark Pharmaceuticals Nordic AB",
+        "Utbytesgrupps ID":112155
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Tiotropium STADA",
+        "Varunummer":171628,
+        "Styrka":"18 mikrogram",
+        "Förpackningsstorleksgrupp":"F23A",
+        "Substans":"Tiotropium",
+        "Beredningsform":"Inhalationspulver, kapsel",
+        "Storlek":90.0,
+        "Apotekens inköpspris":648.0,
+        "Försäljningspris":725.45,
+        "Inköpspris per minsta enhet":7.2,
+        "Försäljningspris per minsta enhet":8.06,
+        "NPL ID":20211223000010,
+        "NPL pack ID":20220902100187,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":112155
     },
     {
