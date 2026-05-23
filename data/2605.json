@@ -83733,7 +83733,7 @@
         "Utbytesgrupps ID":111030
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Mitforgen",
         "Varunummer":387176,
         "Styrka":"850 mg",
@@ -88902,25 +88902,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Myldamo",
-        "Varunummer":53714,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"TN90",
-        "Substans":"Modafinil",
-        "Beredningsform":"Tablett",
-        "Storlek":90.0,
-        "Apotekens inköpspris":303.31,
-        "Försäljningspris":372.14,
-        "Inköpspris per minsta enhet":3.37,
-        "Försäljningspris per minsta enhet":4.13,
-        "NPL ID":20170428000099,
-        "NPL pack ID":20170823100950,
-        "Ursprung":"Generics",
-        "Företag":"Viatris AB",
-        "Utbytesgrupps ID":112123
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Modafinil Orion",
         "Varunummer":420080,
         "Styrka":"100 mg",
@@ -88939,7 +88920,7 @@
         "Utbytesgrupps ID":112123
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Modafinil Sandoz",
         "Varunummer":581509,
         "Styrka":"100 mg",
@@ -88958,7 +88939,7 @@
         "Utbytesgrupps ID":112123
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Modafinil Orifarm",
         "Varunummer":68699,
         "Styrka":"100 mg",
@@ -88974,6 +88955,25 @@
         "NPL pack ID":20090727100415,
         "Ursprung":"Generics",
         "Företag":"Orifarm Generics AB",
+        "Utbytesgrupps ID":112123
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Myldamo",
+        "Varunummer":53714,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"TN90",
+        "Substans":"Modafinil",
+        "Beredningsform":"Tablett",
+        "Storlek":90.0,
+        "Apotekens inköpspris":303.31,
+        "Försäljningspris":372.14,
+        "Inköpspris per minsta enhet":3.37,
+        "Försäljningspris per minsta enhet":4.13,
+        "NPL ID":20170428000099,
+        "NPL pack ID":20170823100950,
+        "Ursprung":"Generics",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":112123
     },
     {

@@ -119168,25 +119168,6 @@
         "Utbytesgrupps ID":458
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Ritonavir Accord",
-        "Varunummer":475583,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Ritonavir",
-        "Beredningsform":"Tablett",
-        "Storlek":90.0,
-        "Apotekens inköpspris":454.04,
-        "Försäljningspris":526.64,
-        "Inköpspris per minsta enhet":5.04,
-        "Försäljningspris per minsta enhet":5.85,
-        "NPL ID":20160702000051,
-        "NPL pack ID":20190522100570,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":111573
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Norvir",
         "Varunummer":124838,
@@ -119279,6 +119260,25 @@
         "NPL pack ID":20191109100143,
         "Ursprung":"ParallelDistribution",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":111573
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Ritonavir Accord",
+        "Varunummer":475583,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Ritonavir",
+        "Beredningsform":"Tablett",
+        "Storlek":90.0,
+        "Apotekens inköpspris":454.04,
+        "Försäljningspris":526.64,
+        "Inköpspris per minsta enhet":5.04,
+        "Försäljningspris per minsta enhet":5.85,
+        "NPL ID":20160702000051,
+        "NPL pack ID":20190522100570,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":111573
     },
     {
