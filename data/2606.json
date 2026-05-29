@@ -116,7 +116,7 @@
     {
         "Status":"R2",
         "Produktnamn":"Abakavir\/Lamivudin Viatris",
-        "Varunummer":380961,
+        "Varunummer":186252,
         "Styrka":"600 mg\/300 mg",
         "Förpackningsstorleksgrupp":"T18",
         "Substans":"Abakavir + lamivudin",
@@ -129,7 +129,7 @@
         "NPL ID":20151229000068,
         "NPL pack ID":20160318100176,
         "Ursprung":"Generics",
-        "Företag":"Mylan AB",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111646
     },
     {
@@ -33536,25 +33536,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Doxycyklin EQL Pharma",
-        "Varunummer":412849,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Doxycyklin",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":103.5,
-        "Försäljningspris":165.37,
-        "Inköpspris per minsta enhet":3.45,
-        "Försäljningspris per minsta enhet":5.51,
-        "NPL ID":20111018000013,
-        "NPL pack ID":20120706100188,
-        "Ursprung":"Generics",
-        "Företag":"EQL Pharma AB",
-        "Utbytesgrupps ID":111591
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Doxyferm®",
         "Varunummer":153940,
         "Styrka":"100 mg",
@@ -33573,7 +33554,7 @@
         "Utbytesgrupps ID":111591
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Doxycyklin Abacus Medicine",
         "Varunummer":176250,
         "Styrka":"100 mg",
@@ -33592,7 +33573,7 @@
         "Utbytesgrupps ID":111591
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Doxycyklin Abacus Medicine",
         "Varunummer":176250,
         "Styrka":"100 mg",
@@ -33608,6 +33589,25 @@
         "NPL pack ID":20250825100582,
         "Ursprung":"ParallelImport",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":111591
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Doxycyklin EQL Pharma",
+        "Varunummer":412849,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Doxycyklin",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":103.5,
+        "Försäljningspris":165.37,
+        "Inköpspris per minsta enhet":3.45,
+        "Försäljningspris per minsta enhet":5.51,
+        "NPL ID":20111018000013,
+        "NPL pack ID":20120706100188,
+        "Ursprung":"Generics",
+        "Företag":"EQL Pharma AB",
         "Utbytesgrupps ID":111591
     },
     {
@@ -54873,25 +54873,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Hydroxyzine EQL Pharma",
-        "Varunummer":58335,
-        "Styrka":"25 mg",
-        "Förpackningsstorleksgrupp":"T17",
-        "Substans":"Hydroxizin",
-        "Beredningsform":"Tablett",
-        "Storlek":25.0,
-        "Apotekens inköpspris":8.45,
-        "Försäljningspris":62.34,
-        "Inköpspris per minsta enhet":0.34,
-        "Försäljningspris per minsta enhet":2.49,
-        "NPL ID":20130611000077,
-        "NPL pack ID":20130911100071,
-        "Ursprung":"Generics",
-        "Företag":"EQL Pharma AB",
-        "Utbytesgrupps ID":111999
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Hydroxizin Omet Pharma",
         "Varunummer":185362,
         "Styrka":"25 mg",
@@ -54910,7 +54891,7 @@
         "Utbytesgrupps ID":111999
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Hydroxyzine Medical Valley",
         "Varunummer":121135,
         "Styrka":"25 mg",
@@ -54926,6 +54907,44 @@
         "NPL pack ID":20201006100129,
         "Ursprung":"Generics",
         "Företag":"Medical Valley Invest AB",
+        "Utbytesgrupps ID":111999
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Hydroxyzine Orifarm",
+        "Varunummer":154154,
+        "Styrka":"25 mg",
+        "Förpackningsstorleksgrupp":"T17",
+        "Substans":"Hydroxizin",
+        "Beredningsform":"Tablett",
+        "Storlek":25.0,
+        "Apotekens inköpspris":34.0,
+        "Försäljningspris":90.57,
+        "Inköpspris per minsta enhet":1.36,
+        "Försäljningspris per minsta enhet":3.62,
+        "NPL ID":20140902000020,
+        "NPL pack ID":20140930100754,
+        "Ursprung":"Generics",
+        "Företag":"Orifarm Generics AB",
+        "Utbytesgrupps ID":111999
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Hydroxyzine EQL Pharma",
+        "Varunummer":58335,
+        "Styrka":"25 mg",
+        "Förpackningsstorleksgrupp":"T17",
+        "Substans":"Hydroxizin",
+        "Beredningsform":"Tablett",
+        "Storlek":25.0,
+        "Apotekens inköpspris":8.45,
+        "Försäljningspris":62.34,
+        "Inköpspris per minsta enhet":0.34,
+        "Försäljningspris per minsta enhet":2.49,
+        "NPL ID":20130611000077,
+        "NPL pack ID":20130911100071,
+        "Ursprung":"Generics",
+        "Företag":"EQL Pharma AB",
         "Utbytesgrupps ID":111999
     },
     {
@@ -54945,25 +54964,6 @@
         "NPL pack ID":19840401100040,
         "Ursprung":"Original",
         "Företag":"UCB Nordic A\/S",
-        "Utbytesgrupps ID":111999
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Hydroxyzine Orifarm",
-        "Varunummer":154154,
-        "Styrka":"25 mg",
-        "Förpackningsstorleksgrupp":"T17",
-        "Substans":"Hydroxizin",
-        "Beredningsform":"Tablett",
-        "Storlek":25.0,
-        "Apotekens inköpspris":34.0,
-        "Försäljningspris":90.57,
-        "Inköpspris per minsta enhet":1.36,
-        "Försäljningspris per minsta enhet":3.62,
-        "NPL ID":20140902000020,
-        "NPL pack ID":20140930100754,
-        "Ursprung":"Generics",
-        "Företag":"Orifarm Generics AB",
         "Utbytesgrupps ID":111999
     },
     {
@@ -79762,25 +79762,6 @@
         "Utbytesgrupps ID":111245
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Abdomin Neutral",
-        "Varunummer":479698,
-        "Styrka":null,
-        "Förpackningsstorleksgrupp":"T16",
-        "Substans":"Makrogol + kaliumklorid + natriumbikarbonat + natriumklorid",
-        "Beredningsform":"Pulver till oral lösning, dospåse",
-        "Storlek":20.0,
-        "Apotekens inköpspris":81.97,
-        "Försäljningspris":143.09,
-        "Inköpspris per minsta enhet":4.1,
-        "Försäljningspris per minsta enhet":7.15,
-        "NPL ID":20240318000161,
-        "NPL pack ID":20240716100784,
-        "Ursprung":"Generics",
-        "Företag":"Orifarm Generics AB",
-        "Utbytesgrupps ID":111247
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Laximyl",
         "Varunummer":588441,
@@ -79816,6 +79797,25 @@
         "NPL pack ID":20070905100093,
         "Ursprung":"Generics",
         "Företag":"Cooper Consumer Health B.V",
+        "Utbytesgrupps ID":111247
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Abdomin Neutral",
+        "Varunummer":479698,
+        "Styrka":null,
+        "Förpackningsstorleksgrupp":"T16",
+        "Substans":"Makrogol + kaliumklorid + natriumbikarbonat + natriumklorid",
+        "Beredningsform":"Pulver till oral lösning, dospåse",
+        "Storlek":20.0,
+        "Apotekens inköpspris":81.97,
+        "Försäljningspris":143.09,
+        "Inköpspris per minsta enhet":4.1,
+        "Försäljningspris per minsta enhet":7.15,
+        "NPL ID":20240318000161,
+        "NPL pack ID":20240716100784,
+        "Ursprung":"Generics",
+        "Företag":"Orifarm Generics AB",
         "Utbytesgrupps ID":111247
     },
     {
