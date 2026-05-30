@@ -30761,7 +30761,7 @@
         "Utbytesgrupps ID":114146
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Diazepam Desitin",
         "Varunummer":398297,
         "Styrka":"5 mg",
@@ -64601,25 +64601,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Clindamycin Bijon",
-        "Varunummer":54430,
-        "Styrka":"150 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Klindamycin",
-        "Beredningsform":"Kapsel",
-        "Storlek":30.0,
-        "Apotekens inköpspris":51.53,
-        "Försäljningspris":109.94,
-        "Inköpspris per minsta enhet":1.72,
-        "Försäljningspris per minsta enhet":3.66,
-        "NPL ID":20220930000190,
-        "NPL pack ID":20221228100035,
-        "Ursprung":"ParallelImport",
-        "Företag":"UAB BIJON medica",
-        "Utbytesgrupps ID":111866
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Clindamycin Orifarm",
         "Varunummer":568894,
         "Styrka":"150 mg",
@@ -64673,6 +64654,25 @@
         "NPL pack ID":20240926100017,
         "Ursprung":"ParallelImport",
         "Företag":"Ebb Medical AB",
+        "Utbytesgrupps ID":111866
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Clindamycin Bijon",
+        "Varunummer":54430,
+        "Styrka":"150 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Klindamycin",
+        "Beredningsform":"Kapsel",
+        "Storlek":30.0,
+        "Apotekens inköpspris":51.53,
+        "Försäljningspris":109.94,
+        "Inköpspris per minsta enhet":1.72,
+        "Försäljningspris per minsta enhet":3.66,
+        "NPL ID":20220930000190,
+        "NPL pack ID":20221228100035,
+        "Ursprung":"ParallelImport",
+        "Företag":"UAB BIJON medica",
         "Utbytesgrupps ID":111866
     },
     {
@@ -95439,7 +95439,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Olanzapine Viatris",
-        "Varunummer":450761,
+        "Varunummer":437403,
         "Styrka":"10 mg",
         "Förpackningsstorleksgrupp":"T31",
         "Substans":"Olanzapin",
@@ -114191,25 +114191,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Prucalopride Holsten",
-        "Varunummer":191227,
-        "Styrka":"1 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Prukaloprid",
-        "Beredningsform":"Tablett",
-        "Storlek":28.0,
-        "Apotekens inköpspris":60.61,
-        "Försäljningspris":119.97,
-        "Inköpspris per minsta enhet":2.16,
-        "Försäljningspris per minsta enhet":4.28,
-        "NPL ID":20211019000057,
-        "NPL pack ID":20220203100169,
-        "Ursprung":"Generics",
-        "Företag":"Holsten Pharma GmbH",
-        "Utbytesgrupps ID":114926
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Prucalopride Orifarm",
         "Varunummer":177780,
         "Styrka":"1 mg",
@@ -114228,7 +114209,7 @@
         "Utbytesgrupps ID":114926
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Prukaloprid Evolan",
         "Varunummer":478168,
         "Styrka":"1 mg",
@@ -114247,7 +114228,7 @@
         "Utbytesgrupps ID":114926
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Prucalopride STADA",
         "Varunummer":114319,
         "Styrka":"1 mg",
@@ -114263,6 +114244,25 @@
         "NPL pack ID":20190228101604,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":114926
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Prucalopride Holsten",
+        "Varunummer":191227,
+        "Styrka":"1 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Prukaloprid",
+        "Beredningsform":"Tablett",
+        "Storlek":28.0,
+        "Apotekens inköpspris":60.61,
+        "Försäljningspris":119.97,
+        "Inköpspris per minsta enhet":2.16,
+        "Försäljningspris per minsta enhet":4.28,
+        "NPL ID":20211019000057,
+        "NPL pack ID":20220203100169,
+        "Ursprung":"Generics",
+        "Företag":"Holsten Pharma GmbH",
         "Utbytesgrupps ID":114926
     },
     {
@@ -117021,25 +117021,6 @@
         "Utbytesgrupps ID":112142
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Risperdal Consta",
-        "Varunummer":110245,
-        "Styrka":"50 mg",
-        "Förpackningsstorleksgrupp":"F50A",
-        "Substans":"Risperidon",
-        "Beredningsform":"Pulver och vätska till injektionsvätska, depotsuspension",
-        "Storlek":1.0,
-        "Apotekens inköpspris":1953.6,
-        "Försäljningspris":2063.69,
-        "Inköpspris per minsta enhet":1953.6,
-        "Försäljningspris per minsta enhet":2063.69,
-        "NPL ID":20040305000187,
-        "NPL pack ID":20040303100193,
-        "Ursprung":"Original",
-        "Företag":"Janssen-Cilag AB",
-        "Utbytesgrupps ID":112142
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Risperidone Teva GmbH",
         "Varunummer":523454,
@@ -117151,6 +117132,25 @@
         "NPL pack ID":20230117100278,
         "Ursprung":"ParallelImport",
         "Företag":"Medartuum AB",
+        "Utbytesgrupps ID":112142
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Risperdal Consta",
+        "Varunummer":110245,
+        "Styrka":"50 mg",
+        "Förpackningsstorleksgrupp":"F50A",
+        "Substans":"Risperidon",
+        "Beredningsform":"Pulver och vätska till injektionsvätska, depotsuspension",
+        "Storlek":1.0,
+        "Apotekens inköpspris":1953.6,
+        "Försäljningspris":2063.69,
+        "Inköpspris per minsta enhet":1953.6,
+        "Försäljningspris per minsta enhet":2063.69,
+        "NPL ID":20040305000187,
+        "NPL pack ID":20040303100193,
+        "Ursprung":"Original",
+        "Företag":"Janssen-Cilag AB",
         "Utbytesgrupps ID":112142
     },
     {
@@ -125059,25 +125059,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Rosuvastatin Krka d.d.",
-        "Varunummer":588937,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Rosuvastatin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":33.0,
-        "Försäljningspris":89.47,
-        "Inköpspris per minsta enhet":0.33,
-        "Försäljningspris per minsta enhet":0.89,
-        "NPL ID":20151201000123,
-        "NPL pack ID":20160127100558,
-        "Ursprung":"Generics",
-        "Företag":"KRKA Sverige AB",
-        "Utbytesgrupps ID":112884
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Rosuvastatin Medical Valley",
         "Varunummer":498452,
         "Styrka":"20 mg",
@@ -125096,7 +125077,7 @@
         "Utbytesgrupps ID":112884
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Rosuvastatin Teva",
         "Varunummer":562961,
         "Styrka":"20 mg",
@@ -125112,6 +125093,25 @@
         "NPL pack ID":20140121100808,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":112884
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Rosuvastatin STADA",
+        "Varunummer":57193,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Rosuvastatin",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":299.0,
+        "Försäljningspris":367.72,
+        "Inköpspris per minsta enhet":2.99,
+        "Försäljningspris per minsta enhet":3.68,
+        "NPL ID":20140122000039,
+        "NPL pack ID":20140311100410,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":112884
     },
     {
@@ -125131,6 +125131,25 @@
         "NPL pack ID":20210617100329,
         "Ursprung":"Generics",
         "Företag":"Zentiva Denmark ApS",
+        "Utbytesgrupps ID":112884
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Rosuvastatin Krka d.d.",
+        "Varunummer":588937,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Rosuvastatin",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":33.0,
+        "Försäljningspris":89.47,
+        "Inköpspris per minsta enhet":0.33,
+        "Försäljningspris per minsta enhet":0.89,
+        "NPL ID":20151201000123,
+        "NPL pack ID":20160127100558,
+        "Ursprung":"Generics",
+        "Företag":"KRKA Sverige AB",
         "Utbytesgrupps ID":112884
     },
     {
@@ -125169,25 +125188,6 @@
         "NPL pack ID":20240520101694,
         "Ursprung":"Generics",
         "Företag":"Sun Pharmaceutical Industries Europe B.V.",
-        "Utbytesgrupps ID":112884
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Rosuvastatin STADA",
-        "Varunummer":57193,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Rosuvastatin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":299.0,
-        "Försäljningspris":367.72,
-        "Inköpspris per minsta enhet":2.99,
-        "Försäljningspris per minsta enhet":3.68,
-        "NPL ID":20140122000039,
-        "NPL pack ID":20140311100410,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":112884
     },
     {
