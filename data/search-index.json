@@ -5328,6 +5328,40 @@
     "packagingMap": {}
   },
   {
+    "id": "111314",
+    "size_id": "T20",
+    "sub": "Budesonid",
+    "form": "Enterokapsel",
+    "str": "3 mg",
+    "size": "ca 52 st",
+    "names": [
+      "Budenofalk®"
+    ],
+    "vnr": [
+      "6899"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111314",
+    "size_id": "T23",
+    "sub": "Budesonid",
+    "form": "Enterokapsel",
+    "str": "3 mg",
+    "size": "ca 90 st",
+    "names": [
+      "Budenofalk®",
+      "Budesonid Teva"
+    ],
+    "vnr": [
+      "519310",
+      "6921"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
     "id": "112050",
     "size_id": "T24",
     "sub": "Budesonid",
