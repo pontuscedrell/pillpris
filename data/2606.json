@@ -33801,7 +33801,7 @@
         "Utbytesgrupps ID":111591
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Doxyferm®",
         "Varunummer":154054,
         "Styrka":"100 mg",
@@ -62721,7 +62721,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Candesartan Sandoz",
-        "Varunummer":597382,
+        "Varunummer":61208,
         "Styrka":"8 mg",
         "Förpackningsstorleksgrupp":"T31",
         "Substans":"Kandesartancilexetil",
@@ -69293,25 +69293,6 @@
         "Utbytesgrupps ID":111216
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Laktulos Levolac",
-        "Varunummer":442690,
-        "Styrka":"670 mg\/ml",
-        "Förpackningsstorleksgrupp":"M500",
-        "Substans":"Laktulos",
-        "Beredningsform":"Oral lösning",
-        "Storlek":500.0,
-        "Apotekens inköpspris":58.3,
-        "Försäljningspris":117.42,
-        "Inköpspris per minsta enhet":0.12,
-        "Försäljningspris per minsta enhet":0.23,
-        "NPL ID":20100513000079,
-        "NPL pack ID":20100618103248,
-        "Ursprung":"Generics",
-        "Företag":"Bluefish Pharmaceuticals AB",
-        "Utbytesgrupps ID":111216
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Duphalac®",
         "Varunummer":174763,
@@ -69347,6 +69328,25 @@
         "NPL pack ID":19851001100200,
         "Ursprung":"Generics",
         "Företag":"Cooper Consumer Health B.V",
+        "Utbytesgrupps ID":111216
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Laktulos Levolac",
+        "Varunummer":442690,
+        "Styrka":"670 mg\/ml",
+        "Förpackningsstorleksgrupp":"M500",
+        "Substans":"Laktulos",
+        "Beredningsform":"Oral lösning",
+        "Storlek":500.0,
+        "Apotekens inköpspris":58.3,
+        "Försäljningspris":117.42,
+        "Inköpspris per minsta enhet":0.12,
+        "Försäljningspris per minsta enhet":0.23,
+        "NPL ID":20100513000079,
+        "NPL pack ID":20100618103248,
+        "Ursprung":"Generics",
+        "Företag":"Bluefish Pharmaceuticals AB",
         "Utbytesgrupps ID":111216
     },
     {
@@ -130854,25 +130854,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Sitagliptin\/Metformin Grindeks",
-        "Varunummer":496573,
-        "Styrka":"50 mg\/1000 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Sitagliptin + metformin",
-        "Beredningsform":"Tablett",
-        "Storlek":56.0,
-        "Apotekens inköpspris":35.9,
-        "Försäljningspris":92.67,
-        "Inköpspris per minsta enhet":0.64,
-        "Försäljningspris per minsta enhet":1.65,
-        "NPL ID":20201120000060,
-        "NPL pack ID":20210329100549,
-        "Ursprung":"Generics",
-        "Företag":"Grindeks Kalceks Sverige AB",
-        "Utbytesgrupps ID":111064
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Sitagliptin\/Metformin Krka",
         "Varunummer":540248,
         "Styrka":"50 mg\/1000 mg",
@@ -130891,7 +130872,7 @@
         "Utbytesgrupps ID":111064
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Sitagliptin\/Metformin Glenmark",
         "Varunummer":529954,
         "Styrka":"50 mg\/1000 mg",
@@ -130910,7 +130891,7 @@
         "Utbytesgrupps ID":111064
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Sitagliptin\/Metformin Medical Valley",
         "Varunummer":152289,
         "Styrka":"50 mg\/1000 mg",
@@ -130926,6 +130907,25 @@
         "NPL pack ID":20200701100298,
         "Ursprung":"Generics",
         "Företag":"Medical Valley Invest AB",
+        "Utbytesgrupps ID":111064
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Sitagliptin\/Metformin Grindeks",
+        "Varunummer":496573,
+        "Styrka":"50 mg\/1000 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Sitagliptin + metformin",
+        "Beredningsform":"Tablett",
+        "Storlek":56.0,
+        "Apotekens inköpspris":35.9,
+        "Försäljningspris":92.67,
+        "Inköpspris per minsta enhet":0.64,
+        "Försäljningspris per minsta enhet":1.65,
+        "NPL ID":20201120000060,
+        "NPL pack ID":20210329100549,
+        "Ursprung":"Generics",
+        "Företag":"Grindeks Kalceks Sverige AB",
         "Utbytesgrupps ID":111064
     },
     {
