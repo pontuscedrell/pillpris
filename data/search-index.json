@@ -269,11 +269,13 @@
     "names": [
       "Aciclovir Orion",
       "Aciclovir SUN",
+      "Aciclovir Sandoz",
       "Aciklovir STADA®"
     ],
     "vnr": [
       "163446",
       "4059",
+      "449121",
       "463404"
     ],
     "packaging": [],
@@ -2054,6 +2056,7 @@
     "names": [
       "Apremilast Accord",
       "Apremilast Avansor",
+      "Apremilast Hexal",
       "Apremilast Krka",
       "Apremilast STADA",
       "Apremilast Teva",
@@ -2061,6 +2064,7 @@
       "Otezla"
     ],
     "vnr": [
+      "115454",
       "130056",
       "153709",
       "159476",
@@ -2238,6 +2242,7 @@
     ],
     "vnr": [
       "150983",
+      "168653",
       "187600",
       "399908",
       "543580",
@@ -2365,11 +2370,9 @@
     "str": "5 mg",
     "size": "ca 14 st",
     "names": [
-      "Abilify",
-      "Aripiprazol Krka"
+      "Abilify"
     ],
     "vnr": [
-      "114662",
       "16624",
       "85997"
     ],
@@ -3032,9 +3035,11 @@
     "str": "10 mg",
     "size": "ca 113 st",
     "names": [
+      "Atorvastatin Teva B.V.",
       "Atorvastatin Xiromed"
     ],
     "vnr": [
+      "444959",
       "455795"
     ],
     "packaging": [],
@@ -3966,10 +3971,12 @@
     "names": [
       "Aforbe",
       "Befoair",
+      "Forobec",
       "Innovair",
       "Oparta"
     ],
     "vnr": [
+      "157910",
       "165369",
       "33234",
       "374086",
@@ -5027,6 +5034,7 @@
       "46416",
       "49694",
       "536686",
+      "547345",
       "558417",
       "66470",
       "73121"
@@ -7103,6 +7111,7 @@
     "size": "ca 90 st",
     "names": [
       "Asmoken",
+      "Belnifrem",
       "Cytisiniklin Abacus Medicine",
       "Cytisiniklin Ebb",
       "Cytisiniklin Medartuum",
@@ -7112,6 +7121,7 @@
       "124088",
       "166683",
       "434156",
+      "462959",
       "544468",
       "558183",
       "596545"
@@ -8198,7 +8208,8 @@
       "140377",
       "144142",
       "403160",
-      "546703"
+      "546703",
+      "63952"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -8238,6 +8249,7 @@
       "398857",
       "410533",
       "453832",
+      "554496",
       "70266"
     ],
     "packaging": [],
@@ -8262,6 +8274,7 @@
       "177442",
       "178861",
       "443908",
+      "508905",
       "580676"
     ],
     "packaging": [],
@@ -8303,6 +8316,7 @@
       "128642",
       "27017",
       "29450",
+      "454532",
       "535579",
       "588526"
     ],
@@ -9730,10 +9744,12 @@
     "names": [
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Glenmark",
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Krka",
-      "Efavirenz/Emtricitabine/Tenofovir disoproxil Teva"
+      "Efavirenz/Emtricitabine/Tenofovir disoproxil Teva",
+      "Efavirenz/Emtricitabine/Tenofovir disoproxil Zentiva k.s."
     ],
     "vnr": [
       "156066",
+      "506344",
       "508400",
       "60397"
     ],
@@ -10417,10 +10433,12 @@
     "str": "0,5 mg",
     "size": "ca 90 st",
     "names": [
+      "Entecavir Amarox",
       "Entekavir Ebb"
     ],
     "vnr": [
-      "165171"
+      "165171",
+      "57212"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -12461,12 +12479,14 @@
     "str": "800 mg",
     "size": "ca 20 st",
     "names": [
+      "Fenoximetylpenicillin EQL",
       "Fenoximetylpenicillin EQL Pharma",
       "Kåvepenin®",
       "Tikacillin"
     ],
     "vnr": [
       "118074",
+      "184685",
       "36442",
       "458992"
     ],
@@ -12503,12 +12523,14 @@
     "str": "800 mg",
     "size": "ca 43 st",
     "names": [
+      "Fenoximetylpenicillin EQL",
       "Fenoximetylpenicillin EQL Pharma",
       "Fenoximetylpenicillin Orifarm",
       "Kåvepenin®",
       "Tikacillin"
     ],
     "vnr": [
+      "184413",
       "37093",
       "435375",
       "459305",
@@ -14061,12 +14083,14 @@
     "names": [
       "Folsyra EQL Pharma",
       "Folsyra Orifarm",
+      "Folsyra Sandoz",
       "Folsyra Vitabalans",
       "Folvidon"
     ],
     "vnr": [
       "188447",
       "485487",
+      "494598",
       "538866",
       "544170",
       "589250",
@@ -14099,15 +14123,19 @@
     "str": "5 mg",
     "size": "ca 90 st",
     "names": [
+      "Bladex",
       "Folsyra Evolan",
       "Folsyra Orifarm",
+      "Folsyra Sandoz",
       "Folsyra Vitabalans"
     ],
     "vnr": [
       "127195",
+      "400151",
       "496614",
       "49942",
       "531890",
+      "551719",
       "73335"
     ],
     "packaging": [],
@@ -16360,86 +16388,6 @@
   },
   {
     "id": "111101",
-    "size_id": "EK5446",
-    "sub": "Järnkarboxymaltos",
-    "form": "Injektions-/Infusionsvätska",
-    "str": "50 mg Fe/ml",
-    "size": "EK5446",
-    "names": [
-      "Ferinject"
-    ],
-    "vnr": [
-      "512366"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111101",
-    "size_id": "EK5447",
-    "sub": "Järnkarboxymaltos",
-    "form": "Injektions-/Infusionsvätska",
-    "str": "50 mg Fe/ml",
-    "size": "EK5447",
-    "names": [
-      "Ferinject"
-    ],
-    "vnr": [
-      "562182"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111101",
-    "size_id": "EK5448",
-    "sub": "Järnkarboxymaltos",
-    "form": "Injektions-/Infusionsvätska",
-    "str": "50 mg Fe/ml",
-    "size": "EK5448",
-    "names": [
-      "Xabogard"
-    ],
-    "vnr": [
-      "62770"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111101",
-    "size_id": "EK5449",
-    "sub": "Järnkarboxymaltos",
-    "form": "Injektions-/Infusionsvätska",
-    "str": "50 mg Fe/ml",
-    "size": "EK5449",
-    "names": [
-      "Xabogard"
-    ],
-    "vnr": [
-      "114337"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111101",
-    "size_id": "EK5450",
-    "sub": "Järnkarboxymaltos",
-    "form": "Injektions-/Infusionsvätska",
-    "str": "50 mg Fe/ml",
-    "size": "EK5450",
-    "names": [
-      "Xabogard"
-    ],
-    "vnr": [
-      "495460"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111101",
     "size_id": "F10A",
     "sub": "Järnkarboxymaltos",
     "form": "Injektions-/Infusionsvätska",
@@ -16457,7 +16405,8 @@
       "145806",
       "30439",
       "394769",
-      "512366"
+      "512366",
+      "62770"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -16497,8 +16446,25 @@
       "127872",
       "400244",
       "402190",
+      "495460",
       "505092",
       "565755"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111101",
+    "size_id": "F20B",
+    "sub": "Järnkarboxymaltos",
+    "form": "Injektions-/Infusionsvätska",
+    "str": "50 mg Fe/ml",
+    "size": "F20B",
+    "names": [
+      "Ferinject"
+    ],
+    "vnr": [
+      "562182"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -16518,6 +16484,7 @@
     ],
     "vnr": [
       "101531",
+      "114337",
       "145817",
       "410839",
       "94416"
@@ -20759,6 +20726,7 @@
       "461068",
       "514004",
       "526342",
+      "554813",
       "84138"
     ],
     "packaging": [],
@@ -22303,6 +22271,7 @@
     "str": "(Junior, utan smaktillsats)",
     "size": "ca 30 st",
     "names": [
+      "Abdomin Junior Neutral",
       "Lacrofarm Junior",
       "Laxido Junior",
       "Movicol Junior Neutral",
@@ -22312,6 +22281,7 @@
       "40823",
       "431066",
       "490950",
+      "503555",
       "544193"
     ],
     "packaging": [],
@@ -25973,11 +25943,13 @@
     "names": [
       "Nilotinib Accord",
       "Nilotinib Teva",
+      "Nilotinib Zentiva",
       "Tasigna®"
     ],
     "vnr": [
       "142387",
       "168212",
+      "28467",
       "523758",
       "553847",
       "68456"
@@ -25995,6 +25967,7 @@
     "names": [
       "Nilotinib Accord",
       "Nilotinib Teva",
+      "Nilotinib Zentiva",
       "Tasigna®"
     ],
     "vnr": [
@@ -26004,6 +25977,7 @@
       "408031",
       "43260",
       "515300",
+      "545595",
       "549616",
       "568704",
       "587461",
@@ -26229,11 +26203,11 @@
   },
   {
     "id": "448",
-    "size_id": "EK5451",
+    "size_id": "F10A",
     "sub": "Oktreotid",
     "form": "Injektionsvätska",
     "str": "100 mikrogram/ml",
-    "size": "EK5451",
+    "size": "F10A",
     "names": [
       "Oktreotid Bijon"
     ],
@@ -26245,11 +26219,11 @@
   },
   {
     "id": "448",
-    "size_id": "EK5452",
+    "size_id": "F15A",
     "sub": "Oktreotid",
     "form": "Injektionsvätska",
     "str": "100 mikrogram/ml",
-    "size": "EK5452",
+    "size": "F15A",
     "names": [
       "Oktreotid Bijon"
     ],
@@ -26316,22 +26290,6 @@
       "26738",
       "442699",
       "491666"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111458",
-    "size_id": "EK5453",
-    "sub": "Oktreotid",
-    "form": "Pulver och vätska till injektionsvätska",
-    "str": "10 mg",
-    "size": "EK5453",
-    "names": [
-      "Sandostatin LAR"
-    ],
-    "vnr": [
-      "378911"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -27204,6 +27162,7 @@
     "names": [
       "Omeprazol Apofri",
       "Omeprazol Bluefish",
+      "Omeprazol Medical Valley",
       "Omeprazol Pensa",
       "Omeprazol Sandoz",
       "Omeprazol Teva",
@@ -27216,6 +27175,7 @@
       "133333",
       "394021",
       "439061",
+      "522460",
       "532891",
       "547004",
       "584329",
@@ -27234,6 +27194,7 @@
     "names": [
       "Omeprazol Apofri",
       "Omeprazol Bluefish",
+      "Omeprazol Medical Valley",
       "Omeprazol Pensa",
       "Omeprazol Sandoz",
       "Omeprazol Teva",
@@ -27245,6 +27206,7 @@
       "141968",
       "151178",
       "33691",
+      "413779",
       "462789",
       "497040",
       "502574",
@@ -27296,6 +27258,7 @@
       "429482",
       "470290",
       "482681",
+      "516910",
       "538600",
       "546145",
       "561149",
@@ -27426,6 +27389,7 @@
     "size": "ca 90 st",
     "names": [
       "Omeprazol Bijon",
+      "Omeprazol Medical Valley",
       "Omeprazol NET",
       "Omeprazol Sandoz",
       "Omeprazol Teva",
@@ -27436,7 +27400,8 @@
       "33905",
       "401064",
       "570125",
-      "79271"
+      "79271",
+      "80152"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -29224,6 +29189,38 @@
   },
   {
     "id": "111956",
+    "size_id": "EK5462",
+    "sub": "Paliperidon",
+    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
+    "str": "100 mg",
+    "size": "EK5462",
+    "names": [
+      "Paliperidone Viatris"
+    ],
+    "vnr": [
+      "106204"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111956",
+    "size_id": "EK5464",
+    "sub": "Paliperidon",
+    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
+    "str": "100 mg",
+    "size": "EK5464",
+    "names": [
+      "Paliperidon Zentiva"
+    ],
+    "vnr": [
+      "397511"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111956",
     "size_id": "F1A",
     "sub": "Paliperidon",
     "form": "Injektionsvätska, depotsuspension i förfylld spruta",
@@ -29267,6 +29264,38 @@
     ],
     "vnr": [
       "189631"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111957",
+    "size_id": "EK5461",
+    "sub": "Paliperidon",
+    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
+    "str": "150 mg",
+    "size": "EK5461",
+    "names": [
+      "Paliperidon Zentiva"
+    ],
+    "vnr": [
+      "370402"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111957",
+    "size_id": "EK5463",
+    "sub": "Paliperidon",
+    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
+    "str": "150 mg",
+    "size": "EK5463",
+    "names": [
+      "Paliperidone Viatris"
+    ],
+    "vnr": [
+      "440067"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -30202,7 +30231,6 @@
       "467007",
       "494058",
       "587390",
-      "85366",
       "89484"
     ],
     "packaging": [],
@@ -30232,7 +30260,6 @@
       "430952",
       "45473",
       "462441",
-      "58261",
       "75398"
     ],
     "packaging": [],
@@ -32748,22 +32775,6 @@
   },
   {
     "id": "112128",
-    "size_id": "EK5444",
-    "sub": "Risperidon",
-    "form": "Pulver och vätska till injektionsvätska, depotsuspension",
-    "str": "25 mg",
-    "size": "EK5444",
-    "names": [
-      "Risperdal Consta"
-    ],
-    "vnr": [
-      "426954"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112128",
     "size_id": "F25A",
     "sub": "Risperidon",
     "form": "Pulver och vätska till injektionsvätska, depotsuspension",
@@ -32817,38 +32828,6 @@
   },
   {
     "id": "112129",
-    "size_id": "EK5443",
-    "sub": "Risperidon",
-    "form": "Pulver och vätska till injektionsvätska, depotsuspension",
-    "str": "37,5 mg",
-    "size": "EK5443",
-    "names": [
-      "Risperdal Consta"
-    ],
-    "vnr": [
-      "442104"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112129",
-    "size_id": "EK5445",
-    "sub": "Risperidon",
-    "form": "Pulver och vätska till injektionsvätska, depotsuspension",
-    "str": "37,5 mg",
-    "size": "EK5445",
-    "names": [
-      "Risperidone Teva GmbH"
-    ],
-    "vnr": [
-      "396476"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112129",
     "size_id": "EK5459",
     "sub": "Risperidon",
     "form": "Pulver och vätska till injektionsvätska, depotsuspension",
@@ -32878,6 +32857,7 @@
     "vnr": [
       "119472",
       "138728",
+      "396476",
       "442104",
       "481091",
       "94120"
@@ -32919,16 +32899,16 @@
   },
   {
     "id": "112142",
-    "size_id": "EK5442",
+    "size_id": "EK5465",
     "sub": "Risperidon",
     "form": "Pulver och vätska till injektionsvätska, depotsuspension",
     "str": "50 mg",
-    "size": "EK5442",
+    "size": "EK5465",
     "names": [
-      "Risperdal Consta"
+      "Risperidone Orifarm"
     ],
     "vnr": [
-      "593336"
+      "117459"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -33736,7 +33716,6 @@
     "str": "2,5 mg",
     "size": "ca 52 st",
     "names": [
-      "Rivaroxaban Krka",
       "Rivaroxaban Medical Valley",
       "Rivaroxaban STADA",
       "Rivaroxaban Sandoz",
@@ -33748,7 +33727,6 @@
       "145816",
       "504660",
       "598930",
-      "65362",
       "87427"
     ],
     "packaging": [],
@@ -34263,6 +34241,7 @@
       "Exelon®",
       "Nimvastid®",
       "Prometax",
+      "Rivastigmin Abacus Medicine",
       "Rivastigmin Orion",
       "Rivastigmine Sandoz"
     ],
@@ -34270,6 +34249,7 @@
       "121047",
       "17485",
       "28942",
+      "419179",
       "430612",
       "47634",
       "481345",

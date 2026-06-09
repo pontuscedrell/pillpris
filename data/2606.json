@@ -107693,25 +107693,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Paroxetin HEXAL",
-        "Varunummer":491140,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Paroxetin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":210.86,
-        "Försäljningspris":276.49,
-        "Inköpspris per minsta enhet":2.11,
-        "Försäljningspris per minsta enhet":2.76,
-        "NPL ID":20060316000051,
-        "NPL pack ID":20060504100334,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":112083
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Paroxetin Teva",
         "Varunummer":411563,
         "Styrka":"10 mg",
@@ -107730,7 +107711,7 @@
         "Utbytesgrupps ID":112083
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Paroxetin Teva",
         "Varunummer":57918,
         "Styrka":"10 mg",
@@ -107746,6 +107727,25 @@
         "NPL pack ID":20240212100028,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":112083
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Paroxetin HEXAL",
+        "Varunummer":491140,
+        "Styrka":"10 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Paroxetin",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":210.86,
+        "Försäljningspris":276.49,
+        "Inköpspris per minsta enhet":2.11,
+        "Försäljningspris per minsta enhet":2.76,
+        "NPL ID":20060316000051,
+        "NPL pack ID":20060504100334,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":112083
     },
     {
@@ -116413,25 +116413,6 @@
         "Utbytesgrupps ID":111132
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Repaglinid STADA",
-        "Varunummer":552080,
-        "Styrka":"1 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Repaglinid",
-        "Beredningsform":"Tablett",
-        "Storlek":90.0,
-        "Apotekens inköpspris":66.0,
-        "Försäljningspris":125.93,
-        "Inköpspris per minsta enhet":0.73,
-        "Försäljningspris per minsta enhet":1.4,
-        "NPL ID":20080913000025,
-        "NPL pack ID":20081216100580,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":111132
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"NovoNorm®",
         "Varunummer":15416,
@@ -116467,6 +116448,25 @@
         "NPL pack ID":20110128100378,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":111132
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Repaglinid STADA",
+        "Varunummer":552080,
+        "Styrka":"1 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Repaglinid",
+        "Beredningsform":"Tablett",
+        "Storlek":90.0,
+        "Apotekens inköpspris":66.0,
+        "Försäljningspris":125.93,
+        "Inköpspris per minsta enhet":0.73,
+        "Försäljningspris per minsta enhet":1.4,
+        "NPL ID":20080913000025,
+        "NPL pack ID":20081216100580,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":111132
     },
     {
@@ -117512,6 +117512,25 @@
         "NPL pack ID":20240306100170,
         "Ursprung":"ParallelImport",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":112142
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Risperidone Orifarm",
+        "Varunummer":117459,
+        "Styrka":"50 mg",
+        "Förpackningsstorleksgrupp":"EK5465",
+        "Substans":"Risperidon",
+        "Beredningsform":"Pulver och vätska till injektionsvätska, depotsuspension",
+        "Storlek":1.0,
+        "Apotekens inköpspris":1953.6,
+        "Försäljningspris":2063.69,
+        "Inköpspris per minsta enhet":1953.6,
+        "Försäljningspris per minsta enhet":2063.69,
+        "NPL ID":20250922000051,
+        "NPL pack ID":20260115100017,
+        "Ursprung":"ParallelImport",
+        "Företag":"Orifarm AB",
         "Utbytesgrupps ID":112142
     },
     {
