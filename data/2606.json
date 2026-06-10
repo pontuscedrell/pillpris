@@ -37906,25 +37906,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Enalapril\/Hydrochlorothiazide Medical Valley",
-        "Varunummer":84826,
-        "Styrka":"20 mg\/12,5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Enalapril + hydroklortiazid",
-        "Beredningsform":"Tablett",
-        "Storlek":105.0,
-        "Apotekens inköpspris":19.97,
-        "Försäljningspris":75.07,
-        "Inköpspris per minsta enhet":0.19,
-        "Försäljningspris per minsta enhet":0.71,
-        "NPL ID":20190423000030,
-        "NPL pack ID":20211208100353,
-        "Ursprung":"Generics",
-        "Företag":"Medical Valley Invest AB",
-        "Utbytesgrupps ID":112689
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Linatil comp",
         "Varunummer":441765,
         "Styrka":"20 mg\/12,5 mg",
@@ -37943,7 +37924,7 @@
         "Utbytesgrupps ID":112689
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Enalapril\/Hydrochlorothiazide Orion",
         "Varunummer":404793,
         "Styrka":"20 mg\/12,5 mg",
@@ -37962,7 +37943,7 @@
         "Utbytesgrupps ID":112689
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Enalapril Comp STADA®",
         "Varunummer":20037,
         "Styrka":"20 mg\/12,5 mg",
@@ -37978,6 +37959,25 @@
         "NPL pack ID":20021129101403,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":112689
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Enalapril\/Hydrochlorothiazide Medical Valley",
+        "Varunummer":84826,
+        "Styrka":"20 mg\/12,5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Enalapril + hydroklortiazid",
+        "Beredningsform":"Tablett",
+        "Storlek":105.0,
+        "Apotekens inköpspris":19.97,
+        "Försäljningspris":75.07,
+        "Inköpspris per minsta enhet":0.19,
+        "Försäljningspris per minsta enhet":0.71,
+        "NPL ID":20190423000030,
+        "NPL pack ID":20211208100353,
+        "Ursprung":"Generics",
+        "Företag":"Medical Valley Invest AB",
         "Utbytesgrupps ID":112689
     },
     {
@@ -39483,25 +39483,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Escitalopram Glenmark",
-        "Varunummer":489887,
-        "Styrka":"10 mg (Grupp A)",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Escitalopram",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":21.26,
-        "Försäljningspris":76.49,
-        "Inköpspris per minsta enhet":0.21,
-        "Försäljningspris per minsta enhet":0.76,
-        "NPL ID":20130614000043,
-        "NPL pack ID":20130815100061,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":112130
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Escitalopram STADA",
         "Varunummer":519096,
         "Styrka":"10 mg (Grupp A)",
@@ -39520,7 +39501,7 @@
         "Utbytesgrupps ID":112130
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Escitalopram Bluefish",
         "Varunummer":463262,
         "Styrka":"10 mg (Grupp A)",
@@ -39539,7 +39520,7 @@
         "Utbytesgrupps ID":112130
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Escitalopram Teva",
         "Varunummer":31018,
         "Styrka":"10 mg (Grupp A)",
@@ -39555,6 +39536,25 @@
         "NPL pack ID":20120216100289,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":112130
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Escitalopram Glenmark",
+        "Varunummer":489887,
+        "Styrka":"10 mg (Grupp A)",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Escitalopram",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":21.26,
+        "Försäljningspris":76.49,
+        "Inköpspris per minsta enhet":0.21,
+        "Försäljningspris per minsta enhet":0.76,
+        "NPL ID":20130614000043,
+        "NPL pack ID":20130815100061,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":112130
     },
     {
