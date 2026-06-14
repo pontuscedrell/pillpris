@@ -819,7 +819,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Aciclovir Sandoz",
-        "Varunummer":67787,
+        "Varunummer":163734,
         "Styrka":"200 mg",
         "Förpackningsstorleksgrupp":"T17",
         "Substans":"Aciklovir",
@@ -876,7 +876,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Aciclovir Sandoz",
-        "Varunummer":67796,
+        "Varunummer":505079,
         "Styrka":"200 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Aciklovir",
@@ -24873,7 +24873,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Ciprofloxacin Hexal",
-        "Varunummer":443339,
+        "Varunummer":501958,
         "Styrka":"750 mg",
         "Förpackningsstorleksgrupp":"T16",
         "Substans":"Ciprofloxacin",
@@ -25272,7 +25272,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Citalopram Sandoz",
-        "Varunummer":372349,
+        "Varunummer":563479,
         "Styrka":"20 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Citalopram",
@@ -38401,7 +38401,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Entecavir Sandoz",
-        "Varunummer":451891,
+        "Varunummer":438818,
         "Styrka":"0,5 mg",
         "Förpackningsstorleksgrupp":"T18",
         "Substans":"Entekavir",
@@ -83374,7 +83374,7 @@
     {
         "Status":"R2",
         "Produktnamn":"Metformin Sandoz",
-        "Varunummer":91457,
+        "Varunummer":512561,
         "Styrka":"500 mg",
         "Förpackningsstorleksgrupp":"T29",
         "Substans":"Metformin",
@@ -89758,7 +89758,7 @@
     {
         "Status":"R2",
         "Produktnamn":"Montelukast Sandoz",
-        "Varunummer":406360,
+        "Varunummer":574440,
         "Styrka":"4 mg",
         "Förpackningsstorleksgrupp":"T18",
         "Substans":"Montelukast",
@@ -95325,7 +95325,7 @@
     {
         "Status":"R2",
         "Produktnamn":"Olanzapin Sandoz",
-        "Varunummer":385836,
+        "Varunummer":185450,
         "Styrka":"10 mg",
         "Förpackningsstorleksgrupp":"T20",
         "Substans":"Olanzapin",
@@ -100398,7 +100398,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Oxycodone Depot 1A Farma",
-        "Varunummer":528803,
+        "Varunummer":163522,
         "Styrka":"10 mg",
         "Förpackningsstorleksgrupp":"TN30",
         "Substans":"Oxikodon",
@@ -100645,7 +100645,7 @@
     {
         "Status":"R2",
         "Produktnamn":"Oxycodone Depot 1A Farma",
-        "Varunummer":565552,
+        "Varunummer":137781,
         "Styrka":"20 mg",
         "Förpackningsstorleksgrupp":"TN100",
         "Substans":"Oxikodon",
@@ -105832,7 +105832,7 @@
     {
         "Status":"R1",
         "Produktnamn":"Pantoprazol Sandoz",
-        "Varunummer":163053,
+        "Varunummer":147643,
         "Styrka":"20 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Pantoprazol",
@@ -109290,7 +109290,7 @@
     {
         "Status":"R2",
         "Produktnamn":"Pirfenidone Sandoz",
-        "Varunummer":66775,
+        "Varunummer":375792,
         "Styrka":"267 mg",
         "Förpackningsstorleksgrupp":"T28",
         "Substans":"Pirfenidon",
@@ -118143,25 +118143,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Risperidon 2care4",
-        "Varunummer":415593,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Risperidon",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":79.0,
-        "Försäljningspris":140.02,
-        "Inköpspris per minsta enhet":0.79,
-        "Försäljningspris per minsta enhet":1.4,
-        "NPL ID":20210517000040,
-        "NPL pack ID":20211129100029,
-        "Ursprung":"ParallelImport",
-        "Företag":"2care4 ApS",
-        "Utbytesgrupps ID":111907
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Risperidone Grindeks",
         "Varunummer":462656,
         "Styrka":"0,5 mg",
@@ -118180,7 +118161,7 @@
         "Utbytesgrupps ID":111907
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Risperidon Abacus Medicine",
         "Varunummer":430369,
         "Styrka":"0,5 mg",
@@ -118199,7 +118180,7 @@
         "Utbytesgrupps ID":111907
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Risperidon Abacus Medicine",
         "Varunummer":430369,
         "Styrka":"0,5 mg",
@@ -118215,6 +118196,44 @@
         "NPL pack ID":20240613100061,
         "Ursprung":"ParallelImport",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":111907
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Risperidon Krka",
+        "Varunummer":406430,
+        "Styrka":"0,5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Risperidon",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":175.49,
+        "Försäljningspris":239.88,
+        "Inköpspris per minsta enhet":1.75,
+        "Försäljningspris per minsta enhet":2.4,
+        "NPL ID":20060606000013,
+        "NPL pack ID":20060707100186,
+        "Ursprung":"Generics",
+        "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":111907
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Risperidon 2care4",
+        "Varunummer":415593,
+        "Styrka":"0,5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Risperidon",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":79.0,
+        "Försäljningspris":140.02,
+        "Inköpspris per minsta enhet":0.79,
+        "Försäljningspris per minsta enhet":1.4,
+        "NPL ID":20210517000040,
+        "NPL pack ID":20211129100029,
+        "Ursprung":"ParallelImport",
+        "Företag":"2care4 ApS",
         "Utbytesgrupps ID":111907
     },
     {
@@ -118234,25 +118253,6 @@
         "NPL pack ID":20160923100066,
         "Ursprung":"ParallelImport",
         "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":111907
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Risperidon Krka",
-        "Varunummer":406430,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Risperidon",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":175.49,
-        "Försäljningspris":239.88,
-        "Inköpspris per minsta enhet":1.75,
-        "Försäljningspris per minsta enhet":2.4,
-        "NPL ID":20060606000013,
-        "NPL pack ID":20060707100186,
-        "Ursprung":"Generics",
-        "Företag":"KRKA Sverige AB",
         "Utbytesgrupps ID":111907
     },
     {
@@ -131938,7 +131938,7 @@
     {
         "Status":"R2",
         "Produktnamn":"Solifenacin Sandoz",
-        "Varunummer":542890,
+        "Varunummer":388613,
         "Styrka":"5 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Solifenacin",
