@@ -37169,7 +37169,7 @@
     "size_id": "G10",
     "sub": "Takrolimus",
     "form": "Salva",
-    "str": "0,03%",
+    "str": "0,3 mg/g",
     "size": "10 g",
     "names": [
       "Protopic"
@@ -37185,7 +37185,7 @@
     "size_id": "G30",
     "sub": "Takrolimus",
     "form": "Salva",
-    "str": "0,03%",
+    "str": "0,3 mg/g",
     "size": "30 g",
     "names": [
       "Protopic",
@@ -37203,7 +37203,7 @@
     "size_id": "G10",
     "sub": "Takrolimus",
     "form": "Salva",
-    "str": "0,1%",
+    "str": "1 mg/g",
     "size": "10 g",
     "names": [
       "Protopic",
@@ -37221,7 +37221,7 @@
     "size_id": "G30",
     "sub": "Takrolimus",
     "form": "Salva",
-    "str": "0,1%",
+    "str": "1 mg/g",
     "size": "30 g",
     "names": [
       "Protopic",
@@ -37246,7 +37246,7 @@
     "size_id": "G60",
     "sub": "Takrolimus",
     "form": "Salva",
-    "str": "0,1%",
+    "str": "1 mg/g",
     "size": "60 g",
     "names": [
       "Protopic",
