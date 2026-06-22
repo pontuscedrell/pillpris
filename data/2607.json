@@ -107179,25 +107179,6 @@
         "Utbytesgrupps ID":112630
     },
     {
-        "Status":"Nej",
-        "Produktnamn":"Paracetamol Alternova",
-        "Varunummer":137743,
-        "Styrka":"1 g",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Paracetamol",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":43.49,
-        "Försäljningspris":101.06,
-        "Inköpspris per minsta enhet":0.43,
-        "Försäljningspris per minsta enhet":1.01,
-        "NPL ID":20120112000058,
-        "NPL pack ID":20120316100080,
-        "Ursprung":"Generics",
-        "Företag":"Orifarm Generics AB",
-        "Utbytesgrupps ID":112630
-    },
-    {
         "Status":"PV",
         "Produktnamn":"Paracetamol Zentiva",
         "Varunummer":553413,
