@@ -15853,8 +15853,8 @@
       "Karvea"
     ],
     "vnr": [
-      "113495",
       "130400",
+      "136826",
       "15372",
       "19688",
       "23902",
@@ -34939,11 +34939,11 @@
     "size": "ca 30 st",
     "names": [
       "Crestor®",
-      "Rosuvastatin Accord",
       "Rosuvastatin Glenmark",
       "Rosuvastatin Krka d.d.",
       "Rosuvastatin STADA",
-      "Rosuvastatin Sandoz"
+      "Rosuvastatin Sandoz",
+      "Rosuvastatin Viatris Pharma"
     ],
     "vnr": [
       "185554",
@@ -34965,7 +34965,6 @@
     "size": "ca 90 st",
     "names": [
       "Crestor®",
-      "Rosuvastatin Accord",
       "Rosuvastatin Glenmark",
       "Rosuvastatin Krka d.d.",
       "Rosuvastatin Medical Valley",
@@ -34974,6 +34973,7 @@
       "Rosuvastatin Sandoz",
       "Rosuvastatin Teva",
       "Rosuvastatin Viatris",
+      "Rosuvastatin Viatris Pharma",
       "Rosuvastatin Zentiva"
     ],
     "vnr": [
@@ -35021,11 +35021,11 @@
     "size": "ca 30 st",
     "names": [
       "Crestor®",
-      "Rosuvastatin Accord",
       "Rosuvastatin Glenmark",
       "Rosuvastatin Medical Valley",
       "Rosuvastatin STADA",
-      "Rosuvastatin Sandoz"
+      "Rosuvastatin Sandoz",
+      "Rosuvastatin Viatris Pharma"
     ],
     "vnr": [
       "166032",
@@ -35047,7 +35047,6 @@
     "size": "ca 90 st",
     "names": [
       "Crestor®",
-      "Rosuvastatin Accord",
       "Rosuvastatin Glenmark",
       "Rosuvastatin Krka d.d.",
       "Rosuvastatin Medical Valley",
@@ -35056,6 +35055,7 @@
       "Rosuvastatin Sandoz",
       "Rosuvastatin Teva",
       "Rosuvastatin Viatris",
+      "Rosuvastatin Viatris Pharma",
       "Rosuvastatin Zentiva"
     ],
     "vnr": [
@@ -35103,8 +35103,8 @@
     "size": "ca 30 st",
     "names": [
       "Crestor®",
-      "Rosuvastatin Accord",
-      "Rosuvastatin Medical Valley"
+      "Rosuvastatin Medical Valley",
+      "Rosuvastatin Viatris Pharma"
     ],
     "vnr": [
       "461064",
@@ -35123,7 +35123,6 @@
     "size": "ca 90 st",
     "names": [
       "Crestor®",
-      "Rosuvastatin Accord",
       "Rosuvastatin Glenmark",
       "Rosuvastatin Krka d.d.",
       "Rosuvastatin Medical Valley",
@@ -35132,6 +35131,7 @@
       "Rosuvastatin Sandoz",
       "Rosuvastatin Teva",
       "Rosuvastatin Viatris",
+      "Rosuvastatin Viatris Pharma",
       "Rosuvastatin Zentiva"
     ],
     "vnr": [
@@ -35160,9 +35160,9 @@
     "str": "5 mg",
     "size": "ca 30 st",
     "names": [
-      "Rosuvastatin Accord",
       "Rosuvastatin Krka d.d.",
-      "Rosuvastatin STADA"
+      "Rosuvastatin STADA",
+      "Rosuvastatin Viatris Pharma"
     ],
     "vnr": [
       "478960",
@@ -35180,7 +35180,6 @@
     "str": "5 mg",
     "size": "ca 90 st",
     "names": [
-      "Rosuvastatin Accord",
       "Rosuvastatin Glenmark",
       "Rosuvastatin Krka d.d.",
       "Rosuvastatin Medical Valley",
@@ -35188,6 +35187,7 @@
       "Rosuvastatin SUN",
       "Rosuvastatin Teva",
       "Rosuvastatin Viatris",
+      "Rosuvastatin Viatris Pharma",
       "Rosuvastatin Zentiva"
     ],
     "vnr": [
