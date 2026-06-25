@@ -22473,42 +22473,6 @@
     "packagingMap": {}
   },
   {
-    "id": "583",
-    "size_id": "T18",
-    "sub": "Meloxikam",
-    "form": "Tablett",
-    "str": "15 mg",
-    "size": "ca 30 st",
-    "names": [
-      "Meloxicam Bluefish",
-      "Meloxicam Ebb"
-    ],
-    "vnr": [
-      "431241",
-      "509028"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "583",
-    "size_id": "T23",
-    "sub": "Meloxikam",
-    "form": "Tablett",
-    "str": "15 mg",
-    "size": "ca 90 st",
-    "names": [
-      "Meloxicam Bluefish",
-      "Meloxicam Ebb"
-    ],
-    "vnr": [
-      "378876",
-      "510287"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
     "id": "111965",
     "size_id": "T18",
     "sub": "Memantin",
