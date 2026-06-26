@@ -57570,25 +57570,6 @@
         "Utbytesgrupps ID":112316
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Salipra",
-        "Varunummer":472131,
-        "Styrka":"0,5 mg \/ 2,5 mg",
-        "Förpackningsstorleksgrupp":"T21",
-        "Substans":"Ipratropium + salbutamol",
-        "Beredningsform":"Lösning för nebulisator",
-        "Storlek":150.0,
-        "Apotekens inköpspris":154.5,
-        "Försäljningspris":218.16,
-        "Inköpspris per minsta enhet":1.03,
-        "Försäljningspris per minsta enhet":1.45,
-        "NPL ID":20131204000078,
-        "NPL pack ID":20140320100043,
-        "Ursprung":"Generics",
-        "Företag":"Orifarm Generics AB",
-        "Utbytesgrupps ID":112303
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Ipratropium\/Salbutamol Orion",
         "Varunummer":167811,
@@ -57643,6 +57624,25 @@
         "NPL pack ID":20070814100047,
         "Ursprung":"Generics",
         "Företag":"SanoSwiss UAB",
+        "Utbytesgrupps ID":112303
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Salipra",
+        "Varunummer":472131,
+        "Styrka":"0,5 mg \/ 2,5 mg",
+        "Förpackningsstorleksgrupp":"T21",
+        "Substans":"Ipratropium + salbutamol",
+        "Beredningsform":"Lösning för nebulisator",
+        "Storlek":150.0,
+        "Apotekens inköpspris":154.5,
+        "Försäljningspris":218.16,
+        "Inköpspris per minsta enhet":1.03,
+        "Försäljningspris per minsta enhet":1.45,
+        "NPL ID":20131204000078,
+        "NPL pack ID":20140320100043,
+        "Ursprung":"Generics",
+        "Företag":"Orifarm Generics AB",
         "Utbytesgrupps ID":112303
     },
     {
@@ -60403,7 +60403,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Cabenex",
-        "Varunummer":81311,
+        "Varunummer":495026,
         "Styrka":"0,5 mg",
         "Förpackningsstorleksgrupp":"T8",
         "Substans":"Kabergolin",
@@ -85882,7 +85882,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Methylphenidate Sandoz",
-        "Varunummer":507765,
+        "Varunummer":544439,
         "Styrka":"54 mg",
         "Förpackningsstorleksgrupp":"TN90",
         "Substans":"Metylfenidat",
@@ -91809,25 +91809,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Naproxen Orifarm",
-        "Varunummer":503663,
-        "Styrka":"500 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Naproxen",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":71.89,
-        "Försäljningspris":132.44,
-        "Inköpspris per minsta enhet":0.72,
-        "Försäljningspris per minsta enhet":1.32,
-        "NPL ID":20040607002803,
-        "NPL pack ID":20031030100082,
-        "Ursprung":"Generics",
-        "Företag":"Orifarm Generics AB",
-        "Utbytesgrupps ID":112445
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Naproxen Bluefish",
         "Varunummer":590467,
         "Styrka":"500 mg",
@@ -91846,7 +91827,7 @@
         "Utbytesgrupps ID":112445
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Pronaxen®",
         "Varunummer":197855,
         "Styrka":"500 mg",
@@ -91862,6 +91843,25 @@
         "NPL pack ID":19871001100147,
         "Ursprung":"Generics",
         "Företag":"Orion Pharma AB",
+        "Utbytesgrupps ID":112445
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Naproxen Orifarm",
+        "Varunummer":503663,
+        "Styrka":"500 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Naproxen",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":71.89,
+        "Försäljningspris":132.44,
+        "Inköpspris per minsta enhet":0.72,
+        "Försäljningspris per minsta enhet":1.32,
+        "NPL ID":20040607002803,
+        "NPL pack ID":20031030100082,
+        "Ursprung":"Generics",
+        "Företag":"Orifarm Generics AB",
         "Utbytesgrupps ID":112445
     },
     {
