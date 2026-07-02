@@ -1,25 +1,5 @@
 [
   {
-    "id": "111603",
-    "size_id": "T21",
-    "sub": "Abakavir",
-    "form": "Tablett",
-    "str": "300 mg",
-    "size": "ca 60 st",
-    "names": [
-      "Abacavir 2care4",
-      "Ziagen®"
-    ],
-    "vnr": [
-      "101995",
-      "178182",
-      "381027",
-      "38994"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
     "id": "111646",
     "size_id": "T18",
     "sub": "Abakavir + lamivudin",
@@ -621,8 +601,7 @@
       "Alfuzosin STADA",
       "Alfuzosin Sandoz",
       "Alfuzosin Teva",
-      "Alfuzosin Viatris",
-      "Xatral OD"
+      "Alfuzosin Viatris"
     ],
     "vnr": [
       "144757",
@@ -633,8 +612,7 @@
       "523205",
       "549500",
       "564356",
-      "80921",
-      "97626"
+      "80921"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -7109,6 +7087,7 @@
     "names": [
       "Asmoken",
       "Belnifrem",
+      "Cysarax",
       "Cytisiniklin Abacus Medicine",
       "Cytisiniklin Ebb",
       "Cytisiniklin Medartuum",
@@ -15632,47 +15611,6 @@
       "371173",
       "452862",
       "548745"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111745",
-    "size_id": "F1A",
-    "sub": "Infliximab",
-    "form": "Pulver till infusionsvätska",
-    "str": "100 mg (Grupp B)",
-    "size": "F1A",
-    "names": [
-      "Inflectra",
-      "Remsima"
-    ],
-    "vnr": [
-      "129740",
-      "376989",
-      "393065",
-      "456703",
-      "69790"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111745",
-    "size_id": "F3A",
-    "sub": "Infliximab",
-    "form": "Pulver till infusionsvätska",
-    "str": "100 mg (Grupp B)",
-    "size": "F3A",
-    "names": [
-      "Remsima"
-    ],
-    "vnr": [
-      "395226",
-      "445848",
-      "463889",
-      "81934",
-      "91550"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -37972,10 +37910,10 @@
       "107322",
       "130463",
       "165655",
+      "384161",
       "485093",
       "545089",
-      "56922",
-      "587597"
+      "56922"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -40990,7 +40928,7 @@
     "str": "2,5 mg",
     "size": "12 st",
     "names": [
-      "Zolmitriptan Rivopharm",
+      "Zolmitriptan Holsten",
       "Zolmitriptan STADA"
     ],
     "vnr": [
@@ -41008,8 +40946,8 @@
     "str": "2,5 mg",
     "size": "6 st",
     "names": [
+      "Zolmitriptan Holsten",
       "Zolmitriptan Jubilant",
-      "Zolmitriptan Rivopharm",
       "Zolmitriptan STADA"
     ],
     "vnr": [
@@ -41030,7 +40968,7 @@
     "names": [
       "Zolmitriptan Abacus Medicine",
       "Zolmitriptan Ebb",
-      "Zolmitriptan Rivopharm",
+      "Zolmitriptan Holsten",
       "Zolmitriptan STADA",
       "Zomig® Rapimelt"
     ],
@@ -41088,8 +41026,8 @@
     "str": "2,5 mg",
     "size": "18 st",
     "names": [
+      "Zolmitriptan Holsten",
       "Zolmitriptan Jubilant",
-      "Zolmitriptan Rivopharm",
       "Zolmitriptan STADA",
       "Zomig®"
     ],
@@ -41126,8 +41064,8 @@
     "str": "2,5 mg",
     "size": "6 st",
     "names": [
+      "Zolmitriptan Holsten",
       "Zolmitriptan Jubilant",
-      "Zolmitriptan Rivopharm",
       "Zolmitriptan STADA",
       "Zomig®"
     ],
@@ -41149,8 +41087,8 @@
     "size": "18 st",
     "names": [
       "Zolmitriptan Abacus Medicine",
+      "Zolmitriptan Holsten",
       "Zolmitriptan Jubilant",
-      "Zolmitriptan Rivopharm",
       "Zolmitriptan STADA",
       "Zomig®"
     ],
