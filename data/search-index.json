@@ -72,9 +72,11 @@
     "str": "500 mg",
     "size": "ca 60 st",
     "names": [
-      "Abirateron Avansor"
+      "Abirateron Avansor",
+      "Abiraterone Accord"
     ],
     "vnr": [
+      "516618",
       "90238"
     ],
     "packaging": [],
@@ -2018,8 +2020,7 @@
       "553909",
       "566052",
       "585956",
-      "72807",
-      "77988"
+      "72807"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -2046,7 +2047,6 @@
       "130056",
       "153709",
       "159476",
-      "181713",
       "413080",
       "46852",
       "520889",
@@ -2065,12 +2065,10 @@
     "str": "30 mg",
     "size": "ca 159 st",
     "names": [
-      "Apremilast Avansor",
-      "Otezla"
+      "Apremilast Avansor"
     ],
     "vnr": [
-      "416009",
-      "559361"
+      "416009"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -3948,6 +3946,7 @@
     "size": "ca 113 st",
     "names": [
       "Aforbe",
+      "Ambofoz",
       "Befoair",
       "Forobec",
       "Innovair",
@@ -3958,7 +3957,8 @@
       "165369",
       "33234",
       "374086",
-      "444803"
+      "444803",
+      "72387"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -4647,7 +4647,7 @@
       "Bisoprolol Sandoz"
     ],
     "vnr": [
-      "117750"
+      "384661"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -5220,12 +5220,10 @@
       "Brinzolamid/Timolol Medical Valley",
       "Brinzolamide/Timolol Abacus Medicine",
       "Brinzolamide/Timolol Accord",
-      "Brinzolamide/Timolol STADA",
-      "Brinzolamide/Timolol Zentiva"
+      "Brinzolamide/Timolol STADA"
     ],
     "vnr": [
       "150796",
-      "195498",
       "27202",
       "372677",
       "588430",
@@ -6456,6 +6454,7 @@
       "401627",
       "497395",
       "515361",
+      "566219",
       "572528",
       "583911"
     ],
@@ -6470,10 +6469,12 @@
     "str": "30 mg",
     "size": "ca 90 st",
     "names": [
+      "Cinacalcet Amarox",
       "Cinacalcet Viatris"
     ],
     "vnr": [
       "191879",
+      "545554",
       "71349"
     ],
     "packaging": [],
@@ -7369,6 +7370,7 @@
     "str": "100 mg",
     "size": "ca 30 st",
     "names": [
+      "Dasatinib Accord Healthcare",
       "Dasatinib Krka",
       "Dasatinib STADA",
       "Dasatinib Sandoz",
@@ -7389,6 +7391,7 @@
       "470323",
       "473142",
       "587146",
+      "597725",
       "95373"
     ],
     "packaging": [],
@@ -7427,6 +7430,7 @@
     "str": "20 mg",
     "size": "ca 60 st",
     "names": [
+      "Dasatinib Accord Healthcare",
       "Dasatinib Krka",
       "Dasatinib STADA",
       "Dasatinib Sandoz",
@@ -7442,6 +7446,7 @@
       "497202",
       "508656",
       "530205",
+      "532289",
       "553844"
     ],
     "packaging": [],
@@ -7488,6 +7493,7 @@
     "str": "70 mg",
     "size": "ca 60 st",
     "names": [
+      "Dasatinib Accord Healthcare",
       "Dasatinib Krka",
       "Dasatinib STADA",
       "Dasatinib Sandoz",
@@ -7504,6 +7510,7 @@
       "476892",
       "513595",
       "554217",
+      "73620",
       "80585",
       "91667"
     ],
@@ -8702,6 +8709,7 @@
       "401195",
       "402433",
       "421825",
+      "457901",
       "560119",
       "573285",
       "582008",
@@ -8736,22 +8744,6 @@
   },
   {
     "id": "117384",
-    "size_id": "M120",
-    "sub": "Dokusat + sorbitol",
-    "form": "Rektallösning",
-    "str": "1 mg/ml + 250 mg/ml",
-    "size": "120 ml",
-    "names": [
-      "Klyx®"
-    ],
-    "vnr": [
-      "20003"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "117384",
     "size_id": "M1200",
     "sub": "Dokusat + sorbitol",
     "form": "Rektallösning",
@@ -8764,22 +8756,6 @@
     "vnr": [
       "20014",
       "551213"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "117384",
-    "size_id": "M240",
-    "sub": "Dokusat + sorbitol",
-    "form": "Rektallösning",
-    "str": "1 mg/ml + 250 mg/ml",
-    "size": "240 ml",
-    "names": [
-      "Klyx®"
-    ],
-    "vnr": [
-      "20052"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -9781,6 +9757,7 @@
     "names": [
       "Eltrombopag Accord",
       "Eltrombopag Avansor",
+      "Eltrombopag Bioglan",
       "Eltrombopag Glenmark",
       "Eltrombopag Krka",
       "Eltrombopag STADA",
@@ -9798,6 +9775,7 @@
       "373080",
       "394971",
       "398184",
+      "514219",
       "516445"
     ],
     "packaging": [],
@@ -9813,6 +9791,7 @@
     "names": [
       "Eltrombopag Accord",
       "Eltrombopag Avansor",
+      "Eltrombopag Bioglan",
       "Eltrombopag Glenmark",
       "Eltrombopag Krka",
       "Eltrombopag STADA",
@@ -9829,6 +9808,7 @@
       "420758",
       "435114",
       "439641",
+      "449418",
       "534194",
       "581284",
       "586193"
@@ -13586,6 +13566,7 @@
       "149717",
       "17646",
       "184157",
+      "502910",
       "562642",
       "579053"
     ],
@@ -20601,6 +20582,7 @@
     "str": "125 mg/31,25 mg/ 200 mg",
     "size": "ca 90 st",
     "names": [
+      "Levodopa/Carbidopa/Entacapone G.L. Pharma",
       "Levodopa/Carbidopa/Entacapone Holsten",
       "Levodopa/Carbidopa/Entacapone Orion",
       "Sastravi",
@@ -20609,6 +20591,7 @@
     "vnr": [
       "184298",
       "32157",
+      "385929",
       "387568",
       "410012",
       "515194",
@@ -20627,12 +20610,14 @@
     "str": "125 mg/31,25 mg/ 200 mg",
     "size": "ca 128 st",
     "names": [
+      "Levodopa/Carbidopa/Entacapone G.L. Pharma",
       "Levodopa/Carbidopa/Entacapone Orion",
       "Sastravi",
       "Stalevo®"
     ],
     "vnr": [
       "32170",
+      "436880",
       "52638",
       "55029"
     ],
@@ -20686,6 +20671,44 @@
       "59259",
       "595967",
       "76847"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112579",
+    "size_id": "T23",
+    "sub": "Levodopa + karbidopa + entakapon",
+    "form": "Tablett",
+    "str": "175 mg/43,75 mg/200 mg",
+    "size": "ca 90 st",
+    "names": [
+      "Levodopa/Carbidopa/Entacapone G.L. Pharma",
+      "Levodopa/Carbidopa/Entacapone Orion",
+      "Stalevo®"
+    ],
+    "vnr": [
+      "126531",
+      "491775",
+      "50035"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112579",
+    "size_id": "T25",
+    "sub": "Levodopa + karbidopa + entakapon",
+    "form": "Tablett",
+    "str": "175 mg/43,75 mg/200 mg",
+    "size": "ca 128 st",
+    "names": [
+      "Levodopa/Carbidopa/Entacapone G.L. Pharma",
+      "Stalevo®"
+    ],
+    "vnr": [
+      "474398",
+      "541741"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -22694,6 +22717,7 @@
       "Nemdatine"
     ],
     "vnr": [
+      "110061",
       "151540",
       "166700",
       "169322",
@@ -23034,9 +23058,9 @@
       "475690",
       "47890",
       "495865",
+      "510159",
       "533001",
       "568862",
-      "569275",
       "84233"
     ],
     "packaging": [],
@@ -24083,6 +24107,7 @@
       "117729",
       "174993",
       "384457",
+      "482894",
       "536422"
     ],
     "packaging": [],
@@ -27029,6 +27054,22 @@
     "packagingMap": {}
   },
   {
+    "id": "111406",
+    "size_id": "T28",
+    "sub": "Omeprazol",
+    "form": "Enterokapsel/Enterotablett",
+    "str": "10 mg",
+    "size": "ca 261 st",
+    "names": [
+      "Omeprazol Medical Valley"
+    ],
+    "vnr": [
+      "407748"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
     "id": "111431",
     "size_id": "T14",
     "sub": "Omeprazol",
@@ -27355,9 +27396,11 @@
     "size": "ca 30 st",
     "names": [
       "Ondansetron Abacus Medicine",
-      "Ondansetron Ebb"
+      "Ondansetron Ebb",
+      "Ondansetron Orifarm"
     ],
     "vnr": [
+      "401674",
       "424180",
       "563195"
     ],
@@ -27616,6 +27659,7 @@
     "size": "ca 82 st",
     "names": [
       "Beacita",
+      "Orlistat Accord",
       "Orlistat STADA",
       "Xenical®"
     ],
@@ -27625,7 +27669,8 @@
       "179579",
       "4735",
       "505619",
-      "545322"
+      "545322",
+      "89171"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -29263,6 +29308,38 @@
   },
   {
     "id": "111959",
+    "size_id": "EK5478",
+    "sub": "Paliperidon",
+    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
+    "str": "50 mg",
+    "size": "EK5478",
+    "names": [
+      "Paliperidon Zentiva"
+    ],
+    "vnr": [
+      "144578"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111959",
+    "size_id": "EK5479",
+    "sub": "Paliperidon",
+    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
+    "str": "50 mg",
+    "size": "EK5479",
+    "names": [
+      "Paliperidone Viatris"
+    ],
+    "vnr": [
+      "560258"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111959",
     "size_id": "F1A",
     "sub": "Paliperidon",
     "form": "Injektionsvätska, depotsuspension i förfylld spruta",
@@ -29285,6 +29362,22 @@
       "502553",
       "550499",
       "58609"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111968",
+    "size_id": "EK5477",
+    "sub": "Paliperidon",
+    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
+    "str": "75 mg",
+    "size": "EK5477",
+    "names": [
+      "Paliperidone Viatris"
+    ],
+    "vnr": [
+      "549365"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -29472,6 +29565,7 @@
     "size": "ca 52 st",
     "names": [
       "Pantoloc",
+      "Pantoprazol Abacus Medicine",
       "Pantoprazol Ebb",
       "Pantoprazol Krka",
       "Pantoprazol Viatris",
@@ -29480,6 +29574,7 @@
     "vnr": [
       "102878",
       "371435",
+      "387743",
       "396352",
       "439896",
       "526279"
@@ -29695,6 +29790,7 @@
     "vnr": [
       "120621",
       "379562",
+      "384365",
       "40688",
       "409735",
       "450006",
@@ -32722,22 +32818,6 @@
   },
   {
     "id": "112129",
-    "size_id": "EK5459",
-    "sub": "Risperidon",
-    "form": "Pulver och vätska till injektionsvätska, depotsuspension",
-    "str": "37,5 mg",
-    "size": "EK5459",
-    "names": [
-      "Risperidone Teva GmbH"
-    ],
-    "vnr": [
-      "396476"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112129",
     "size_id": "F37D5A",
     "sub": "Risperidon",
     "form": "Pulver och vätska till injektionsvätska, depotsuspension",
@@ -33610,6 +33690,7 @@
     "str": "2,5 mg",
     "size": "ca 52 st",
     "names": [
+      "Rivaroxaban Krka",
       "Rivaroxaban Medical Valley",
       "Rivaroxaban STADA",
       "Rivaroxaban Sandoz",
@@ -33621,6 +33702,7 @@
       "145816",
       "504660",
       "598930",
+      "65362",
       "87427"
     ],
     "packaging": [],
@@ -33727,6 +33809,7 @@
     ],
     "vnr": [
       "149680",
+      "386061",
       "392095",
       "431208",
       "449459",
@@ -35985,6 +36068,7 @@
       "Sitagliptin Glenmark",
       "Sitagliptin Grindeks",
       "Sitagliptin Krka",
+      "Sitagliptin Medical Valley",
       "Sitagliptin STADA",
       "Sitagliptin SUN"
     ],
@@ -35993,6 +36077,7 @@
       "197014",
       "435250",
       "487312",
+      "533813",
       "77471"
     ],
     "packaging": [],
@@ -36011,6 +36096,7 @@
       "Sitagliptin Glenmark",
       "Sitagliptin Grindeks",
       "Sitagliptin Krka",
+      "Sitagliptin Medical Valley",
       "Sitagliptin STADA",
       "Sitagliptin SUN",
       "Sitagliptin Sandoz",
@@ -36024,6 +36110,7 @@
       "471088",
       "528285",
       "52872",
+      "543471",
       "548548",
       "548576",
       "548954",
@@ -36295,6 +36382,7 @@
       "Sitagliptin/Metformin Medical Valley",
       "Sitagliptin/Metformin STADA",
       "Sitagliptin/Metformin Sandoz",
+      "Sitagliptin/Metformin Viatris",
       "Sitagliptin/Metformin Zentiva k.s.",
       "Sitagliptin/Metformin hydrochloride Mylan",
       "Velmetia®"
@@ -36305,6 +36393,7 @@
       "34228",
       "390990",
       "394222",
+      "432644",
       "435656",
       "435991",
       "437316",
@@ -38186,6 +38275,7 @@
     "str": "60 mg",
     "size": "ca 52 st",
     "names": [
+      "Ticagrelor Accord",
       "Ticagrelor Krka",
       "Ticagrelor Newbury",
       "Ticagrelor STADA",
@@ -38193,6 +38283,7 @@
     ],
     "vnr": [
       "446540",
+      "526017",
       "529884",
       "595738",
       "77608"
@@ -38227,6 +38318,7 @@
     "size": "ca 159 st",
     "names": [
       "Brilique",
+      "Ticagrelor Accord",
       "Ticagrelor Holsten",
       "Ticagrelor Krka",
       "Ticagrelor Medical Valley",
@@ -38245,6 +38337,7 @@
       "149869",
       "177237",
       "184696",
+      "408051",
       "488801",
       "541841",
       "68300"
@@ -38261,6 +38354,7 @@
     "size": "ca 52 st",
     "names": [
       "Brilique",
+      "Ticagrelor Accord",
       "Ticagrelor Avansor",
       "Ticagrelor Holsten",
       "Ticagrelor Medical Valley",
@@ -38274,6 +38368,7 @@
     "vnr": [
       "113246",
       "115351",
+      "135924",
       "153328",
       "375092",
       "409834",
@@ -38311,6 +38406,7 @@
     "size": "ca 90 st",
     "names": [
       "Brilique",
+      "Ticagrelor Accord",
       "Ticagrelor Holsten",
       "Ticagrelor Krka",
       "Ticagrelor Medical Valley",
@@ -38331,6 +38427,7 @@
       "524382",
       "532105",
       "571599",
+      "58540",
       "99297"
     ],
     "packaging": [],
@@ -38360,6 +38457,7 @@
     "str": "90 mg",
     "size": "ca 159 st",
     "names": [
+      "Ticagrelor Accord",
       "Ticagrelor Avansor",
       "Ticagrelor Holsten",
       "Ticagrelor Krka",
@@ -38375,6 +38473,7 @@
       "177101",
       "40236",
       "412245",
+      "447455",
       "45209",
       "469146",
       "488027",
@@ -38382,38 +38481,6 @@
       "539217",
       "82498",
       "92093"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112155",
-    "size_id": "EK5456",
-    "sub": "Tiotropium",
-    "form": "Inhalationspulver, kapsel",
-    "str": "18 mikrogram",
-    "size": "EK5456",
-    "names": [
-      "Tiotropium ADOH"
-    ],
-    "vnr": [
-      "52111"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112155",
-    "size_id": "EK5457",
-    "sub": "Tiotropium",
-    "form": "Inhalationspulver, kapsel",
-    "str": "18 mikrogram",
-    "size": "EK5457",
-    "names": [
-      "Tiotropium ADOH"
-    ],
-    "vnr": [
-      "194430"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -38428,10 +38495,12 @@
     "names": [
       "Spiriva®",
       "Tiogiva",
+      "Tiotropium ADOH",
       "Tiotropium STADA"
     ],
     "vnr": [
       "153420",
+      "194430",
       "196862",
       "510482",
       "551292",
@@ -38451,12 +38520,14 @@
     "names": [
       "Spiriva®",
       "Tiogiva",
+      "Tiotropium ADOH",
       "Tiotropium STADA"
     ],
     "vnr": [
       "171628",
       "21617",
       "413829",
+      "52111",
       "580249"
     ],
     "packaging": [],
@@ -38511,12 +38582,14 @@
     "size": "ca 30 st",
     "names": [
       "Tolterodin Abacus Medicine",
+      "Tolterodin Bijon",
       "Tolterodin Rivopharm",
       "Tolterodin STADA"
     ],
     "vnr": [
       "464331",
       "540946",
+      "551831",
       "561815"
     ],
     "packaging": [],
@@ -38565,6 +38638,22 @@
     "packagingMap": {}
   },
   {
+    "id": "112814",
+    "size_id": "T24",
+    "sub": "Tolterodin",
+    "form": "Depotkapsel",
+    "str": "2 mg",
+    "size": "ca 113 st",
+    "names": [
+      "Tolterodin Bijon"
+    ],
+    "vnr": [
+      "592086"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
     "id": "112815",
     "size_id": "T18",
     "sub": "Tolterodin",
@@ -38582,6 +38671,22 @@
       "483547",
       "557674",
       "58981"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112815",
+    "size_id": "T20",
+    "sub": "Tolterodin",
+    "form": "Depotkapsel",
+    "str": "4 mg",
+    "size": "ca 52 st",
+    "names": [
+      "Tolterodin Bijon"
+    ],
+    "vnr": [
+      "476971"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -38630,6 +38735,22 @@
       "64573",
       "79565",
       "91739"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112815",
+    "size_id": "T24",
+    "sub": "Tolterodin",
+    "form": "Depotkapsel",
+    "str": "4 mg",
+    "size": "ca 113 st",
+    "names": [
+      "Tolterodin Bijon"
+    ],
+    "vnr": [
+      "159068"
     ],
     "packaging": [],
     "packagingMap": {}
