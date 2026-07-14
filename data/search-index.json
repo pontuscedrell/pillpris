@@ -26243,6 +26243,22 @@
   },
   {
     "id": "111459",
+    "size_id": "EK5473",
+    "sub": "Oktreotid",
+    "form": "Pulver och vätska till injektionsvätska",
+    "str": "20 mg",
+    "size": "EK5473",
+    "names": [
+      "Sandostatin LAR"
+    ],
+    "vnr": [
+      "591527"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111459",
     "size_id": "F1A",
     "sub": "Oktreotid",
     "form": "Pulver och vätska till injektionsvätska",
