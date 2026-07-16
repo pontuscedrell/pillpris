@@ -23752,7 +23752,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Cinacalcet Viatris",
-        "Varunummer":535596,
+        "Varunummer":427527,
         "Styrka":"60 mg",
         "Förpackningsstorleksgrupp":"T18",
         "Substans":"Cinakalcet",
@@ -30438,7 +30438,7 @@
         "Utbytesgrupps ID":113907
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Attentin",
         "Varunummer":386811,
         "Styrka":"10 mg",
