@@ -1012,7 +1012,14 @@ async function renderPriceCard(viewModel) {
         headerBar.style.display = 'flex';
         headerBar.style.background = '';
         headerBar.style.border = '';
-        headerBar.classList.toggle('is-alert-red', rec.icon === 'shopping_cart_checkout');
+        headerBar.classList.remove(
+            'price-recommendation--neutral',
+            'price-recommendation--good',
+            'price-recommendation--warning',
+            'price-recommendation--danger',
+            'price-recommendation--future'
+        );
+        headerBar.classList.add(`price-recommendation--${getPriceRecommendationTone(rec)}`);
 
         const headerIcon = area.querySelector('.price-card-icon');
         headerIcon.textContent = rec.icon;
@@ -1633,16 +1640,17 @@ function createMonthBanner(container) {
     // Create new banner
     const banner = document.createElement('div');
     banner.id = 'month-warning-banner';
-    banner.className = 'month-warning-banner';
+    banner.className = 'price-card-header-bar month-warning-banner is-alert-amber';
     banner.innerHTML = `
-        <div class="month-banner-icon-wrapper">
-            <span class="material-symbols-outlined month-banner-icon">calendar_month</span>
+        <div class="price-card-icon-wrapper">
+            <span class="material-symbols-outlined price-card-icon">calendar_month</span>
         </div>
-        <div class="month-banner-text">
-            <span class="month-banner-label">Du visar nu priset för <b class="banner-month-name"></b>.</span>
-            <span class="month-banner-action">Klicka <b onclick="goToCurrentMonth()">här</b> för att gå till nuvarande månad.</span>
+        <div class="price-card-header-text">
+            <p class="price-card-header-label">Du visar nu priset för <span class="banner-month-name"></span>.</p>
+            <p class="price-card-header-subtext">Gå tillbaka till <button type="button" class="month-banner-current-btn">nuvarande månad</button>.</p>
         </div>
     `;
+    banner.querySelector('.month-banner-current-btn')?.addEventListener('click', goToCurrentMonth);
     
     // Insert right after the header bar (between header and content wrapper)
     const headerBar = document.querySelector('.price-card-header-bar');
@@ -2006,11 +2014,14 @@ function renderPriceStabilityInsight(allPrices, minPrice, maxPrice, priceDiff) {
     }
 
     const isDarkMode = document.body.classList.contains('dark-mode');
+    const mobileBubbleStyle = window.matchMedia('(max-width: 768px)').matches
+        ? ' border-radius: 20px; overflow: hidden;'
+        : '';
     const bgStyle = isDarkMode ? 'var(--card-bg)' : stabilityBg;
     const borderStyle = isDarkMode ? `2px solid ${stabilityColor}` : `1px solid ${stabilityColor}30; border-left: 4px solid ${stabilityColor}`;
     
     const insightHtml = `
-        <div id="stability-insight" class="stability-insight-box" style="background: ${bgStyle}; border: ${borderStyle};">
+        <div id="stability-insight" class="stability-insight-box" style="background: ${bgStyle}; border: ${borderStyle};${mobileBubbleStyle}">
             <span class="material-symbols-outlined stability-insight-icon" style="color: ${stabilityColor};">${stabilityIcon}</span>
             <div>
                 <strong class="stability-insight-title" style="color: ${isDarkMode ? 'var(--text-primary)' : stabilityColor};">${stabilityLabel}</strong>
@@ -2063,6 +2074,9 @@ function ensureHistoryExportModal() {
     overlay.hidden = true;
     overlay.innerHTML = `
         <div class="chart-export-modal" role="dialog" aria-modal="true" aria-labelledby="chart-export-modal-title">
+            <button type="button" class="chart-export-modal-close" data-action="close" aria-label="Stäng exportdialogen" title="Stäng">
+                <span class="material-symbols-outlined">close</span>
+            </button>
             <h3 id="chart-export-modal-title">Exportera prishistorik</h3>
             <div class="chart-export-modal-grid">
                 <div class="chart-export-modal-field">
@@ -2101,6 +2115,7 @@ function ensureHistoryExportModal() {
         if (event.target === overlay) close();
     });
     panel?.addEventListener('click', (event) => event.stopPropagation());
+    overlay.querySelector('[data-action="close"]')?.addEventListener('click', close);
     overlay.querySelector('[data-action="cancel"]')?.addEventListener('click', close);
     overlay.querySelector('[data-action="export"]')?.addEventListener('click', () => exportHistoryFromModal(close));
 
@@ -2622,6 +2637,14 @@ function getPriceRecommendation(currentPrice, stats, nextPrice) {
     }
 
     return rec;
+}
+
+function getPriceRecommendationTone(rec) {
+    if (['auto_awesome', 'thumb_up'].includes(rec.icon)) return 'good';
+    if (rec.icon === 'error') return 'danger';
+    if (rec.icon === 'hourglass_empty') return 'future';
+    if (['shopping_cart_checkout', 'trending_up'].includes(rec.icon)) return 'warning';
+    return 'neutral';
 }
 
 // Month Picker Functions

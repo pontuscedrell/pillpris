@@ -76,6 +76,19 @@ body.dark-mode {
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        background: var(--card-bg);
+        background-image: none;
+    }
+}
+
+@media (min-width: 641px) {
+    body.has-selection .container {
+        padding-top: 0;
+    }
+}
+
 /* --- Hero Layout --- */
 .hero {
     display: grid;
@@ -1137,13 +1150,43 @@ body.dark-mode .chart-export-status {
     padding: 16px;
 }
 
+.chart-export-modal-overlay[hidden] {
+    display: none;
+}
+
 .chart-export-modal {
+    position: relative;
     width: min(420px, 100%);
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 14px;
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.28);
     padding: 18px;
+}
+
+.chart-export-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-export-modal-close:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.chart-export-modal-close .material-symbols-outlined {
+    font-size: 20px;
 }
 
 .chart-export-modal h3 {
@@ -1972,55 +2015,65 @@ body.dark-mode .tlv-info-box {
 /* Month warning banner */
 .month-warning-banner {
     display: none;
-    background: #fef9c3;
     border-radius: 0;
     margin: 0;
-    padding: 16px 24px;
-    align-items: center;
-    gap: 16px;
 }
 
-.month-banner-icon-wrapper {
-    background: var(--bg-secondary);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: background 0.3s ease;
+.price-card-header-bar.is-alert-amber {
+    background: #fffbeb;
+    border-color: #fde68a;
 }
 
-.month-banner-icon {
-    font-size: 20px;
-    color: #ca8a04;
+.price-card-header-bar.is-alert-amber .price-card-icon-wrapper {
+    background: #fef3c7;
 }
 
-.month-banner-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+.price-card-header-bar.is-alert-amber .price-card-icon,
+.price-card-header-bar.is-alert-amber .price-card-header-label,
+.price-card-header-bar.is-alert-amber .price-card-header-subtext {
+    color: #92400e;
 }
 
-.month-banner-label {
-    margin: 0;
+.month-banner-current-btn {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
     font-weight: 700;
-    font-size: 15px;
-    color: #713f12;
-}
-
-.month-banner-action {
-    margin: 0;
-    font-size: 13px;
-    color: #854d0e;
-    line-height: 1.3;
-}
-
-.month-banner-action b {
-    color: #713f12;
+    text-decoration: underline;
     cursor: pointer;
-    text-decoration: none;
+}
+
+body.dark-mode .price-card-header-bar.is-alert-amber {
+    background: rgba(180, 83, 9, 0.16);
+    border-color: rgba(251, 191, 36, 0.4);
+}
+
+body.dark-mode .price-card-header-bar.is-alert-amber .price-card-icon-wrapper {
+    background: rgba(180, 83, 9, 0.28);
+}
+
+body.dark-mode .price-card-header-bar.is-alert-amber .price-card-icon,
+body.dark-mode .price-card-header-bar.is-alert-amber .price-card-header-label,
+body.dark-mode .price-card-header-bar.is-alert-amber .price-card-header-subtext {
+    color: #fde68a;
+}
+
+@media (max-width: 768px) {
+    .price-card-header-bar {
+        border-radius: 20px !important;
+        overflow: hidden;
+    }
+
+    .price-card-header-bar.month-warning-banner,
+    .price-card-header-bar.comparison-warning-banner,
+    .tlv-info-box,
+    .savings-alert-box,
+    .stability-insight-box {
+        border-radius: 16px !important;
+    }
+
 }
 
 .tlv-info-icon {
@@ -3019,6 +3072,73 @@ body.dark-mode .price-card-header-bar.is-alert-red .price-card-icon {
     font-variation-settings: 'FILL' 1;
 }
 
+.price-card-header-bar.price-recommendation--neutral {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+}
+
+.price-card-header-bar.price-recommendation--good {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+
+.price-card-header-bar.price-recommendation--warning {
+    background: #fffbeb;
+    border-color: #fde68a;
+}
+
+.price-card-header-bar.price-recommendation--danger {
+    background: #fef2f2;
+    border-color: #fecaca;
+}
+
+.price-card-header-bar.price-recommendation--future {
+    background: #f5f3ff;
+    border-color: #ddd6fe;
+}
+
+.price-card-header-bar.price-recommendation--good .price-card-icon-wrapper { background: #dcfce7; }
+.price-card-header-bar.price-recommendation--warning .price-card-icon-wrapper { background: #fef3c7; }
+.price-card-header-bar.price-recommendation--danger .price-card-icon-wrapper { background: #fee2e2; }
+.price-card-header-bar.price-recommendation--future .price-card-icon-wrapper { background: #ede9fe; }
+
+.price-card-header-bar.price-recommendation--good .price-card-icon,
+.price-card-header-bar.price-recommendation--good .price-card-header-label,
+.price-card-header-bar.price-recommendation--good .price-card-header-subtext { color: #15803d; }
+
+.price-card-header-bar.price-recommendation--warning .price-card-icon,
+.price-card-header-bar.price-recommendation--warning .price-card-header-label,
+.price-card-header-bar.price-recommendation--warning .price-card-header-subtext { color: #b45309; }
+
+.price-card-header-bar.price-recommendation--danger .price-card-icon,
+.price-card-header-bar.price-recommendation--danger .price-card-header-label,
+.price-card-header-bar.price-recommendation--danger .price-card-header-subtext { color: #dc2626; }
+
+.price-card-header-bar.price-recommendation--future .price-card-icon,
+.price-card-header-bar.price-recommendation--future .price-card-header-label,
+.price-card-header-bar.price-recommendation--future .price-card-header-subtext { color: #7c3aed; }
+
+body.dark-mode .price-card-header-bar.price-recommendation--good { background: rgba(21, 128, 61, 0.16); border-color: rgba(74, 222, 128, 0.4); }
+body.dark-mode .price-card-header-bar.price-recommendation--warning { background: rgba(180, 83, 9, 0.16); border-color: rgba(251, 191, 36, 0.4); }
+body.dark-mode .price-card-header-bar.price-recommendation--danger { background: rgba(220, 38, 38, 0.16); border-color: rgba(248, 113, 113, 0.4); }
+body.dark-mode .price-card-header-bar.price-recommendation--future { background: rgba(124, 58, 237, 0.16); border-color: rgba(167, 139, 250, 0.4); }
+
+body.dark-mode .price-card-header-bar.price-recommendation--good .price-card-icon,
+body.dark-mode .price-card-header-bar.price-recommendation--good .price-card-header-label,
+body.dark-mode .price-card-header-bar.price-recommendation--good .price-card-header-subtext { color: #86efac; }
+
+body.dark-mode .price-card-header-bar.price-recommendation--warning .price-card-icon,
+body.dark-mode .price-card-header-bar.price-recommendation--warning .price-card-header-label,
+body.dark-mode .price-card-header-bar.price-recommendation--warning .price-card-header-subtext { color: #fde68a; }
+
+body.dark-mode .price-card-header-bar.price-recommendation--danger .price-card-icon,
+body.dark-mode .price-card-header-bar.price-recommendation--danger .price-card-header-label,
+body.dark-mode .price-card-header-bar.price-recommendation--danger .price-card-header-subtext { color: #fecaca; }
+
+body.dark-mode .price-card-header-bar.price-recommendation--future .price-card-icon,
+body.dark-mode .price-card-header-bar.price-recommendation--future .price-card-header-label,
+body.dark-mode .price-card-header-bar.price-recommendation--future .price-card-header-subtext { color: #ddd6fe; }
+
 .price-card-content-wrapper {
     padding: 24px;
 }
@@ -3077,6 +3197,18 @@ body.dark-mode .price-card-header-bar.is-alert-red .price-card-icon {
     color: #64748b;
     font-size: 15px;
     font-weight: 400;
+}
+
+/* Keep every mobile status banner as a self-contained rounded bubble. */
+@media (max-width: 768px) {
+    .price-card-header-bar.month-warning-banner,
+    .price-card-header-bar.comparison-warning-banner,
+    .tlv-info-box,
+    .savings-alert-box,
+    .stability-insight-box {
+        border-radius: 20px !important;
+        overflow: hidden;
+    }
 }
 
 .price-card-price-section {
@@ -3267,7 +3399,8 @@ body.has-selection .popular-row {
 body.has-selection .hero {
     background: transparent;
     border: none;
-    padding: 8px 0;
+    padding: 0;
+    margin: 0 0 12px;
     grid-template-columns: 1fr;
 }
 
@@ -3543,4 +3676,15 @@ body.dark-mode .stats-sparkline {
     display: flex;
     justify-content: space-between;
     gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .price-card-header-bar.month-warning-banner,
+    .price-card-header-bar.comparison-warning-banner,
+    .tlv-info-box,
+    .savings-alert-box,
+    .stability-insight-box {
+        border-radius: 20px !important;
+        overflow: hidden;
+    }
 }

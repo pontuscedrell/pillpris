@@ -2,6 +2,7 @@ import json
 import re
 import glob
 import os
+from collections import Counter
 
 def get_natural_size(code):
     code = str(code).strip().upper()
@@ -41,6 +42,22 @@ def get_natural_size(code):
         val = re.sub(r"[^\d.]", "", clean_val)
         return f"{val} g"
     return code
+
+def format_mode_size(size, size_code):
+    """Format the most common actual package size for the search dropdown."""
+    if float(size).is_integer():
+        value = str(int(size))
+    else:
+        value = str(size).replace('.', ',')
+
+    code = str(size_code).strip().upper()
+    if code.startswith(('M', 'MN')):
+        unit = 'ml'
+    elif code.startswith(('G', 'GN')):
+        unit = 'g'
+    else:
+        unit = 'st'
+    return f"{value} {unit}"
 
 def create_global_search_index():
     pv_folder = "data"
@@ -84,6 +101,7 @@ def create_global_search_index():
             prod_name = str(item.get('Produktnamn', '')).strip()
             vnr = str(item.get('Varunummer', '')).strip()
             packaging = str(item.get('Förpackning', '')).strip()
+            package_size = item.get('Storlek')
             
             # Endast inkludera om vi har både ID och storlek
             if not gid or not size_code or size_code.upper() == 'NONE' or size_code.upper() == 'NAN':
@@ -97,6 +115,7 @@ def create_global_search_index():
                     'str': strength,
                     'names': set(),
                     'vnr': set(),
+                    'sizes': Counter(),
                     'packaging': set(),
                     'packaging_by_vnr': {}
                 }
@@ -105,6 +124,11 @@ def create_global_search_index():
                 grouped[key]['names'].add(prod_name)
             if vnr:
                 grouped[key]['vnr'].add(vnr)
+            if package_size is not None:
+                try:
+                    grouped[key]['sizes'][float(package_size)] += 1
+                except (TypeError, ValueError):
+                    pass
             
             # Extract packaging type (text before first comma)
             if packaging and packaging.lower() != 'nan':
@@ -118,13 +142,16 @@ def create_global_search_index():
     
     # Konvertera till lista
     for (gid, size_code), data in grouped.items():
+        mode_size = None
+        if data['sizes']:
+            mode_size = min(data['sizes'].items(), key=lambda entry: (-entry[1], entry[0]))[0]
         search_index.append({
             "id": gid,
             "size_id": size_code,
             "sub": data['sub'],
             "form": data['form'],
             "str": data['str'],
-            "size": get_natural_size(size_code),
+            "size": format_mode_size(mode_size, size_code) if mode_size is not None else get_natural_size(size_code),
             "names": sorted(list(data['names'])),
             "vnr": sorted(list(data['vnr'])),
             "packaging": sorted(list(data['packaging'])),
