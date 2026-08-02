@@ -13,6 +13,7 @@ let comparisonView = "list"; // "list" or "table"
 let selectedComparisonShortageId = null;
 let shortageAlternativesModal = null;
 let historyChartRenderSeq = 0;
+let medicineRenderSeq = 0;
 let historyData = null;
 let historyGroupMap = new Map();
 let historySubStrengthMap = new Map();
@@ -796,6 +797,7 @@ function highlightDropdownItem(items, index) {
  * @param {boolean} [skipPushState=false] - If true, don't update browser history
  */
 async function fetchLatestPV(searchItem, skipPushState = false) {
+    const renderSeq = ++medicineRenderSeq;
     currentSearch = searchItem;
     currentViewModel = null;
     
@@ -815,6 +817,7 @@ async function fetchLatestPV(searchItem, skipPushState = false) {
 
     try {
         const viewModel = buildProductViewModel(searchItem, selectedMonth);
+        if (renderSeq !== medicineRenderSeq) return;
         if (!viewModel || !viewModel.group) {
             replaceContent(resultsDiv, cloneTemplate('template-no-results'));
             return;
@@ -824,6 +827,7 @@ async function fetchLatestPV(searchItem, skipPushState = false) {
             replaceContent(resultsDiv, cloneTemplate('template-no-results'));
             return;
         }
+        if (renderSeq !== medicineRenderSeq) return;
 
         currentViewModel = viewModel;
 
@@ -843,12 +847,14 @@ async function fetchLatestPV(searchItem, skipPushState = false) {
 
         // Skicka med spar-data till renderaren
         await renderPriceCard(viewModel);
+        if (renderSeq !== medicineRenderSeq) return;
         
         // Create and inject month warning banner after price card is rendered
         createMonthBanner(resultsDiv);
         
         renderTableOnly(); 
         await renderHistoryChart(viewModel);
+        if (renderSeq !== medicineRenderSeq) return;
         renderAlternativePackageSizes(viewModel);
 
         // Visa info-boxen endast om PV inte är billigast (efter renderTableOnly som skapar den)
@@ -862,6 +868,7 @@ async function fetchLatestPV(searchItem, skipPushState = false) {
         updateMonthBanner();
 
     } catch (err) {
+        if (renderSeq !== medicineRenderSeq) return;
         console.error("Fel vid hämtning av detaljer:", err);
         replaceContent(resultsDiv, cloneTemplate('template-error'));
     }
@@ -946,7 +953,10 @@ async function renderPriceCard(viewModel) {
         }
 
         const diff = price - currentPrice;
-        const diffPercent = Math.round((Math.abs(diff) / currentPrice) * 100);
+        const percentBase = isFuture ? currentPrice : price;
+        const diffPercent = percentBase > 0
+            ? Math.round((Math.abs(diff) / percentBase) * 100)
+            : 0;
         const isStable = diffPercent <= 2; // Consider <= 2% as stable
         
         // Default to CSS variable color, or use semantic colors for significant changes
@@ -1194,7 +1204,7 @@ function renderTableOnly() {
         const comparisonCard = area.querySelector('.comparison-container');
         if (comparisonCard) {
             const bannerCard = document.createElement('div');
-            bannerCard.className = 'shortage-impact-card price-card-header-bar is-alert-red';
+            bannerCard.className = 'price-card-header-bar is-alert-red comparison-warning-banner';
             bannerCard.innerHTML = `
                 <div class="price-card-icon-wrapper">
                     <span class="material-symbols-outlined price-card-icon">warning</span>
@@ -2360,6 +2370,16 @@ function showMonthPicker() {
     }
 }
 
+function hideMonthPicker() {
+    const btn = document.getElementById('month-picker-btn');
+    if (btn) {
+        btn.style.display = 'none';
+    }
+    if (DOM.monthPickerDropdown) {
+        DOM.monthPickerDropdown.style.display = 'none';
+    }
+}
+
 function populateMonthPicker() {
     const yearEl = document.getElementById('month-picker-year');
     const grid = document.getElementById('month-picker-grid');
@@ -2522,24 +2542,7 @@ function loadMedicineFromUrl() {
     const vnr = params.get('vnr');
     
     if (!vnr) {
-        // No VNR in URL - show landing page
-        document.body.classList.remove('has-selection');
-        const existingAltSection = document.getElementById('alt-package-sizes');
-        if (existingAltSection) existingAltSection.remove();
-        const resultsDiv = DOM.resultsDiv;
-        if (resultsDiv) {
-            resultsDiv.innerHTML = '';
-        }
-        // Clear search bar
-        const searchInput = DOM.searchInput;
-        if (searchInput) {
-            searchInput.value = '';
-        }
-        // Hide chart
-        const chartCont = DOM.chartCont;
-        if (chartCont) {
-            chartCont.style.display = 'none';
-        }
+        clearMedicineSelectionState();
         return;
     }
     
@@ -2563,24 +2566,7 @@ window.addEventListener('popstate', function(event) {
     const vnr = params.get('vnr');
     
     if (!vnr) {
-        // No VNR - show landing page
-        document.body.classList.remove('has-selection');
-        const existingAltSection = document.getElementById('alt-package-sizes');
-        if (existingAltSection) existingAltSection.remove();
-        const resultsDiv = DOM.resultsDiv;
-        if (resultsDiv) {
-            resultsDiv.innerHTML = '';
-        }
-        // Clear search bar
-        const searchInput = DOM.searchInput;
-        if (searchInput) {
-            searchInput.value = '';
-        }
-        // Hide chart
-        const chartCont = DOM.chartCont;
-        if (chartCont) {
-            chartCont.style.display = 'none';
-        }
+        clearMedicineSelectionState();
         return;
     }
     
@@ -2589,6 +2575,58 @@ window.addEventListener('popstate', function(event) {
         fetchLatestPV(event.state.searchItem, true); // Skip pushState to avoid duplicate history entries
     }
 });
+
+function clearMedicineSelectionState() {
+    medicineRenderSeq += 1;
+    historyChartRenderSeq += 1;
+    currentSearch = null;
+    currentViewModel = null;
+    lastMatches = [];
+    lastPVPrice = 0;
+    selectedRowId = null;
+    selectedComparisonShortageId = null;
+
+    document.body.classList.remove('has-selection');
+
+    const existingAltSection = document.getElementById('alt-package-sizes');
+    if (existingAltSection) existingAltSection.remove();
+
+    const resultsDiv = DOM.resultsDiv;
+    if (resultsDiv) {
+        resultsDiv.innerHTML = '';
+    }
+
+    const searchInput = DOM.searchInput;
+    if (searchInput) {
+        searchInput.value = '';
+    }
+
+    const chartCont = DOM.chartCont;
+    if (chartCont) {
+        chartCont.style.display = 'none';
+    }
+    const existingChart = (typeof Chart !== 'undefined' && typeof Chart.getChart === 'function')
+        ? Chart.getChart(document.getElementById('priceChart'))
+        : null;
+    if (existingChart) {
+        existingChart.destroy();
+    } else if (window.myChart && typeof window.myChart.destroy === 'function') {
+        window.myChart.destroy();
+    }
+    window.myChart = null;
+
+    const existingInsight = document.getElementById('stability-insight');
+    if (existingInsight) {
+        existingInsight.remove();
+    }
+
+    const monthBanner = document.getElementById('month-warning-banner');
+    if (monthBanner) {
+        monthBanner.remove();
+    }
+
+    hideMonthPicker();
+}
 
 /**
  * Converts a value to number, handling Swedish decimal format (comma).

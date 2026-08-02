@@ -65,7 +65,7 @@ body.dark-mode {
     }
     
     body.has-selection .site-header {
-        margin-bottom: 3px;
+        margin-bottom: 0;
         border-bottom: none;
         background: var(--header-bg);
     }
@@ -264,7 +264,7 @@ body.dark-mode .hero-bar {
     background: transparent;
     width: 100%;
     padding: 16px 0;
-    margin-bottom: 32px;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
 }
@@ -523,7 +523,7 @@ body.dark-mode .hero-bar {
 @media (max-width: 640px) {
     .site-header {
         padding: 12px 0;
-        margin-bottom: 24px;
+        margin-bottom: 0;
     }
     
     .header-content {
@@ -1580,31 +1580,16 @@ body.dark-mode .stability-insight-text {
     color: var(--text-primary);
 }
 
-.shortage-impact-card .price-card-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-}
-
-.shortage-impact-card {
+.comparison-warning-banner {
     margin-bottom: 20px;
-    border-radius: 16px;
-    padding: 16px 24px;
-    border: 1px solid #fecaca !important;
 }
 
-.shortage-impact-card.price-card-header-bar {
+.price-card-header-bar.comparison-warning-banner {
     border-radius: 16px;
-}
-
-body.dark-mode .shortage-impact-card {
-    border: 1px solid rgba(248, 113, 113, 0.45) !important;
 }
 
 @media screen and (max-width: 768px) {
-    .shortage-impact-card {
-        border-radius: 16px;
+    .comparison-warning-banner {
         margin-bottom: 16px;
     }
 }
@@ -2833,10 +2818,14 @@ body.dark-mode .comparison-row.reserve-row {
 .price-card-icon {
     font-size: 20px;
     color: var(--text-secondary);
+    background: none;
+    border-radius: 0;
     display: block;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
     font-weight: normal;
     font-style: normal;
     letter-spacing: normal;
@@ -2844,6 +2833,10 @@ body.dark-mode .comparison-row.reserve-row {
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
+}
+
+.price-card-icon-wrapper .price-card-icon {
+    transform: translateY(-0.5px);
 }
 
 .price-card-header-text {
