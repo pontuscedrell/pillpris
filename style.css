@@ -3097,10 +3097,15 @@ body.dark-mode .price-card-header-bar.is-alert-red .price-card-icon {
     border-color: #ddd6fe;
 }
 
+.price-card-header-bar.price-recommendation--neutral .price-card-icon-wrapper { background: #e2e8f0; }
 .price-card-header-bar.price-recommendation--good .price-card-icon-wrapper { background: #dcfce7; }
 .price-card-header-bar.price-recommendation--warning .price-card-icon-wrapper { background: #fef3c7; }
 .price-card-header-bar.price-recommendation--danger .price-card-icon-wrapper { background: #fee2e2; }
 .price-card-header-bar.price-recommendation--future .price-card-icon-wrapper { background: #ede9fe; }
+
+.price-card-header-bar.price-recommendation--neutral .price-card-icon,
+.price-card-header-bar.price-recommendation--neutral .price-card-header-label,
+.price-card-header-bar.price-recommendation--neutral .price-card-header-subtext { color: #475569; }
 
 .price-card-header-bar.price-recommendation--good .price-card-icon,
 .price-card-header-bar.price-recommendation--good .price-card-header-label,
@@ -3118,10 +3123,21 @@ body.dark-mode .price-card-header-bar.is-alert-red .price-card-icon {
 .price-card-header-bar.price-recommendation--future .price-card-header-label,
 .price-card-header-bar.price-recommendation--future .price-card-header-subtext { color: #7c3aed; }
 
+body.dark-mode .price-card-header-bar.price-recommendation--neutral { background: rgba(51, 65, 85, 0.4); border-color: rgba(148, 163, 184, 0.3); }
 body.dark-mode .price-card-header-bar.price-recommendation--good { background: rgba(21, 128, 61, 0.16); border-color: rgba(74, 222, 128, 0.4); }
 body.dark-mode .price-card-header-bar.price-recommendation--warning { background: rgba(180, 83, 9, 0.16); border-color: rgba(251, 191, 36, 0.4); }
 body.dark-mode .price-card-header-bar.price-recommendation--danger { background: rgba(220, 38, 38, 0.16); border-color: rgba(248, 113, 113, 0.4); }
 body.dark-mode .price-card-header-bar.price-recommendation--future { background: rgba(124, 58, 237, 0.16); border-color: rgba(167, 139, 250, 0.4); }
+
+body.dark-mode .price-card-header-bar.price-recommendation--neutral .price-card-icon-wrapper { background: rgba(148, 163, 184, 0.2); }
+body.dark-mode .price-card-header-bar.price-recommendation--good .price-card-icon-wrapper { background: rgba(21, 128, 61, 0.3); }
+body.dark-mode .price-card-header-bar.price-recommendation--warning .price-card-icon-wrapper { background: rgba(180, 83, 9, 0.3); }
+body.dark-mode .price-card-header-bar.price-recommendation--danger .price-card-icon-wrapper { background: rgba(220, 38, 38, 0.3); }
+body.dark-mode .price-card-header-bar.price-recommendation--future .price-card-icon-wrapper { background: rgba(124, 58, 237, 0.3); }
+
+body.dark-mode .price-card-header-bar.price-recommendation--neutral .price-card-icon,
+body.dark-mode .price-card-header-bar.price-recommendation--neutral .price-card-header-label,
+body.dark-mode .price-card-header-bar.price-recommendation--neutral .price-card-header-subtext { color: #cbd5e1; }
 
 body.dark-mode .price-card-header-bar.price-recommendation--good .price-card-icon,
 body.dark-mode .price-card-header-bar.price-recommendation--good .price-card-header-label,
