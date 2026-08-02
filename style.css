@@ -3704,3 +3704,32 @@ body.dark-mode .stats-sparkline {
         overflow: hidden;
     }
 }
+
+/* --- Product Disclaimer (Subtle Fine Print) --- */
+.product-disclaimer-container {
+    margin-top: 32px;
+    margin-bottom: 12px;
+    padding: 0 16px;
+    text-align: center;
+}
+
+.product-disclaimer-text {
+    font-size: 12px;
+    line-height: 1.55;
+    color: #94a3b8;
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+.product-disclaimer-text strong {
+    color: #64748b;
+    font-weight: 600;
+}
+
+body.dark-mode .product-disclaimer-text {
+    color: #64748b;
+}
+
+body.dark-mode .product-disclaimer-text strong {
+    color: #94a3b8;
+}

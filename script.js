@@ -843,6 +843,11 @@ async function fetchLatestPV(searchItem, skipPushState = false) {
             chartCont.className = "bleed-card";
         }
 
+        const disclaimerCont = document.getElementById('product-disclaimer-container');
+        if (disclaimerCont) {
+            disclaimerCont.style.display = "block";
+        }
+
         // Show month picker button when viewing medicine
         showMonthPicker();
 
@@ -2893,6 +2898,10 @@ function clearMedicineSelectionState() {
     const chartCont = DOM.chartCont;
     if (chartCont) {
         chartCont.style.display = 'none';
+    }
+    const disclaimerCont = document.getElementById('product-disclaimer-container');
+    if (disclaimerCont) {
+        disclaimerCont.style.display = 'none';
     }
     const existingChart = (typeof Chart !== 'undefined' && typeof Chart.getChart === 'function')
         ? Chart.getChart(document.getElementById('priceChart'))
