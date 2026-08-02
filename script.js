@@ -18,6 +18,7 @@ let historyData = null;
 let historyGroupMap = new Map();
 let historySubStrengthMap = new Map();
 let currentViewModel = null;
+let chartExportModal = null;
 
 // Constants
 const SEARCH_RESULTS_LIMIT = 20;
@@ -1717,6 +1718,12 @@ function formatMedicineDate(dateCode) {
     return monthName || "Okänt datum";
 }
 
+function formatChartMonthLabel(dateCode) {
+    const codeStr = String(dateCode);
+    if (!/^\d{4}$/.test(codeStr)) return formatMedicineDate(dateCode);
+    return `${formatMedicineDate(dateCode)} 20${codeStr.slice(0, 2)}`;
+}
+
 function isPrelimMonth(monthCode) {
     const code = Number(monthCode);
     if (!code || !systemMonthCode) return false;
@@ -1824,48 +1831,23 @@ async function renderHistoryChart(viewModel) {
             ? currentViewModel
             : (currentSearch ? buildProductViewModel(currentSearch, selectedMonth) : null));
     const group = resolvedViewModel?.group;
-    if (!group) return;
-
-    let filteredMonths = [...availableMonths];
-    if (rangeVal !== "all") {
-        const limit = parseInt(rangeVal);
-        // Check if it's a year selection (4 digits starting with 2)
-        if (rangeVal.length === 4 && rangeVal.startsWith('2')) {
-            const yearPrefix = rangeVal.slice(2); // "26" from "2026"
-            filteredMonths = filteredMonths.filter(m => String(m).startsWith(yearPrefix));
-        } else {
-            // It's a number of months
-            filteredMonths = filteredMonths.slice(0, limit);
-        }
+    if (!group) {
+        setChartExportStatus('');
+        return;
     }
 
-    const chronologicalMonths = filteredMonths.reverse();
+    const chronologicalMonths = getChronologicalMonthsForRange(rangeVal);
     let historyPoints = [];
     const stats = resolvedViewModel.stats || calculatePriceStatsForGroup(group);
     
-    for (const month of chronologicalMonths) {
-        const match = chartPriceType === "cheapest"
-            ? getMonthCheapestRow(group, month)
-            : getMonthPvRow(group, month);
-
-        if (!match) continue;
-
-        const price = match["Försäljningspris"];
-        const diffFromAvg = stats ? ((price - stats.avgPrice) / stats.avgPrice) * 100 : 0;
-        historyPoints.push({
-            x: formatMedicineDate(month),
-            y: price,
-            company: match.Företag,
-            diff: diffFromAvg.toFixed(1),
-            monthCode: month
-        });
-    }
+    historyPoints = buildHistoryPointsForGroup(group, chronologicalMonths, chartPriceType, stats);
 
     if (historyPoints.length === 0) {
         if (renderSeq !== historyChartRenderSeq) return;
         container.style.display = "none";
         return;
     }
+    setChartExportStatus('');
 
     if (renderSeq !== historyChartRenderSeq) return;
     container.style.display = "block";
@@ -2040,6 +2022,290 @@ function renderPriceStabilityInsight(allPrices, minPrice, maxPrice, priceDiff) {
     chartContainer.insertAdjacentHTML('beforeend', insightHtml);
 }
 
+function setChartExportStatus(message, isError = false) {
+    const statusEl = document.getElementById('chart-export-status');
+    if (!statusEl) return;
+    statusEl.textContent = message;
+    statusEl.style.color = isError ? '#dc2626' : '';
+}
+
+function openHistoryExportModal() {
+    const modal = ensureHistoryExportModal();
+    const activeRangeSelect = document.getElementById('chart-range-select');
+    const activeTypeSelect = document.getElementById('chart-price-type');
+    const modalRangeSelect = modal.querySelector('#export-range-select');
+    const modalTypeSelect = modal.querySelector('#export-price-type');
+    const modalFileTypeSelect = modal.querySelector('#export-file-type');
+
+    if (modalRangeSelect && activeRangeSelect) {
+        modalRangeSelect.innerHTML = '';
+        Array.from(activeRangeSelect.options).forEach(option => {
+            modalRangeSelect.appendChild(option.cloneNode(true));
+        });
+        modalRangeSelect.value = activeRangeSelect.value;
+    }
+    if (modalTypeSelect && activeTypeSelect) {
+        modalTypeSelect.value = activeTypeSelect.value;
+    }
+    if (modalFileTypeSelect && !modalFileTypeSelect.value) {
+        modalFileTypeSelect.value = 'excel';
+    }
+
+    modal.removeAttribute('hidden');
+    modal.classList.add('is-open');
+}
+
+function ensureHistoryExportModal() {
+    if (chartExportModal) return chartExportModal;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'chart-export-modal-overlay';
+    overlay.hidden = true;
+    overlay.innerHTML = `
+        <div class="chart-export-modal" role="dialog" aria-modal="true" aria-labelledby="chart-export-modal-title">
+            <h3 id="chart-export-modal-title">Exportera prishistorik</h3>
+            <div class="chart-export-modal-grid">
+                <div class="chart-export-modal-field">
+                    <label for="export-range-select">Intervall</label>
+                    <select id="export-range-select"></select>
+                </div>
+                <div class="chart-export-modal-field">
+                    <label for="export-price-type">Pristyp</label>
+                    <select id="export-price-type">
+                        <option value="pv">Periodens vara</option>
+                        <option value="cheapest">Billigaste pris</option>
+                    </select>
+                </div>
+                <div class="chart-export-modal-field">
+                    <label for="export-file-type">Filtyp</label>
+                    <select id="export-file-type">
+                        <option value="excel">Excel (.xls)</option>
+                        <option value="csv">CSV (.csv)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="chart-export-modal-actions">
+                <button type="button" class="chart-export-modal-btn" data-action="cancel">Avbryt</button>
+                <button type="button" class="chart-export-modal-btn primary" data-action="export">Exportera</button>
+            </div>
+        </div>
+    `;
+
+    const panel = overlay.querySelector('.chart-export-modal');
+    const close = () => {
+        overlay.setAttribute('hidden', '');
+        overlay.classList.remove('is-open');
+    };
+
+    overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) close();
+    });
+    panel?.addEventListener('click', (event) => event.stopPropagation());
+    overlay.querySelector('[data-action="cancel"]')?.addEventListener('click', close);
+    overlay.querySelector('[data-action="export"]')?.addEventListener('click', () => exportHistoryFromModal(close));
+
+    document.addEventListener('keydown', (event) => {
+        if (!overlay.hasAttribute('hidden') && event.key === 'Escape') {
+            close();
+        }
+    });
+
+    document.body.appendChild(overlay);
+    chartExportModal = overlay;
+    return overlay;
+}
+
+function exportHistoryFromModal(closeModal) {
+    const resolvedViewModel = currentViewModel?.group
+        ? currentViewModel
+        : (currentSearch ? buildProductViewModel(currentSearch, selectedMonth) : null);
+    if (!resolvedViewModel?.group || !resolvedViewModel?.searchItem) {
+        setChartExportStatus('Ingen data att exportera', true);
+        return;
+    }
+
+    const modal = ensureHistoryExportModal();
+    const rangeValue = modal.querySelector('#export-range-select')?.value || '12';
+    const priceTypeValue = modal.querySelector('#export-price-type')?.value || 'pv';
+    const fileTypeValue = modal.querySelector('#export-file-type')?.value || 'excel';
+    const rangeLabel = modal.querySelector('#export-range-select option:checked')?.textContent?.trim() || 'Valt intervall';
+    const priceTypeLabel = priceTypeValue === 'cheapest' ? 'Billigaste pris' : 'Periodens vara';
+
+    const stats = resolvedViewModel.stats || calculatePriceStatsForGroup(resolvedViewModel.group);
+    const months = getChronologicalMonthsForRange(rangeValue);
+    const historyPoints = buildHistoryPointsForGroup(resolvedViewModel.group, months, priceTypeValue, stats);
+    if (historyPoints.length === 0) {
+        setChartExportStatus('Ingen data för valt urval', true);
+        return;
+    }
+
+    const rows = historyPoints.map(point => ({
+        productName: point.productName || '',
+        monthLabel: point.x,
+        monthCode: point.monthCode,
+        year: `20${String(point.monthCode).slice(0, 2)}`,
+        price: point.y,
+        company: point.company || '',
+        priceType: priceTypeLabel
+    }));
+    const meta = {
+        substance: resolvedViewModel.searchItem.sub || '',
+        strength: resolvedViewModel.searchItem.str || '',
+        form: resolvedViewModel.searchItem.form || '',
+        rangeLabel
+    };
+
+    const isExcel = fileTypeValue === 'excel';
+    const extension = isExcel ? 'xls' : 'csv';
+    const fileName = `${buildHistoryExportBaseName(meta, priceTypeValue)}.${extension}`;
+    if (isExcel) {
+        downloadTextFile(buildHistoryExportExcel(rows, meta), 'application/vnd.ms-excel;charset=utf-8', fileName);
+        setChartExportStatus('Excel exporterad');
+    } else {
+        downloadTextFile(buildHistoryExportCsv(rows, meta), 'text/csv;charset=utf-8', fileName);
+        setChartExportStatus('CSV exporterad');
+    }
+
+    closeModal();
+}
+
+function getChronologicalMonthsForRange(rangeVal) {
+    let filteredMonths = [...availableMonths];
+    if (rangeVal !== "all") {
+        const limit = parseInt(rangeVal, 10);
+        if (String(rangeVal).length === 4 && String(rangeVal).startsWith('2')) {
+            const yearPrefix = String(rangeVal).slice(2);
+            filteredMonths = filteredMonths.filter(m => String(m).startsWith(yearPrefix));
+        } else if (!Number.isNaN(limit)) {
+            filteredMonths = filteredMonths.slice(0, limit);
+        }
+    }
+
+    return filteredMonths.reverse();
+}
+
+function buildHistoryPointsForGroup(group, months, priceType, stats) {
+    const points = [];
+    for (const month of months) {
+        const match = priceType === "cheapest"
+            ? getMonthCheapestRow(group, month)
+            : getMonthPvRow(group, month);
+        if (!match) continue;
+
+        const price = match["Försäljningspris"];
+        const diffFromAvg = stats ? ((price - stats.avgPrice) / stats.avgPrice) * 100 : 0;
+        points.push({
+            x: formatChartMonthLabel(month),
+            y: price,
+            productName: match.Produktnamn || '',
+            company: match.Företag,
+            diff: diffFromAvg.toFixed(1),
+            monthCode: month
+        });
+    }
+    return points;
+}
+
+function buildHistoryExportCsv(rows, meta) {
+    const headers = ['Produkt', 'Substans', 'Styrka', 'Läkemedelsform', 'Prisvisning', 'Intervall', 'Månad', 'År', 'Månadskod', 'Pris (SEK)', 'Tillverkare'];
+    const lines = [headers.join(';')];
+
+    rows.forEach(row => {
+        const price = Number.isFinite(row.price) ? row.price.toFixed(2).replace('.', ',') : '';
+        const values = [
+            row.productName,
+            meta.substance,
+            meta.strength,
+            meta.form,
+            row.priceType,
+            meta.rangeLabel,
+            row.monthLabel,
+            row.year,
+            row.monthCode,
+            price,
+            row.company
+        ];
+        lines.push(values.map(escapeCsvValue).join(';'));
+    });
+    lines.push('');
+    lines.push(escapeCsvValue('Data hämtat från pillpris.se'));
+
+    return `\uFEFF${lines.join('\n')}`;
+}
+
+function buildHistoryExportExcel(rows, meta) {
+    const headerCells = ['Produkt', 'Substans', 'Styrka', 'Läkemedelsform', 'Prisvisning', 'Intervall', 'Månad', 'År', 'Månadskod', 'Pris (SEK)', 'Tillverkare']
+        .map(title => `<th>${escapeHtml(title)}</th>`)
+        .join('');
+
+    const bodyRows = rows.map(row => {
+        const price = Number.isFinite(row.price) ? row.price.toFixed(2) : '';
+        const cells = [
+            row.productName,
+            meta.substance,
+            meta.strength,
+            meta.form,
+            row.priceType,
+            meta.rangeLabel,
+            row.monthLabel,
+            row.year,
+            row.monthCode,
+            price,
+            row.company
+        ].map(value => `<td>${escapeHtml(value)}</td>`).join('');
+        return `<tr>${cells}</tr>`;
+    }).join('');
+
+    const sourceRow = `<tr><td colspan="11">${escapeHtml('Data hämtat från pillpris.se')}</td></tr>`;
+    return `\uFEFF<html><head><meta charset="UTF-8"></head><body><table><thead><tr>${headerCells}</tr></thead><tbody>${bodyRows}${sourceRow}</tbody></table></body></html>`;
+}
+
+function escapeCsvValue(value) {
+    const text = String(value ?? '');
+    if (text.includes(';') || text.includes('"') || text.includes('\n')) {
+        return `"${text.replace(/"/g, '""')}"`;
+    }
+    return text;
+}
+
+function escapeHtml(value) {
+    return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function buildHistoryExportBaseName(meta, priceType) {
+    const namePart = sanitizeFileNamePart(meta.substance || 'lakemedel');
+    const suffix = priceType === 'cheapest' ? 'billigaste-pris' : 'periodens-vara';
+    return `${namePart}-${suffix}`;
+}
+
+function sanitizeFileNamePart(value) {
+    const normalized = String(value ?? '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+    const sanitized = normalized
+        .replace(/[^a-zA-Z0-9-_]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+        .toLowerCase();
+    return sanitized || 'lakemedel';
+}
+
+function downloadTextFile(content, mimeType, fileName) {
+    const blob = new Blob([content], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+}
+
 function renderAlternativePackageSizes(viewModel) {
     const sectionContainer = document.getElementById('alt-package-sizes-container');
     if (!sectionContainer) return;
@@ -2107,7 +2373,7 @@ function renderAlternativePackageSizes(viewModel) {
 
     const subtitle = document.createElement('p');
     subtitle.className = 'alt-package-sizes-subtitle';
-    subtitle.textContent = 'Samma substans och styrka – jämför förpackningsstorlekar. Scrolla i sidled och klicka för att öppna.';
+    subtitle.textContent = 'Se alternativa förpackningsstorlekar och jämför priser per enhet.';
 
     const list = document.createElement('div');
     list.className = 'alt-package-sizes-list';
@@ -2625,6 +2891,12 @@ function clearMedicineSelectionState() {
         monthBanner.remove();
     }
 
+    if (chartExportModal) {
+        chartExportModal.setAttribute('hidden', '');
+        chartExportModal.classList.remove('is-open');
+    }
+
+    setChartExportStatus('');
     hideMonthPicker();
 }
 

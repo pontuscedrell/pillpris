@@ -106,22 +106,22 @@
                 <div class="hero-stat">
                     <span class="material-symbols-outlined">price_check</span>
                     <div>
-                        <strong>Prisjämförelse</strong>
-                        <p>Alltid uppdaterade TLV-priser</p>
+                        <strong>Jämför priser</strong>
+                        <p>Priserna uppdateras dagligen</p>
                     </div>
                 </div>
                 <div class="hero-stat">
                     <span class="material-symbols-outlined">insights</span>
                     <div>
-                        <strong>Prishistorik</strong>
+                        <strong>Visa Prishistorik</strong>
                         <p>Se trender och förändringar</p>
                     </div>
                 </div>
                 <div class="hero-stat">
                     <span class="material-symbols-outlined">verified</span>
                     <div>
-                        <strong>Trygg data</strong>
-                        <p>Baseras på officiella källor</p>
+                        <strong>Se utbyten och alternativ</strong>
+                        <p>Se vilka läkemedel som är utbytbara</p>
                     </div>
                 </div>
                 <div class="hero-stat">
@@ -174,10 +174,16 @@
                 <option value="2024">2024</option>
                 <option value="all">Allt</option>
             </select>
+            <button type="button" id="chart-export-trigger" class="chart-export-icon-btn" onclick="openHistoryExportModal()" aria-label="Exportera historiska priser" title="Exportera historiska priser">
+                <span class="material-symbols-outlined">table_view</span>
+            </button>
         </div>
 
         <div style="height: 400px; width: 100%;">
             <canvas id="priceChart"></canvas>
+        </div>
+        <div class="chart-export-footer">
+            <span id="chart-export-status" class="chart-export-status" aria-live="polite"></span>
         </div>
     </div>
 

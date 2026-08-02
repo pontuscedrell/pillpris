@@ -1078,6 +1078,126 @@ body.dark-mode .cheapest-row { background-color: var(--card-bg) !important; }
     border-color: #0891b2;
 }
 
+.chart-export-footer {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.chart-export-icon-btn {
+    border: none;
+    background: none;
+    color: #64748b;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.chart-export-icon-btn .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.chart-export-icon-btn:hover {
+    opacity: 1;
+    background: rgba(100, 116, 139, 0.12);
+}
+
+.chart-export-status {
+    font-size: 12px;
+    color: #16a34a;
+    min-width: 1px;
+}
+
+body.dark-mode .chart-export-icon-btn {
+    color: #94a3b8;
+}
+
+body.dark-mode .chart-export-icon-btn:hover {
+    background: rgba(148, 163, 184, 0.14);
+}
+
+body.dark-mode .chart-export-status {
+    color: #4ade80;
+}
+
+.chart-export-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1300;
+    padding: 16px;
+}
+
+.chart-export-modal {
+    width: min(420px, 100%);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.28);
+    padding: 18px;
+}
+
+.chart-export-modal h3 {
+    margin: 0 0 12px 0;
+    color: var(--text-primary);
+    font-size: 18px;
+}
+
+.chart-export-modal-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.chart-export-modal-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.chart-export-modal-field select {
+    width: 100%;
+    padding: 9px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.chart-export-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.chart-export-modal-btn {
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.chart-export-modal-btn.primary {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #fff;
+}
+
 /* --- Förbättrad Empty State (Startbox) --- */
 .empty-state {
     display: flex;
