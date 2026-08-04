@@ -11874,6 +11874,47 @@
     "packagingMap": {}
   },
   {
+    "id": "112072",
+    "size_id": "T18",
+    "sub": "Fampridin",
+    "form": "Depottablett",
+    "str": "10 mg",
+    "size": "28 st",
+    "names": [
+      "Fampridine Accord",
+      "Fampridine Newbury",
+      "Fampyra"
+    ],
+    "vnr": [
+      "180940",
+      "380028",
+      "56308"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112072",
+    "size_id": "T20",
+    "sub": "Fampridin",
+    "form": "Depottablett",
+    "str": "10 mg",
+    "size": "56 st",
+    "names": [
+      "Fampridine Accord",
+      "Fampridine Newbury",
+      "Fampyra"
+    ],
+    "vnr": [
+      "182128",
+      "521090",
+      "598115",
+      "86142"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
     "id": "112946",
     "size_id": "T18",
     "sub": "Febuxostat",
