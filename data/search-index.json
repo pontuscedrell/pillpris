@@ -36946,7 +36946,6 @@
     "size": "18 st",
     "names": [
       "Sumatriptan Accord",
-      "Sumatriptan Aurobindo",
       "Sumatriptan Bluefish",
       "Sumatriptan Teva",
       "Sumatriptan Viatris"
@@ -36955,7 +36954,6 @@
       "102187",
       "174464",
       "46842",
-      "473995",
       "498656"
     ],
     "packaging": [],
@@ -36970,11 +36968,9 @@
     "size": "6 st",
     "names": [
       "Sumatriptan Accord",
-      "Sumatriptan Aurobindo",
       "Sumatriptan Bluefish"
     ],
     "vnr": [
-      "122049",
       "151873",
       "194460"
     ],
@@ -36990,7 +36986,6 @@
     "size": "12 st",
     "names": [
       "Sumatriptan Accord",
-      "Sumatriptan Aurobindo",
       "Sumatriptan Bluefish",
       "Sumatriptan Viatris",
       "Sumore"
@@ -36999,7 +36994,6 @@
       "193122",
       "195762",
       "376851",
-      "499480",
       "565828"
     ],
     "packaging": [],
@@ -37014,7 +37008,6 @@
     "size": "18 st",
     "names": [
       "Sumatriptan Accord",
-      "Sumatriptan Aurobindo",
       "Sumatriptan Bluefish",
       "Sumatriptan Teva",
       "Sumatriptan Viatris",
@@ -37025,7 +37018,6 @@
       "124737",
       "163199",
       "35722",
-      "477920",
       "558442"
     ],
     "packaging": [],
@@ -37056,15 +37048,13 @@
     "size": "6 st",
     "names": [
       "Sumatriptan Accord",
-      "Sumatriptan Aurobindo",
       "Sumatriptan Bluefish",
       "Sumore"
     ],
     "vnr": [
       "168012",
       "443086",
-      "500499",
-      "598826"
+      "500499"
     ],
     "packaging": [],
     "packagingMap": {}
