@@ -2,7 +2,7 @@ name: Update TLV data
 
 on:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 5,11,16 * * *'
   workflow_dispatch: {}
 
 permissions:

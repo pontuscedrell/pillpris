@@ -22,14 +22,11 @@ def build_substances():
     for file_path in file_paths:
         file_name = os.path.basename(file_path)
         
-        # Hoppa över systemfiler
-        if file_name == "substances.json" or file_name == "months.json":
-            continue
-        
-        # Extrahera månads-koden (t.ex. "2601")
+        # Hoppa över systemfiler (endast siffer-filer som 2609.json är månadsfiler)
         month_code = os.path.splitext(file_name)[0]
-        if month_code.isdigit():
-            available_months.append(month_code)
+        if not month_code.isdigit():
+            continue
+        available_months.append(month_code)
 
         print(f"Bearbetar data från: {month_code}")
 
@@ -58,7 +55,10 @@ def build_substances():
                 substance_tree[sub][form][strn].add(size)
         
         except Exception as e:
-            print(f"❌ Kunde inte läsa {file_name}: {e}")
+            raise RuntimeError(f"❌ Kunde inte läsa {file_name}: {e}") from e
+
+    if not available_months:
+        raise RuntimeError("❌ Inga månadsfiler hittades!")
 
     # 2. Sortering och Formatering
     # Sortera månader så att nyast (t.ex. 2601) kommer först

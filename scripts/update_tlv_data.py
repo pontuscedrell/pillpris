@@ -37,10 +37,14 @@ MONTHS_SE = {
     "december": "12"
 }
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+
 def get_download_links():
     """Fetch and parse the TLV website to get download links"""
     try:
-        response = requests.get(TLV_URL, timeout=10)
+        response = requests.get(TLV_URL, headers=HEADERS, timeout=10)
         response.raise_for_status()
         
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -48,8 +52,7 @@ def get_download_links():
         # Find the ul with class "sv-defaultlist"
         ul = soup.find('ul', class_='sv-defaultlist')
         if not ul:
-            print("❌ Could not find download list on TLV website")
-            return []
+            raise RuntimeError("❌ Could not find download list on TLV website")
         
         # Extract all links
         links = []
@@ -58,16 +61,20 @@ def get_download_links():
             if a and a.get('href') and '.xlsx' in a.get('href'):
                 text = a.get_text()
                 href = a.get('href')
+                raw_url = href if href.startswith('http') else BASE_DOWNLOAD_URL + href
+                clean_url = re.sub(r'(?<!:)/{2,}', '/', raw_url)
                 links.append({
                     'text': text,
-                    'url': href if href.startswith('http') else BASE_DOWNLOAD_URL + href
+                    'url': clean_url
                 })
         
+        if not links:
+            raise RuntimeError("❌ No download links found on TLV website")
+
         return links
     
     except requests.RequestException as e:
-        print(f"❌ Error fetching TLV website: {e}")
-        return []
+        raise RuntimeError(f"❌ Error fetching TLV website: {e}") from e
 
 def extract_month_code(text):
     """Extract month name and year from text like 'Periodens varor januari 2026'"""
@@ -86,7 +93,7 @@ def extract_month_code(text):
 def download_file(url, filename):
     """Download file from URL and save it"""
     try:
-        response = requests.get(url, timeout=30)
+        response = requests.get(url, headers=HEADERS, timeout=30)
         response.raise_for_status()
         
         with open(filename, 'wb') as f:
@@ -97,8 +104,7 @@ def download_file(url, filename):
         return True
     
     except requests.RequestException as e:
-        print(f"   ❌ Error downloading: {e}")
-        return False
+        raise RuntimeError(f"❌ Error downloading {url}: {e}") from e
 
 def convert_xlsx_to_json(xlsx_path, json_path):
     """Convert XLSX file to JSON"""
@@ -164,8 +170,7 @@ def convert_xlsx_to_json(xlsx_path, json_path):
         return True
     
     except Exception as e:
-        print(f"   ❌ Error converting {os.path.basename(xlsx_path)}: {e}")
-        return False
+        raise RuntimeError(f"❌ Error converting {os.path.basename(xlsx_path)}: {e}") from e
 
 def main():
     print("=" * 60)
@@ -188,9 +193,6 @@ def main():
     print(f"{'─' * 60}")
     
     links = get_download_links()
-    if not links:
-        print("❌ No files found on TLV website")
-        return
     
     downloaded_files = []
     
@@ -211,20 +213,19 @@ def main():
         
         print(f"\n   {month_name} {year} ({filename})")
         
-        # Download file
-        if download_file(url, filepath):
-            data_xlsx_path = data_folder / filename
-            use_path = filepath
-            try:
-                shutil.copy2(filepath, data_xlsx_path)
-                use_path = data_xlsx_path
-            except Exception as e:
-                print(f"   ⚠️  Could not copy to data/: {e}")
-            downloaded_files.append((use_path, month_code))
+        # Download file (raises RuntimeError if download fails)
+        download_file(url, filepath)
+        data_xlsx_path = data_folder / filename
+        use_path = filepath
+        try:
+            shutil.copy2(filepath, data_xlsx_path)
+            use_path = data_xlsx_path
+        except Exception as e:
+            raise RuntimeError(f"   ❌ Could not copy to data/: {e}") from e
+        downloaded_files.append((use_path, month_code))
     
     if not downloaded_files:
-        print("\n❌ No files were downloaded")
-        return
+        raise RuntimeError("❌ No files were downloaded")
     
     # Step 2: Convert to JSON
     print(f"\n{'─' * 60}")
@@ -239,6 +240,9 @@ def main():
         if convert_xlsx_to_json(xlsx_path, json_path):
             converted_count += 1
     
+    if converted_count == 0:
+        raise RuntimeError("❌ No files were converted to JSON")
+
     # Step 3: Cleanup
     print(f"\n{'─' * 60}")
     print("🧹 STEP 3: Cleaning up temporary files...")

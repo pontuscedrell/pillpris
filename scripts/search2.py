@@ -72,8 +72,7 @@ def create_global_search_index():
     json_files = [f for f in json_files if 'search-index' not in f and os.path.basename(f)[0:4].isdigit()]
     
     if not json_files:
-        print("❌ Ingen månadsfil funnen!")
-        return
+        raise RuntimeError("❌ Ingen månadsfil funnen!")
     
     latest_month_file = json_files[-1]
     print(f"Använder senaste månad: {os.path.basename(latest_month_file)}")
@@ -82,8 +81,7 @@ def create_global_search_index():
         with open(latest_month_file, 'r', encoding='utf-8') as f:
             latest_data = json.load(f)
     except Exception as e:
-        print(f"❌ Kunde inte läsa {latest_month_file}: {e}")
-        return
+        raise RuntimeError(f"❌ Kunde inte läsa {latest_month_file}: {e}") from e
     
     # Bygg search-index ENDAST från vad som finns i senaste månaden
     search_index = []
