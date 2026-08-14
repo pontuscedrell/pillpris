@@ -581,19 +581,6 @@
                 ]
             }
         },
-        "Axitinib": {
-            "Tablett": {
-                "1 mg": [
-                    "56"
-                ],
-                "3 mg": [
-                    "56"
-                ],
-                "5 mg": [
-                    "56"
-                ]
-            }
-        },
         "Azatioprin": {
             "Tablett": {
                 "25 mg": [
@@ -825,13 +812,13 @@
             }
         },
         "Brinzolamid + brimonidin": {
-            "Ögondroppar, suspension": {
+            "Ögondroppar": {
                 "10 mg/ml + 2 mg/ml": [
                     "5",
                     "15"
                 ]
             },
-            "Ögondroppar": {
+            "Ögondroppar, suspension": {
                 "10 mg/ml + 2 mg/ml": [
                     "5",
                     "15"
@@ -1110,13 +1097,6 @@
                 ]
             }
         },
-        "Cytisiniklin": {
-            "Tablett": {
-                "1,5 mg": [
-                    "100"
-                ]
-            }
-        },
         "Dabigatranetexilat": {
             "Kapsel": {
                 "110 mg": [
@@ -1241,13 +1221,13 @@
         },
         "Dexametason": {
             "Tablett": {
-                "1 mg": [
-                    "20",
-                    "100"
-                ],
                 "4 mg": [
                     "20",
                     "50",
+                    "100"
+                ],
+                "1 mg": [
+                    "20",
                     "100"
                 ]
             },
@@ -1328,16 +1308,6 @@
                     "25",
                     "100",
                     "250"
-                ]
-            }
-        },
-        "Dokusat + sorbitol": {
-            "Rektallösning": {
-                "1 mg/ml + 250 mg/ml": [
-                    "120",
-                    "240",
-                    "1200",
-                    "2400"
                 ]
             }
         },
@@ -1720,6 +1690,15 @@
         },
         "Everolimus": {
             "Tablett": {
+                "10 mg": [
+                    "30"
+                ],
+                "2,5 mg": [
+                    "30"
+                ],
+                "5 mg": [
+                    "30"
+                ],
                 "10 mg (Grupp A)": [
                     "30"
                 ],
@@ -1736,15 +1715,6 @@
                     "30"
                 ],
                 "5 mg (Grupp B)": [
-                    "30"
-                ],
-                "10 mg": [
-                    "30"
-                ],
-                "2,5 mg": [
-                    "30"
-                ],
-                "5 mg": [
                     "30"
                 ]
             }
@@ -1816,15 +1786,6 @@
                     "126",
                     "250",
                     "500"
-                ]
-            }
-        },
-        "Fenofibrat": {
-            "Kapsel": {
-                "200 mg": [
-                    "30",
-                    "90",
-                    "100"
                 ]
             }
         },
@@ -2162,14 +2123,6 @@
                 ]
             }
         },
-        "Glykopyrronium": {
-            "Inhalationspulver, kapsel": {
-                "44 mikrogram": [
-                    "30",
-                    "90"
-                ]
-            }
-        },
         "Hydroklortiazid": {
             "Tablett": {
                 "12,5 mg": [
@@ -2221,14 +2174,6 @@
                 ]
             }
         },
-        "Hydroxiklorokin": {
-            "Tablett": {
-                "200 mg": [
-                    "100",
-                    "120"
-                ]
-            }
-        },
         "Hydroxizin": {
             "Tablett": {
                 "10 mg": [
@@ -2245,13 +2190,6 @@
                     "25",
                     "100",
                     "250"
-                ]
-            }
-        },
-        "Hydroxokobalamin": {
-            "Injektionsvätska": {
-                "1 mg/ml": [
-                    "5"
                 ]
             }
         },
@@ -3334,25 +3272,6 @@
                 ]
             }
         },
-        "Lurasidon": {
-            "Tablett": {
-                "18,5 mg": [
-                    "28",
-                    "30",
-                    "98"
-                ],
-                "37 mg": [
-                    "28",
-                    "30",
-                    "98"
-                ],
-                "74 mg": [
-                    "28",
-                    "30",
-                    "98"
-                ]
-            }
-        },
         "Lymecyklin": {
             "Kapsel": {
                 "300 mg": [
@@ -3978,17 +3897,6 @@
                 ]
             }
         },
-        "Nilotinib": {
-            "Kapsel": {
-                "150 mg (Grupp A)": [
-                    "112"
-                ],
-                "200 mg (Grupp A)": [
-                    "112",
-                    "120"
-                ]
-            }
-        },
         "Nitisinon": {
             "Kapsel": {
                 "10 mg": [
@@ -4025,10 +3933,10 @@
         },
         "Nystatin": {
             "Oral suspension": {
-                "100000 IE/ml": [
+                "100000 IU/ml": [
                     "100"
                 ],
-                "100000 IU/ml": [
+                "100000 IE/ml": [
                     "100"
                 ]
             }
@@ -4216,28 +4124,6 @@
             "Kapsel": {
                 "75 mg": [
                     "10"
-                ]
-            }
-        },
-        "Oxazepam": {
-            "Tablett": {
-                "10 mg": [
-                    "25",
-                    "50",
-                    "100",
-                    "500"
-                ],
-                "15 mg": [
-                    "25",
-                    "50",
-                    "100",
-                    "500"
-                ],
-                "5 mg": [
-                    "25",
-                    "50",
-                    "100",
-                    "500"
                 ]
             }
         },
@@ -5565,23 +5451,6 @@
                 ]
             }
         },
-        "Tikagrelor": {
-            "Tablett": {
-                "60 mg": [
-                    "56",
-                    "60",
-                    "168"
-                ],
-                "90 mg": [
-                    "56",
-                    "60",
-                    "100",
-                    "105",
-                    "106",
-                    "168"
-                ]
-            }
-        },
         "Tiotropium": {
             "Inhalationspulver, kapsel": {
                 "18 mikrogram": [
@@ -5741,12 +5610,12 @@
             }
         },
         "Triamcinolonacetonid": {
-            "Injektionsvätska, suspension": {
+            "Injektionsvätska": {
                 "20 mg/ml": [
                     "1"
                 ]
             },
-            "Injektionsvätska": {
+            "Injektionsvätska, suspension": {
                 "20 mg/ml": [
                     "1"
                 ]
@@ -5934,7 +5803,7 @@
             }
         },
         "Vinorelbin": {
-            "Kapsel, mjuk": {
+            "Kapsel": {
                 "20 mg": [
                     "1",
                     "4"
@@ -5947,7 +5816,7 @@
                     "1"
                 ]
             },
-            "Kapsel": {
+            "Kapsel, mjuk": {
                 "20 mg": [
                     "1",
                     "4"
@@ -6080,16 +5949,6 @@
                 ]
             }
         },
-        "Akamprosat": {
-            "Enterotablett": {
-                "333 mg": [
-                    "84",
-                    "168",
-                    "250",
-                    "504"
-                ]
-            }
-        },
         "Alendronsyra + kolekalciferol (vitamin D3)": {
             "Tablett": {
                 "70 mg + 2800 IE": [
@@ -6104,14 +5963,16 @@
                 ]
             }
         },
-        "Apremilast": {
+        "Axitinib": {
             "Tablett": {
-                "10 mg + 20 mg + 30 mg": [
-                    "27"
+                "1 mg": [
+                    "56"
                 ],
-                "30 mg": [
-                    "56",
-                    "168"
+                "3 mg": [
+                    "56"
+                ],
+                "5 mg": [
+                    "56"
                 ]
             }
         },
@@ -6125,26 +5986,20 @@
                 ]
             }
         },
-        "Denosumab": {
-            "Injektionsvätska": {
-                "120 mg (Grupp B)": [
-                    "1"
-                ]
-            },
-            "Injektionsvätska, förfylld spruta": {
-                "60 mg (Grupp B)": [
-                    "1"
+        "Cytisiniklin": {
+            "Tablett": {
+                "1,5 mg": [
+                    "100"
                 ]
             }
         },
-        "Dimetylfumarat": {
-            "Enterokapsel": {
-                "120 mg": [
-                    "14"
-                ],
-                "240 mg": [
-                    "56",
-                    "168"
+        "Dokusat + sorbitol": {
+            "Rektallösning": {
+                "1 mg/ml + 250 mg/ml": [
+                    "120",
+                    "240",
+                    "1200",
+                    "2400"
                 ]
             }
         },
@@ -6178,6 +6033,15 @@
                 ]
             }
         },
+        "Fenofibrat": {
+            "Kapsel": {
+                "200 mg": [
+                    "30",
+                    "90",
+                    "100"
+                ]
+            }
+        },
         "Folsyra (vitamin B9)": {
             "Tablett": {
                 "1 mg": [
@@ -6194,6 +6058,14 @@
                 ]
             }
         },
+        "Glykopyrronium": {
+            "Inhalationspulver, kapsel": {
+                "44 mikrogram": [
+                    "30",
+                    "90"
+                ]
+            }
+        },
         "Guanfacin": {
             "Depottablett": {
                 "1 mg": [
@@ -6207,6 +6079,14 @@
                 ],
                 "4 mg": [
                     "28"
+                ]
+            }
+        },
+        "Hydroxiklorokin": {
+            "Tablett": {
+                "200 mg": [
+                    "100",
+                    "120"
                 ]
             }
         },
@@ -6302,6 +6182,25 @@
                 ]
             }
         },
+        "Lurasidon": {
+            "Tablett": {
+                "18,5 mg": [
+                    "28",
+                    "30",
+                    "98"
+                ],
+                "37 mg": [
+                    "28",
+                    "30",
+                    "98"
+                ],
+                "74 mg": [
+                    "28",
+                    "30",
+                    "98"
+                ]
+            }
+        },
         "Magnesium": {
             "Tablett": {
                 "250 mg": [
@@ -6326,20 +6225,36 @@
                 ]
             }
         },
-        "Pazopanib": {
-            "Tablett": {
-                "200 mg": [
-                    "90"
+        "Nilotinib": {
+            "Kapsel": {
+                "150 mg (Grupp A)": [
+                    "112"
                 ],
-                "400 mg": [
-                    "60"
+                "200 mg (Grupp A)": [
+                    "112",
+                    "120"
                 ]
             }
         },
-        "Raltegravir": {
+        "Oxazepam": {
             "Tablett": {
-                "600 mg": [
-                    "60"
+                "10 mg": [
+                    "25",
+                    "50",
+                    "100",
+                    "500"
+                ],
+                "15 mg": [
+                    "25",
+                    "50",
+                    "100",
+                    "500"
+                ],
+                "5 mg": [
+                    "25",
+                    "50",
+                    "100",
+                    "500"
                 ]
             }
         },
@@ -6358,6 +6273,23 @@
                 ],
                 "8 mg/24 timmar": [
                     "28"
+                ]
+            }
+        },
+        "Tikagrelor": {
+            "Tablett": {
+                "60 mg": [
+                    "56",
+                    "60",
+                    "168"
+                ],
+                "90 mg": [
+                    "56",
+                    "60",
+                    "100",
+                    "105",
+                    "106",
+                    "168"
                 ]
             }
         },
@@ -6382,10 +6314,111 @@
                 ]
             }
         },
+        "Alendronat": {
+            "Tablett": {
+                "70 mg": [
+                    "4",
+                    "12",
+                    "100"
+                ]
+            }
+        },
+        "Alendronat + kolekalciferol": {
+            "Tablett": {
+                "70 mg + 2800 IE": [
+                    "12"
+                ]
+            }
+        },
+        "Dimetylfumarat": {
+            "Enterokapsel": {
+                "120 mg": [
+                    "14"
+                ],
+                "240 mg": [
+                    "56",
+                    "168"
+                ]
+            }
+        },
+        "Lantankarbonat": {
+            "Tuggtablett": {
+                "1000 mg": [
+                    "90"
+                ],
+                "500 mg": [
+                    "90"
+                ],
+                "750 mg": [
+                    "90"
+                ]
+            }
+        },
+        "Natriumkromoglikat": {
+            "Ögondroppar, endos": {
+                "40 mg/ml": [
+                    "60"
+                ]
+            }
+        },
+        "Pamidronat": {
+            "Koncentrat till infusionsvätska": {
+                "3 mg/ml": [
+                    "5",
+                    "10",
+                    "20",
+                    "25",
+                    "30"
+                ]
+            }
+        },
+        "Risedronat": {
+            "Tablett": {
+                "35 mg": [
+                    "12"
+                ]
+            }
+        },
+        "Tiotropiumbromid": {
+            "Inhalationspulver, kapsel": {
+                "18 mikrogram": [
+                    "30",
+                    "90"
+                ]
+            }
+        },
+        "Triamcinolon": {
+            "Injektionsvätska": {
+                "20 mg/ml": [
+                    "1"
+                ]
+            }
+        },
+        "Akamprosat": {
+            "Enterotablett": {
+                "333 mg": [
+                    "84",
+                    "168",
+                    "250",
+                    "504"
+                ]
+            }
+        },
         "Amfotericin": {
             "Pulver till infusionsvätska, dispersion": {
                 "50 mg": [
                     "500"
+                ]
+            }
+        },
+        "Apremilast": {
+            "Tablett": {
+                "10 mg + 20 mg + 30 mg": [
+                    "27"
+                ],
+                "30 mg": [
+                    "56",
+                    "168"
                 ]
             }
         },
@@ -6408,18 +6441,22 @@
                 ]
             }
         },
+        "Denosumab": {
+            "Injektionsvätska": {
+                "120 mg (Grupp B)": [
+                    "1"
+                ]
+            },
+            "Injektionsvätska, förfylld spruta": {
+                "60 mg (Grupp B)": [
+                    "1"
+                ]
+            }
+        },
         "Efavirenz + emtricitabin + tenofovirdisoproxil": {
             "Tablett": {
                 "600 mg/200 mg/245 mg": [
                     "30"
-                ]
-            }
-        },
-        "Fampridin": {
-            "Depottablett": {
-                "10 mg": [
-                    "28",
-                    "56"
                 ]
             }
         },
@@ -6447,26 +6484,27 @@
                 ]
             }
         },
+        "Pazopanib": {
+            "Tablett": {
+                "200 mg": [
+                    "90"
+                ],
+                "400 mg": [
+                    "60"
+                ]
+            }
+        },
+        "Raltegravir": {
+            "Tablett": {
+                "600 mg": [
+                    "60"
+                ]
+            }
+        },
         "Triamcinolonhexacetonid": {
             "Injektionsvätska, suspension": {
                 "20 mg/ml": [
                     "1"
-                ]
-            }
-        },
-        "Alendronat": {
-            "Tablett": {
-                "70 mg": [
-                    "4",
-                    "12",
-                    "100"
-                ]
-            }
-        },
-        "Alendronat + kolekalciferol": {
-            "Tablett": {
-                "70 mg + 2800 IE": [
-                    "12"
                 ]
             }
         },
@@ -6547,19 +6585,6 @@
                 ]
             }
         },
-        "Lantankarbonat": {
-            "Tuggtablett": {
-                "1000 mg": [
-                    "90"
-                ],
-                "500 mg": [
-                    "90"
-                ],
-                "750 mg": [
-                    "90"
-                ]
-            }
-        },
         "Mometason": {
             "Kräm": {
                 "1 mg/g": [
@@ -6588,43 +6613,18 @@
                 ]
             }
         },
-        "Natriumkromoglikat": {
-            "Ögondroppar, endos": {
-                "40 mg/ml": [
-                    "60"
+        "Fampridin": {
+            "Depottablett": {
+                "10 mg": [
+                    "28",
+                    "56"
                 ]
             }
         },
-        "Pamidronat": {
-            "Koncentrat till infusionsvätska": {
-                "3 mg/ml": [
-                    "5",
-                    "10",
-                    "20",
-                    "25",
-                    "30"
-                ]
-            }
-        },
-        "Risedronat": {
-            "Tablett": {
-                "35 mg": [
-                    "12"
-                ]
-            }
-        },
-        "Tiotropiumbromid": {
-            "Inhalationspulver, kapsel": {
-                "18 mikrogram": [
-                    "30",
-                    "90"
-                ]
-            }
-        },
-        "Triamcinolon": {
+        "Hydroxokobalamin": {
             "Injektionsvätska": {
-                "20 mg/ml": [
-                    "1"
+                "1 mg/ml": [
+                    "5"
                 ]
             }
         },
