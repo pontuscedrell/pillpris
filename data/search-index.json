@@ -32620,14 +32620,12 @@
       "NovoNorm®",
       "Repaglinid Actavis",
       "Repaglinid STADA",
-      "Repaglinide Accord",
       "Repaglinide Krka"
     ],
     "vnr": [
       "15405",
       "164800",
       "465084",
-      "507367",
       "51738"
     ],
     "packaging": [],
@@ -32644,11 +32642,9 @@
       "NovoNorm®",
       "Repaglinid Actavis",
       "Repaglinid STADA",
-      "Repaglinide Accord",
       "Repaglinide Krka"
     ],
     "vnr": [
-      "139435",
       "187191",
       "33741",
       "459855",
@@ -32686,13 +32682,11 @@
       "NovoNorm®",
       "Repaglinid Actavis",
       "Repaglinid STADA",
-      "Repaglinide Accord",
       "Repaglinide Krka"
     ],
     "vnr": [
       "15416",
       "39168",
-      "394357",
       "552080",
       "599442"
     ],
@@ -32710,12 +32704,10 @@
       "NovoNorm®",
       "Repaglinid Actavis",
       "Repaglinid STADA",
-      "Repaglinide Accord",
       "Repaglinide Krka"
     ],
     "vnr": [
       "423615",
-      "427463",
       "482960",
       "522052",
       "550803"
@@ -32734,15 +32726,13 @@
       "NovoNorm®",
       "Repaglinid Actavis",
       "Repaglinid STADA",
-      "Repaglinide Accord",
       "Repaglinide Krka"
     ],
     "vnr": [
       "130840",
       "15427",
       "29417",
-      "431948",
-      "590852"
+      "431948"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -32758,15 +32748,13 @@
       "NovoNorm®",
       "Repaglinid Actavis",
       "Repaglinid STADA",
-      "Repaglinide Accord",
       "Repaglinide Krka"
     ],
     "vnr": [
       "452913",
       "478952",
       "498051",
-      "522078",
-      "573193"
+      "522078"
     ],
     "packaging": [],
     "packagingMap": {}
