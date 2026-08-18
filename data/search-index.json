@@ -19503,6 +19503,32 @@
     "packagingMap": {}
   },
   {
+    "id": "111461",
+    "size_id": "F0D4A",
+    "sub": "Lanreotid",
+    "form": "Injektionsvätska, förfylld spruta",
+    "str": "120 mg",
+    "size": "0,4 st",
+    "names": [
+      "Lanreotid SUN",
+      "Lanreotide Orifarm",
+      "Somatulina Autogel",
+      "Somatuline Autogel",
+      "Somatuline® Autogel®"
+    ],
+    "vnr": [
+      "117517",
+      "187291",
+      "29291",
+      "393639",
+      "412782",
+      "436503",
+      "6941"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
     "id": "111069",
     "size_id": "T23",
     "sub": "Lansoprazol",
