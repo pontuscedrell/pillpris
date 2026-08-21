@@ -1274,25 +1274,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Agomelatin Glenmark",
-        "Varunummer":488603,
-        "Styrka":"25 mg",
-        "Förpackningsstorleksgrupp":"T22",
-        "Substans":"Agomelatin",
-        "Beredningsform":"Tablett",
-        "Storlek":84.0,
-        "Apotekens inköpspris":145.39,
-        "Försäljningspris":208.73,
-        "Inköpspris per minsta enhet":1.73,
-        "Försäljningspris per minsta enhet":2.48,
-        "NPL ID":20170427000151,
-        "NPL pack ID":20171004100097,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":112043
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Agomelatine STADA",
         "Varunummer":486452,
         "Styrka":"25 mg",
@@ -1311,7 +1292,7 @@
         "Utbytesgrupps ID":112043
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Agomelatine Viatris",
         "Varunummer":105028,
         "Styrka":"25 mg",
@@ -1327,6 +1308,25 @@
         "NPL pack ID":20170705100092,
         "Ursprung":"Generics",
         "Företag":"Viatris AB",
+        "Utbytesgrupps ID":112043
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Agomelatin Glenmark",
+        "Varunummer":488603,
+        "Styrka":"25 mg",
+        "Förpackningsstorleksgrupp":"T22",
+        "Substans":"Agomelatin",
+        "Beredningsform":"Tablett",
+        "Storlek":84.0,
+        "Apotekens inköpspris":145.39,
+        "Försäljningspris":208.73,
+        "Inköpspris per minsta enhet":1.73,
+        "Försäljningspris per minsta enhet":2.48,
+        "NPL ID":20170427000151,
+        "NPL pack ID":20171004100097,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":112043
     },
     {
@@ -15791,25 +15791,6 @@
     {
         "Status":"PV",
         "Produktnamn":"LUMIGAN",
-        "Varunummer":124451,
-        "Styrka":"0,1 mg\/ml",
-        "Förpackningsstorleksgrupp":"M9",
-        "Substans":"Bimatoprost",
-        "Beredningsform":"Ögondroppar",
-        "Storlek":9.0,
-        "Apotekens inköpspris":150.0,
-        "Försäljningspris":213.5,
-        "Inköpspris per minsta enhet":16.67,
-        "Försäljningspris per minsta enhet":23.72,
-        "NPL ID":20080416000058,
-        "NPL pack ID":20140915100076,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Orifarm AB",
-        "Utbytesgrupps ID":112273
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"LUMIGAN",
         "Varunummer":171437,
         "Styrka":"0,1 mg\/ml",
         "Förpackningsstorleksgrupp":"M9",
@@ -15827,7 +15808,7 @@
         "Utbytesgrupps ID":112273
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Bimatoprost STADA",
         "Varunummer":400166,
         "Styrka":"0,1 mg\/ml",
@@ -15846,7 +15827,7 @@
         "Utbytesgrupps ID":112273
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Bimaprez",
         "Varunummer":458303,
         "Styrka":"0,1 mg\/ml",
@@ -15862,6 +15843,25 @@
         "NPL pack ID":20231012100769,
         "Ursprung":"Generics",
         "Företag":"Astimex Pharma AB",
+        "Utbytesgrupps ID":112273
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"LUMIGAN",
+        "Varunummer":124451,
+        "Styrka":"0,1 mg\/ml",
+        "Förpackningsstorleksgrupp":"M9",
+        "Substans":"Bimatoprost",
+        "Beredningsform":"Ögondroppar",
+        "Storlek":9.0,
+        "Apotekens inköpspris":150.0,
+        "Försäljningspris":213.5,
+        "Inköpspris per minsta enhet":16.67,
+        "Försäljningspris per minsta enhet":23.72,
+        "NPL ID":20080416000058,
+        "NPL pack ID":20140915100076,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Orifarm AB",
         "Utbytesgrupps ID":112273
     },
     {
@@ -25784,25 +25784,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Dabigatran etexilate Sandoz",
-        "Varunummer":498612,
-        "Styrka":"110 mg",
-        "Förpackningsstorleksgrupp":"T21",
-        "Substans":"Dabigatranetexilat",
-        "Beredningsform":"Kapsel",
-        "Storlek":60.0,
-        "Apotekens inköpspris":71.76,
-        "Försäljningspris":132.29,
-        "Inköpspris per minsta enhet":1.2,
-        "Försäljningspris per minsta enhet":2.2,
-        "NPL ID":20200904000029,
-        "NPL pack ID":20210216100492,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":111384
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Dabigatran etexilate STADA Nordic",
         "Varunummer":189853,
         "Styrka":"110 mg",
@@ -25821,7 +25802,7 @@
         "Utbytesgrupps ID":111384
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Dabigatran etexilate Orion",
         "Varunummer":588908,
         "Styrka":"110 mg",
@@ -25837,6 +25818,44 @@
         "NPL pack ID":20210311100090,
         "Ursprung":"Generics",
         "Företag":"Orion Pharma AB",
+        "Utbytesgrupps ID":111384
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Dabigatran etexilate Zentiva",
+        "Varunummer":63620,
+        "Styrka":"110 mg",
+        "Förpackningsstorleksgrupp":"T21",
+        "Substans":"Dabigatranetexilat",
+        "Beredningsform":"Kapsel",
+        "Storlek":60.0,
+        "Apotekens inköpspris":130.0,
+        "Försäljningspris":192.8,
+        "Inköpspris per minsta enhet":2.17,
+        "Försäljningspris per minsta enhet":3.21,
+        "NPL ID":20221230000033,
+        "NPL pack ID":20230201100078,
+        "Ursprung":"Generics",
+        "Företag":"Zentiva Denmark ApS",
+        "Utbytesgrupps ID":111384
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Dabigatran etexilate Sandoz",
+        "Varunummer":498612,
+        "Styrka":"110 mg",
+        "Förpackningsstorleksgrupp":"T21",
+        "Substans":"Dabigatranetexilat",
+        "Beredningsform":"Kapsel",
+        "Storlek":60.0,
+        "Apotekens inköpspris":71.76,
+        "Försäljningspris":132.29,
+        "Inköpspris per minsta enhet":1.2,
+        "Försäljningspris per minsta enhet":2.2,
+        "NPL ID":20200904000029,
+        "NPL pack ID":20210216100492,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":111384
     },
     {
@@ -25856,25 +25875,6 @@
         "NPL pack ID":20201025100124,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":111384
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Dabigatran etexilate Zentiva",
-        "Varunummer":63620,
-        "Styrka":"110 mg",
-        "Förpackningsstorleksgrupp":"T21",
-        "Substans":"Dabigatranetexilat",
-        "Beredningsform":"Kapsel",
-        "Storlek":60.0,
-        "Apotekens inköpspris":130.0,
-        "Försäljningspris":192.8,
-        "Inköpspris per minsta enhet":2.17,
-        "Försäljningspris per minsta enhet":3.21,
-        "NPL ID":20221230000033,
-        "NPL pack ID":20230201100078,
-        "Ursprung":"Generics",
-        "Företag":"Zentiva Denmark ApS",
         "Utbytesgrupps ID":111384
     },
     {
@@ -32548,25 +32548,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Donepezil Accord",
-        "Varunummer":581349,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Donepezil",
-        "Beredningsform":"Tablett",
-        "Storlek":98.0,
-        "Apotekens inköpspris":44.7,
-        "Försäljningspris":102.39,
-        "Inköpspris per minsta enhet":0.46,
-        "Försäljningspris per minsta enhet":1.04,
-        "NPL ID":20090106000046,
-        "NPL pack ID":20090319100205,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":111902
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Donepezil Sandoz",
         "Varunummer":534773,
         "Styrka":"10 mg",
@@ -32585,7 +32566,7 @@
         "Utbytesgrupps ID":111902
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Donepezil Orion",
         "Varunummer":478757,
         "Styrka":"10 mg",
@@ -32601,6 +32582,44 @@
         "NPL pack ID":20180202100280,
         "Ursprung":"Generics",
         "Företag":"Orion Pharma AB",
+        "Utbytesgrupps ID":111902
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Donepezil Actavis",
+        "Varunummer":27305,
+        "Styrka":"10 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Donepezil",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":695.84,
+        "Försäljningspris":774.49,
+        "Inköpspris per minsta enhet":6.96,
+        "Försäljningspris per minsta enhet":7.74,
+        "NPL ID":20081217000070,
+        "NPL pack ID":20100122100085,
+        "Ursprung":"Generics",
+        "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":111902
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Donepezil Accord",
+        "Varunummer":581349,
+        "Styrka":"10 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Donepezil",
+        "Beredningsform":"Tablett",
+        "Storlek":98.0,
+        "Apotekens inköpspris":44.7,
+        "Försäljningspris":102.39,
+        "Inköpspris per minsta enhet":0.46,
+        "Försäljningspris per minsta enhet":1.04,
+        "NPL ID":20090106000046,
+        "NPL pack ID":20090319100205,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":111902
     },
     {
@@ -32620,25 +32639,6 @@
         "NPL pack ID":20200706100040,
         "Ursprung":"ParallelImport",
         "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":111902
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Donepezil Actavis",
-        "Varunummer":27305,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Donepezil",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":695.84,
-        "Försäljningspris":774.49,
-        "Inköpspris per minsta enhet":6.96,
-        "Försäljningspris per minsta enhet":7.74,
-        "NPL ID":20081217000070,
-        "NPL pack ID":20100122100085,
-        "Ursprung":"Generics",
-        "Företag":"Teva Sweden AB",
         "Utbytesgrupps ID":111902
     },
     {
@@ -70699,7 +70699,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":436503,
         "Styrka":"120 mg",
@@ -70718,7 +70718,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":436503,
         "Styrka":"120 mg",
@@ -70737,7 +70737,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":436503,
         "Styrka":"120 mg",
@@ -70756,7 +70756,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":436503,
         "Styrka":"120 mg",
@@ -70775,7 +70775,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":436503,
         "Styrka":"120 mg",
@@ -70794,7 +70794,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":436503,
         "Styrka":"120 mg",
@@ -70813,7 +70813,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":436503,
         "Styrka":"120 mg",
@@ -70832,7 +70832,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":436503,
         "Styrka":"120 mg",
@@ -70851,7 +70851,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":436503,
         "Styrka":"120 mg",
@@ -70870,7 +70870,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"R2",
         "Produktnamn":"Lanreotide Orifarm",
         "Varunummer":29291,
         "Styrka":"120 mg",
@@ -70889,7 +70889,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Somatulina Autogel",
         "Varunummer":187291,
         "Styrka":"120 mg",
@@ -70908,7 +70908,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":117517,
         "Styrka":"120 mg",
@@ -70927,7 +70927,7 @@
         "Utbytesgrupps ID":111461
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Somatuline Autogel",
         "Varunummer":117517,
         "Styrka":"120 mg",
@@ -111740,25 +111740,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Posaconazole Accord",
-        "Varunummer":49915,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Posakonazol",
-        "Beredningsform":"Enterotablett",
-        "Storlek":96.0,
-        "Apotekens inköpspris":2431.0,
-        "Försäljningspris":2553.03,
-        "Inköpspris per minsta enhet":25.32,
-        "Försäljningspris per minsta enhet":26.59,
-        "NPL ID":20180430000093,
-        "NPL pack ID":20180713100076,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":111446
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Posaconazole Viatris",
         "Varunummer":537264,
         "Styrka":"100 mg",
@@ -111777,7 +111758,7 @@
         "Utbytesgrupps ID":111446
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Posaconazole Teva",
         "Varunummer":585429,
         "Styrka":"100 mg",
@@ -111796,7 +111777,7 @@
         "Utbytesgrupps ID":111446
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Posaconazole STADA",
         "Varunummer":56420,
         "Styrka":"100 mg",
@@ -111812,6 +111793,25 @@
         "NPL pack ID":20180422100060,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111446
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Posaconazole Accord",
+        "Varunummer":49915,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Posakonazol",
+        "Beredningsform":"Enterotablett",
+        "Storlek":96.0,
+        "Apotekens inköpspris":2431.0,
+        "Försäljningspris":2553.03,
+        "Inköpspris per minsta enhet":25.32,
+        "Försäljningspris per minsta enhet":26.59,
+        "NPL ID":20180430000093,
+        "NPL pack ID":20180713100076,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":111446
     },
     {
@@ -137865,25 +137865,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Tenofovir disoproxil Glenmark",
-        "Varunummer":141979,
-        "Styrka":"245 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Tenofovirdisoproxil",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":175.16,
-        "Försäljningspris":239.54,
-        "Inköpspris per minsta enhet":5.84,
-        "Försäljningspris per minsta enhet":7.98,
-        "NPL ID":20180321000034,
-        "NPL pack ID":20180508100311,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":111604
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Tenofovir disoproxil Teva",
         "Varunummer":68836,
         "Styrka":"245 mg",
@@ -137902,7 +137883,7 @@
         "Utbytesgrupps ID":111604
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Tenofovir Disoproxil Viatris",
         "Varunummer":510951,
         "Styrka":"245 mg",
@@ -137918,6 +137899,25 @@
         "NPL pack ID":20151111100043,
         "Ursprung":"Generics",
         "Företag":"Viatris AB",
+        "Utbytesgrupps ID":111604
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Tenofovir disoproxil Glenmark",
+        "Varunummer":141979,
+        "Styrka":"245 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Tenofovirdisoproxil",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":175.16,
+        "Försäljningspris":239.54,
+        "Inköpspris per minsta enhet":5.84,
+        "Försäljningspris per minsta enhet":7.98,
+        "NPL ID":20180321000034,
+        "NPL pack ID":20180508100311,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":111604
     },
     {
@@ -144763,7 +144763,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Valganciclovir Orion",
-        "Varunummer":562323,
+        "Varunummer":131149,
         "Styrka":"450 mg",
         "Förpackningsstorleksgrupp":"T21",
         "Substans":"Valganciklovir",
