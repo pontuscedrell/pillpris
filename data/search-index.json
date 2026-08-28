@@ -3169,8 +3169,8 @@
     "vnr": [
       "387252",
       "396610",
+      "420365",
       "547132",
-      "563336",
       "70743"
     ],
     "packaging": [],
@@ -35387,6 +35387,79 @@
       "198694",
       "420324",
       "55369"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "113282",
+    "size_id": "T18",
+    "sub": "Safinamid",
+    "form": "Tablett",
+    "str": "100 mg",
+    "size": "30 st",
+    "names": [
+      "Xadago"
+    ],
+    "vnr": [
+      "542507"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "113282",
+    "size_id": "T23",
+    "sub": "Safinamid",
+    "form": "Tablett",
+    "str": "100 mg",
+    "size": "100 st",
+    "names": [
+      "Safinamide Vivanta",
+      "Xadago"
+    ],
+    "vnr": [
+      "176457",
+      "47943",
+      "52717",
+      "527342"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "113161",
+    "size_id": "T18",
+    "sub": "Safinamid",
+    "form": "Tablett",
+    "str": "50 mg",
+    "size": "30 st",
+    "names": [
+      "Safinamide Vivanta",
+      "Xadago"
+    ],
+    "vnr": [
+      "106219",
+      "30249"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "113161",
+    "size_id": "T23",
+    "sub": "Safinamid",
+    "form": "Tablett",
+    "str": "50 mg",
+    "size": "100 st",
+    "names": [
+      "Xadago"
+    ],
+    "vnr": [
+      "128964",
+      "392369",
+      "545736",
+      "66927"
     ],
     "packaging": [],
     "packagingMap": {}
