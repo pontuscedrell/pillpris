@@ -11,7 +11,21 @@ const currencyFormatter = new Intl.NumberFormat('sv-SE', {
     maximumFractionDigits: 2
 });
 
-const cacheBust = `v=${Date.now()}`;
+async function fetchDataJson(path) {
+    const isOffline = typeof navigator !== 'undefined' && navigator.onLine === false;
+    const bustedUrl = isOffline ? path : `${path}?v=${Date.now()}`;
+
+    try {
+        const res = await fetch(bustedUrl, { cache: isOffline ? 'force-cache' : 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return await res.json();
+    } catch (error) {
+        if (bustedUrl === path) throw error;
+        const fallbackRes = await fetch(path, { cache: 'force-cache' });
+        if (!fallbackRes.ok) throw error;
+        return await fallbackRes.json();
+    }
+}
 
 // Dark mode initialization
 if (localStorage.getItem('darkMode') === 'enabled') {
@@ -51,8 +65,7 @@ async function initStatistics() {
 }
 
 async function loadMonths() {
-    const resMonths = await fetch(`data/months.json?${cacheBust}`);
-    availableMonths = await resMonths.json();
+    availableMonths = await fetchDataJson('data/months.json');
     availableMonths.sort((a, b) => b - a);
 
     const now = new Date();
@@ -421,8 +434,7 @@ async function fetchMonthData(month) {
     if (!month) return [];
     if (dataCache.has(month)) return dataCache.get(month);
 
-    const res = await fetch(`data/${month}.json?${cacheBust}`);
-    const data = await res.json();
+    const data = await fetchDataJson(`data/${month}.json`);
     dataCache.set(month, data);
     return data;
 }

@@ -482,20 +482,31 @@ async function init() {
     try {
         // Cache DOM elements for performance
         cacheDOM();
-        
-        // Om din fil heter substances.json men innehåller den nya index-listan:
-        const cacheBust = `v=${Date.now()}`;
-        const res = await fetch(`data/search-index.json?${cacheBust}`);
-        searchIndex = await res.json();
+
+        const fetchDataJson = async (path) => {
+            const isOffline = typeof navigator !== 'undefined' && navigator.onLine === false;
+            const bustedUrl = isOffline ? path : `${path}?v=${Date.now()}`;
+
+            try {
+                const res = await fetch(bustedUrl, { cache: isOffline ? 'force-cache' : 'no-store' });
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                return await res.json();
+            } catch (error) {
+                if (bustedUrl === path) throw error;
+                const fallbackRes = await fetch(path, { cache: 'force-cache' });
+                if (!fallbackRes.ok) throw error;
+                return await fallbackRes.json();
+            }
+        };
+
+        searchIndex = await fetchDataJson('data/search-index.json');
 
         // Load aggregated product history for instant month switching
-        const historyRes = await fetch(`data/product-history.json?${cacheBust}`);
-        historyData = await historyRes.json();
+        historyData = await fetchDataJson('data/product-history.json');
         buildHistoryIndexes();
 
         // Ladda månader (antingen från separat fil eller från indexet)
-        const resMonths = await fetch(`data/months.json?${cacheBust}`);
-        availableMonths = await resMonths.json();
+        availableMonths = await fetchDataJson('data/months.json');
         availableMonths.sort((a, b) => b - a);
 
 
