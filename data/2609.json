@@ -23980,7 +23980,7 @@
     {
         "Status":"R2",
         "Produktnamn":"Cinacalcet Viatris",
-        "Varunummer":70370,
+        "Varunummer":377924,
         "Styrka":"90 mg",
         "Förpackningsstorleksgrupp":"T18",
         "Substans":"Cinakalcet",
@@ -40263,7 +40263,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Escitalopram Teva",
-        "Varunummer":493762,
+        "Varunummer":30983,
         "Styrka":"15 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Escitalopram",
@@ -92075,7 +92075,7 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Naltrexon Vitaflo",
+        "Produktnamn":"Naltrexon Walter Ritter",
         "Varunummer":22212,
         "Styrka":"50 mg",
         "Förpackningsstorleksgrupp":"T18",
@@ -119017,25 +119017,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Risperidon Abacus Medicine",
-        "Varunummer":69185,
-        "Styrka":"0,25 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Risperidon",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":151.0,
-        "Försäljningspris":214.54,
-        "Inköpspris per minsta enhet":1.51,
-        "Försäljningspris per minsta enhet":2.15,
-        "NPL ID":20250521000087,
-        "NPL pack ID":20250804100015,
-        "Ursprung":"ParallelImport",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":112154
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Risperidon Sandoz",
         "Varunummer":417851,
         "Styrka":"0,25 mg",
@@ -119054,7 +119035,7 @@
         "Utbytesgrupps ID":112154
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Risperidon Actavis",
         "Varunummer":161563,
         "Styrka":"0,25 mg",
@@ -119073,7 +119054,7 @@
         "Utbytesgrupps ID":112154
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Risperidon Sandoz",
         "Varunummer":71781,
         "Styrka":"0,25 mg",
@@ -119089,6 +119070,25 @@
         "NPL pack ID":20090216100100,
         "Ursprung":"Generics",
         "Företag":"Sandoz A\/S",
+        "Utbytesgrupps ID":112154
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Risperidon Abacus Medicine",
+        "Varunummer":69185,
+        "Styrka":"0,25 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Risperidon",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":151.0,
+        "Försäljningspris":214.54,
+        "Inköpspris per minsta enhet":1.51,
+        "Försäljningspris per minsta enhet":2.15,
+        "NPL ID":20250521000087,
+        "NPL pack ID":20250804100015,
+        "Ursprung":"ParallelImport",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":112154
     },
     {
