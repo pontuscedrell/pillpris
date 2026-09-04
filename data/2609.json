@@ -1274,25 +1274,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Agomelatine STADA",
-        "Varunummer":486452,
-        "Styrka":"25 mg",
-        "Förpackningsstorleksgrupp":"T22",
-        "Substans":"Agomelatin",
-        "Beredningsform":"Tablett",
-        "Storlek":84.0,
-        "Apotekens inköpspris":290.0,
-        "Försäljningspris":358.4,
-        "Inköpspris per minsta enhet":3.45,
-        "Försäljningspris per minsta enhet":4.27,
-        "NPL ID":20170227000047,
-        "NPL pack ID":20190426100188,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":112043
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Agomelatine Viatris",
         "Varunummer":105028,
         "Styrka":"25 mg",
@@ -1308,6 +1289,25 @@
         "NPL pack ID":20170705100092,
         "Ursprung":"Generics",
         "Företag":"Viatris AB",
+        "Utbytesgrupps ID":112043
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Agomelatine STADA",
+        "Varunummer":486452,
+        "Styrka":"25 mg",
+        "Förpackningsstorleksgrupp":"T22",
+        "Substans":"Agomelatin",
+        "Beredningsform":"Tablett",
+        "Storlek":84.0,
+        "Apotekens inköpspris":290.0,
+        "Försäljningspris":358.4,
+        "Inköpspris per minsta enhet":3.45,
+        "Försäljningspris per minsta enhet":4.27,
+        "NPL ID":20170227000047,
+        "NPL pack ID":20190426100188,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":112043
     },
     {
@@ -2774,25 +2774,6 @@
         "Utbytesgrupps ID":112428
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Alprazolam Krka",
-        "Varunummer":87503,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"TN100",
-        "Substans":"Alprazolam",
-        "Beredningsform":"Depottablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":104.0,
-        "Försäljningspris":165.89,
-        "Inköpspris per minsta enhet":1.04,
-        "Försäljningspris per minsta enhet":1.66,
-        "NPL ID":20060822000019,
-        "NPL pack ID":20070824100228,
-        "Ursprung":"Generics",
-        "Företag":"KRKA Sverige AB",
-        "Utbytesgrupps ID":111978
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Xanor® Depot",
         "Varunummer":12823,
@@ -2809,6 +2790,25 @@
         "NPL pack ID":19950628100027,
         "Ursprung":"Original",
         "Företag":"Viatris AB",
+        "Utbytesgrupps ID":111978
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Alprazolam Krka",
+        "Varunummer":87503,
+        "Styrka":"0,5 mg",
+        "Förpackningsstorleksgrupp":"TN100",
+        "Substans":"Alprazolam",
+        "Beredningsform":"Depottablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":104.0,
+        "Försäljningspris":165.89,
+        "Inköpspris per minsta enhet":1.04,
+        "Försäljningspris per minsta enhet":1.66,
+        "NPL ID":20060822000019,
+        "NPL pack ID":20070824100228,
+        "Ursprung":"Generics",
+        "Företag":"KRKA Sverige AB",
         "Utbytesgrupps ID":111978
     },
     {
@@ -6803,25 +6803,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Abilify",
-        "Varunummer":47054,
-        "Styrka":"1 mg\/ml",
-        "Förpackningsstorleksgrupp":"M150",
-        "Substans":"Aripiprazol",
-        "Beredningsform":"Oral lösning",
-        "Storlek":150.0,
-        "Apotekens inköpspris":211.33,
-        "Försäljningspris":276.98,
-        "Inköpspris per minsta enhet":1.41,
-        "Försäljningspris per minsta enhet":1.85,
-        "NPL ID":20050131000046,
-        "NPL pack ID":20210910100248,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":111923
-    },
-    {
-        "Status":"PV",
         "Produktnamn":"Aripiprazol Abacus Medicine",
         "Varunummer":154010,
         "Styrka":"1 mg\/ml",
@@ -6875,6 +6856,25 @@
         "NPL pack ID":20050316101032,
         "Ursprung":"Original",
         "Företag":"Otsuka Pharma Scandinavia AB",
+        "Utbytesgrupps ID":111923
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Abilify",
+        "Varunummer":47054,
+        "Styrka":"1 mg\/ml",
+        "Förpackningsstorleksgrupp":"M150",
+        "Substans":"Aripiprazol",
+        "Beredningsform":"Oral lösning",
+        "Storlek":150.0,
+        "Apotekens inköpspris":211.33,
+        "Försäljningspris":276.98,
+        "Inköpspris per minsta enhet":1.41,
+        "Försäljningspris per minsta enhet":1.85,
+        "NPL ID":20050131000046,
+        "NPL pack ID":20210910100248,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":111923
     },
     {
@@ -44821,25 +44821,6 @@
         "Utbytesgrupps ID":112072
     },
     {
-        "Status":"R1",
-        "Produktnamn":"Fampyra",
-        "Varunummer":56308,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Fampridin",
-        "Beredningsform":"Depottablett",
-        "Storlek":28.0,
-        "Apotekens inköpspris":665.0,
-        "Försäljningspris":742.88,
-        "Inköpspris per minsta enhet":23.75,
-        "Försäljningspris per minsta enhet":26.53,
-        "NPL ID":20100202000038,
-        "NPL pack ID":20110927101538,
-        "Ursprung":"Original",
-        "Företag":"Merz Therapeutics Nordics AB",
-        "Utbytesgrupps ID":112072
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Fampridine Newbury",
         "Varunummer":380028,
@@ -44856,6 +44837,25 @@
         "NPL pack ID":20211103100137,
         "Ursprung":"Generics",
         "Företag":"Newbury Pharmaceuticals AB",
+        "Utbytesgrupps ID":112072
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Fampyra",
+        "Varunummer":56308,
+        "Styrka":"10 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Fampridin",
+        "Beredningsform":"Depottablett",
+        "Storlek":28.0,
+        "Apotekens inköpspris":665.0,
+        "Försäljningspris":742.88,
+        "Inköpspris per minsta enhet":23.75,
+        "Försäljningspris per minsta enhet":26.53,
+        "NPL ID":20100202000038,
+        "NPL pack ID":20110927101538,
+        "Ursprung":"Original",
+        "Företag":"Merz Therapeutics Nordics AB",
         "Utbytesgrupps ID":112072
     },
     {
@@ -44899,25 +44899,6 @@
     {
         "Status":"R2",
         "Produktnamn":"Fampyra",
-        "Varunummer":86142,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Fampridin",
-        "Beredningsform":"Depottablett",
-        "Storlek":56.0,
-        "Apotekens inköpspris":1330.0,
-        "Försäljningspris":1424.5,
-        "Inköpspris per minsta enhet":23.75,
-        "Försäljningspris per minsta enhet":25.44,
-        "NPL ID":20100202000038,
-        "NPL pack ID":20110927101545,
-        "Ursprung":"Original",
-        "Företag":"Merz Therapeutics Nordics AB",
-        "Utbytesgrupps ID":112072
-    },
-    {
-        "Status":"R2",
-        "Produktnamn":"Fampyra",
         "Varunummer":182128,
         "Styrka":"10 mg",
         "Förpackningsstorleksgrupp":"T20",
@@ -44951,6 +44932,25 @@
         "NPL pack ID":20191212100399,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":112072
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Fampyra",
+        "Varunummer":86142,
+        "Styrka":"10 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Fampridin",
+        "Beredningsform":"Depottablett",
+        "Storlek":56.0,
+        "Apotekens inköpspris":1330.0,
+        "Försäljningspris":1424.5,
+        "Inköpspris per minsta enhet":23.75,
+        "Försäljningspris per minsta enhet":25.44,
+        "NPL ID":20100202000038,
+        "NPL pack ID":20110927101545,
+        "Ursprung":"Original",
+        "Företag":"Merz Therapeutics Nordics AB",
         "Utbytesgrupps ID":112072
     },
     {
@@ -68515,25 +68515,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Biquetan",
-        "Varunummer":404709,
-        "Styrka":"300 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Kvetiapin",
-        "Beredningsform":"Depottablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":920.0,
-        "Försäljningspris":1004.25,
-        "Inköpspris per minsta enhet":9.2,
-        "Försäljningspris per minsta enhet":10.04,
-        "NPL ID":20160628000098,
-        "NPL pack ID":20160811100536,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":112038
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Quetiapin Hexal",
         "Varunummer":104160,
         "Styrka":"300 mg",
@@ -68552,7 +68533,7 @@
         "Utbytesgrupps ID":112038
     },
     {
-        "Status":"R1",
+        "Status":"PV",
         "Produktnamn":"Seroquel Depot",
         "Varunummer":79077,
         "Styrka":"300 mg",
@@ -68568,6 +68549,25 @@
         "NPL pack ID":20071023100781,
         "Ursprung":"Original",
         "Företag":"Cheplapharm Arzneimittel GmbH",
+        "Utbytesgrupps ID":112038
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Biquetan",
+        "Varunummer":404709,
+        "Styrka":"300 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Kvetiapin",
+        "Beredningsform":"Depottablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":920.0,
+        "Försäljningspris":1004.25,
+        "Inköpspris per minsta enhet":9.2,
+        "Försäljningspris per minsta enhet":10.04,
+        "NPL ID":20160628000098,
+        "NPL pack ID":20160811100536,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":112038
     },
     {
@@ -76361,7 +76361,7 @@
         "Utbytesgrupps ID":112579
     },
     {
-        "Status":"R1",
+        "Status":"Nej",
         "Produktnamn":"Stalevo®",
         "Varunummer":474398,
         "Styrka":"175 mg\/43,75 mg\/200 mg",
@@ -86412,9 +86412,9 @@
         "Utbytesgrupps ID":112061
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Methylphenidate Sandoz",
-        "Varunummer":179368,
+        "Varunummer":63064,
         "Styrka":"36 mg",
         "Förpackningsstorleksgrupp":"TN90",
         "Substans":"Metylfenidat",
@@ -124680,25 +124680,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Rivastigmine Sandoz",
-        "Varunummer":507971,
-        "Styrka":"2 mg\/ml",
-        "Förpackningsstorleksgrupp":"M120",
-        "Substans":"Rivastigmin",
-        "Beredningsform":"Oral lösning",
-        "Storlek":120.0,
-        "Apotekens inköpspris":686.0,
-        "Försäljningspris":764.4,
-        "Inköpspris per minsta enhet":5.72,
-        "Försäljningspris per minsta enhet":6.37,
-        "NPL ID":20090506000158,
-        "NPL pack ID":20210707100017,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":111941
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Rivastigmine Sandoz",
         "Varunummer":467040,
         "Styrka":"2 mg\/ml",
         "Förpackningsstorleksgrupp":"M120",
@@ -124713,6 +124694,25 @@
         "NPL pack ID":20180315100061,
         "Ursprung":"ParallelDistribution",
         "Företag":"Ebb Medical AB",
+        "Utbytesgrupps ID":111941
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Rivastigmine Sandoz",
+        "Varunummer":507971,
+        "Styrka":"2 mg\/ml",
+        "Förpackningsstorleksgrupp":"M120",
+        "Substans":"Rivastigmin",
+        "Beredningsform":"Oral lösning",
+        "Storlek":120.0,
+        "Apotekens inköpspris":686.0,
+        "Försäljningspris":764.4,
+        "Inköpspris per minsta enhet":5.72,
+        "Försäljningspris per minsta enhet":6.37,
+        "NPL ID":20090506000158,
+        "NPL pack ID":20210707100017,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":111941
     },
     {
@@ -128136,7 +128136,7 @@
         "Utbytesgrupps ID":112517
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Xadago",
         "Varunummer":542507,
         "Styrka":"100 mg",
@@ -128212,7 +128212,7 @@
         "Utbytesgrupps ID":113282
     },
     {
-        "Status":"R2",
+        "Status":"Nej",
         "Produktnamn":"Xadago",
         "Varunummer":527342,
         "Styrka":"100 mg",
@@ -128326,7 +128326,7 @@
         "Utbytesgrupps ID":113161
     },
     {
-        "Status":"R1",
+        "Status":"Nej",
         "Produktnamn":"Xadago",
         "Varunummer":128964,
         "Styrka":"50 mg",
@@ -147005,7 +147005,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Venlafaxin Medical Valley",
-        "Varunummer":433856,
+        "Varunummer":491895,
         "Styrka":"150 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Venlafaxin",
@@ -147499,7 +147499,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Venlafaxin Medical Valley",
-        "Varunummer":471736,
+        "Varunummer":186592,
         "Styrka":"37,5 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Venlafaxin",
@@ -147860,7 +147860,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Venlafaxin Medical Valley",
-        "Varunummer":135077,
+        "Varunummer":493648,
         "Styrka":"75 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Venlafaxin",
