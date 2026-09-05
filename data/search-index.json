@@ -26805,14 +26805,12 @@
     "str": "10 mg",
     "size": "250 st",
     "names": [
-      "Olanzapin Actavis",
       "Olanzapin Sandoz",
       "Olanzapine Teva"
     ],
     "vnr": [
       "170395",
-      "457544",
-      "545732"
+      "457544"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -26961,11 +26959,9 @@
     "str": "2,5 mg",
     "size": "250 st",
     "names": [
-      "Olanzapin Actavis",
       "Olanzapine Teva"
     ],
     "vnr": [
-      "406189",
       "536424"
     ],
     "packaging": [],
