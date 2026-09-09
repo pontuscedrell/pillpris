@@ -1930,7 +1930,6 @@
       "Anagrelide Bluefish",
       "Anagrelide Glenmark",
       "Anagrelide STADA",
-      "Anagrelide Sandoz",
       "Anagrelide Viatris",
       "Xagrid®"
     ],
@@ -1943,8 +1942,7 @@
       "522812",
       "550423",
       "70715",
-      "82949",
-      "93472"
+      "82949"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -2994,6 +2992,7 @@
       "448117",
       "472066",
       "475648",
+      "520573",
       "536385",
       "554405",
       "61388"
@@ -3106,6 +3105,7 @@
       "135243",
       "165953",
       "166277",
+      "417779",
       "469329",
       "486426",
       "493896",
@@ -5297,6 +5297,7 @@
     "vnr": [
       "383345",
       "446092",
+      "547591",
       "55272",
       "60145"
     ],
@@ -7709,7 +7710,7 @@
   },
   {
     "id": "117787",
-    "size_id": "F1B",
+    "size_id": "F1A",
     "sub": "Denosumab",
     "form": "Injektionsvätska, förfylld spruta",
     "str": "60 mg (Grupp B)",
@@ -7739,6 +7740,7 @@
     ],
     "vnr": [
       "180960",
+      "394632",
       "462003",
       "527149",
       "97288"
@@ -7884,6 +7886,7 @@
     "size": "100 st",
     "names": [
       "Anoctarin",
+      "Desmopressin Farmacia",
       "Desmopressin Newbury",
       "Desmopressin Orion",
       "Desmopressin STADA",
@@ -7893,6 +7896,7 @@
     ],
     "vnr": [
       "416897",
+      "459600",
       "494816",
       "507433",
       "513844",
@@ -7936,6 +7940,7 @@
     "size": "100 st",
     "names": [
       "Anoctarin",
+      "Desmopressin Farmacia",
       "Desmopressin Newbury",
       "Desmopressin Orion",
       "Desmopressin STADA",
@@ -7947,6 +7952,7 @@
       "384960",
       "389309",
       "416473",
+      "438422",
       "441406",
       "559601",
       "80647"
@@ -7986,6 +7992,7 @@
     "size": "100 st",
     "names": [
       "Anoctarin",
+      "Desmopressin Farmacia",
       "Desmopressin Newbury",
       "Desmopressin Orion",
       "Desmopressin STADA",
@@ -7995,6 +8002,7 @@
     "vnr": [
       "138595",
       "153209",
+      "443090",
       "463517",
       "464377",
       "530863",
@@ -8206,10 +8214,28 @@
     "str": "10 mg",
     "size": "28 st",
     "names": [
+      "Attentin",
+      "Dexamfetamin Sea Pharma"
+    ],
+    "vnr": [
+      "386811",
+      "572740"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "114102",
+    "size_id": "TN40",
+    "sub": "Dexamfetamin",
+    "form": "Tablett",
+    "str": "10 mg",
+    "size": "40 st",
+    "names": [
       "Attentin"
     ],
     "vnr": [
-      "386811"
+      "591790"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -8284,14 +8310,12 @@
     "str": "5 mg",
     "size": "100 st",
     "names": [
-      "Attentin",
       "Dexamfetamin Sea Pharma",
       "Dexamfetamin Waymade",
       "Dexatin",
       "Dexfarm"
     ],
     "vnr": [
-      "104076",
       "177442",
       "178861",
       "443908",
@@ -8327,7 +8351,6 @@
     "str": "5 mg",
     "size": "30 st",
     "names": [
-      "Attentin",
       "Dexamfetamin Sea Pharma",
       "Dexamfetamin Waymade",
       "Dexatin",
@@ -8335,7 +8358,6 @@
     ],
     "vnr": [
       "128642",
-      "27017",
       "29450",
       "454532",
       "535579",
@@ -8731,6 +8753,7 @@
       "Dimethyl fumarate Medical Valley",
       "Dimethyl fumarate Mylan",
       "Dimethyl fumarate Newbury",
+      "Dimethyl fumarate Orion",
       "Dimethyl fumarate STADA",
       "Dimethyl fumarate Teva GmbH",
       "Dimethyl fumarate Zentiva",
@@ -8739,6 +8762,7 @@
     ],
     "vnr": [
       "120054",
+      "143584",
       "156029",
       "184652",
       "187890",
@@ -9736,12 +9760,14 @@
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Glenmark",
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Krka",
       "Efavirenz/Emtricitabine/Tenofovir disoproxil Teva",
-      "Efavirenz/Emtricitabine/Tenofovir disoproxil Zentiva k.s."
+      "Efavirenz/Emtricitabine/Tenofovir disoproxil Zentiva k.s.",
+      "Fatrino"
     ],
     "vnr": [
       "156066",
       "506344",
       "508400",
+      "589775",
       "60397"
     ],
     "packaging": [],
@@ -10451,16 +10477,14 @@
       "Baraclude®",
       "Entecavir Accord",
       "Entecavir Amarox",
-      "Entecavir STADA",
-      "Entecavir Sandoz"
+      "Entecavir STADA"
     ],
     "vnr": [
       "486065",
       "514640",
       "522696",
       "526110",
-      "562492",
-      "577226"
+      "562492"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -11307,6 +11331,7 @@
       "439075",
       "479216",
       "516892",
+      "54906",
       "95906"
     ],
     "packaging": [],
@@ -11428,6 +11453,7 @@
     "str": "30 mg",
     "size": "98 st",
     "names": [
+      "Etoricoxib Ebb",
       "Etoricoxib Krka",
       "Etoricoxib STADA",
       "Etoricoxib Sandoz",
@@ -11437,7 +11463,8 @@
       "163453",
       "169646",
       "171571",
-      "514542"
+      "514542",
+      "65891"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -11626,10 +11653,12 @@
     "str": "10 mg (Grupp A)",
     "size": "30 st",
     "names": [
+      "Everolimus Orifarm",
       "Everolimus Teva",
       "Votubia®"
     ],
     "vnr": [
+      "475401",
       "489094",
       "549685"
     ],
@@ -11887,7 +11916,8 @@
       "134241",
       "183176",
       "34313",
-      "405823"
+      "405823",
+      "69332"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -11937,6 +11967,7 @@
     "str": "10 mg",
     "size": "28 st",
     "names": [
+      "Fampridin Zentiva",
       "Fampridine Accord",
       "Fampridine Newbury",
       "Fampyra"
@@ -11944,6 +11975,7 @@
     "vnr": [
       "180940",
       "380028",
+      "479945",
       "56308"
     ],
     "packaging": [],
@@ -11957,13 +11989,17 @@
     "str": "10 mg",
     "size": "56 st",
     "names": [
+      "Fampridin Zentiva",
       "Fampridine Accord",
       "Fampridine Newbury",
       "Fampridine STADA",
+      "Fampridine Sandoz",
       "Fampyra"
     ],
     "vnr": [
+      "146106",
       "182128",
+      "385178",
       "521090",
       "523471",
       "598115",
@@ -12981,13 +13017,11 @@
     "size": "10 st",
     "names": [
       "Abstral",
-      "Fentanyl Sandoz",
       "Submena"
     ],
     "vnr": [
       "138085",
-      "29277",
-      "40122"
+      "29277"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -14139,6 +14173,7 @@
     "str": "1 mg",
     "size": "100 st",
     "names": [
+      "Bladex",
       "Folsyra EQL Pharma",
       "Folsyra Orifarm",
       "Folsyra Sandoz",
@@ -14152,6 +14187,7 @@
       "538866",
       "544170",
       "589250",
+      "592478",
       "596149"
     ],
     "packaging": [],
@@ -14211,6 +14247,22 @@
     ],
     "vnr": [
       "451067"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111453",
+    "size_id": "EK5489",
+    "sub": "Fulvestrant",
+    "form": "Injektionsvätska, förfylld spruta",
+    "str": "250 mg",
+    "size": "10 st",
+    "names": [
+      "Fulvestrant STADA Nordic"
+    ],
+    "vnr": [
+      "481918"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -14560,16 +14612,34 @@
   },
   {
     "id": "111944",
+    "size_id": "T21",
+    "sub": "Galantamin",
+    "form": "Depotkapsel",
+    "str": "8 mg",
+    "size": "60 st",
+    "names": [
+      "Galantamin Ebb"
+    ],
+    "vnr": [
+      "67706"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111944",
     "size_id": "T23",
     "sub": "Galantamin",
     "form": "Depotkapsel",
     "str": "8 mg",
     "size": "100 st",
     "names": [
+      "Galantamin Ebb",
       "Galantamin Sandoz",
       "Galantamine Medical Valley"
     ],
     "vnr": [
+      "141753",
       "523212",
       "577786"
     ],
@@ -17624,12 +17694,14 @@
     "size": "30 st",
     "names": [
       "Carvedilol Abacus Medicine",
+      "Carvedilol Aurobindo",
       "Carvedilol Ebb",
       "Carvedilol HEXAL"
     ],
     "vnr": [
       "371358",
       "566732",
+      "56790",
       "94711"
     ],
     "packaging": [],
@@ -17650,6 +17722,7 @@
       "Carveratio"
     ],
     "vnr": [
+      "136624",
       "196101",
       "447596",
       "512592",
@@ -17678,6 +17751,7 @@
       "142615",
       "154462",
       "390287",
+      "396745",
       "54317"
     ],
     "packaging": [],
@@ -17963,10 +18037,12 @@
       "Clindamycin Actavis",
       "Clindamycin EQL Pharma",
       "Clindamycin Orifarm",
+      "Dalacin",
       "Dalacin®"
     ],
     "vnr": [
       "151852",
+      "393484",
       "44437",
       "516345",
       "589199"
@@ -18685,14 +18761,32 @@
       "Quetiapin Krka",
       "Quetiapin Medical Valley",
       "Quetiapine Accord",
+      "Quetiapine Teva",
       "Seroquel Depot"
     ],
     "vnr": [
+      "128401",
       "134675",
       "416095",
       "424581",
       "533028",
       "554391"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112011",
+    "size_id": "T21",
+    "sub": "Kvetiapin",
+    "form": "Depottablett",
+    "str": "150 mg",
+    "size": "60 st",
+    "names": [
+      "Quetiapine Bijon"
+    ],
+    "vnr": [
+      "462311"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -18714,6 +18808,7 @@
       "Seroquel Depot"
     ],
     "vnr": [
+      "134232",
       "134664",
       "375268",
       "514105",
@@ -18721,6 +18816,22 @@
       "557897",
       "564824",
       "571902"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112037",
+    "size_id": "T18",
+    "sub": "Kvetiapin",
+    "form": "Depottablett",
+    "str": "200 mg",
+    "size": "30 st",
+    "names": [
+      "Quetiapine Bijon"
+    ],
+    "vnr": [
+      "585262"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -18770,6 +18881,7 @@
       "137883",
       "154547",
       "31631",
+      "36720",
       "76657",
       "77237",
       "79050"
@@ -18807,6 +18919,22 @@
     "vnr": [
       "506056",
       "79059"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112038",
+    "size_id": "T18",
+    "sub": "Kvetiapin",
+    "form": "Depottablett",
+    "str": "300 mg",
+    "size": "30 st",
+    "names": [
+      "Quetiapine Bijon"
+    ],
+    "vnr": [
+      "478288"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -18855,6 +18983,7 @@
       "404709",
       "435004",
       "474659",
+      "581303",
       "66497",
       "79077"
     ],
@@ -18873,6 +19002,22 @@
     ],
     "vnr": [
       "502704"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112053",
+    "size_id": "T18",
+    "sub": "Kvetiapin",
+    "form": "Depottablett",
+    "str": "400 mg",
+    "size": "30 st",
+    "names": [
+      "Quetiapine Bijon"
+    ],
+    "vnr": [
+      "127560"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -18941,6 +19086,22 @@
   },
   {
     "id": "112066",
+    "size_id": "T18",
+    "sub": "Kvetiapin",
+    "form": "Depottablett",
+    "str": "50 mg",
+    "size": "30 st",
+    "names": [
+      "Quetiapine Bijon"
+    ],
+    "vnr": [
+      "53696"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112066",
     "size_id": "T21",
     "sub": "Kvetiapin",
     "form": "Depottablett",
@@ -18985,6 +19146,7 @@
       "104688",
       "178991",
       "377832",
+      "416091",
       "457015",
       "519544",
       "74053",
@@ -19005,6 +19167,38 @@
     ],
     "vnr": [
       "404325"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112080",
+    "size_id": "T18",
+    "sub": "Kvetiapin",
+    "form": "Tablett",
+    "str": "100 mg",
+    "size": "30 st",
+    "names": [
+      "Kvetiapin Ebb"
+    ],
+    "vnr": [
+      "412852"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112080",
+    "size_id": "T20",
+    "sub": "Kvetiapin",
+    "form": "Tablett",
+    "str": "100 mg",
+    "size": "50 st",
+    "names": [
+      "Kvetiapin Ebb"
+    ],
+    "vnr": [
+      "54128"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -19848,12 +20042,14 @@
     "size": "7,5 ml",
     "names": [
       "Latanoprost Actavis",
+      "Latanoprost Ebb",
       "Latanoprost STADA",
       "Xalatan®",
       "Xatamont"
     ],
     "vnr": [
       "124743",
+      "412928",
       "523592",
       "530438",
       "591620"
@@ -20583,6 +20779,7 @@
       "Sinemet®"
     ],
     "vnr": [
+      "121604",
       "139365",
       "150036",
       "154671",
@@ -23121,9 +23318,11 @@
     "str": "1000 mg",
     "size": "100 st",
     "names": [
+      "Forminet",
       "Metformin Zentiva"
     ],
     "vnr": [
+      "181879",
       "390128"
     ],
     "packaging": [],
@@ -23167,6 +23366,7 @@
     "str": "500 mg",
     "size": "100 st",
     "names": [
+      "Forminet",
       "Metformin Accord",
       "Metformin Actavis",
       "Metformin Aurobindo",
@@ -23183,6 +23383,7 @@
       "101689",
       "145272",
       "162841",
+      "185107",
       "388764",
       "420203",
       "475690",
@@ -23260,6 +23461,7 @@
     "str": "850 mg",
     "size": "100 st",
     "names": [
+      "Forminet",
       "Metformin Accord",
       "Metformin Aurobindo",
       "Metformin Bluefish",
@@ -23270,6 +23472,7 @@
       "Metformin Zentiva"
     ],
     "vnr": [
+      "108279",
       "162852",
       "385202",
       "409589",
@@ -24234,7 +24437,8 @@
       "174993",
       "384457",
       "482894",
-      "536422"
+      "536422",
+      "539482"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -26136,7 +26340,8 @@
     ],
     "vnr": [
       "28328",
-      "475366"
+      "475366",
+      "536770"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -26240,12 +26445,14 @@
     "names": [
       "Nystafox",
       "Nystatin Abacus Medicine",
+      "Nystatin Ebb",
       "Nystatin Evolan",
       "Nystatin Orifarm",
       "Nystimex"
     ],
     "vnr": [
       "140934",
+      "199871",
       "46380",
       "497436",
       "564368",
@@ -26365,22 +26572,6 @@
       "379669",
       "439892",
       "595252"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111459",
-    "size_id": "EK5473",
-    "sub": "Oktreotid",
-    "form": "Pulver och vätska till injektionsvätska",
-    "str": "20 mg",
-    "size": "1 st",
-    "names": [
-      "Sandostatin LAR"
-    ],
-    "vnr": [
-      "591527"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -29409,38 +29600,6 @@
   },
   {
     "id": "111959",
-    "size_id": "EK5478",
-    "sub": "Paliperidon",
-    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
-    "str": "50 mg",
-    "size": "1 st",
-    "names": [
-      "Paliperidon Zentiva"
-    ],
-    "vnr": [
-      "144578"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111959",
-    "size_id": "EK5479",
-    "sub": "Paliperidon",
-    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
-    "str": "50 mg",
-    "size": "1 st",
-    "names": [
-      "Paliperidone Viatris"
-    ],
-    "vnr": [
-      "560258"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111959",
     "size_id": "F1A",
     "sub": "Paliperidon",
     "form": "Injektionsvätska, depotsuspension i förfylld spruta",
@@ -29448,13 +29607,16 @@
     "size": "1 st",
     "names": [
       "Niapelf",
+      "Paliperidon Zentiva",
       "Paliperidone Exeltis",
       "Paliperidone STADA",
+      "Paliperidone Viatris",
       "Palmeux",
       "Xeplion"
     ],
     "vnr": [
       "120928",
+      "144578",
       "145176",
       "198189",
       "382888",
@@ -29462,6 +29624,7 @@
       "474598",
       "502553",
       "550499",
+      "560258",
       "58609"
     ],
     "packaging": [],
@@ -29469,16 +29632,16 @@
   },
   {
     "id": "111968",
-    "size_id": "EK5477",
+    "size_id": "EK5485",
     "sub": "Paliperidon",
     "form": "Injektionsvätska, depotsuspension i förfylld spruta",
     "str": "75 mg",
     "size": "1 st",
     "names": [
-      "Paliperidone Viatris"
+      "Paliperidon Zentiva"
     ],
     "vnr": [
-      "549365"
+      "189609"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -29495,6 +29658,7 @@
       "Paliperidon Teva",
       "Paliperidone Exeltis",
       "Paliperidone STADA",
+      "Paliperidone Viatris",
       "Palmeux",
       "Xeplion"
     ],
@@ -29509,6 +29673,7 @@
       "468086",
       "471647",
       "473404",
+      "549365",
       "551141"
     ],
     "packaging": [],
@@ -29583,6 +29748,7 @@
     "size": "98 st",
     "names": [
       "Pantoloc",
+      "Pantoprazol Ebb",
       "Pantoprazol Krka",
       "Pantoprazol Orion",
       "Pantoprazol Sandoz",
@@ -29596,6 +29762,7 @@
       "39298",
       "443085",
       "476419",
+      "489713",
       "515104"
     ],
     "packaging": [],
@@ -29693,6 +29860,7 @@
     "names": [
       "Pantoloc",
       "Pantoprazol Actavis",
+      "Pantoprazol Ebb",
       "Pantoprazol Krka",
       "Pantoprazol Orion",
       "Pantoprazol Sandoz",
@@ -29706,6 +29874,7 @@
       "392666",
       "486274",
       "498036",
+      "500861",
       "582977"
     ],
     "packaging": [],
@@ -31551,9 +31720,11 @@
     "names": [
       "Prednisolon Alternova",
       "Prednisolon EQL Pharma",
+      "Prednisolon G.L. Pharma",
       "Prednisolon Pfizer"
     ],
     "vnr": [
+      "509451",
       "541306",
       "569171",
       "79541"
@@ -31571,9 +31742,11 @@
     "names": [
       "Prednisolon Alternova",
       "Prednisolon EQL Pharma",
+      "Prednisolon G.L. Pharma",
       "Prednisolon Pfizer"
     ],
     "vnr": [
+      "104790",
       "128702",
       "141458",
       "171130",
@@ -33468,6 +33641,7 @@
     ],
     "vnr": [
       "111600",
+      "115481",
       "159819",
       "171969",
       "173375",
@@ -33528,7 +33702,8 @@
       "49535",
       "533470",
       "537057",
-      "553103"
+      "553103",
+      "574565"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -33605,7 +33780,9 @@
     ],
     "vnr": [
       "101645",
+      "106426",
       "117939",
+      "142259",
       "176805",
       "374514",
       "376647",
@@ -33636,10 +33813,12 @@
     "vnr": [
       "146535",
       "149722",
+      "151253",
       "382771",
       "387467",
       "397687",
       "478880",
+      "570734",
       "99298"
     ],
     "packaging": [],
@@ -33686,8 +33865,10 @@
       "136807",
       "141139",
       "148901",
+      "155407",
       "160148",
       "167868",
+      "400656",
       "432430",
       "440239",
       "449811",
@@ -33900,6 +34081,7 @@
       "386061",
       "392095",
       "431208",
+      "445968",
       "449459",
       "468550",
       "472335",
@@ -33955,6 +34137,7 @@
       "137789",
       "142348",
       "183121",
+      "27798",
       "31766",
       "32766",
       "377196",
@@ -34460,7 +34643,8 @@
       "159762",
       "17535",
       "28961",
-      "47701"
+      "47701",
+      "539545"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -35359,6 +35543,7 @@
     ],
     "vnr": [
       "108343",
+      "138682",
       "55360"
     ],
     "packaging": [],
@@ -37184,15 +37369,13 @@
       "Sunitinib Avansor",
       "Sunitinib Bluefish",
       "Sunitinib Glenmark",
-      "Sunitinib STADA",
-      "Sunitinib Sandoz"
+      "Sunitinib STADA"
     ],
     "vnr": [
       "145855",
       "165749",
       "36341",
       "381599",
-      "440871",
       "506655",
       "555810",
       "575898",
@@ -39757,6 +39940,7 @@
       "Valaciclovir Orion",
       "Valaciclovir Sandoz",
       "Valaciclovir Viatris",
+      "Valaciklovir Ebb",
       "Valtrex®"
     ],
     "vnr": [
@@ -39764,6 +39948,7 @@
       "175612",
       "32930",
       "35999",
+      "376595",
       "529448",
       "553668",
       "79484"
@@ -39919,6 +40104,7 @@
       "131149",
       "168924",
       "377533",
+      "562323",
       "571526",
       "598742",
       "65081"
@@ -40186,6 +40372,7 @@
     "size": "56 st",
     "names": [
       "CHAMPIX®",
+      "Varenicline Bluefish",
       "Varenicline Glenmark",
       "Varenicline Newbury",
       "Varenicline Orion",
@@ -40193,6 +40380,7 @@
     ],
     "vnr": [
       "428392",
+      "429765",
       "498747",
       "52991",
       "66260",
@@ -40226,6 +40414,7 @@
     "size": "53 st",
     "names": [
       "CHAMPIX®",
+      "Varenicline Bluefish",
       "Varenicline Newbury",
       "Varenicline Orion",
       "Varenicline Teva",
@@ -40237,7 +40426,8 @@
       "174561",
       "39981",
       "477324",
-      "67356"
+      "67356",
+      "81529"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -40251,9 +40441,11 @@
     "size": "165 st",
     "names": [
       "CHAMPIX®",
+      "Varenicline Bluefish",
       "Varenicline Teva"
     ],
     "vnr": [
+      "133639",
       "29285",
       "441056"
     ],
@@ -40287,6 +40479,7 @@
     "size": "56 st",
     "names": [
       "CHAMPIX®",
+      "Varenicline Bluefish",
       "Varenicline Glenmark",
       "Varenicline Orion"
     ],
@@ -40295,6 +40488,7 @@
       "417341",
       "474166",
       "551164",
+      "57357",
       "57996"
     ],
     "packaging": [],
@@ -40309,6 +40503,7 @@
     "size": "112 st",
     "names": [
       "CHAMPIX®",
+      "Varenicline Bluefish",
       "Varenicline Glenmark",
       "Varenicline Newbury",
       "Varenicline Orion",
@@ -40317,6 +40512,7 @@
     ],
     "vnr": [
       "187490",
+      "196173",
       "397754",
       "493663",
       "58014",
@@ -41824,12 +42020,14 @@
       "Imovane®",
       "Zopiclone Grindeks",
       "Zopiclone Jubilant",
+      "Zopiclone Olpha",
       "Zopiclone Orion",
       "Zopiklon Pilum"
     ],
     "vnr": [
       "127966",
       "24213",
+      "401515",
       "405401",
       "411189",
       "76025"
