@@ -42809,7 +42809,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Etoricoxib Sandoz",
-        "Varunummer":169646,
+        "Varunummer":538489,
         "Styrka":"30 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Etoricoxib",
@@ -43455,7 +43455,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Etoricoxib Sandoz",
-        "Varunummer":478209,
+        "Varunummer":575445,
         "Styrka":"90 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Etoricoxib",
@@ -52859,25 +52859,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Furosemid Medical Valley",
-        "Varunummer":378466,
-        "Styrka":"40 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Furosemid",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":15.83,
-        "Försäljningspris":70.49,
-        "Inköpspris per minsta enhet":0.16,
-        "Försäljningspris per minsta enhet":0.7,
-        "NPL ID":20201030000068,
-        "NPL pack ID":20221115100131,
-        "Ursprung":"Generics",
-        "Företag":"Medical Valley Invest AB",
-        "Utbytesgrupps ID":196
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Furosemid Teva",
         "Varunummer":178638,
         "Styrka":"40 mg",
@@ -52896,7 +52877,7 @@
         "Utbytesgrupps ID":196
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Furosemid Hexal",
         "Varunummer":21942,
         "Styrka":"40 mg",
@@ -52912,6 +52893,25 @@
         "NPL pack ID":20050811100127,
         "Ursprung":"Generics",
         "Företag":"Sandoz A\/S",
+        "Utbytesgrupps ID":196
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Furosemid Medical Valley",
+        "Varunummer":378466,
+        "Styrka":"40 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Furosemid",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":15.83,
+        "Försäljningspris":70.49,
+        "Inköpspris per minsta enhet":0.16,
+        "Försäljningspris per minsta enhet":0.7,
+        "NPL ID":20201030000068,
+        "NPL pack ID":20221115100131,
+        "Ursprung":"Generics",
+        "Företag":"Medical Valley Invest AB",
         "Utbytesgrupps ID":196
     },
     {
