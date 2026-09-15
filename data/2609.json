@@ -38495,25 +38495,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Entecavir Medical Valley",
-        "Varunummer":104202,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Entekavir",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":170.81,
-        "Försäljningspris":235.04,
-        "Inköpspris per minsta enhet":5.69,
-        "Försäljningspris per minsta enhet":7.83,
-        "NPL ID":20180425000015,
-        "NPL pack ID":20180822100455,
-        "Ursprung":"Generics",
-        "Företag":"Medical Valley Invest AB",
-        "Utbytesgrupps ID":111607
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Entecavir Accord",
         "Varunummer":375861,
         "Styrka":"0,5 mg",
@@ -38532,7 +38513,7 @@
         "Utbytesgrupps ID":111607
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Entecavir STADA",
         "Varunummer":30089,
         "Styrka":"0,5 mg",
@@ -38548,6 +38529,25 @@
         "NPL pack ID":20160812100276,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111607
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Entecavir Sandoz",
+        "Varunummer":438818,
+        "Styrka":"0,5 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Entekavir",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":1755.44,
+        "Försäljningspris":1860.58,
+        "Inköpspris per minsta enhet":58.51,
+        "Försäljningspris per minsta enhet":62.02,
+        "NPL ID":20160705000010,
+        "NPL pack ID":20160811100062,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":111607
     },
     {
@@ -38567,6 +38567,25 @@
         "NPL pack ID":20100921100071,
         "Ursprung":"ParallelDistribution",
         "Företag":"Orifarm AB",
+        "Utbytesgrupps ID":111607
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Entecavir Medical Valley",
+        "Varunummer":104202,
+        "Styrka":"0,5 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Entekavir",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":170.81,
+        "Försäljningspris":235.04,
+        "Inköpspris per minsta enhet":5.69,
+        "Försäljningspris per minsta enhet":7.83,
+        "NPL ID":20180425000015,
+        "NPL pack ID":20180822100455,
+        "Ursprung":"Generics",
+        "Företag":"Medical Valley Invest AB",
         "Utbytesgrupps ID":111607
     },
     {
@@ -38643,25 +38662,6 @@
         "NPL pack ID":20161117100350,
         "Ursprung":"Generics",
         "Företag":"Viatris AB",
-        "Utbytesgrupps ID":111607
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Entecavir Sandoz",
-        "Varunummer":438818,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Entekavir",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":1755.44,
-        "Försäljningspris":1860.58,
-        "Inköpspris per minsta enhet":58.51,
-        "Försäljningspris per minsta enhet":62.02,
-        "NPL ID":20160705000010,
-        "NPL pack ID":20160811100062,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":111607
     },
     {
@@ -140525,25 +140525,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Ticagrelor Accord",
-        "Varunummer":58540,
-        "Styrka":"90 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Tikagrelor",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":77.0,
-        "Försäljningspris":137.95,
-        "Inköpspris per minsta enhet":0.77,
-        "Försäljningspris per minsta enhet":1.38,
-        "NPL ID":20230223000035,
-        "NPL pack ID":20240827100147,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":111361
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Ticagrelor Sandoz",
         "Varunummer":39052,
         "Styrka":"90 mg",
@@ -140562,7 +140543,7 @@
         "Utbytesgrupps ID":111361
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Ticagrelor Vivanta",
         "Varunummer":515146,
         "Styrka":"90 mg",
@@ -140581,7 +140562,7 @@
         "Utbytesgrupps ID":111361
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Ticagrelor Zentiva",
         "Varunummer":421561,
         "Styrka":"90 mg",
@@ -140597,6 +140578,25 @@
         "NPL pack ID":20210222100110,
         "Ursprung":"Generics",
         "Företag":"Zentiva Denmark ApS",
+        "Utbytesgrupps ID":111361
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Ticagrelor Accord",
+        "Varunummer":58540,
+        "Styrka":"90 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Tikagrelor",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":77.0,
+        "Försäljningspris":137.95,
+        "Inköpspris per minsta enhet":0.77,
+        "Försäljningspris per minsta enhet":1.38,
+        "NPL ID":20230223000035,
+        "NPL pack ID":20240827100147,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":111361
     },
     {
@@ -142749,7 +142749,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Tramadol HEXAL",
-        "Varunummer":14255,
+        "Varunummer":446747,
         "Styrka":"50 mg",
         "Förpackningsstorleksgrupp":"TN250",
         "Substans":"Tramadol",
@@ -150310,25 +150310,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Zolmitriptan Abacus Medicine",
-        "Varunummer":388951,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"T15",
-        "Substans":"Zolmitriptan",
-        "Beredningsform":"Tablett",
-        "Storlek":18.0,
-        "Apotekens inköpspris":500.69,
-        "Försäljningspris":574.46,
-        "Inköpspris per minsta enhet":27.82,
-        "Försäljningspris per minsta enhet":31.91,
-        "NPL ID":20251113000065,
-        "NPL pack ID":20260302100011,
-        "Ursprung":"ParallelImport",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":112388
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Zolmitriptan STADA",
         "Varunummer":154712,
         "Styrka":"5 mg",
@@ -150344,6 +150325,25 @@
         "NPL pack ID":20090714100053,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":112388
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Zolmitriptan Abacus Medicine",
+        "Varunummer":388951,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"T15",
+        "Substans":"Zolmitriptan",
+        "Beredningsform":"Tablett",
+        "Storlek":18.0,
+        "Apotekens inköpspris":500.69,
+        "Försäljningspris":574.46,
+        "Inköpspris per minsta enhet":27.82,
+        "Försäljningspris per minsta enhet":31.91,
+        "NPL ID":20251113000065,
+        "NPL pack ID":20260302100011,
+        "Ursprung":"ParallelImport",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":112388
     },
     {
