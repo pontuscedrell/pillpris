@@ -18202,6 +18202,25 @@
         "Utbytesgrupps ID":111785
     },
     {
+        "Status":"Nej",
+        "Produktnamn":"Bosutinib Zentiva",
+        "Varunummer":158622,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"T24",
+        "Substans":"Bosutinib",
+        "Beredningsform":"Tablett",
+        "Storlek":112.0,
+        "Apotekens inköpspris":11790.24,
+        "Försäljningspris":12146.25,
+        "Inköpspris per minsta enhet":105.27,
+        "Försäljningspris per minsta enhet":108.45,
+        "NPL ID":20260429000126,
+        "NPL pack ID":20260901100207,
+        "Ursprung":"ParallelImport",
+        "Företag":"Orifarm AB",
+        "Utbytesgrupps ID":111785
+    },
+    {
         "Status":"PV",
         "Produktnamn":"Bosutinib STADA",
         "Varunummer":409831,
