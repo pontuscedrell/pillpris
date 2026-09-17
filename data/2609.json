@@ -68249,25 +68249,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Quetiapin Krka",
-        "Varunummer":137883,
-        "Styrka":"200 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Kvetiapin",
-        "Beredningsform":"Depottablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":546.0,
-        "Försäljningspris":620.9,
-        "Inköpspris per minsta enhet":5.46,
-        "Försäljningspris per minsta enhet":6.21,
-        "NPL ID":20140108000084,
-        "NPL pack ID":20140226100185,
-        "Ursprung":"Generics",
-        "Företag":"KRKA Sverige AB",
-        "Utbytesgrupps ID":112037
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Biquetan",
         "Varunummer":154547,
         "Styrka":"200 mg",
@@ -68286,7 +68267,7 @@
         "Utbytesgrupps ID":112037
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Quetiapin Hexal",
         "Varunummer":110332,
         "Styrka":"200 mg",
@@ -68305,7 +68286,7 @@
         "Utbytesgrupps ID":112037
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Seroquel Depot",
         "Varunummer":79050,
         "Styrka":"200 mg",
@@ -68321,6 +68302,25 @@
         "NPL pack ID":20071023100736,
         "Ursprung":"Original",
         "Företag":"Cheplapharm Arzneimittel GmbH",
+        "Utbytesgrupps ID":112037
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Quetiapin Krka",
+        "Varunummer":137883,
+        "Styrka":"200 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Kvetiapin",
+        "Beredningsform":"Depottablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":546.0,
+        "Försäljningspris":620.9,
+        "Inköpspris per minsta enhet":5.46,
+        "Försäljningspris per minsta enhet":6.21,
+        "NPL ID":20140108000084,
+        "NPL pack ID":20140226100185,
+        "Ursprung":"Generics",
+        "Företag":"KRKA Sverige AB",
         "Utbytesgrupps ID":112037
     },
     {
@@ -85899,7 +85899,7 @@
         "Utbytesgrupps ID":112075
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Flagyl®",
         "Varunummer":514711,
         "Styrka":"400 mg",
@@ -124983,25 +124983,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Maxalt",
-        "Varunummer":81295,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T15",
-        "Substans":"Rizatriptan",
-        "Beredningsform":"Tablett",
-        "Storlek":18.0,
-        "Apotekens inköpspris":189.0,
-        "Försäljningspris":253.87,
-        "Inköpspris per minsta enhet":10.5,
-        "Försäljningspris per minsta enhet":14.1,
-        "NPL ID":20250925000072,
-        "NPL pack ID":20260120100040,
-        "Ursprung":"ParallelImport",
-        "Företag":"Medartuum AB",
-        "Utbytesgrupps ID":112426
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Rizatriptan Glenmark",
         "Varunummer":529682,
         "Styrka":"10 mg",
@@ -125020,7 +125001,7 @@
         "Utbytesgrupps ID":112426
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Rizatriptan STADA",
         "Varunummer":554025,
         "Styrka":"10 mg",
@@ -125036,6 +125017,44 @@
         "NPL pack ID":20100409100210,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":112426
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Rizatriptan Abacus Medicine",
+        "Varunummer":166650,
+        "Styrka":"10 mg",
+        "Förpackningsstorleksgrupp":"T15",
+        "Substans":"Rizatriptan",
+        "Beredningsform":"Tablett",
+        "Storlek":18.0,
+        "Apotekens inköpspris":806.0,
+        "Försäljningspris":887.4,
+        "Inköpspris per minsta enhet":44.78,
+        "Försäljningspris per minsta enhet":49.3,
+        "NPL ID":20201204000061,
+        "NPL pack ID":20210401100054,
+        "Ursprung":"ParallelImport",
+        "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":112426
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Maxalt",
+        "Varunummer":81295,
+        "Styrka":"10 mg",
+        "Förpackningsstorleksgrupp":"T15",
+        "Substans":"Rizatriptan",
+        "Beredningsform":"Tablett",
+        "Storlek":18.0,
+        "Apotekens inköpspris":189.0,
+        "Försäljningspris":253.87,
+        "Inköpspris per minsta enhet":10.5,
+        "Försäljningspris per minsta enhet":14.1,
+        "NPL ID":20250925000072,
+        "NPL pack ID":20260120100040,
+        "Ursprung":"ParallelImport",
+        "Företag":"Medartuum AB",
         "Utbytesgrupps ID":112426
     },
     {
@@ -125055,25 +125074,6 @@
         "NPL pack ID":19981001100020,
         "Ursprung":"Original",
         "Företag":"Organon Sweden AB",
-        "Utbytesgrupps ID":112426
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Rizatriptan Abacus Medicine",
-        "Varunummer":166650,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T15",
-        "Substans":"Rizatriptan",
-        "Beredningsform":"Tablett",
-        "Storlek":18.0,
-        "Apotekens inköpspris":806.0,
-        "Försäljningspris":887.4,
-        "Inköpspris per minsta enhet":44.78,
-        "Försäljningspris per minsta enhet":49.3,
-        "NPL ID":20201204000061,
-        "NPL pack ID":20210401100054,
-        "Ursprung":"ParallelImport",
-        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":112426
     },
     {
@@ -136516,25 +136516,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Tapimio Depot",
-        "Varunummer":436433,
-        "Styrka":"50 mg",
-        "Förpackningsstorleksgrupp":"TN30",
-        "Substans":"Tapentadol",
-        "Beredningsform":"Depottablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":46.0,
-        "Försäljningspris":103.83,
-        "Inköpspris per minsta enhet":1.53,
-        "Försäljningspris per minsta enhet":3.46,
-        "NPL ID":20220131000173,
-        "NPL pack ID":20220920101210,
-        "Ursprung":"Generics",
-        "Företag":"Neuraxpharm Sweden AB",
-        "Utbytesgrupps ID":114209
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Tapentadol Depot STADA",
         "Varunummer":167368,
         "Styrka":"50 mg",
@@ -136553,7 +136534,7 @@
         "Utbytesgrupps ID":114209
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Tapentadol Depot Krka",
         "Varunummer":386936,
         "Styrka":"50 mg",
@@ -136569,6 +136550,25 @@
         "NPL pack ID":20200813100063,
         "Ursprung":"Generics",
         "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":114209
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Tapimio Depot",
+        "Varunummer":436433,
+        "Styrka":"50 mg",
+        "Förpackningsstorleksgrupp":"TN30",
+        "Substans":"Tapentadol",
+        "Beredningsform":"Depottablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":46.0,
+        "Försäljningspris":103.83,
+        "Inköpspris per minsta enhet":1.53,
+        "Försäljningspris per minsta enhet":3.46,
+        "NPL ID":20220131000173,
+        "NPL pack ID":20220920101210,
+        "Ursprung":"Generics",
+        "Företag":"Neuraxpharm Sweden AB",
         "Utbytesgrupps ID":114209
     },
     {
