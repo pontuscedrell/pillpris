@@ -14431,6 +14431,40 @@
     "packagingMap": {}
   },
   {
+    "id": "118263",
+    "size_id": "T16",
+    "sub": "Furosemid",
+    "form": "Tablett",
+    "str": "500 mg",
+    "size": "20 st",
+    "names": [
+      "Furix®"
+    ],
+    "vnr": [
+      "390880"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "118263",
+    "size_id": "T23",
+    "sub": "Furosemid",
+    "form": "Tablett",
+    "str": "500 mg",
+    "size": "100 st",
+    "names": [
+      "Furix®",
+      "Furosemid Teva B.V."
+    ],
+    "vnr": [
+      "390898",
+      "427151"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
     "id": "111942",
     "size_id": "T18",
     "sub": "Galantamin",
@@ -33403,7 +33437,7 @@
       "Risperidon Viatris"
     ],
     "vnr": [
-      "466697",
+      "418158",
       "542609"
     ],
     "packaging": [],
@@ -33490,8 +33524,8 @@
       "Risperidon Viatris"
     ],
     "vnr": [
-      "116089",
-      "45875"
+      "45875",
+      "493109"
     ],
     "packaging": [],
     "packagingMap": {}
