@@ -5986,25 +5986,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Anagrelide Sandoz",
-        "Varunummer":93472,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Anagrelid",
-        "Beredningsform":"Kapsel",
-        "Storlek":100.0,
-        "Apotekens inköpspris":242.74,
-        "Försäljningspris":309.49,
-        "Inköpspris per minsta enhet":2.43,
-        "Försäljningspris per minsta enhet":3.09,
-        "NPL ID":20161123000026,
-        "NPL pack ID":20161216100404,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":111831
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Anagrelid Avansor",
         "Varunummer":46829,
         "Styrka":"0,5 mg",
@@ -6023,7 +6004,7 @@
         "Utbytesgrupps ID":111831
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Anagrelide STADA",
         "Varunummer":445029,
         "Styrka":"0,5 mg",
@@ -6039,6 +6020,25 @@
         "NPL pack ID":20170406100025,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111831
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Anagrelide Bluefish",
+        "Varunummer":550423,
+        "Styrka":"0,5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Anagrelid",
+        "Beredningsform":"Kapsel",
+        "Storlek":100.0,
+        "Apotekens inköpspris":1250.0,
+        "Försäljningspris":1342.5,
+        "Inköpspris per minsta enhet":12.5,
+        "Försäljningspris per minsta enhet":13.43,
+        "NPL ID":20170418000054,
+        "NPL pack ID":20170911100107,
+        "Ursprung":"Generics",
+        "Företag":"Bluefish Pharmaceuticals AB",
         "Utbytesgrupps ID":111831
     },
     {
@@ -6062,6 +6062,25 @@
     },
     {
         "Status":"Nej",
+        "Produktnamn":"Anagrelide Sandoz",
+        "Varunummer":93472,
+        "Styrka":"0,5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Anagrelid",
+        "Beredningsform":"Kapsel",
+        "Storlek":100.0,
+        "Apotekens inköpspris":242.74,
+        "Försäljningspris":309.49,
+        "Inköpspris per minsta enhet":2.43,
+        "Försäljningspris per minsta enhet":3.09,
+        "NPL ID":20161123000026,
+        "NPL pack ID":20161216100404,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
+        "Utbytesgrupps ID":111831
+    },
+    {
+        "Status":"Nej",
         "Produktnamn":"Anagrelide Viatris",
         "Varunummer":45191,
         "Styrka":"0,5 mg",
@@ -6077,25 +6096,6 @@
         "NPL pack ID":20170315100499,
         "Ursprung":"Generics",
         "Företag":"Viatris AB",
-        "Utbytesgrupps ID":111831
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Anagrelide Bluefish",
-        "Varunummer":550423,
-        "Styrka":"0,5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Anagrelid",
-        "Beredningsform":"Kapsel",
-        "Storlek":100.0,
-        "Apotekens inköpspris":1250.0,
-        "Försäljningspris":1342.5,
-        "Inköpspris per minsta enhet":12.5,
-        "Försäljningspris per minsta enhet":13.43,
-        "NPL ID":20170418000054,
-        "NPL pack ID":20170911100107,
-        "Ursprung":"Generics",
-        "Företag":"Bluefish Pharmaceuticals AB",
         "Utbytesgrupps ID":111831
     },
     {
@@ -64316,25 +64316,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Carveratio",
-        "Varunummer":464226,
-        "Styrka":"12,5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Karvedilol",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":92.02,
-        "Försäljningspris":153.49,
-        "Inköpspris per minsta enhet":0.92,
-        "Försäljningspris per minsta enhet":1.53,
-        "NPL ID":20070920000156,
-        "NPL pack ID":20150310100656,
-        "Ursprung":"Generics",
-        "Företag":"Teva Sweden AB",
-        "Utbytesgrupps ID":712
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Carvedilol HEXAL",
         "Varunummer":373723,
         "Styrka":"12,5 mg",
@@ -64353,7 +64334,7 @@
         "Utbytesgrupps ID":712
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Carvedilol Abacus Medicine",
         "Varunummer":532973,
         "Styrka":"12,5 mg",
@@ -64372,7 +64353,7 @@
         "Utbytesgrupps ID":712
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Carvedilol Abacus Medicine",
         "Varunummer":532973,
         "Styrka":"12,5 mg",
@@ -64391,7 +64372,7 @@
         "Utbytesgrupps ID":712
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Carvedilol Abacus Medicine",
         "Varunummer":532973,
         "Styrka":"12,5 mg",
@@ -64407,6 +64388,25 @@
         "NPL pack ID":20260317100105,
         "Ursprung":"ParallelImport",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":712
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Carveratio",
+        "Varunummer":464226,
+        "Styrka":"12,5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Karvedilol",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":92.02,
+        "Försäljningspris":153.49,
+        "Inköpspris per minsta enhet":0.92,
+        "Försäljningspris per minsta enhet":1.53,
+        "NPL ID":20070920000156,
+        "NPL pack ID":20150310100656,
+        "Ursprung":"Generics",
+        "Företag":"Teva Sweden AB",
         "Utbytesgrupps ID":712
     },
     {
@@ -68306,25 +68306,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Biquetan",
-        "Varunummer":154547,
-        "Styrka":"200 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Kvetiapin",
-        "Beredningsform":"Depottablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":622.0,
-        "Försäljningspris":698.8,
-        "Inköpspris per minsta enhet":6.22,
-        "Försäljningspris per minsta enhet":6.99,
-        "NPL ID":20160628000081,
-        "NPL pack ID":20160811100437,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":112037
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Quetiapin Hexal",
         "Varunummer":110332,
         "Styrka":"200 mg",
@@ -68343,7 +68324,7 @@
         "Utbytesgrupps ID":112037
     },
     {
-        "Status":"R1",
+        "Status":"PV",
         "Produktnamn":"Seroquel Depot",
         "Varunummer":79050,
         "Styrka":"200 mg",
@@ -68378,6 +68359,25 @@
         "NPL pack ID":20140226100185,
         "Ursprung":"Generics",
         "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":112037
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Biquetan",
+        "Varunummer":154547,
+        "Styrka":"200 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Kvetiapin",
+        "Beredningsform":"Depottablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":622.0,
+        "Försäljningspris":698.8,
+        "Inköpspris per minsta enhet":6.22,
+        "Försäljningspris per minsta enhet":6.99,
+        "NPL ID":20160628000081,
+        "NPL pack ID":20160811100437,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":112037
     },
     {
@@ -97585,25 +97585,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Zalasta®",
-        "Varunummer":61252,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Olanzapin",
-        "Beredningsform":"Tablett",
-        "Storlek":98.0,
-        "Apotekens inköpspris":250.0,
-        "Försäljningspris":317.0,
-        "Inköpspris per minsta enhet":2.55,
-        "Försäljningspris per minsta enhet":3.23,
-        "NPL ID":20061209000028,
-        "NPL pack ID":20260430100020,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Medartuum AB",
-        "Utbytesgrupps ID":111992
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Olanzapine Teva",
         "Varunummer":371318,
         "Styrka":"5 mg",
@@ -97622,7 +97603,7 @@
         "Utbytesgrupps ID":111992
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Olanzapine Glenmark",
         "Varunummer":436085,
         "Styrka":"5 mg",
@@ -97641,7 +97622,7 @@
         "Utbytesgrupps ID":111992
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Olanzapin Sandoz",
         "Varunummer":568892,
         "Styrka":"5 mg",
@@ -97657,6 +97638,25 @@
         "NPL pack ID":20080111100725,
         "Ursprung":"Generics",
         "Företag":"Sandoz A\/S",
+        "Utbytesgrupps ID":111992
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Zalasta®",
+        "Varunummer":61252,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Olanzapin",
+        "Beredningsform":"Tablett",
+        "Storlek":98.0,
+        "Apotekens inköpspris":250.0,
+        "Försäljningspris":317.0,
+        "Inköpspris per minsta enhet":2.55,
+        "Försäljningspris per minsta enhet":3.23,
+        "NPL ID":20061209000028,
+        "NPL pack ID":20260430100020,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Medartuum AB",
         "Utbytesgrupps ID":111992
     },
     {
@@ -110221,25 +110221,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Pioglitazone Accord",
-        "Varunummer":172376,
-        "Styrka":"45 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Pioglitazon",
-        "Beredningsform":"Tablett",
-        "Storlek":98.0,
-        "Apotekens inköpspris":495.0,
-        "Försäljningspris":568.63,
-        "Inköpspris per minsta enhet":5.05,
-        "Försäljningspris per minsta enhet":5.8,
-        "NPL ID":20101223000151,
-        "NPL pack ID":20110224100760,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":111116
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Pioglitazone Accord",
         "Varunummer":500088,
         "Styrka":"45 mg",
         "Förpackningsstorleksgrupp":"T23",
@@ -110257,7 +110238,7 @@
         "Utbytesgrupps ID":111116
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Pioglitazone Accord",
         "Varunummer":526268,
         "Styrka":"45 mg",
@@ -110276,7 +110257,7 @@
         "Utbytesgrupps ID":111116
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Pioglitazone Actavis",
         "Varunummer":431047,
         "Styrka":"45 mg",
@@ -110292,6 +110273,25 @@
         "NPL pack ID":20110206100795,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":111116
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Pioglitazone Accord",
+        "Varunummer":172376,
+        "Styrka":"45 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Pioglitazon",
+        "Beredningsform":"Tablett",
+        "Storlek":98.0,
+        "Apotekens inköpspris":495.0,
+        "Försäljningspris":568.63,
+        "Inköpspris per minsta enhet":5.05,
+        "Försäljningspris per minsta enhet":5.8,
+        "NPL ID":20101223000151,
+        "NPL pack ID":20110224100760,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":111116
     },
     {
