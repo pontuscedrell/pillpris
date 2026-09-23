@@ -68324,25 +68324,6 @@
         "Utbytesgrupps ID":112037
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Seroquel Depot",
-        "Varunummer":79050,
-        "Styrka":"200 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Kvetiapin",
-        "Beredningsform":"Depottablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":714.49,
-        "Försäljningspris":793.6,
-        "Inköpspris per minsta enhet":7.14,
-        "Försäljningspris per minsta enhet":7.94,
-        "NPL ID":20070914000056,
-        "NPL pack ID":20071023100736,
-        "Ursprung":"Original",
-        "Företag":"Cheplapharm Arzneimittel GmbH",
-        "Utbytesgrupps ID":112037
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Quetiapin Krka",
         "Varunummer":137883,
@@ -68435,6 +68416,25 @@
         "NPL pack ID":20100621100104,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":112037
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Seroquel Depot",
+        "Varunummer":79050,
+        "Styrka":"200 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Kvetiapin",
+        "Beredningsform":"Depottablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":714.49,
+        "Försäljningspris":793.6,
+        "Inköpspris per minsta enhet":7.14,
+        "Försäljningspris per minsta enhet":7.94,
+        "NPL ID":20070914000056,
+        "NPL pack ID":20071023100736,
+        "Ursprung":"Original",
+        "Företag":"Cheplapharm Arzneimittel GmbH",
         "Utbytesgrupps ID":112037
     },
     {
