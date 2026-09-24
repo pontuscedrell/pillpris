@@ -37014,7 +37014,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Oremten",
-        "Varunummer":391634,
+        "Varunummer":434002,
         "Styrka":"200 mg\/245 mg",
         "Förpackningsstorleksgrupp":"T18",
         "Substans":"Emtricitabin + tenofovirdisoproxil",
@@ -37242,7 +37242,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Oremten",
-        "Varunummer":373872,
+        "Varunummer":111652,
         "Styrka":"200 mg\/245 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Emtricitabin + tenofovirdisoproxil",
@@ -101555,25 +101555,6 @@
         "Utbytesgrupps ID":111179
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Ondansetron Abacus Medicine",
-        "Varunummer":115042,
-        "Styrka":"8 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Ondansetron",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":1320.0,
-        "Försäljningspris":1414.25,
-        "Inköpspris per minsta enhet":13.2,
-        "Försäljningspris per minsta enhet":14.14,
-        "NPL ID":20210322000051,
-        "NPL pack ID":20210908100212,
-        "Ursprung":"ParallelImport",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":111179
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Ondansetron Aristo",
         "Varunummer":390233,
@@ -101609,6 +101590,25 @@
         "NPL pack ID":20190626100353,
         "Ursprung":"ParallelImport",
         "Företag":"Ebb Medical AB",
+        "Utbytesgrupps ID":111179
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Ondansetron Abacus Medicine",
+        "Varunummer":115042,
+        "Styrka":"8 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Ondansetron",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":1320.0,
+        "Försäljningspris":1414.25,
+        "Inköpspris per minsta enhet":13.2,
+        "Försäljningspris per minsta enhet":14.14,
+        "NPL ID":20210322000051,
+        "NPL pack ID":20210908100212,
+        "Ursprung":"ParallelImport",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":111179
     },
     {
@@ -139842,7 +139842,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Tendiore",
-        "Varunummer":47143,
+        "Varunummer":596298,
         "Styrka":"245 mg",
         "Förpackningsstorleksgrupp":"T18",
         "Substans":"Tenofovirdisoproxil",
@@ -141286,7 +141286,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Tibolon Aristo",
-        "Varunummer":137039,
+        "Varunummer":472478,
         "Styrka":"2,5 mg",
         "Förpackningsstorleksgrupp":"T22",
         "Substans":"Tibolon",
