@@ -17424,25 +17424,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Bisoprolol STADA®",
-        "Varunummer":17505,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Bisoprolol",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":11.8,
-        "Försäljningspris":66.04,
-        "Inköpspris per minsta enhet":0.12,
-        "Försäljningspris per minsta enhet":0.66,
-        "NPL ID":20040326000012,
-        "NPL pack ID":20030925100091,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":528
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Bisoprolol Teva",
         "Varunummer":191557,
         "Styrka":"5 mg",
@@ -17461,7 +17442,7 @@
         "Utbytesgrupps ID":528
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Bisoprolol Zentiva",
         "Varunummer":500516,
         "Styrka":"5 mg",
@@ -17480,7 +17461,7 @@
         "Utbytesgrupps ID":528
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Bisoprolol Krka",
         "Varunummer":390947,
         "Styrka":"5 mg",
@@ -17496,6 +17477,25 @@
         "NPL pack ID":20130131100509,
         "Ursprung":"Generics",
         "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":528
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Bisoprolol STADA®",
+        "Varunummer":17505,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Bisoprolol",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":11.8,
+        "Försäljningspris":66.04,
+        "Inköpspris per minsta enhet":0.12,
+        "Försäljningspris per minsta enhet":0.66,
+        "NPL ID":20040326000012,
+        "NPL pack ID":20030925100091,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":528
     },
     {
@@ -92208,25 +92208,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Naproxen Ebb",
-        "Varunummer":75412,
-        "Styrka":"500 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Naproxen",
-        "Beredningsform":"Enterotablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":149.02,
-        "Försäljningspris":212.49,
-        "Inköpspris per minsta enhet":1.49,
-        "Försäljningspris per minsta enhet":2.12,
-        "NPL ID":20180827000026,
-        "NPL pack ID":20190116100023,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":112434
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Naprocur",
         "Varunummer":39916,
         "Styrka":"500 mg",
@@ -92261,6 +92242,25 @@
         "NPL pack ID":20180328100010,
         "Ursprung":"ParallelImport",
         "Företag":"2care4 ApS",
+        "Utbytesgrupps ID":112434
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Naproxen Ebb",
+        "Varunummer":75412,
+        "Styrka":"500 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Naproxen",
+        "Beredningsform":"Enterotablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":149.02,
+        "Försäljningspris":212.49,
+        "Inköpspris per minsta enhet":1.49,
+        "Försäljningspris per minsta enhet":2.12,
+        "NPL ID":20180827000026,
+        "NPL pack ID":20190116100023,
+        "Ursprung":"ParallelImport",
+        "Företag":"Ebb Medical AB",
         "Utbytesgrupps ID":112434
     },
     {
@@ -135300,25 +135300,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Talmanco",
-        "Varunummer":587512,
-        "Styrka":"20 mg (Grupp B)",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Tadalafil",
-        "Beredningsform":"Tablett",
-        "Storlek":56.0,
-        "Apotekens inköpspris":323.99,
-        "Försäljningspris":393.34,
-        "Inköpspris per minsta enhet":5.79,
-        "Försäljningspris per minsta enhet":7.02,
-        "NPL ID":20151223000170,
-        "NPL pack ID":20160420100774,
-        "Ursprung":"Generics",
-        "Företag":"Viatris AB",
-        "Utbytesgrupps ID":113192
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Tadalafil Bluefish",
         "Varunummer":181428,
         "Styrka":"20 mg (Grupp B)",
@@ -135337,7 +135318,7 @@
         "Utbytesgrupps ID":113192
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Yanatawa",
         "Varunummer":101516,
         "Styrka":"20 mg (Grupp B)",
@@ -135356,7 +135337,7 @@
         "Utbytesgrupps ID":113192
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Tadalafil Accord",
         "Varunummer":461785,
         "Styrka":"20 mg (Grupp B)",
@@ -135372,6 +135353,25 @@
         "NPL pack ID":20150721100085,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":113192
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Talmanco",
+        "Varunummer":587512,
+        "Styrka":"20 mg (Grupp B)",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Tadalafil",
+        "Beredningsform":"Tablett",
+        "Storlek":56.0,
+        "Apotekens inköpspris":323.99,
+        "Försäljningspris":393.34,
+        "Inköpspris per minsta enhet":5.79,
+        "Försäljningspris per minsta enhet":7.02,
+        "NPL ID":20151223000170,
+        "NPL pack ID":20160420100774,
+        "Ursprung":"Generics",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":113192
     },
     {
@@ -149703,7 +149703,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Aclasta®",
-        "Varunummer":39961,
+        "Varunummer":133414,
         "Styrka":"5 mg\/100 ml",
         "Förpackningsstorleksgrupp":"F1A",
         "Substans":"Zoledronsyra",
