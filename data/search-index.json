@@ -612,8 +612,8 @@
       "494347",
       "509012",
       "523205",
-      "549500",
       "564356",
+      "584494",
       "80921"
     ],
     "packaging": [],
@@ -37207,6 +37207,58 @@
       "172675",
       "189508",
       "373084"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112655",
+    "size_id": "T15",
+    "sub": "Sumatriptan",
+    "form": "Nässpray",
+    "str": "20 mg",
+    "size": "18 st",
+    "names": [
+      "Imigran"
+    ],
+    "vnr": [
+      "151034"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112655",
+    "size_id": "T2",
+    "sub": "Sumatriptan",
+    "form": "Nässpray",
+    "str": "20 mg",
+    "size": "2 st",
+    "names": [
+      "Imigran®"
+    ],
+    "vnr": [
+      "198747"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112655",
+    "size_id": "T6",
+    "sub": "Sumatriptan",
+    "form": "Nässpray",
+    "str": "20 mg",
+    "size": "6 st",
+    "names": [
+      "Damigra",
+      "Imigran",
+      "Imigran®"
+    ],
+    "vnr": [
+      "29183",
+      "411918",
+      "472968"
     ],
     "packaging": [],
     "packagingMap": {}
