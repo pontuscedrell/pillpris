@@ -34125,25 +34125,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Doxycyklin EQL Pharma",
-        "Varunummer":60930,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Doxycyklin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":341.7,
-        "Försäljningspris":411.49,
-        "Inköpspris per minsta enhet":3.42,
-        "Försäljningspris per minsta enhet":4.11,
-        "NPL ID":20111018000013,
-        "NPL pack ID":20120706100164,
-        "Ursprung":"Generics",
-        "Företag":"EQL Pharma AB",
-        "Utbytesgrupps ID":111591
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Doxyferm®",
         "Varunummer":154054,
         "Styrka":"100 mg",
@@ -34159,6 +34140,25 @@
         "NPL pack ID":19930319100017,
         "Ursprung":"Generics",
         "Företag":"Nordic Drugs AB",
+        "Utbytesgrupps ID":111591
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Doxycyklin EQL Pharma",
+        "Varunummer":60930,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Doxycyklin",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":341.7,
+        "Försäljningspris":411.49,
+        "Inköpspris per minsta enhet":3.42,
+        "Försäljningspris per minsta enhet":4.11,
+        "NPL ID":20111018000013,
+        "NPL pack ID":20120706100164,
+        "Ursprung":"Generics",
+        "Företag":"EQL Pharma AB",
         "Utbytesgrupps ID":111591
     },
     {
@@ -101366,25 +101366,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Ondansetron EQL Pharma",
-        "Varunummer":583974,
-        "Styrka":"8 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Ondansetron",
-        "Beredningsform":"Tablett",
-        "Storlek":50.0,
-        "Apotekens inköpspris":270.52,
-        "Försäljningspris":338.24,
-        "Inköpspris per minsta enhet":5.41,
-        "Försäljningspris per minsta enhet":6.76,
-        "NPL ID":20200701000185,
-        "NPL pack ID":20230823100065,
-        "Ursprung":"Generics",
-        "Företag":"EQL Pharma AB",
-        "Utbytesgrupps ID":111179
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Ondansetron Teva",
         "Varunummer":27204,
         "Styrka":"8 mg",
@@ -101403,7 +101384,7 @@
         "Utbytesgrupps ID":111179
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Ondansetron STADA",
         "Varunummer":395781,
         "Styrka":"8 mg",
@@ -101422,7 +101403,7 @@
         "Utbytesgrupps ID":111179
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Ondansetron Bluefish",
         "Varunummer":39395,
         "Styrka":"8 mg",
@@ -101438,6 +101419,25 @@
         "NPL pack ID":20060810102022,
         "Ursprung":"Generics",
         "Företag":"Bluefish Pharmaceuticals AB",
+        "Utbytesgrupps ID":111179
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Ondansetron EQL Pharma",
+        "Varunummer":583974,
+        "Styrka":"8 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Ondansetron",
+        "Beredningsform":"Tablett",
+        "Storlek":50.0,
+        "Apotekens inköpspris":270.52,
+        "Försäljningspris":338.24,
+        "Inköpspris per minsta enhet":5.41,
+        "Försäljningspris per minsta enhet":6.76,
+        "NPL ID":20200701000185,
+        "NPL pack ID":20230823100065,
+        "Ursprung":"Generics",
+        "Företag":"EQL Pharma AB",
         "Utbytesgrupps ID":111179
     },
     {
@@ -143260,25 +143260,6 @@
         "Utbytesgrupps ID":112815
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Tolterodine Sandoz",
-        "Varunummer":91739,
-        "Styrka":"4 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Tolterodin",
-        "Beredningsform":"Depotkapsel",
-        "Storlek":98.0,
-        "Apotekens inköpspris":437.56,
-        "Försäljningspris":509.75,
-        "Inköpspris per minsta enhet":4.46,
-        "Försäljningspris per minsta enhet":5.2,
-        "NPL ID":20101117000106,
-        "NPL pack ID":20110524100118,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":112815
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Tolterodin STADA",
         "Varunummer":30797,
@@ -143371,6 +143352,25 @@
         "NPL pack ID":20110927100630,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":112815
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Tolterodine Sandoz",
+        "Varunummer":91739,
+        "Styrka":"4 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Tolterodin",
+        "Beredningsform":"Depotkapsel",
+        "Storlek":98.0,
+        "Apotekens inköpspris":437.56,
+        "Försäljningspris":509.75,
+        "Inköpspris per minsta enhet":4.46,
+        "Försäljningspris per minsta enhet":5.2,
+        "NPL ID":20101117000106,
+        "NPL pack ID":20110524100118,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":112815
     },
     {
