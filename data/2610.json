@@ -34619,25 +34619,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Duloxetine Accordpharma",
-        "Varunummer":522849,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Duloxetin",
-        "Beredningsform":"Enterokapsel",
-        "Storlek":28.0,
-        "Apotekens inköpspris":149.0,
-        "Försäljningspris":212.47,
-        "Inköpspris per minsta enhet":5.32,
-        "Försäljningspris per minsta enhet":7.59,
-        "NPL ID":20190102000016,
-        "NPL pack ID":20190215100030,
-        "Ursprung":"Generics",
-        "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":112002
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Loxentia",
         "Varunummer":199099,
         "Styrka":"20 mg",
@@ -34691,6 +34672,25 @@
         "NPL pack ID":20140923100136,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":112002
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Duloxetine Accordpharma",
+        "Varunummer":522849,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Duloxetin",
+        "Beredningsform":"Enterokapsel",
+        "Storlek":28.0,
+        "Apotekens inköpspris":149.0,
+        "Försäljningspris":212.47,
+        "Inköpspris per minsta enhet":5.32,
+        "Försäljningspris per minsta enhet":7.59,
+        "NPL ID":20190102000016,
+        "NPL pack ID":20190215100030,
+        "Ursprung":"Generics",
+        "Företag":"Accord Healthcare AB",
         "Utbytesgrupps ID":112002
     },
     {
@@ -41194,7 +41194,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Escitalopram Sandoz",
-        "Varunummer":497980,
+        "Varunummer":190206,
         "Styrka":"5 mg",
         "Förpackningsstorleksgrupp":"T28",
         "Substans":"Escitalopram",
@@ -64811,7 +64811,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Carvedilol HEXAL",
-        "Varunummer":566732,
+        "Varunummer":31547,
         "Styrka":"25 mg",
         "Förpackningsstorleksgrupp":"T18",
         "Substans":"Karvedilol",
@@ -69979,7 +69979,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Quetiapin Sandoz",
-        "Varunummer":493620,
+        "Varunummer":106879,
         "Styrka":"100 mg",
         "Förpackningsstorleksgrupp":"T24",
         "Substans":"Kvetiapin",
@@ -87383,7 +87383,7 @@
     {
         "Status":"PV",
         "Produktnamn":"Methylphenidate Sandoz",
-        "Varunummer":544439,
+        "Varunummer":507765,
         "Styrka":"54 mg",
         "Förpackningsstorleksgrupp":"TN90",
         "Substans":"Metylfenidat",
@@ -108473,7 +108473,7 @@
     {
         "Status":"R1",
         "Produktnamn":"Pantoprazol Sandoz",
-        "Varunummer":383068,
+        "Varunummer":556093,
         "Styrka":"40 mg",
         "Förpackningsstorleksgrupp":"T28",
         "Substans":"Pantoprazol",
