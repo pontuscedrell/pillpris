@@ -25154,7 +25154,7 @@
     "size_id": "G100",
     "sub": "Mometasonfuroat",
     "form": "Kräm",
-    "str": "1 mg/g",
+    "str": "1 mg/g (Grupp A)",
     "size": "100 g",
     "names": [
       "Elocon®",
@@ -25174,7 +25174,7 @@
     "size_id": "G30",
     "sub": "Mometasonfuroat",
     "form": "Kräm",
-    "str": "1 mg/g",
+    "str": "1 mg/g (Grupp A)",
     "size": "30 g",
     "names": [
       "Elocon®",
@@ -39933,14 +39933,12 @@
     "str": "250 mg",
     "size": "100 st",
     "names": [
-      "Ursodeoxycholic acid Orion",
       "Ursofalk®",
       "Ursogrix"
     ],
     "vnr": [
       "111065",
-      "505693",
-      "83586"
+      "505693"
     ],
     "packaging": [],
     "packagingMap": {}
