@@ -72124,25 +72124,6 @@
         "Utbytesgrupps ID":111071
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Lansoprazol Viatris",
-        "Varunummer":419560,
-        "Styrka":"15 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Lansoprazol",
-        "Beredningsform":"Munsönderfallande tablett",
-        "Storlek":56.0,
-        "Apotekens inköpspris":113.95,
-        "Försäljningspris":176.19,
-        "Inköpspris per minsta enhet":2.03,
-        "Försäljningspris per minsta enhet":3.15,
-        "NPL ID":20110531000074,
-        "NPL pack ID":20111018100102,
-        "Ursprung":"Generics",
-        "Företag":"Viatris AB",
-        "Utbytesgrupps ID":111071
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Lansoprazol SUN",
         "Varunummer":82152,
@@ -72178,6 +72159,25 @@
         "NPL pack ID":20030627100344,
         "Ursprung":"Original",
         "Företag":"Pfizer AB",
+        "Utbytesgrupps ID":111071
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Lansoprazol Viatris",
+        "Varunummer":419560,
+        "Styrka":"15 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Lansoprazol",
+        "Beredningsform":"Munsönderfallande tablett",
+        "Storlek":56.0,
+        "Apotekens inköpspris":113.95,
+        "Försäljningspris":176.19,
+        "Inköpspris per minsta enhet":2.03,
+        "Försäljningspris per minsta enhet":3.15,
+        "NPL ID":20110531000074,
+        "NPL pack ID":20111018100102,
+        "Ursprung":"Generics",
+        "Företag":"Viatris AB",
         "Utbytesgrupps ID":111071
     },
     {
@@ -89035,25 +89035,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Miglustat Gen. Orph",
-        "Varunummer":489418,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"T22",
-        "Substans":"Miglustat",
-        "Beredningsform":"Kapsel",
-        "Storlek":84.0,
-        "Apotekens inköpspris":11299.0,
-        "Försäljningspris":11642.73,
-        "Inköpspris per minsta enhet":134.51,
-        "Försäljningspris per minsta enhet":138.6,
-        "NPL ID":20160708000017,
-        "NPL pack ID":20161115100079,
-        "Ursprung":"Generics",
-        "Företag":"GEN.ORPH SAS",
-        "Utbytesgrupps ID":111259
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Miglustat Bluefish",
         "Varunummer":449978,
         "Styrka":"100 mg",
@@ -89072,7 +89053,7 @@
         "Utbytesgrupps ID":111259
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Miglustat Dipharma",
         "Varunummer":123397,
         "Styrka":"100 mg",
@@ -89088,6 +89069,25 @@
         "NPL pack ID":20230829100580,
         "Ursprung":"Generics",
         "Företag":"Nordic Prime Aps",
+        "Utbytesgrupps ID":111259
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Miglustat Gen. Orph",
+        "Varunummer":489418,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"T22",
+        "Substans":"Miglustat",
+        "Beredningsform":"Kapsel",
+        "Storlek":84.0,
+        "Apotekens inköpspris":11299.0,
+        "Försäljningspris":11642.73,
+        "Inköpspris per minsta enhet":134.51,
+        "Försäljningspris per minsta enhet":138.6,
+        "NPL ID":20160708000017,
+        "NPL pack ID":20161115100079,
+        "Ursprung":"Generics",
+        "Företag":"GEN.ORPH SAS",
         "Utbytesgrupps ID":111259
     },
     {
