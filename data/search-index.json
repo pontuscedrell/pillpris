@@ -2587,6 +2587,7 @@
     "size": "28 st",
     "names": [
       "Atomoxetin Actavis",
+      "Atomoxetin Amarox",
       "Atomoxetin Glenmark",
       "Atomoxetin Medical Valley",
       "Atomoxetin Orion",
@@ -2595,6 +2596,7 @@
       "Atomoxetine STADA"
     ],
     "vnr": [
+      "121076",
       "140290",
       "163424",
       "397259",
@@ -2632,12 +2634,14 @@
     "str": "100 mg",
     "size": "28 st",
     "names": [
+      "Atomoxetin Amarox",
       "Atomoxetin Glenmark",
       "Atomoxetin Medical Valley",
       "Atomoxetin Orion",
       "Atomoxetine Accord"
     ],
     "vnr": [
+      "180157",
       "33526",
       "453350",
       "509217",
@@ -2655,6 +2659,7 @@
     "size": "28 st",
     "names": [
       "Atomoxetin Actavis",
+      "Atomoxetin Amarox",
       "Atomoxetin Glenmark",
       "Atomoxetin Medical Valley",
       "Atomoxetin Orion",
@@ -2663,6 +2668,7 @@
     ],
     "vnr": [
       "105978",
+      "158013",
       "178650",
       "401981",
       "437007",
@@ -2715,6 +2721,7 @@
     "size": "28 st",
     "names": [
       "Atomoxetin Actavis",
+      "Atomoxetin Amarox",
       "Atomoxetin Glenmark",
       "Atomoxetin Medical Valley",
       "Atomoxetin Orion",
@@ -2729,6 +2736,7 @@
       "438870",
       "51421",
       "525649",
+      "533837",
       "561153",
       "566937",
       "591697"
@@ -2779,6 +2787,7 @@
     "size": "28 st",
     "names": [
       "Atomoxetin Actavis",
+      "Atomoxetin Amarox",
       "Atomoxetin Glenmark",
       "Atomoxetin Medical Valley",
       "Atomoxetin Orion",
@@ -2795,6 +2804,7 @@
       "474681",
       "489669",
       "49831",
+      "576146",
       "588259"
     ],
     "packaging": [],
@@ -2843,6 +2853,7 @@
     "size": "28 st",
     "names": [
       "Atomoxetin Actavis",
+      "Atomoxetin Amarox",
       "Atomoxetin Glenmark",
       "Atomoxetin Medical Valley",
       "Atomoxetin Orion",
@@ -2857,6 +2868,7 @@
       "383944",
       "390152",
       "429917",
+      "541743",
       "577616"
     ],
     "packaging": [],
@@ -2903,6 +2915,7 @@
     "size": "28 st",
     "names": [
       "Atomoxetin Actavis",
+      "Atomoxetin Amarox",
       "Atomoxetin Glenmark",
       "Atomoxetin Medical Valley",
       "Atomoxetin Orion",
@@ -2912,6 +2925,7 @@
       "Atomoxetine Sandoz"
     ],
     "vnr": [
+      "161757",
       "197006",
       "407586",
       "454267",
@@ -4937,8 +4951,7 @@
       "155137",
       "383002",
       "518028",
-      "54407",
-      "89426"
+      "54407"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -4962,7 +4975,6 @@
       "198289",
       "36898",
       "374717",
-      "511308",
       "581990",
       "91241"
     ],
@@ -5320,7 +5332,6 @@
     "vnr": [
       "379891",
       "380329",
-      "399223",
       "405777",
       "411709",
       "423076",
@@ -6514,6 +6525,7 @@
     "vnr": [
       "191879",
       "545554",
+      "61347",
       "71349"
     ],
     "packaging": [],
@@ -6540,6 +6552,7 @@
       "385988",
       "427527",
       "457185",
+      "511697",
       "61071"
     ],
     "packaging": [],
@@ -6563,8 +6576,10 @@
     "vnr": [
       "140354",
       "178729",
+      "377908",
       "377924",
       "450325",
+      "484033",
       "51306",
       "592961"
     ],
@@ -6639,6 +6654,7 @@
       "399093",
       "427207",
       "530660",
+      "555969",
       "98023"
     ],
     "packaging": [],
@@ -7425,13 +7441,11 @@
       "418555",
       "440197",
       "441282",
-      "450788",
       "464871",
       "470323",
       "473142",
       "587146",
-      "597725",
-      "95373"
+      "597725"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -14313,11 +14327,13 @@
     "names": [
       "Furix®",
       "Furosemid Medical Valley",
+      "Furosemid Omet Pharma",
       "Impugan®"
     ],
     "vnr": [
       "19372",
       "390823",
+      "439099",
       "531205",
       "57301"
     ],
@@ -14367,9 +14383,11 @@
       "Furix®",
       "Furosemid Hexal",
       "Furosemid Medical Valley",
+      "Furosemid Omet Pharma",
       "Furosemid Teva"
     ],
     "vnr": [
+      "166332",
       "178638",
       "21942",
       "378466",
@@ -14626,8 +14644,9 @@
     "sub": "Galantamin",
     "form": "Depotkapsel",
     "str": "8 mg",
-    "size": "30 st",
+    "size": "28 st",
     "names": [
+      "Galantamin Abacus Medicine",
       "Galantamin Ebb",
       "Galantamin Krka",
       "Galantamin STADA",
@@ -14637,6 +14656,7 @@
     "vnr": [
       "161754",
       "17773",
+      "406513",
       "453147",
       "466312",
       "564124"
@@ -16771,22 +16791,6 @@
   },
   {
     "id": "112718",
-    "size_id": "G30",
-    "sub": "Kalcipotriol + betametason",
-    "form": "Salva",
-    "str": "50 mikrogram/g + 0,5 mg/g",
-    "size": "30 g",
-    "names": [
-      "Calcipotriol/Betamethasone Abacus Medicine"
-    ],
-    "vnr": [
-      "493724"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112718",
     "size_id": "G60",
     "sub": "Kalcipotriol + betametason",
     "form": "Salva",
@@ -17064,11 +17068,13 @@
     "names": [
       "Candesarstad",
       "Candesartan Krka",
+      "Candesartan Medical Valley",
       "Candesartan Orion"
     ],
     "vnr": [
       "386328",
       "447889",
+      "523697",
       "538035"
     ],
     "packaging": [],
@@ -17201,11 +17207,13 @@
     "names": [
       "Candesarstad",
       "Candesartan Krka",
+      "Candesartan Medical Valley",
       "Candesartan Orion",
       "Candesartan STADA"
     ],
     "vnr": [
       "194232",
+      "403789",
       "461423",
       "478612",
       "545365"
@@ -17303,10 +17311,12 @@
     "names": [
       "Candesarstad",
       "Candesartan Krka",
+      "Candesartan Medical Valley",
       "Candesartan Orion",
       "Kandrozid"
     ],
     "vnr": [
+      "176282",
       "181948",
       "196420",
       "481217",
@@ -18344,6 +18354,7 @@
     "names": [
       "Clopidogrel Accord",
       "Clopidogrel Actavis",
+      "Clopidogrel Amarox",
       "Clopidogrel Krka",
       "Clopidogrel Medical Valley",
       "Clopidogrel STADA",
@@ -18357,12 +18368,29 @@
       "32027",
       "376481",
       "379116",
+      "384568",
       "491504",
       "51699",
       "56367",
       "60097",
       "64281",
       "82056"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111297",
+    "size_id": "T24",
+    "sub": "Klopidogrel",
+    "form": "Tablett",
+    "str": "75 mg",
+    "size": "120 st",
+    "names": [
+      "Clopidogrel Actavis"
+    ],
+    "vnr": [
+      "44992"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -19728,6 +19756,54 @@
   },
   {
     "id": "111461",
+    "size_id": "EK5497",
+    "sub": "Lanreotid",
+    "form": "Injektionsvätska, förfylld spruta",
+    "str": "120 mg",
+    "size": "0,4 st",
+    "names": [
+      "Somatuline Autogel"
+    ],
+    "vnr": [
+      "397698"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111461",
+    "size_id": "EK5498",
+    "sub": "Lanreotid",
+    "form": "Injektionsvätska, förfylld spruta",
+    "str": "120 mg",
+    "size": "0,4 st",
+    "names": [
+      "Somatuline Autogel"
+    ],
+    "vnr": [
+      "397698"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111461",
+    "size_id": "EK5499",
+    "sub": "Lanreotid",
+    "form": "Injektionsvätska, förfylld spruta",
+    "str": "120 mg",
+    "size": "0,4 st",
+    "names": [
+      "Somatuline Autogel"
+    ],
+    "vnr": [
+      "397698"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "111461",
     "size_id": "F0D4A",
     "sub": "Lanreotid",
     "form": "Injektionsvätska, förfylld spruta",
@@ -20041,7 +20117,6 @@
     "vnr": [
       "186126",
       "384211",
-      "491299",
       "521727"
     ],
     "packaging": [],
@@ -20253,8 +20328,7 @@
       "545561",
       "580231",
       "71835",
-      "86944",
-      "97403"
+      "86944"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -20380,7 +20454,6 @@
       "445260",
       "448528",
       "458374",
-      "464224",
       "489596",
       "491907",
       "49408",
@@ -23087,7 +23160,6 @@
       "479979",
       "495088",
       "501215",
-      "516222",
       "553650",
       "559014",
       "588648",
@@ -23558,6 +23630,7 @@
     "vnr": [
       "372354",
       "464985",
+      "502543",
       "585568"
     ],
     "packaging": [],
@@ -25587,9 +25660,11 @@
       "Moxifloxacin 2care4",
       "Moxifloxacin Abacus Medicine",
       "Moxifloxacin Krka",
-      "Moxifloxacin Orion"
+      "Moxifloxacin Orion",
+      "Rivomoxi"
     ],
     "vnr": [
+      "377836",
       "384075",
       "407784",
       "462636",
@@ -25610,10 +25685,12 @@
       "Avelox",
       "Moxifloxacin 2care4",
       "Moxifloxacin Krka",
-      "Moxifloxacin Orion"
+      "Moxifloxacin Orion",
+      "Rivomoxi"
     ],
     "vnr": [
       "180162",
+      "186870",
       "497358",
       "52379",
       "597476"
@@ -26263,7 +26340,6 @@
       "388966",
       "408031",
       "43260",
-      "515300",
       "545595",
       "549616",
       "568704",
@@ -26629,22 +26705,6 @@
       "406354",
       "490875",
       "591527"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111460",
-    "size_id": "EK5482",
-    "sub": "Oktreotid",
-    "form": "Pulver och vätska till injektionsvätska",
-    "str": "30 mg",
-    "size": "1 st",
-    "names": [
-      "Sandostatin LAR"
-    ],
-    "vnr": [
-      "140125"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -29658,22 +29718,6 @@
   },
   {
     "id": "111968",
-    "size_id": "EK5485",
-    "sub": "Paliperidon",
-    "form": "Injektionsvätska, depotsuspension i förfylld spruta",
-    "str": "75 mg",
-    "size": "1 st",
-    "names": [
-      "Paliperidon Zentiva"
-    ],
-    "vnr": [
-      "189609"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "111968",
     "size_id": "F1A",
     "sub": "Paliperidon",
     "form": "Injektionsvätska, depotsuspension i förfylld spruta",
@@ -29682,6 +29726,7 @@
     "names": [
       "Niapelf",
       "Paliperidon Teva",
+      "Paliperidon Zentiva",
       "Paliperidone Exeltis",
       "Paliperidone STADA",
       "Paliperidone Viatris",
@@ -29692,6 +29737,7 @@
       "117675",
       "133450",
       "187219",
+      "189609",
       "371185",
       "389845",
       "412581",
@@ -31549,8 +31595,6 @@
       "Prasugrel Viatris"
     ],
     "vnr": [
-      "115747",
-      "192192",
       "34479",
       "387010",
       "39047",
@@ -31670,12 +31714,14 @@
     "names": [
       "Prednisolon Actavis",
       "Prednisolon Alternova",
+      "Prednisolon Omet Pharma",
       "Prednisolon Pfizer"
     ],
     "vnr": [
       "401595",
       "409038",
-      "79558"
+      "79558",
+      "97393"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -31690,9 +31736,11 @@
     "names": [
       "Prednisolon Actavis",
       "Prednisolon Alternova",
+      "Prednisolon Omet Pharma",
       "Prednisolon Pfizer"
     ],
     "vnr": [
+      "52526",
       "530565",
       "578523",
       "79566"
@@ -31706,12 +31754,14 @@
     "sub": "Prednisolon",
     "form": "Tablett",
     "str": "2,5 mg",
-    "size": "24 st",
+    "size": "25 st",
     "names": [
+      "Prednisolon Omet Pharma",
       "Prednisolon Pfizer"
     ],
     "vnr": [
       "405358",
+      "420495",
       "79525"
     ],
     "packaging": [],
@@ -31726,12 +31776,14 @@
     "size": "100 st",
     "names": [
       "Prednisolon Alternova",
+      "Prednisolon Omet Pharma",
       "Prednisolon Pfizer"
     ],
     "vnr": [
       "121839",
       "439124",
-      "79533"
+      "79533",
+      "93399"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -31747,9 +31799,11 @@
       "Prednisolon Alternova",
       "Prednisolon EQL Pharma",
       "Prednisolon G.L. Pharma",
+      "Prednisolon Omet Pharma",
       "Prednisolon Pfizer"
     ],
     "vnr": [
+      "138001",
       "509451",
       "541306",
       "569171",
@@ -31769,6 +31823,7 @@
       "Prednisolon Alternova",
       "Prednisolon EQL Pharma",
       "Prednisolon G.L. Pharma",
+      "Prednisolon Omet Pharma",
       "Prednisolon Pfizer"
     ],
     "vnr": [
@@ -31776,6 +31831,7 @@
       "128702",
       "141458",
       "171130",
+      "404604",
       "409594"
     ],
     "packaging": [],
@@ -32802,7 +32858,6 @@
       "484604",
       "518224",
       "549897",
-      "594561",
       "87539"
     ],
     "packaging": [],
@@ -33155,22 +33210,6 @@
     ],
     "vnr": [
       "492407"
-    ],
-    "packaging": [],
-    "packagingMap": {}
-  },
-  {
-    "id": "112142",
-    "size_id": "EK5483",
-    "sub": "Risperidon",
-    "form": "Pulver och vätska till injektionsvätska, depotsuspension",
-    "str": "50 mg",
-    "size": "1 st",
-    "names": [
-      "Risperdal Consta"
-    ],
-    "vnr": [
-      "593336"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -35473,7 +35512,6 @@
       "Rosuvastatin Zentiva"
     ],
     "vnr": [
-      "137082",
       "185443",
       "185651",
       "29095",
@@ -35618,11 +35656,13 @@
     "str": "100 mg",
     "size": "100 st",
     "names": [
+      "Safinamide STADA",
       "Safinamide Vivanta",
       "Xadago"
     ],
     "vnr": [
       "176457",
+      "465931",
       "47943",
       "52717",
       "527342"
@@ -35638,10 +35678,12 @@
     "str": "50 mg",
     "size": "30 st",
     "names": [
+      "Safinamide STADA",
       "Safinamide Vivanta",
       "Xadago"
     ],
     "vnr": [
+      "106202",
       "106219",
       "30249"
     ],
@@ -35656,11 +35698,13 @@
     "str": "50 mg",
     "size": "100 st",
     "names": [
+      "Safinamide STADA",
       "Xadago"
     ],
     "vnr": [
       "128964",
       "392369",
+      "440392",
       "545736",
       "66927"
     ],
@@ -37450,7 +37494,6 @@
       "Sunitinib STADA"
     ],
     "vnr": [
-      "145855",
       "165749",
       "36341",
       "381599",
@@ -37487,7 +37530,6 @@
       "489853",
       "514925",
       "529146",
-      "556889",
       "67216",
       "78411",
       "99881"
@@ -40579,6 +40621,7 @@
     "size": "112 st",
     "names": [
       "CHAMPIX®",
+      "Civarenix",
       "Varenicline Bluefish",
       "Varenicline Glenmark",
       "Varenicline Newbury",
@@ -40591,6 +40634,7 @@
       "196173",
       "397754",
       "493663",
+      "51852",
       "58014",
       "581913",
       "584958",
@@ -40665,6 +40709,7 @@
     "vnr": [
       "169473",
       "399106",
+      "410699",
       "465489",
       "491895",
       "495737",
@@ -40777,6 +40822,7 @@
       "Venlafaxin Sandoz"
     ],
     "vnr": [
+      "100717",
       "120821",
       "186592",
       "376165",
@@ -40891,6 +40937,7 @@
       "169429",
       "195326",
       "405141",
+      "408493",
       "458643",
       "493648",
       "512409",
@@ -41151,7 +41198,6 @@
       "161171",
       "169351",
       "176491",
-      "445652",
       "494676",
       "495188",
       "527862",
@@ -41977,12 +42023,14 @@
     "names": [
       "Imovane®",
       "Zopiclone Grindeks",
+      "Zopiklon Evolan",
       "Zopiklon Pilum"
     ],
     "vnr": [
       "24296",
       "35668",
-      "596458"
+      "596458",
+      "81466"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -42013,12 +42061,14 @@
     "names": [
       "Imovane®",
       "Zopiclone Grindeks",
+      "Zopiklon Evolan",
       "Zopiklon Pilum"
     ],
     "vnr": [
       "158775",
       "24180",
-      "463334"
+      "463334",
+      "580629"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -42057,6 +42107,7 @@
       "Zopiclon Stada",
       "Zopiclone Grindeks",
       "Zopiclone Orion",
+      "Zopiklon Evolan",
       "Zopiklon Pilum"
     ],
     "vnr": [
@@ -42064,6 +42115,7 @@
       "180665",
       "23958",
       "24249",
+      "430450",
       "76036"
     ],
     "packaging": [],
@@ -42098,6 +42150,7 @@
       "Zopiclone Jubilant",
       "Zopiclone Olpha",
       "Zopiclone Orion",
+      "Zopiklon Evolan",
       "Zopiklon Pilum"
     ],
     "vnr": [
@@ -42106,6 +42159,7 @@
       "401515",
       "405401",
       "411189",
+      "427139",
       "76025"
     ],
     "packaging": [],
