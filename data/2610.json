@@ -131043,25 +131043,6 @@
         "Utbytesgrupps ID":579
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Sevelamer Sandoz",
-        "Varunummer":555575,
-        "Styrka":"2,4 g",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Sevelamerkarbonat",
-        "Beredningsform":"Pulver till oral suspension",
-        "Storlek":90.0,
-        "Apotekens inköpspris":1925.54,
-        "Försäljningspris":2034.93,
-        "Inköpspris per minsta enhet":21.39,
-        "Försäljningspris per minsta enhet":22.61,
-        "NPL ID":20150805000041,
-        "NPL pack ID":20150818100110,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":112214
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Renvela",
         "Varunummer":36073,
@@ -131116,6 +131097,25 @@
         "NPL pack ID":20200902100103,
         "Ursprung":"ParallelImport",
         "Företag":"Ebb Medical AB",
+        "Utbytesgrupps ID":112214
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Sevelamer Sandoz",
+        "Varunummer":555575,
+        "Styrka":"2,4 g",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Sevelamerkarbonat",
+        "Beredningsform":"Pulver till oral suspension",
+        "Storlek":90.0,
+        "Apotekens inköpspris":1925.54,
+        "Försäljningspris":2034.93,
+        "Inköpspris per minsta enhet":21.39,
+        "Försäljningspris per minsta enhet":22.61,
+        "NPL ID":20150805000041,
+        "NPL pack ID":20150818100110,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":112214
     },
     {
