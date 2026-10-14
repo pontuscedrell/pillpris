@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T15:41:15.490578+00:00",
+  "generatedAt": "2026-10-14T19:57:35.774801+00:00",
   "months": [
     2611,
     2610,
@@ -89362,7 +89362,7 @@
               "price": 468.49
             },
             "2610": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 65.49
             },
             "2609": {
@@ -503387,7 +503387,7 @@
               "price": 174.17
             },
             "2610": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 165.44
             },
             "2609": {
@@ -603009,14 +603009,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 259.55
-            },
-            "2610": {
-              "status": "PV",
-              "price": 96.49
-            },
             "2609": {
               "status": "NEJ",
               "price": 259.55
@@ -603144,6 +603136,24 @@
             "2401": {
               "status": "NEJ",
               "price": 255.48
+            }
+          }
+        },
+        {
+          "vnr": "550008",
+          "name": "Losartan/Hydrochlorothiazide Sandoz",
+          "company": "Sandoz A/S",
+          "origin": "Generics",
+          "packaging": "",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "NEJ",
+              "price": 259.55
+            },
+            "2610": {
+              "status": "PV",
+              "price": 96.49
             }
           }
         },
@@ -709120,7 +709130,7 @@
               "price": 121.09
             },
             "2610": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 121.75
             },
             "2609": {
@@ -946697,7 +946707,7 @@
               "price": 1168.25
             },
             "2610": {
-              "status": "R1",
+              "status": "PV",
               "price": 1228.93
             },
             "2609": {
@@ -946843,7 +946853,7 @@
               "price": 1229.75
             },
             "2610": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 1204.13
             },
             "2609": {
