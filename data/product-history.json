@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T19:57:35.774801+00:00",
+  "generatedAt": "2026-10-15T09:35:15.365154+00:00",
   "months": [
     2611,
     2610,
@@ -150370,12 +150370,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-05-25",
-              "end_date": "2026-10-16",
+              "end_date": "2026-10-30",
               "start_text": "2026-05-25",
-              "end_text": "2026-10-16 (Prognos)",
+              "end_text": "2026-10-30 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Buprenorphine Orifarm, Buprenorphine G.L. Pharma, Buprenorphine Bluefish, Buprenorphine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBuprenorphine Orifarm - Blister, 28 tabletter\nBuprenorphine Sandoz - Blister, 28 tabletter (Pågående restsituation)\nBuprenorphine G.L. Pharma - Blister, 28 tabletter (plast/Al)\n\nAlternativ förpackning: Buprenorfin Actavis - Blister, 7 resoribletter  (Al)",
-              "updated_at": "2026-08-12"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -168753,12 +168753,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-09-23",
-              "end_date": "2027-01-01",
+              "end_date": "2026-12-24",
               "start_text": "2026-09-23",
-              "end_text": "2027-01-01 (Prognos)",
+              "end_text": "2026-12-24 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Celebra, Celecoxib Medical Valley, Celecoxib STADA, Celecoxib Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nCelecoxib Medical Valley - Blister, 100 kapslar\nCelecoxib Accord - Blister, 100 kapslar\nCelecoxib STADA - Blister, 100 kapslar\nCelebra - Blister, 100 kapslar (plast) (Pågående restsituation)\n\nAlternativ förpackning: Celecoxib Krka - Blister, 30 kapslar",
-              "updated_at": "2026-10-05"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -177272,12 +177272,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-02-16",
-              "end_date": "2026-12-31",
+              "end_date": "2027-01-29",
               "start_text": "2026-02-16",
-              "end_text": "2026-12-31 (Prognos)",
+              "end_text": "2027-01-29 (Prognos)",
               "reason": "Brist på aktiv substans (API)",
               "alternatives_info": "Utbytbara läkemedel: Cinacalcet Accordpharma, Cinacalcet Viatris, Cinacalcet Amarox (parallellimporterat av Ebb Medical AB), Cinacalcet STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nCinacalcet Accordpharma - Blister, 28 tabletter (Pågående restsituation)\nCinacalcet STADA - Blister, 28 x 1 tabletter\nCinacalcet Viatris - Blister, 28 tabletter (PD: Abacus Medicine A/S)\nCinacalcet Viatris - Blister, 28 tabletter\nCinacalcet Amarox - Blister, 28 tabletter (parallellimporterat av Ebb Medical AB)",
-              "updated_at": "2026-06-23"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -198188,7 +198188,7 @@
               "start_text": "2024-07-24",
               "end_text": "2026-10-30 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Dabigatran etexilate Sandoz, Dabigatran etexilate Orion, Dabigatran etexilate Glenmark, Dabigatran etexilate Medical Valley.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDabigatran etexilate Medical Valley - Blister, 60 kapslar (Al) (Pågående restsituation)\nDabigatran etexilate Glenmark - Blister, 60 kapslar (Pågående restsituation)\nDabigatran etexilate Sandoz - Burk, 60 kapslar\nDabigatran etexilate Orion - Blister, 60 kapslar",
+              "alternatives_info": "Utbytbara läkemedel: Dabigatran etexilate Glenmark, Dabigatran etexilate Sandoz, Dabigatran etexilate Medical Valley.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDabigatran etexilate Medical Valley - Blister, 60 kapslar (Al) (Pågående restsituation)\nDabigatran etexilate Glenmark - Blister, 60 kapslar (Pågående restsituation)\nDabigatran etexilate Sandoz - Burk, 60 kapslar",
               "updated_at": "2026-03-06"
             }
           ],
@@ -198346,7 +198346,7 @@
               "start_text": "2026-10-09",
               "end_text": "2027-01-15 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Dabigatran Etexilate Accord, Dabigatran etexilate Sandoz, Dabigatran etexilate Orion, Dabigatran etexilate Medical Valley.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDabigatran Etexilate Accord - Blister, 60 x 1 kapslar (endos) (Pågående restsituation)\nDabigatran etexilate Medical Valley - Blister, 60 kapslar (Al) (Pågående restsituation)\nDabigatran etexilate Sandoz - Burk, 60 kapslar\nDabigatran etexilate Orion - Blister, 60 kapslar",
+              "alternatives_info": "Utbytbara läkemedel: Dabigatran Etexilate Accord, Dabigatran etexilate Sandoz, Dabigatran etexilate Medical Valley.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDabigatran Etexilate Accord - Blister, 60 x 1 kapslar (endos) (Pågående restsituation)\nDabigatran etexilate Medical Valley - Blister, 60 kapslar (Al) (Pågående restsituation)\nDabigatran etexilate Sandoz - Burk, 60 kapslar",
               "updated_at": "2026-10-07"
             }
           ],
@@ -198636,7 +198636,7 @@
               "start_text": "2026-03-26",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Dispens: Dispens beviljad för försäljning av läkemedlet i utländsk förpackning avsedd för den tyska marknaden. Dispensen gäller längst till och med 2027-01-31.\nLänk till sammanfattning av dispensbeslut: https://docetp.mpa.se/LMF/Dabigatran etexilate Medical Valley, Blister, 60 kapslar (Al), sammanfattning av beslut, giltigt fr.o.m. 2026-08-24 t.o.m. 2027-01-31_09001bee85259819.pdf\n\nUtbytbara läkemedel: Dabigatran Etexilate Accord, Dabigatran etexilate Sandoz, Dabigatran etexilate Orion, Dabigatran etexilate Glenmark.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDabigatran Etexilate Accord - Blister, 60 x 1 kapslar (endos) (Pågående restsituation)\nDabigatran etexilate Glenmark - Blister, 60 kapslar (Pågående restsituation)\nDabigatran etexilate Sandoz - Burk, 60 kapslar\nDabigatran etexilate Orion - Blister, 60 kapslar",
+              "alternatives_info": "Dispens: Dispens beviljad för försäljning av läkemedlet i utländsk förpackning avsedd för den tyska marknaden. Dispensen gäller längst till och med 2027-01-31.\nLänk till sammanfattning av dispensbeslut: https://docetp.mpa.se/LMF/Dabigatran etexilate Medical Valley, Blister, 60 kapslar (Al), sammanfattning av beslut, giltigt fr.o.m. 2026-08-24 t.o.m. 2027-01-31_09001bee85259819.pdf\n\nUtbytbara läkemedel: Dabigatran etexilate Glenmark, Dabigatran Etexilate Accord, Dabigatran etexilate Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDabigatran Etexilate Accord - Blister, 60 x 1 kapslar (endos) (Pågående restsituation)\nDabigatran etexilate Glenmark - Blister, 60 kapslar (Pågående restsituation)\nDabigatran etexilate Sandoz - Burk, 60 kapslar",
               "updated_at": "2026-08-21"
             }
           ],
@@ -199499,12 +199499,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2025-09-16",
-              "end_date": "2026-10-29",
+              "end_date": "2026-11-12",
               "start_text": "2025-09-16",
-              "end_text": "2026-10-29 (Prognos)",
+              "end_text": "2026-11-12 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Darunavir Glenmark, Darunavir Amarox, Darunavir Accord, PREZISTA, Darunavir STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDarunavir Amarox - Burk, 60 tabletter\nPREZISTA - Burk, 60 tabletter (PD: Medartuum AB)\nDarunavir Glenmark - Burk, 60 tabletter (Pågående restsituation)\nDarunavir STADA - Burk, 60 tabletter\nDarunavir Accord - Burk, 60 tabletter",
-              "updated_at": "2026-09-28"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -275656,11 +275656,11 @@
           "packaging": "",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-10-15",
               "end_date": "2027-01-22",
-              "start_text": "2026-10-15 (Prognos)",
+              "start_text": "2026-10-15",
               "end_text": "2027-01-22 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Enalapril Accord, Enalapril Teva, Enalapril Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nFör närvarande tillhandahålls inga jämförbara förpackningar.\nAlternativ förpackning: Enalapril Krka - Blister, 100 tabletter\nEnalapril Krka - Blister, 30 tabletter",
@@ -320395,7 +320395,7 @@
               "start_date": "2026-05-29",
               "end_date": "2026-10-15",
               "start_text": "2026-05-29",
-              "end_text": "2026-10-15 (Prognos)",
+              "end_text": "2026-10-15",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Etoricoxib Krka, Etoricoxib STADA, Etoricoxib Teva, Arcoxia (parallellimporterat av Medartuum AB), Arcoxia, Etoricoxib Ebb (parallellimporterat av Ebb Medical AB), Etoricoxib Orion, Etoricoxib Brown.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nEtoricoxib Ebb - Blister, 28 tabletter (parallellimporterat av Ebb Medical AB)\nArcoxia - Blister, 28 tabletter (Pågående restsituation)\nEtoricoxib Orion - Blister,  30 tabletter  (Al)\nEtoricoxib Teva - Blister, 30 tabletter\nEtoricoxib Brown - Blister, 30 tabletter\nEtoricoxib STADA - Blister, 30 tabletter\nEtoricoxib Krka - Blister, 30 tabletter\n\nAlternativ förpackning: Etoricoxib Sandoz - Blister, 7 tabletter\nEtoricoxib Sandoz - Blister,  98 tabletter",
               "updated_at": "2026-07-30"
@@ -341675,11 +341675,11 @@
           "packaging": "",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-10-15",
               "end_date": "2026-12-31",
-              "start_text": "2026-10-15 (Prognos)",
+              "start_text": "2026-10-15",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Phenoxymethylpenicillin EQL.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPhenoxymethylpenicillin EQL - Flaska, 60 ml (Pågående restsituation)\n\nAlternativ förpackning: Kåvepenin - Flaska, 125 ml\nKåvepenin - Flaska, 200 ml",
@@ -341840,7 +341840,7 @@
               "start_text": "2026-09-01",
               "end_text": "2027-01-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Kåvepenin.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKåvepenin - Flaska, 60 ml (Kommande restsituation)\n\nAlternativ förpackning: Phenoxymethylpenicillin EQL - Flaska, 125 ml (Pågående restsituation)\nPhenoxymethylpenicillin EQL - Flaska, 200 ml (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Kåvepenin.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKåvepenin - Flaska, 60 ml (Pågående restsituation)\n\nAlternativ förpackning: Phenoxymethylpenicillin EQL - Flaska, 125 ml (Pågående restsituation)\nPhenoxymethylpenicillin EQL - Flaska, 200 ml (Kommande restsituation)",
               "updated_at": "2026-07-31"
             }
           ],
@@ -438695,13 +438695,13 @@
             {
               "status": "Kommande restsituation",
               "shortage_type": "Restsituation",
-              "start_date": "2026-10-15",
+              "start_date": "2026-11-15",
               "end_date": "2027-01-01",
-              "start_text": "2026-10-15 (Prognos)",
+              "start_text": "2026-11-15 (Prognos)",
               "end_text": "2027-01-01 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Irbesartan Accord, Irbesartan STADA, Irbesartan Zentiva, Ifirmasta.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nIrbesartan Accord - Blister, 98 tabletter\nIfirmasta - Blister, 98 tabletter\nIrbesartan STADA - Blister, 100 tabletter\nIrbesartan Zentiva - Blister, 98 tabletter\nIfirmasta - Blister, 98 tabletter (PD: 2care4 ApS)",
-              "updated_at": "2026-09-16"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -439753,12 +439753,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-04-23",
-              "end_date": "2026-10-23",
+              "end_date": "2026-11-19",
               "start_text": "2026-04-23",
-              "end_text": "2026-10-23 (Prognos)",
+              "end_text": "2026-11-19 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Irbesartan STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nIrbesartan STADA - Blister, 30 tabletter",
-              "updated_at": "2026-09-28"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -468998,7 +468998,7 @@
               "start_text": "2026-08-01",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Kaleorid, Kaliumklorid EQL Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaleorid - Burk, 100 tabletter (Pågående restsituation)\nKaliumklorid EQL Pharma - Burk, 100 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Kaliumklorid Orifarm - Burk, 250 tabletter (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Kaleorid, Kaliumklorid EQL Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaleorid - Burk, 100 tabletter (Pågående restsituation)\nKaliumklorid EQL Pharma - Burk, 100 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Kaliumklorid Orifarm - Burk, 250 tabletter (Pågående restsituation)",
               "updated_at": "2026-09-29"
             }
           ],
@@ -469167,7 +469167,7 @@
               "start_text": "2026-10-02",
               "end_text": "2027-02-05 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Kaliumklorid Orifarm, Kaliumklorid EQL Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaliumklorid Orifarm - Burk, 250 tabletter (Kommande restsituation)\nKaliumklorid EQL Pharma - Burk, 250 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Kaleorid - Burk, 100 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Kaliumklorid Orifarm, Kaliumklorid EQL Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaliumklorid Orifarm - Burk, 250 tabletter (Pågående restsituation)\nKaliumklorid EQL Pharma - Burk, 250 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Kaleorid - Burk, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-08-14"
             }
           ],
@@ -469325,7 +469325,7 @@
               "start_text": "2026-11-15 (Prognos)",
               "end_text": "2027-02-28 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Kaliumklorid Orifarm, Kaleorid.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaleorid - Burk, 250 tabletter (Pågående restsituation)\nKaliumklorid Orifarm - Burk, 250 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Kaliumklorid EQL Pharma - Burk, 100 tabletter (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Kaliumklorid Orifarm, Kaleorid.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaleorid - Burk, 250 tabletter (Pågående restsituation)\nKaliumklorid Orifarm - Burk, 250 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Kaliumklorid EQL Pharma - Burk, 100 tabletter (Kommande restsituation)",
               "updated_at": "2026-08-27"
             }
           ],
@@ -469476,11 +469476,11 @@
           "packaging": "Burk",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-10-15",
               "end_date": "2027-01-31",
-              "start_text": "2026-10-15 (Prognos)",
+              "start_text": "2026-10-15",
               "end_text": "2027-01-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Kaleorid, Kaliumklorid EQL Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaleorid - Burk, 250 tabletter (Pågående restsituation)\nKaliumklorid EQL Pharma - Burk, 250 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Kaliumklorid Orifarm - Burk, 100 tabletter (Pågående restsituation)",
@@ -517820,7 +517820,7 @@
               "start_date": "2026-09-18",
               "end_date": "2026-10-15",
               "start_text": "2026-09-18",
-              "end_text": "2026-10-15 (Prognos)",
+              "end_text": "2026-10-15",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Seroquel Depot, Quetiapin Medical Valley, Quetiapine Accord, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapine Teva, Biquetan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nQuetiapine Teva - Blister, 100 tabletter (Kommande restsituation)\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nSeroquel Depot - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Quetiapin Krka - Blister, 60 tabletter",
               "updated_at": "2026-10-05"
@@ -518291,13 +518291,13 @@
             {
               "status": "Kommande restsituation",
               "shortage_type": "Restsituation",
-              "start_date": "2026-10-15",
+              "start_date": "2026-11-15",
               "end_date": "2026-12-01",
-              "start_text": "2026-10-15 (Prognos)",
+              "start_text": "2026-11-15 (Prognos)",
               "end_text": "2026-12-01 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Seroquel Depot, Quetiapin Medical Valley, Quetiapine Accord, Quetiapin Krka, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Biquetan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nQuetiapin Krka - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nSeroquel Depot - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)",
-              "updated_at": "2026-09-11"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -572441,12 +572441,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2025-09-01",
-              "end_date": "2027-04-01",
+              "end_date": "2027-10-01",
               "start_text": "2025-09-01",
-              "end_text": "2027-04-01 (Prognos)",
+              "end_text": "2027-10-01 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Stalevo, Levodopa/Carbidopa/Entacapone Orion, Levodopa/Carbidopa/Entacapone G.L. Pharma, Sastravi.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nStalevo - Burk, 100 tabletter\nStalevo - Burk, 100 tabletter (PD: Ebb Medical AB)\nLevodopa/Carbidopa/Entacapone Orion - Burk, 100 tabletter\nSastravi - Burk, 100 tabletter\nStalevo - Burk, 100 tabletter (PD: Medartuum AB)\nStalevo - Burk, 100 tabletter (PD: Abacus Medicine A/S)\nLevodopa/Carbidopa/Entacapone G.L. Pharma - Burk, 100 tabletter\nStalevo - Burk, 100 tabletter (PD: Kullgrens Pharma)\n\nAlternativ förpackning: Levodopa/Carbidopa/Entacapone Holsten - Burk, 130 tabletter (Pågående restsituation)",
-              "updated_at": "2026-09-25"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -573726,12 +573726,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2025-09-01",
-              "end_date": "2027-04-01",
+              "end_date": "2027-10-01",
               "start_text": "2025-09-01",
-              "end_text": "2027-04-01 (Prognos)",
+              "end_text": "2027-10-01 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Stalevo, Levodopa/Carbidopa/Entacapone Orion, Levodopa/Carbidopa/Entacapone G.L. Pharma, Sastravi.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSastravi - Burk, 130 tabletter\nStalevo - Burk, 130 tabletter\nLevodopa/Carbidopa/Entacapone Orion - Burk, 130 tabletter\nLevodopa/Carbidopa/Entacapone G.L. Pharma - Burk, 130 tabletter\n\nAlternativ förpackning: Levodopa/Carbidopa/Entacapone Holsten - Burk, 100 tabletter (Pågående restsituation)",
-              "updated_at": "2026-09-25"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -574359,12 +574359,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2025-09-01",
-              "end_date": "2027-04-01",
+              "end_date": "2027-10-01",
               "start_text": "2025-09-01",
-              "end_text": "2027-04-01 (Prognos)",
+              "end_text": "2027-10-01 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Levodopa/Carbidopa/Entacapone G.L. Pharma, Levodopa/Carbidopa/Entacapone Orion, Stalevo, Sastravi.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nStalevo - Burk, 100 tabletter (PD: Medartuum AB)\nLevodopa/Carbidopa/Entacapone G.L. Pharma - Burk, 100 tabletter\nLevodopa/Carbidopa/Entacapone Orion - Burk, 100 tabletter\nStalevo - Burk, 100 tabletter\nSastravi - Burk, 100 tabletter\nStalevo - Burk, 100 tabletter (PD: Abacus Medicine A/S)\nStalevo - Burk, 100 tabletter (PD: Ebb Medical AB)\nStalevo - Burk, 100 tabletter (PD: 2care4 ApS)",
-              "updated_at": "2026-09-25"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -580232,12 +580232,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2025-09-01",
-              "end_date": "2027-04-01",
+              "end_date": "2027-10-01",
               "start_text": "2025-09-01",
-              "end_text": "2027-04-01 (Prognos)",
+              "end_text": "2027-10-01 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Levodopa/Carbidopa/Entacapone Orion, Stalevo, Sastravi.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nStalevo - Burk, 100 tabletter\nStalevo - Burk, 100 tabletter (PD: Ebb Medical AB)\nStalevo - Burk, 100 tabletter (PD: Medartuum AB)\nLevodopa/Carbidopa/Entacapone Orion - Burk, 100 tabletter\nSastravi - Burk, 100 tabletter\nStalevo - Burk, 100 tabletter (PD: Abacus Medicine A/S)\nStalevo - Burk, 100 tabletter (PD: 2care4 ApS)",
-              "updated_at": "2026-09-25"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -587092,11 +587092,11 @@
           "packaging": "Tub 30 g",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-10-15",
               "end_date": "2026-12-31",
-              "start_text": "2026-10-15 (Prognos)",
+              "start_text": "2026-10-15",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Emla (parallellimporterat av Ebb Medical AB), Emla (parallellimporterat av Ebb Medical AB), Lidokain/Prilokain Ebb (parallellimporterat av Ebb Medical AB), EMLA, Emla (parallellimporterat av Abacus Medicine A/S), Emla (parallellimporterat av 2care4 ApS).\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nEMLA - Tub, 30 g\nEmla - Tub, 30 g (parallellimporterat av Abacus Medicine A/S)\nEmla - Tub, 30 g (parallellimporterat av Ebb Medical AB)\nLidokain/Prilokain Ebb - Tub, 30 g (utan täckförband) (parallellimporterat av Ebb Medical AB)\nEmla - Tub, 30 g (parallellimporterat av 2care4 ApS)\n\nAlternativ förpackning: Tapin - Tub 5 g\nTapin - Tub 5x5 g",
@@ -835542,7 +835542,7 @@
               "start_text": "2026-10-30 (Prognos)",
               "end_text": "2027-01-29 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Actos, Pioglitazone Actavis.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPioglitazone Accord - Blister, 90 tabletter (PD: Medartuum AB)\nActos - Blister, 98 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 98 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Abacus Medicine A/S)\nPioglitazone Actavis - Blister, 98 tabletter\nPioglitazone Accord - Blister, 98 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: 2care4 ApS)\n\nAlternativ förpackning: Pioglitazone Accord - Blister, 90 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 98 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Abacus Medicine A/S)\nPioglitazone Accord - Blister, 98 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: 2care4 ApS)",
+              "alternatives_info": "Utbytbara läkemedel: Actos, Pioglitazone Actavis.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPioglitazone Accord - Blister, 90 tabletter (PD: Medartuum AB)\nActos - Blister, 98 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 98 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Abacus Medicine A/S)\nPioglitazone Actavis - Blister, 98 tabletter\nPioglitazone Accord - Blister, 98 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: 2care4 ApS) (Pågående restsituation)\n\nAlternativ förpackning: Pioglitazone Accord - Blister, 90 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 98 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Abacus Medicine A/S)\nPioglitazone Accord - Blister, 98 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: 2care4 ApS) (Pågående restsituation)",
               "updated_at": "2026-08-28"
             }
           ],
@@ -835837,7 +835837,19 @@
           "company": "2care4 ApS",
           "origin": "ParallelDistribution",
           "packaging": "Blister",
-          "shortages": [],
+          "shortages": [
+            {
+              "status": "Pågående restsituation",
+              "shortage_type": "Restsituation",
+              "start_date": "2026-10-14",
+              "end_date": "2027-01-29",
+              "start_text": "2026-10-14",
+              "end_text": "2027-01-29 (Prognos)",
+              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
+              "alternatives_info": "Utbytbara läkemedel: Actos, Pioglitazone Actavis.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPioglitazone Accord - Blister, 90 tabletter (PD: Medartuum AB)\nActos - Blister, 98 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 98 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Abacus Medicine A/S)\nPioglitazone Actavis - Blister, 98 tabletter\nPioglitazone Accord - Blister, 98 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 98 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Pioglitazone Accord - Blister, 98 tabletter (PD: Medartuum AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 90 tabletter (PD: Abacus Medicine A/S)\nPioglitazone Accord - Blister, 98 tabletter (PD: Ebb Medical AB)\nPioglitazone Accord - Blister, 98 tabletter (Kommande restsituation)\nPioglitazone Accord - Blister, 90 tabletter (PD: Medartuum AB)",
+              "updated_at": "2026-10-14"
+            }
+          ],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -844397,12 +844409,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-04-10",
-              "end_date": "2027-02-26",
+              "end_date": "2027-03-31",
               "start_text": "2026-04-10",
-              "end_text": "2027-02-26 (Prognos)",
+              "end_text": "2027-03-31 (Prognos)",
               "reason": "Oväntat stor efterfrågan på läkemedlet",
               "alternatives_info": "Utbytbara läkemedel: Pomalidomid Avansor, Pomalidomide Glenmark, Pomalidomide Sandoz, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide STADA, Pomalidomide Accord, Pomalidomide Newbury, Pomalidomide Grindeks.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomid Avansor - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Sandoz - Blister, 21 kapslar\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al)",
-              "updated_at": "2026-08-28"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
@@ -867752,19 +867764,7 @@
           "company": "Pfizer AB",
           "origin": "Original",
           "packaging": "",
-          "shortages": [
-            {
-              "status": "Kommande restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-11-16",
-              "end_date": "2026-11-20",
-              "start_text": "2026-11-16 (Prognos)",
-              "end_text": "2026-11-20 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Prednisolon Alternova.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPrednisolon Alternova - Burk, 105 tabletter",
-              "updated_at": "2026-09-16"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "R1",
@@ -971692,7 +971692,7 @@
               "start_text": "2025-03-06",
               "end_text": "2027-02-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Sertraline SUN, Zoloft, Sertraline Accord, Sertralin Teva, Sertralin Bluefish, Sertralin Zentiva, Sertralin Hexal, Zoloft (parallellimporterat av Ebb Medical AB), Sertralin Amarox, Oralin.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSertralin Teva - Blister, 30 tabletter (Pågående restsituation)\nSertralin Hexal - Blister, 30 tabletter\nSertraline Accord - Blister, 30 tabletter\nSertralin Bluefish - Blister, 30 tabletter\n\nAlternativ förpackning: Sertralin Krka - Blister, 100x1 tabletter (endos) (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Sertraline SUN, Zoloft, Sertraline Accord, Sertralin Teva, Sertralin Bluefish, Sertralin Zentiva, Sertralin Hexal, Zoloft (parallellimporterat av Ebb Medical AB), Sertralin Amarox, Oralin.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSertralin Teva - Blister, 30 tabletter\nSertralin Hexal - Blister, 30 tabletter\nSertraline Accord - Blister, 30 tabletter\nSertralin Bluefish - Blister, 30 tabletter\n\nAlternativ förpackning: Sertralin Krka - Blister, 100x1 tabletter (endos) (Pågående restsituation)",
               "updated_at": "2026-03-15"
             }
           ],
@@ -971943,19 +971943,7 @@
           "company": "Teva Sweden AB",
           "origin": "Generics",
           "packaging": "",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-08-30",
-              "end_date": "2026-10-30",
-              "start_text": "2026-08-30",
-              "end_text": "2026-10-30 (Prognos)",
-              "reason": "Brist på aktiv substans (API)",
-              "alternatives_info": "Utbytbara läkemedel: Sertraline SUN, Zoloft, Sertraline Accord, Sertralin Bluefish, Sertralin Zentiva, Sertralin Hexal, Zoloft (parallellimporterat av Ebb Medical AB), Sertralin Amarox, Oralin, Sertralin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSertralin Krka - Blister, 30 tabletter (Pågående restsituation)\nSertralin Hexal - Blister, 30 tabletter\nSertraline Accord - Blister, 30 tabletter\nSertralin Bluefish - Blister, 30 tabletter\n\nAlternativ förpackning: Sertralin Teva - Blister, 105 tabletter\nSertralin Teva - Blister, 100 tabletter (Kommande restsituation)\nSertralin Teva - Burk, 250 tabletter (Pågående restsituation)",
-              "updated_at": "2026-07-03"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -972787,7 +972775,7 @@
               "start_date": "2026-07-18",
               "end_date": "2026-10-15",
               "start_text": "2026-07-18",
-              "end_text": "2026-10-15 (Prognos)",
+              "end_text": "2026-10-15",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Sertraline SUN, Zoloft, Sertraline Accord, Sertralin Teva, Sertralin Bluefish, Sertralin Zentiva, Zoloft (parallellimporterat av Ebb Medical AB), Sertralin Amarox, Oralin, Sertralin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSertralin Bluefish - Blister, 100 tabletter\nSertralin Teva - Blister, 105 tabletter\nOralin - Blister, 100 tabletter (PVC/Al)\nSertraline Accord - Blister, 100 tabletter\nSertralin Zentiva - Blister, 100 tabletter\nSertraline SUN - Blister, 100 tabletter\nSertralin Amarox - Blister, 100 tabletter\nSertralin Teva - Blister, 100 tabletter (Kommande restsituation)\nSertralin Krka - Blister, 100x1 tabletter (endos) (Pågående restsituation)\nZoloft - Blister, 98 tabletter\nZoloft - Blister, 98 tabletter (parallellimporterat av Ebb Medical AB)\n\nAlternativ förpackning: Sertralin Hexal - Blister, 30 tabletter\nSertralin Hexal - Burk, 250 tabletter (dosdispensering)",
               "updated_at": "2026-07-28"
@@ -973151,7 +973139,7 @@
               "start_text": "2027-04-30 (Prognos)",
               "end_text": "Saknas",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Sertraline SUN, Zoloft, Sertraline Accord, Sertralin Bluefish, Sertralin Zentiva, Sertralin Hexal, Zoloft (parallellimporterat av Ebb Medical AB), Sertralin Amarox, Oralin, Sertralin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSertralin Bluefish - Blister, 100 tabletter\nSertralin Teva - Blister, 105 tabletter\nOralin - Blister, 100 tabletter (PVC/Al)\nSertraline Accord - Blister, 100 tabletter\nSertralin Zentiva - Blister, 100 tabletter\nSertraline SUN - Blister, 100 tabletter\nSertralin Amarox - Blister, 100 tabletter\nSertralin Krka - Blister, 100x1 tabletter (endos) (Pågående restsituation)\nZoloft - Blister, 98 tabletter\nZoloft - Blister, 98 tabletter (parallellimporterat av Ebb Medical AB)\nSertralin Hexal - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Sertralin Teva - Blister, 105 tabletter\nSertralin Teva - Blister, 30 tabletter (Pågående restsituation)\nSertralin Teva - Burk, 250 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Sertraline SUN, Zoloft, Sertraline Accord, Sertralin Bluefish, Sertralin Zentiva, Sertralin Hexal, Zoloft (parallellimporterat av Ebb Medical AB), Sertralin Amarox, Oralin, Sertralin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSertralin Bluefish - Blister, 100 tabletter\nSertralin Teva - Blister, 105 tabletter\nOralin - Blister, 100 tabletter (PVC/Al)\nSertraline Accord - Blister, 100 tabletter\nSertralin Zentiva - Blister, 100 tabletter\nSertraline SUN - Blister, 100 tabletter\nSertralin Amarox - Blister, 100 tabletter\nSertralin Krka - Blister, 100x1 tabletter (endos) (Pågående restsituation)\nZoloft - Blister, 98 tabletter\nZoloft - Blister, 98 tabletter (parallellimporterat av Ebb Medical AB)\nSertralin Hexal - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Sertralin Teva - Blister, 105 tabletter\nSertralin Teva - Blister, 30 tabletter\nSertralin Teva - Burk, 250 tabletter (Pågående restsituation)",
               "updated_at": "2026-08-11"
             }
           ],
@@ -974302,7 +974290,7 @@
               "start_text": "2026-02-10",
               "end_text": "2026-12-15 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Zoloft, Sertraline Accord, Sertralin Bluefish, Sertralin Zentiva, Sertralin Hexal, Zoloft (parallellimporterat av Ebb Medical AB), Sertralin Amarox, Oralin, Sertralin Krka, Sertraline SUN.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSertralin Hexal - Burk, 250 tabletter (dosdispensering)\nSertraline Accord - Burk, 250 tabletter (sjukhusförpackning)\n\nAlternativ förpackning: Sertralin Teva - Blister, 105 tabletter\nSertralin Teva - Blister, 30 tabletter (Pågående restsituation)\nSertralin Teva - Blister, 100 tabletter (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Zoloft, Sertraline Accord, Sertralin Bluefish, Sertralin Zentiva, Sertralin Hexal, Zoloft (parallellimporterat av Ebb Medical AB), Sertralin Amarox, Oralin, Sertralin Krka, Sertraline SUN.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSertralin Hexal - Burk, 250 tabletter (dosdispensering)\nSertraline Accord - Burk, 250 tabletter (sjukhusförpackning)\n\nAlternativ förpackning: Sertralin Teva - Blister, 105 tabletter\nSertralin Teva - Blister, 30 tabletter\nSertralin Teva - Blister, 100 tabletter (Kommande restsituation)",
               "updated_at": "2026-08-11"
             }
           ],
@@ -1119219,11 +1119207,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-10-15",
               "end_date": "2026-10-30",
-              "start_text": "2026-10-15 (Prognos)",
+              "start_text": "2026-10-15",
               "end_text": "2026-10-30 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Vildagliptin/Metformin STADA, Eucreas.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nEucreas - Blister, 60 tabletter (PVC/PE/PVDC/alu)\nVildagliptin/Metformin STADA - Blister, 60 x 1 tabletter (endos)",
@@ -1129031,12 +1129019,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-06-17",
-              "end_date": "2026-11-13",
+              "end_date": "2027-02-04",
               "start_text": "2026-06-17",
-              "end_text": "2026-11-13 (Prognos)",
+              "end_text": "2027-02-04 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Ziprasidon STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nZiprasidon STADA - Blister, 56 kapslar\n\nAlternativ styrka: 40 mg, 20 mg.",
-              "updated_at": "2026-09-07"
+              "updated_at": "2026-10-14"
             }
           ],
           "history": {
