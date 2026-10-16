@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T19:40:30.140175+00:00",
+  "generatedAt": "2026-10-16T09:28:29.925208+00:00",
   "months": [
     2611,
     2610,
@@ -2195,7 +2195,7 @@
               "start_text": "2023-02-22",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Abiraterone Krka, ZYTIGA, Abirateron Medical Valley, Abiraterone Mylan, Abiraterone Zentiva, Abirateron Teva, Abiraterone STADA, Abiraterone Accord, Abiraterone Qilu, Abirateron Sandoz, Abiraterone Glenmark.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAbirateron Medical Valley - Blister, 56 tabletter\nAbiraterone Glenmark - Blister, 56 x 1 (endos) tabletter\nAbiraterone STADA - Blister, 56 x 1 tabletter (endos) (plast/Al)\nAbiraterone Krka - Blister, 56 tabletter (kalenderförpackning)\nAbirateron Sandoz - Blister, 56 tabletter (plast/Al)\nAbiraterone Zentiva - Blister, 56 tabletter\nAbiraterone Accord - Blister, 56 x 1 tabletter (endos)\nZYTIGA - Blister, 56 tabletter\nAbiraterone Mylan - Blister, 56 tabletter (plast/Al)\nAbiraterone Qilu - Blister, 56 tabletter\n\nAlternativ förpackning: Abirateron Avansor - Blister, 60 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Abirateron Medical Valley, ZYTIGA, Abiraterone Krka, Abiraterone Mylan, Abiraterone Zentiva, Abiraterone STADA, Abirateron Teva, Abiraterone Accord, Abiraterone Qilu, Abiraterone Glenmark, Abirateron Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAbiraterone Krka - Blister, 56 tabletter (kalenderförpackning)\nAbirateron Sandoz - Blister, 56 tabletter (plast/Al)\nAbiraterone Accord - Blister, 56 x 1 tabletter (endos)\nAbiraterone Zentiva - Blister, 56 tabletter\nZYTIGA - Blister, 56 tabletter\nAbirateron Teva - Blister, 56 tabletter\nAbirateron Medical Valley - Blister, 56 tabletter\nAbiraterone Mylan - Blister, 56 tabletter (plast/Al)\nAbiraterone Qilu - Blister, 56 tabletter\nAbiraterone Glenmark - Blister, 56 x 1 (endos) tabletter\nAbiraterone STADA - Blister, 56 x 1 tabletter (endos) (plast/Al)\n\nAlternativ förpackning: Abirateron Avansor - Blister, 60 tabletter",
               "updated_at": "2026-01-02"
             }
           ],
@@ -336099,7 +336099,7 @@
               "start_date": "2025-08-01",
               "end_date": "2026-10-16",
               "start_text": "2025-08-01",
-              "end_text": "2026-10-16 (Prognos)",
+              "end_text": "2026-10-16",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Felodipin Holsten, Plendil, Felodipin HEXAL, Felodipin Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nFör närvarande tillhandahålls inga jämförbara förpackningar.\nAlternativ förpackning: Felodipin STADA - Blister, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-10-09"
@@ -509852,7 +509852,7 @@
               "start_date": "2026-05-25",
               "end_date": "2026-10-16",
               "start_text": "2026-05-25",
-              "end_text": "2026-10-16 (Prognos)",
+              "end_text": "2026-10-16",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Detremin, Fultium, Benferol.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDetremin - Burk, 90 kapslar\nBenferol - Blister, 90 kapslar\nFultium - Blister, 90 kapslar",
               "updated_at": "2026-05-27"
