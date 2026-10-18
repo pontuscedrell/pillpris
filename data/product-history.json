@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T18:07:46.654340+00:00",
+  "generatedAt": "2026-10-18T09:18:46.120456+00:00",
   "months": [
     2611,
     2610,
@@ -676711,14 +676711,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 81.18
-            },
-            "2610": {
-              "status": "NEJ",
-              "price": 81.18
-            },
             "2609": {
               "status": "NEJ",
               "price": 81.18
@@ -677576,7 +677568,7 @@
           "packaging": "",
           "shortages": [
             {
-              "status": "Försäljning kommer upphöra permanent (Kommande avregistrering)",
+              "status": "Försäljning kommer upphöra permanent (Avregistrerad 2026-10-18)",
               "shortage_type": "Försäljning upphör permanent",
               "start_date": "2027-05-01",
               "end_date": "",
@@ -677588,14 +677580,6 @@
             }
           ],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 292.16
-            },
-            "2610": {
-              "status": "NEJ",
-              "price": 292.16
-            },
             "2609": {
               "status": "NEJ",
               "price": 292.16
