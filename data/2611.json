@@ -26999,25 +26999,6 @@
         "Utbytesgrupps ID":111385
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Dabigatran etexilate Glenmark",
-        "Varunummer":142431,
-        "Styrka":"75 mg",
-        "Förpackningsstorleksgrupp":"T21",
-        "Substans":"Dabigatranetexilat",
-        "Beredningsform":"Kapsel",
-        "Storlek":60.0,
-        "Apotekens inköpspris":193.28,
-        "Försäljningspris":258.29,
-        "Inköpspris per minsta enhet":3.22,
-        "Försäljningspris per minsta enhet":4.3,
-        "NPL ID":20230523000070,
-        "NPL pack ID":20230705100505,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":111386
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Dabigatran etexilate Krka",
         "Varunummer":167381,
@@ -27053,6 +27034,25 @@
         "NPL pack ID":20201025100018,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":111386
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Dabigatran etexilate Glenmark",
+        "Varunummer":142431,
+        "Styrka":"75 mg",
+        "Förpackningsstorleksgrupp":"T21",
+        "Substans":"Dabigatranetexilat",
+        "Beredningsform":"Kapsel",
+        "Storlek":60.0,
+        "Apotekens inköpspris":193.28,
+        "Försäljningspris":258.29,
+        "Inköpspris per minsta enhet":3.22,
+        "Försäljningspris per minsta enhet":4.3,
+        "NPL ID":20230523000070,
+        "NPL pack ID":20230705100505,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":111386
     },
     {
@@ -93841,7 +93841,7 @@
         "Utbytesgrupps ID":114115
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Duraphat",
         "Varunummer":24392,
         "Styrka":"5 mg\/g",
