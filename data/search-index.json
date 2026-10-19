@@ -9656,7 +9656,6 @@
     "str": "10 mg",
     "size": "100 st",
     "names": [
-      "Abetip",
       "Ebastin Abacus Medicine",
       "Ebastin Brown",
       "Ebastin Ebb",
@@ -9672,7 +9671,6 @@
       "395163",
       "458970",
       "53259",
-      "563660",
       "564871"
     ],
     "packaging": [],
@@ -9706,7 +9704,6 @@
     "str": "20 mg",
     "size": "100 st",
     "names": [
-      "Abetip",
       "Ebastin Brown",
       "Ebastin Ebb",
       "Ebastin Orifarm",
@@ -9716,8 +9713,7 @@
       "14157",
       "154814",
       "171662",
-      "538239",
-      "572042"
+      "538239"
     ],
     "packaging": [],
     "packagingMap": {}

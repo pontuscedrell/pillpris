@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T18:26:20.408447+00:00",
+  "generatedAt": "2026-10-19T10:28:49.667941+00:00",
   "months": [
     2611,
     2610,
@@ -261537,14 +261537,6 @@
           "packaging": "Blister",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 388.73
-            },
-            "2610": {
-              "status": "NEJ",
-              "price": 388.73
-            },
             "2609": {
               "status": "NEJ",
               "price": 388.73
@@ -263167,14 +263159,6 @@
           "packaging": "Blister",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 559.9
-            },
-            "2610": {
-              "status": "NEJ",
-              "price": 559.9
-            },
             "2609": {
               "status": "NEJ",
               "price": 559.9
@@ -505359,7 +505343,7 @@
               "start_text": "2025-08-15",
               "end_text": "2027-12-31 (Prognos)",
               "reason": "Kvalitetsdefekt eller att kraven på god tillverkningssed (GMP) inte uppfyllts",
-              "alternatives_info": "Utbytbara läkemedel: Froidir, Klozapin Ebb (parallellimporterat av Ebb Medical AB), Clozapine Holsten, Clozapine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nClozapine Holsten - Blister, 100 tabletter (Pågående restsituation)\nKlozapin Ebb - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB) (Pågående restsituation)\nFroidir - Blister, 100 tabletter (Kommande restsituation)\n\nLicens: Förskrivare kan vända sig till apotek för information om tillgång på läkemedel från annat land. Se även: https://lakemedelsverket.se/licens",
+              "alternatives_info": "Utbytbara läkemedel: Froidir, Klozapin Ebb (parallellimporterat av Ebb Medical AB), Clozapine Holsten, Clozapine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nClozapine Holsten - Blister, 100 tabletter (Pågående restsituation)\nKlozapin Ebb - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB) (Pågående restsituation)\nFroidir - Blister, 100 tabletter (Pågående restsituation)\n\nLicens: Förskrivare kan vända sig till apotek för information om tillgång på läkemedel från annat land. Se även: https://lakemedelsverket.se/licens",
               "updated_at": "2026-03-06"
             }
           ],
@@ -505623,7 +505607,7 @@
               "start_text": "2025-09-01",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Ändring eller hinder i produktionsprocessen",
-              "alternatives_info": "Utbytbara läkemedel: Froidir, Klozapin Ebb (parallellimporterat av Ebb Medical AB), Clozapine Accord, Clozapine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nClozapine Accord - Blister, 100 tabletter (Pågående restsituation)\nKlozapin Ebb - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB) (Pågående restsituation)\nFroidir - Blister, 100 tabletter (Kommande restsituation)\n\nLicens: Förskrivare kan vända sig till apotek för information om tillgång på läkemedel från annat land. Se även: https://lakemedelsverket.se/licens",
+              "alternatives_info": "Utbytbara läkemedel: Froidir, Klozapin Ebb (parallellimporterat av Ebb Medical AB), Clozapine Accord, Clozapine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nClozapine Accord - Blister, 100 tabletter (Pågående restsituation)\nKlozapin Ebb - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB) (Pågående restsituation)\nFroidir - Blister, 100 tabletter (Pågående restsituation)\n\nLicens: Förskrivare kan vända sig till apotek för information om tillgång på läkemedel från annat land. Se även: https://lakemedelsverket.se/licens",
               "updated_at": "Ingen ändring sedan 2025-11-13"
             }
           ],
@@ -505774,11 +505758,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-10-19",
               "end_date": "2027-01-04",
-              "start_text": "2026-10-19 (Prognos)",
+              "start_text": "2026-10-19",
               "end_text": "2027-01-04 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Klozapin Ebb (parallellimporterat av Ebb Medical AB), Clozapine Accord, Clozapine Holsten, Clozapine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nClozapine Accord - Blister, 100 tabletter (Pågående restsituation)\nKlozapin Ebb - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB) (Pågående restsituation)\nClozapine Holsten - Blister, 100 tabletter (Pågående restsituation)",
@@ -506085,7 +506069,7 @@
               "start_text": "2025-08-19",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Problem med leveranskvoter, import- eller exportvolym",
-              "alternatives_info": "Utbytbara läkemedel: Froidir, Clozapine Accord, Clozapine Holsten, Clozapine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nClozapine Accord - Blister, 100 tabletter (Pågående restsituation)\nClozapine Holsten - Blister, 100 tabletter (Pågående restsituation)\nFroidir - Blister, 100 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Klozapin Ebb - Blister, 200 tabletter (parallellimporterat av Ebb Medical AB) (Pågående restsituation)\n\nLicens: Förskrivare kan vända sig till apotek för information om tillgång på läkemedel från annat land. Se även: https://lakemedelsverket.se/licens",
+              "alternatives_info": "Utbytbara läkemedel: Froidir, Clozapine Accord, Clozapine Holsten, Clozapine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nClozapine Accord - Blister, 100 tabletter (Pågående restsituation)\nClozapine Holsten - Blister, 100 tabletter (Pågående restsituation)\nFroidir - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Klozapin Ebb - Blister, 200 tabletter (parallellimporterat av Ebb Medical AB) (Pågående restsituation)\n\nLicens: Förskrivare kan vända sig till apotek för information om tillgång på läkemedel från annat land. Se även: https://lakemedelsverket.se/licens",
               "updated_at": "2026-09-04"
             }
           ],
@@ -677575,7 +677559,7 @@
               "start_text": "2027-05-01 (Prognos)",
               "end_text": "Saknas",
               "reason": "Marknadsrelaterade orsaker",
-              "alternatives_info": "Avregistreringsdatum: 2026-10-18\n\nUtbytbara läkemedel: Mirtazapin Krka, Mirtazapin Actavis, Mirtazapin Sandoz, Mirtazapin Orion, Mirtazapine Bluefish.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nMirtazapin Sandoz - Blister, 105 tabletter\nMirtazapin Krka - Blister, 100 x1 tabletter (endos)\nMirtazapin Orion - Burk, 100 tabletter\nMirtazapin Actavis - Blister, 100 tabletter\nMirtazapin Actavis - Burk, 100 tabletter (dosdispensering)\nMirtazapine Bluefish - Blister, 100 tabletter",
+              "alternatives_info": "Avregistreringsdatum: 2026-10-18\n\nInte utbytbart",
               "updated_at": "2026-09-22"
             }
           ],

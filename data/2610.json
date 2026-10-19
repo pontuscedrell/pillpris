@@ -35777,25 +35777,6 @@
         "Utbytesgrupps ID":112194
     },
     {
-        "Status":"Nej",
-        "Produktnamn":"Abetip",
-        "Varunummer":563660,
-        "Styrka":"10 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Ebastin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":319.49,
-        "Försäljningspris":388.73,
-        "Inköpspris per minsta enhet":3.19,
-        "Försäljningspris per minsta enhet":3.89,
-        "NPL ID":20210429000176,
-        "NPL pack ID":20211013100012,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":112194
-    },
-    {
         "Status":"PV",
         "Produktnamn":"Ebastin Ebb",
         "Varunummer":382532,
@@ -35926,25 +35907,6 @@
         "NPL pack ID":10010101130541,
         "Ursprung":"Original",
         "Företag":"Almirall ApS",
-        "Utbytesgrupps ID":112195
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Abetip",
-        "Varunummer":572042,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Ebastin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":486.49,
-        "Försäljningspris":559.9,
-        "Inköpspris per minsta enhet":4.86,
-        "Försäljningspris per minsta enhet":5.6,
-        "NPL ID":20210429000183,
-        "NPL pack ID":20211013100036,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
         "Utbytesgrupps ID":112195
     },
     {
