@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T15:33:01.931067+00:00",
+  "generatedAt": "2026-10-20T19:48:59.055667+00:00",
   "months": [
     2611,
     2610,
@@ -301135,14 +301135,6 @@
           "packaging": "Blister",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 153.49
-            },
-            "2610": {
-              "status": "PV",
-              "price": 135.49
-            },
             "2609": {
               "status": "R1",
               "price": 106.49
@@ -301270,6 +301262,24 @@
             "2401": {
               "status": "R1",
               "price": 181.89
+            }
+          }
+        },
+        {
+          "vnr": "30937",
+          "name": "Escitalopram Teva",
+          "company": "Teva Sweden AB",
+          "origin": "Generics",
+          "packaging": "",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "NEJ",
+              "price": 153.49
+            },
+            "2610": {
+              "status": "PV",
+              "price": 135.49
             }
           }
         }
@@ -454723,7 +454733,7 @@
               "price": 1414.34
             },
             "2610": {
-              "status": "R1",
+              "status": "PV",
               "price": 1311.84
             },
             "2609": {
@@ -455049,7 +455059,7 @@
               "price": 1810.52
             },
             "2610": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 1279.98
             },
             "2609": {
@@ -455177,7 +455187,7 @@
               "price": 1491.13
             },
             "2610": {
-              "status": "R2",
+              "status": "R1",
               "price": 1491.13
             },
             "2609": {
