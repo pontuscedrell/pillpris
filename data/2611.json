@@ -54664,25 +54664,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Glycerol Evolan",
-        "Varunummer":391393,
-        "Styrka":"200 mg\/g",
-        "Förpackningsstorleksgrupp":"G500",
-        "Substans":"Glycerol",
-        "Beredningsform":"Kräm",
-        "Storlek":500.0,
-        "Apotekens inköpspris":139.36,
-        "Försäljningspris":202.49,
-        "Inköpspris per minsta enhet":0.28,
-        "Försäljningspris per minsta enhet":0.4,
-        "NPL ID":20180212000075,
-        "NPL pack ID":20180530100075,
-        "Ursprung":"Generics",
-        "Företag":"Evolan Pharma AB",
-        "Utbytesgrupps ID":112700
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Cremarol",
         "Varunummer":113169,
         "Styrka":"200 mg\/g",
@@ -54701,7 +54682,7 @@
         "Utbytesgrupps ID":112700
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Miniderm®",
         "Varunummer":1474,
         "Styrka":"200 mg\/g",
@@ -54717,6 +54698,25 @@
         "NPL pack ID":20001215100060,
         "Ursprung":"Generics",
         "Företag":"ACO Hud Nordic AB",
+        "Utbytesgrupps ID":112700
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Glycerol Evolan",
+        "Varunummer":391393,
+        "Styrka":"200 mg\/g",
+        "Förpackningsstorleksgrupp":"G500",
+        "Substans":"Glycerol",
+        "Beredningsform":"Kräm",
+        "Storlek":500.0,
+        "Apotekens inköpspris":139.36,
+        "Försäljningspris":202.49,
+        "Inköpspris per minsta enhet":0.28,
+        "Försäljningspris per minsta enhet":0.4,
+        "NPL ID":20180212000075,
+        "NPL pack ID":20180530100075,
+        "Ursprung":"Generics",
+        "Företag":"Evolan Pharma AB",
         "Utbytesgrupps ID":112700
     },
     {
