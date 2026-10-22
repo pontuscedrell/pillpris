@@ -57912,7 +57912,7 @@
         "Utbytesgrupps ID":112746
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Atrovent",
         "Varunummer":196962,
         "Styrka":"20 mikrogram\/dos",
@@ -57931,7 +57931,7 @@
         "Utbytesgrupps ID":112315
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Atrovent",
         "Varunummer":196962,
         "Styrka":"20 mikrogram\/dos",
@@ -103855,25 +103855,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"OxyNorm®",
-        "Varunummer":129052,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"TN14",
-        "Substans":"Oxikodon",
-        "Beredningsform":"Tablett\/Kapsel",
-        "Storlek":14.0,
-        "Apotekens inköpspris":17.0,
-        "Försäljningspris":71.79,
-        "Inköpspris per minsta enhet":1.21,
-        "Försäljningspris per minsta enhet":5.13,
-        "NPL ID":20010601000105,
-        "NPL pack ID":20080227100251,
-        "Ursprung":"Original",
-        "Företag":"Mundipharma AB",
-        "Utbytesgrupps ID":112472
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Oxycodone G.L.",
         "Varunummer":114191,
         "Styrka":"5 mg",
@@ -103892,7 +103873,7 @@
         "Utbytesgrupps ID":112472
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Oxikodon Actavis",
         "Varunummer":60255,
         "Styrka":"5 mg",
@@ -103911,7 +103892,7 @@
         "Utbytesgrupps ID":112472
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Oxycodone Teva",
         "Varunummer":599167,
         "Styrka":"5 mg",
@@ -103927,6 +103908,25 @@
         "NPL pack ID":20140529100059,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":112472
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"OxyNorm®",
+        "Varunummer":129052,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"TN14",
+        "Substans":"Oxikodon",
+        "Beredningsform":"Tablett\/Kapsel",
+        "Storlek":14.0,
+        "Apotekens inköpspris":17.0,
+        "Försäljningspris":71.79,
+        "Inköpspris per minsta enhet":1.21,
+        "Försäljningspris per minsta enhet":5.13,
+        "NPL ID":20010601000105,
+        "NPL pack ID":20080227100251,
+        "Ursprung":"Original",
+        "Företag":"Mundipharma AB",
         "Utbytesgrupps ID":112472
     },
     {
@@ -129126,25 +129126,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Neupro®",
-        "Varunummer":526075,
-        "Styrka":"4 mg\/24 timmar",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Rotigotin",
-        "Beredningsform":"Depotplåster",
-        "Storlek":28.0,
-        "Apotekens inköpspris":733.2,
-        "Försäljningspris":812.78,
-        "Inköpspris per minsta enhet":26.19,
-        "Försäljningspris per minsta enhet":29.03,
-        "NPL ID":20041207000312,
-        "NPL pack ID":20260604100078,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":112515
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Neupro®",
         "Varunummer":55351,
         "Styrka":"4 mg\/24 timmar",
         "Förpackningsstorleksgrupp":"T18",
@@ -129162,7 +129143,7 @@
         "Utbytesgrupps ID":112515
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Rotigotine Medical Valley",
         "Varunummer":196837,
         "Styrka":"4 mg\/24 timmar",
@@ -129178,6 +129159,25 @@
         "NPL pack ID":20240626100201,
         "Ursprung":"Generics",
         "Företag":"Medical Valley Invest AB",
+        "Utbytesgrupps ID":112515
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Neupro®",
+        "Varunummer":526075,
+        "Styrka":"4 mg\/24 timmar",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Rotigotin",
+        "Beredningsform":"Depotplåster",
+        "Storlek":28.0,
+        "Apotekens inköpspris":733.2,
+        "Försäljningspris":812.78,
+        "Inköpspris per minsta enhet":26.19,
+        "Försäljningspris per minsta enhet":29.03,
+        "NPL ID":20041207000312,
+        "NPL pack ID":20260604100078,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":112515
     },
     {
@@ -132602,25 +132602,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Sitagliptin Krka",
-        "Varunummer":166726,
-        "Styrka":"25 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Sitagliptin",
-        "Beredningsform":"Tablett",
-        "Storlek":98.0,
-        "Apotekens inköpspris":37.61,
-        "Försäljningspris":94.56,
-        "Inköpspris per minsta enhet":0.38,
-        "Försäljningspris per minsta enhet":0.96,
-        "NPL ID":20181227000050,
-        "NPL pack ID":20190529100146,
-        "Ursprung":"Generics",
-        "Företag":"KRKA Sverige AB",
-        "Utbytesgrupps ID":111118
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Sitagliptin Medical Valley",
         "Varunummer":497445,
         "Styrka":"25 mg",
@@ -132639,7 +132620,7 @@
         "Utbytesgrupps ID":111118
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Sitagliptin STADA",
         "Varunummer":154854,
         "Styrka":"25 mg",
@@ -132674,6 +132655,25 @@
         "NPL pack ID":20200820100063,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
+        "Utbytesgrupps ID":111118
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Sitagliptin Krka",
+        "Varunummer":166726,
+        "Styrka":"25 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Sitagliptin",
+        "Beredningsform":"Tablett",
+        "Storlek":98.0,
+        "Apotekens inköpspris":37.61,
+        "Försäljningspris":94.56,
+        "Inköpspris per minsta enhet":0.38,
+        "Försäljningspris per minsta enhet":0.96,
+        "NPL ID":20181227000050,
+        "NPL pack ID":20190529100146,
+        "Ursprung":"Generics",
+        "Företag":"KRKA Sverige AB",
         "Utbytesgrupps ID":111118
     },
     {
