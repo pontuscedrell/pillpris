@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T19:43:20.690693+00:00",
+  "generatedAt": "2026-10-23T09:43:53.351281+00:00",
   "months": [
     2611,
     2610,
@@ -306392,7 +306392,19 @@
           "company": "KRKA Sverige AB",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [],
+          "shortages": [
+            {
+              "status": "Pågående restsituation",
+              "shortage_type": "Restsituation",
+              "start_date": "2026-10-22",
+              "end_date": "2026-10-29",
+              "start_text": "2026-10-22",
+              "end_text": "2026-10-29 (Prognos)",
+              "reason": "Transport- eller lagringsrelaterad orsak",
+              "alternatives_info": "Utbytbara läkemedel: Nexium, Esomeprazol SUN, Esomeprazol Actavis, Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Esomeprazol Viatris, Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Nexium (parallellimporterat av Medartuum AB), Esomeprazol NET, Ulcerex, Esomeprazol Hexal, Esomeprazol Krka (parallellimporterat av Ebb Medical AB), Esomeprazol Jubilant.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nUlcerex - Blister, 56 kapslar\nEsomeprazol Jubilant - Blister, 56 tabletter\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Actavis - Blister, 56 tabletter (Al)\nNexium - Blister, 50 x 1 tabletter(endos)\nEsomeprazol Viatris - Burk, 56 kapslar (Pågående restsituation)\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\n\nAlternativ förpackning: Esomeprazol Krka - Blister, 28 kapslar (OPA/Al/PVC/Al-folie)\nEsomeprazol Krka - Burk, 98 kapslar",
+              "updated_at": "2026-10-22"
+            }
+          ],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -306601,7 +306613,7 @@
               "start_text": "2025-07-01",
               "end_text": "2027-02-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Nexium, Esomeprazol SUN, Esomeprazol Actavis, Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Nexium (parallellimporterat av Medartuum AB), Esomeprazol Krka, Esomeprazol NET, Ulcerex, Esomeprazol Krka (parallellimporterat av Ebb Medical AB), Esomeprazol Hexal, Esomeprazol Jubilant.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nUlcerex - Blister, 56 kapslar\nEsomeprazol Jubilant - Blister, 56 tabletter\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Actavis - Blister, 56 tabletter (Al)\nNexium - Blister, 50 x 1 tabletter(endos)\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Krka - Blister, 56 kapslar (OPA/Al/PVC/Al-folie)",
+              "alternatives_info": "Utbytbara läkemedel: Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Nexium, Esomeprazol SUN, Esomeprazol Actavis, Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Esomeprazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Nexium (parallellimporterat av Medartuum AB), Esomeprazol Krka, Esomeprazol NET, Ulcerex, Esomeprazol Krka (parallellimporterat av Ebb Medical AB), Esomeprazol Hexal, Esomeprazol Jubilant.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nUlcerex - Blister, 56 kapslar\nEsomeprazol Jubilant - Blister, 56 tabletter\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Actavis - Blister, 56 tabletter (Al)\nNexium - Blister, 50 x 1 tabletter(endos)\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Abacus Medicine - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (parallellimporterat av Abacus Medicine A/S)\nEsomeprazol Krka - Blister, 56 kapslar (OPA/Al/PVC/Al-folie) (Pågående restsituation)",
               "updated_at": "2026-08-31"
             }
           ],
@@ -389457,13 +389469,13 @@
             {
               "status": "Kommande restsituation",
               "shortage_type": "Restsituation",
-              "start_date": "2026-10-26",
-              "end_date": "2026-11-09",
-              "start_text": "2026-10-26 (Prognos)",
-              "end_text": "2026-11-09 (Prognos)",
+              "start_date": "2026-11-30",
+              "end_date": "2026-12-07",
+              "start_text": "2026-11-30 (Prognos)",
+              "end_text": "2026-12-07 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Fluoxetine Accord, Fluoxetin Viatris, Fluoxetine Vitabalans, Fluoxetin Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nFluoxetin Viatris - Burk, 100 kapslar\nFluoxetine Accord - Blister, 100 kapslar (Pågående restsituation)\nFluoxetine Vitabalans - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Fluoxetine Orion - Blister, 30 kapslar (Pågående restsituation)",
-              "updated_at": "2026-10-05"
+              "updated_at": "2026-10-22"
             }
           ],
           "history": {
@@ -451440,19 +451452,7 @@
           "company": "KRKA Sverige AB",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-04-15",
-              "end_date": "2026-10-23",
-              "start_text": "2026-04-15",
-              "end_text": "2026-10-23 (Prognos)",
-              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Procoralan, Ivabradine Anpharm, Ivabradin Medical Valley, Ivabradine Zentiva, Ivabradine Accord, Ivabradin Medical Valley (parallellimporterat av Ebb Medical AB).\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nIvabradin Medical Valley - Blister, 112 tabletter (parallellimporterat av Ebb Medical AB)\nIvabradine Accord - Blister, 112 x 1 tabletter (endos) (PD: Abacus Medicine A/S)\nProcoralan - Blister, 112 tabletter (PD: Medartuum AB)\nIvabradine Zentiva - Blister, 112 tabletter (PD: Ebb Medical AB)\nIvabradine Anpharm - Blister, 112 tabletter (PD: 2 care 4)\nIvabradin Medical Valley - Blister, 112 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Ivabradin Krka - Blister, 56 tabletter\n\nLicens: Förskrivare kan vända sig till apotek för information om tillgång på läkemedel från annat land. Se även: https://lakemedelsverket.se/licens",
-              "updated_at": "2026-09-24"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -451753,7 +451753,7 @@
               "start_text": "2026-09-11",
               "end_text": "2026-11-15 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Procoralan, Ivabradine Anpharm, Ivabradin Krka, Ivabradine Zentiva, Ivabradine Accord, Ivabradin Medical Valley (parallellimporterat av Ebb Medical AB).\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nIvabradin Medical Valley - Blister, 112 tabletter (parallellimporterat av Ebb Medical AB)\nIvabradine Accord - Blister, 112 x 1 tabletter (endos) (PD: Abacus Medicine A/S)\nProcoralan - Blister, 112 tabletter (PD: Medartuum AB)\nIvabradine Zentiva - Blister, 112 tabletter (PD: Ebb Medical AB)\nIvabradine Anpharm - Blister, 112 tabletter (PD: 2 care 4)\nIvabradin Krka - Blister, 112 tabletter (Pågående restsituation)\n\nAlternativ styrka: Ivabradin Medical Valley,  7,5 mg, 112 tabletter\n\nLicens: Förskrivare kan vända sig till apotek för information om tillgång på läkemedel från annat land. Se även: https://lakemedelsverket.se/licens",
+              "alternatives_info": "Utbytbara läkemedel: Procoralan, Ivabradine Anpharm, Ivabradin Krka, Ivabradine Zentiva, Ivabradine Accord, Ivabradin Medical Valley (parallellimporterat av Ebb Medical AB).\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nIvabradin Medical Valley - Blister, 112 tabletter (parallellimporterat av Ebb Medical AB)\nIvabradine Accord - Blister, 112 x 1 tabletter (endos) (PD: Abacus Medicine A/S)\nProcoralan - Blister, 112 tabletter (PD: Medartuum AB)\nIvabradine Zentiva - Blister, 112 tabletter (PD: Ebb Medical AB)\nIvabradine Anpharm - Blister, 112 tabletter (PD: 2 care 4)\nIvabradin Krka - Blister, 112 tabletter\n\nAlternativ styrka: Ivabradin Medical Valley,  7,5 mg, 112 tabletter\n\nLicens: Förskrivare kan vända sig till apotek för information om tillgång på läkemedel från annat land. Se även: https://lakemedelsverket.se/licens",
               "updated_at": "2026-09-28"
             }
           ],
@@ -468855,7 +468855,7 @@
               "start_text": "2026-08-08",
               "end_text": "2027-02-05 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Kaliumklorid Orifarm, Kaliumklorid EQL Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaliumklorid EQL Pharma - Burk, 100 tabletter (Kommande restsituation)\nKaliumklorid Orifarm - Burk, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Kaleorid - Burk, 250 tabletter (Pågående restsituation)",
+              "alternatives_info": "Dispens: Dispens beviljad för försäljning av läkemedlet i utländsk förpackning avsedd för den norska marknaden. Dispensen gäller längst till och med 2026-12-31.\nLänk till sammanfattning av dispensbeslut: https://docetp.mpa.se/LMF/Kaleorid, burk 100 depottablett, sammanfattning av beslut, giltigt fr.o.m 2026-10-22 t.o.m 2026-12-31_09001bee8535c40c.pdf\n\nUtbytbara läkemedel: Kaliumklorid Orifarm, Kaliumklorid EQL Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaliumklorid EQL Pharma - Burk, 100 tabletter (Kommande restsituation)\nKaliumklorid Orifarm - Burk, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Kaleorid - Burk, 250 tabletter (Pågående restsituation)",
               "updated_at": "2026-08-14"
             }
           ],
@@ -469340,7 +469340,7 @@
               "start_text": "2026-10-02",
               "end_text": "2027-02-05 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Kaliumklorid Orifarm, Kaliumklorid EQL Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaliumklorid Orifarm - Burk, 250 tabletter (Pågående restsituation)\nKaliumklorid EQL Pharma - Burk, 250 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Kaleorid - Burk, 100 tabletter (Pågående restsituation)",
+              "alternatives_info": "Dispens: Dispens beviljad för försäljning av läkemedlet i utländsk förpackning avsedd för den norska marknaden. Dispensen gäller längst till och med 2026-12-31.\nLänk till sammanfattning av dispensbeslut: https://docetp.mpa.se/LMF/Kaleorid, burk 100 depottablett, sammanfattning av beslut, giltigt fr.o.m 2026-10-22 t.o.m 2026-12-31_09001bee8535c40c.pdf\n\nUtbytbara läkemedel: Kaliumklorid Orifarm, Kaliumklorid EQL Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaliumklorid Orifarm - Burk, 250 tabletter (Pågående restsituation)\nKaliumklorid EQL Pharma - Burk, 250 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Kaleorid - Burk, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-08-14"
             }
           ],
@@ -784194,7 +784194,19 @@
           "company": "Mundipharma AB",
           "origin": "Original",
           "packaging": "Blister",
-          "shortages": [],
+          "shortages": [
+            {
+              "status": "Pågående restsituation",
+              "shortage_type": "Restsituation",
+              "start_date": "2026-10-15",
+              "end_date": "2026-10-25",
+              "start_text": "2026-10-15",
+              "end_text": "2026-10-25 (Prognos)",
+              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
+              "alternatives_info": "Utbytbara läkemedel: Oxikodon Actavis, Oxycodone Teva, Oxycodone Accord, Oxycodone G.L..\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nOxikodon Actavis - Blister (barnskyddande), 14 kapslar\nOxycodone Teva - Blister, 14 kapslar\nOxycodone Accord - Blister, 14 kapslar (Pågående restsituation)\nOxycodone G.L. - Blister, 14 tabletter\n\nAlternativ förpackning: OxyNorm - Blister, 28 kapslar\nOxyNorm - Blister, 98 kapslar",
+              "updated_at": "2026-10-22"
+            }
+          ],
           "history": {
             "2611": {
               "status": "R1",
@@ -799979,7 +799991,7 @@
               "start_text": "2026-09-18",
               "end_text": "2026-10-31 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Paliperidone Viatris, Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone Exeltis, Paliperidone STADA, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Palmeux, Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Viatris - Förfylld spruta, 1 st (Kommande restsituation)\nPaliperidone Exeltis - Förfylld spruta, 1 st (Kommande restsituation)\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPalmeux - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)",
+              "alternatives_info": "Utbytbara läkemedel: Paliperidone Viatris, Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone Exeltis, Paliperidone STADA, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Palmeux, Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Viatris - Förfylld spruta, 1 st (Kommande restsituation)\nPaliperidone Exeltis - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPalmeux - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)",
               "updated_at": "2026-09-17"
             }
           ],
@@ -800193,19 +800205,7 @@
           "company": "Exeltis Sverige AB",
           "origin": "Generics",
           "packaging": "Förfylld spruta",
-          "shortages": [
-            {
-              "status": "Kommande restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-11-01",
-              "end_date": "2026-11-15",
-              "start_text": "2026-11-01 (Prognos)",
-              "end_text": "2026-11-15 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Paliperidone Viatris, Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone STADA, Niapelf, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Palmeux, Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Viatris - Förfylld spruta, 1 st (Kommande restsituation)\nNiapelf - Förfylld spruta, 1 st (Pågående restsituation)\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPalmeux - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)",
-              "updated_at": "2026-10-12"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2512": {
               "status": "NEJ",
@@ -800301,7 +800301,7 @@
               "start_text": "2027-01-15 (Prognos)",
               "end_text": "2027-03-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone Exeltis, Paliperidone STADA, Niapelf, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Palmeux, Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPalmeux - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Exeltis - Förfylld spruta, 1 st (Kommande restsituation)\nNiapelf - Förfylld spruta, 1 st (Pågående restsituation)\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))",
+              "alternatives_info": "Utbytbara läkemedel: Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone Exeltis, Paliperidone STADA, Niapelf, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Palmeux, Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPalmeux - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Exeltis - Förfylld spruta, 1 st\nNiapelf - Förfylld spruta, 1 st (Pågående restsituation)\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))",
               "updated_at": "2026-10-19"
             }
           ],
@@ -800342,7 +800342,7 @@
               "start_text": "2026-09-18",
               "end_text": "2026-10-31 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Paliperidone Viatris, Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone Exeltis, Paliperidone STADA, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Palmeux, Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Viatris - Förfylld spruta, 1 st (Kommande restsituation)\nPaliperidone Exeltis - Förfylld spruta, 1 st (Kommande restsituation)\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPalmeux - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)",
+              "alternatives_info": "Utbytbara läkemedel: Paliperidone Viatris, Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone Exeltis, Paliperidone STADA, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Palmeux, Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Viatris - Förfylld spruta, 1 st (Kommande restsituation)\nPaliperidone Exeltis - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPalmeux - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)",
               "updated_at": "2026-09-17"
             }
           ],
@@ -800887,19 +800887,7 @@
           "company": "Exeltis Sverige AB",
           "origin": "Generics",
           "packaging": "Förfylld spruta",
-          "shortages": [
-            {
-              "status": "Kommande restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-11-01",
-              "end_date": "2026-11-15",
-              "start_text": "2026-11-01 (Prognos)",
-              "end_text": "2026-11-15 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Paliperidone Viatris, Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone STADA, Niapelf, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Palmeux, Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Viatris - Förfylld spruta, 1 st (Kommande restsituation)\nNiapelf - Förfylld spruta, 1 st (Pågående restsituation)\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPalmeux - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)",
-              "updated_at": "2026-10-12"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -801036,7 +801024,7 @@
               "start_text": "2027-01-15 (Prognos)",
               "end_text": "2027-03-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone Exeltis, Paliperidone STADA, Niapelf, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Palmeux, Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPalmeux - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Exeltis - Förfylld spruta, 1 st (Kommande restsituation)\nNiapelf - Förfylld spruta, 1 st (Pågående restsituation)\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))",
+              "alternatives_info": "Utbytbara läkemedel: Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone Exeltis, Paliperidone STADA, Niapelf, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Palmeux, Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPalmeux - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Exeltis - Förfylld spruta, 1 st\nNiapelf - Förfylld spruta, 1 st (Pågående restsituation)\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))",
               "updated_at": "2026-10-19"
             }
           ],
@@ -801208,7 +801196,7 @@
               "start_text": "2025-12-09",
               "end_text": "2027-05-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Paliperidone Viatris, Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone Exeltis, Paliperidone STADA, Niapelf, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Viatris - Förfylld spruta, 1 st (Kommande restsituation)\nNiapelf - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidone Exeltis - Förfylld spruta, 1 st (Kommande restsituation)\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)",
+              "alternatives_info": "Utbytbara läkemedel: Paliperidone Viatris, Paliperidon Zentiva, Palmeux (parallellimporterat av 2care4 ApS), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Xeplion, Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Medartuum AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Orifarm AB), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidone Exeltis, Paliperidone STADA, Niapelf, Paliperidon Bijon (parallellimporterat av UAB BIJON medica), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva (parallellimporterat av Abacus Medicine A/S), Paliperidon Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Medartuum AB)\nPaliperidone STADA - Förfylld spruta, 1 st\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st\nPaliperidone Viatris - Förfylld spruta, 1 st (Kommande restsituation)\nNiapelf - Förfylld spruta, 1 st (Pågående restsituation)\nPaliperidone Exeltis - Förfylld spruta, 1 st\nPaliperidon Zentiva - Förfylld spruta, 1 st\nPalmeux - Förfylld spruta, 1 st (parallellimporterat av 2care4 ApS)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st (PD: Abacus Medicine A/S))\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)\nXeplion - Förfylld spruta, 1 st\nXeplion - Förfylld spruta, 1 st (PD: Medartuum AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Orifarm AB)\nPaliperidon Teva - Förfylld spruta, 1 st (parallellimporterat av Abacus Medicine A/S)",
               "updated_at": "2026-10-16"
             }
           ],
@@ -883522,13 +883510,13 @@
             {
               "status": "Kommande restsituation",
               "shortage_type": "Restsituation",
-              "start_date": "2026-10-26",
-              "end_date": "2026-11-09",
-              "start_text": "2026-10-26 (Prognos)",
-              "end_text": "2026-11-09 (Prognos)",
+              "start_date": "2026-11-30",
+              "end_date": "2026-12-07",
+              "start_text": "2026-11-30 (Prognos)",
+              "end_text": "2026-12-07 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Ramipril Krka, Ramipril HEXAL, Ramipril Teva, Ramipril STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRamipril Teva - Blister, 100 tabletter\nRamipril STADA - Blister, 100 tabletter\nRamipril HEXAL - Burk, 100 tabletter\nRamipril Krka - Blister, 100 tabletter\nRamipril STADA - Blister, 105 tabletter",
-              "updated_at": "2026-08-21"
+              "updated_at": "2026-10-22"
             }
           ],
           "history": {
@@ -924720,7 +924708,19 @@
           "company": "KRKA Sverige AB",
           "origin": "Generics",
           "packaging": "",
-          "shortages": [],
+          "shortages": [
+            {
+              "status": "Kommande restsituation",
+              "shortage_type": "Restsituation",
+              "start_date": "2026-10-25",
+              "end_date": "2026-12-03",
+              "start_text": "2026-10-25 (Prognos)",
+              "end_text": "2026-12-03 (Prognos)",
+              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
+              "alternatives_info": "Utbytbara läkemedel: Rivastigmine Actavis, Rivastigmin Orion (parallellimporterat av Ebb Medical AB), Rivastigmin Orion (parallellimporterat av 2care4 ApS), Rivastigmine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRivastigmine Sandoz - Blister, 28 kapslar (PD: Abacus Medicine A/S)\nRivastigmin Orion - Blister, 28 kapslar (parallellimporterat av 2care4 ApS)\nRivastigmin Orion - Blister, 28 kapslar (parallellimporterat av Ebb Medical AB)\n\nAlternativ förpackning: Nimvastid - Blister, 112 kapslar",
+              "updated_at": "2026-10-22"
+            }
+          ],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -990184,7 +990184,19 @@
           "company": "KRKA Sverige AB",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [],
+          "shortages": [
+            {
+              "status": "Pågående restsituation",
+              "shortage_type": "Restsituation",
+              "start_date": "2026-10-22",
+              "end_date": "2026-12-31",
+              "start_text": "2026-10-22",
+              "end_text": "2026-12-31 (Prognos)",
+              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
+              "alternatives_info": "Utbytbara läkemedel: Sitagliptin Glenmark, Sitagliptin Grindeks, Sitagliptin STADA, Sitagliptin Accord, Sitagliptin Zentiva k.s., Sitagliptin Medical Valley, Sitagliptin Viatris, Sitagliptin Viatris Pharma, Sitagliptin Teva, Sitagliptin Sandoz, Januvia.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSitagliptin Zentiva k.s. - Blister, 98 tabletter (PVC/PVDC//Al)\nJanuvia - Blister, 98 tabletter (PD: Medartuum AB)\nSitagliptin Viatris Pharma - Blister, 98 tabletter (Pågående restsituation)\nSitagliptin Glenmark - Blister, 98 tabletter\nSitagliptin STADA - Burk, 100 tabletter\nSitagliptin Sandoz - Blister, 98 x 1 tabletter (endos)\nSitagliptin Accord - Blister, 100 tabletter\nSitagliptin Accord - Blister, 100 tabletter (Al)\nSitagliptin Grindeks - Blister, 98 tabletter\nSitagliptin Medical Valley - Blister, 98 tabletter\n\nAlternativ förpackning: Sitagliptin Krka - Blister, 28 tabletter",
+              "updated_at": "2026-10-22"
+            }
+          ],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -991131,7 +991143,7 @@
               "start_text": "2026-08-30",
               "end_text": "2026-11-16 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Sitagliptin STADA, Sitagliptin Glenmark, Sitagliptin Grindeks, Sitagliptin Zentiva k.s., Sitagliptin Accord, Sitagliptin Krka, Januvia, Sitagliptin Medical Valley, Sitagliptin Viatris, Sitagliptin Sandoz, Sitagliptin Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSitagliptin Zentiva k.s. - Blister, 98 tabletter (PVC/PVDC//Al)\nJanuvia - Blister, 98 tabletter (PD: Medartuum AB)\nSitagliptin Krka - Blister, 98 tabletter\nSitagliptin Glenmark - Blister, 98 tabletter\nSitagliptin Sandoz - Blister, 98 x 1 tabletter (endos)\nSitagliptin STADA - Burk, 100 tabletter\nSitagliptin Accord - Blister, 100 tabletter\nSitagliptin Grindeks - Blister, 98 tabletter\nSitagliptin Medical Valley - Blister, 98 tabletter\nSitagliptin Accord - Blister, 100 tabletter (Al)",
+              "alternatives_info": "Utbytbara läkemedel: Sitagliptin STADA, Sitagliptin Glenmark, Sitagliptin Grindeks, Sitagliptin Zentiva k.s., Sitagliptin Accord, Sitagliptin Krka, Januvia, Sitagliptin Medical Valley, Sitagliptin Viatris, Sitagliptin Sandoz, Sitagliptin Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSitagliptin Zentiva k.s. - Blister, 98 tabletter (PVC/PVDC//Al)\nJanuvia - Blister, 98 tabletter (PD: Medartuum AB)\nSitagliptin Krka - Blister, 98 tabletter (Pågående restsituation)\nSitagliptin Glenmark - Blister, 98 tabletter\nSitagliptin Sandoz - Blister, 98 x 1 tabletter (endos)\nSitagliptin STADA - Burk, 100 tabletter\nSitagliptin Accord - Blister, 100 tabletter\nSitagliptin Grindeks - Blister, 98 tabletter\nSitagliptin Medical Valley - Blister, 98 tabletter\nSitagliptin Accord - Blister, 100 tabletter (Al)",
               "updated_at": "2026-10-19"
             }
           ],
@@ -1029350,7 +1029362,19 @@
           "company": "KRKA Sverige AB",
           "origin": "Generics",
           "packaging": "Burk",
-          "shortages": [],
+          "shortages": [
+            {
+              "status": "Pågående restsituation",
+              "shortage_type": "Restsituation",
+              "start_date": "2026-10-22",
+              "end_date": "2027-02-04",
+              "start_text": "2026-10-22",
+              "end_text": "2027-02-04 (Prognos)",
+              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
+              "alternatives_info": "Utbytbara läkemedel: Palexia Depot, Tapentadol Depot STADA, Tapentadol Depot Medical Valley.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nTapentadol Depot Medical Valley - Blister 100 tabletter\nTapentadol Depot STADA - Blister, 100 x 1 tabletter (endos)\nPalexia Depot - Blister, 100 tabletter\n\nAlternativ förpackning: Tapentadol Depot Krka - Burk, 30 tabletter",
+              "updated_at": "2026-10-22"
+            }
+          ],
           "history": {
             "2611": {
               "status": "NEJ",
