@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T19:45:13.142931+00:00",
+  "generatedAt": "2026-10-24T09:16:59.586212+00:00",
   "months": [
     2611,
     2610,
@@ -101169,19 +101169,7 @@
           "company": "KRKA Sverige AB",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2025-04-28",
-              "end_date": "2027-02-04",
-              "start_text": "2025-04-28",
-              "end_text": "2027-02-04 (Prognos)",
-              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Azithromycin Sandoz, Azithromycin STADA, Azithromycin Viatris, Azithromycin Jubilant.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAzithromycin Sandoz - Blister, 6 tabletter\nAzithromycin Viatris - Blister, 6 tabletter\nAzithromycin STADA - Blister, 6 tabletter\nAzithromycin Jubilant - Blister, 6 tabletter",
-              "updated_at": "2026-06-11"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -449881,19 +449869,7 @@
           "company": "Teva Sweden AB",
           "origin": "Generics",
           "packaging": "",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-10-01",
-              "end_date": "2026-10-30",
-              "start_text": "2026-10-01",
-              "end_text": "2026-10-30 (Prognos)",
-              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Itrakonazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Itrakonazol STADA, Itrakonazol Ebb (parallellimporterat av Ebb Medical AB), Itrakonazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Sporanox.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nItrakonazol STADA - Blister, 30 kapslar (Pågående restsituation)\nSporanox - Blister, 28 kapslar\nItrakonazol Ebb - Blister, 28 kapslar (parallellimporterat av Ebb Medical AB)",
-              "updated_at": "2026-09-29"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -450194,7 +450170,7 @@
               "start_text": "2025-12-01",
               "end_text": "2027-03-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Itrakonazol Actavis, Itrakonazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Itrakonazol Ebb (parallellimporterat av Ebb Medical AB), Itrakonazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Sporanox.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSporanox - Blister, 28 kapslar\nItrakonazol Ebb - Blister, 28 kapslar (parallellimporterat av Ebb Medical AB)\nItrakonazol Actavis - Blister, 28 kapslar (Pågående restsituation)\n\nAlternativ förpackning: Itrakonazol STADA - Blister, 4 kapslar\nItrakonazol STADA - Blister, 15 kapslar (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Itrakonazol Actavis, Itrakonazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Itrakonazol Ebb (parallellimporterat av Ebb Medical AB), Itrakonazol Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Sporanox.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSporanox - Blister, 28 kapslar\nItrakonazol Ebb - Blister, 28 kapslar (parallellimporterat av Ebb Medical AB)\nItrakonazol Actavis - Blister, 28 kapslar\n\nAlternativ förpackning: Itrakonazol STADA - Blister, 4 kapslar\nItrakonazol STADA - Blister, 15 kapslar (Pågående restsituation)",
               "updated_at": "2026-09-23"
             }
           ],
@@ -469013,7 +468989,7 @@
               "start_text": "2026-11-15 (Prognos)",
               "end_text": "2027-02-28 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Kaliumklorid Orifarm, Kaleorid.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaleorid - Burk, 100 tabletter (Pågående restsituation)\nKaliumklorid Orifarm - Burk, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Kaliumklorid EQL Pharma - Burk, 250 tabletter (Kommande restsituation)",
+              "alternatives_info": "Dispens: Dispens beviljad för försäljning av läkemedlet i utländsk förpackning avsedd för den norska marknaden. Dispensen gäller längst till och med 2027-03-28.\nLänk till sammanfattning av dispensbeslut: https://docetp.mpa.se/LMF/Kaliumklorid EQL Pharma, burk, 100 depottabletter, sammanfattning av beslut, giltigt fr.o.m 2026-10-23 t.o.m 2027-03-28_09001bee8536210f.pdf\n\nUtbytbara läkemedel: Kaliumklorid Orifarm, Kaleorid.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaleorid - Burk, 100 tabletter (Pågående restsituation)\nKaliumklorid Orifarm - Burk, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Kaliumklorid EQL Pharma - Burk, 250 tabletter (Kommande restsituation)",
               "updated_at": "2026-08-27"
             }
           ],
@@ -469498,7 +469474,7 @@
               "start_text": "2026-11-15 (Prognos)",
               "end_text": "2027-02-28 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Kaliumklorid Orifarm, Kaleorid.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaleorid - Burk, 250 tabletter (Pågående restsituation)\nKaliumklorid Orifarm - Burk, 250 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Kaliumklorid EQL Pharma - Burk, 100 tabletter (Kommande restsituation)",
+              "alternatives_info": "Dispens: Dispens beviljad för försäljning av läkemedlet i utländsk förpackning avsedd för den norska marknaden. Dispensen gäller längst till och med 2027-03-28.\nLänk till sammanfattning av dispensbeslut: https://docetp.mpa.se/LMF/Kaliumklorid EQL Pharma, burk, 100 depottabletter, sammanfattning av beslut, giltigt fr.o.m 2026-10-23 t.o.m 2027-03-28_09001bee8536210f.pdf\n\nUtbytbara läkemedel: Kaliumklorid Orifarm, Kaleorid.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKaleorid - Burk, 250 tabletter (Pågående restsituation)\nKaliumklorid Orifarm - Burk, 250 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Kaliumklorid EQL Pharma - Burk, 100 tabletter (Kommande restsituation)",
               "updated_at": "2026-08-27"
             }
           ],
@@ -518593,12 +518569,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2025-05-10",
-              "end_date": "2026-12-01",
+              "end_date": "2027-02-28",
               "start_text": "2025-05-10",
-              "end_text": "2026-12-01 (Prognos)",
+              "end_text": "2027-02-28 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Quetiapin Medical Valley, Quetiapine Accord, Quetiapin Krka, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapine Teva, Biquetan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (Kommande restsituation)\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)",
-              "updated_at": "2026-08-17"
+              "updated_at": "2026-10-23"
             }
           ],
           "history": {
@@ -522575,7 +522551,7 @@
               "start_text": "2025-04-01",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Quetiapine Teva, Seroquel Depot, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Medical Valley, Quetiapin Krka, Quetiapine Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Biquetan - Blister, 10 tabletter (Pågående restsituation)\nBiquetan - Blister, 60 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Quetiapine Teva, Seroquel Depot, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Medical Valley, Quetiapin Krka, Quetiapine Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Biquetan - Blister, 10 tabletter (Pågående restsituation)\nBiquetan - Blister, 60 tabletter (Pågående restsituation)",
               "updated_at": "2026-08-13"
             }
           ],
@@ -522733,7 +522709,7 @@
               "start_text": "2025-06-10",
               "end_text": "2026-12-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Quetiapine Teva, Seroquel Depot, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Medical Valley, Quetiapin Krka, Quetiapine Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Quetiapin Hexal - Burk, 120 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Quetiapine Teva, Seroquel Depot, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Medical Valley, Quetiapin Krka, Quetiapine Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Quetiapin Hexal - Burk, 120 tabletter (Pågående restsituation)",
               "updated_at": "2026-08-03"
             }
           ],
@@ -523037,7 +523013,7 @@
               "start_text": "2024-12-06",
               "end_text": "2027-12-31 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Seroquel Depot, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Krka, Quetiapine Accord, Quetiapine Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Seroquel Depot, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Krka, Quetiapine Accord, Quetiapine Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-07-02"
             }
           ],
@@ -523195,7 +523171,7 @@
               "start_text": "2023-06-27",
               "end_text": "2027-04-30 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Quetiapine Teva, Seroquel Depot, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Medical Valley, Quetiapin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Quetiapine Accord - Blister, 60 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Quetiapine Teva, Seroquel Depot, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Medical Valley, Quetiapin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Quetiapine Accord - Blister, 60 tabletter (Pågående restsituation)",
               "updated_at": "2026-08-18"
             }
           ],
@@ -523353,7 +523329,7 @@
               "start_text": "2026-08-30",
               "end_text": "2026-11-30 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Seroquel Depot, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Medical Valley, Quetiapin Krka, Quetiapine Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Quetiapin Hexal, Seroquel Depot, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Medical Valley, Quetiapin Krka, Quetiapine Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-09-11"
             }
           ],
@@ -523520,19 +523496,7 @@
           "company": "Cheplapharm Arzneimittel GmbH",
           "origin": "Original",
           "packaging": "",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2025-05-01",
-              "end_date": "2026-12-01",
-              "start_text": "2025-05-01",
-              "end_text": "2026-12-01 (Prognos)",
-              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Viktig information: Delleveranser kommer under restperioden, men de kommer inte att täcka efterfrågan\n\nUtbytbara läkemedel: Quetiapin Hexal, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB), Quetiapin Medical Valley, Quetiapin Krka, Quetiapine Accord, Quetiapine Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Accord - Blister, 100 tabletter (Pågående restsituation)",
-              "updated_at": "2026-08-17"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -528158,12 +528122,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2025-05-01",
-              "end_date": "2026-12-01",
+              "end_date": "2027-04-30",
               "start_text": "2025-05-01",
-              "end_text": "2026-12-01 (Prognos)",
+              "end_text": "2027-04-30 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Quetiapine Teva, Quetiapin Krka, Quetiapine Accord, Quetiapin Medical Valley, Quetiapin Hexal, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB).\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Teva - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nQuetiapin Krka - Blister, 100 tabletter\nQuetiapine Accord - Blister, 100 tabletter (plast/Al)\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nQuetiapin Hexal - Blister, 100 tabletter (Pågående restsituation)",
-              "updated_at": "2026-08-17"
+              "updated_at": "2026-10-23"
             }
           ],
           "history": {
@@ -677620,19 +677584,7 @@
           "company": "Orifarm Generics AB",
           "origin": "Generics",
           "packaging": "",
-          "shortages": [
-            {
-              "status": "Försäljning kommer upphöra permanent (Avregistrerad 2026-10-18)",
-              "shortage_type": "Försäljning upphör permanent",
-              "start_date": "2027-05-01",
-              "end_date": "",
-              "start_text": "2027-05-01 (Prognos)",
-              "end_text": "Saknas",
-              "reason": "Marknadsrelaterade orsaker",
-              "alternatives_info": "Avregistreringsdatum: 2026-10-18\n\nInte utbytbart",
-              "updated_at": "2026-09-22"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2609": {
               "status": "NEJ",
@@ -698670,7 +698622,7 @@
               "start_text": "2026-08-19",
               "end_text": "2026-11-12 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Moxifloxacin Orion, Rivomoxi, Avelox (parallellimporterat av Ebb Medical AB).\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nMoxifloxacin 2care4 - Blister, 10 tabletter (parallellimporterat av 2care4 ApS)\nAvelox - Blister, 10 tabletter (parallellimporterat av Ebb Medical AB)\nMoxifloxacin Orion - Blister, 10 tabletter (Pågående restsituation)\nMoxifloxacin Abacus Medicine - Blister, 10 tabletter (parallellimporterat av Abacus Medicine A/S)\n\nAlternativ förpackning: Moxifloxacin Krka - Blister, 5 tabletter\nMoxifloxacin Krka - Blister, 7 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Moxifloxacin Orion, Rivomoxi, Avelox (parallellimporterat av Ebb Medical AB).\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nMoxifloxacin 2care4 - Blister, 10 tabletter (parallellimporterat av 2care4 ApS)\nRivomoxi - Blister, 10 tabletter\nAvelox - Blister, 10 tabletter (parallellimporterat av Ebb Medical AB)\nMoxifloxacin Orion - Blister, 10 tabletter (Pågående restsituation)\nMoxifloxacin Abacus Medicine - Blister, 10 tabletter (parallellimporterat av Abacus Medicine A/S)\n\nAlternativ förpackning: Moxifloxacin Krka - Blister, 5 tabletter\nMoxifloxacin Krka - Blister, 7 tabletter",
               "updated_at": "2026-08-20"
             }
           ],
@@ -698828,7 +698780,7 @@
               "start_text": "2026-05-04",
               "end_text": "2027-06-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Rivomoxi, Avelox (parallellimporterat av Ebb Medical AB), Moxifloxacin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nMoxifloxacin Krka - Blister, 10 tabletter (Pågående restsituation)\nMoxifloxacin 2care4 - Blister, 10 tabletter (parallellimporterat av 2care4 ApS)\nAvelox - Blister, 10 tabletter (parallellimporterat av Ebb Medical AB)\nMoxifloxacin Abacus Medicine - Blister, 10 tabletter (parallellimporterat av Abacus Medicine A/S)\n\nAlternativ förpackning: Moxifloxacin Orion - Blister, 7 tabletter\nMoxifloxacin Orion - Blister, 5 tabletter (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Rivomoxi, Avelox (parallellimporterat av Ebb Medical AB), Moxifloxacin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nMoxifloxacin 2care4 - Blister, 10 tabletter (parallellimporterat av 2care4 ApS)\nMoxifloxacin Krka - Blister, 10 tabletter (Pågående restsituation)\nRivomoxi - Blister, 10 tabletter\nAvelox - Blister, 10 tabletter (parallellimporterat av Ebb Medical AB)\nMoxifloxacin Abacus Medicine - Blister, 10 tabletter (parallellimporterat av Abacus Medicine A/S)\n\nAlternativ förpackning: Moxifloxacin Orion - Blister, 7 tabletter\nMoxifloxacin Orion - Blister, 5 tabletter (Kommande restsituation)",
               "updated_at": "2026-09-17"
             }
           ],
@@ -699499,7 +699451,7 @@
               "start_text": "2026-11-23 (Prognos)",
               "end_text": "2026-12-14 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Rivomoxi, Avelox (parallellimporterat av Ebb Medical AB), Moxifloxacin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nMoxifloxacin 2care4 - Blister, 5 tabletter (parallellimporterat av 2care4 ApS)\nAvelox - Blister, 5 tabletter (parallellimporterat av Ebb Medical AB)\nMoxifloxacin Krka - Blister, 5 tabletter\n\nAlternativ förpackning: Moxifloxacin Orion - Blister, 7 tabletter\nMoxifloxacin Orion - Blister, 10 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Rivomoxi, Avelox (parallellimporterat av Ebb Medical AB), Moxifloxacin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRivomoxi - Blister, 5 tabletter\nMoxifloxacin Krka - Blister, 5 tabletter\nMoxifloxacin 2care4 - Blister, 5 tabletter (parallellimporterat av 2care4 ApS)\nAvelox - Blister, 5 tabletter (parallellimporterat av Ebb Medical AB)\n\nAlternativ förpackning: Moxifloxacin Orion - Blister, 7 tabletter\nMoxifloxacin Orion - Blister, 10 tabletter (Pågående restsituation)",
               "updated_at": "2026-09-17"
             }
           ],
@@ -700321,19 +700273,7 @@
           "company": "Holsten Pharma GmbH",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2025-09-01",
-              "end_date": "2026-10-31",
-              "start_text": "2025-09-01",
-              "end_text": "2026-10-31 (Prognos)",
-              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Moxifloxacin Orion, Avelox (parallellimporterat av Ebb Medical AB), Moxifloxacin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nMoxifloxacin Orion - Blister, 7 tabletter\nMoxifloxacin Abacus Medicine - Blister, 7 tabletter (parallellimporterat av Abacus Medicine A/S)\nMoxifloxacin Krka - Blister, 7 tabletter\nAvelox - Blister, 7 tabletter (parallellimporterat av Ebb Medical AB)",
-              "updated_at": "2026-08-03"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -932509,19 +932449,7 @@
           "company": "Teva Sweden AB",
           "origin": "Generics",
           "packaging": "Påse",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2025-10-23",
-              "end_date": "2026-11-15",
-              "start_text": "2025-10-23",
-              "end_text": "2026-11-15 (Prognos)",
-              "reason": "Ändring eller hinder i produktionsprocessen",
-              "alternatives_info": "Utbytbara läkemedel: Rivastigmin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Rivastigmin STADA Arzneimittel, Rivastor, Rivastigmin STADA, Exelon.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRivastor - Påse, 30 x 1 depotplåster\nExelon - Påse 30 x 1 plåster (papper/PET/PE/alu/PA)\nRivastigmin STADA - Påse, 30 x 1 depotplåster\nRivastigmin STADA Arzneimittel - Påse, 30 x 1 depotplåster\nRivastigmin Abacus Medicine - Påse, 30 x 1 depotplåster (parallellimporterat av Abacus Medicine A/S)\n\nAlternativ förpackning: Rivastigmine Teva - Påse, 90 (3 x 30) plåster (Pågående restsituation)",
-              "updated_at": "2026-09-11"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "R1",
@@ -933754,19 +933682,7 @@
           "company": "Teva Sweden AB",
           "origin": "Generics",
           "packaging": "Påse",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-04-17",
-              "end_date": "2026-11-15",
-              "start_text": "2026-04-17",
-              "end_text": "2026-11-15 (Prognos)",
-              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Rivastigmin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Rivastigmin STADA Arzneimittel, Rivastor, Rivastigmin STADA, Exelon.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nExelon - Påse 90 (3 x 30) plåster (papper/PET/alu/PAN) (PD: Medartuum AB)\nRivastigmin STADA Arzneimittel - Påse, 90 x 1 (3 x 30 x 1) depotplåster\nExelon - Påse 90 (3 x 30) plåster (papper/PET/PE/alu/PA)\nRivastor - Påse, 90 (3x30) depotplåster (Pågående restsituation)\nExelon - Påse 90 (3 x 30) plåster (papper/PET/PE/alu/PA) (PD: Ebb Medical AB)\nRivastigmin Abacus Medicine - Påse, 90 (3x30) depotplåster (parallellimporterat av Abacus Medicine A/S)\nRivastigmin STADA - Påse, 90 x 1 (3 x 30) depotplåster\n\nAlternativ förpackning: Rivastigmine Teva - Påse, 30 plåster (Pågående restsituation)",
-              "updated_at": "2026-09-11"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -933913,7 +933829,7 @@
               "start_text": "2026-05-04",
               "end_text": "2027-01-05 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Rivastigmin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Rivastigmine Teva, Rivastigmin STADA Arzneimittel, Rivastigmin STADA, Exelon.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nExelon - Påse 90 (3 x 30) plåster (papper/PET/alu/PAN) (PD: Medartuum AB)\nRivastigmin STADA Arzneimittel - Påse, 90 x 1 (3 x 30 x 1) depotplåster\nExelon - Påse 90 (3 x 30) plåster (papper/PET/PE/alu/PA)\nExelon - Påse 90 (3 x 30) plåster (papper/PET/PE/alu/PA) (PD: Ebb Medical AB)\nRivastigmin Abacus Medicine - Påse, 90 (3x30) depotplåster (parallellimporterat av Abacus Medicine A/S)\nRivastigmin STADA - Påse, 90 x 1 (3 x 30) depotplåster\nRivastigmine Teva - Påse, 90 (3 x 30) plåster (Pågående restsituation)\n\nAlternativ förpackning: Rivastor - Påse, 30 x 1 depotplåster",
+              "alternatives_info": "Utbytbara läkemedel: Rivastigmin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Rivastigmine Teva, Rivastigmin STADA Arzneimittel, Rivastigmin STADA, Exelon.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nExelon - Påse 90 (3 x 30) plåster (papper/PET/alu/PAN) (PD: Medartuum AB)\nRivastigmin STADA Arzneimittel - Påse, 90 x 1 (3 x 30 x 1) depotplåster\nExelon - Påse 90 (3 x 30) plåster (papper/PET/PE/alu/PA)\nExelon - Påse 90 (3 x 30) plåster (papper/PET/PE/alu/PA) (PD: Ebb Medical AB)\nRivastigmin Abacus Medicine - Påse, 90 (3x30) depotplåster (parallellimporterat av Abacus Medicine A/S)\nRivastigmin STADA - Påse, 90 x 1 (3 x 30) depotplåster\nRivastigmine Teva - Påse, 90 (3 x 30) plåster\n\nAlternativ förpackning: Rivastor - Påse, 30 x 1 depotplåster",
               "updated_at": "2026-10-02"
             }
           ],
@@ -984435,7 +984351,7 @@
               "start_text": "2024-09-25",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Simvastatin Teva, Simvastatin Orion (parallellimporterat av Ebb Medical AB), Simvastatin Bluefish.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSimvastatin Orion - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nSimvastatin Bluefish - Blister, 100 tabletter\nSimvastatin Teva - Blister, 100 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Simvastatin Teva, Simvastatin Orion (parallellimporterat av Ebb Medical AB), Simvastatin Bluefish.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSimvastatin Orion - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nSimvastatin Bluefish - Blister, 100 tabletter\nSimvastatin Teva - Blister, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-09-24"
             }
           ],
@@ -984730,7 +984646,19 @@
           "company": "Teva Sweden AB",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [],
+          "shortages": [
+            {
+              "status": "Pågående restsituation",
+              "shortage_type": "Restsituation",
+              "start_date": "2026-10-23",
+              "end_date": "2027-01-30",
+              "start_text": "2026-10-23",
+              "end_text": "2027-01-30 (Prognos)",
+              "reason": "Oväntat stor efterfrågan på läkemedlet",
+              "alternatives_info": "Utbytbara läkemedel: Simvastatin Brown, Simvastatin Bluefish, Simvastatin Orion (parallellimporterat av Ebb Medical AB).\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSimvastatin Brown - Blister, 100 tabletter (Pågående restsituation)\nSimvastatin Orion - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nSimvastatin Bluefish - Blister, 100 tabletter",
+              "updated_at": "2026-10-23"
+            }
+          ],
           "history": {
             "2611": {
               "status": "NEJ",
