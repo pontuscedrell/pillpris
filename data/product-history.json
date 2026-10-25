@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T18:33:37.741269+00:00",
+  "generatedAt": "2026-10-25T09:33:32.886051+00:00",
   "months": [
     2611,
     2610,
@@ -419658,14 +419658,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 2818.5
-            },
-            "2610": {
-              "status": "NEJ",
-              "price": 2818.5
-            },
             "2609": {
               "status": "NEJ",
               "price": 2818.5
@@ -784141,7 +784133,7 @@
               "start_date": "2026-10-15",
               "end_date": "2026-10-25",
               "start_text": "2026-10-15",
-              "end_text": "2026-10-25 (Prognos)",
+              "end_text": "2026-10-25",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Oxikodon Actavis, Oxycodone Teva, Oxycodone Accord, Oxycodone G.L..\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nOxikodon Actavis - Blister (barnskyddande), 14 kapslar\nOxycodone Teva - Blister, 14 kapslar\nOxycodone Accord - Blister, 14 kapslar (Pågående restsituation)\nOxycodone G.L. - Blister, 14 tabletter\n\nAlternativ förpackning: OxyNorm - Blister, 28 kapslar\nOxyNorm - Blister, 98 kapslar",
               "updated_at": "2026-10-22"
@@ -924650,11 +924642,11 @@
           "packaging": "",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-10-25",
               "end_date": "2026-12-03",
-              "start_text": "2026-10-25 (Prognos)",
+              "start_text": "2026-10-25",
               "end_text": "2026-12-03 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Rivastigmine Actavis, Rivastigmin Orion (parallellimporterat av Ebb Medical AB), Rivastigmin Orion (parallellimporterat av 2care4 ApS), Rivastigmine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRivastigmine Sandoz - Blister, 28 kapslar (PD: Abacus Medicine A/S)\nRivastigmin Orion - Blister, 28 kapslar (parallellimporterat av 2care4 ApS)\nRivastigmin Orion - Blister, 28 kapslar (parallellimporterat av Ebb Medical AB)\n\nAlternativ förpackning: Nimvastid - Blister, 112 kapslar",
