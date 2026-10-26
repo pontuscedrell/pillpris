@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:42:12.456752+00:00",
+  "generatedAt": "2026-10-26T10:44:37.972127+00:00",
   "months": [
     2611,
     2610,
@@ -796673,11 +796673,11 @@
           "packaging": "",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-10-26",
               "end_date": "2027-04-05",
-              "start_text": "2026-10-26 (Prognos)",
+              "start_text": "2026-10-26",
               "end_text": "2027-04-05 (Prognos)",
               "reason": "Osäkerhet om läkemedlet kommer säljas framöver",
               "alternatives_info": "Utbytbara läkemedel: Duoxona, Targiniq, Oxycodone/Naloxone STADA, Armoneve, Oxycodone/Naloxone Teva, Oxycodone/Naloxone Sandoz, Oxycodone/Naloxone G.L..\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDuoxona - Blister, 98 tabletter\nOxycodone/Naloxone Teva - Blister, 98 tabletter\nOxycodone/Naloxone STADA - Blister, 98 x 1 tabletter (endos)\nOxycodone/Naloxone Sandoz - Blister, 98 x 1 tabletter (endos)\nArmoneve - Blister, 98 tabletter\nTarginiq - Blister, 98 tabletter\nOxycodone/Naloxone G.L. - Blister, 98 tabletter\n\nAlternativ förpackning: Oxycodone/Naloxone Nordic Drugs - Blister, 100 x 1 tabletter (endos)\nOxycodone/Naloxone Nordic Drugs - Blister, 28 x 1 tabletter (endos)",
@@ -1022540,11 +1022540,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-10-26",
               "end_date": "2027-01-26",
-              "start_text": "2026-10-26 (Prognos)",
+              "start_text": "2026-10-26",
               "end_text": "2027-01-26 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Tadalafil Accord, Tadalafil 1A Farma, Tadalafil AOP, Yanatawa, Tadalafil Bluefish.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nTadalafil Bluefish - Blister, 56 tabletter\nTadalafil AOP - Blister, 56 tabletter\nTadalafil 1A Farma - Blister, 56 tabletter (plast/Al)\nTadalafil Accord - Blister, 56 tabletter\nYanatawa - Blister, 56 tabletter",
@@ -1127563,14 +1127563,6 @@
           "packaging": "Blister",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 574.98
-            },
-            "2610": {
-              "status": "NEJ",
-              "price": 574.98
-            },
             "2609": {
               "status": "NEJ",
               "price": 574.98
@@ -1128410,14 +1128402,6 @@
           "packaging": "Blister",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 882.42
-            },
-            "2610": {
-              "status": "NEJ",
-              "price": 882.42
-            },
             "2609": {
               "status": "NEJ",
               "price": 882.42

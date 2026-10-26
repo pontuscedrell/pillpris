@@ -151088,25 +151088,6 @@
         "Utbytesgrupps ID":112151
     },
     {
-        "Status":"Nej",
-        "Produktnamn":"Ziprasidon Ebb",
-        "Varunummer":171300,
-        "Styrka":"40 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Ziprasidon",
-        "Beredningsform":"Kapsel",
-        "Storlek":56.0,
-        "Apotekens inköpspris":501.2,
-        "Försäljningspris":574.98,
-        "Inköpspris per minsta enhet":8.95,
-        "Försäljningspris per minsta enhet":10.27,
-        "NPL ID":20210217000043,
-        "NPL pack ID":20211014100066,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":112151
-    },
-    {
         "Status":"PV",
         "Produktnamn":"Ziprasidon Krka",
         "Varunummer":404428,
@@ -151180,25 +151161,6 @@
         "NPL pack ID":20230111100168,
         "Ursprung":"ParallelImport",
         "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":112151
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Ziprasidon Ebb",
-        "Varunummer":415563,
-        "Styrka":"40 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Ziprasidon",
-        "Beredningsform":"Kapsel",
-        "Storlek":98.0,
-        "Apotekens inköpspris":801.14,
-        "Försäljningspris":882.42,
-        "Inköpspris per minsta enhet":8.17,
-        "Försäljningspris per minsta enhet":9.0,
-        "NPL ID":20210217000043,
-        "NPL pack ID":20211014100073,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
         "Utbytesgrupps ID":112151
     },
     {
