@@ -92835,25 +92835,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Naproxen 2care4",
-        "Varunummer":489584,
-        "Styrka":"500 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Naproxen",
-        "Beredningsform":"Enterotablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":137.0,
-        "Försäljningspris":200.05,
-        "Inköpspris per minsta enhet":1.37,
-        "Försäljningspris per minsta enhet":2.0,
-        "NPL ID":20170621000100,
-        "NPL pack ID":20180328100010,
-        "Ursprung":"ParallelImport",
-        "Företag":"2care4 ApS",
-        "Utbytesgrupps ID":112434
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Naprocur",
         "Varunummer":39916,
         "Styrka":"500 mg",
@@ -92869,6 +92850,25 @@
         "NPL pack ID":20120920100261,
         "Ursprung":"Generics",
         "Företag":"Evolan Pharma AB",
+        "Utbytesgrupps ID":112434
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Naproxen 2care4",
+        "Varunummer":489584,
+        "Styrka":"500 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Naproxen",
+        "Beredningsform":"Enterotablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":137.0,
+        "Försäljningspris":200.05,
+        "Inköpspris per minsta enhet":1.37,
+        "Försäljningspris per minsta enhet":2.0,
+        "NPL ID":20170621000100,
+        "NPL pack ID":20180328100010,
+        "Ursprung":"ParallelImport",
+        "Företag":"2care4 ApS",
         "Utbytesgrupps ID":112434
     },
     {
@@ -102582,25 +102582,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"OxyContin®",
-        "Varunummer":552034,
-        "Styrka":"20 mg",
-        "Förpackningsstorleksgrupp":"TN98",
-        "Substans":"Oxikodon",
-        "Beredningsform":"Depottablett\/Depotkapsel",
-        "Storlek":98.0,
-        "Apotekens inköpspris":190.0,
-        "Försäljningspris":254.9,
-        "Inköpspris per minsta enhet":1.94,
-        "Försäljningspris per minsta enhet":2.6,
-        "NPL ID":19981229000126,
-        "NPL pack ID":20000307100131,
-        "Ursprung":"Original",
-        "Företag":"Mundipharma AB",
-        "Utbytesgrupps ID":112438
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Oxikodon Depot Actavis",
         "Varunummer":461035,
         "Styrka":"20 mg",
@@ -102619,7 +102600,7 @@
         "Utbytesgrupps ID":112438
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Oxycodone Depot Orion",
         "Varunummer":65716,
         "Styrka":"20 mg",
@@ -102638,7 +102619,7 @@
         "Utbytesgrupps ID":112438
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Oxycodone Depot Lannacher",
         "Varunummer":63553,
         "Styrka":"20 mg",
@@ -102654,6 +102635,25 @@
         "NPL pack ID":20090429100294,
         "Ursprung":"Generics",
         "Företag":"G.L. Pharma Nordic Aktiebolag",
+        "Utbytesgrupps ID":112438
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"OxyContin®",
+        "Varunummer":552034,
+        "Styrka":"20 mg",
+        "Förpackningsstorleksgrupp":"TN98",
+        "Substans":"Oxikodon",
+        "Beredningsform":"Depottablett\/Depotkapsel",
+        "Storlek":98.0,
+        "Apotekens inköpspris":190.0,
+        "Försäljningspris":254.9,
+        "Inköpspris per minsta enhet":1.94,
+        "Försäljningspris per minsta enhet":2.6,
+        "NPL ID":19981229000126,
+        "NPL pack ID":20000307100131,
+        "Ursprung":"Original",
+        "Företag":"Mundipharma AB",
         "Utbytesgrupps ID":112438
     },
     {
@@ -146035,25 +146035,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Valaciclovir Bluefish",
-        "Varunummer":152664,
-        "Styrka":"500 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Valaciklovir",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":99.0,
-        "Försäljningspris":160.72,
-        "Inköpspris per minsta enhet":3.3,
-        "Försäljningspris per minsta enhet":5.36,
-        "NPL ID":20080308000012,
-        "NPL pack ID":20080626100418,
-        "Ursprung":"Generics",
-        "Företag":"Bluefish Pharmaceuticals AB",
-        "Utbytesgrupps ID":111548
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Valaciclovir Sandoz",
         "Varunummer":552902,
         "Styrka":"500 mg",
@@ -146072,7 +146053,7 @@
         "Utbytesgrupps ID":111548
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Valaciclovir Actavis",
         "Varunummer":426607,
         "Styrka":"500 mg",
@@ -146088,6 +146069,25 @@
         "NPL pack ID":20071108100262,
         "Ursprung":"Generics",
         "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":111548
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Valaciclovir Bluefish",
+        "Varunummer":152664,
+        "Styrka":"500 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Valaciklovir",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":99.0,
+        "Försäljningspris":160.72,
+        "Inköpspris per minsta enhet":3.3,
+        "Försäljningspris per minsta enhet":5.36,
+        "NPL ID":20080308000012,
+        "NPL pack ID":20080626100418,
+        "Ursprung":"Generics",
+        "Företag":"Bluefish Pharmaceuticals AB",
         "Utbytesgrupps ID":111548
     },
     {
