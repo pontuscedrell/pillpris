@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T11:16:45.275990+00:00",
+  "generatedAt": "2026-10-29T20:49:32.183042+00:00",
   "months": [
     2611,
     2610,
@@ -10519,7 +10519,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 173.17
             },
             "2610": {
@@ -10683,7 +10683,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 158.65
             },
             "2610": {
@@ -142087,7 +142087,7 @@
           ],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 180.44
             },
             "2610": {
@@ -155344,7 +155344,7 @@
               "price": 130.08
             },
             "2610": {
-              "status": "R1",
+              "status": "PV",
               "price": 118.81
             },
             "2609": {
@@ -155490,7 +155490,7 @@
               "price": 107.15
             },
             "2610": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 100.52
             },
             "2609": {
@@ -261737,112 +261737,6 @@
           }
         },
         {
-          "vnr": "380783",
-          "name": "Ebastin Abacus Medicine",
-          "company": "Abacus Medicine A/S",
-          "origin": "ParallelImport",
-          "packaging": "Blister",
-          "shortages": [],
-          "history": {
-            "2605": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2604": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2603": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2602": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2601": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2512": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2511": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2510": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2509": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2508": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2507": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2506": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2505": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2504": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2503": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2502": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2501": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2412": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2411": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2410": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2409": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2408": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2407": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2406": {
-              "status": "NEJ",
-              "price": 388.23
-            }
-          }
-        },
-        {
           "vnr": "458970",
           "name": "Ebastin Abacus Medicine",
           "company": "Abacus Medicine A/S",
@@ -262368,14 +262262,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 297.36
-            },
-            "2610": {
-              "status": "NEJ",
-              "price": 297.36
-            },
             "2609": {
               "status": "NEJ",
               "price": 297.36
@@ -262537,6 +262423,120 @@
             "2401": {
               "status": "NEJ",
               "price": 348.52
+            }
+          }
+        },
+        {
+          "vnr": "380783",
+          "name": "Kestine",
+          "company": "Abacus Medicine A/S",
+          "origin": "ParallelImport",
+          "packaging": "Blister",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "NEJ",
+              "price": 297.36
+            },
+            "2610": {
+              "status": "NEJ",
+              "price": 297.36
+            },
+            "2605": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2604": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2603": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2602": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2601": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2512": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2511": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2510": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2509": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2508": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2507": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2506": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2505": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2504": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2503": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2502": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2501": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2412": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2411": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2410": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2409": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2408": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2407": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2406": {
+              "status": "NEJ",
+              "price": 388.23
             }
           }
         },
@@ -407572,7 +407572,7 @@
               "price": 202.49
             },
             "2610": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 212.49
             },
             "2609": {
@@ -408010,7 +408010,7 @@
               "price": 239.38
             },
             "2610": {
-              "status": "R1",
+              "status": "PV",
               "price": 239.38
             },
             "2609": {
@@ -439340,7 +439340,7 @@
       "sub": "Irbesartan",
       "str": "75 mg",
       "form": "Tablett",
-      "size": "30",
+      "size": "28",
       "brands": [
         {
           "vnr": "10426",
@@ -440217,7 +440217,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 148.61
             },
             "2610": {
@@ -525071,7 +525071,7 @@
           ],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 868.95
             },
             "2610": {
@@ -525217,7 +525217,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 1525.98
             },
             "2610": {
@@ -797720,7 +797720,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 4065.93
             },
             "2610": {
@@ -798082,7 +798082,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 3943.95
             },
             "2610": {
@@ -798228,7 +798228,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 2316.25
             },
             "2610": {
@@ -799062,7 +799062,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 3905.0
             },
             "2610": {
@@ -834349,7 +834349,7 @@
               "price": 455.88
             },
             "2610": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 380.03
             },
             "2609": {
@@ -834787,7 +834787,7 @@
               "price": 446.37
             },
             "2610": {
-              "status": "R1",
+              "status": "PV",
               "price": 454.85
             },
             "2609": {
@@ -835087,7 +835087,7 @@
           ],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 456.18
             },
             "2610": {
@@ -1014982,7 +1014982,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 183.5
             },
             "2610": {
@@ -1046170,7 +1046170,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 516.35
             },
             "2610": {
@@ -1046630,7 +1046630,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 381.05
             },
             "2610": {
@@ -1046776,7 +1046776,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 1214.54
             },
             "2610": {
@@ -1047020,7 +1047020,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 625.04
             },
             "2610": {
@@ -1062801,7 +1062801,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 244.64
             },
             "2610": {
@@ -1062947,7 +1062947,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 244.64
             },
             "2610": {
@@ -1063119,7 +1063119,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 155.54
             },
             "2610": {
@@ -1063161,7 +1063161,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 155.54
             },
             "2610": {
