@@ -130032,7 +130032,7 @@
         "NPL ID":20180403000075,
         "NPL pack ID":20180424101584,
         "Ursprung":"Generics",
-        "Företag":"Neutec lnhaler lreland Ltd.",
+        "Företag":"Neutec lnhaler lreland Limited",
         "Utbytesgrupps ID":112164
     },
     {
@@ -130051,7 +130051,7 @@
         "NPL ID":20180403000075,
         "NPL pack ID":20200807100192,
         "Ursprung":"Generics",
-        "Företag":"Neutec lnhaler lreland Ltd.",
+        "Företag":"Neutec lnhaler lreland Limited",
         "Utbytesgrupps ID":112164
     },
     {
@@ -130108,7 +130108,7 @@
         "NPL ID":20180820000016,
         "NPL pack ID":20181107100313,
         "Ursprung":"Generics",
-        "Företag":"Neutec lnhaler lreland Ltd.",
+        "Företag":"Neutec lnhaler lreland Limited",
         "Utbytesgrupps ID":112189
     },
     {
@@ -130127,7 +130127,7 @@
         "NPL ID":20180820000016,
         "NPL pack ID":20200807100222,
         "Ursprung":"Generics",
-        "Företag":"Neutec lnhaler lreland Ltd.",
+        "Företag":"Neutec lnhaler lreland Limited",
         "Utbytesgrupps ID":112189
     },
     {
@@ -135049,25 +135049,6 @@
         "NPL pack ID":20190607100075,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":111764
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Sorafenib Bluefish",
-        "Varunummer":507816,
-        "Styrka":"200 mg",
-        "Förpackningsstorleksgrupp":"T24",
-        "Substans":"Sorafenib",
-        "Beredningsform":"Tablett",
-        "Storlek":112.0,
-        "Apotekens inköpspris":787.0,
-        "Försäljningspris":867.93,
-        "Inköpspris per minsta enhet":7.03,
-        "Försäljningspris per minsta enhet":7.75,
-        "NPL ID":20210301000010,
-        "NPL pack ID":20210518100046,
-        "Ursprung":"Generics",
-        "Företag":"Bluefish Pharmaceuticals AB",
         "Utbytesgrupps ID":111764
     },
     {
