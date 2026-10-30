@@ -1216,25 +1216,6 @@
         "Utbytesgrupps ID":112804
     },
     {
-        "Status":"PV",
-        "Produktnamn":"Agomelatin Glenmark",
-        "Varunummer":493519,
-        "Styrka":"25 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Agomelatin",
-        "Beredningsform":"Tablett",
-        "Storlek":28.0,
-        "Apotekens inköpspris":111.03,
-        "Försäljningspris":173.17,
-        "Inköpspris per minsta enhet":3.97,
-        "Försäljningspris per minsta enhet":6.18,
-        "NPL ID":20170427000151,
-        "NPL pack ID":20181024100021,
-        "Ursprung":"Generics",
-        "Företag":"Glenmark Pharmaceuticals Nordic AB",
-        "Utbytesgrupps ID":112043
-    },
-    {
         "Status":"Nej",
         "Produktnamn":"Agomelatine STADA",
         "Varunummer":448348,
@@ -1251,6 +1232,25 @@
         "NPL pack ID":20190426100157,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":112043
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Agomelatin Glenmark",
+        "Varunummer":493519,
+        "Styrka":"25 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Agomelatin",
+        "Beredningsform":"Tablett",
+        "Storlek":28.0,
+        "Apotekens inköpspris":111.03,
+        "Försäljningspris":173.17,
+        "Inköpspris per minsta enhet":3.97,
+        "Försäljningspris per minsta enhet":6.18,
+        "NPL ID":20170427000151,
+        "NPL pack ID":20181024100021,
+        "Ursprung":"Generics",
+        "Företag":"Glenmark Pharmaceuticals Nordic AB",
         "Utbytesgrupps ID":112043
     },
     {
@@ -35817,7 +35817,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Ebastin Abacus Medicine",
-        "Varunummer":458970,
+        "Varunummer":380783,
         "Styrka":"10 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Ebastin",
@@ -35855,7 +35855,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Kestine",
-        "Varunummer":380783,
+        "Varunummer":134470,
         "Styrka":"10 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Ebastin",

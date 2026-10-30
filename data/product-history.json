@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T11:09:59.466402+00:00",
+  "generatedAt": "2026-10-30T20:21:09.381495+00:00",
   "months": [
     2611,
     2610,
@@ -10519,7 +10519,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 173.17
             },
             "2610": {
@@ -261713,11 +261713,11 @@
           }
         },
         {
-          "vnr": "458970",
+          "vnr": "380783",
           "name": "Ebastin Abacus Medicine",
           "company": "Abacus Medicine A/S",
           "origin": "ParallelImport",
-          "packaging": "",
+          "packaging": "Blister",
           "shortages": [],
           "history": {
             "2611": {
@@ -261728,6 +261728,112 @@
               "status": "NEJ",
               "price": 297.36
             },
+            "2605": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2604": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2603": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2602": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2601": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2512": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2511": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2510": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2509": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2508": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2507": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2506": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2505": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2504": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2503": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2502": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2501": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2412": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2411": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2410": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2409": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2408": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2407": {
+              "status": "NEJ",
+              "price": 388.23
+            },
+            "2406": {
+              "status": "NEJ",
+              "price": 388.23
+            }
+          }
+        },
+        {
+          "vnr": "458970",
+          "name": "Ebastin Abacus Medicine",
+          "company": "Abacus Medicine A/S",
+          "origin": "ParallelImport",
+          "packaging": "",
+          "shortages": [],
+          "history": {
             "2609": {
               "status": "NEJ",
               "price": 297.36
@@ -262238,6 +262344,14 @@
           "packaging": "",
           "shortages": [],
           "history": {
+            "2611": {
+              "status": "NEJ",
+              "price": 297.36
+            },
+            "2610": {
+              "status": "NEJ",
+              "price": 297.36
+            },
             "2609": {
               "status": "NEJ",
               "price": 297.36
@@ -262399,120 +262513,6 @@
             "2401": {
               "status": "NEJ",
               "price": 348.52
-            }
-          }
-        },
-        {
-          "vnr": "380783",
-          "name": "Kestine",
-          "company": "Abacus Medicine A/S",
-          "origin": "ParallelImport",
-          "packaging": "Blister",
-          "shortages": [],
-          "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 297.36
-            },
-            "2610": {
-              "status": "NEJ",
-              "price": 297.36
-            },
-            "2605": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2604": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2603": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2602": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2601": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2512": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2511": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2510": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2509": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2508": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2507": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2506": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2505": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2504": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2503": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2502": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2501": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2412": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2411": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2410": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2409": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2408": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2407": {
-              "status": "NEJ",
-              "price": 388.23
-            },
-            "2406": {
-              "status": "NEJ",
-              "price": 388.23
             }
           }
         },
