@@ -12690,14 +12690,12 @@
     "str": "100 mikrogram/timme",
     "size": "16 st",
     "names": [
-      "Durogesic®",
       "Fentanyl Lavipharm",
       "Fentanyl Orion",
       "Fentanyl ratiopharm"
     ],
     "vnr": [
       "147293",
-      "27049",
       "40968",
       "509908"
     ],
@@ -12712,7 +12710,6 @@
     "str": "100 mikrogram/timme",
     "size": "5 st",
     "names": [
-      "Durogesic®",
       "Fentanyl Lavipharm",
       "Fentanyl Orion",
       "Fentanyl ratiopharm",
@@ -12720,7 +12717,6 @@
     ],
     "vnr": [
       "158099",
-      "19167",
       "24194",
       "46379",
       "67859"
@@ -12760,7 +12756,6 @@
     "str": "12 mikrogram/timme",
     "size": "16 st",
     "names": [
-      "Durogesic®",
       "Fentanyl Lavipharm",
       "Fentanyl Orifarm",
       "Fentanyl Orion",
@@ -12769,7 +12764,6 @@
     ],
     "vnr": [
       "174495",
-      "26986",
       "31049",
       "390793",
       "40922",
@@ -12786,7 +12780,6 @@
     "str": "12 mikrogram/timme",
     "size": "5 st",
     "names": [
-      "Durogesic®",
       "Fentanyl Lavipharm",
       "Fentanyl Orion",
       "Fentanyl ratiopharm",
@@ -12794,7 +12787,6 @@
     ],
     "vnr": [
       "151966",
-      "24056",
       "27550",
       "34533",
       "480360"
@@ -12834,7 +12826,6 @@
     "str": "25 mikrogram/timme",
     "size": "16 st",
     "names": [
-      "Durogesic®",
       "Fentanyl Lavipharm",
       "Fentanyl Orion",
       "Fentanyl Sandoz",
@@ -12842,7 +12833,6 @@
     ],
     "vnr": [
       "148572",
-      "27295",
       "31061",
       "40934",
       "580157"
@@ -12858,7 +12848,6 @@
     "str": "25 mikrogram/timme",
     "size": "5 st",
     "names": [
-      "Durogesic®",
       "Fentanyl Lavipharm",
       "Fentanyl Orion",
       "Fentanyl ratiopharm",
@@ -12867,7 +12856,6 @@
     "vnr": [
       "127721",
       "155031",
-      "19108",
       "24081",
       "481698"
     ],
@@ -12906,14 +12894,12 @@
     "str": "50 mikrogram/timme",
     "size": "16 st",
     "names": [
-      "Durogesic®",
       "Fentanyl Lavipharm",
       "Fentanyl Orion",
       "Fentanyl Sandoz",
       "Fentanyl ratiopharm"
     ],
     "vnr": [
-      "27240",
       "31083",
       "40945",
       "468087",
@@ -12930,7 +12916,6 @@
     "str": "50 mikrogram/timme",
     "size": "5 st",
     "names": [
-      "Durogesic®",
       "Fentanyl Lavipharm",
       "Fentanyl Orion",
       "Fentanyl ratiopharm",
@@ -12938,7 +12923,6 @@
     ],
     "vnr": [
       "120853",
-      "19094",
       "24191",
       "408661",
       "86117"
@@ -12978,7 +12962,6 @@
     "str": "75 mikrogram/timme",
     "size": "16 st",
     "names": [
-      "Durogesic®",
       "Fentanyl Lavipharm",
       "Fentanyl Orion",
       "Fentanyl ratiopharm",
@@ -12986,7 +12969,6 @@
     ],
     "vnr": [
       "192009",
-      "27022",
       "384911",
       "40957",
       "90095"
@@ -13002,7 +12984,6 @@
     "str": "75 mikrogram/timme",
     "size": "5 st",
     "names": [
-      "Durogesic®",
       "Fentanyl Lavipharm",
       "Fentanyl Orion",
       "Fentanyl ratiopharm",
@@ -13010,7 +12991,6 @@
     ],
     "vnr": [
       "183613",
-      "18995",
       "199006",
       "24175",
       "417578"
@@ -15823,14 +15803,12 @@
     "size": "200 st",
     "names": [
       "Atrovent",
-      "Atrovent®",
       "Ipravent"
     ],
     "vnr": [
       "158354",
       "196962",
       "45060",
-      "5390",
       "75054"
     ],
     "packaging": [],

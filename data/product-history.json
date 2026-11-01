@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T19:44:12.524526+00:00",
+  "generatedAt": "2026-11-01T11:38:18.035983+00:00",
   "months": [
     2611,
     2610,
@@ -10057,11 +10057,11 @@
           "packaging": "Flaska med pump",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-01",
               "end_date": "2026-12-31",
-              "start_text": "2026-11-01 (Prognos)",
+              "start_text": "2026-11-01",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Epiduo.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nEpiduo - Flaska med pump, 60 gram\n\nAlternativ förpackning: Adapalene/Benzoyl peroxide Orifarm - Flaska med pump, 45 gram",
@@ -19681,17 +19681,6 @@
           "origin": "Generics",
           "packaging": "Burk",
           "shortages": [
-            {
-              "status": "Försäljning kommer upphöra permanent",
-              "shortage_type": "Försäljning upphör permanent",
-              "start_date": "2026-11-01",
-              "end_date": "",
-              "start_text": "2026-11-01 (Prognos)",
-              "end_text": "Saknas",
-              "reason": "Marknadsrelaterade orsaker",
-              "alternatives_info": "Utbytbara läkemedel: Allopurinol Orion, Allopurinol Nordic Drugs, Allopurinol Teva, Allopurinol Accord, Allopurinol Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAllopurinol Accord - Blister, 100 tabletter\nAllopurinol Sandoz - Burk, 105 tabletter\nAllopurinol Teva - Blister, 100 tabletter\nAllopurinol Orion - Blister, 100 tabletter (Kommande restsituation)\nAllopurinol Nordic Drugs - Blister, 100 x 1 tablett (endos)",
-              "updated_at": "2026-10-27"
-            },
             {
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
@@ -142613,11 +142602,11 @@
           "packaging": "Endosbehållare",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-01",
               "end_date": "2026-11-30",
-              "start_text": "2026-11-01 (Prognos)",
+              "start_text": "2026-11-01",
               "end_text": "2026-11-30 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Budesonid Zentiva, Pulmicort, Budesonide STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPulmicort - Endosbehållare, 4 x 5 x 2 ml\nBudesonide STADA - Endosbehållare, 20 x 2 ml\nBudesonid Zentiva - Endosbehållare, 20 x 2 ml",
@@ -191030,7 +191019,7 @@
               "start_date": "2025-11-30",
               "end_date": "2026-11-01",
               "start_text": "2025-11-30",
-              "end_text": "2026-11-01 (Prognos)",
+              "end_text": "2026-11-01",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Cytisiniklin Medartuum (parallellimporterat av Medartuum AB), Cytisiniklin Ebb (parallellimporterat av Ebb Medical AB), Belnifrem, Cytisiniklin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Asmoken (parallellimporterat av Orifarm AB), Recigar.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAsmoken - Blister, 100 tabletter (parallellimporterat av Orifarm AB)\nRecigar - Blister, 100 tabletter\nCytisiniklin Ebb - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nCytisiniklin Medartuum - Blister, 100 tabletter (parallellimporterat av Medartuum AB)\nCytisiniklin Abacus Medicine - Blister, 100 tabletter (parallellimporterat av Abacus Medicine A/S)\nBelnifrem - Blister, 100 tabletter",
               "updated_at": "2026-10-19"
@@ -231781,11 +231770,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-01",
               "end_date": "2026-12-31",
-              "start_text": "2026-11-01 (Prognos)",
+              "start_text": "2026-11-01",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Stesolid.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nStesolid - Burk, 25 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Diazepam Orifarm - Blister, 100 tabletter",
@@ -231946,7 +231935,7 @@
               "start_text": "2026-11-22 (Prognos)",
               "end_text": "2027-01-20 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Diazepam Orifarm.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDiazepam Orifarm - Blister, 25 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Stesolid - Blister, 50 x 1 tablett (endos)\nStesolid - Burk, 100 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Diazepam Orifarm.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDiazepam Orifarm - Blister, 25 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Stesolid - Blister, 50 x 1 tablett (endos)\nStesolid - Burk, 100 tabletter",
               "updated_at": "2026-09-18"
             }
           ],
@@ -348017,10 +348006,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 1253.53
-            },
             "2610": {
               "status": "NEJ",
               "price": 1253.53
@@ -348674,10 +348659,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 508.46
-            },
             "2610": {
               "status": "NEJ",
               "price": 508.46
@@ -350156,10 +350137,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 814.67
-            },
             "2610": {
               "status": "NEJ",
               "price": 814.67
@@ -351031,10 +351008,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 290.97
-            },
             "2610": {
               "status": "NEJ",
               "price": 290.97
@@ -353449,10 +353422,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 489.13
-            },
             "2610": {
               "status": "NEJ",
               "price": 489.13
@@ -353748,7 +353717,7 @@
               "start_text": "2026-08-10",
               "end_text": "2026-11-16 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Fentanyl ratiopharm, Fentanyl Sandoz, Matrifen, Fentanyl Lavipharm.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nFentanyl ratiopharm - Påse, 16 x 1 plåster (Kommande restsituation)\nFentanyl Lavipharm - Påse, 16 x 1 plåster\nFentanyl Sandoz - Påse, 16 x 1 plåster\n\nAlternativ förpackning: Fentanyl Orion - Påse, 5 x 1 plåster\nFentanyl Orion - Påse, 10 x 1 plåster (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Fentanyl ratiopharm, Fentanyl Sandoz, Matrifen, Fentanyl Lavipharm.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nFentanyl ratiopharm - Påse, 16 x 1 plåster (Pågående restsituation)\nFentanyl Lavipharm - Påse, 16 x 1 plåster\nFentanyl Sandoz - Påse, 16 x 1 plåster\n\nAlternativ förpackning: Fentanyl Orion - Påse, 5 x 1 plåster\nFentanyl Orion - Påse, 10 x 1 plåster (Pågående restsituation)",
               "updated_at": "2026-10-02"
             }
           ],
@@ -353899,11 +353868,11 @@
           "packaging": "",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-01",
               "end_date": "2027-01-01",
-              "start_text": "2026-11-01 (Prognos)",
+              "start_text": "2026-11-01",
               "end_text": "2027-01-01 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Fentanyl Sandoz, Matrifen, Fentanyl Lavipharm, Fentanyl Orion.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nFentanyl Lavipharm - Påse, 16 x 1 plåster\nFentanyl Orion - Påse, 16 x 1 plåster (Pågående restsituation)\nFentanyl Sandoz - Påse, 16 x 1 plåster\n\nAlternativ förpackning: Fentanyl ratiopharm - Påse, 5 x 1 plåster\nFentanyl ratiopharm - Påse, 10 x 1 plåster",
@@ -354276,10 +354245,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 201.8
-            },
             "2610": {
               "status": "NEJ",
               "price": 201.8
@@ -356682,10 +356647,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 790.07
-            },
             "2610": {
               "status": "NEJ",
               "price": 790.07
@@ -357485,10 +357446,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 326.78
-            },
             "2610": {
               "status": "NEJ",
               "price": 326.78
@@ -359518,10 +359475,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 1044.1
-            },
             "2610": {
               "status": "NEJ",
               "price": 1044.1
@@ -360259,10 +360212,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 431.69
-            },
             "2610": {
               "status": "NEJ",
               "price": 431.69
@@ -404002,11 +403951,11 @@
           "packaging": "Förfylld spruta",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-01",
               "end_date": "2026-12-31",
-              "start_text": "2026-11-01 (Prognos)",
+              "start_text": "2026-11-01",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Fyremadel, Ganirelix Gedeon Richter, Orgalutran.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nOrgalutran - Förfylld spruta, 5 x 0,5 ml (PD: Medartuum AB)\nOrgalutran - Förfylld spruta, 5 x 0,5 ml (PD: Abacus Medicine A/S)\nFyremadel - Förfylld spruta, 5 x 0,5 ml\n\nAlternativ förpackning: Ganirelix Orifarm - Förfylld spruta, 1 x 0,5 ml",
@@ -434564,10 +434513,6 @@
           "packaging": "",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 186.68
-            },
             "2610": {
               "status": "NEJ",
               "price": 186.68
@@ -502834,7 +502779,7 @@
               "start_text": "2027-05-31 (Prognos)",
               "end_text": "Saknas",
               "reason": "Marknadsrelaterade orsaker",
-              "alternatives_info": "Utbytbara läkemedel: Klorzoxazon Evolan, Paraflex.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nParaflex - Burk, 50 tabletter\nKlorzoxazon Evolan - Burk, 50 tabletter\nKlorzoxazon Orifarm - Burk, 56 tabletter\n\nAlternativ förpackning: Klorzoxazon Orifarm - Burk, 56 tabletter\nKlorzoxazon Orifarm - Burk, 105 tabletter (Kommande restsituation)\nKlorzoxazon Orifarm - Burk, 100 tabletter (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Klorzoxazon Evolan, Paraflex.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nParaflex - Burk, 50 tabletter\nKlorzoxazon Evolan - Burk, 50 tabletter\nKlorzoxazon Orifarm - Burk, 56 tabletter\n\nAlternativ förpackning: Klorzoxazon Orifarm - Burk, 56 tabletter\nKlorzoxazon Orifarm - Burk, 105 tabletter (Pågående restsituation)\nKlorzoxazon Orifarm - Burk, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-09-22"
             }
           ],
@@ -503350,14 +503295,14 @@
           "packaging": "Burk",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-01",
               "end_date": "2026-11-30",
-              "start_text": "2026-11-01 (Prognos)",
+              "start_text": "2026-11-01",
               "end_text": "2026-11-30 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Klorzoxazon Evolan, Paraflex.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKlorzoxazon Orifarm - Burk, 100 tabletter (Kommande restsituation)\nKlorzoxazon Evolan - Burk, 100 tabletter\nParaflex - Burk, 100 tabletter\n\nAlternativ förpackning: Klorzoxazon Orifarm - Burk, 56 tabletter\nKlorzoxazon Orifarm - Burk, 50 tabletter (Kommande restsituation)\nKlorzoxazon Orifarm - Burk, 100 tabletter (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Klorzoxazon Evolan, Paraflex.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKlorzoxazon Orifarm - Burk, 100 tabletter (Pågående restsituation)\nKlorzoxazon Evolan - Burk, 100 tabletter\nParaflex - Burk, 100 tabletter\n\nAlternativ förpackning: Klorzoxazon Orifarm - Burk, 56 tabletter\nKlorzoxazon Orifarm - Burk, 50 tabletter (Kommande restsituation)\nKlorzoxazon Orifarm - Burk, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-09-15"
             }
           ],
@@ -503422,19 +503367,7 @@
           "company": "Orifarm Generics AB",
           "origin": "Generics",
           "packaging": "Burk",
-          "shortages": [
-            {
-              "status": "Försäljning kommer upphöra permanent",
-              "shortage_type": "Försäljning upphör permanent",
-              "start_date": "2026-11-01",
-              "end_date": "",
-              "start_text": "2026-11-01 (Prognos)",
-              "end_text": "Saknas",
-              "reason": "Marknadsrelaterade orsaker",
-              "alternatives_info": "Utbytbara läkemedel: Klorzoxazon Evolan, Paraflex.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nKlorzoxazon Evolan - Burk, 100 tabletter\nParaflex - Burk, 100 tabletter\nKlorzoxazon Orifarm - Burk, 105 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Klorzoxazon Orifarm - Burk, 56 tabletter\nKlorzoxazon Orifarm - Burk, 50 tabletter (Kommande restsituation)\nKlorzoxazon Orifarm - Burk, 105 tabletter (Kommande restsituation)",
-              "updated_at": "2026-09-22"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -708242,19 +708175,7 @@
           "company": "Orifarm Generics AB",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Försäljning kommer upphöra permanent",
-              "shortage_type": "Försäljning upphör permanent",
-              "start_date": "2026-11-01",
-              "end_date": "",
-              "start_text": "2026-11-01 (Prognos)",
-              "end_text": "Saknas",
-              "reason": "Marknadsrelaterade orsaker",
-              "alternatives_info": "Utbytbara läkemedel: Naramig (parallellimporterat av Ebb Medical AB), Naramig (parallellimporterat av Abacus Medicine A/S), Naramig (parallellimporterat av 2care4 ApS), Naramig.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nNaramig - Blister, 1 x 6 tabletter\nNaramig - Blister, 6 tabletter (parallellimporterat av 2care4 ApS)\nNaramig - Blister, 6 tabletter (parallellimporterat av Abacus Medicine A/S)\nNaramig - Blister, 1 x 6 tabletter (parallellimporterat av Ebb Medical AB)",
-              "updated_at": "2026-09-22"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -1078659,11 +1078580,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-01",
               "end_date": "2027-02-01",
-              "start_text": "2026-11-01 (Prognos)",
+              "start_text": "2026-11-01",
               "end_text": "2027-02-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Tranexa, Tranexamsyra Orifarm, Cyklonova, Cyklo-f, Tranexamsyra Ebb (parallellimporterat av Ebb Medical AB).\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nTranexamsyra Ebb - Blister, 50 tabletter (parallellimporterat av Ebb Medical AB)\nCyklonova - Blister, 50 tabletter\n\nAlternativ förpackning: Cyklokapron - Blister, 60 tabletter\nCyklokapron - Blister, 100 tabletter",
