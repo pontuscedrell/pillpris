@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T20:06:51.322196+00:00",
+  "generatedAt": "2026-11-02T13:02:42.260390+00:00",
   "months": [
     2611,
     2610,
@@ -591853,11 +591853,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-02",
               "end_date": "2026-11-17",
-              "start_text": "2026-11-02 (Prognos)",
+              "start_text": "2026-11-02",
               "end_text": "2026-11-17 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid Viatris, Dimor, Loperamid Apofri, Imolopera, Loperamide Medical Valley, Loperamid Brown, Loperamid ABECE.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nLoperamide Medical Valley - Burk, 105 tabletter\nLoperamid Brown - Blister, 100 kapslar, Alu-PVC/Aclar (Pågående restsituation)\nImolopera - Blister, 100 tabletter\nDimor - Blister, 100 x 1 tabletter (endos)\n\nAlternativ förpackning: Imodium - Blister, 16 tabletter",
@@ -592164,7 +592164,7 @@
               "start_text": "2024-09-25",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid Viatris, Dimor, Loperamid Apofri, Imodium, Imolopera, Loperamide Medical Valley, Loperamid ABECE.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nLoperamide Medical Valley - Burk, 105 tabletter\nImolopera - Blister, 100 tabletter\nDimor - Blister, 100 x 1 tabletter (endos)\nImodium - Blister, 100 tabletter (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid Viatris, Dimor, Loperamid Apofri, Imodium, Imolopera, Loperamide Medical Valley, Loperamid ABECE.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nLoperamide Medical Valley - Burk, 105 tabletter\nImolopera - Blister, 100 tabletter\nDimor - Blister, 100 x 1 tabletter (endos)\nImodium - Blister, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-09-24"
             }
           ],
@@ -847513,7 +847513,7 @@
               "start_text": "2026-10-31",
               "end_text": "2027-01-29 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Posaconazole Sandoz, Posaconazole Viatris, Posaconazole Teva, Posaconazole STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPosaconazole STADA - Blister, 24 x 1 tabletter (plast/Al, endos) (Kommande restsituation)\nPosaconazole Viatris - Blister, 24 tabletter (Al)\n\nAlternativ förpackning: Posaconazole Accord - Blister, 96 x 1 tablett (endos) (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Posaconazole Sandoz, Posaconazole Viatris, Posaconazole Teva, Posaconazole STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPosaconazole STADA - Blister, 24 x 1 tabletter (plast/Al, endos) (Pågående restsituation)\nPosaconazole Viatris - Blister, 24 tabletter (Al)\n\nAlternativ förpackning: Posaconazole Accord - Blister, 96 x 1 tablett (endos) (Pågående restsituation)",
               "updated_at": "2026-08-28"
             }
           ],
@@ -847702,11 +847702,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-02",
               "end_date": "2026-12-21",
-              "start_text": "2026-11-02 (Prognos)",
+              "start_text": "2026-11-02",
               "end_text": "2026-12-21 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Posaconazole Accord, Posaconazole Sandoz, Posaconazole Viatris, Posaconazole Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPosaconazole Viatris - Blister, 24 tabletter (Al)\nPosaconazole Accord - Blister, 24 x 1 tablett (endos) (Pågående restsituation)\n\nAlternativ förpackning: Posaconazole STADA - Blister, 96 x 1 tabletter (plast/Al, endos)",
