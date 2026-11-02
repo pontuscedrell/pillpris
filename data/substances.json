@@ -1182,6 +1182,14 @@
                     "100",
                     "250"
                 ]
+            },
+            "Munsönderfallande tablett": {
+                "5 mg": [
+                    "30",
+                    "60",
+                    "90",
+                    "100"
+                ]
             }
         },
         "Desmopressin": {

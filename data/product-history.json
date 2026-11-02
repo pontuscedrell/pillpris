@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T13:02:42.260390+00:00",
+  "generatedAt": "2026-11-02T23:17:50.256020+00:00",
   "months": [
     2611,
     2610,
@@ -4885,7 +4885,7 @@
       "sub": "Acetylcystein",
       "str": "200 mg",
       "form": "Brustablett",
-      "size": "300",
+      "size": "330",
       "brands": [
         {
           "vnr": "372925",
@@ -4908,7 +4908,7 @@
           ],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 264.71
             },
             "2610": {
@@ -17933,7 +17933,7 @@
       "sub": "Allopurinol",
       "str": "100 mg",
       "form": "Tablett",
-      "size": "105",
+      "size": "100",
       "brands": [
         {
           "vnr": "546698",
@@ -18286,7 +18286,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 96.1
             },
             "2610": {
@@ -18432,7 +18432,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 96.64
             },
             "2610": {
@@ -18578,7 +18578,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 84.51
             },
             "2610": {
@@ -18724,7 +18724,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 82.45
             },
             "2610": {
@@ -43274,7 +43274,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 122.27
             },
             "2610": {
@@ -150979,7 +150979,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 118.26
             },
             "2610": {
@@ -151125,7 +151125,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 121.51
             },
             "2610": {
@@ -151271,7 +151271,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 118.0
             },
             "2610": {
@@ -151575,7 +151575,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 110.28
             },
             "2610": {
@@ -185467,7 +185467,7 @@
           }
         },
         {
-          "vnr": "70922",
+          "vnr": "438442",
           "name": "Citalopram Sandoz",
           "company": "Sandoz A/S",
           "origin": "Generics",
@@ -185477,7 +185477,17 @@
             "2611": {
               "status": "PV",
               "price": 106.56
-            },
+            }
+          }
+        },
+        {
+          "vnr": "70922",
+          "name": "Citalopram Sandoz",
+          "company": "Sandoz A/S",
+          "origin": "Generics",
+          "packaging": "",
+          "shortages": [],
+          "history": {
             "2610": {
               "status": "NEJ",
               "price": 118.11
@@ -215808,6 +215818,179 @@
             "2505": {
               "status": "NEJ",
               "price": 149.85
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "112202|T18",
+      "id": "112202",
+      "size_id": "T18",
+      "sub": "Desloratadin",
+      "str": "5 mg",
+      "form": "Munsönderfallande tablett",
+      "size": "30",
+      "brands": [
+        {
+          "vnr": "587446",
+          "name": "Caredin",
+          "company": "2Care4 Generics ApS",
+          "origin": "Generics",
+          "packaging": "Blister",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "NEJ",
+              "price": 137.37
+            }
+          }
+        },
+        {
+          "vnr": "378542",
+          "name": "Desloratadin Bijon",
+          "company": "UAB BIJON medica",
+          "origin": "ParallelImport",
+          "packaging": "Blister",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "PV",
+              "price": 125.98
+            }
+          }
+        },
+        {
+          "vnr": "148289",
+          "name": "Desloratadin Ebb",
+          "company": "Ebb Medical AB",
+          "origin": "ParallelImport",
+          "packaging": "Blister",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "PV",
+              "price": 133.23
+            }
+          }
+        },
+        {
+          "vnr": "514115",
+          "name": "Desloratadin Orion",
+          "company": "Orion Pharma AB",
+          "origin": "Generics",
+          "packaging": "",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "R2",
+              "price": 136.33
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "112202|T21",
+      "id": "112202",
+      "size_id": "T21",
+      "sub": "Desloratadin",
+      "str": "5 mg",
+      "form": "Munsönderfallande tablett",
+      "size": "60",
+      "brands": [
+        {
+          "vnr": "595774",
+          "name": "Desloratadin Bijon",
+          "company": "UAB BIJON medica",
+          "origin": "ParallelImport",
+          "packaging": "Blister",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "PV",
+              "price": 195.33
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "112202|T23",
+      "id": "112202",
+      "size_id": "T23",
+      "sub": "Desloratadin",
+      "str": "5 mg",
+      "form": "Munsönderfallande tablett",
+      "size": "100",
+      "brands": [
+        {
+          "vnr": "533770",
+          "name": "Caredin",
+          "company": "2Care4 Generics ApS",
+          "origin": "Generics",
+          "packaging": "Blister",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "NEJ",
+              "price": 246.04
+            }
+          }
+        },
+        {
+          "vnr": "382985",
+          "name": "Deslofox",
+          "company": "Orifarm AB",
+          "origin": "ParallelImport",
+          "packaging": "Blister",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "PV",
+              "price": 245.14
+            }
+          }
+        },
+        {
+          "vnr": "38476",
+          "name": "Desloratadin Bijon",
+          "company": "UAB BIJON medica",
+          "origin": "ParallelImport",
+          "packaging": "",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "PV",
+              "price": 230.52
+            }
+          }
+        },
+        {
+          "vnr": "61494",
+          "name": "Desloratadin Ebb",
+          "company": "Ebb Medical AB",
+          "origin": "ParallelImport",
+          "packaging": "",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "PV",
+              "price": 252.25
+            }
+          }
+        },
+        {
+          "vnr": "410870",
+          "name": "Desloratadin Orion",
+          "company": "Orion Pharma AB",
+          "origin": "Generics",
+          "packaging": "",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "R2",
+              "price": 267.78
             }
           }
         }
@@ -284793,7 +284976,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 402.14
             },
             "2610": {
@@ -285085,7 +285268,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 318.14
             },
             "2610": {
@@ -285241,7 +285424,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 379.0
             },
             "2610": {
@@ -312797,7 +312980,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 283.07
             },
             "2610": {
@@ -312915,7 +313098,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 225.82
             },
             "2610": {
@@ -313073,7 +313256,7 @@
           ],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 216.29
             },
             "2610": {
@@ -369307,7 +369490,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 109.49
             },
             "2610": {
@@ -369499,7 +369682,7 @@
           ],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 94.49
             },
             "2610": {
@@ -369621,7 +369804,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 119.3
             },
             "2610": {
@@ -370205,7 +370388,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 110.49
             },
             "2610": {
@@ -939198,6 +939381,20 @@
           }
         },
         {
+          "vnr": "36022",
+          "name": "Rizatriptan Glenmark",
+          "company": "Glenmark Pharmaceuticals Nordic AB",
+          "origin": "Generics",
+          "packaging": "",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "NEJ",
+              "price": 159.68
+            }
+          }
+        },
+        {
           "vnr": "478150",
           "name": "Rizatriptan Glenmark",
           "company": "Glenmark Pharmaceuticals Nordic AB",
@@ -939205,10 +939402,6 @@
           "packaging": "Blister",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 159.68
-            },
             "2610": {
               "status": "NEJ",
               "price": 141.08

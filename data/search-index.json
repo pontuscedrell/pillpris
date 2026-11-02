@@ -6883,9 +6883,9 @@
       "131564",
       "160151",
       "40075",
+      "438442",
       "578081",
-      "69224",
-      "70922"
+      "69224"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -7736,6 +7736,68 @@
     "vnr": [
       "406391",
       "74745"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112202",
+    "size_id": "T18",
+    "sub": "Desloratadin",
+    "form": "Munsönderfallande tablett",
+    "str": "5 mg",
+    "size": "30 st",
+    "names": [
+      "Caredin",
+      "Desloratadin Bijon",
+      "Desloratadin Ebb",
+      "Desloratadin Orion"
+    ],
+    "vnr": [
+      "148289",
+      "378542",
+      "514115",
+      "587446"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112202",
+    "size_id": "T21",
+    "sub": "Desloratadin",
+    "form": "Munsönderfallande tablett",
+    "str": "5 mg",
+    "size": "60 st",
+    "names": [
+      "Desloratadin Bijon"
+    ],
+    "vnr": [
+      "595774"
+    ],
+    "packaging": [],
+    "packagingMap": {}
+  },
+  {
+    "id": "112202",
+    "size_id": "T23",
+    "sub": "Desloratadin",
+    "form": "Munsönderfallande tablett",
+    "str": "5 mg",
+    "size": "90 st",
+    "names": [
+      "Caredin",
+      "Deslofox",
+      "Desloratadin Bijon",
+      "Desloratadin Ebb",
+      "Desloratadin Orion"
+    ],
+    "vnr": [
+      "382985",
+      "38476",
+      "410870",
+      "533770",
+      "61494"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -34730,8 +34792,8 @@
       "Rizatriptan Glenmark"
     ],
     "vnr": [
+      "36022",
       "398222",
-      "478150",
       "572847"
     ],
     "packaging": [],
