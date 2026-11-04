@@ -5898,14 +5898,11 @@
     "size": "28 st",
     "names": [
       "Buprenorphine/Naloxone G.L. Pharma",
-      "Buprenorphine/Naloxone Viatris",
-      "Suboxone"
+      "Buprenorphine/Naloxone Viatris"
     ],
     "vnr": [
-      "100026",
       "195726",
-      "510813",
-      "512172"
+      "510813"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -5918,12 +5915,9 @@
     "str": "2 mg/0,5 mg",
     "size": "7 st",
     "names": [
-      "Buprenorphine/Naloxone G.L. Pharma",
-      "Suboxone"
+      "Buprenorphine/Naloxone G.L. Pharma"
     ],
     "vnr": [
-      "100017",
-      "376658",
       "72947"
     ],
     "packaging": [],
@@ -5939,16 +5933,12 @@
     "names": [
       "Bunalict",
       "Buprenorphine/Naloxone G.L. Pharma",
-      "Buprenorphine/Naloxone Viatris",
-      "Suboxone"
+      "Buprenorphine/Naloxone Viatris"
     ],
     "vnr": [
-      "100045",
-      "102877",
       "170347",
       "180439",
-      "377544",
-      "505121"
+      "377544"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -5962,15 +5952,11 @@
     "size": "7 st",
     "names": [
       "Bunalict",
-      "Buprenorphine/Naloxone G.L. Pharma",
-      "Suboxone"
+      "Buprenorphine/Naloxone G.L. Pharma"
     ],
     "vnr": [
-      "100036",
-      "34050",
       "394263",
-      "435530",
-      "584123"
+      "435530"
     ],
     "packaging": [],
     "packagingMap": {}
