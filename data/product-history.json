@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T12:45:33.062486+00:00",
+  "generatedAt": "2026-11-04T21:42:20.280818+00:00",
   "months": [
     2611,
     2610,
@@ -488268,7 +488268,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 145.49
             },
             "2610": {
@@ -797772,7 +797772,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 4065.93
             },
             "2610": {
@@ -798134,7 +798134,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 3943.95
             },
             "2610": {
@@ -799114,7 +799114,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 3905.0
             },
             "2610": {
@@ -799406,7 +799406,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 4066.13
             },
             "2610": {

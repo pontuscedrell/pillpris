@@ -65094,7 +65094,7 @@
         "Utbytesgrupps ID":340
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Carvedilol HEXAL",
         "Varunummer":131055,
         "Styrka":"6,25 mg",
@@ -106211,25 +106211,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Xeplion",
-        "Varunummer":384907,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"F1A",
-        "Substans":"Paliperidon",
-        "Beredningsform":"Injektionsvätska, depotsuspension i förfylld spruta",
-        "Storlek":1.0,
-        "Apotekens inköpspris":3750.0,
-        "Försäljningspris":3905.0,
-        "Inköpspris per minsta enhet":3750.0,
-        "Försäljningspris per minsta enhet":3905.0,
-        "NPL ID":20091210000113,
-        "NPL pack ID":20151021100294,
-        "Ursprung":"ParallelDistribution",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":111956
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Paliperidon Teva",
         "Varunummer":395329,
         "Styrka":"100 mg",
@@ -106248,7 +106229,7 @@
         "Utbytesgrupps ID":111956
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Niapelf",
         "Varunummer":579754,
         "Styrka":"100 mg",
@@ -106264,6 +106245,25 @@
         "NPL pack ID":20230420100057,
         "Ursprung":"Generics",
         "Företag":"Neuraxpharm Sweden AB",
+        "Utbytesgrupps ID":111956
+    },
+    {
+        "Status":"R2",
+        "Produktnamn":"Xeplion",
+        "Varunummer":409745,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"F1A",
+        "Substans":"Paliperidon",
+        "Beredningsform":"Injektionsvätska, depotsuspension i förfylld spruta",
+        "Storlek":1.0,
+        "Apotekens inköpspris":3907.2,
+        "Försäljningspris":4066.13,
+        "Inköpspris per minsta enhet":3907.2,
+        "Försäljningspris per minsta enhet":4066.13,
+        "NPL ID":20091210000113,
+        "NPL pack ID":20100304100575,
+        "Ursprung":"Original",
+        "Företag":"Janssen-Cilag AB",
         "Utbytesgrupps ID":111956
     },
     {
@@ -106458,6 +106458,25 @@
     },
     {
         "Status":"Nej",
+        "Produktnamn":"Xeplion",
+        "Varunummer":384907,
+        "Styrka":"100 mg",
+        "Förpackningsstorleksgrupp":"F1A",
+        "Substans":"Paliperidon",
+        "Beredningsform":"Injektionsvätska, depotsuspension i förfylld spruta",
+        "Storlek":1.0,
+        "Apotekens inköpspris":3750.0,
+        "Försäljningspris":3905.0,
+        "Inköpspris per minsta enhet":3750.0,
+        "Försäljningspris per minsta enhet":3905.0,
+        "NPL ID":20091210000113,
+        "NPL pack ID":20151021100294,
+        "Ursprung":"ParallelDistribution",
+        "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":111956
+    },
+    {
+        "Status":"Nej",
         "Produktnamn":"Paliperidon Teva",
         "Varunummer":181345,
         "Styrka":"100 mg",
@@ -106587,25 +106606,6 @@
         "NPL pack ID":20120704100074,
         "Ursprung":"ParallelDistribution",
         "Företag":"Orifarm AB",
-        "Utbytesgrupps ID":111956
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Xeplion",
-        "Varunummer":409745,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"F1A",
-        "Substans":"Paliperidon",
-        "Beredningsform":"Injektionsvätska, depotsuspension i förfylld spruta",
-        "Storlek":1.0,
-        "Apotekens inköpspris":3907.2,
-        "Försäljningspris":4066.13,
-        "Inköpspris per minsta enhet":3907.2,
-        "Försäljningspris per minsta enhet":4066.13,
-        "NPL ID":20091210000113,
-        "NPL pack ID":20100304100575,
-        "Ursprung":"Original",
-        "Företag":"Janssen-Cilag AB",
         "Utbytesgrupps ID":111956
     },
     {
