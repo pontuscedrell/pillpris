@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T21:42:20.280818+00:00",
+  "generatedAt": "2026-11-05T12:55:10.539467+00:00",
   "months": [
     2611,
     2610,
@@ -70342,7 +70342,7 @@
               "start_text": "2025-10-24",
               "end_text": "2027-04-14 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Atomoxetin Medical Valley, Atomoxetin Orion, Atomoxetine STADA, Atomoxetin Actavis, Atomoxetine Accord, Atomoxetin Viatris.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAtomoxetin Viatris - Blister, 28 kapslar\nAtomoxetin Actavis - Blister, 30 kapslar\nAtomoxetin Orion - Blister, 28 kapslar\nAtomoxetin Medical Valley - Blister, 30 kapslar (Al) (Pågående restsituation)\nAtomoxetine STADA - Blister, 30 kapslar (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Atomoxetin Medical Valley, Atomoxetin Orion, Atomoxetine STADA, Atomoxetin Actavis, Atomoxetine Accord, Atomoxetin Viatris.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAtomoxetin Viatris - Blister, 28 kapslar\nAtomoxetin Actavis - Blister, 30 kapslar\nAtomoxetin Orion - Blister, 28 kapslar\nAtomoxetin Medical Valley - Blister, 30 kapslar (Al) (Pågående restsituation)\nAtomoxetine STADA - Blister, 30 kapslar",
               "updated_at": "2026-06-12"
             }
           ],
@@ -70500,7 +70500,7 @@
               "start_text": "2024-09-13",
               "end_text": "2027-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Atomoxetin Orion, Atomoxetine STADA, Atomoxetin Actavis, Atomoxetin Glenmark, Atomoxetine Accord, Atomoxetin Viatris.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAtomoxetin Viatris - Blister, 28 kapslar\nAtomoxetin Actavis - Blister, 30 kapslar\nAtomoxetin Orion - Blister, 28 kapslar\nAtomoxetine STADA - Blister, 30 kapslar (Pågående restsituation)\nAtomoxetin Glenmark - Blister, 28 kapslar (plast/Al) (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Atomoxetin Orion, Atomoxetine STADA, Atomoxetin Actavis, Atomoxetin Glenmark, Atomoxetine Accord, Atomoxetin Viatris.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAtomoxetin Viatris - Blister, 28 kapslar\nAtomoxetin Actavis - Blister, 30 kapslar\nAtomoxetin Orion - Blister, 28 kapslar\nAtomoxetine STADA - Blister, 30 kapslar\nAtomoxetin Glenmark - Blister, 28 kapslar (plast/Al) (Pågående restsituation)",
               "updated_at": "2026-07-02"
             }
           ],
@@ -71097,19 +71097,7 @@
           "company": "STADA Nordic ApS",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-06-15",
-              "end_date": "2026-12-31",
-              "start_text": "2026-06-15",
-              "end_text": "2026-12-31 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Atomoxetin Medical Valley, Atomoxetin Orion, Atomoxetin Actavis, Atomoxetin Glenmark, Atomoxetine Accord, Atomoxetin Viatris.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAtomoxetin Actavis - Blister, 30 kapslar\nAtomoxetin Viatris - Blister, 28 kapslar\nAtomoxetin Orion - Blister, 28 kapslar\nAtomoxetin Medical Valley - Blister, 30 kapslar (Al) (Pågående restsituation)\nAtomoxetin Glenmark - Blister, 28 kapslar (plast/Al) (Pågående restsituation)",
-              "updated_at": "2026-08-11"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -72734,7 +72722,7 @@
               "start_text": "2026-07-02",
               "end_text": "2027-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Atomoxetin Glenmark, Atomoxetine STADA, Atomoxetin Actavis, Atomoxetin Orion, Atomoxetine Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAtomoxetin Orion - Blister, 28 kapslar\nAtomoxetine Accord - Blister, 28 kapslar (plast/Al)\nAtomoxetine STADA - Blister, 30 kapslar (Pågående restsituation)\nAtomoxetin Actavis - Blister, 30 kapslar\nAtomoxetin Glenmark - Blister, 28 kapslar (plast/Al)",
+              "alternatives_info": "Utbytbara läkemedel: Atomoxetin Glenmark, Atomoxetine STADA, Atomoxetin Actavis, Atomoxetin Orion, Atomoxetine Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAtomoxetin Orion - Blister, 28 kapslar\nAtomoxetine Accord - Blister, 28 kapslar (plast/Al)\nAtomoxetine STADA - Blister, 30 kapslar\nAtomoxetin Actavis - Blister, 30 kapslar\nAtomoxetin Glenmark - Blister, 28 kapslar (plast/Al)",
               "updated_at": "2026-07-02"
             }
           ],
@@ -73193,19 +73181,7 @@
           "company": "STADA Nordic ApS",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-06-15",
-              "end_date": "2026-12-31",
-              "start_text": "2026-06-15",
-              "end_text": "2026-12-31 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Atomoxetin Glenmark, Atomoxetin Actavis, Atomoxetin Orion, Atomoxetine Accord, Atomoxetin Medical Valley.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAtomoxetin Orion - Blister, 28 kapslar\nAtomoxetine Accord - Blister, 28 kapslar (plast/Al)\nAtomoxetin Actavis - Blister, 30 kapslar\nAtomoxetin Glenmark - Blister, 28 kapslar (plast/Al)\nAtomoxetin Medical Valley - Blister, 30 kapslar (Al) (Pågående restsituation)",
-              "updated_at": "2026-08-11"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -90272,7 +90248,7 @@
               "start_date": "2026-10-09",
               "end_date": "2026-11-05",
               "start_text": "2026-10-09",
-              "end_text": "2026-11-05 (Prognos)",
+              "end_text": "2026-11-05",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Atorvastatin SUN, Atorvastatin Krka d.d., Atorvastatin Accord, Atorvastatin Krka, Atorvastatin Teva B.V., Lipistad, Atorvastatin Ebb (parallellimporterat av Ebb Medical AB), Atorbir, Atorbir (parallellimporterat av Abacus Medicine A/S), Atorvastatin Oresund Pharma, Atorbir (parallellimporterat av 2care4 ApS), Atorvastatin Viatris, Atorvastatin Amarox, Atorvastatin Teva, Atorbir (parallellimporterat av Ebb Medical AB), Atorvastatin Xiromed.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAtorvastatin Teva - Blister, 100 tabletter (Kommande restsituation)\nAtorvastatin Krka d.d. - Blister, 100 tabletter (Pågående restsituation)\nAtorvastatin Oresund Pharma - Burk, 100 tabletter\nAtorvastatin Xiromed - Blister, 98 tabletter (Al)\nAtorvastatin Viatris - Blister, 100 tabletter  (Al)\nAtorvastatin Accord - Blister, 100 tabletter\nAtorbir - Blister, 100 tabletter (Al/Al)\nAtorvastatin Xiromed - Burk, 105 tabletter\nAtorvastatin Ebb - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)\nAtorvastatin Krka - Blister, 100 tabletter\nAtorvastatin Amarox - Blister, 100 tabletter\nAtorvastatin SUN - Blister, 100 tabletter\nAtorvastatin Teva B.V. - Blister, 105 tabletter (Al)\nLipistad - Blister, 100 tabletter",
               "updated_at": "2026-10-12"
@@ -150862,7 +150838,7 @@
               "start_date": "2026-05-11",
               "end_date": "2026-11-05",
               "start_text": "2026-05-11",
-              "end_text": "2026-11-05 (Prognos)",
+              "end_text": "2026-11-05",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Buprenorphine Orifarm, Buprenorphine G.L. Pharma, Buprenorphine Bluefish, Buprenorfin Actavis.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBuprenorphine Orifarm - Blister, 28 tabletter\nBuprenorphine G.L. Pharma - Blister, 28 tabletter (plast/Al)\nBuprenorfin Actavis - Blister, 28 resoribletter  (Al) (Pågående restsituation)\n\nAlternativ förpackning: Buprenorphine Sandoz - Blister, 7 tabletter",
               "updated_at": "2026-06-11"
@@ -158902,7 +158878,7 @@
               "start_text": "2027-01-04 (Prognos)",
               "end_text": "2027-04-04 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Suboxone, Bunalict, Buprenorphine/Naloxone G.L. Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSuboxone - Blister, 28 tabletter (PD: Orifarm AB)\nBuprenorphine/Naloxone G.L. Pharma - Blister, 28 tabletter\nBunalict - Blister, 28 x 1 resoribletter (endos)",
+              "alternatives_info": "Utbytbara läkemedel: Bunalict, Buprenorphine/Naloxone G.L. Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nBuprenorphine/Naloxone G.L. Pharma - Blister, 28 tabletter\nBunalict - Blister, 28 x 1 resoribletter (endos)",
               "updated_at": "2026-10-26"
             }
           ],
@@ -453278,12 +453254,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-02-26",
-              "end_date": "2026-11-19",
+              "end_date": "2026-11-12",
               "start_text": "2026-02-26",
-              "end_text": "2026-11-19 (Prognos)",
+              "end_text": "2026-11-12 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Ivabradin Medical Valley, Ivabradine Accord, Ivabradin Medical Valley (parallellimporterat av Ebb Medical AB), Procoralan, Ivabradine Anpharm.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nIvabradin Medical Valley - Blister, 112 tabletter (parallellimporterat av Ebb Medical AB)\nIvabradin Medical Valley - Blister, 112 tabletter\nIvabradine Accord - Blister, 112 x 1 tabletter (endos) (PD: Abacus Medicine A/S)\nIvabradine Anpharm - Blister, 112 tabletter (PD: 2care4)\nProcoralan - Blister, 112 tabletter (PD: Medartuum AB)\n\nLicens: Förskrivare kan vända sig till apotek för information om tillgång på läkemedel från annat land. Se även: https://lakemedelsverket.se/licens",
-              "updated_at": "2026-10-27"
+              "updated_at": "2026-11-04"
             }
           ],
           "history": {
@@ -483910,7 +483886,7 @@
               "start_date": "2026-06-01",
               "end_date": "2026-11-05",
               "start_text": "2026-06-01",
-              "end_text": "2026-11-05 (Prognos)",
+              "end_text": "2026-11-05",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Xeloda, Capecitabine Teva, Capecitabine Zentiva, Capecitabine Accord, Capecitabin STADA, Capecitabine Orion.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nCapecitabin STADA - Blister, 120 tabletter (Plast/Al)\nCapecitabine Orion - Blister, 120 tabletter (Plast/Al)\nCapecitabine Teva - Blister, 120 tabletter\nXeloda - Blister, 120 tabletter (PD: Medartuum AB)\nCapecitabine Accord - Blister, 120 tabletter (plast/Al) (PD: Abacus Medicine A/S, )\nCapecitabine Zentiva - Blister, 120 tabletter\nCapecitabine Accord - Blister, 120 tabletter (plast/Al)",
               "updated_at": "2026-10-27"
@@ -498305,19 +498281,7 @@
           "company": "Teva Sweden AB",
           "origin": "Generics",
           "packaging": "",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-08-15",
-              "end_date": "2026-11-30",
-              "start_text": "2026-08-15",
-              "end_text": "2026-11-30 (Prognos)",
-              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Dermovat.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDermovat - Tub, 30 g\n\nAlternativ förpackning: Clobetasol Teva - Tub, 100 g",
-              "updated_at": "2026-09-11"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -515967,7 +515931,7 @@
               "start_date": "2025-06-10",
               "end_date": "2026-11-05",
               "start_text": "2025-06-10",
-              "end_text": "2026-11-05 (Prognos)",
+              "end_text": "2026-11-05",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Quetiapin Medical Valley, Quetiapin Krka, Quetiapine Accord, Quetiapine Teva, Seroquel Depot, Biquetan, Quetiapine Teva (parallellimporterat av Ebb Medical AB).\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nQuetiapin Medical Valley - Blister, 100 tabletter (Pågående restsituation)\nQuetiapine Accord - Blister, 100 tabletter (plast/Al)\nQuetiapine Teva - Blister, 100 tabletter\nQuetiapin Krka - Blister, 100 tabletter\nBiquetan - Blister, 100 tabletter (Pågående restsituation)\nSeroquel Depot - Blister, 100 tabletter\nQuetiapine Teva - Blister, 100 tabletter (parallellimporterat av Ebb Medical AB)",
               "updated_at": "2026-07-30"
@@ -591578,7 +591542,7 @@
               "start_text": "2024-09-25",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid Viatris, Dimor, Loperamid Apofri, Imodium, Imolopera, Loperamide Medical Valley, Loperamid ABECE.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nLoperamid Viatris - Blister, 40 kapslar\nDimor - Blister, 40 x 1 tabletter (endos)",
+              "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid ABECE, Loperamid Punkt, Imodium, Loperamid Viatris, Loperamid Apofri, Imolopera, Loperamide Medical Valley, Dimor.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDimor - Blister, 40 x 1 tabletter (endos)\nLoperamid Viatris - Blister, 40 kapslar",
               "updated_at": "2026-09-24"
             }
           ],
@@ -592039,7 +592003,7 @@
               "start_text": "2026-11-02",
               "end_text": "2026-11-17 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid Viatris, Dimor, Loperamid Apofri, Imolopera, Loperamide Medical Valley, Loperamid Brown, Loperamid ABECE.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nLoperamide Medical Valley - Burk, 105 tabletter\nLoperamid Brown - Blister, 100 kapslar, Alu-PVC/Aclar (Pågående restsituation)\nImolopera - Blister, 100 tabletter\nDimor - Blister, 100 x 1 tabletter (endos)\n\nAlternativ förpackning: Imodium - Blister, 16 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid ABECE, Loperamid Punkt, Loperamid Viatris, Loperamid Apofri, Loperamid Brown, Imolopera, Loperamide Medical Valley, Dimor.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nLoperamide Medical Valley - Burk, 105 tabletter\nLoperamid Brown - Blister, 100 kapslar, Alu-PVC/Aclar (Pågående restsituation)\nImolopera - Blister, 100 tabletter\nDimor - Blister, 100 x 1 tabletter (endos)\n\nAlternativ förpackning: Imodium - Blister, 16 tabletter",
               "updated_at": "2026-10-16"
             }
           ],
@@ -592343,7 +592307,7 @@
               "start_text": "2024-09-25",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid Viatris, Dimor, Loperamid Apofri, Imodium, Imolopera, Loperamide Medical Valley, Loperamid ABECE.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nLoperamide Medical Valley - Burk, 105 tabletter\nImolopera - Blister, 100 tabletter\nDimor - Blister, 100 x 1 tabletter (endos)\nImodium - Blister, 100 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid ABECE, Loperamid Punkt, Imodium, Loperamid Viatris, Loperamid Apofri, Imolopera, Loperamide Medical Valley, Dimor.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nLoperamide Medical Valley - Burk, 105 tabletter\nImolopera - Blister, 100 tabletter\nDimor - Blister, 100 x 1 tabletter (endos)\nImodium - Blister, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-09-24"
             }
           ],
@@ -592488,7 +592452,7 @@
         },
         {
           "vnr": "439003",
-          "name": "Loperamid NET",
+          "name": "Loperamid Punkt",
           "company": "Evolan Pharma AB",
           "origin": "Generics",
           "packaging": "Burk",
@@ -593096,7 +593060,7 @@
               "start_text": "2026-08-01",
               "end_text": "2027-01-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid Viatris, Dimor, Loperamid Apofri, Imodium, Loperamide Medical Valley, Loperamid Brown, Loperamid ABECE.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nLoperamide Medical Valley - Burk, 270 tabletter\nLoperamid Viatris - Burk, 250 kapslar\nImolopera - Burk, 250 tabletter (dosdispensering)\n\nAlternativ förpackning: Imolopera - Blister, 16 tabletter\nImolopera - Blister, 100 tabletter\nImolopera - Burk, 250 tabletter (dosdispensering)",
+              "alternatives_info": "Utbytbara läkemedel: Loperamide Grindeks, Loperamid ABECE, Loperamid Punkt, Imodium, Loperamid Viatris, Loperamid Apofri, Loperamid Brown, Loperamide Medical Valley, Dimor.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nLoperamide Medical Valley - Burk, 270 tabletter\nLoperamid Viatris - Burk, 250 kapslar\nImolopera - Burk, 250 tabletter (dosdispensering)\n\nAlternativ förpackning: Imolopera - Blister, 16 tabletter\nImolopera - Blister, 100 tabletter\nImolopera - Burk, 250 tabletter (dosdispensering)",
               "updated_at": "2026-07-07"
             }
           ],
@@ -706386,19 +706350,7 @@
           "company": "Evolan Pharma AB",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2024-11-01",
-              "end_date": "2026-10-31",
-              "start_text": "2024-11-01",
-              "end_text": "2026-10-31",
-              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Pronaxen, Naproxen Bluefish, Naproxen Orifarm.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nNaproxen Bluefish - Blister, 100 tabletter\nNaproxen Orifarm - Blister, 100 tabletter\nPronaxen - Burk, 100 tabletter (reumatikerförpackning)\n\nAlternativ förpackning: Naproxen Evolan - Blister, 30 tabletter\nNaproxen Evolan - Blister, 50 tabletter",
-              "updated_at": "2026-05-25"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -874457,7 +874409,7 @@
               "start_text": "2026-10-12",
               "end_text": "2026-12-15 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Propavan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPropavan - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Propiomazin Orifarm - Blister, 50 tabletter (Pågående restsituation)\nPropiomazin Orifarm - Burk, 250 tabletter (dosdispensering) (Pågående restsituation)\nPropiomazin Orifarm - Blister, 20 tabletter (Pågående restsituation)",
+              "alternatives_info": "Viktig information: Länk till nyhet - Brist på tabletter som innehåller propiomazin:\nhttps://www.lakemedelsverket.se/sv/nyheter/bristsituation-pa-tabletter-innehallande-propiomazin\n\nLänk till Läkemedelsverkets frågeforum: https://fragor.lakemedelsverket.se/org/lakemedelsverket/d/ar-propavan-pa-vag-att-ta-slut/\n\nUtbytbara läkemedel: Propavan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPropavan - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Propiomazin Orifarm - Blister, 50 tabletter (Pågående restsituation)\nPropiomazin Orifarm - Burk, 250 tabletter (dosdispensering) (Pågående restsituation)\nPropiomazin Orifarm - Blister, 20 tabletter (Pågående restsituation)",
               "updated_at": "2026-10-07"
             }
           ],
@@ -890329,19 +890281,7 @@
           "company": "STADA Nordic ApS",
           "origin": "Generics",
           "packaging": "",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-04-06",
-              "end_date": "2026-11-30",
-              "start_text": "2026-04-06",
-              "end_text": "2026-11-30 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinid STADA - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
-              "updated_at": "2026-08-12"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -890626,7 +890566,7 @@
               "start_text": "2026-05-01",
               "end_text": "2027-01-28 (Prognos)",
               "reason": "Oväntat stor efterfrågan på läkemedlet",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
+              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 90 tabletter\n\nAlternativ förpackning: Repaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
               "updated_at": "2026-10-19"
             }
           ],
@@ -891078,19 +891018,7 @@
           "company": "STADA Nordic ApS",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-04-06",
-              "end_date": "2026-11-30",
-              "start_text": "2026-04-06",
-              "end_text": "2026-11-30 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinid STADA - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
-              "updated_at": "2026-08-12"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -891375,7 +891303,7 @@
               "start_text": "2026-04-10",
               "end_text": "2027-01-28 (Prognos)",
               "reason": "Oväntat stor efterfrågan på läkemedlet",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
+              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 120 tabletter\n\nAlternativ förpackning: Repaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
               "updated_at": "2026-10-19"
             }
           ],
@@ -892226,19 +892154,7 @@
           "company": "STADA Nordic ApS",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-06-25",
-              "end_date": "2026-11-30",
-              "start_text": "2026-06-25",
-              "end_text": "2026-11-30 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinid STADA - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
-              "updated_at": "2026-08-12"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -892523,7 +892439,7 @@
               "start_text": "2026-08-08",
               "end_text": "2027-01-28 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
+              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 90 tabletter\n\nAlternativ förpackning: Repaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
               "updated_at": "2026-10-19"
             }
           ],
@@ -893009,19 +892925,7 @@
           "company": "STADA Nordic ApS",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-08-10",
-              "end_date": "2026-11-30",
-              "start_text": "2026-08-10",
-              "end_text": "2026-11-30 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinid STADA - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
-              "updated_at": "2026-08-12"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -893306,7 +893210,7 @@
               "start_text": "2026-08-08",
               "end_text": "2027-01-28 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
+              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 120 tabletter\n\nAlternativ förpackning: Repaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
               "updated_at": "2026-10-09"
             }
           ],
@@ -893683,7 +893587,7 @@
               "start_text": "2026-06-10",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA, Repaglinide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 90 tabletter (Pågående restsituation)\nRepaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinid Actavis - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
+              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA, Repaglinide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 90 tabletter\nRepaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinid Actavis - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
               "updated_at": "2026-09-29"
             }
           ],
@@ -893832,19 +893736,7 @@
           "company": "STADA Nordic ApS",
           "origin": "Generics",
           "packaging": "",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-08-10",
-              "end_date": "2026-11-30",
-              "start_text": "2026-08-10",
-              "end_text": "2026-11-30 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinid Actavis, Repaglinide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\nRepaglinid Actavis - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinid STADA - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
-              "updated_at": "2026-08-12"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "NEJ",
@@ -894129,7 +894021,7 @@
               "start_text": "2026-08-15",
               "end_text": "2027-01-28 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinid Actavis, Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 90 tabletter (Pågående restsituation)\nRepaglinid Actavis - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
+              "alternatives_info": "Utbytbara läkemedel: Repaglinid Actavis, Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 90 tabletter\nRepaglinid Actavis - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
               "updated_at": "2026-10-19"
             }
           ],
@@ -894444,7 +894336,7 @@
               "start_text": "2026-09-30",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA, Repaglinide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 120 tabletter (Pågående restsituation)\nRepaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinid Actavis - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
+              "alternatives_info": "Utbytbara läkemedel: Repaglinid STADA, Repaglinide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid STADA - Blister, 120 tabletter\nRepaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinid Actavis - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
               "updated_at": "2026-09-29"
             }
           ],
@@ -894593,19 +894485,7 @@
           "company": "STADA Nordic ApS",
           "origin": "Generics",
           "packaging": "Blister",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-08-10",
-              "end_date": "2026-11-30",
-              "start_text": "2026-08-10",
-              "end_text": "2026-11-30 (Prognos)",
-              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinid Actavis, Repaglinide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid Actavis - Blister, 120 tabletter (Pågående restsituation)\nRepaglinide Krka - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinid STADA - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
-              "updated_at": "2026-08-12"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2611": {
               "status": "PV",
@@ -894890,7 +894770,7 @@
               "start_text": "2026-08-15",
               "end_text": "2027-01-28 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Repaglinid Actavis, Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid Actavis - Blister, 120 tabletter (Pågående restsituation)\nRepaglinid STADA - Blister, 120 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Repaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
+              "alternatives_info": "Utbytbara läkemedel: Repaglinid Actavis, Repaglinid STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRepaglinid Actavis - Blister, 120 tabletter (Pågående restsituation)\nRepaglinid STADA - Blister, 120 tabletter\n\nAlternativ förpackning: Repaglinide Krka - Blister, 90 tabletter (Pågående restsituation)\n\nAlternativt läkemedel inom samma ATC-grupp: A10B Blodglukossänkande medel, exkl. insuliner",
               "updated_at": "2026-10-19"
             }
           ],
@@ -1026902,7 +1026782,7 @@
               "start_text": "2026-02-19",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Tapentadol Depot STADA, Tapentadol Depot Medical Valley, Palexia Depot.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nTapentadol Depot Medical Valley - Blister 100 tabletter\nTapentadol Depot STADA - Blister, 100 x 1 tabletter (endos)\nPalexia Depot - Blister, 100 tabletter\n\nAlternativ förpackning: Tapentadol Depot Krka - Burk, 30 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Tapentadol Depot STADA, Tapentadol Depot Medical Valley, Palexia Depot.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nTapentadol Depot Medical Valley - Blister 100 tabletter\nTapentadol Depot STADA - Blister, 100 x 1 tabletter (endos)\nPalexia Depot - Blister, 100 tabletter\n\nAlternativ förpackning: Tapentadol Depot Krka - Burk, 30 tabletter (Pågående restsituation)",
               "updated_at": "2026-10-27"
             }
           ],
@@ -1027640,7 +1027520,19 @@
           "company": "KRKA Sverige AB",
           "origin": "Generics",
           "packaging": "Burk",
-          "shortages": [],
+          "shortages": [
+            {
+              "status": "Pågående restsituation",
+              "shortage_type": "Restsituation",
+              "start_date": "2026-11-04",
+              "end_date": "2026-12-31",
+              "start_text": "2026-11-04",
+              "end_text": "2026-12-31 (Prognos)",
+              "reason": "Oväntat stor efterfrågan på läkemedlet",
+              "alternatives_info": "Utbytbara läkemedel: Tapentadol Depot Medical Valley, Palexia Depot, Tapentadol Depot STADA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nTapentadol Depot STADA - Blister, 30 x 1 tabletter (endos)\nPalexia Depot - Blister, 30 tabletter\nTapentadol Depot Medical Valley - Blister 30 tabletter\n\nAlternativ förpackning: Tapentadol Depot Krka - Burk, 100 tabletter (Pågående restsituation)",
+              "updated_at": "2026-11-04"
+            }
+          ],
           "history": {
             "2611": {
               "status": "NEJ",
