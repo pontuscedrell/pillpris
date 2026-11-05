@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T12:55:10.539467+00:00",
+  "generatedAt": "2026-11-05T21:45:22.700197+00:00",
   "months": [
     2611,
     2610,
@@ -12320,7 +12320,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 497.21
             },
             "2610": {
@@ -150586,7 +150586,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 508.0
             },
             "2610": {
@@ -150732,7 +150732,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 491.52
             },
             "2610": {
@@ -150846,7 +150846,7 @@
           ],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 412.01
             },
             "2610": {
@@ -293455,6 +293455,20 @@
           }
         },
         {
+          "vnr": "378160",
+          "name": "Escitalopram Teva",
+          "company": "Teva Sweden AB",
+          "origin": "Generics",
+          "packaging": "",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "PV",
+              "price": 65.84
+            }
+          }
+        },
+        {
           "vnr": "409840",
           "name": "Escitalopram Teva",
           "company": "Teva Sweden AB",
@@ -293462,10 +293476,6 @@
           "packaging": "Blister",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "PV",
-              "price": 65.84
-            },
             "2610": {
               "status": "R1",
               "price": 66.44
@@ -519070,7 +519080,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 793.1
             },
             "2610": {
@@ -519362,7 +519372,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 157.61
             },
             "2610": {
@@ -519508,7 +519518,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 136.49
             },
             "2610": {
@@ -519654,7 +519664,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 787.49
             },
             "2610": {
@@ -658868,7 +658878,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 558.01
             },
             "2610": {
