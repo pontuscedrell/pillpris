@@ -28747,7 +28747,7 @@
         "Utbytesgrupps ID":112202
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Desloratadin Ebb",
         "Varunummer":148289,
         "Styrka":"5 mg",
@@ -28766,7 +28766,7 @@
         "Utbytesgrupps ID":112202
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Desloratadin Ebb",
         "Varunummer":148289,
         "Styrka":"5 mg",
@@ -28880,7 +28880,7 @@
         "Utbytesgrupps ID":112202
     },
     {
-        "Status":"PV",
+        "Status":"R1",
         "Produktnamn":"Desloratadin Bijon",
         "Varunummer":38476,
         "Styrka":"5 mg",
@@ -28896,25 +28896,6 @@
         "NPL pack ID":20210610100128,
         "Ursprung":"ParallelImport",
         "Företag":"UAB BIJON medica",
-        "Utbytesgrupps ID":112202
-    },
-    {
-        "Status":"PV",
-        "Produktnamn":"Deslofox",
-        "Varunummer":382985,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Desloratadin",
-        "Beredningsform":"Munsönderfallande tablett",
-        "Storlek":90.0,
-        "Apotekens inköpspris":193.13,
-        "Försäljningspris":245.14,
-        "Inköpspris per minsta enhet":2.15,
-        "Försäljningspris per minsta enhet":2.72,
-        "NPL ID":20240422000057,
-        "NPL pack ID":20240821100327,
-        "Ursprung":"ParallelImport",
-        "Företag":"Orifarm AB",
         "Utbytesgrupps ID":112202
     },
     {
@@ -28934,6 +28915,25 @@
         "NPL pack ID":20241021100957,
         "Ursprung":"Generics",
         "Företag":"Orion Pharma AB",
+        "Utbytesgrupps ID":112202
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Deslofox",
+        "Varunummer":382985,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Desloratadin",
+        "Beredningsform":"Munsönderfallande tablett",
+        "Storlek":90.0,
+        "Apotekens inköpspris":193.13,
+        "Försäljningspris":245.14,
+        "Inköpspris per minsta enhet":2.15,
+        "Försäljningspris per minsta enhet":2.72,
+        "NPL ID":20240422000057,
+        "NPL pack ID":20240821100327,
+        "Ursprung":"ParallelImport",
+        "Företag":"Orifarm AB",
         "Utbytesgrupps ID":112202
     },
     {
