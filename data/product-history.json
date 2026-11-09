@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T20:07:28.539838+00:00",
+  "generatedAt": "2026-11-09T13:35:04.224726+00:00",
   "months": [
     2611,
     2610,
@@ -585598,11 +585598,11 @@
           "packaging": "Kartong",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-09",
               "end_date": "2026-12-31",
-              "start_text": "2026-11-09 (Prognos)",
+              "start_text": "2026-11-09",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: EMLA.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nEMLA - Påse, 20 x 1 plåster\n\nAlternativ förpackning: Tapin - Kartong, 2 plåster",
@@ -817917,11 +817917,11 @@
           "packaging": "",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-09",
               "end_date": "2026-12-01",
-              "start_text": "2026-11-09 (Prognos)",
+              "start_text": "2026-11-09",
               "end_text": "2026-12-01 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Paracetamol EQL Pharma, Paracut Forte, Paracetamol Zentiva, Panodil Forte, Paracetamol Evolan, Paracetamol Krka, Paracetamol Medical Valley.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nParacetamol Krka - Burk, 105 tabletter\nParacut Forte - Burk, 100 tabletter\nAlvedon forte - Burk, 100 tabletter\nParacetamol Medical Valley - Burk, 105 tabletter\nParacetamol Evolan - Burk, 105 tabletter\nParacetamol Zentiva - Blister, 100 tabletter\nPanodil Forte - Burk, 105 tabletter\nParacetamol EQL Pharma - Burk, 105 tabletter\n\nAlternativ förpackning: Alvedon forte - Burk, 100 tabletter\nAlvedon forte - Blister, 50 x 1 tablett (endos)",
