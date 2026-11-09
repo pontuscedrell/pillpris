@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T13:35:04.224726+00:00",
+  "generatedAt": "2026-11-09T23:57:14.836090+00:00",
   "months": [
     2611,
     2610,
@@ -522584,7 +522584,7 @@
           ],
           "history": {
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 1024.75
             },
             "2610": {
@@ -522888,7 +522888,7 @@
           "shortages": [],
           "history": {
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 1060.63
             },
             "2610": {
@@ -974156,6 +974156,20 @@
       "size": "250",
       "brands": [
         {
+          "vnr": "508213",
+          "name": "Sertralin Hexal",
+          "company": "Sandoz A/S",
+          "origin": "Generics",
+          "packaging": "",
+          "shortages": [],
+          "history": {
+            "2611": {
+              "status": "NEJ",
+              "price": 201.84
+            }
+          }
+        },
+        {
           "vnr": "562384",
           "name": "Sertralin Hexal",
           "company": "Sandoz A/S",
@@ -974163,10 +974177,6 @@
           "packaging": "Burk",
           "shortages": [],
           "history": {
-            "2611": {
-              "status": "NEJ",
-              "price": 201.84
-            },
             "2610": {
               "status": "NEJ",
               "price": 201.84
