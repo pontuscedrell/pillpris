@@ -81796,25 +81796,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Abdomin Neutral",
-        "Varunummer":148108,
-        "Styrka":null,
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Makrogol + kaliumklorid + natriumbikarbonat + natriumklorid",
-        "Beredningsform":"Pulver till oral lösning, dospåse",
-        "Storlek":100.0,
-        "Apotekens inköpspris":166.37,
-        "Försäljningspris":230.44,
-        "Inköpspris per minsta enhet":1.66,
-        "Försäljningspris per minsta enhet":2.3,
-        "NPL ID":20240318000161,
-        "NPL pack ID":20240716100777,
-        "Ursprung":"Generics",
-        "Företag":"Orifarm Generics AB",
-        "Utbytesgrupps ID":111247
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Macrovic",
         "Varunummer":531572,
         "Styrka":null,
@@ -81833,7 +81814,7 @@
         "Utbytesgrupps ID":111247
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Laxiriva",
         "Varunummer":376240,
         "Styrka":null,
@@ -81849,6 +81830,25 @@
         "NPL pack ID":20091210100301,
         "Ursprung":"Generics",
         "Företag":"Sandoz A\/S",
+        "Utbytesgrupps ID":111247
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Abdomin Neutral",
+        "Varunummer":148108,
+        "Styrka":null,
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Makrogol + kaliumklorid + natriumbikarbonat + natriumklorid",
+        "Beredningsform":"Pulver till oral lösning, dospåse",
+        "Storlek":100.0,
+        "Apotekens inköpspris":166.37,
+        "Försäljningspris":230.44,
+        "Inköpspris per minsta enhet":1.66,
+        "Försäljningspris per minsta enhet":2.3,
+        "NPL ID":20240318000161,
+        "NPL pack ID":20240716100777,
+        "Ursprung":"Generics",
+        "Företag":"Orifarm Generics AB",
         "Utbytesgrupps ID":111247
     },
     {
@@ -148620,7 +148620,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Venlafaxin Medical Valley",
-        "Varunummer":410699,
+        "Varunummer":491895,
         "Styrka":"150 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Venlafaxin",
@@ -149057,7 +149057,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Venlafaxin Medical Valley",
-        "Varunummer":100717,
+        "Varunummer":186592,
         "Styrka":"37,5 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Venlafaxin",
@@ -149456,7 +149456,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Venlafaxin Medical Valley",
-        "Varunummer":408493,
+        "Varunummer":493648,
         "Styrka":"75 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Venlafaxin",
