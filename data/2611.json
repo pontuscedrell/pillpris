@@ -71175,25 +71175,6 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Lamotrigin 1A Farma",
-        "Varunummer":541651,
-        "Styrka":"100 mg (Grupp D)",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Lamotrigin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":310.0,
-        "Försäljningspris":379.0,
-        "Inköpspris per minsta enhet":3.1,
-        "Försäljningspris per minsta enhet":3.79,
-        "NPL ID":20190830000029,
-        "NPL pack ID":20191031100075,
-        "Ursprung":"ParallelImport",
-        "Företag":"EQL Pharma Int AB",
-        "Utbytesgrupps ID":112505
-    },
-    {
-        "Status":"Nej",
         "Produktnamn":"Lamotrigin Abacus Medicine",
         "Varunummer":173764,
         "Styrka":"100 mg (Grupp D)",
@@ -148620,7 +148601,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Venlafaxin Medical Valley",
-        "Varunummer":491895,
+        "Varunummer":433856,
         "Styrka":"150 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Venlafaxin",
@@ -149057,7 +149038,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Venlafaxin Medical Valley",
-        "Varunummer":186592,
+        "Varunummer":471736,
         "Styrka":"37,5 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Venlafaxin",
@@ -149456,7 +149437,7 @@
     {
         "Status":"Nej",
         "Produktnamn":"Venlafaxin Medical Valley",
-        "Varunummer":493648,
+        "Varunummer":135077,
         "Styrka":"75 mg",
         "Förpackningsstorleksgrupp":"T23",
         "Substans":"Venlafaxin",
