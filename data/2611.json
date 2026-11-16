@@ -6745,7 +6745,7 @@
         "Utbytesgrupps ID":113061
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"EMEND",
         "Varunummer":596715,
         "Styrka":"125 mg + 80 mg",
@@ -64924,25 +64924,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Carvedilol HEXAL",
-        "Varunummer":599488,
-        "Styrka":"25 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Karvedilol",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":123.9,
-        "Försäljningspris":186.49,
-        "Inköpspris per minsta enhet":1.24,
-        "Försäljningspris per minsta enhet":1.86,
-        "NPL ID":20040130000048,
-        "NPL pack ID":20040130100526,
-        "Ursprung":"Generics",
-        "Företag":"Sandoz A\/S",
-        "Utbytesgrupps ID":340
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Carveratio",
         "Varunummer":447596,
         "Styrka":"25 mg",
@@ -65034,6 +65015,25 @@
         "NPL pack ID":20260317100112,
         "Ursprung":"ParallelImport",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":340
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Carvedilol HEXAL",
+        "Varunummer":599488,
+        "Styrka":"25 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Karvedilol",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":123.9,
+        "Försäljningspris":186.49,
+        "Inköpspris per minsta enhet":1.24,
+        "Försäljningspris per minsta enhet":1.86,
+        "NPL ID":20040130000048,
+        "NPL pack ID":20040130100526,
+        "Ursprung":"Generics",
+        "Företag":"Sandoz A\/S",
         "Utbytesgrupps ID":340
     },
     {
