@@ -40877,17 +40877,14 @@
     "size": "98 st",
     "names": [
       "Valsartan/Hydrochlorothiazide Krka",
-      "Valsartan/Hydrochlorothiazide Rivopharm",
       "Valsartan/Hydrochlorothiazide Sandoz",
       "Valsartan/Hydroklortiazid Jubilant",
       "Valsartore Comp"
     ],
     "vnr": [
       "373976",
-      "397226",
       "412662",
       "495858",
-      "514749",
       "547200"
     ],
     "packaging": [],
@@ -40903,7 +40900,6 @@
     "names": [
       "Valsartan/Hydrochlorothiazide 2care4",
       "Valsartan/Hydrochlorothiazide Krka",
-      "Valsartan/Hydrochlorothiazide Rivopharm",
       "Valsartan/Hydroklortiazid Abacus Medicine",
       "Valsartore Comp"
     ],
@@ -40912,7 +40908,6 @@
       "162561",
       "394850",
       "462849",
-      "496009",
       "522560"
     ],
     "packaging": [],
@@ -40950,15 +40945,12 @@
     "size": "98 st",
     "names": [
       "Valsartan/Hydrochlorothiazide Krka",
-      "Valsartan/Hydrochlorothiazide Rivopharm",
       "Valsartore Comp"
     ],
     "vnr": [
       "101811",
       "375153",
-      "477469",
-      "480336",
-      "509624"
+      "480336"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -42017,12 +42009,10 @@
     "str": "2,5 mg",
     "size": "12 st",
     "names": [
-      "Zolmitriptan Holsten",
       "Zolmitriptan STADA"
     ],
     "vnr": [
-      "376375",
-      "384789"
+      "376375"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -42035,13 +42025,11 @@
     "str": "2,5 mg",
     "size": "6 st",
     "names": [
-      "Zolmitriptan Holsten",
       "Zolmitriptan Jubilant",
       "Zolmitriptan STADA"
     ],
     "vnr": [
       "191001",
-      "400372",
       "507587"
     ],
     "packaging": [],
