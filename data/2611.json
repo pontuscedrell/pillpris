@@ -72962,25 +72962,6 @@
     {
         "Status":"PV",
         "Produktnamn":"Monoprost",
-        "Varunummer":497060,
-        "Styrka":"50 mikrogram\/ml",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Latanoprost",
-        "Beredningsform":"Ögondroppar, endosbehållare",
-        "Storlek":90.0,
-        "Apotekens inköpspris":294.55,
-        "Försäljningspris":363.11,
-        "Inköpspris per minsta enhet":3.27,
-        "Försäljningspris per minsta enhet":4.03,
-        "NPL ID":20251106000010,
-        "NPL pack ID":20260223100237,
-        "Ursprung":"ParallelImport",
-        "Företag":"Abacus Medicine A\/S",
-        "Utbytesgrupps ID":112271
-    },
-    {
-        "Status":"R1",
-        "Produktnamn":"Monoprost",
         "Varunummer":551817,
         "Styrka":"50 mikrogram\/ml",
         "Förpackningsstorleksgrupp":"T23",
@@ -72998,7 +72979,7 @@
         "Utbytesgrupps ID":112271
     },
     {
-        "Status":"R1",
+        "Status":"PV",
         "Produktnamn":"Monoprost",
         "Varunummer":436417,
         "Styrka":"50 mikrogram\/ml",
@@ -73017,7 +72998,7 @@
         "Utbytesgrupps ID":112271
     },
     {
-        "Status":"R1",
+        "Status":"PV",
         "Produktnamn":"Monoprost",
         "Varunummer":436417,
         "Styrka":"50 mikrogram\/ml",
@@ -73033,6 +73014,25 @@
         "NPL pack ID":20240220100065,
         "Ursprung":"ParallelImport",
         "Företag":"Ebb Medical AB",
+        "Utbytesgrupps ID":112271
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Monoprost",
+        "Varunummer":497060,
+        "Styrka":"50 mikrogram\/ml",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Latanoprost",
+        "Beredningsform":"Ögondroppar, endosbehållare",
+        "Storlek":90.0,
+        "Apotekens inköpspris":294.55,
+        "Försäljningspris":363.11,
+        "Inköpspris per minsta enhet":3.27,
+        "Försäljningspris per minsta enhet":4.03,
+        "NPL ID":20251106000010,
+        "NPL pack ID":20260223100237,
+        "Ursprung":"ParallelImport",
+        "Företag":"Abacus Medicine A\/S",
         "Utbytesgrupps ID":112271
     },
     {
