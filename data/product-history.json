@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T21:25:58.625968+00:00",
+  "generatedAt": "2026-11-22T13:01:59.151057+00:00",
   "months": [
     2612,
     2611,
@@ -240152,7 +240152,7 @@
               "start_text": "2026-11-01",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Stesolid.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nStesolid - Burk, 25 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Diazepam Orifarm - Blister, 100 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Stesolid.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nStesolid - Burk, 25 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Diazepam Orifarm - Blister, 100 tabletter",
               "updated_at": "2026-10-09"
             }
           ],
@@ -240307,11 +240307,11 @@
           "packaging": "",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-22",
               "end_date": "2027-01-20",
-              "start_text": "2026-11-22 (Prognos)",
+              "start_text": "2026-11-22",
               "end_text": "2027-01-20 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Diazepam Orifarm.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDiazepam Orifarm - Blister, 25 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Stesolid - Blister, 50 x 1 tablett (endos)\nStesolid - Burk, 100 tabletter",
@@ -1041511,11 +1041511,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-22",
               "end_date": "2027-01-20",
-              "start_text": "2026-11-22 (Prognos)",
+              "start_text": "2026-11-22",
               "end_text": "2027-01-20 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Sumatriptan Viatris, Sumatriptan Bluefish, Sumatriptan Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSumatriptan Accord - Blister, 18 tabletter\nSumatriptan Viatris - Blister, 18 tabletter (Pågående restsituation)\nSumatriptan Bluefish - Blister, 18 tabletter",
@@ -1041680,7 +1041680,7 @@
               "start_text": "2026-11-15",
               "end_text": "2027-08-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Sumatriptan Teva, Sumatriptan Bluefish, Sumatriptan Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSumatriptan Accord - Blister, 18 tabletter\nSumatriptan Bluefish - Blister, 18 tabletter\nSumatriptan Teva - Blister, 18 tabletter (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Sumatriptan Teva, Sumatriptan Bluefish, Sumatriptan Accord.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSumatriptan Accord - Blister, 18 tabletter\nSumatriptan Bluefish - Blister, 18 tabletter\nSumatriptan Teva - Blister, 18 tabletter (Pågående restsituation)",
               "updated_at": "2026-11-02"
             }
           ],
