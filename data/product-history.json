@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T21:29:37.874438+00:00",
+  "generatedAt": "2026-11-23T15:38:58.958608+00:00",
   "months": [
     2612,
     2611,
@@ -20262,7 +20262,7 @@
               "start_text": "2026-10-21",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Allopurinol Teva, Allopurinol Accord, Allopurinol Sandoz, Allopurinol Orion, Allopurinol Nordic Drugs.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAllopurinol Sandoz - Burk, 105 tabletter\nAllopurinol Accord - Blister, 100 tabletter\nAllopurinol Orion - Blister, 100 tabletter (Kommande restsituation)\nAllopurinol Teva - Blister, 100 tabletter (Pågående restsituation)\nAllopurinol Nordic Drugs - Blister, 100 x 1 tablett (endos)",
+              "alternatives_info": "Utbytbara läkemedel: Allopurinol Teva, Allopurinol Accord, Allopurinol Sandoz, Allopurinol Orion, Allopurinol Nordic Drugs.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAllopurinol Sandoz - Burk, 105 tabletter\nAllopurinol Accord - Blister, 100 tabletter\nAllopurinol Orion - Blister, 100 tabletter (Pågående restsituation)\nAllopurinol Teva - Blister, 100 tabletter (Pågående restsituation)\nAllopurinol Nordic Drugs - Blister, 100 x 1 tablett (endos)",
               "updated_at": "2026-10-20"
             }
           ],
@@ -20417,11 +20417,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-23",
               "end_date": "2027-01-04",
-              "start_text": "2026-11-23 (Prognos)",
+              "start_text": "2026-11-23",
               "end_text": "2027-01-04 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Allopurinol Teva, Allopurinol Sandoz, Allopurinol Accord, Allopurinol Nordic Drugs.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAllopurinol Sandoz - Burk, 105 tabletter\nAllopurinol Accord - Blister, 100 tabletter\nAllopurinol Teva - Blister, 100 tabletter (Pågående restsituation)\nAllopurinol Nordic Drugs - Blister, 100 x 1 tablett (endos)",
@@ -20736,7 +20736,7 @@
               "start_text": "2026-11-15",
               "end_text": "2027-01-10 (Prognos)",
               "reason": "Oväntat stor efterfrågan på läkemedlet",
-              "alternatives_info": "Utbytbara läkemedel: Allopurinol Sandoz, Allopurinol Accord, Allopurinol Orion, Allopurinol Nordic Drugs.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAllopurinol Sandoz - Burk, 105 tabletter\nAllopurinol Accord - Blister, 100 tabletter\nAllopurinol Orion - Blister, 100 tabletter (Kommande restsituation)\nAllopurinol Nordic Drugs - Blister, 100 x 1 tablett (endos)\n\nAlternativ styrka: 100 mg",
+              "alternatives_info": "Utbytbara läkemedel: Allopurinol Sandoz, Allopurinol Accord, Allopurinol Orion, Allopurinol Nordic Drugs.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAllopurinol Sandoz - Burk, 105 tabletter\nAllopurinol Accord - Blister, 100 tabletter\nAllopurinol Orion - Blister, 100 tabletter (Pågående restsituation)\nAllopurinol Nordic Drugs - Blister, 100 x 1 tablett (endos)\n\nAlternativ styrka: 100 mg",
               "updated_at": "2026-10-30"
             }
           ],
@@ -51402,6 +51402,10 @@
             "2612": {
               "status": "NEJ",
               "price": 89.49
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 170.49
             }
           }
         },
@@ -51416,6 +51420,10 @@
             "2612": {
               "status": "NEJ",
               "price": 111.87
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 98.87
             }
           }
         },
@@ -51458,6 +51466,10 @@
             "2612": {
               "status": "R2",
               "price": 62.37
+            },
+            "2611": {
+              "status": "PV",
+              "price": 52.3
             }
           }
         },
@@ -51472,6 +51484,10 @@
             "2612": {
               "status": "R1",
               "price": 61.88
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 235.39
             }
           }
         },
@@ -51486,6 +51502,10 @@
             "2612": {
               "status": "NEJ",
               "price": 65.16
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 66.52
             }
           }
         },
@@ -51500,6 +51520,10 @@
             "2612": {
               "status": "NEJ",
               "price": 159.68
+            },
+            "2611": {
+              "status": "R2",
+              "price": 196.32
             }
           }
         },
@@ -51514,6 +51538,10 @@
             "2612": {
               "status": "NEJ",
               "price": 77.31
+            },
+            "2611": {
+              "status": "R1",
+              "price": 64.31
             }
           }
         },
@@ -51528,6 +51556,10 @@
             "2612": {
               "status": "NEJ",
               "price": 248.39
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 235.39
             }
           }
         },
@@ -51542,6 +51574,10 @@
             "2612": {
               "status": "NEJ",
               "price": 248.39
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 235.39
             }
           }
         }
@@ -51567,6 +51603,10 @@
             "2612": {
               "status": "NEJ",
               "price": 161.09
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 420.33
             }
           }
         },
@@ -51581,6 +51621,10 @@
             "2612": {
               "status": "NEJ",
               "price": 223.66
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 210.66
             }
           }
         },
@@ -51623,6 +51667,10 @@
             "2612": {
               "status": "NEJ",
               "price": 73.97
+            },
+            "2611": {
+              "status": "PV",
+              "price": 67.28
             }
           }
         },
@@ -51637,6 +51685,10 @@
             "2612": {
               "status": "R1",
               "price": 69.88
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 613.15
             }
           }
         },
@@ -51651,6 +51703,10 @@
             "2612": {
               "status": "R2",
               "price": 72.45
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 80.89
             }
           }
         },
@@ -51665,6 +51721,10 @@
             "2612": {
               "status": "NEJ",
               "price": 283.88
+            },
+            "2611": {
+              "status": "R2",
+              "price": 487.05
             }
           }
         },
@@ -51679,6 +51739,10 @@
             "2612": {
               "status": "NEJ",
               "price": 177.79
+            },
+            "2611": {
+              "status": "R1",
+              "price": 164.79
             }
           }
         },
@@ -51693,6 +51757,10 @@
             "2612": {
               "status": "NEJ",
               "price": 626.15
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 613.15
             }
           }
         },
@@ -51707,6 +51775,10 @@
             "2612": {
               "status": "NEJ",
               "price": 626.15
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 613.15
             }
           }
         },
@@ -51721,6 +51793,10 @@
             "2612": {
               "status": "NEJ",
               "price": 626.15
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 613.15
             }
           }
         }
@@ -51744,8 +51820,12 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "NEJ",
+              "status": "PV",
               "price": 718.58
+            },
+            "2611": {
+              "status": "PV",
+              "price": 987.29
             }
           }
         }
@@ -51771,6 +51851,10 @@
             "2612": {
               "status": "NEJ",
               "price": 345.22
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 1091.7
             }
           }
         },
@@ -51785,6 +51869,10 @@
             "2612": {
               "status": "NEJ",
               "price": 519.91
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 506.91
             }
           }
         },
@@ -51827,6 +51915,10 @@
             "2612": {
               "status": "NEJ",
               "price": 614.75
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 90.31
             }
           }
         },
@@ -51841,6 +51933,10 @@
             "2612": {
               "status": "NEJ",
               "price": 1642.83
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 99.94
             }
           }
         },
@@ -51869,6 +51965,10 @@
             "2612": {
               "status": "PV",
               "price": 69.71
+            },
+            "2611": {
+              "status": "R1",
+              "price": 266.71
             }
           }
         },
@@ -51883,6 +51983,10 @@
             "2612": {
               "status": "R2",
               "price": 86.37
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 93.04
             }
           }
         },
@@ -51897,6 +52001,10 @@
             "2612": {
               "status": "NEJ",
               "price": 187.63
+            },
+            "2611": {
+              "status": "R2",
+              "price": 1312.71
             }
           }
         },
@@ -51911,6 +52019,10 @@
             "2612": {
               "status": "NEJ",
               "price": 125.93
+            },
+            "2611": {
+              "status": "PV",
+              "price": 112.93
             }
           }
         },
@@ -51925,6 +52037,10 @@
             "2612": {
               "status": "NEJ",
               "price": 1643.2
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 1630.2
             }
           }
         },
@@ -51939,6 +52055,10 @@
             "2612": {
               "status": "NEJ",
               "price": 1642.83
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 1629.83
             }
           }
         },
@@ -51953,6 +52073,10 @@
             "2612": {
               "status": "NEJ",
               "price": 1642.83
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 1629.83
             }
           }
         },
@@ -51967,6 +52091,10 @@
             "2612": {
               "status": "NEJ",
               "price": 1643.2
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 1630.2
             }
           }
         }
@@ -51990,7 +52118,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "R2",
               "price": 1701.25
             }
           }
@@ -52020,6 +52148,10 @@
             "2612": {
               "status": "PV",
               "price": 720.4
+            },
+            "2611": {
+              "status": "R1",
+              "price": 1931.53
             }
           }
         },
@@ -52032,8 +52164,12 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "NEJ",
+              "status": "R1",
               "price": 1377.66
+            },
+            "2611": {
+              "status": "PV",
+              "price": 1928.87
             }
           }
         },
@@ -52048,6 +52184,10 @@
             "2612": {
               "status": "NEJ",
               "price": 654.48
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 1743.2
             }
           }
         }
@@ -52073,6 +52213,10 @@
             "2612": {
               "status": "PV",
               "price": 78.42
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 132.19
             }
           }
         },
@@ -52101,6 +52245,10 @@
             "2612": {
               "status": "R2",
               "price": 191.34
+            },
+            "2611": {
+              "status": "PV",
+              "price": 178.34
             }
           }
         }
@@ -52126,6 +52274,10 @@
             "2612": {
               "status": "NEJ",
               "price": 104.01
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 311.25
             }
           }
         },
@@ -52140,6 +52292,10 @@
             "2612": {
               "status": "NEJ",
               "price": 135.42
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 122.42
             }
           }
         },
@@ -52180,8 +52336,12 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R2",
+              "status": "R1",
               "price": 74.23
+            },
+            "2611": {
+              "status": "PV",
+              "price": 67.66
             }
           }
         },
@@ -52194,8 +52354,12 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "NEJ",
               "price": 73.22
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 67.57
             }
           }
         },
@@ -52210,6 +52374,10 @@
             "2612": {
               "status": "NEJ",
               "price": 197.98
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 271.58
             }
           }
         },
@@ -52222,8 +52390,12 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 89.94
+            },
+            "2611": {
+              "status": "R1",
+              "price": 76.94
             }
           }
         },
@@ -52238,6 +52410,10 @@
             "2612": {
               "status": "NEJ",
               "price": 324.44
+            },
+            "2611": {
+              "status": "R2",
+              "price": 311.44
             }
           }
         }
@@ -52263,6 +52439,10 @@
             "2612": {
               "status": "NEJ",
               "price": 153.71
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 395.73
             }
           }
         },
@@ -52277,6 +52457,10 @@
             "2612": {
               "status": "NEJ",
               "price": 212.64
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 199.64
             }
           }
         },
@@ -52319,6 +52503,10 @@
             "2612": {
               "status": "R2",
               "price": 74.16
+            },
+            "2611": {
+              "status": "PV",
+              "price": 69.39
             }
           }
         },
@@ -52333,6 +52521,10 @@
             "2612": {
               "status": "PV",
               "price": 69.71
+            },
+            "2611": {
+              "status": "R2",
+              "price": 338.39
             }
           }
         },
@@ -52347,6 +52539,10 @@
             "2612": {
               "status": "NEJ",
               "price": 74.33
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 76.47
             }
           }
         },
@@ -52361,6 +52557,10 @@
             "2612": {
               "status": "NEJ",
               "price": 177.28
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 466.06
             }
           }
         },
@@ -52375,6 +52575,10 @@
             "2612": {
               "status": "NEJ",
               "price": 96.1
+            },
+            "2611": {
+              "status": "R1",
+              "price": 83.1
             }
           }
         },
@@ -52389,6 +52593,10 @@
             "2612": {
               "status": "NEJ",
               "price": 588.48
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 575.48
             }
           }
         }
@@ -52412,7 +52620,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 100.52
             }
           }
@@ -52439,6 +52647,10 @@
             "2612": {
               "status": "NEJ",
               "price": 229.48
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 669.4
             }
           }
         },
@@ -52453,6 +52665,10 @@
             "2612": {
               "status": "NEJ",
               "price": 484.92
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 471.92
             }
           }
         },
@@ -52495,6 +52711,10 @@
             "2612": {
               "status": "NEJ",
               "price": 983.75
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 105.12
             }
           }
         },
@@ -52509,6 +52729,10 @@
             "2612": {
               "status": "R2",
               "price": 90.46
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 95.52
             }
           }
         },
@@ -52537,6 +52761,10 @@
             "2612": {
               "status": "PV",
               "price": 70.49
+            },
+            "2611": {
+              "status": "R1",
+              "price": 176.49
             }
           }
         },
@@ -52551,6 +52779,10 @@
             "2612": {
               "status": "NEJ",
               "price": 778.75
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 83.1
             }
           }
         },
@@ -52565,6 +52797,10 @@
             "2612": {
               "status": "NEJ",
               "price": 311.83
+            },
+            "2611": {
+              "status": "R2",
+              "price": 800.3
             }
           }
         },
@@ -52579,6 +52815,10 @@
             "2612": {
               "status": "NEJ",
               "price": 718.58
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 987.29
             }
           }
         },
@@ -52593,6 +52833,10 @@
             "2612": {
               "status": "NEJ",
               "price": 101.62
+            },
+            "2611": {
+              "status": "PV",
+              "price": 88.62
             }
           }
         },
@@ -52619,6 +52863,10 @@
             "2612": {
               "status": "NEJ",
               "price": 1002.74
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 989.74
             }
           }
         }
@@ -52644,6 +52892,10 @@
             "2612": {
               "status": "NEJ",
               "price": 345.22
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 1091.7
             }
           }
         },
@@ -52658,6 +52910,10 @@
             "2612": {
               "status": "NEJ",
               "price": 519.91
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 506.91
             }
           }
         },
@@ -52700,6 +52956,10 @@
             "2612": {
               "status": "NEJ",
               "price": 614.75
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 113.83
             }
           }
         },
@@ -52714,6 +52974,10 @@
             "2612": {
               "status": "NEJ",
               "price": 1642.83
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 120.69
             }
           }
         },
@@ -52742,6 +53006,10 @@
             "2612": {
               "status": "PV",
               "price": 69.71
+            },
+            "2611": {
+              "status": "R1",
+              "price": 266.71
             }
           }
         },
@@ -52756,6 +53024,10 @@
             "2612": {
               "status": "NEJ",
               "price": 1086.25
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 89.73
             }
           }
         },
@@ -52770,6 +53042,10 @@
             "2612": {
               "status": "NEJ",
               "price": 249.73
+            },
+            "2611": {
+              "status": "R2",
+              "price": 1313.32
             }
           }
         },
@@ -52784,6 +53060,10 @@
             "2612": {
               "status": "R2",
               "price": 108.07
+            },
+            "2611": {
+              "status": "PV",
+              "price": 95.07
             }
           }
         },
@@ -52798,6 +53078,10 @@
             "2612": {
               "status": "NEJ",
               "price": 1642.83
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 1629.83
             }
           }
         },
@@ -52812,6 +53096,10 @@
             "2612": {
               "status": "NEJ",
               "price": 1643.2
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 1630.2
             }
           }
         }
@@ -52835,7 +53123,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "R2",
               "price": 1701.25
             }
           }
@@ -52865,6 +53153,10 @@
             "2612": {
               "status": "PV",
               "price": 720.4
+            },
+            "2611": {
+              "status": "R1",
+              "price": 1931.53
             }
           }
         },
@@ -52877,8 +53169,12 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "NEJ",
+              "status": "R1",
               "price": 1377.66
+            },
+            "2611": {
+              "status": "PV",
+              "price": 1928.87
             }
           }
         },
@@ -52893,6 +53189,10 @@
             "2612": {
               "status": "NEJ",
               "price": 654.48
+            },
+            "2611": {
+              "status": "NEJ",
+              "price": 1743.2
             }
           }
         }
@@ -75192,7 +75492,7 @@
               "price": 459.98
             },
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 459.98
             },
             "2610": {
@@ -75522,7 +75822,7 @@
               "price": 441.69
             },
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 460.89
             },
             "2610": {
@@ -283482,7 +283782,7 @@
               "start_text": "2025-04-24",
               "end_text": "2026-12-24 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Enalapril Orion, Enalapril STADA, Enalapril Sandoz, Enalapril Accord, Enalapril Vitabalans, Enalapril Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nEnalapril Teva - Blister, 100 tabletter\nEnalapril Sandoz - Blister, 100 tabletter\nEnalapril STADA - Blister, 105 tabletter\nEnalapril Orion - Burk, 100 tabletter (Kommande restsituation)\nEnalapril Accord - Blister, 100 tabletter\nEnalapril Vitabalans - Blister, 100 tabletter\n\nAlternativ förpackning: Enalapril Krka - Burk, 250 tabletter (Pågående restsituation)\nEnalapril Krka - Blister, 30 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Enalapril Orion, Enalapril STADA, Enalapril Sandoz, Enalapril Accord, Enalapril Vitabalans, Enalapril Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nEnalapril Teva - Blister, 100 tabletter\nEnalapril Sandoz - Blister, 100 tabletter\nEnalapril STADA - Blister, 105 tabletter\nEnalapril Orion - Burk, 100 tabletter (Pågående restsituation)\nEnalapril Accord - Blister, 100 tabletter\nEnalapril Vitabalans - Blister, 100 tabletter\n\nAlternativ förpackning: Enalapril Krka - Burk, 250 tabletter (Pågående restsituation)\nEnalapril Krka - Blister, 30 tabletter (Pågående restsituation)",
               "updated_at": "2026-10-05"
             }
           ],
@@ -283637,11 +283937,11 @@
           "packaging": "Burk",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-23",
               "end_date": "2027-01-04",
-              "start_text": "2026-11-23 (Prognos)",
+              "start_text": "2026-11-23",
               "end_text": "2027-01-04 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Enalapril Krka, Enalapril Teva, Enalapril Sandoz, Enalapril Accord, Enalapril STADA, Enalapril Vitabalans.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nEnalapril Vitabalans - Blister, 100 tabletter\nEnalapril Sandoz - Blister, 100 tabletter\nEnalapril STADA - Blister, 105 tabletter\nEnalapril Krka - Blister, 100 x 1 tabletter (endos) (Pågående restsituation)\nEnalapril Teva - Blister, 100 tabletter\nEnalapril Accord - Blister, 100 tabletter",
@@ -377134,7 +377434,7 @@
               "price": 337.7
             },
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 249.73
             },
             "2610": {
@@ -377284,7 +377584,7 @@
               "price": 219.65
             },
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 337.7
             },
             "2610": {
@@ -377584,7 +377884,7 @@
               "price": 291.13
             },
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 326.32
             },
             "2610": {
@@ -600647,7 +600947,7 @@
               "price": 141.28
             },
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 141.28
             },
             "2610": {
@@ -600797,7 +601097,7 @@
               "price": 101.66
             },
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 109.37
             },
             "2610": {
@@ -600947,7 +601247,7 @@
               "price": 108.28
             },
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 108.71
             },
             "2610": {
@@ -696251,7 +696551,7 @@
               "price": 212.47
             },
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 152.44
             },
             "2610": {
@@ -696427,7 +696727,7 @@
               "price": 159.82
             },
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 340.31
             },
             "2610": {
@@ -696727,7 +697027,7 @@
               "price": 236.27
             },
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 301.48
             },
             "2610": {
@@ -719758,7 +720058,7 @@
               "start_text": "2026-05-04",
               "end_text": "2027-06-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Rivomoxi, Avelox (parallellimporterat av Ebb Medical AB), Moxifloxacin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nMoxifloxacin 2care4 - Blister, 10 tabletter (parallellimporterat av 2care4 ApS)\nMoxifloxacin Krka - Blister, 10 tabletter (Pågående restsituation)\nRivomoxi - Blister, 10 tabletter\nAvelox - Blister, 10 tabletter (parallellimporterat av Ebb Medical AB)\nMoxifloxacin Abacus Medicine - Blister, 10 tabletter (parallellimporterat av Abacus Medicine A/S)\n\nAlternativ förpackning: Moxifloxacin Orion - Blister, 7 tabletter\nMoxifloxacin Orion - Blister, 5 tabletter (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Rivomoxi, Avelox (parallellimporterat av Ebb Medical AB), Moxifloxacin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nMoxifloxacin 2care4 - Blister, 10 tabletter (parallellimporterat av 2care4 ApS)\nMoxifloxacin Krka - Blister, 10 tabletter (Pågående restsituation)\nRivomoxi - Blister, 10 tabletter\nAvelox - Blister, 10 tabletter (parallellimporterat av Ebb Medical AB)\nMoxifloxacin Abacus Medicine - Blister, 10 tabletter (parallellimporterat av Abacus Medicine A/S)\n\nAlternativ förpackning: Moxifloxacin Orion - Blister, 7 tabletter\nMoxifloxacin Orion - Blister, 5 tabletter (Pågående restsituation)",
               "updated_at": "2026-09-17"
             }
           ],
@@ -720299,7 +720599,7 @@
               "start_text": "2026-11-25 (Prognos)",
               "end_text": "2027-03-18 (Prognos)",
               "reason": "Oväntat stor efterfrågan på läkemedlet",
-              "alternatives_info": "Utbytbara läkemedel: Rivomoxi, Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Avelox (parallellimporterat av Ebb Medical AB), Moxifloxacin Orion.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRivomoxi - Blister, 5 tabletter\nMoxifloxacin Orion - Blister, 5 tabletter (Kommande restsituation)\nAvelox - Blister, 5 tabletter (parallellimporterat av Ebb Medical AB)\nMoxifloxacin 2care4 - Blister, 5 tabletter (parallellimporterat av 2care4 ApS)\n\nAlternativ förpackning: Moxifloxacin Krka - Blister, 10 tabletter (Pågående restsituation)\nMoxifloxacin Krka - Blister, 7 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Rivomoxi, Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Avelox (parallellimporterat av Ebb Medical AB), Moxifloxacin Orion.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRivomoxi - Blister, 5 tabletter\nMoxifloxacin Orion - Blister, 5 tabletter (Pågående restsituation)\nAvelox - Blister, 5 tabletter (parallellimporterat av Ebb Medical AB)\nMoxifloxacin 2care4 - Blister, 5 tabletter (parallellimporterat av 2care4 ApS)\n\nAlternativ förpackning: Moxifloxacin Krka - Blister, 10 tabletter (Pågående restsituation)\nMoxifloxacin Krka - Blister, 7 tabletter",
               "updated_at": "2026-11-12"
             }
           ],
@@ -720454,11 +720754,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-23",
               "end_date": "2026-12-14",
-              "start_text": "2026-11-23 (Prognos)",
+              "start_text": "2026-11-23",
               "end_text": "2026-12-14 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Moxifloxacin Abacus Medicine (parallellimporterat av Abacus Medicine A/S), Moxifloxacin 2care4 (parallellimporterat av 2care4 ApS), Rivomoxi, Avelox (parallellimporterat av Ebb Medical AB), Moxifloxacin Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nRivomoxi - Blister, 5 tabletter\nMoxifloxacin Krka - Blister, 5 tabletter (Kommande restsituation)\nMoxifloxacin 2care4 - Blister, 5 tabletter (parallellimporterat av 2care4 ApS)\nAvelox - Blister, 5 tabletter (parallellimporterat av Ebb Medical AB)\n\nAlternativ förpackning: Moxifloxacin Orion - Blister, 7 tabletter\nMoxifloxacin Orion - Blister, 10 tabletter (Pågående restsituation)",
@@ -1044312,11 +1044612,11 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-23",
               "end_date": "2027-08-01",
-              "start_text": "2026-11-23 (Prognos)",
+              "start_text": "2026-11-23",
               "end_text": "2027-08-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Imigran Novum, Sumatriptan Accord, Sumatriptan Punkt, Sumatriptan Bluefish, Sumatriptan ABECE, Sumatriptan Apofri, Sumatriptan Teva, Oriptan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSumatriptan Accord - Blister, 12 tabletter\nSumatriptan Bluefish - Blister, 12 tabletter\n\nAlternativ förpackning: Sumatriptan Viatris - Blister, 18 tabletter (Pågående restsituation)\nSumatriptan Viatris - Blister, 2 tabletter (Pågående restsituation)",
@@ -1045232,7 +1045532,7 @@
               "start_text": "2026-08-28",
               "end_text": "2027-08-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Imigran Novum, Sumatriptan Accord, Sumatriptan Punkt, Sumatriptan Bluefish, Sumatriptan ABECE, Sumatriptan Apofri, Sumatriptan Teva, Oriptan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSumatriptan Bluefish - Blister, 18 tabletter\nSumatriptan Teva - Blister, 18 tabletter\nSumatriptan Accord - Blister, 18 tabletter\n\nAlternativ förpackning: Sumatriptan Viatris - Blister, 12 tabletter (Kommande restsituation)\nSumatriptan Viatris - Blister, 2 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Imigran Novum, Sumatriptan Accord, Sumatriptan Punkt, Sumatriptan Bluefish, Sumatriptan ABECE, Sumatriptan Apofri, Sumatriptan Teva, Oriptan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSumatriptan Bluefish - Blister, 18 tabletter\nSumatriptan Teva - Blister, 18 tabletter\nSumatriptan Accord - Blister, 18 tabletter\n\nAlternativ förpackning: Sumatriptan Viatris - Blister, 12 tabletter (Pågående restsituation)\nSumatriptan Viatris - Blister, 2 tabletter (Pågående restsituation)",
               "updated_at": "2026-11-02"
             }
           ],

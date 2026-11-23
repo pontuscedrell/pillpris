@@ -6726,7 +6726,7 @@
         "Utbytesgrupps ID":111390
     },
     {
-        "Status":"Nej",
+        "Status":"PV",
         "Produktnamn":"Apixaban Teva",
         "Varunummer":510322,
         "Styrka":"2,5 mg",
@@ -7050,6 +7050,25 @@
     },
     {
         "Status":"R1",
+        "Produktnamn":"Apixaban Teva",
+        "Varunummer":101359,
+        "Styrka":"2,5 mg",
+        "Förpackningsstorleksgrupp":"T27",
+        "Substans":"Apixaban",
+        "Beredningsform":"Tablett",
+        "Storlek":200.0,
+        "Apotekens inköpspris":1284.3,
+        "Försäljningspris":1377.66,
+        "Inköpspris per minsta enhet":6.42,
+        "Försäljningspris per minsta enhet":6.89,
+        "NPL ID":20190603000126,
+        "NPL pack ID":20190802100061,
+        "Ursprung":"Generics",
+        "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":111390
+    },
+    {
+        "Status":"R2",
         "Produktnamn":"Apixaban Krka",
         "Varunummer":188759,
         "Styrka":"2,5 mg",
@@ -7084,25 +7103,6 @@
         "NPL pack ID":20200826100265,
         "Ursprung":"Generics",
         "Företag":"Viatris AB",
-        "Utbytesgrupps ID":111390
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Apixaban Teva",
-        "Varunummer":101359,
-        "Styrka":"2,5 mg",
-        "Förpackningsstorleksgrupp":"T27",
-        "Substans":"Apixaban",
-        "Beredningsform":"Tablett",
-        "Storlek":200.0,
-        "Apotekens inköpspris":1284.3,
-        "Försäljningspris":1377.66,
-        "Inköpspris per minsta enhet":6.42,
-        "Försäljningspris per minsta enhet":6.89,
-        "NPL ID":20190603000126,
-        "NPL pack ID":20190802100061,
-        "Ursprung":"Generics",
-        "Företag":"Teva Sweden AB",
         "Utbytesgrupps ID":111390
     },
     {
@@ -7202,25 +7202,6 @@
     },
     {
         "Status":"R1",
-        "Produktnamn":"Apixaban STADA",
-        "Varunummer":398229,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Apixaban",
-        "Beredningsform":"Tablett",
-        "Storlek":28.0,
-        "Apotekens inköpspris":18.3,
-        "Försäljningspris":73.22,
-        "Inköpspris per minsta enhet":0.65,
-        "Försäljningspris per minsta enhet":2.62,
-        "NPL ID":20191101000113,
-        "NPL pack ID":20200602100229,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
-        "Utbytesgrupps ID":115162
-    },
-    {
-        "Status":"R2",
         "Produktnamn":"Apixaban Orion",
         "Varunummer":378438,
         "Styrka":"5 mg",
@@ -7239,7 +7220,7 @@
         "Utbytesgrupps ID":115162
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Apixaban Zentiva",
         "Varunummer":166027,
         "Styrka":"5 mg",
@@ -7255,6 +7236,25 @@
         "NPL pack ID":20221110100280,
         "Ursprung":"Generics",
         "Företag":"Zentiva Denmark ApS",
+        "Utbytesgrupps ID":115162
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Apixaban STADA",
+        "Varunummer":398229,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Apixaban",
+        "Beredningsform":"Tablett",
+        "Storlek":28.0,
+        "Apotekens inköpspris":18.3,
+        "Försäljningspris":73.22,
+        "Inköpspris per minsta enhet":0.65,
+        "Försäljningspris per minsta enhet":2.62,
+        "NPL ID":20191101000113,
+        "NPL pack ID":20200602100229,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":115162
     },
     {
@@ -7543,7 +7543,7 @@
         "Utbytesgrupps ID":115162
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Apixaban STADA",
         "Varunummer":137835,
         "Styrka":"5 mg",
@@ -8076,6 +8076,25 @@
     },
     {
         "Status":"R1",
+        "Produktnamn":"Apixaban Teva",
+        "Varunummer":27547,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"T27",
+        "Substans":"Apixaban",
+        "Beredningsform":"Tablett",
+        "Storlek":200.0,
+        "Apotekens inköpspris":1284.3,
+        "Försäljningspris":1377.66,
+        "Inköpspris per minsta enhet":6.42,
+        "Försäljningspris per minsta enhet":6.89,
+        "NPL ID":20190603000133,
+        "NPL pack ID":20190802100290,
+        "Ursprung":"Generics",
+        "Företag":"Teva Sweden AB",
+        "Utbytesgrupps ID":115162
+    },
+    {
+        "Status":"R2",
         "Produktnamn":"Apixaban Krka",
         "Varunummer":455035,
         "Styrka":"5 mg",
@@ -8110,25 +8129,6 @@
         "NPL pack ID":20200826100432,
         "Ursprung":"Generics",
         "Företag":"Viatris AB",
-        "Utbytesgrupps ID":115162
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Apixaban Teva",
-        "Varunummer":27547,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"T27",
-        "Substans":"Apixaban",
-        "Beredningsform":"Tablett",
-        "Storlek":200.0,
-        "Apotekens inköpspris":1284.3,
-        "Försäljningspris":1377.66,
-        "Inköpspris per minsta enhet":6.42,
-        "Försäljningspris per minsta enhet":6.89,
-        "NPL ID":20190603000133,
-        "NPL pack ID":20190802100290,
-        "Ursprung":"Generics",
-        "Företag":"Teva Sweden AB",
         "Utbytesgrupps ID":115162
     },
     {
