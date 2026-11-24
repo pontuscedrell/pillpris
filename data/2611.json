@@ -121791,25 +121791,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Risperidone Grindeks",
-        "Varunummer":95251,
-        "Styrka":"1 mg",
-        "Förpackningsstorleksgrupp":"T21",
-        "Substans":"Risperidon",
-        "Beredningsform":"Tablett",
-        "Storlek":60.0,
-        "Apotekens inköpspris":24.52,
-        "Försäljningspris":80.09,
-        "Inköpspris per minsta enhet":0.41,
-        "Försäljningspris per minsta enhet":1.33,
-        "NPL ID":20211222000035,
-        "NPL pack ID":20211229100141,
-        "Ursprung":"Generics",
-        "Företag":"Grindeks Kalceks Sverige AB",
-        "Utbytesgrupps ID":111908
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Risperidon Orion",
         "Varunummer":88361,
         "Styrka":"1 mg",
@@ -121828,7 +121809,7 @@
         "Utbytesgrupps ID":111908
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Risperidon Sandoz",
         "Varunummer":48698,
         "Styrka":"1 mg",
@@ -121847,7 +121828,7 @@
         "Utbytesgrupps ID":111908
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Risperidon STADA",
         "Varunummer":113303,
         "Styrka":"1 mg",
@@ -121863,6 +121844,25 @@
         "NPL pack ID":20060504100679,
         "Ursprung":"Generics",
         "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":111908
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Risperidone Grindeks",
+        "Varunummer":95251,
+        "Styrka":"1 mg",
+        "Förpackningsstorleksgrupp":"T21",
+        "Substans":"Risperidon",
+        "Beredningsform":"Tablett",
+        "Storlek":60.0,
+        "Apotekens inköpspris":24.52,
+        "Försäljningspris":80.09,
+        "Inköpspris per minsta enhet":0.41,
+        "Försäljningspris per minsta enhet":1.33,
+        "NPL ID":20211222000035,
+        "NPL pack ID":20211229100141,
+        "Ursprung":"Generics",
+        "Företag":"Grindeks Kalceks Sverige AB",
         "Utbytesgrupps ID":111908
     },
     {
