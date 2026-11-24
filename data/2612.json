@@ -7202,6 +7202,25 @@
     },
     {
         "Status":"R1",
+        "Produktnamn":"Apixaban STADA",
+        "Varunummer":398229,
+        "Styrka":"5 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Apixaban",
+        "Beredningsform":"Tablett",
+        "Storlek":28.0,
+        "Apotekens inköpspris":18.3,
+        "Försäljningspris":73.22,
+        "Inköpspris per minsta enhet":0.65,
+        "Försäljningspris per minsta enhet":2.62,
+        "NPL ID":20191101000113,
+        "NPL pack ID":20200602100229,
+        "Ursprung":"Generics",
+        "Företag":"STADA Nordic ApS",
+        "Utbytesgrupps ID":115162
+    },
+    {
+        "Status":"R2",
         "Produktnamn":"Apixaban Orion",
         "Varunummer":378438,
         "Styrka":"5 mg",
@@ -7220,7 +7239,7 @@
         "Utbytesgrupps ID":115162
     },
     {
-        "Status":"R2",
+        "Status":"Nej",
         "Produktnamn":"Apixaban Zentiva",
         "Varunummer":166027,
         "Styrka":"5 mg",
@@ -7236,25 +7255,6 @@
         "NPL pack ID":20221110100280,
         "Ursprung":"Generics",
         "Företag":"Zentiva Denmark ApS",
-        "Utbytesgrupps ID":115162
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Apixaban STADA",
-        "Varunummer":398229,
-        "Styrka":"5 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Apixaban",
-        "Beredningsform":"Tablett",
-        "Storlek":28.0,
-        "Apotekens inköpspris":18.3,
-        "Försäljningspris":73.22,
-        "Inköpspris per minsta enhet":0.65,
-        "Försäljningspris per minsta enhet":2.62,
-        "NPL ID":20191101000113,
-        "NPL pack ID":20200602100229,
-        "Ursprung":"Generics",
-        "Företag":"STADA Nordic ApS",
         "Utbytesgrupps ID":115162
     },
     {
@@ -7543,7 +7543,7 @@
         "Utbytesgrupps ID":115162
     },
     {
-        "Status":"Nej",
+        "Status":"PV",
         "Produktnamn":"Apixaban STADA",
         "Varunummer":137835,
         "Styrka":"5 mg",
@@ -69446,25 +69446,6 @@
     },
     {
         "Status":"Nej",
-        "Produktnamn":"Clozapine Holsten",
-        "Varunummer":447012,
-        "Styrka":"100 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Klozapin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":292.49,
-        "Försäljningspris":360.98,
-        "Inköpspris per minsta enhet":2.92,
-        "Försäljningspris per minsta enhet":3.61,
-        "NPL ID":20150730000062,
-        "NPL pack ID":20170105100159,
-        "Ursprung":"Generics",
-        "Företag":"SanoSwiss UAB",
-        "Utbytesgrupps ID":469
-    },
-    {
-        "Status":"Nej",
         "Produktnamn":"Clozapine Sandoz",
         "Varunummer":89314,
         "Styrka":"100 mg",
@@ -69651,25 +69632,6 @@
         "NPL pack ID":20150115100349,
         "Ursprung":"Generics",
         "Företag":"Accord Healthcare AB",
-        "Utbytesgrupps ID":549
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Clozapine Holsten",
-        "Varunummer":522133,
-        "Styrka":"25 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Klozapin",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":83.49,
-        "Försäljningspris":144.66,
-        "Inköpspris per minsta enhet":0.83,
-        "Försäljningspris per minsta enhet":1.45,
-        "NPL ID":20150730000055,
-        "NPL pack ID":20170105100074,
-        "Ursprung":"Generics",
-        "Företag":"SanoSwiss UAB",
         "Utbytesgrupps ID":549
     },
     {
