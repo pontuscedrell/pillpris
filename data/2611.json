@@ -120404,25 +120404,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Risperidon Sandoz",
-        "Varunummer":473683,
-        "Styrka":"1 mg\/ml",
-        "Förpackningsstorleksgrupp":"M100",
-        "Substans":"Risperidon",
-        "Beredningsform":"Oral lösning",
-        "Storlek":100.0,
-        "Apotekens inköpspris":235.0,
-        "Försäljningspris":301.48,
-        "Inköpspris per minsta enhet":2.35,
-        "Försäljningspris per minsta enhet":3.01,
-        "NPL ID":20200107000055,
-        "NPL pack ID":20200506100028,
-        "Ursprung":"ParallelImport",
-        "Företag":"Medartuum AB",
-        "Utbytesgrupps ID":112118
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Risperidon Abacus Medicine",
         "Varunummer":196448,
         "Styrka":"1 mg\/ml",
@@ -120441,7 +120422,7 @@
         "Utbytesgrupps ID":112118
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Risperdal®",
         "Varunummer":70797,
         "Styrka":"1 mg\/ml",
@@ -120476,6 +120457,25 @@
         "NPL pack ID":20170208100018,
         "Ursprung":"ParallelImport",
         "Företag":"Ebb Medical AB",
+        "Utbytesgrupps ID":112118
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Risperidon Sandoz",
+        "Varunummer":473683,
+        "Styrka":"1 mg\/ml",
+        "Förpackningsstorleksgrupp":"M100",
+        "Substans":"Risperidon",
+        "Beredningsform":"Oral lösning",
+        "Storlek":100.0,
+        "Apotekens inköpspris":235.0,
+        "Försäljningspris":301.48,
+        "Inköpspris per minsta enhet":2.35,
+        "Försäljningspris per minsta enhet":3.01,
+        "NPL ID":20200107000055,
+        "NPL pack ID":20200506100028,
+        "Ursprung":"ParallelImport",
+        "Företag":"Medartuum AB",
         "Utbytesgrupps ID":112118
     },
     {
@@ -150101,25 +150101,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Venlafaxin Sandoz",
-        "Varunummer":532781,
-        "Styrka":"37,5 mg",
-        "Förpackningsstorleksgrupp":"T20",
-        "Substans":"Venlafaxin",
-        "Beredningsform":"Depotkapsel\/Depottablett",
-        "Storlek":50.0,
-        "Apotekens inköpspris":80.19,
-        "Försäljningspris":141.25,
-        "Inköpspris per minsta enhet":1.6,
-        "Försäljningspris per minsta enhet":2.83,
-        "NPL ID":20250502000327,
-        "NPL pack ID":20250612100085,
-        "Ursprung":"ParallelImport",
-        "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":111980
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Venlafaxin Medical Valley",
         "Varunummer":33136,
         "Styrka":"37,5 mg",
@@ -150138,7 +150119,7 @@
         "Utbytesgrupps ID":111980
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Venlafaxin Krka",
         "Varunummer":390020,
         "Styrka":"37,5 mg",
@@ -150154,6 +150135,25 @@
         "NPL pack ID":20060524100086,
         "Ursprung":"Generics",
         "Företag":"KRKA Sverige AB",
+        "Utbytesgrupps ID":111980
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Venlafaxin Sandoz",
+        "Varunummer":532781,
+        "Styrka":"37,5 mg",
+        "Förpackningsstorleksgrupp":"T20",
+        "Substans":"Venlafaxin",
+        "Beredningsform":"Depotkapsel\/Depottablett",
+        "Storlek":50.0,
+        "Apotekens inköpspris":80.19,
+        "Försäljningspris":141.25,
+        "Inköpspris per minsta enhet":1.6,
+        "Försäljningspris per minsta enhet":2.83,
+        "NPL ID":20250502000327,
+        "NPL pack ID":20250612100085,
+        "Ursprung":"ParallelImport",
+        "Företag":"Ebb Medical AB",
         "Utbytesgrupps ID":111980
     },
     {
