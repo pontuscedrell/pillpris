@@ -38846,12 +38846,10 @@
     "str": "250 mg",
     "size": "14 st",
     "names": [
-      "Azurifin",
       "Terbinafin Hexal"
     ],
     "vnr": [
-      "36488",
-      "380723"
+      "36488"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -38862,9 +38860,8 @@
     "sub": "Terbinafin",
     "form": "Tablett",
     "str": "250 mg",
-    "size": "28 st",
+    "size": "30 st",
     "names": [
-      "Azurifin",
       "Terbinafin 2care4",
       "Terbinafin Ebb",
       "Terbinafin Hexal",
@@ -38876,8 +38873,7 @@
       "135389",
       "143815",
       "168079",
-      "172713",
-      "482292"
+      "172713"
     ],
     "packaging": [],
     "packagingMap": {}
@@ -38906,7 +38902,6 @@
     "str": "250 mg",
     "size": "100 st",
     "names": [
-      "Azurifin",
       "Terbinafin 2care4",
       "Terbinafin Abacus Medicine",
       "Terbinafin Ebb",
@@ -38919,7 +38914,6 @@
       "130463",
       "165655",
       "384161",
-      "485093",
       "545089",
       "56922"
     ],

@@ -141360,25 +141360,6 @@
         "Utbytesgrupps ID":497
     },
     {
-        "Status":"Nej",
-        "Produktnamn":"Azurifin",
-        "Varunummer":380723,
-        "Styrka":"250 mg",
-        "Förpackningsstorleksgrupp":"T14",
-        "Substans":"Terbinafin",
-        "Beredningsform":"Tablett",
-        "Storlek":14.0,
-        "Apotekens inköpspris":144.0,
-        "Försäljningspris":207.29,
-        "Inköpspris per minsta enhet":10.29,
-        "Försäljningspris per minsta enhet":14.81,
-        "NPL ID":20040916001689,
-        "NPL pack ID":20040920100118,
-        "Ursprung":"Generics",
-        "Företag":"SanoSwiss UAB",
-        "Utbytesgrupps ID":497
-    },
-    {
         "Status":"PV",
         "Produktnamn":"Terbinafin 2care4",
         "Varunummer":172713,
@@ -141471,25 +141452,6 @@
         "NPL pack ID":20190405100017,
         "Ursprung":"ParallelImport",
         "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":497
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Azurifin",
-        "Varunummer":482292,
-        "Styrka":"250 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Terbinafin",
-        "Beredningsform":"Tablett",
-        "Storlek":28.0,
-        "Apotekens inköpspris":218.53,
-        "Försäljningspris":284.43,
-        "Inköpspris per minsta enhet":7.8,
-        "Försäljningspris per minsta enhet":10.16,
-        "NPL ID":20040916001689,
-        "NPL pack ID":20040920100101,
-        "Ursprung":"Generics",
-        "Företag":"SanoSwiss UAB",
         "Utbytesgrupps ID":497
     },
     {
@@ -141623,25 +141585,6 @@
         "NPL pack ID":20190610100055,
         "Ursprung":"ParallelImport",
         "Företag":"Ebb Medical AB",
-        "Utbytesgrupps ID":497
-    },
-    {
-        "Status":"Nej",
-        "Produktnamn":"Azurifin",
-        "Varunummer":485093,
-        "Styrka":"250 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Terbinafin",
-        "Beredningsform":"Tablett",
-        "Storlek":98.0,
-        "Apotekens inköpspris":598.28,
-        "Försäljningspris":674.49,
-        "Inköpspris per minsta enhet":6.1,
-        "Försäljningspris per minsta enhet":6.88,
-        "NPL ID":20040916001689,
-        "NPL pack ID":20050519101211,
-        "Ursprung":"Generics",
-        "Företag":"SanoSwiss UAB",
         "Utbytesgrupps ID":497
     },
     {

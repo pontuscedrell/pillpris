@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T23:58:32.605091+00:00",
+  "generatedAt": "2026-11-26T14:41:30.604883+00:00",
   "months": [
     2612,
     2611,
@@ -52867,7 +52867,7 @@
               "start_text": "2026-12-21 (Prognos)",
               "end_text": "2027-01-15 (Prognos)",
               "reason": "Oväntat stor efterfrågan på läkemedlet",
-              "alternatives_info": "Utbytbara läkemedel: Apixaban Zentiva, Apixaban Orion, Apixaban Glenmark, Apixaban Teva, Apixaban Accord, Apixaban STADA, Apixaban Viatris, Apixaban Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nApixaban Teva - Blister, 100 x 1 tabletter (endos)\nApixaban Accord - Blister, 100 tabletter\nApixaban STADA - Blister, 100 tabletter\nApixaban Zentiva - Blister, 100 tabletter\nApixaban Orion - Blister, 100 tabletter\nApixaban Glenmark - Blister, 100 x 1 tabletter (endos)\nApixaban Teva - Burk, 100 tabletter (utan bomull)\n\nAlternativ förpackning: Eliquis - Blister, 14 tabletter\nEliquis - Blister, 168 tabletter\nEliquis - Blister, 56 tabletter\nEliquis - Blister, 28 tabletter\nEliquis - Blister, 168 tabletter (PD: Abacus Medicine A/S)",
+              "alternatives_info": "Utbytbara läkemedel: Apixaban Zentiva, Apixaban Orion, Apixaban Glenmark, Apixaban Teva, Apixaban Accord, Apixaban Sandoz, Apixaban STADA, Apixaban Viatris, Apixaban Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nApixaban Teva - Blister, 100 x 1 tabletter (endos)\nApixaban Accord - Blister, 100 tabletter\nApixaban Sandoz - Blister, 100 tabletter\nApixaban STADA - Blister, 100 tabletter\nApixaban Zentiva - Blister, 100 tabletter\nApixaban Orion - Blister, 100 tabletter\nApixaban Glenmark - Blister, 100 x 1 tabletter (endos)\nApixaban Teva - Burk, 100 tabletter (utan bomull)\n\nAlternativ förpackning: Eliquis - Blister, 14 tabletter\nEliquis - Blister, 168 tabletter\nEliquis - Blister, 56 tabletter\nEliquis - Blister, 28 tabletter\nEliquis - Blister, 168 tabletter (PD: Abacus Medicine A/S)",
               "updated_at": "2026-11-24"
             }
           ],
@@ -208714,12 +208714,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2025-06-10",
-              "end_date": "2027-01-28",
+              "end_date": "2026-12-24",
               "start_text": "2025-06-10",
-              "end_text": "2027-01-28 (Prognos)",
+              "end_text": "2026-12-24 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Darunavir STADA, Darunavir Glenmark, Darunavir Amarox, Darunavir Accord, Darunavir Medical Valley.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDarunavir STADA - Burk, 30 tabletter\nDarunavir Medical Valley - Burk, 30 tabletter (Pågående restsituation)\nDarunavir Glenmark - Burk, 30 tabletter (Pågående restsituation)\nDarunavir Accord - Burk, 30 tabletter\nDarunavir Amarox - Burk, 30 tabletter",
-              "updated_at": "2026-11-10"
+              "updated_at": "2026-11-25"
             }
           ],
           "history": {
@@ -224034,7 +224034,7 @@
               "start_text": "2026-04-02",
               "end_text": "2027-08-04 (Prognos)",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Desloratadin Viatris, Desloratadine Glenmark, Flynise, Desloratadine Actavis, Aerius, Desloratadin Apofri, Desloratadin STADA, Desloratadin Punkt, Desloratadin ABECE, Desloratadine Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDesloratadine Sandoz - Blister, 10 tablett (Al)\n\nAlternativ förpackning: Dasselta - Blister, 30 tabletter\nDasselta - Blister, 100 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Desloratadin Punkt, Desloratadin NET, Desloratadin ABECE, Aerius, Desloratadine Glenmark, Desloratadin STADA, Desloratadine Sandoz, Flynise, Desloratadine Actavis, Desloratadin Viatris, Desloratadin Apofri.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDesloratadine Sandoz - Blister, 10 tablett (Al)\n\nAlternativ förpackning: Dasselta - Blister, 100 tabletter\nDasselta - Blister, 30 tabletter",
               "updated_at": "2026-04-02"
             }
           ],
@@ -224869,7 +224869,7 @@
               "start_text": "2027-01-31 (Prognos)",
               "end_text": "2027-06-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Desloratadin Apofri, Desloratadin STADA, Desloratadin Punkt, Desloratadin ABECE, Desloratadine Sandoz, Desloratadine Glenmark, Flynise, Desloratadine Actavis, Dasselta, Aerius.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDesloratadin STADA - Blister, 30 tabletter\nDesloratadin ABECE - Blister, 30 tabletter\nDesloratadine Actavis - Blister, 30 tabletter\nDesloratadine Glenmark - Blister, 30 tabletter\nDesloratadin Apofri - Blister, 30 tabletter\nDesloratadin Punkt - Blister, 30 tabletter\nDesloratadine Sandoz - Blister, 30 tablett (Al)\nDasselta - Blister, 30 tabletter\nFlynise - Blister, 30 tabletter (Kommande restsituation)\nAerius - Blister, 30 tabl\n\nAlternativ förpackning: Desloratadin Viatris - Burk, 250 tabletter (dosdispensering)\nDesloratadin Viatris - Blister, 100 tabletter (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Desloratadin Punkt, Desloratadin NET, Desloratadin ABECE, Aerius, Desloratadine Glenmark, Desloratadin STADA, Desloratadine Sandoz, Flynise, Desloratadine Actavis, Dasselta, Desloratadin Apofri.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAerius - Blister, 30 tabl\nDesloratadin STADA - Blister, 30 tabletter\nDasselta - Blister, 30 tabletter\nDesloratadine Actavis - Blister, 30 tabletter\nDesloratadine Glenmark - Blister, 30 tabletter\nDesloratadine Sandoz - Blister, 30 tablett (Al)\nFlynise - Blister, 30 tabletter (Kommande restsituation)\nDesloratadin Apofri - Blister, 30 tabletter\nDesloratadin ABECE - Blister, 30 tabletter\nDesloratadin Punkt - Blister, 30 tabletter\n\nAlternativ förpackning: Desloratadin Viatris - Burk, 250 tabletter (dosdispensering)\nDesloratadin Viatris - Blister, 100 tabletter (Pågående restsituation)",
               "updated_at": "2026-11-23"
             }
           ],
@@ -225404,7 +225404,7 @@
               "start_text": "2026-10-20",
               "end_text": "2026-12-04 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Desloratadin Punkt, Desloratadin ABECE, Desloratadine Glenmark, Desloratadin STADA, Desloratadine Sandoz, Flynise, Desloratadine Actavis, Dasselta, Desloratadin Viatris, Desloratadin Apofri.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDesloratadin STADA - Blister, 100 tabletter\nDasselta - Blister, 100 tabletter\nDesloratadine Actavis - Blister, 100 tabletter\nDesloratadine Glenmark - Blister, 100 tabletter\nDesloratadine Sandoz - Blister, 100 tablett (Al)\nDesloratadin Viatris - Blister, 100 tabletter (Pågående restsituation)\nDesloratadine Actavis - Burk, 100 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Aerius - Blister, 30 tabl",
+              "alternatives_info": "Utbytbara läkemedel: Desloratadin Punkt, Desloratadin NET, Desloratadin ABECE, Desloratadine Glenmark, Desloratadin STADA, Desloratadine Sandoz, Flynise, Desloratadine Actavis, Dasselta, Desloratadin Viatris, Desloratadin Apofri.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDesloratadin STADA - Blister, 100 tabletter\nDasselta - Blister, 100 tabletter\nDesloratadine Actavis - Blister, 100 tabletter\nDesloratadine Glenmark - Blister, 100 tabletter\nDesloratadine Sandoz - Blister, 100 tablett (Al)\nDesloratadin Viatris - Blister, 100 tabletter (Pågående restsituation)\nDesloratadine Actavis - Burk, 100 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Aerius - Blister, 30 tabl",
               "updated_at": "2026-11-12"
             }
           ],
@@ -226016,7 +226016,7 @@
               "start_text": "2026-11-15",
               "end_text": "2027-06-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Desloratadin Punkt, Desloratadin ABECE, Aerius, Desloratadine Glenmark, Desloratadin STADA, Desloratadine Sandoz, Flynise, Desloratadine Actavis, Dasselta, Desloratadin Apofri.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAerius - Blister, 100 tabl (Pågående restsituation)\nDesloratadin STADA - Blister, 100 tabletter\nDasselta - Blister, 100 tabletter\nDesloratadine Actavis - Blister, 100 tabletter\nDesloratadine Glenmark - Blister, 100 tabletter\nDesloratadine Sandoz - Blister, 100 tablett (Al)\nDesloratadine Actavis - Burk, 100 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Desloratadin Viatris - Blister, 30 tabletter (Kommande restsituation)\nDesloratadin Viatris - Burk, 250 tabletter (dosdispensering)",
+              "alternatives_info": "Utbytbara läkemedel: Desloratadin Punkt, Desloratadin NET, Desloratadin ABECE, Aerius, Desloratadine Glenmark, Desloratadin STADA, Desloratadine Sandoz, Flynise, Desloratadine Actavis, Dasselta, Desloratadin Apofri.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAerius - Blister, 100 tabl (Pågående restsituation)\nDesloratadin STADA - Blister, 100 tabletter\nDasselta - Blister, 100 tabletter\nDesloratadine Actavis - Blister, 100 tabletter\nDesloratadine Glenmark - Blister, 100 tabletter\nDesloratadine Sandoz - Blister, 100 tablett (Al)\nDesloratadine Actavis - Burk, 100 tabletter (Kommande restsituation)\n\nAlternativ förpackning: Desloratadin Viatris - Blister, 30 tabletter (Kommande restsituation)\nDesloratadin Viatris - Burk, 250 tabletter (dosdispensering)",
               "updated_at": "2026-10-26"
             }
           ],
@@ -226178,7 +226178,7 @@
               "start_text": "2027-11-30 (Prognos)",
               "end_text": "Saknas",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Desloratadin Apofri, Desloratadin STADA, Desloratadin Punkt, Desloratadin ABECE, Desloratadine Sandoz, Desloratadine Glenmark, Flynise, Desloratadin Viatris, Dasselta, Aerius.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDesloratadine Glenmark - Blister, 100 tabletter\nAerius - Blister, 100 tabl (Pågående restsituation)\nDesloratadin Viatris - Blister, 100 tabletter (Pågående restsituation)\nDesloratadine Actavis - Blister, 100 tabletter\nDesloratadin STADA - Blister, 100 tabletter\nAerius - Blister, 90 tabl (PD: Medartuum AB)\nDasselta - Blister, 100 tabletter\nDesloratadine Sandoz - Blister, 100 tablett (Al)\n\nAlternativ förpackning: Desloratadine Actavis - Blister, 100 tabletter\nDesloratadine Actavis - Blister, 30 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Desloratadin Punkt, Desloratadin NET, Desloratadin ABECE, Aerius, Desloratadine Glenmark, Desloratadin STADA, Desloratadine Sandoz, Flynise, Dasselta, Desloratadin Viatris, Desloratadin Apofri.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nAerius - Blister, 100 tabl (Pågående restsituation)\nDesloratadin STADA - Blister, 100 tabletter\nDasselta - Blister, 100 tabletter\nDesloratadine Actavis - Blister, 100 tabletter\nDesloratadine Glenmark - Blister, 100 tabletter\nDesloratadine Sandoz - Blister, 100 tablett (Al)\nDesloratadin Viatris - Blister, 100 tabletter (Pågående restsituation)\n\nAlternativ förpackning: Desloratadine Actavis - Blister, 30 tabletter\nDesloratadine Actavis - Blister, 100 tabletter",
               "updated_at": "2026-08-19"
             }
           ],
@@ -236319,7 +236319,7 @@
               "start_text": "2026-10-07",
               "end_text": "2026-12-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Dexatin, Dexfarm, Dexamfetamin Sea Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDexatin - Burk, 50 tabletter (Pågående restsituation)\nDexamfetamin Sea Pharma - Blister, 50 tabletter\nDexfarm - Blister, 50 tabletter\n\nAlternativ förpackning: Attentin - Blister, 40 tabletter",
+              "alternatives_info": "Utbytbara läkemedel: Dexatin, Dexfarm, Dexamfetamin Sea Pharma.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDexatin - Burk, 50 tabletter\nDexamfetamin Sea Pharma - Blister, 50 tabletter\nDexfarm - Blister, 50 tabletter\n\nAlternativ förpackning: Attentin - Blister, 40 tabletter",
               "updated_at": "2026-10-07"
             }
           ],
@@ -236782,19 +236782,7 @@
           "company": "FrostPharma AB",
           "origin": "Generics",
           "packaging": "",
-          "shortages": [
-            {
-              "status": "Pågående restsituation",
-              "shortage_type": "Restsituation",
-              "start_date": "2026-11-18",
-              "end_date": "2026-11-30",
-              "start_text": "2026-11-18",
-              "end_text": "2026-11-30 (Prognos)",
-              "reason": "Produktionsplanering eller begränsad produktionskapacitet",
-              "alternatives_info": "Utbytbara läkemedel: Dexfarm, Dexamfetamin Sea Pharma, Attentin.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nDexamfetamin Sea Pharma - Blister, 50 tabletter\nAttentin - Blister, 50 tabletter (Pågående restsituation)\nDexfarm - Blister, 50 tabletter",
-              "updated_at": "2026-11-12"
-            }
-          ],
+          "shortages": [],
           "history": {
             "2612": {
               "status": "R1",
@@ -290080,7 +290068,7 @@
               "start_date": "2025-09-24",
               "end_date": "2026-11-26",
               "start_text": "2025-09-24",
-              "end_text": "2026-11-26 (Prognos)",
+              "end_text": "2026-11-26",
               "reason": "Produktionsplanering eller begränsad produktionskapacitet",
               "alternatives_info": "Utbytbara läkemedel: Enalapril Teva, Enalapril Orion, Enalapril STADA, Enalapril Sandoz, Enalapril Accord, Enalapril Vitabalans.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nEnalapril Teva - Blister, 100 tabletter\nEnalapril Sandoz - Blister, 100 tabletter\nEnalapril STADA - Blister, 105 tabletter\nEnalapril Orion - Burk, 100 tabletter\nEnalapril Accord - Blister, 100 tabletter\nEnalapril Vitabalans - Blister, 100 tabletter\n\nAlternativ förpackning: Enalapril Krka - Blister, 30 tabletter\nEnalapril Krka - Burk, 250 tabletter (Pågående restsituation)",
               "updated_at": "2026-11-20"
@@ -337399,12 +337387,12 @@
               "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-07-20",
-              "end_date": "2026-11-30",
+              "end_date": "2027-12-31",
               "start_text": "2026-07-20",
-              "end_text": "2026-11-30 (Prognos)",
+              "end_text": "2027-12-31 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
               "alternatives_info": "Utbytbara läkemedel: Everolimus Zentiva, Everolimus STADA, Everolimus Krka, Afinitor, Everolimus Sandoz.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nEverolimus STADA - Blister, 30 tabletter\nEverolimus Krka - Blister, 30 tabletter\nEverolimus Sandoz - Blister, 30 tabletter\nAfinitor - Blister, 30 tabletter (PD: 2care4 ApS)\nEverolimus Zentiva - Blister, 30 tabletter",
-              "updated_at": "2026-07-16"
+              "updated_at": "2026-11-25"
             }
           ],
           "history": {
@@ -866052,7 +866040,19 @@
           "company": "Karo Healthcare AB",
           "origin": "Original",
           "packaging": "",
-          "shortages": [],
+          "shortages": [
+            {
+              "status": "Kommande restsituation",
+              "shortage_type": "Restsituation",
+              "start_date": "2027-01-15",
+              "end_date": "2027-04-30",
+              "start_text": "2027-01-15 (Prognos)",
+              "end_text": "2027-04-30 (Prognos)",
+              "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
+              "alternatives_info": "Utbytbara läkemedel: Penomax.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nSelexid - Blister, 15 tabletter (Al)\nPenomax - Blister, 15 tabletter\n\nAlternativ förpackning: Selexid - Blister, 20 tabletter (Al)\nSelexid - Blister, 30 tabletter (Al)\nSelexid - Blister, 100 tabletter (Al)\nSelexid - Blister, 15 tabletter (Al)",
+              "updated_at": "2026-11-24"
+            }
+          ],
           "history": {
             "2612": {
               "status": "NEJ",
@@ -868694,7 +868694,7 @@
               "start_text": "2027-01-01 (Prognos)",
               "end_text": "2027-07-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Pomalidomide Sandoz, Pomalidomide STADA, Pomalidomide Krka, Pomalidomide Grindeks, Pomalidomide Zentiva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomide Sandoz - Blister, 21 kapslar\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)",
+              "alternatives_info": "Utbytbara läkemedel: Pomalidomide STADA, Pomalidomide Sandoz, Pomalidomide Grindeks, Pomalidomide Zentiva, Pomalidomide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomide Sandoz - Blister, 21 kapslar\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)",
               "updated_at": "2026-10-29"
             }
           ],
@@ -869196,7 +869196,7 @@
               "start_text": "2025-12-23",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Osäkerhet om läkemedlet kommer säljas framöver",
-              "alternatives_info": "Utbytbara läkemedel: Pomalidomide Glenmark, Pomalidomide Teva, Pomalidomide Sandoz, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide STADA, Pomalidomide Accord, Pomalidomide Newbury, Pomalidomide Grindeks.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Sandoz - Blister, 21 kapslar (Kommande restsituation)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al) (Pågående restsituation)\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al) (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Pomalidomide STADA, Pomalidomide Newbury, Pomalidomide Sandoz, Pomalidomide Grindeks, Pomalidomide Glenmark, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide Accord, Pomalidomide Teva, Pomalidomide Bioglan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomide Sandoz - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al) (Kommande restsituation)\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al) (Pågående restsituation)\nPomalidomide Bioglan - Blister, 21 kapslar (plast/Al)",
               "updated_at": "2025-12-24"
             }
           ],
@@ -869768,7 +869768,7 @@
               "start_text": "2027-01-01 (Prognos)",
               "end_text": "2027-04-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Pomalidomid Avansor, Pomalidomide Sandoz, Pomalidomide Glenmark, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide Teva, Pomalidomide STADA, Pomalidomide Accord, Pomalidomide Grindeks.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomid Avansor - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Sandoz - Blister, 21 kapslar (Kommande restsituation)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al) (Pågående restsituation)\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)",
+              "alternatives_info": "Utbytbara läkemedel: Pomalidomid Avansor, Pomalidomide STADA, Pomalidomide Sandoz, Pomalidomide Grindeks, Pomalidomide Glenmark, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide Accord, Pomalidomide Teva, Pomalidomide Bioglan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomid Avansor - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide Sandoz - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al) (Pågående restsituation)\nPomalidomide Bioglan - Blister, 21 kapslar (plast/Al)",
               "updated_at": "2026-10-29"
             }
           ],
@@ -869859,14 +869859,14 @@
           "packaging": "Blister",
           "shortages": [
             {
-              "status": "Kommande restsituation",
+              "status": "Pågående restsituation",
               "shortage_type": "Restsituation",
               "start_date": "2026-11-26",
               "end_date": "2027-05-10",
-              "start_text": "2026-11-26 (Prognos)",
+              "start_text": "2026-11-26",
               "end_text": "2027-05-10 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Pomalidomid Avansor, Pomalidomide STADA, Pomalidomide Newbury, Pomalidomide Grindeks, Pomalidomide Glenmark, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide Accord, Pomalidomide Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomid Avansor - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al) (Kommande restsituation)\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al) (Pågående restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Pomalidomid Avansor, Pomalidomide STADA, Pomalidomide Newbury, Pomalidomide Grindeks, Pomalidomide Glenmark, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide Accord, Pomalidomide Teva, Pomalidomide Bioglan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomid Avansor - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al) (Kommande restsituation)\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al) (Pågående restsituation)\nPomalidomide Bioglan - Blister, 21 kapslar (plast/Al)",
               "updated_at": "2026-11-24"
             }
           ],
@@ -870030,7 +870030,7 @@
               "start_text": "2026-04-10",
               "end_text": "2027-03-31 (Prognos)",
               "reason": "Oväntat stor efterfrågan på läkemedlet",
-              "alternatives_info": "Utbytbara läkemedel: Pomalidomid Avansor, Pomalidomide Glenmark, Pomalidomide Sandoz, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide STADA, Pomalidomide Accord, Pomalidomide Newbury, Pomalidomide Grindeks.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomid Avansor - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Sandoz - Blister, 21 kapslar (Kommande restsituation)\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al) (Kommande restsituation)",
+              "alternatives_info": "Utbytbara läkemedel: Pomalidomid Avansor, Pomalidomide STADA, Pomalidomide Newbury, Pomalidomide Sandoz, Pomalidomide Grindeks, Pomalidomide Glenmark, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide Accord, Pomalidomide Bioglan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomid Avansor - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide Sandoz - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al) (Kommande restsituation)\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Bioglan - Blister, 21 kapslar (plast/Al)",
               "updated_at": "2026-10-14"
             }
           ],
@@ -870506,7 +870506,7 @@
               "start_text": "2025-12-23",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Osäkerhet om läkemedlet kommer säljas framöver",
-              "alternatives_info": "Utbytbara läkemedel: Pomalidomide Krka, Pomalidomide Newbury, Pomalidomide Sandoz, Pomalidomide Grindeks, Pomalidomide Zentiva, Pomalidomide STADA, Pomalidomide Accord, Pomalidomide Glenmark, Pomalidomide Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomide Sandoz - Blister, 21 kapslar\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al) (Kommande restsituation)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al)\nPomalidomide Grindeks - Blister, 21 kapslar",
+              "alternatives_info": "Utbytbara läkemedel: Pomalidomide STADA, Pomalidomide Newbury, Pomalidomide Sandoz, Pomalidomide Grindeks, Pomalidomide Glenmark, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide Accord, Pomalidomide Teva, Pomalidomide Bioglan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomide Sandoz - Blister, 21 kapslar\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al) (Kommande restsituation)\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al)\nPomalidomide Bioglan - Blister, 21 kapslar (plast/Al)",
               "updated_at": "2025-12-24"
             }
           ],
@@ -871078,7 +871078,7 @@
               "start_text": "2027-01-01 (Prognos)",
               "end_text": "2027-07-01 (Prognos)",
               "reason": "Företaget har inte godkänt att Läkemedelsverket publicerar den angivna orsaken.",
-              "alternatives_info": "Utbytbara läkemedel: Pomalidomid Avansor, Pomalidomide Krka, Pomalidomide Sandoz, Pomalidomide Grindeks, Pomalidomide Zentiva, Pomalidomide Accord, Pomalidomide STADA, Pomalidomide Glenmark, Pomalidomide Teva.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomid Avansor - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide Sandoz - Blister, 21 kapslar\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al)",
+              "alternatives_info": "Utbytbara läkemedel: Pomalidomid Avansor, Pomalidomide STADA, Pomalidomide Sandoz, Pomalidomide Grindeks, Pomalidomide Glenmark, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide Accord, Pomalidomide Teva, Pomalidomide Bioglan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomid Avansor - Blister, 21 kapslar (Pågående restsituation)\nPomalidomide Sandoz - Blister, 21 kapslar\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al)\nPomalidomide Bioglan - Blister, 21 kapslar (plast/Al)",
               "updated_at": "2026-10-29"
             }
           ],
@@ -872030,7 +872030,7 @@
               "start_text": "2025-12-23",
               "end_text": "2026-12-31 (Prognos)",
               "reason": "Osäkerhet om läkemedlet kommer säljas framöver",
-              "alternatives_info": "Utbytbara läkemedel: Pomalidomide Accord, Pomalidomide STADA, Pomalidomide Sandoz, Pomalidomide Glenmark, Pomalidomide Grindeks, Pomalidomide Teva, Pomalidomide Newbury, Pomalidomide Zentiva, Pomalidomide Krka.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al)\nPomalidomide Sandoz - Blister, 21 kapslar",
+              "alternatives_info": "Utbytbara läkemedel: Pomalidomide STADA, Pomalidomide Newbury, Pomalidomide Sandoz, Pomalidomide Grindeks, Pomalidomide Glenmark, Pomalidomide Zentiva, Pomalidomide Krka, Pomalidomide Accord, Pomalidomide Teva, Pomalidomide Bioglan.\n\nUtbytbara läkemedel med jämförbara förpackningar enligt TLV:\nPomalidomide Sandoz - Blister, 21 kapslar\nPomalidomide Glenmark - Blister, 21 x 1 kapslar (endos)\nPomalidomide Grindeks - Blister, 21 kapslar\nPomalidomide STADA - Blister, 21 x 1 kapslar (endos, plast/Al)\nPomalidomide Krka - Blister, 21 x 1 kapslar (endos, kalenderförpackning)\nPomalidomide Accord - Blister, 21 x 1 kapslar (endos)\nPomalidomide Zentiva - Blister, 21 x 1 kapslar (endos)\nPomalidomide Teva - Blister, 21 kapslar (PVC/PE/PVDC/Al)\nPomalidomide Bioglan - Blister, 21 kapslar (plast/Al)\nPomalidomide Newbury - Blister, 21 kapslar (plast/Al)",
               "updated_at": "2025-12-24"
             }
           ],
@@ -1079188,14 +1079188,6 @@
           "packaging": "Blister",
           "shortages": [],
           "history": {
-            "2612": {
-              "status": "NEJ",
-              "price": 207.29
-            },
-            "2611": {
-              "status": "NEJ",
-              "price": 207.29
-            },
             "2610": {
               "status": "NEJ",
               "price": 207.29
@@ -1079545,14 +1079537,6 @@
           "packaging": "Blister",
           "shortages": [],
           "history": {
-            "2612": {
-              "status": "NEJ",
-              "price": 284.43
-            },
-            "2611": {
-              "status": "NEJ",
-              "price": 284.43
-            },
             "2610": {
               "status": "NEJ",
               "price": 284.43
@@ -1080483,14 +1080467,6 @@
           "packaging": "Blister",
           "shortages": [],
           "history": {
-            "2612": {
-              "status": "NEJ",
-              "price": 674.49
-            },
-            "2611": {
-              "status": "NEJ",
-              "price": 674.49
-            },
             "2610": {
               "status": "NEJ",
               "price": 674.49
