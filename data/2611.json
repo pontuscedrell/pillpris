@@ -35892,25 +35892,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Dronedaron Aristo",
-        "Varunummer":521469,
-        "Styrka":"400 mg",
-        "Förpackningsstorleksgrupp":"T23",
-        "Substans":"Dronedaron",
-        "Beredningsform":"Tablett",
-        "Storlek":100.0,
-        "Apotekens inköpspris":344.0,
-        "Försäljningspris":413.85,
-        "Inköpspris per minsta enhet":3.44,
-        "Försäljningspris per minsta enhet":4.14,
-        "NPL ID":20180427000013,
-        "NPL pack ID":20180828100077,
-        "Ursprung":"Generics",
-        "Företag":"Aristo Pharma GmbH",
-        "Utbytesgrupps ID":111320
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Dronedarone Teva",
         "Varunummer":440805,
         "Styrka":"400 mg",
@@ -35929,7 +35910,7 @@
         "Utbytesgrupps ID":111320
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Dronedarone STADA",
         "Varunummer":522290,
         "Styrka":"400 mg",
@@ -35964,6 +35945,25 @@
         "NPL pack ID":20120830100351,
         "Ursprung":"ParallelDistribution",
         "Företag":"Abacus Medicine A\/S",
+        "Utbytesgrupps ID":111320
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Dronedaron Aristo",
+        "Varunummer":521469,
+        "Styrka":"400 mg",
+        "Förpackningsstorleksgrupp":"T23",
+        "Substans":"Dronedaron",
+        "Beredningsform":"Tablett",
+        "Storlek":100.0,
+        "Apotekens inköpspris":344.0,
+        "Försäljningspris":413.85,
+        "Inköpspris per minsta enhet":3.44,
+        "Försäljningspris per minsta enhet":4.14,
+        "NPL ID":20180427000013,
+        "NPL pack ID":20180828100077,
+        "Ursprung":"Generics",
+        "Företag":"Aristo Pharma GmbH",
         "Utbytesgrupps ID":111320
     },
     {
@@ -49686,25 +49686,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Matriban",
-        "Varunummer":384911,
-        "Styrka":"75 mikrogram\/timme",
-        "Förpackningsstorleksgrupp":"TN16",
-        "Substans":"Fentanyl",
-        "Beredningsform":"Depotplåster",
-        "Storlek":16.0,
-        "Apotekens inköpspris":264.0,
-        "Försäljningspris":331.49,
-        "Inköpspris per minsta enhet":16.5,
-        "Försäljningspris per minsta enhet":20.72,
-        "NPL ID":20210506000044,
-        "NPL pack ID":20211208100407,
-        "Ursprung":"ParallelImport",
-        "Företag":"2care4 ApS",
-        "Utbytesgrupps ID":112547
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Fentanyl ratiopharm",
         "Varunummer":40957,
         "Styrka":"75 mikrogram\/timme",
@@ -49723,7 +49704,7 @@
         "Utbytesgrupps ID":112547
     },
     {
-        "Status":"R2",
+        "Status":"R1",
         "Produktnamn":"Fentanyl Lavipharm",
         "Varunummer":90095,
         "Styrka":"75 mikrogram\/timme",
@@ -49742,7 +49723,7 @@
         "Utbytesgrupps ID":112547
     },
     {
-        "Status":"Nej",
+        "Status":"R2",
         "Produktnamn":"Fentanyl Orion",
         "Varunummer":192009,
         "Styrka":"75 mikrogram\/timme",
@@ -49758,6 +49739,25 @@
         "NPL pack ID":20100802100145,
         "Ursprung":"Generics",
         "Företag":"Orion Pharma AB",
+        "Utbytesgrupps ID":112547
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Matriban",
+        "Varunummer":384911,
+        "Styrka":"75 mikrogram\/timme",
+        "Förpackningsstorleksgrupp":"TN16",
+        "Substans":"Fentanyl",
+        "Beredningsform":"Depotplåster",
+        "Storlek":16.0,
+        "Apotekens inköpspris":264.0,
+        "Försäljningspris":331.49,
+        "Inköpspris per minsta enhet":16.5,
+        "Försäljningspris per minsta enhet":20.72,
+        "NPL ID":20210506000044,
+        "NPL pack ID":20211208100407,
+        "Ursprung":"ParallelImport",
+        "Företag":"2care4 ApS",
         "Utbytesgrupps ID":112547
     },
     {
@@ -68647,7 +68647,7 @@
         "Utbytesgrupps ID":114825
     },
     {
-        "Status":"PV",
+        "Status":"Nej",
         "Produktnamn":"Klorzoxazon Evolan",
         "Varunummer":436024,
         "Styrka":"250 mg",
@@ -94545,25 +94545,6 @@
     },
     {
         "Status":"PV",
-        "Produktnamn":"Naproxen Evolan",
-        "Varunummer":451835,
-        "Styrka":"500 mg",
-        "Förpackningsstorleksgrupp":"T18",
-        "Substans":"Naproxen",
-        "Beredningsform":"Tablett",
-        "Storlek":30.0,
-        "Apotekens inköpspris":52.61,
-        "Försäljningspris":111.13,
-        "Inköpspris per minsta enhet":1.75,
-        "Försäljningspris per minsta enhet":3.7,
-        "NPL ID":20160216000028,
-        "NPL pack ID":20160509100398,
-        "Ursprung":"Generics",
-        "Företag":"Evolan Pharma AB",
-        "Utbytesgrupps ID":112445
-    },
-    {
-        "Status":"R1",
         "Produktnamn":"Naproxen Bluefish",
         "Varunummer":385563,
         "Styrka":"500 mg",
@@ -94579,6 +94560,25 @@
         "NPL pack ID":20080508101137,
         "Ursprung":"Generics",
         "Företag":"Bluefish Pharmaceuticals AB",
+        "Utbytesgrupps ID":112445
+    },
+    {
+        "Status":"Nej",
+        "Produktnamn":"Naproxen Evolan",
+        "Varunummer":451835,
+        "Styrka":"500 mg",
+        "Förpackningsstorleksgrupp":"T18",
+        "Substans":"Naproxen",
+        "Beredningsform":"Tablett",
+        "Storlek":30.0,
+        "Apotekens inköpspris":52.61,
+        "Försäljningspris":111.13,
+        "Inköpspris per minsta enhet":1.75,
+        "Försäljningspris per minsta enhet":3.7,
+        "NPL ID":20160216000028,
+        "NPL pack ID":20160509100398,
+        "Ursprung":"Generics",
+        "Företag":"Evolan Pharma AB",
         "Utbytesgrupps ID":112445
     },
     {

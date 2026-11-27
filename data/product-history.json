@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T14:39:25.481310+00:00",
+  "generatedAt": "2026-11-27T23:53:53.361997+00:00",
   "months": [
     2612,
     2611,
@@ -33619,7 +33619,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 111.13
             },
             "2611": {
@@ -260262,7 +260262,7 @@
               "price": 553.25
             },
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 413.85
             },
             "2610": {
@@ -260438,7 +260438,7 @@
               "price": 409.75
             },
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 552.23
             },
             "2610": {
@@ -260588,7 +260588,7 @@
               "price": 541.49
             },
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 541.49
             },
             "2610": {
@@ -263889,7 +263889,7 @@
       "sub": "Duloxetin",
       "str": "30 mg",
       "form": "Enterokapsel",
-      "size": "30",
+      "size": "28",
       "brands": [
         {
           "vnr": "165280",
@@ -263900,7 +263900,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 99.44
             },
             "2611": {
@@ -264590,7 +264590,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "PV",
               "price": 104.94
             },
             "2611": {
@@ -264902,7 +264902,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R2",
+              "status": "R1",
               "price": 134.55
             },
             "2611": {
@@ -265052,7 +265052,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 129.26
             },
             "2611": {
@@ -371961,7 +371961,7 @@
               "price": 326.32
             },
             "2611": {
-              "status": "R2",
+              "status": "R1",
               "price": 336.67
             },
             "2610": {
@@ -372111,7 +372111,7 @@
               "price": 1044.17
             },
             "2611": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 1044.17
             },
             "2610": {
@@ -372261,7 +372261,7 @@
               "price": 270.47
             },
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 332.53
             },
             "2610": {
@@ -372411,7 +372411,7 @@
               "price": 331.49
             },
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 331.49
             },
             "2610": {
@@ -380234,7 +380234,7 @@
           ],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 387.2
             },
             "2611": {
@@ -380950,7 +380950,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "PV",
               "price": 440.5
             },
             "2611": {
@@ -519349,7 +519349,7 @@
               "price": 174.49
             },
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 160.49
             },
             "2610": {
@@ -603790,7 +603790,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "PV",
               "price": 384.42
             },
             "2611": {
@@ -603952,7 +603952,7 @@
           ],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 377.89
             },
             "2611": {
@@ -726994,7 +726994,7 @@
               "price": 110.79
             },
             "2611": {
-              "status": "R1",
+              "status": "PV",
               "price": 112.89
             },
             "2610": {
@@ -727144,7 +727144,7 @@
               "price": 112.94
             },
             "2611": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 111.13
             },
             "2610": {
@@ -921904,7 +921904,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 758.51
             },
             "2611": {
@@ -922578,7 +922578,7 @@
           ],
           "history": {
             "2612": {
-              "status": "R2",
+              "status": "R1",
               "price": 941.07
             },
             "2611": {
@@ -922888,7 +922888,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "PV",
               "price": 789.0
             },
             "2611": {
@@ -1077604,7 +1077604,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 1086.25
             },
             "2611": {
@@ -1077780,7 +1077780,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 306.74
             },
             "2611": {
@@ -1078242,7 +1078242,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R2",
+              "status": "R1",
               "price": 871.04
             },
             "2611": {
@@ -1078490,7 +1078490,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "PV",
               "price": 353.96
             },
             "2611": {
@@ -1140017,7 +1140017,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R2",
+              "status": "R1",
               "price": 274.57
             },
             "2611": {
@@ -1140039,7 +1140039,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 229.03
             },
             "2611": {
@@ -1140117,7 +1140117,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "PV",
               "price": 252.83
             },
             "2611": {
@@ -1140203,7 +1140203,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 678.15
             },
             "2611": {
@@ -1158971,7 +1158971,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "PV",
               "price": 1404.0
             },
             "2611": {
@@ -1159133,7 +1159133,7 @@
           ],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 1189.04
             },
             "2611": {
@@ -1172655,7 +1172655,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "PV",
               "price": 83.49
             },
             "2611": {
@@ -1172805,7 +1172805,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 82.44
             },
             "2611": {
@@ -1172955,7 +1172955,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "NEJ",
+              "status": "R2",
               "price": 120.49
             },
             "2611": {
@@ -1173105,7 +1173105,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R2",
+              "status": "R1",
               "price": 119.3
             },
             "2611": {
@@ -1177420,7 +1177420,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "PV",
+              "status": "NEJ",
               "price": 85.93
             },
             "2611": {
@@ -1177570,7 +1177570,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R1",
+              "status": "PV",
               "price": 88.64
             },
             "2611": {
@@ -1177720,7 +1177720,7 @@
           "shortages": [],
           "history": {
             "2612": {
-              "status": "R2",
+              "status": "R1",
               "price": 98.31
             },
             "2611": {
